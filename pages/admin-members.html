@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Arotec protected admin page for viewing member database records.">
+    <title>Admin Members | Arotec Science for Life</title>
+    <link rel="icon" href="../assets/images/arotec-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Arotec home">
+          <img class="brand-logo" src="../assets/images/arotec-logo.jpg" alt="Arotec">
+        </a>
+        <nav class="desktop-nav" aria-label="Admin navigation">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="members.html">Get In touch</a>
+          <a class="nav-link active" href="admin-members.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero page-hero-image" style="--page-hero-image:url('../assets/images/customized-banner.jpg')">
+        <div class="section-shell page-hero-grid page-hero-grid-wide">
+          <div>
+            <p class="eyebrow">Arotec Admin</p>
+            <h1>Member Database</h1>
+            <p class="lead">ดูรายชื่อสมาชิกที่สมัครผ่านเว็บไซต์ พร้อมค้นหาและดาวน์โหลดข้อมูลสำหรับทีม Arotec</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-band section-pad">
+        <div class="section-shell admin-stack">
+          <form class="form-card admin-login" id="adminLoginForm">
+            <div>
+              <p class="eyebrow">Secure Access</p>
+              <h2>เข้าสู่ระบบผู้ดูแล</h2>
+              <p>ใส่รหัสผ่าน admin ที่ตั้งไว้ใน Render environment variable: <strong>AROTEC_ADMIN_PASSWORD</strong></p>
+            </div>
+            <div class="field">
+              <label for="adminPassword">Admin password</label>
+              <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required>
+            </div>
+            <button class="pill-button" type="submit">เข้าสู่ระบบ</button>
+            <p class="form-status" id="adminLoginStatus" role="status"></p>
+          </form>
+
+          <section class="admin-panel" id="adminPanel" hidden>
+            <div class="admin-toolbar">
+              <div>
+                <p class="eyebrow">Members</p>
+                <h2>ข้อมูลสมาชิก</h2>
+                <p id="adminSummary">กำลังโหลดข้อมูล...</p>
+              </div>
+              <div class="admin-actions">
+                <button class="ghost-button" type="button" id="refreshMembers">Refresh</button>
+                <button class="ghost-button" type="button" id="downloadMembers">CSV</button>
+                <button class="dark-button" type="button" id="logoutAdmin">Logout</button>
+              </div>
+            </div>
+
+            <div class="admin-search-row">
+              <label class="field">
+                <span>ค้นหา</span>
+                <input id="memberSearch" class="search-input" type="search" placeholder="ค้นหาชื่อ อีเมล เบอร์โทร บริษัท หรือรหัสสมาชิก">
+              </label>
+            </div>
+
+            <div class="admin-table-card">
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>วันที่สมัคร</th>
+                      <th>รหัส</th>
+                      <th>ชื่อ</th>
+                      <th>อีเมล</th>
+                      <th>โทร</th>
+                      <th>ภาษา</th>
+                      <th>บริษัท</th>
+                      <th>ตำแหน่ง</th>
+                      <th>ความสนใจ</th>
+                      <th>Marketing</th>
+                    </tr>
+                  </thead>
+                  <tbody id="membersTableBody"></tbody>
+                </table>
+              </div>
+              <p class="admin-empty" id="membersEmpty" hidden>ไม่พบข้อมูลสมาชิก</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/admin-members.js"></script>
+  </body>
+</html>
