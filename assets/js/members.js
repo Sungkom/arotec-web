@@ -1,0 +1,248 @@
+(() => {
+  const languageMeta = {
+    en: { htmlLang: "en", formValue: "en" },
+    ja: { htmlLang: "ja", formValue: "ja" },
+    zh: { htmlLang: "zh-Hant", formValue: "zh-Hant" },
+    th: { htmlLang: "th", formValue: "th" }
+  };
+
+  const copy = {
+    th: {
+      titleText: "สมัครสมาชิก | Arotec Science for Life",
+      skip: "ข้ามไปยังเนื้อหา",
+      navHome: "หน้าแรก",
+      navMembers: "Get In touch",
+      eyebrow: "สมาชิก Arotec",
+      title: "ฐานข้อมูลสมาชิก",
+      lead: "บันทึกข้อมูลสมาชิก ลูกค้า และผู้สนใจบริการของ Arotec ลงฐานข้อมูล SQLite ภายในเครื่อง",
+      infoTitle: "ข้อมูลที่จัดเก็บ",
+      infoLead: "แบบฟอร์มนี้ออกแบบให้เก็บข้อมูลพื้นฐานที่จำเป็นต่อการติดต่อและดูแลสมาชิก",
+      infoItem1: "ชื่อ อีเมล เบอร์โทร",
+      infoItem2: "ภาษา บริษัท และเป้าหมายสุขภาวะ",
+      infoItem3: "สถานะ consent สำหรับ privacy และ marketing",
+      fullName: "ชื่อ-นามสกุล",
+      email: "อีเมล",
+      phone: "เบอร์โทร",
+      preferredLanguage: "ภาษา",
+      company: "บริษัท",
+      jobTitle: "ตำแหน่ง",
+      wellnessGoal: "เป้าหมาย/ความสนใจ",
+      privacyConsent: "ยินยอมให้จัดเก็บข้อมูลเพื่อการติดต่อและดูแลสมาชิก",
+      marketingConsent: "สมัครรับข่าวสารและข้อเสนอจาก Arotec",
+      saveButton: "บันทึกสมาชิก",
+      saving: "กำลังบันทึกข้อมูล...",
+      success: "บันทึกสำเร็จ รหัสสมาชิก",
+      fileHelp: " กรุณาเปิดเว็บผ่าน server.py เช่น http://127.0.0.1:8000/pages/members.html",
+      fallbackError: "ไม่สามารถบันทึกข้อมูลได้",
+      errors: {
+        "Full name and email are required": "กรุณากรอกชื่อและอีเมล",
+        "Email is invalid": "รูปแบบอีเมลไม่ถูกต้อง",
+        "Privacy consent is required": "กรุณายินยอมให้จัดเก็บข้อมูล",
+        "This email is already registered": "อีเมลนี้ลงทะเบียนแล้ว",
+        "Invalid JSON": "ข้อมูลไม่ถูกต้อง"
+      },
+      options: { th: "ไทย", zh: "ไต้หวัน", ja: "ญี่ปุ่น", en: "อังกฤษ" }
+    },
+    zh: {
+      titleText: "會員註冊 | Arotec Science for Life",
+      skip: "跳至內容",
+      navHome: "首頁",
+      navMembers: "Get In touch",
+      eyebrow: "Arotec 會員",
+      title: "會員資料庫",
+      lead: "將會員、顧客與對 Arotec 服務感興趣者的資料儲存在本機 SQLite 資料庫中。",
+      infoTitle: "儲存的資料",
+      infoLead: "此表單用於收集聯絡與會員照護所需的基本資料。",
+      infoItem1: "姓名、電子郵件、電話",
+      infoItem2: "語言、公司與健康目標",
+      infoItem3: "隱私與行銷同意狀態",
+      fullName: "姓名",
+      email: "電子郵件",
+      phone: "電話",
+      preferredLanguage: "語言",
+      company: "公司",
+      jobTitle: "職稱",
+      wellnessGoal: "目標 / 興趣",
+      privacyConsent: "同意儲存資料，以便聯絡與會員照護",
+      marketingConsent: "訂閱 Arotec 最新消息與優惠",
+      saveButton: "儲存會員",
+      saving: "正在儲存資料...",
+      success: "儲存成功，會員編號",
+      fileHelp: " 請透過 server.py 開啟網站，例如 http://127.0.0.1:8000/pages/members.html",
+      fallbackError: "無法儲存資料",
+      errors: {
+        "Full name and email are required": "請填寫姓名與電子郵件",
+        "Email is invalid": "電子郵件格式不正確",
+        "Privacy consent is required": "請同意資料儲存",
+        "This email is already registered": "此電子郵件已註冊",
+        "Invalid JSON": "資料格式不正確"
+      },
+      options: { th: "泰文", zh: "繁體中文", ja: "日文", en: "英文" }
+    },
+    ja: {
+      titleText: "会員登録 | Arotec Science for Life",
+      skip: "本文へスキップ",
+      navHome: "ホーム",
+      navMembers: "Get In touch",
+      eyebrow: "Arotec 会員",
+      title: "会員データベース",
+      lead: "Arotec の会員、顧客、サービスに関心のある方の情報をローカルの SQLite データベースに保存します。",
+      infoTitle: "保存する情報",
+      infoLead: "このフォームは、連絡と会員サポートに必要な基本情報を保存するためのものです。",
+      infoItem1: "氏名、メール、電話番号",
+      infoItem2: "言語、会社、ウェルネス目標",
+      infoItem3: "プライバシーとマーケティングの同意状況",
+      fullName: "氏名",
+      email: "メール",
+      phone: "電話番号",
+      preferredLanguage: "言語",
+      company: "会社",
+      jobTitle: "役職",
+      wellnessGoal: "目標 / 関心",
+      privacyConsent: "連絡と会員サポートのために情報を保存することに同意します",
+      marketingConsent: "Arotec のニュースとオファーを受け取る",
+      saveButton: "会員を保存",
+      saving: "保存しています...",
+      success: "保存しました。会員コード",
+      fileHelp: " server.py 経由で開いてください。例: http://127.0.0.1:8000/pages/members.html",
+      fallbackError: "保存できませんでした",
+      errors: {
+        "Full name and email are required": "氏名とメールを入力してください",
+        "Email is invalid": "メール形式が正しくありません",
+        "Privacy consent is required": "情報保存への同意が必要です",
+        "This email is already registered": "このメールはすでに登録されています",
+        "Invalid JSON": "データ形式が正しくありません"
+      },
+      options: { th: "タイ語", zh: "繁体字中国語", ja: "日本語", en: "英語" }
+    },
+    en: {
+      titleText: "Member Registration | Arotec Science for Life",
+      skip: "Skip to content",
+      navHome: "Home",
+      navMembers: "Get In touch",
+      eyebrow: "Arotec Members",
+      title: "Member Database",
+      lead: "Save members, customers, and people interested in Arotec services into the local SQLite database.",
+      infoTitle: "Stored information",
+      infoLead: "This form captures the basic details needed for contact and member care.",
+      infoItem1: "Name, email, and phone",
+      infoItem2: "Language, company, and wellness goal",
+      infoItem3: "Privacy and marketing consent status",
+      fullName: "Full name",
+      email: "Email",
+      phone: "Phone",
+      preferredLanguage: "Language",
+      company: "Company",
+      jobTitle: "Job title",
+      wellnessGoal: "Goal / interest",
+      privacyConsent: "I consent to storing my information for contact and member care",
+      marketingConsent: "Subscribe to Arotec news and offers",
+      saveButton: "Save member",
+      saving: "Saving data...",
+      success: "Saved successfully. Member code",
+      fileHelp: " Please open the website through server.py, for example http://127.0.0.1:8000/pages/members.html",
+      fallbackError: "Unable to save data",
+      errors: {
+        "Full name and email are required": "Please enter full name and email",
+        "Email is invalid": "Email is invalid",
+        "Privacy consent is required": "Privacy consent is required",
+        "This email is already registered": "This email is already registered",
+        "Invalid JSON": "Invalid data format"
+      },
+      options: { th: "Thai", zh: "Traditional Chinese", ja: "Japanese", en: "English" }
+    }
+  };
+
+  const form = document.getElementById("memberForm");
+  const status = document.getElementById("memberStatus");
+  const languageSelect = document.getElementById("memberLanguageSelect");
+  const preferredLanguage = document.getElementById("preferred_language");
+  let currentLang = "th";
+
+  function getSavedLanguage() {
+    const saved = localStorage.getItem("as-site-language");
+    return languageMeta[saved] ? saved : "th";
+  }
+
+  function setStatus(message, isError = false) {
+    if (!status) return;
+    status.textContent = message;
+    status.style.color = isError ? "#f5a3c7" : "var(--aqua)";
+  }
+
+  function translateError(message) {
+    const text = copy[currentLang] || copy.th;
+    return text.errors[message] || message || text.fallbackError;
+  }
+
+  function renderLanguage(lang, syncPreferredLanguage = false) {
+    currentLang = languageMeta[lang] ? lang : "th";
+    const text = copy[currentLang] || copy.th;
+    document.documentElement.lang = languageMeta[currentLang].htmlLang;
+    document.title = text.titleText;
+
+    document.querySelectorAll("[data-i18n]").forEach((node) => {
+      const key = node.dataset.i18n;
+      if (text[key]) node.textContent = text[key];
+    });
+
+    document.querySelectorAll("[data-lang-option]").forEach((option) => {
+      const key = option.dataset.langOption;
+      if (text.options[key]) option.textContent = text.options[key];
+    });
+
+    if (languageSelect) languageSelect.value = currentLang;
+    if (syncPreferredLanguage && preferredLanguage) {
+      preferredLanguage.value = languageMeta[currentLang].formValue;
+    }
+  }
+
+  renderLanguage(getSavedLanguage(), true);
+
+  languageSelect?.addEventListener("change", (event) => {
+    const nextLang = event.target.value;
+    localStorage.setItem("as-site-language", nextLang);
+    setStatus("");
+    renderLanguage(nextLang, true);
+  });
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const text = copy[currentLang] || copy.th;
+    const data = new FormData(form);
+    const payload = {
+      full_name: data.get("full_name"),
+      email: data.get("email"),
+      phone: data.get("phone"),
+      preferred_language: data.get("preferred_language"),
+      company: data.get("company"),
+      job_title: data.get("job_title"),
+      wellness_goal: data.get("wellness_goal"),
+      privacy_consent: data.get("privacy_consent") === "on",
+      marketing_consent: data.get("marketing_consent") === "on"
+    };
+
+    setStatus(text.saving);
+
+    try {
+      const response = await fetch("/api/members", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || text.fallbackError);
+      }
+      form.reset();
+      document.getElementById("privacy_consent").checked = true;
+      renderLanguage(currentLang, true);
+      setStatus(`${text.success} ${result.member.member_code}`);
+    } catch (error) {
+      const fileHelp = location.protocol === "file:" ? text.fileHelp : "";
+      setStatus(`${translateError(error.message)}${fileHelp}`, true);
+    }
+  });
+})();

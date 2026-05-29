@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Arotec member registration form connected to the local member database.">
+    <title>Member Registration | Arotec Science for Life</title>
+    <link rel="icon" href="../assets/images/arotec-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Arotec home">
+          <img class="brand-logo" src="../assets/images/arotec-logo.jpg" alt="Arotec">
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="../index.html" data-i18n="navHome">หน้าแรก</a>
+          <a class="nav-link active" href="members.html" data-i18n="navMembers">Get In touch</a>
+        </nav>
+        <div class="header-actions">
+          <select class="language-select" id="memberLanguageSelect" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="ja">日本語</option>
+            <option value="zh">繁中</option>
+            <option value="th">ไทย</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero page-hero-image" style="--page-hero-image:url('../assets/images/customized-banner.jpg')">
+        <div class="section-shell page-hero-grid page-hero-grid-wide">
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">Arotec Members</p>
+            <h1 data-i18n="title">ฐานข้อมูลสมาชิก</h1>
+            <p class="lead" data-i18n="lead">บันทึกข้อมูลสมาชิก ลูกค้า และผู้สนใจบริการของ Arotec ลงฐานข้อมูล SQLite ภายในเครื่อง</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-band section-pad">
+        <div class="section-shell contact-grid">
+          <aside class="contact-card">
+            <h2 data-i18n="infoTitle">ข้อมูลที่จัดเก็บ</h2>
+            <p class="lead" data-i18n="infoLead">แบบฟอร์มนี้ออกแบบให้เก็บข้อมูลพื้นฐานที่จำเป็นต่อการติดต่อและดูแลสมาชิก</p>
+            <ul class="check-list">
+              <li><span class="tiny-icon" aria-hidden="true">✓</span><span data-i18n="infoItem1">ชื่อ อีเมล เบอร์โทร</span></li>
+              <li><span class="tiny-icon" aria-hidden="true">✓</span><span data-i18n="infoItem2">ภาษา บริษัท และเป้าหมายสุขภาวะ</span></li>
+              <li><span class="tiny-icon" aria-hidden="true">✓</span><span data-i18n="infoItem3">สถานะ consent สำหรับ privacy และ marketing</span></li>
+            </ul>
+          </aside>
+
+          <form class="form-card" id="memberForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="full_name" data-i18n="fullName">ชื่อ-นามสกุล</label>
+                <input id="full_name" name="full_name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email" data-i18n="email">อีเมล</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="phone" data-i18n="phone">เบอร์โทร</label>
+                <input id="phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="preferred_language" data-i18n="preferredLanguage">ภาษา</label>
+                <select id="preferred_language" name="preferred_language">
+                  <option value="en" data-lang-option="en">อังกฤษ</option>
+                  <option value="ja" data-lang-option="ja">ญี่ปุ่น</option>
+                  <option value="zh-Hant" data-lang-option="zh">ไต้หวัน</option>
+                  <option value="th" data-lang-option="th">ไทย</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="company" data-i18n="company">บริษัท</label>
+                <input id="company" name="company" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="job_title" data-i18n="jobTitle">ตำแหน่ง</label>
+                <input id="job_title" name="job_title" autocomplete="organization-title">
+              </div>
+              <div class="field full">
+                <label for="wellness_goal" data-i18n="wellnessGoal">เป้าหมาย/ความสนใจ</label>
+                <textarea id="wellness_goal" name="wellness_goal"></textarea>
+              </div>
+              <div class="field full checkbox-field">
+                <label>
+                  <input id="privacy_consent" name="privacy_consent" type="checkbox" checked required>
+                  <span data-i18n="privacyConsent">ยินยอมให้จัดเก็บข้อมูลเพื่อการติดต่อและดูแลสมาชิก</span>
+                </label>
+              </div>
+              <div class="field full checkbox-field">
+                <label>
+                  <input id="marketing_consent" name="marketing_consent" type="checkbox">
+                  <span data-i18n="marketingConsent">สมัครรับข่าวสารและข้อเสนอจาก Arotec</span>
+                </label>
+              </div>
+            </div>
+            <button class="pill-button" type="submit" data-i18n="saveButton">บันทึกสมาชิก</button>
+            <p class="form-status" id="memberStatus" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/members.js"></script>
+  </body>
+</html>
