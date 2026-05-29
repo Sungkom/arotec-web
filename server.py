@@ -13,6 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "database" / "members.sqlite"
 SCHEMA_PATH = BASE_DIR / "database" / "schema.sql"
 DATABASE_URL = os.environ.get("DATABASE_URL")
+ADMIN_PASSWORD = os.environ.get("AROTEC_ADMIN_PASSWORD", "").strip()
 HOST = os.environ.get("AROTEC_HOST") or ("0.0.0.0" if os.environ.get("PORT") else "127.0.0.1")
 PORT = int(os.environ.get("PORT") or os.environ.get("AROTEC_PORT", "8000"))
 
@@ -108,12 +109,12 @@ def make_member_code() -> str:
 
 
 def json_response(handler: SimpleHTTPRequestHandler, status: int, payload: dict) -> None:
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    body = json.dumps(payload, ensure_ascii=False, default=str).encode("utf-8")
     handler.send_response(status)
     handler.send_header("Content-Type", "application/json; charset=utf-8")
     handler.send_header("Content-Length", str(len(body)))
     handler.send_header("Access-Control-Allow-Origin", "*")
-    handler.send_header("Access-Control-Allow-Headers", "Content-Type")
+    handler.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization")
     handler.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
     handler.end_headers()
     handler.wfile.write(body)
@@ -150,7 +151,9 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/health":
             json_response(self, 200, {"ok": True, "database": db_backend()})
             return
-        if parsed.path == "/api/members":
+        if parsed.path in ("/api/members", "/api/admin/members"):
+            if not self.require_admin():
+                return
             self.list_members()
             return
         super().do_GET()
@@ -162,11 +165,38 @@ class ArotecHandler(SimpleHTTPRequestHandler):
             return
         json_response(self, 404, {"ok": False, "error": "Not found"})
 
+    def require_admin(self) -> bool:
+        if not ADMIN_PASSWORD:
+            json_response(
+                self,
+                503,
+                {
+                    "ok": False,
+                    "error": "Admin password is not configured",
+                    "setup": "Set AROTEC_ADMIN_PASSWORD in Render environment variables.",
+                },
+            )
+            return False
+
+        auth_header = self.headers.get("Authorization", "")
+        token = ""
+        if auth_header.lower().startswith("bearer "):
+            token = auth_header[7:].strip()
+        if not token:
+            token = self.headers.get("X-Admin-Password", "").strip()
+
+        if secrets.compare_digest(token, ADMIN_PASSWORD):
+            return True
+
+        json_response(self, 401, {"ok": False, "error": "Unauthorized"})
+        return False
+
     def list_members(self) -> None:
         with connect_db() as connection:
             query = """
             SELECT id, member_code, full_name, email, phone, preferred_language,
-                   company, wellness_goal, marketing_consent, status, created_at
+                   company, job_title, wellness_goal, marketing_consent,
+                   privacy_consent, status, created_at, updated_at
             FROM members
             WHERE status != 'deleted'
             ORDER BY created_at DESC

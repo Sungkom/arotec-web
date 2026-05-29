@@ -10,6 +10,8 @@ services:
         fromDatabase:
           name: arotec-members-db
           property: connectionString
+      - key: AROTEC_ADMIN_PASSWORD
+        sync: false
 
 databases:
   - name: arotec-members-db

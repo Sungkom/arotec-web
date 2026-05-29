@@ -17,9 +17,11 @@ Use the included `render.yaml` as a Render Blueprint. It creates:
 - `arotec-web` web service
 - `arotec-members-db` PostgreSQL database
 - `DATABASE_URL` environment variable connected to the database
+- `AROTEC_ADMIN_PASSWORD` environment variable for the admin member list
 
 ## Notes
 
 - Locally, `server.py` uses SQLite at `database/members.sqlite`.
 - On Render, `server.py` uses PostgreSQL automatically when `DATABASE_URL` exists.
 - The server binds to `0.0.0.0` when Render provides `PORT`.
+- Admin member list: `/pages/admin-members.html`
