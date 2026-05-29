@@ -6,6 +6,7 @@ import mimetypes
 import os
 import secrets
 import sqlite3
+import traceback
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -240,8 +241,8 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         gender = clean_text(payload.get("gender"), 32)
         wellness_goal = clean_text(payload.get("wellness_goal"), 500)
         notes = clean_text(payload.get("notes"), 1000)
-        marketing_consent = 1 if payload.get("marketing_consent") else 0
-        privacy_consent = 1 if payload.get("privacy_consent", True) else 0
+        marketing_consent = bool(payload.get("marketing_consent"))
+        privacy_consent = bool(payload.get("privacy_consent", True))
 
         if not full_name or not email:
             json_response(self, 400, {"ok": False, "error": "Full name and email are required"})
@@ -273,9 +274,11 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         try:
             member_id = self.insert_member(values, member_code)
         except Exception as error:
-            if not is_unique_error(error):
-                raise
-            json_response(self, 409, {"ok": False, "error": "This email is already registered"})
+            if is_unique_error(error):
+                json_response(self, 409, {"ok": False, "error": "This email is already registered"})
+                return
+            traceback.print_exc()
+            json_response(self, 500, {"ok": False, "error": "Unable to save data"})
             return
 
         json_response(self, 201, {"ok": True, "member": {"id": member_id, "member_code": member_code}})
