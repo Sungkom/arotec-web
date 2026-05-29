@@ -1,0 +1,16 @@
+services:
+  - type: web
+    runtime: python
+    name: arotec-web
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: arotec-members-db
+          property: connectionString
+
+databases:
+  - name: arotec-members-db
+    plan: free
