@@ -665,6 +665,10 @@ h3 {
   gap: 22px;
 }
 
+.solution-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @keyframes content-hover-float {
   0% {
     transform: translateY(-6px);
@@ -741,6 +745,47 @@ h3 {
   color: var(--muted);
 }
 
+.image-content-card {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  isolation: isolate;
+  color: var(--paper);
+  background:
+    linear-gradient(180deg, rgba(5, 12, 24, 0.04), rgba(5, 12, 24, 0.84)),
+    var(--card-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-content-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 18% 12%, rgba(123, 231, 212, 0.24), transparent 38%);
+}
+
+.image-content-card h3,
+.image-content-card p,
+.image-content-card .inline-link {
+  position: relative;
+  z-index: 1;
+}
+
+.image-content-card h3 {
+  color: var(--paper);
+  font-size: clamp(1.08rem, 1.35vw, 1.42rem);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.image-content-card p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
 .inline-link {
   display: inline-flex;
   align-items: center;
@@ -758,6 +803,14 @@ h3 {
 .split-showcase {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.split-showcase.products-only {
+  grid-template-columns: 1fr;
+}
+
+.split-showcase.products-only .showcase-panel {
+  min-height: 420px;
 }
 
 .showcase-panel {
@@ -804,6 +857,38 @@ h3 {
   align-items: center;
   gap: 10px;
   color: rgba(255, 255, 255, 0.86);
+}
+
+.showcase-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 26px;
+}
+
+.showcase-mini-card {
+  min-height: 118px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--paper);
+  background:
+    linear-gradient(180deg, rgba(5, 12, 24, 0.05), rgba(5, 12, 24, 0.78)),
+    var(--card-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.showcase-mini-card h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 0.92rem;
+  line-height: 1.18;
+  text-wrap: balance;
 }
 
 .tiny-icon {
@@ -1594,6 +1679,14 @@ body.search-open .search-modal {
 
   .admin-actions {
     grid-template-columns: 1fr;
+  }
+
+  .showcase-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-content-card {
+    min-height: 260px;
   }
 }
 
