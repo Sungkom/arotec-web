@@ -458,6 +458,14 @@ h3 {
   line-height: 1.12;
 }
 
+.hero .eyebrow {
+  max-width: 720px;
+  color: rgba(123, 231, 212, 0.92);
+  font-size: clamp(0.82rem, 1vw, 0.96rem);
+  line-height: 1.45;
+  text-transform: none;
+}
+
 .hero .lead {
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.55;
