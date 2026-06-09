@@ -1291,6 +1291,73 @@
     return appliedSolutions[lang] || appliedSolutions.en;
   }
 
+  const customizedShowcase = {
+    en: {
+      catalogTitle: "Personalized recommendation paths",
+      catalogLead: "Choose a profile direction, then guide the user toward a practical sensory-led routine.",
+      collections: [
+        { title: "Mind & Mood", text: "Focus, calm and daily mental clarity.", image: "science-platform-2.jpg" },
+        { title: "Sleep & Stress", text: "Recovery rituals for evening balance.", image: "customized-banner.jpg" },
+        { title: "Skin & Aging", text: "Inner beauty and longevity support.", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "Cognitive profile", text: "A daytime path for clarity, energy and productive rhythm.", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "Recovery profile", text: "A calming scent and lifestyle routine for evening recovery.", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "Beauty profile", text: "A skin and exposome path for glow, confidence and resilience.", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "Sensory profile", text: "A personalized sensory journey for everyday emotional balance.", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    ja: {
+      catalogTitle: "\u30d1\u30fc\u30bd\u30ca\u30eb\u63a8\u85a6\u30d1\u30b9",
+      catalogLead: "\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u65b9\u5411\u3092\u9078\u3073\u3001\u611f\u899a\u79d1\u5b66\u3092\u6d3b\u304b\u3057\u305f\u5b9f\u7528\u7684\u306a\u30eb\u30fc\u30c6\u30a3\u30f3\u3078\u5c0e\u304d\u307e\u3059\u3002",
+      collections: [
+        { title: "\u5fc3\u3068\u6c17\u5206", text: "\u96c6\u4e2d\u3001\u843d\u3061\u7740\u304d\u3001\u65e5\u5e38\u306e\u660e\u77ad\u3055\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u3068\u30b9\u30c8\u30ec\u30b9", text: "\u591c\u306e\u30d0\u30e9\u30f3\u30b9\u3092\u6574\u3048\u308b\u56de\u5fa9\u30ea\u30c1\u30e5\u30a2\u30eb\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u3068\u30a8\u30a4\u30b8\u30f3\u30b0", text: "\u30a4\u30f3\u30ca\u30fc\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u3068\u9577\u5bff\u30b5\u30dd\u30fc\u30c8\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u660e\u77ad\u3055\u3001\u30a8\u30cd\u30eb\u30ae\u30fc\u3001\u751f\u7523\u7684\u306a\u30ea\u30ba\u30e0\u3092\u652f\u3048\u308b\u65e5\u4e2d\u306e\u30d1\u30b9\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u56de\u5fa9\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u591c\u306e\u56de\u5fa9\u3092\u652f\u3048\u308b\u9999\u308a\u3068\u751f\u6d3b\u7fd2\u6163\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u8f1d\u304d\u3001\u81ea\u4fe1\u3001\u808c\u306e\u30ec\u30b8\u30ea\u30a8\u30f3\u30b9\u3092\u652f\u3048\u308b\u30d1\u30b9\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u899a\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u65e5\u5e38\u306e\u611f\u60c5\u30d0\u30e9\u30f3\u30b9\u306e\u305f\u3081\u306e\u30d1\u30fc\u30bd\u30ca\u30eb\u611f\u899a\u4f53\u9a13\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    zh: {
+      catalogTitle: "\u500b\u4eba\u5316\u63a8\u85a6\u8def\u5f91",
+      catalogLead: "\u9078\u64c7\u8f2a\u5ed3\u65b9\u5411\uff0c\u5f15\u5c0e\u4f7f\u7528\u8005\u9032\u5165\u53ef\u57f7\u884c\u7684\u611f\u5b98\u65e5\u5e38\u65b9\u6848\u3002",
+      collections: [
+        { title: "\u5fc3\u667a\u8207\u60c5\u7dd2", text: "\u5c08\u6ce8\u3001\u5b89\u5b9a\u8207\u65e5\u5e38\u6e05\u6670\u611f\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u8207\u58d3\u529b", text: "\u70ba\u591c\u9593\u5e73\u8861\u8a2d\u8a08\u7684\u6062\u5fa9\u5100\u5f0f\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u819a\u8207\u8001\u5316", text: "\u652f\u6301\u5167\u5728\u7f8e\u8207\u5065\u5eb7\u8001\u5316\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u8f2a\u5ed3", text: "\u652f\u6301\u65e5\u9593\u6e05\u6670\u5ea6\u3001\u80fd\u91cf\u8207\u6709\u6548\u7bc0\u594f\u7684\u8def\u5f91\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u6062\u5fa9\u8f2a\u5ed3", text: "\u4ee5\u8212\u7de9\u9999\u6c23\u8207\u751f\u6d3b\u7fd2\u6163\u652f\u6301\u591c\u9593\u6062\u5fa9\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u7f8e\u5bb9\u8f2a\u5ed3", text: "\u9762\u5411\u5149\u91c7\u3001\u81ea\u4fe1\u8207\u808c\u819a\u97cc\u6027\u7684\u66b4\u9732\u9ad4\u8def\u5f91\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u5b98\u8f2a\u5ed3", text: "\u70ba\u65e5\u5e38\u60c5\u7dd2\u5e73\u8861\u8a2d\u8a08\u7684\u500b\u4eba\u5316\u611f\u5b98\u65c5\u7a0b\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    th: {
+      catalogTitle: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e04\u0e33\u0e41\u0e19\u0e30\u0e19\u0e33\u0e41\u0e1a\u0e1a\u0e40\u0e09\u0e1e\u0e32\u0e30\u0e1a\u0e38\u0e04\u0e04\u0e25",
+      catalogLead: "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c \u0e41\u0e25\u0e49\u0e27\u0e19\u0e33\u0e1c\u0e39\u0e49\u0e43\u0e0a\u0e49\u0e44\u0e1b\u0e2a\u0e39\u0e48\u0e23\u0e39\u0e17\u0e35\u0e19\u0e40\u0e0a\u0e34\u0e07\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e17\u0e35\u0e48\u0e19\u0e33\u0e44\u0e1b\u0e43\u0e0a\u0e49\u0e44\u0e14\u0e49\u0e08\u0e23\u0e34\u0e07",
+      collections: [
+        { title: "\u0e2a\u0e21\u0e2d\u0e07\u0e41\u0e25\u0e30\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c", text: "\u0e42\u0e1f\u0e01\u0e31\u0e2a \u0e04\u0e27\u0e32\u0e21\u0e2a\u0e07\u0e1a \u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-2.jpg" },
+        { title: "\u0e01\u0e32\u0e23\u0e19\u0e2d\u0e19\u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e40\u0e04\u0e23\u0e35\u0e22\u0e14", text: "\u0e23\u0e34\u0e17\u0e31\u0e27\u0e25\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg" },
+        { title: "\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e27\u0e31\u0e22", text: "\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21\u0e08\u0e32\u0e01\u0e20\u0e32\u0e22\u0e43\u0e19\u0e41\u0e25\u0e30\u0e01\u0e32\u0e23\u0e21\u0e35\u0e2d\u0e32\u0e22\u0e38\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e2a\u0e38\u0e02\u0e20\u0e32\u0e1e", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e2a\u0e21\u0e2d\u0e07", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e32\u0e07\u0e27\u0e31\u0e19\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19 \u0e1e\u0e25\u0e31\u0e07\u0e07\u0e32\u0e19 \u0e41\u0e25\u0e30\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e30\u0e01\u0e32\u0e23\u0e17\u0e33\u0e07\u0e32\u0e19", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27", text: "\u0e23\u0e39\u0e17\u0e35\u0e19\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e44\u0e25\u0e1f\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\u0e17\u0e35\u0e48\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e1c\u0e48\u0e2d\u0e19\u0e04\u0e25\u0e32\u0e22\u0e43\u0e19\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21", text: "\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e41\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e42\u0e1e\u0e42\u0e0b\u0e21\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e1c\u0e34\u0e27\u0e14\u0e39\u0e14\u0e35 \u0e21\u0e31\u0e48\u0e19\u0e43\u0e08 \u0e41\u0e25\u0e30\u0e22\u0e37\u0e14\u0e2b\u0e22\u0e38\u0e48\u0e19", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    }
+  };
+
+  function customizedCatalogContent(lang) {
+    return customizedShowcase[lang] || customizedShowcase.en;
+  }
+
   function pageWithAppliedSolutions(page, lang) {
     const solution = appliedSolutionContent(lang);
     return {
@@ -1370,12 +1437,6 @@
   function renderHome(text, lang) {
     const home = text.home;
     const platform = sciencePlatform[lang] || sciencePlatform.en;
-    const appliedSolution = appliedSolutionContent(lang);
-    const appliedShowcase = {
-      ...home.applied,
-      items: appliedSolution.items.map((item) => item.title),
-      cards: appliedSolution.items
-    };
     const heroSlides = ["hero-slide-1.jpg", "hero-slide-2.jpg", "hero-slide-3.jpg"];
     const heroSlideLayers = heroSlides
       .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
@@ -1451,28 +1512,8 @@
           </div>
         </section>
 
-        <section class="split-showcase">
-          ${renderShowcasePanel(appliedShowcase, "applied", "solutions-neuron.jpg", false)}
+        <section class="split-showcase products-only">
           ${renderShowcasePanel(home.products, "products", "products-lab.jpg", true)}
-        </section>
-
-        <section class="personalized-band section-pad" style="--profile-image:url('${asset("personalized-profile.jpg")}')">
-          <div class="section-shell cta-row">
-            <div>
-              <h2>${home.personal.title}</h2>
-              <p class="lead">${home.personal.lead}</p>
-              <div class="journey">
-                ${home.personal.steps.map((step, index) => `
-                  <div class="journey-step">
-                    <span class="orb-icon" aria-hidden="true">${icons[index === 1 ? "brain" : index === 2 ? "bottle" : "chart"]}</span>
-                    <p>${step}</p>
-                  </div>
-                  ${index < home.personal.steps.length - 1 ? '<span class="journey-line" aria-hidden="true"></span>' : ""}
-                `).join("")}
-              </div>
-            </div>
-            <a class="pill-button" href="${routeHref("customized")}">${home.personal.button} ${icons.arrow}</a>
-          </div>
         </section>
 
         ${homePageSections}
@@ -1501,15 +1542,63 @@
     `;
   }
 
+  function renderCustomizedLayout(text, page, lang) {
+    const showcase = customizedCatalogContent(lang);
+
+    return `
+      <div class="customized-layout">
+        <div class="customized-top-grid">
+          ${showcase.collections.map((item) => `
+            <article class="customized-feature-tile" style="--custom-image:url('${asset(item.image)}')">
+              <div>
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+
+        <div class="customized-catalog-head">
+          <p class="eyebrow">${page.eyebrow}</p>
+          <h2>${showcase.catalogTitle}</h2>
+          <p class="lead">${showcase.catalogLead}</p>
+        </div>
+
+        <div class="customized-product-grid">
+          ${showcase.recommendations.map((item) => `
+            <article class="customized-product-card">
+              <span class="customized-badge">${item.type}</span>
+              <div class="customized-product-media" style="--custom-product-image:url('${asset(item.image)}')" role="img" aria-label="${item.title}"></div>
+              <div class="customized-product-body">
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+                <div class="customized-swatches" aria-label="${item.title}">
+                  ${item.tags.map((tag, index) => `<span class="customized-swatch swatch-${index + 1}" title="${tag}"></span>`).join("")}
+                </div>
+                <a class="customized-action" href="${routeHref("contact")}">${text.common.learnMore}</a>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
   function renderHomePageSection(text, id, index, lang) {
     const pageBase = text.pages[id] || copy.en.pages[id];
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
+    if (id === "customized") {
+      return `
+        <section class="home-page-section ${sectionClass} customized-section section-pad" id="${id}">
+          <div class="section-shell">
+            ${renderCustomizedLayout(text, page, lang)}
+          </div>
+        </section>
+      `;
+    }
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
-
-    return `
-      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
-        <div class="section-shell">
+    const sectionHead = id === "applied" ? "" : `
           <div class="home-section-head">
             <div>
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1525,13 +1614,8 @@
               `).join("")}
             </div>
           </div>
-
-          <div class="center-head">
-            <h2>${page.cardsTitle}</h2>
-            <p class="lead">${page.cardsLead}</p>
-          </div>
-          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
-
+    `;
+    const sectionExtras = id === "applied" ? "" : `
           <div class="home-section-feature">
             <div class="feature-panel">
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1558,6 +1642,20 @@
             </div>
             <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
           </div>
+    `;
+
+    return `
+      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
+        <div class="section-shell">
+          ${sectionHead}
+
+          <div class="center-head">
+            <h2>${page.cardsTitle}</h2>
+            <p class="lead">${page.cardsLead}</p>
+          </div>
+          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
+
+          ${sectionExtras}
         </div>
       </section>
     `;
@@ -1594,39 +1692,9 @@
     const pageBase = text.pages[id] || copy.en.pages[id];
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
+    const useCustomizedLayout = id === "customized";
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
-
-    return `
-      <main id="main">
-        <section class="page-hero${useImageHero ? " page-hero-image" : ""}"${useImageHero ? ` style="--page-hero-image:url('${asset(page.image)}')"` : ""}>
-          <div class="section-shell page-hero-grid${useImageHero ? " page-hero-grid-wide" : ""}">
-            <div>
-              <p class="eyebrow">${page.eyebrow}</p>
-              <h1>${page.title}</h1>
-              <p class="lead">${page.lead}</p>
-              <div class="stat-row">
-                ${page.stats.map((stat) => `
-                  <div class="stat-card">
-                    <strong>${stat.value}</strong>
-                    <span>${stat.label}</span>
-                  </div>
-                `).join("")}
-              </div>
-            </div>
-            ${useImageHero ? "" : `<div class="page-media" style="--page-image:url('${asset(page.image)}')" role="img" aria-label="${page.title}"></div>`}
-          </div>
-        </section>
-
-        <section class="light-section section-pad">
-          <div class="section-shell">
-            <div class="center-head">
-              <h2>${page.cardsTitle}</h2>
-              <p class="lead">${page.cardsLead}</p>
-            </div>
-            <div class="card-grid">${cards}</div>
-          </div>
-        </section>
-
+    const pageExtras = id === "applied" || useCustomizedLayout ? "" : `
         <section class="dark-band section-pad">
           <div class="section-shell two-column">
             <div class="feature-panel">
@@ -1658,6 +1726,42 @@
             <a class="dark-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
           </div>
         </section>
+    `;
+
+    return `
+      <main id="main">
+        <section class="page-hero${useImageHero ? " page-hero-image" : ""}"${useImageHero ? ` style="--page-hero-image:url('${asset(page.image)}')"` : ""}>
+          <div class="section-shell page-hero-grid${useImageHero ? " page-hero-grid-wide" : ""}">
+            <div>
+              <p class="eyebrow">${page.eyebrow}</p>
+              <h1>${page.title}</h1>
+              <p class="lead">${page.lead}</p>
+              <div class="stat-row">
+                ${page.stats.map((stat) => `
+                  <div class="stat-card">
+                    <strong>${stat.value}</strong>
+                    <span>${stat.label}</span>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+            ${useImageHero ? "" : `<div class="page-media" style="--page-image:url('${asset(page.image)}')" role="img" aria-label="${page.title}"></div>`}
+          </div>
+        </section>
+
+        <section class="light-section section-pad">
+          <div class="section-shell">
+            ${useCustomizedLayout ? renderCustomizedLayout(text, page, lang) : `
+              <div class="center-head">
+                <h2>${page.cardsTitle}</h2>
+                <p class="lead">${page.cardsLead}</p>
+              </div>
+              <div class="card-grid">${cards}</div>
+            `}
+          </div>
+        </section>
+
+        ${pageExtras}
       </main>
     `;
   }
