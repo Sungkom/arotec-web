@@ -1202,44 +1202,44 @@
       title: "Science Platform",
       lead: "Our Science Platform",
       items: [
-        { title: "Exposome & Human Interface", image: "hero-slide-3.jpg" },
-        { title: "Neuroplasticity & Sensory Modulation", image: "card-plasticity.jpg" },
-        { title: "Skin-Brain Axis", image: "customized-banner.jpg" },
-        { title: "Electrolyte Homeostasis System", image: "products-lab.jpg" },
-        { title: "Nature/Cell", image: "core-texture.jpg" }
+        { title: "Exposome & Human Interface", image: "science-platform-1.jpg" },
+        { title: "Neuroplasticity & Sensory Modulation", image: "science-platform-2.jpg" },
+        { title: "Skin-Brain Axis", image: "science-platform-3.jpg" },
+        { title: "Electrolyte Homeostasis System", image: "science-platform-4.jpg" },
+        { title: "Nature/Cell", image: "science-platform-5.jpg" }
       ]
     },
     ja: {
       title: "サイエンスプラットフォーム",
       lead: "私たちのサイエンスプラットフォーム",
       items: [
-        { title: "エクスポソームとヒューマンインターフェース", image: "hero-slide-3.jpg" },
-        { title: "神経可塑性と感覚モジュレーション", image: "card-plasticity.jpg" },
-        { title: "皮膚-脳軸", image: "customized-banner.jpg" },
-        { title: "電解質ホメオスタシスシステム", image: "products-lab.jpg" },
-        { title: "自然/細胞", image: "core-texture.jpg" }
+        { title: "エクスポソームとヒューマンインターフェース", image: "science-platform-1.jpg" },
+        { title: "神経可塑性と感覚モジュレーション", image: "science-platform-2.jpg" },
+        { title: "皮膚-脳軸", image: "science-platform-3.jpg" },
+        { title: "電解質ホメオスタシスシステム", image: "science-platform-4.jpg" },
+        { title: "自然/細胞", image: "science-platform-5.jpg" }
       ]
     },
     zh: {
       title: "科學平台",
       lead: "我們的科學平台",
       items: [
-        { title: "暴露體與人體介面", image: "hero-slide-3.jpg" },
-        { title: "神經可塑性與感官調節", image: "card-plasticity.jpg" },
-        { title: "皮膚-大腦軸", image: "customized-banner.jpg" },
-        { title: "電解質恆定系統", image: "products-lab.jpg" },
-        { title: "自然/細胞", image: "core-texture.jpg" }
+        { title: "暴露體與人體介面", image: "science-platform-1.jpg" },
+        { title: "神經可塑性與感官調節", image: "science-platform-2.jpg" },
+        { title: "皮膚-大腦軸", image: "science-platform-3.jpg" },
+        { title: "電解質恆定系統", image: "science-platform-4.jpg" },
+        { title: "自然/細胞", image: "science-platform-5.jpg" }
       ]
     },
     th: {
       title: "แพลตฟอร์มวิทยาศาสตร์",
       lead: "แพลตฟอร์มวิทยาศาสตร์ของเรา",
       items: [
-        { title: "เอกซ์โพโซมและจุดเชื่อมต่อกับมนุษย์", image: "hero-slide-3.jpg" },
-        { title: "ความยืดหยุ่นของสมองและการปรับสัญญาณประสาทสัมผัส", image: "card-plasticity.jpg" },
-        { title: "แกนผิวหนัง-สมอง", image: "customized-banner.jpg" },
-        { title: "ระบบสมดุลอิเล็กโทรไลต์", image: "products-lab.jpg" },
-        { title: "ธรรมชาติ/เซลล์", image: "core-texture.jpg" }
+        { title: "เอกซ์โพโซมและจุดเชื่อมต่อกับมนุษย์", image: "science-platform-1.jpg" },
+        { title: "ความยืดหยุ่นของสมองและการปรับสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
+        { title: "แกนผิวหนัง-สมอง", image: "science-platform-3.jpg" },
+        { title: "ระบบสมดุลอิเล็กโทรไลต์", image: "science-platform-4.jpg" },
+        { title: "ธรรมชาติ/เซลล์", image: "science-platform-5.jpg" }
       ]
     }
   };
