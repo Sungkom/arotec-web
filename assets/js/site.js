@@ -1499,10 +1499,7 @@
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
-
-    return `
-      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
-        <div class="section-shell">
+    const sectionHead = id === "applied" ? "" : `
           <div class="home-section-head">
             <div>
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1518,6 +1515,12 @@
               `).join("")}
             </div>
           </div>
+    `;
+
+    return `
+      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
+        <div class="section-shell">
+          ${sectionHead}
 
           <div class="center-head">
             <h2>${page.cardsTitle}</h2>
