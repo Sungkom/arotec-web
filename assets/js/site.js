@@ -1244,6 +1244,64 @@
     }
   };
 
+  const appliedSolutions = {
+    en: {
+      cardsTitle: "Applied solution areas",
+      cardsLead: "Four sensory-led application paths that connect science to everyday wellness experiences.",
+      items: [
+        { title: "Sensory Strategies", text: "Programs that use scent, taste, texture, sound and environment to guide daily wellness behavior.", image: "science-platform-1.jpg" },
+        { title: "Synesthetic Flavors", text: "Flavor systems designed to connect taste, aroma, color and emotion into memorable wellness experiences.", image: "science-platform-5.jpg" },
+        { title: "Bio-Responsive Scents", text: "Scent experiences mapped to mood, recovery, focus and sensory feedback.", image: "science-platform-2.jpg" },
+        { title: "Health & Wellness", text: "Integrated routines and product concepts that support energy, balance and long-term well-being.", image: "hero-slide-2.jpg" }
+      ]
+    },
+    ja: {
+      cardsTitle: "応用ソリューション領域",
+      cardsLead: "感覚科学を日常のウェルネス体験につなげる4つの応用領域。",
+      items: [
+        { title: "感覚戦略", text: "香り、味、質感、音、環境を使い、日常のウェルネス行動を導きます。", image: "science-platform-1.jpg" },
+        { title: "共感覚フレーバー", text: "味、香り、色、感情を結び、記憶に残る体験へ設計します。", image: "science-platform-5.jpg" },
+        { title: "生体応答型の香り", text: "気分、回復、集中、感覚フィードバックに合わせた香り体験。", image: "science-platform-2.jpg" },
+        { title: "健康とウェルネス", text: "エネルギー、バランス、長期的な健やかさを支えるルーティンと製品設計。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    zh: {
+      cardsTitle: "應用方案領域",
+      cardsLead: "以感官科學連結日常健康體驗的四個應用方向。",
+      items: [
+        { title: "感官策略", text: "運用氣味、味覺、質地、聲音與環境，引導日常健康行為。", image: "science-platform-1.jpg" },
+        { title: "聯覺風味", text: "把味道、香氣、色彩與情緒連結成可記憶的健康體驗。", image: "science-platform-5.jpg" },
+        { title: "生物反應香氣", text: "依據情緒、恢復、專注與感官回饋設計香氣體驗。", image: "science-platform-2.jpg" },
+        { title: "健康與身心平衡", text: "整合日常儀式與產品概念，支持能量、平衡與長期健康。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    th: {
+      cardsTitle: "กลุ่ม Applied Solutions",
+      cardsLead: "4 แนวทางประยุกต์จากวิทยาศาสตร์ประสาทสัมผัสสู่ประสบการณ์สุขภาวะในชีวิตประจำวัน",
+      items: [
+        { title: "กลยุทธ์ประสาทสัมผัส", text: "ใช้กลิ่น รส สัมผัส เสียง และสภาพแวดล้อม เพื่อออกแบบพฤติกรรมสุขภาวะในแต่ละวัน", image: "science-platform-1.jpg" },
+        { title: "รสชาติแบบผสานประสาทสัมผัส", text: "ออกแบบรสชาติที่เชื่อมรส กลิ่น สี และอารมณ์ให้กลายเป็นประสบการณ์ที่จดจำได้", image: "science-platform-5.jpg" },
+        { title: "กลิ่นที่ตอบสนองต่อชีวภาพ", text: "ออกแบบประสบการณ์กลิ่นให้สัมพันธ์กับอารมณ์ การฟื้นตัว สมาธิ และสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
+        { title: "สุขภาพและสุขภาวะ", text: "ผสานรูทีนและแนวคิดผลิตภัณฑ์เพื่อสนับสนุนพลังงาน สมดุล และสุขภาวะระยะยาว", image: "hero-slide-2.jpg" }
+      ]
+    }
+  };
+
+  function appliedSolutionContent(lang) {
+    return appliedSolutions[lang] || appliedSolutions.en;
+  }
+
+  function pageWithAppliedSolutions(page, lang) {
+    const solution = appliedSolutionContent(lang);
+    return {
+      ...page,
+      stats: page.stats?.map((stat, index) => index === 0 ? { ...stat, value: "4" } : stat) || [],
+      cardsTitle: solution.cardsTitle,
+      cardsLead: solution.cardsLead,
+      cards: solution.items
+    };
+  }
+
   function asset(name) {
     return new URL(`${root}assets/images/${name}`, document.baseURI).href;
   }
@@ -1321,7 +1379,7 @@
       .join("");
     const homePageSections = routes
       .filter((route) => route.nav)
-      .map((route, index) => renderHomePageSection(text, route.id, index))
+      .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
     const conceptItems = platform.items.map((item) => `
@@ -1387,8 +1445,7 @@
           </div>
         </section>
 
-        <section class="split-showcase">
-          ${renderShowcasePanel(home.applied, "applied", "solutions-neuron.jpg", false)}
+        <section class="split-showcase products-only">
           ${renderShowcasePanel(home.products, "products", "products-lab.jpg", true)}
         </section>
 
@@ -1416,17 +1473,32 @@
     `;
   }
 
-  function renderHomePageSection(text, id, index) {
-    const page = text.pages[id] || copy.en.pages[id];
-    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
-    const cards = page.cards.map((card) => `
+  function renderContentCard(card, text) {
+    if (card.image) {
+      return `
+        <article class="content-card image-content-card" style="--card-image:url('${asset(card.image)}')">
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+          <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
+        </article>
+      `;
+    }
+
+    return `
       <article class="content-card">
         <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
         <h3>${card.title}</h3>
         <p>${card.text}</p>
         <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
       </article>
-    `).join("");
+    `;
+  }
+
+  function renderHomePageSection(text, id, index, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
+    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
 
     return `
       <section class="home-page-section ${sectionClass} section-pad" id="${id}">
@@ -1451,7 +1523,7 @@
             <h2>${page.cardsTitle}</h2>
             <p class="lead">${page.cardsLead}</p>
           </div>
-          <div class="card-grid">${cards}</div>
+          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
 
           <div class="home-section-feature">
             <div class="feature-panel">
@@ -1485,31 +1557,37 @@
   }
 
   function renderShowcasePanel(section, routeId, image, isProducts) {
+    const cardGrid = section.cards ? `
+      <div class="showcase-card-grid">
+        ${section.cards.map((card) => `
+          <article class="showcase-mini-card" style="--card-image:url('${asset(card.image)}')">
+            <h3>${card.title}</h3>
+          </article>
+        `).join("")}
+      </div>
+    ` : `
+      <ul class="check-list">
+        ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
+      </ul>
+    `;
+
     return `
       <article class="showcase-panel${isProducts ? " products" : ""}" style="--panel-image:url('${asset(image)}')">
         <div>
           <h2>${section.title}</h2>
           <p class="lead">${section.lead}</p>
-          <ul class="check-list">
-            ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
-          </ul>
+          ${cardGrid}
           <a class="pill-button" href="${routeHref(routeId)}">${section.button} ${icons.arrow}</a>
         </div>
       </article>
     `;
   }
 
-  function renderGenericPage(text, id) {
-    const page = text.pages[id] || copy.en.pages[id];
+  function renderGenericPage(text, id, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
-    const cards = page.cards.map((card) => `
-      <article class="content-card">
-        <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
-        <h3>${card.title}</h3>
-        <p>${card.text}</p>
-        <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
-      </article>
-    `).join("");
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
 
     return `
       <main id="main">
@@ -1794,7 +1872,7 @@
   function renderPage(text, lang) {
     if (pageId === "home") return renderHome(text, lang);
     if (pageId === "contact") return renderContact(text);
-    return renderGenericPage(text, pageId);
+    return renderGenericPage(text, pageId, lang);
   }
 
   function setLanguage(lang) {
