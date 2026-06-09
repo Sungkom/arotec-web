@@ -1449,25 +1449,6 @@
           ${renderShowcasePanel(home.products, "products", "products-lab.jpg", true)}
         </section>
 
-        <section class="personalized-band section-pad" style="--profile-image:url('${asset("personalized-profile.jpg")}')">
-          <div class="section-shell cta-row">
-            <div>
-              <h2>${home.personal.title}</h2>
-              <p class="lead">${home.personal.lead}</p>
-              <div class="journey">
-                ${home.personal.steps.map((step, index) => `
-                  <div class="journey-step">
-                    <span class="orb-icon" aria-hidden="true">${icons[index === 1 ? "brain" : index === 2 ? "bottle" : "chart"]}</span>
-                    <p>${step}</p>
-                  </div>
-                  ${index < home.personal.steps.length - 1 ? '<span class="journey-line" aria-hidden="true"></span>' : ""}
-                `).join("")}
-              </div>
-            </div>
-            <a class="pill-button" href="${routeHref("customized")}">${home.personal.button} ${icons.arrow}</a>
-          </div>
-        </section>
-
         ${homePageSections}
       </main>
     `;
