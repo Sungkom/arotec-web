@@ -1667,7 +1667,7 @@
           </div>
           <div class="platform-card-track" data-platform-track tabindex="0" aria-label="${platform.title}">
             ${platform.items.map((item, index) => `
-              <article class="platform-slide-card${index === 2 ? " is-featured" : ""}" style="--platform-card-image:url('${asset(item.image)}')">
+              <article class="platform-slide-card${index === 2 ? " is-active" : ""}" data-platform-card style="--platform-card-image:url('${asset(item.image)}')">
                 <span>${String(index + 1).padStart(2, "0")}</span>
                 <h3>${item.title}</h3>
               </article>
@@ -1857,7 +1857,7 @@
           </div>
         </section>
 
-        <section class="light-section section-pad">
+        <section class="${usePlatformLayout ? "platform-section" : "light-section"} section-pad">
           <div class="section-shell">
             ${useCustomizedLayout ? renderCustomizedLayout(text, page, lang) : usePlatformLayout ? renderPlatformSlider(text, page, lang) : `
               <div class="center-head">
@@ -2092,20 +2092,59 @@
     document.querySelectorAll("[data-platform-slider]").forEach((slider) => {
       const track = slider.querySelector("[data-platform-track]");
       const controls = slider.querySelectorAll("[data-platform-control]");
-      if (!track || !controls.length) return;
+      const cards = Array.from(slider.querySelectorAll("[data-platform-card]"));
+      if (!track || !controls.length || !cards.length) return;
 
-      const scrollAmount = () => {
-        const firstCard = track.querySelector(".platform-slide-card");
-        if (!firstCard) return track.clientWidth * 0.8;
-        const gap = Number.parseFloat(window.getComputedStyle(track).columnGap || "0");
-        return firstCard.getBoundingClientRect().width + gap;
+      const centerCard = (card, behavior = "smooth") => {
+        const left = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
+        track.scrollTo({ left, behavior });
+      };
+
+      const updateActiveCard = () => {
+        const trackRect = track.getBoundingClientRect();
+        const center = trackRect.left + trackRect.width / 2;
+        let closest = cards[0];
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        cards.forEach((card) => {
+          const rect = card.getBoundingClientRect();
+          const cardCenter = rect.left + rect.width / 2;
+          const distance = Math.abs(center - cardCenter);
+          if (distance < closestDistance) {
+            closest = card;
+            closestDistance = distance;
+          }
+        });
+
+        cards.forEach((card) => card.classList.toggle("is-active", card === closest));
       };
 
       controls.forEach((button) => {
         button.addEventListener("click", () => {
+          const activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains("is-active")));
           const direction = button.dataset.platformControl === "prev" ? -1 : 1;
-          track.scrollBy({ left: direction * scrollAmount(), behavior: "smooth" });
+          const nextIndex = Math.min(cards.length - 1, Math.max(0, activeIndex + direction));
+          centerCard(cards[nextIndex]);
         });
+      });
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => centerCard(card));
+      });
+
+      let ticking = false;
+      track.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          updateActiveCard();
+          ticking = false;
+        });
+      }, { passive: true });
+
+      window.requestAnimationFrame(() => {
+        centerCard(cards.find((card) => card.classList.contains("is-active")) || cards[0], "auto");
+        updateActiveCard();
       });
     });
   }
