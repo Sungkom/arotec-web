@@ -1291,6 +1291,136 @@
     return appliedSolutions[lang] || appliedSolutions.en;
   }
 
+  const customizedShowcase = {
+    en: {
+      catalogTitle: "Personalized recommendation paths",
+      catalogLead: "Choose a profile direction, then guide the user toward a practical sensory-led routine.",
+      collections: [
+        { title: "Mind & Mood", text: "Focus, calm and daily mental clarity.", image: "science-platform-2.jpg" },
+        { title: "Sleep & Stress", text: "Recovery rituals for evening balance.", image: "customized-banner.jpg" },
+        { title: "Skin & Aging", text: "Inner beauty and longevity support.", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "Cognitive profile", text: "A daytime path for clarity, energy and productive rhythm.", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "Recovery profile", text: "A calming scent and lifestyle routine for evening recovery.", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "Beauty profile", text: "A skin and exposome path for glow, confidence and resilience.", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "Sensory profile", text: "A personalized sensory journey for everyday emotional balance.", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    ja: {
+      catalogTitle: "\u30d1\u30fc\u30bd\u30ca\u30eb\u63a8\u85a6\u30d1\u30b9",
+      catalogLead: "\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u65b9\u5411\u3092\u9078\u3073\u3001\u611f\u899a\u79d1\u5b66\u3092\u6d3b\u304b\u3057\u305f\u5b9f\u7528\u7684\u306a\u30eb\u30fc\u30c6\u30a3\u30f3\u3078\u5c0e\u304d\u307e\u3059\u3002",
+      collections: [
+        { title: "\u5fc3\u3068\u6c17\u5206", text: "\u96c6\u4e2d\u3001\u843d\u3061\u7740\u304d\u3001\u65e5\u5e38\u306e\u660e\u77ad\u3055\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u3068\u30b9\u30c8\u30ec\u30b9", text: "\u591c\u306e\u30d0\u30e9\u30f3\u30b9\u3092\u6574\u3048\u308b\u56de\u5fa9\u30ea\u30c1\u30e5\u30a2\u30eb\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u3068\u30a8\u30a4\u30b8\u30f3\u30b0", text: "\u30a4\u30f3\u30ca\u30fc\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u3068\u9577\u5bff\u30b5\u30dd\u30fc\u30c8\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u660e\u77ad\u3055\u3001\u30a8\u30cd\u30eb\u30ae\u30fc\u3001\u751f\u7523\u7684\u306a\u30ea\u30ba\u30e0\u3092\u652f\u3048\u308b\u65e5\u4e2d\u306e\u30d1\u30b9\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u56de\u5fa9\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u591c\u306e\u56de\u5fa9\u3092\u652f\u3048\u308b\u9999\u308a\u3068\u751f\u6d3b\u7fd2\u6163\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u8f1d\u304d\u3001\u81ea\u4fe1\u3001\u808c\u306e\u30ec\u30b8\u30ea\u30a8\u30f3\u30b9\u3092\u652f\u3048\u308b\u30d1\u30b9\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u899a\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u65e5\u5e38\u306e\u611f\u60c5\u30d0\u30e9\u30f3\u30b9\u306e\u305f\u3081\u306e\u30d1\u30fc\u30bd\u30ca\u30eb\u611f\u899a\u4f53\u9a13\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    zh: {
+      catalogTitle: "\u500b\u4eba\u5316\u63a8\u85a6\u8def\u5f91",
+      catalogLead: "\u9078\u64c7\u8f2a\u5ed3\u65b9\u5411\uff0c\u5f15\u5c0e\u4f7f\u7528\u8005\u9032\u5165\u53ef\u57f7\u884c\u7684\u611f\u5b98\u65e5\u5e38\u65b9\u6848\u3002",
+      collections: [
+        { title: "\u5fc3\u667a\u8207\u60c5\u7dd2", text: "\u5c08\u6ce8\u3001\u5b89\u5b9a\u8207\u65e5\u5e38\u6e05\u6670\u611f\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u8207\u58d3\u529b", text: "\u70ba\u591c\u9593\u5e73\u8861\u8a2d\u8a08\u7684\u6062\u5fa9\u5100\u5f0f\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u819a\u8207\u8001\u5316", text: "\u652f\u6301\u5167\u5728\u7f8e\u8207\u5065\u5eb7\u8001\u5316\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u8f2a\u5ed3", text: "\u652f\u6301\u65e5\u9593\u6e05\u6670\u5ea6\u3001\u80fd\u91cf\u8207\u6709\u6548\u7bc0\u594f\u7684\u8def\u5f91\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u6062\u5fa9\u8f2a\u5ed3", text: "\u4ee5\u8212\u7de9\u9999\u6c23\u8207\u751f\u6d3b\u7fd2\u6163\u652f\u6301\u591c\u9593\u6062\u5fa9\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u7f8e\u5bb9\u8f2a\u5ed3", text: "\u9762\u5411\u5149\u91c7\u3001\u81ea\u4fe1\u8207\u808c\u819a\u97cc\u6027\u7684\u66b4\u9732\u9ad4\u8def\u5f91\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u5b98\u8f2a\u5ed3", text: "\u70ba\u65e5\u5e38\u60c5\u7dd2\u5e73\u8861\u8a2d\u8a08\u7684\u500b\u4eba\u5316\u611f\u5b98\u65c5\u7a0b\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    th: {
+      catalogTitle: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e04\u0e33\u0e41\u0e19\u0e30\u0e19\u0e33\u0e41\u0e1a\u0e1a\u0e40\u0e09\u0e1e\u0e32\u0e30\u0e1a\u0e38\u0e04\u0e04\u0e25",
+      catalogLead: "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c \u0e41\u0e25\u0e49\u0e27\u0e19\u0e33\u0e1c\u0e39\u0e49\u0e43\u0e0a\u0e49\u0e44\u0e1b\u0e2a\u0e39\u0e48\u0e23\u0e39\u0e17\u0e35\u0e19\u0e40\u0e0a\u0e34\u0e07\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e17\u0e35\u0e48\u0e19\u0e33\u0e44\u0e1b\u0e43\u0e0a\u0e49\u0e44\u0e14\u0e49\u0e08\u0e23\u0e34\u0e07",
+      collections: [
+        { title: "\u0e2a\u0e21\u0e2d\u0e07\u0e41\u0e25\u0e30\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c", text: "\u0e42\u0e1f\u0e01\u0e31\u0e2a \u0e04\u0e27\u0e32\u0e21\u0e2a\u0e07\u0e1a \u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-2.jpg" },
+        { title: "\u0e01\u0e32\u0e23\u0e19\u0e2d\u0e19\u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e40\u0e04\u0e23\u0e35\u0e22\u0e14", text: "\u0e23\u0e34\u0e17\u0e31\u0e27\u0e25\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg" },
+        { title: "\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e27\u0e31\u0e22", text: "\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21\u0e08\u0e32\u0e01\u0e20\u0e32\u0e22\u0e43\u0e19\u0e41\u0e25\u0e30\u0e01\u0e32\u0e23\u0e21\u0e35\u0e2d\u0e32\u0e22\u0e38\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e2a\u0e38\u0e02\u0e20\u0e32\u0e1e", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e2a\u0e21\u0e2d\u0e07", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e32\u0e07\u0e27\u0e31\u0e19\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19 \u0e1e\u0e25\u0e31\u0e07\u0e07\u0e32\u0e19 \u0e41\u0e25\u0e30\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e30\u0e01\u0e32\u0e23\u0e17\u0e33\u0e07\u0e32\u0e19", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27", text: "\u0e23\u0e39\u0e17\u0e35\u0e19\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e44\u0e25\u0e1f\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\u0e17\u0e35\u0e48\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e1c\u0e48\u0e2d\u0e19\u0e04\u0e25\u0e32\u0e22\u0e43\u0e19\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21", text: "\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e41\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e42\u0e1e\u0e42\u0e0b\u0e21\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e1c\u0e34\u0e27\u0e14\u0e39\u0e14\u0e35 \u0e21\u0e31\u0e48\u0e19\u0e43\u0e08 \u0e41\u0e25\u0e30\u0e22\u0e37\u0e14\u0e2b\u0e22\u0e38\u0e48\u0e19", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    }
+  };
+
+  function customizedCatalogContent(lang) {
+    return customizedShowcase[lang] || customizedShowcase.en;
+  }
+
+  const platformShowcase = {
+    en: {
+      kicker: "View our platform modules",
+      title: "OUR PLATFORM",
+      lead: "Explore science-led modules that can become service pages, consultation tools and member journeys.",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    ja: {
+      kicker: "\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u30e2\u30b8\u30e5\u30fc\u30eb",
+      title: "OUR PLATFORM",
+      lead: "\u30b5\u30fc\u30d3\u30b9\u30da\u30fc\u30b8\u3001\u76f8\u8ac7\u30c4\u30fc\u30eb\u3001\u4f1a\u54e1\u30b8\u30e3\u30fc\u30cb\u30fc\u306b\u5c55\u958b\u3067\u304d\u308b\u79d1\u5b66\u30d9\u30fc\u30b9\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3002",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    zh: {
+      kicker: "\u67e5\u770b\u5e73\u53f0\u6a21\u7d44",
+      title: "OUR PLATFORM",
+      lead: "探索可延伸為服務頁、諮詢工具與會員旅程的科學導向模組。",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    th: {
+      kicker: "\u0e14\u0e39\u0e42\u0e21\u0e14\u0e39\u0e25\u0e43\u0e19 Platform",
+      title: "OUR PLATFORM",
+      lead: "\u0e2a\u0e33\u0e23\u0e27\u0e08\u0e42\u0e21\u0e14\u0e39\u0e25\u0e40\u0e0a\u0e34\u0e07\u0e27\u0e34\u0e17\u0e22\u0e32\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c\u0e17\u0e35\u0e48\u0e15\u0e48\u0e2d\u0e22\u0e2d\u0e14\u0e40\u0e1b\u0e47\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 \u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e21\u0e37\u0e2d\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e1b\u0e23\u0e36\u0e01\u0e29\u0e32 \u0e41\u0e25\u0e30\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e2a\u0e21\u0e32\u0e0a\u0e34\u0e01\u0e44\u0e14\u0e49",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    }
+  };
+
+  function platformSliderContent(lang) {
+    return platformShowcase[lang] || platformShowcase.en;
+  }
+
   function pageWithAppliedSolutions(page, lang) {
     const solution = appliedSolutionContent(lang);
     return {
@@ -1475,10 +1605,105 @@
     `;
   }
 
+  function renderCustomizedLayout(text, page, lang) {
+    const showcase = customizedCatalogContent(lang);
+
+    return `
+      <div class="customized-layout">
+        <div class="customized-top-grid">
+          ${showcase.collections.map((item) => `
+            <article class="customized-feature-tile" style="--custom-image:url('${asset(item.image)}')">
+              <div>
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+
+        <div class="customized-catalog-head">
+          <p class="eyebrow">${page.eyebrow}</p>
+          <h2>${showcase.catalogTitle}</h2>
+          <p class="lead">${showcase.catalogLead}</p>
+        </div>
+
+        <div class="customized-product-grid">
+          ${showcase.recommendations.map((item) => `
+            <article class="customized-product-card">
+              <span class="customized-badge">${item.type}</span>
+              <div class="customized-product-media" style="--custom-product-image:url('${asset(item.image)}')" role="img" aria-label="${item.title}"></div>
+              <div class="customized-product-body">
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+                <div class="customized-swatches" aria-label="${item.title}">
+                  ${item.tags.map((tag, index) => `<span class="customized-swatch swatch-${index + 1}" title="${tag}"></span>`).join("")}
+                </div>
+                <a class="customized-action" href="${routeHref("contact")}">${text.common.learnMore}</a>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPlatformSlider(text, page, lang) {
+    const platform = platformSliderContent(lang);
+
+    return `
+      <div class="platform-showcase">
+        <div class="platform-showcase-head">
+          <div>
+            <p class="eyebrow">${page.eyebrow}</p>
+            <h2>${platform.kicker}</h2>
+          </div>
+          <p>${platform.lead}</p>
+        </div>
+
+        <div class="platform-slider" data-platform-slider>
+          <div class="platform-slider-intro">
+            <p>${page.lead}</p>
+            <h2>${platform.title}</h2>
+          </div>
+          <div class="platform-card-track" data-platform-track tabindex="0" aria-label="${platform.title}">
+            ${platform.items.map((item, index) => `
+              <article class="platform-slide-card${index === 2 ? " is-featured" : ""}" style="--platform-card-image:url('${asset(item.image)}')">
+                <span>${String(index + 1).padStart(2, "0")}</span>
+                <h3>${item.title}</h3>
+              </article>
+            `).join("")}
+          </div>
+          <div class="platform-slider-controls" aria-label="${platform.title}">
+            <button class="platform-slider-button" data-platform-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
+            <button class="platform-slider-button" data-platform-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   function renderHomePageSection(text, id, index, lang) {
     const pageBase = text.pages[id] || copy.en.pages[id];
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
+    if (id === "customized") {
+      return `
+        <section class="home-page-section ${sectionClass} customized-section section-pad" id="${id}">
+          <div class="section-shell">
+            ${renderCustomizedLayout(text, page, lang)}
+          </div>
+        </section>
+      `;
+    }
+    if (id === "platform") {
+      return `
+        <section class="home-page-section platform-section section-pad" id="${id}">
+          <div class="section-shell">
+            ${renderPlatformSlider(text, page, lang)}
+          </div>
+        </section>
+      `;
+    }
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
     const sectionHead = id === "applied" ? "" : `
           <div class="home-section-head">
@@ -1574,8 +1799,10 @@
     const pageBase = text.pages[id] || copy.en.pages[id];
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
+    const useCustomizedLayout = id === "customized";
+    const usePlatformLayout = id === "platform";
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
-    const pageExtras = id === "applied" ? "" : `
+    const pageExtras = id === "applied" || useCustomizedLayout || usePlatformLayout ? "" : `
         <section class="dark-band section-pad">
           <div class="section-shell two-column">
             <div class="feature-panel">
@@ -1632,11 +1859,13 @@
 
         <section class="light-section section-pad">
           <div class="section-shell">
-            <div class="center-head">
-              <h2>${page.cardsTitle}</h2>
-              <p class="lead">${page.cardsLead}</p>
-            </div>
-            <div class="card-grid">${cards}</div>
+            ${useCustomizedLayout ? renderCustomizedLayout(text, page, lang) : usePlatformLayout ? renderPlatformSlider(text, page, lang) : `
+              <div class="center-head">
+                <h2>${page.cardsTitle}</h2>
+                <p class="lead">${page.cardsLead}</p>
+              </div>
+              <div class="card-grid">${cards}</div>
+            `}
           </div>
         </section>
 
@@ -1859,6 +2088,28 @@
     startTimer();
   }
 
+  function setupPlatformSliders() {
+    document.querySelectorAll("[data-platform-slider]").forEach((slider) => {
+      const track = slider.querySelector("[data-platform-track]");
+      const controls = slider.querySelectorAll("[data-platform-control]");
+      if (!track || !controls.length) return;
+
+      const scrollAmount = () => {
+        const firstCard = track.querySelector(".platform-slide-card");
+        if (!firstCard) return track.clientWidth * 0.8;
+        const gap = Number.parseFloat(window.getComputedStyle(track).columnGap || "0");
+        return firstCard.getBoundingClientRect().width + gap;
+      };
+
+      controls.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = button.dataset.platformControl === "prev" ? -1 : 1;
+          track.scrollBy({ left: direction * scrollAmount(), behavior: "smooth" });
+        });
+      });
+    });
+  }
+
   function renderPage(text, lang) {
     if (pageId === "home") return renderHome(text, lang);
     if (pageId === "contact") return renderContact(text);
@@ -1931,6 +2182,7 @@
     shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
     setupHeroSlideshow();
+    setupPlatformSliders();
     scrollToCurrentHash();
   }
 
