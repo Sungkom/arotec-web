@@ -1497,18 +1497,7 @@
             </div>
           </div>
     `;
-
-    return `
-      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
-        <div class="section-shell">
-          ${sectionHead}
-
-          <div class="center-head">
-            <h2>${page.cardsTitle}</h2>
-            <p class="lead">${page.cardsLead}</p>
-          </div>
-          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
-
+    const sectionExtras = id === "applied" ? "" : `
           <div class="home-section-feature">
             <div class="feature-panel">
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1535,6 +1524,20 @@
             </div>
             <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
           </div>
+    `;
+
+    return `
+      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
+        <div class="section-shell">
+          ${sectionHead}
+
+          <div class="center-head">
+            <h2>${page.cardsTitle}</h2>
+            <p class="lead">${page.cardsLead}</p>
+          </div>
+          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
+
+          ${sectionExtras}
         </div>
       </section>
     `;
@@ -1572,6 +1575,39 @@
     const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
     const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
+    const pageExtras = id === "applied" ? "" : `
+        <section class="dark-band section-pad">
+          <div class="section-shell two-column">
+            <div class="feature-panel">
+              <p class="eyebrow">${page.eyebrow}</p>
+              <h2>${page.featureTitle}</h2>
+              <p>${page.featureText}</p>
+              <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
+            </div>
+            <div class="timeline">
+              ${page.steps.map((step, index) => `
+                <article class="timeline-item">
+                  <span class="timeline-index">${String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>${step}</h3>
+                    <p>${page.ctaText}</p>
+                  </div>
+                </article>
+              `).join("")}
+            </div>
+          </div>
+        </section>
+
+        <section class="concept section-pad" style="--concept-image:url('${asset("core-texture.jpg")}')">
+          <div class="section-shell cta-row">
+            <div>
+              <h2>${page.ctaTitle}</h2>
+              <p class="lead">${page.ctaText}</p>
+            </div>
+            <a class="dark-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
+          </div>
+        </section>
+    `;
 
     return `
       <main id="main">
@@ -1604,37 +1640,7 @@
           </div>
         </section>
 
-        <section class="dark-band section-pad">
-          <div class="section-shell two-column">
-            <div class="feature-panel">
-              <p class="eyebrow">${page.eyebrow}</p>
-              <h2>${page.featureTitle}</h2>
-              <p>${page.featureText}</p>
-              <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
-            </div>
-            <div class="timeline">
-              ${page.steps.map((step, index) => `
-                <article class="timeline-item">
-                  <span class="timeline-index">${String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>${step}</h3>
-                    <p>${page.ctaText}</p>
-                  </div>
-                </article>
-              `).join("")}
-            </div>
-          </div>
-        </section>
-
-        <section class="concept section-pad" style="--concept-image:url('${asset("core-texture.jpg")}')">
-          <div class="section-shell cta-row">
-            <div>
-              <h2>${page.ctaTitle}</h2>
-              <p class="lead">${page.ctaText}</p>
-            </div>
-            <a class="dark-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
-          </div>
-        </section>
+        ${pageExtras}
       </main>
     `;
   }
