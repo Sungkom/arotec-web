@@ -3,6 +3,7 @@
   const pageId = body.dataset.page || "home";
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
+  let heroSlideTimer = null;
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
@@ -59,9 +60,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "Explore our science",
           secondary: "Customized for you",
           tags: ["Science", "Solutions", "Products"]
@@ -384,9 +385,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "สำรวจวิทยาศาสตร์ของเรา",
           secondary: "ปรับเฉพาะคุณ",
           tags: ["Science", "Solutions", "Products"]
@@ -657,9 +658,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "探索我們的科學",
           secondary: "為你客製",
           tags: ["Science", "Solutions", "Products"]
@@ -739,9 +740,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "私たちの科学を見る",
           secondary: "あなたに最適化",
           tags: ["Science", "Solutions", "Products"]
@@ -1181,6 +1182,7 @@
 
   const icons = {
     arrow: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>',
+    arrowLeft: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"></path><path d="m11 6-6 6 6 6"></path></svg>',
     search: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>',
     menu: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>',
     close: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>',
@@ -1194,6 +1196,111 @@
     pin: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
     chart: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 16v-5"></path><path d="M12 16V8"></path><path d="M16 16v-3"></path></svg>'
   };
+
+  const sciencePlatform = {
+    en: {
+      title: "Science Platform",
+      lead: "Our Science Platform",
+      items: [
+        { title: "Exposome & Human Interface", image: "science-platform-1.jpg" },
+        { title: "Neuroplasticity & Sensory Modulation", image: "science-platform-2.jpg" },
+        { title: "Skin-Brain Axis", image: "science-platform-3.jpg" },
+        { title: "Electrolyte Homeostasis System", image: "science-platform-4.jpg" },
+        { title: "Nature/Cell", image: "science-platform-5.jpg" }
+      ]
+    },
+    ja: {
+      title: "サイエンスプラットフォーム",
+      lead: "私たちのサイエンスプラットフォーム",
+      items: [
+        { title: "エクスポソームとヒューマンインターフェース", image: "science-platform-1.jpg" },
+        { title: "神経可塑性と感覚モジュレーション", image: "science-platform-2.jpg" },
+        { title: "皮膚-脳軸", image: "science-platform-3.jpg" },
+        { title: "電解質ホメオスタシスシステム", image: "science-platform-4.jpg" },
+        { title: "自然/細胞", image: "science-platform-5.jpg" }
+      ]
+    },
+    zh: {
+      title: "科學平台",
+      lead: "我們的科學平台",
+      items: [
+        { title: "暴露體與人體介面", image: "science-platform-1.jpg" },
+        { title: "神經可塑性與感官調節", image: "science-platform-2.jpg" },
+        { title: "皮膚-大腦軸", image: "science-platform-3.jpg" },
+        { title: "電解質恆定系統", image: "science-platform-4.jpg" },
+        { title: "自然/細胞", image: "science-platform-5.jpg" }
+      ]
+    },
+    th: {
+      title: "แพลตฟอร์มวิทยาศาสตร์",
+      lead: "แพลตฟอร์มวิทยาศาสตร์ของเรา",
+      items: [
+        { title: "เอกซ์โพโซมและจุดเชื่อมต่อกับมนุษย์", image: "science-platform-1.jpg" },
+        { title: "ความยืดหยุ่นของสมองและการปรับสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
+        { title: "แกนผิวหนัง-สมอง", image: "science-platform-3.jpg" },
+        { title: "ระบบสมดุลอิเล็กโทรไลต์", image: "science-platform-4.jpg" },
+        { title: "ธรรมชาติ/เซลล์", image: "science-platform-5.jpg" }
+      ]
+    }
+  };
+
+  const appliedSolutions = {
+    en: {
+      cardsTitle: "Applied solution areas",
+      cardsLead: "Four sensory-led application paths that connect science to everyday wellness experiences.",
+      items: [
+        { title: "Sensory Strategies", text: "Programs that use scent, taste, texture, sound and environment to guide daily wellness behavior.", image: "science-platform-1.jpg" },
+        { title: "Synesthetic Flavors", text: "Flavor systems designed to connect taste, aroma, color and emotion into memorable wellness experiences.", image: "science-platform-5.jpg" },
+        { title: "Bio-Responsive Scents", text: "Scent experiences mapped to mood, recovery, focus and sensory feedback.", image: "science-platform-2.jpg" },
+        { title: "Health & Wellness", text: "Integrated routines and product concepts that support energy, balance and long-term well-being.", image: "hero-slide-2.jpg" }
+      ]
+    },
+    ja: {
+      cardsTitle: "応用ソリューション領域",
+      cardsLead: "感覚科学を日常のウェルネス体験につなげる4つの応用領域。",
+      items: [
+        { title: "感覚戦略", text: "香り、味、質感、音、環境を使い、日常のウェルネス行動を導きます。", image: "science-platform-1.jpg" },
+        { title: "共感覚フレーバー", text: "味、香り、色、感情を結び、記憶に残る体験へ設計します。", image: "science-platform-5.jpg" },
+        { title: "生体応答型の香り", text: "気分、回復、集中、感覚フィードバックに合わせた香り体験。", image: "science-platform-2.jpg" },
+        { title: "健康とウェルネス", text: "エネルギー、バランス、長期的な健やかさを支えるルーティンと製品設計。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    zh: {
+      cardsTitle: "應用方案領域",
+      cardsLead: "以感官科學連結日常健康體驗的四個應用方向。",
+      items: [
+        { title: "感官策略", text: "運用氣味、味覺、質地、聲音與環境，引導日常健康行為。", image: "science-platform-1.jpg" },
+        { title: "聯覺風味", text: "把味道、香氣、色彩與情緒連結成可記憶的健康體驗。", image: "science-platform-5.jpg" },
+        { title: "生物反應香氣", text: "依據情緒、恢復、專注與感官回饋設計香氣體驗。", image: "science-platform-2.jpg" },
+        { title: "健康與身心平衡", text: "整合日常儀式與產品概念，支持能量、平衡與長期健康。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    th: {
+      cardsTitle: "กลุ่ม Applied Solutions",
+      cardsLead: "4 แนวทางประยุกต์จากวิทยาศาสตร์ประสาทสัมผัสสู่ประสบการณ์สุขภาวะในชีวิตประจำวัน",
+      items: [
+        { title: "กลยุทธ์ประสาทสัมผัส", text: "ใช้กลิ่น รส สัมผัส เสียง และสภาพแวดล้อม เพื่อออกแบบพฤติกรรมสุขภาวะในแต่ละวัน", image: "science-platform-1.jpg" },
+        { title: "รสชาติแบบผสานประสาทสัมผัส", text: "ออกแบบรสชาติที่เชื่อมรส กลิ่น สี และอารมณ์ให้กลายเป็นประสบการณ์ที่จดจำได้", image: "science-platform-5.jpg" },
+        { title: "กลิ่นที่ตอบสนองต่อชีวภาพ", text: "ออกแบบประสบการณ์กลิ่นให้สัมพันธ์กับอารมณ์ การฟื้นตัว สมาธิ และสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
+        { title: "สุขภาพและสุขภาวะ", text: "ผสานรูทีนและแนวคิดผลิตภัณฑ์เพื่อสนับสนุนพลังงาน สมดุล และสุขภาวะระยะยาว", image: "hero-slide-2.jpg" }
+      ]
+    }
+  };
+
+  function appliedSolutionContent(lang) {
+    return appliedSolutions[lang] || appliedSolutions.en;
+  }
+
+  function pageWithAppliedSolutions(page, lang) {
+    const solution = appliedSolutionContent(lang);
+    return {
+      ...page,
+      stats: page.stats?.map((stat, index) => index === 0 ? { ...stat, value: "4" } : stat) || [],
+      cardsTitle: solution.cardsTitle,
+      cardsLead: solution.cardsLead,
+      cards: solution.items
+    };
+  }
 
   function asset(name) {
     return new URL(`${root}assets/images/${name}`, document.baseURI).href;
@@ -1260,20 +1367,30 @@
     `;
   }
 
-  function renderHome(text) {
+  function renderHome(text, lang) {
     const home = text.home;
+    const platform = sciencePlatform[lang] || sciencePlatform.en;
+    const appliedSolution = appliedSolutionContent(lang);
+    const appliedShowcase = {
+      ...home.applied,
+      items: appliedSolution.items.map((item) => item.title),
+      cards: appliedSolution.items
+    };
+    const heroSlides = ["hero-slide-1.jpg", "hero-slide-2.jpg", "hero-slide-3.jpg"];
+    const heroSlideLayers = heroSlides
+      .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
+      .join("");
+    const heroDots = heroSlides
+      .map((_, index) => `<button class="${index === 0 ? "is-active" : ""}" data-hero-dot="${index}" type="button" aria-label="${text.common.slide || "Slide"} ${index + 1}"></button>`)
+      .join("");
     const homePageSections = routes
       .filter((route) => route.nav)
-      .map((route, index) => renderHomePageSection(text, route.id, index))
+      .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
-    const conceptItems = home.concept.items.map((item, index) => `
-      <article class="concept-item">
-        <span class="orb-icon" aria-hidden="true">${icons[index === 2 ? "user" : "atom"]}</span>
-        <div>
-          <h3>${item.title}</h3>
-          <p>${item.text}</p>
-        </div>
+    const conceptItems = platform.items.map((item) => `
+      <article class="concept-item" style="--concept-card-image:url('${asset(item.image)}')">
+        <h3>${item.title}</h3>
       </article>
     `).join("");
 
@@ -1291,7 +1408,8 @@
 
     return `
       <main id="main">
-        <section class="hero" style="--hero-image:url('${asset("home-banner-v3.jpg")}')">
+        <section class="hero hero-slideshow">
+          <div class="hero-slides" aria-hidden="true">${heroSlideLayers}</div>
           <div class="section-shell">
             <div class="hero-content">
               <p class="eyebrow">${home.hero.eyebrow}</p>
@@ -1301,19 +1419,23 @@
                 <a class="ghost-button" href="${routeHref("insights")}">${home.hero.primary} ${icons.arrow}</a>
                 <a class="pill-button" href="${routeHref("customized")}">${home.hero.secondary} ${icons.arrow}</a>
               </div>
-              <div class="slider-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="slider-dots" aria-label="${text.common.slideControls || "Hero slides"}">${heroDots}</div>
             </div>
           </div>
           <div class="hero-tags" aria-label="Research themes">
             ${home.hero.tags.map((tag) => `<span>${tag}</span>`).join("")}
+          </div>
+          <div class="hero-slide-controls" aria-label="${text.common.slideControls || "Hero slides"}">
+            <button class="hero-slide-button" data-hero-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
+            <button class="hero-slide-button" data-hero-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
           </div>
         </section>
 
         <section class="concept section-pad" style="--concept-image:none">
           <div class="section-shell">
             <div class="center-head">
-              <h2>${home.concept.title}</h2>
-              <p class="lead">${home.concept.lead}</p>
+              <h2>${platform.title}</h2>
+              <p class="lead">${platform.lead}</p>
             </div>
             <div class="concept-grid">${conceptItems}</div>
           </div>
@@ -1330,7 +1452,7 @@
         </section>
 
         <section class="split-showcase">
-          ${renderShowcasePanel(home.applied, "applied", "solutions-neuron.jpg", false)}
+          ${renderShowcasePanel(appliedShowcase, "applied", "solutions-neuron.jpg", false)}
           ${renderShowcasePanel(home.products, "products", "products-lab.jpg", true)}
         </section>
 
@@ -1358,17 +1480,32 @@
     `;
   }
 
-  function renderHomePageSection(text, id, index) {
-    const page = text.pages[id] || copy.en.pages[id];
-    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
-    const cards = page.cards.map((card) => `
+  function renderContentCard(card, text) {
+    if (card.image) {
+      return `
+        <article class="content-card image-content-card" style="--card-image:url('${asset(card.image)}')">
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+          <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
+        </article>
+      `;
+    }
+
+    return `
       <article class="content-card">
         <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
         <h3>${card.title}</h3>
         <p>${card.text}</p>
         <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
       </article>
-    `).join("");
+    `;
+  }
+
+  function renderHomePageSection(text, id, index, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
+    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
 
     return `
       <section class="home-page-section ${sectionClass} section-pad" id="${id}">
@@ -1393,7 +1530,7 @@
             <h2>${page.cardsTitle}</h2>
             <p class="lead">${page.cardsLead}</p>
           </div>
-          <div class="card-grid">${cards}</div>
+          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
 
           <div class="home-section-feature">
             <div class="feature-panel">
@@ -1427,31 +1564,37 @@
   }
 
   function renderShowcasePanel(section, routeId, image, isProducts) {
+    const cardGrid = section.cards ? `
+      <div class="showcase-card-grid">
+        ${section.cards.map((card) => `
+          <article class="showcase-mini-card" style="--card-image:url('${asset(card.image)}')">
+            <h3>${card.title}</h3>
+          </article>
+        `).join("")}
+      </div>
+    ` : `
+      <ul class="check-list">
+        ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
+      </ul>
+    `;
+
     return `
       <article class="showcase-panel${isProducts ? " products" : ""}" style="--panel-image:url('${asset(image)}')">
         <div>
           <h2>${section.title}</h2>
           <p class="lead">${section.lead}</p>
-          <ul class="check-list">
-            ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
-          </ul>
+          ${cardGrid}
           <a class="pill-button" href="${routeHref(routeId)}">${section.button} ${icons.arrow}</a>
         </div>
       </article>
     `;
   }
 
-  function renderGenericPage(text, id) {
-    const page = text.pages[id] || copy.en.pages[id];
+  function renderGenericPage(text, id, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
-    const cards = page.cards.map((card) => `
-      <article class="content-card">
-        <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
-        <h3>${card.title}</h3>
-        <p>${card.text}</p>
-        <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
-      </article>
-    `).join("");
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
 
     return `
       <main id="main">
@@ -1682,10 +1825,61 @@
       : `<p>${text.common.searchEmpty}</p>`;
   }
 
-  function renderPage(text) {
-    if (pageId === "home") return renderHome(text);
+  function setupHeroSlideshow() {
+    if (heroSlideTimer) {
+      window.clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+    }
+
+    const slides = Array.from(document.querySelectorAll(".hero-slide"));
+    const dots = Array.from(document.querySelectorAll("[data-hero-dot]"));
+    const controls = Array.from(document.querySelectorAll("[data-hero-control]"));
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (slides.length <= 1) return;
+
+    let current = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+    const showSlide = (next) => {
+      next = (next + slides.length) % slides.length;
+      if (next === current) return;
+      slides[current]?.classList.remove("is-active");
+      dots[current]?.classList.remove("is-active");
+      current = next;
+      slides[current]?.classList.add("is-active");
+      dots[current]?.classList.add("is-active");
+    };
+
+    const startTimer = () => {
+      if (reduceMotion) return;
+      heroSlideTimer = window.setInterval(() => showSlide(current + 1), 15000);
+    };
+
+    const restartTimer = () => {
+      if (heroSlideTimer) window.clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+      startTimer();
+    };
+
+    controls.forEach((button) => {
+      button.addEventListener("click", () => {
+        showSlide(button.dataset.heroControl === "prev" ? current - 1 : current + 1);
+        restartTimer();
+      });
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        showSlide(Number(dot.dataset.heroDot));
+        restartTimer();
+      });
+    });
+
+    startTimer();
+  }
+
+  function renderPage(text, lang) {
+    if (pageId === "home") return renderHome(text, lang);
     if (pageId === "contact") return renderContact(text);
-    return renderGenericPage(text, pageId);
+    return renderGenericPage(text, pageId, lang);
   }
 
   function setLanguage(lang) {
@@ -1751,8 +1945,9 @@
     const text = copy[lang] || copy.th;
     document.documentElement.lang = languageMeta[lang]?.htmlLang || "th";
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
-    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text)}${renderFooter(text)}${renderSearch(text)}`;
+    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
+    setupHeroSlideshow();
     scrollToCurrentHash();
   }
 
