@@ -60,9 +60,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "Explore our science",
           secondary: "Customized for you",
           tags: ["Science", "Solutions", "Products"]
@@ -385,9 +385,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "สำรวจวิทยาศาสตร์ของเรา",
           secondary: "ปรับเฉพาะคุณ",
           tags: ["Science", "Solutions", "Products"]
@@ -658,9 +658,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "探索我們的科學",
           secondary: "為你客製",
           tags: ["Science", "Solutions", "Products"]
@@ -740,9 +740,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
+          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
+          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
           primary: "私たちの科学を見る",
           secondary: "あなたに最適化",
           tags: ["Science", "Solutions", "Products"]
