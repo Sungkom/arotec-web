@@ -120,13 +120,15 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  min-width: 146px;
+  justify-content: flex-start;
+  width: 154px;
+  min-width: 154px;
 }
 
 .brand-logo {
   display: block;
   width: 154px;
-  height: 66px;
+  height: 68px;
   padding: 0;
   background: transparent;
   object-fit: contain;
@@ -1214,13 +1216,13 @@ body.search-open .search-modal {
   }
 
   .brand {
-    min-width: auto;
+    width: 122px;
+    min-width: 122px;
   }
 
   .brand-logo {
-    width: 118px;
-    height: 54px;
-    max-height: none;
+    width: 122px;
+    height: 58px;
   }
 
   .language-select {
@@ -1337,15 +1339,19 @@ body.search-open .search-modal {
     gap: 6px;
   }
 
+  .brand {
+    width: 108px;
+    min-width: 108px;
+  }
+
   .circle-button {
     width: 42px;
     height: 42px;
   }
 
   .brand-logo {
-    width: 104px;
-    height: 50px;
-    max-height: none;
+    width: 108px;
+    height: 52px;
   }
 
   .science-body,
