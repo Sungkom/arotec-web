@@ -120,14 +120,18 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  min-width: 174px;
+  min-width: 146px;
 }
 
 .brand-logo {
   display: block;
-  width: 162px;
-  height: 38px;
+  width: 148px;
+  height: 62px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.94);
   object-fit: contain;
+  object-position: center;
 }
 
 .desktop-nav {
@@ -1937,7 +1941,7 @@ body.search-open .search-modal {
   }
 
   .header-inner {
-    min-height: 66px;
+    min-height: 74px;
   }
 
   .brand {
@@ -1945,9 +1949,9 @@ body.search-open .search-modal {
   }
 
   .brand-logo {
-    width: 132px;
-    height: auto;
-    max-height: 34px;
+    width: 118px;
+    height: 54px;
+    max-height: none;
   }
 
   .language-select {
@@ -2153,8 +2157,9 @@ body.search-open .search-modal {
   }
 
   .brand-logo {
-    width: 118px;
-    max-height: 30px;
+    width: 104px;
+    height: 50px;
+    max-height: none;
   }
 
   .science-body,
