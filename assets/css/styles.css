@@ -125,13 +125,16 @@ img {
 
 .brand-logo {
   display: block;
-  width: 148px;
-  height: 62px;
-  border-radius: 8px;
-  padding: 4px 6px;
-  background: rgba(255, 255, 255, 0.94);
+  width: 154px;
+  height: 66px;
+  padding: 0;
+  background: transparent;
   object-fit: contain;
   object-position: center;
+  filter:
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.28))
+    drop-shadow(0 10px 22px rgba(112, 200, 255, 0.24));
 }
 
 .desktop-nav {
