@@ -1467,7 +1467,7 @@
       <header class="site-header">
         <div class="header-inner">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
-            <img class="brand-logo" src="${asset("arotec-logo.jpg")}" alt="Arotec">
+            <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
           </a>
           <nav class="desktop-nav" aria-label="Primary navigation">${navLinks(text)}</nav>
           <div class="header-actions">
@@ -1482,7 +1482,7 @@
       <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
         <div class="mobile-panel-head">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
-            <img class="brand-logo" src="${asset("arotec-logo.jpg")}" alt="Arotec">
+            <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
           </a>
           <button class="circle-button" id="menuClose" type="button" title="${text.common.closeMenu}" aria-label="${text.common.closeMenu}">${icons.close}</button>
         </div>
@@ -1943,7 +1943,7 @@
           <div class="footer-grid">
             <div class="footer-col">
               <a class="brand footer-brand" href="${routeHref("home")}" aria-label="Arotec home">
-                <img class="brand-logo" src="${asset("arotec-logo.jpg")}" alt="Arotec">
+                <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
               </a>
             </div>
             <div class="footer-col">
