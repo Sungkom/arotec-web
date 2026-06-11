@@ -1202,44 +1202,64 @@
       title: "Science Platform",
       lead: "Our Science Platform",
       items: [
-        { title: "Exposome & Human Interface", image: "science-platform-1.jpg" },
-        { title: "Neuroplasticity & Sensory Modulation", image: "science-platform-2.jpg" },
-        { title: "Skin-Brain Axis", image: "science-platform-3.jpg" },
-        { title: "Electrolyte Homeostasis System", image: "science-platform-4.jpg" },
-        { title: "Nature/Cell", image: "science-platform-5.jpg" }
+        { title: "Exposome", image: "science-platform-exposome.jpg" },
+        { title: "Human Longevity & Aging", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "Olfactory Science", image: "science-platform-olfactory-science.jpg" },
+        { title: "Neuro-Scented Therapy", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "Neuro-Skin Care", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "Neuroplasticity", image: "science-platform-neuroplasticity.jpg" },
+        { title: "Pssudo-Synesthesia Perception", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "Homeostasis Regulation", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "Neuro Pathway with Stress", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "Hair Follicle Function", image: "science-platform-hair-follicle-function.jpg" }
       ]
     },
     ja: {
       title: "サイエンスプラットフォーム",
       lead: "私たちのサイエンスプラットフォーム",
       items: [
-        { title: "エクスポソームとヒューマンインターフェース", image: "science-platform-1.jpg" },
-        { title: "神経可塑性と感覚モジュレーション", image: "science-platform-2.jpg" },
-        { title: "皮膚-脳軸", image: "science-platform-3.jpg" },
-        { title: "電解質ホメオスタシスシステム", image: "science-platform-4.jpg" },
-        { title: "自然/細胞", image: "science-platform-5.jpg" }
+        { title: "エクスポソーム", image: "science-platform-exposome.jpg" },
+        { title: "ヒューマンロンジェビティとエイジング", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "嗅覚科学", image: "science-platform-olfactory-science.jpg" },
+        { title: "ニューロセンテッドセラピー", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "ニューロスキンケア", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "神経可塑性", image: "science-platform-neuroplasticity.jpg" },
+        { title: "疑似共感覚知覚", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "ホメオスタシス調節", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "ストレスに関わる神経経路", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "毛包機能", image: "science-platform-hair-follicle-function.jpg" }
       ]
     },
     zh: {
       title: "科學平台",
       lead: "我們的科學平台",
       items: [
-        { title: "暴露體與人體介面", image: "science-platform-1.jpg" },
-        { title: "神經可塑性與感官調節", image: "science-platform-2.jpg" },
-        { title: "皮膚-大腦軸", image: "science-platform-3.jpg" },
-        { title: "電解質恆定系統", image: "science-platform-4.jpg" },
-        { title: "自然/細胞", image: "science-platform-5.jpg" }
+        { title: "暴露體", image: "science-platform-exposome.jpg" },
+        { title: "人類長壽與老化", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "嗅覺科學", image: "science-platform-olfactory-science.jpg" },
+        { title: "神經香氛療法", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "神經肌膚護理", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "神經可塑性", image: "science-platform-neuroplasticity.jpg" },
+        { title: "擬聯覺感知", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "恆定調節", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "壓力相關神經路徑", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "毛囊功能", image: "science-platform-hair-follicle-function.jpg" }
       ]
     },
     th: {
       title: "แพลตฟอร์มวิทยาศาสตร์",
       lead: "แพลตฟอร์มวิทยาศาสตร์ของเรา",
       items: [
-        { title: "เอกซ์โพโซมและจุดเชื่อมต่อกับมนุษย์", image: "science-platform-1.jpg" },
-        { title: "ความยืดหยุ่นของสมองและการปรับสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
-        { title: "แกนผิวหนัง-สมอง", image: "science-platform-3.jpg" },
-        { title: "ระบบสมดุลอิเล็กโทรไลต์", image: "science-platform-4.jpg" },
-        { title: "ธรรมชาติ/เซลล์", image: "science-platform-5.jpg" }
+        { title: "เอกซ์โพโซม", image: "science-platform-exposome.jpg" },
+        { title: "อายุยืนและการชะลอวัยของมนุษย์", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "วิทยาศาสตร์การรับกลิ่น", image: "science-platform-olfactory-science.jpg" },
+        { title: "การบำบัดด้วยกลิ่นผ่านระบบประสาท", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "การดูแลผิวผ่านระบบประสาท", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "ความยืดหยุ่นของสมอง", image: "science-platform-neuroplasticity.jpg" },
+        { title: "การรับรู้แบบ Pssudo-Synesthesia", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "การควบคุมภาวะสมดุล", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "เส้นทางประสาทกับความเครียด", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "การทำงานของรูขุมขน", image: "science-platform-hair-follicle-function.jpg" }
       ]
     }
   };
