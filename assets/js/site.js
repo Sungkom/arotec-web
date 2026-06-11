@@ -1200,7 +1200,6 @@
   const sciencePlatform = {
     en: {
       title: "Science Platform",
-      lead: "Our Science Platform",
       items: [
         { title: "Exposome", image: "science-platform-exposome.jpg" },
         { title: "Human Longevity & Aging", image: "science-platform-human-longevity-aging.jpg" },
@@ -1216,7 +1215,6 @@
     },
     ja: {
       title: "サイエンスプラットフォーム",
-      lead: "私たちのサイエンスプラットフォーム",
       items: [
         { title: "エクスポソーム", image: "science-platform-exposome.jpg" },
         { title: "ヒューマンロンジェビティとエイジング", image: "science-platform-human-longevity-aging.jpg" },
@@ -1232,7 +1230,6 @@
     },
     zh: {
       title: "科學平台",
-      lead: "我們的科學平台",
       items: [
         { title: "暴露體", image: "science-platform-exposome.jpg" },
         { title: "人類長壽與老化", image: "science-platform-human-longevity-aging.jpg" },
@@ -1248,7 +1245,6 @@
     },
     th: {
       title: "แพลตฟอร์มวิทยาศาสตร์",
-      lead: "แพลตฟอร์มวิทยาศาสตร์ของเรา",
       items: [
         { title: "เอกซ์โพโซม", image: "science-platform-exposome.jpg" },
         { title: "อายุยืนและการชะลอวัยของมนุษย์", image: "science-platform-human-longevity-aging.jpg" },
@@ -1579,7 +1575,6 @@
           <div class="section-shell">
             <div class="center-head">
               <h2>${platform.title}</h2>
-              <p class="lead">${platform.lead}</p>
             </div>
             <div class="concept-grid">${conceptItems}</div>
           </div>
