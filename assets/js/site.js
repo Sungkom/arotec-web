@@ -1573,9 +1573,6 @@
 
         <section class="concept section-pad" style="--concept-image:none">
           <div class="section-shell">
-            <div class="center-head">
-              <h2>${platform.title}</h2>
-            </div>
             <div class="concept-grid">${conceptItems}</div>
           </div>
         </section>
