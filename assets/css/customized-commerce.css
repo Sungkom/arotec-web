@@ -20,6 +20,10 @@
   color: var(--shop-ink);
 }
 
+.commerce-page [hidden] {
+  display: none !important;
+}
+
 .commerce-header {
   position: sticky;
   top: 0;
