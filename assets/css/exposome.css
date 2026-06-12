@@ -1,0 +1,648 @@
+.exposome-page {
+  color: #eaf0fb;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(0, 214, 255, 0.16), transparent 30rem),
+    radial-gradient(circle at 84% 16%, rgba(167, 139, 250, 0.18), transparent 34rem),
+    linear-gradient(180deg, #020714 0%, #06101d 48%, #020714 100%);
+}
+
+.exposome-page .skip-link {
+  color: #08111e;
+}
+
+.exposome-shell {
+  width: min(1450px, calc(100vw - 44px));
+  margin: 0 auto;
+}
+
+.exposome-header {
+  background: rgba(2, 7, 20, 0.78);
+}
+
+.exposome-header .header-inner {
+  width: min(1380px, calc(100vw - 44px));
+  min-height: 82px;
+  gap: clamp(20px, 2.4vw, 42px);
+}
+
+.exposome-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 2vw, 36px);
+}
+
+.exposome-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  color: rgba(234, 240, 251, 0.78);
+  font-size: clamp(0.78rem, 0.82vw, 0.94rem);
+  font-weight: 720;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.exposome-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #70c8ff, #a78bfa);
+  transition: transform 180ms ease;
+}
+
+.exposome-nav a:hover,
+.exposome-nav a:focus-visible {
+  color: #ffffff;
+}
+
+.exposome-nav a:hover::after,
+.exposome-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.exposome-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exposome-language-select {
+  width: 92px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #eaf0fb;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 720;
+}
+
+.exposome-language-select option {
+  color: #08111e;
+}
+
+.exposome-contact {
+  min-width: 148px;
+  white-space: nowrap;
+}
+
+.exposome-hero {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid rgba(112, 200, 255, 0.16);
+  background:
+    radial-gradient(circle at 50% 25%, rgba(112, 200, 255, 0.12), transparent 34rem),
+    linear-gradient(180deg, rgba(2, 7, 20, 0.22), rgba(2, 7, 20, 0.86)),
+    #020714;
+}
+
+.exposome-hero::before,
+.exposome-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.exposome-hero::before {
+  background-image:
+    linear-gradient(rgba(112, 200, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 200, 255, 0.07) 1px, transparent 1px);
+  background-size: 78px 78px;
+  mask-image: radial-gradient(circle at 50% 26%, #000 0 28%, transparent 72%);
+}
+
+.exposome-hero::after {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 7rem),
+    radial-gradient(circle at 68% 18%, rgba(112, 200, 255, 0.22), transparent 1.5rem),
+    radial-gradient(circle at 78% 9%, rgba(167, 139, 250, 0.3), transparent 1rem),
+    radial-gradient(circle at 36% 16%, rgba(123, 231, 212, 0.24), transparent 1rem);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(74px, 9vw, 118px) 0 66px;
+}
+
+.exposome-kicker {
+  margin: 0 0 10px;
+  color: #7be7d4;
+  font-size: 0.84rem;
+  font-weight: 860;
+  text-transform: uppercase;
+}
+
+.exposome-hero h1 {
+  margin: 0;
+  max-width: 1000px;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 7vw, 6.8rem);
+  line-height: 1.03;
+  font-weight: 860;
+  text-shadow: 0 0 20px rgba(112, 200, 255, 0.18), 0 18px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  margin: 24px 0 12px;
+  color: #00eaff;
+  font-size: clamp(1.22rem, 2.1vw, 2rem);
+  font-weight: 760;
+}
+
+.hero-copy {
+  max-width: 760px;
+  margin: 0;
+  color: #eaf0fb;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+}
+
+.molecule-field {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(360px, 34vw);
+  height: 285px;
+  opacity: 0.9;
+  z-index: 1;
+  background: url("../images/exposome-molecule-field.png") left top / contain no-repeat;
+}
+
+.molecule-field span {
+  display: none;
+}
+
+.molecule-field span:nth-child(1) { left: -18px; top: 90px; }
+.molecule-field span:nth-child(2) { left: 72px; top: 146px; }
+.molecule-field span:nth-child(3) { left: 34px; top: 226px; }
+.molecule-field span:nth-child(4) { left: 148px; top: 86px; opacity: 0.58; }
+.molecule-field span:nth-child(5) { left: 192px; top: 202px; opacity: 0.42; }
+
+.digital-human {
+  position: absolute;
+  right: min(5vw, 76px);
+  top: 54px;
+  z-index: 1;
+  width: min(210px, 18vw);
+  aspect-ratio: 0.52;
+  border-radius: 0;
+  background: url("../images/exposome-digital-human.png") center / contain no-repeat;
+  filter: drop-shadow(0 0 32px rgba(112, 200, 255, 0.28));
+  opacity: 0.86;
+}
+
+.digital-human::before,
+.digital-human::after {
+  display: none;
+}
+
+.pathway-section {
+  padding: 30px 0 28px;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.96fr 1.16fr 1.18fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pathway-column {
+  position: relative;
+  min-height: 1120px;
+  border: 1px solid var(--column-color);
+  border-radius: 20px;
+  padding: 68px 18px 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(112, 200, 255, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(6, 16, 29, 0.9), rgba(5, 12, 24, 0.82));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 24px 90px rgba(0, 0, 0, 0.28);
+}
+
+.cyan { --column-color: #00eaff; --column-soft: rgba(0, 234, 255, 0.1); }
+.blue { --column-color: #33a3ff; --column-soft: rgba(51, 163, 255, 0.1); }
+.green { --column-color: #89ff7a; --column-soft: rgba(137, 255, 122, 0.1); }
+.magenta { --column-color: #ff86f8; --column-soft: rgba(255, 134, 248, 0.1); }
+
+.pathway-column:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  right: -38px;
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(90deg, var(--column-color), #7be7d4);
+  clip-path: polygon(0 30%, 62% 30%, 62% 0, 100% 50%, 62% 100%, 62% 70%, 0 70%);
+  filter: drop-shadow(0 0 12px var(--column-color));
+  z-index: 4;
+}
+
+.pathway-number {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%);
+  border: 1px solid var(--column-color);
+  border-radius: 50%;
+  color: #fff;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.34), transparent 24%), #082347;
+  box-shadow: 0 0 28px rgba(112, 200, 255, 0.36);
+  font-size: 3rem;
+  font-weight: 820;
+}
+
+.pathway-column h2 {
+  margin: 0;
+  color: var(--column-color);
+  text-align: center;
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  line-height: 1.12;
+}
+
+.pathway-column > p {
+  min-height: 42px;
+  margin: 10px 0 22px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.02rem;
+}
+
+.hazard-list,
+.trigger-list,
+.dysregulation-list {
+  display: grid;
+  gap: 14px;
+}
+
+.hazard-card,
+.trigger-list div,
+.dysregulation-list div,
+.outcome-grid div,
+.balance-card {
+  border: 1px solid rgba(112, 200, 255, 0.3);
+  border-radius: 12px;
+  background: var(--column-soft);
+  box-shadow: inset 0 0 28px rgba(255, 255, 255, 0.03);
+}
+
+.hazard-card {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 16px;
+  padding: 18px 14px;
+}
+
+.asset-icon,
+.outcome-icon {
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--column-color), transparent 58%));
+}
+
+.asset-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+}
+
+.hazard-card h3,
+.trigger-list b,
+.dysregulation-list b,
+.outcome-grid b {
+  display: block;
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.hazard-card p,
+.trigger-list small,
+.dysregulation-list em,
+.outcome-grid p,
+.balance-card small {
+  margin: 0;
+  color: #dbe8fb;
+  font-size: 0.92rem;
+  font-style: normal;
+}
+
+.line-icon {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--column-color);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.line-icon::before {
+  font-size: 1.72rem;
+  font-weight: 860;
+  color: var(--column-color);
+}
+
+.sun::before { content: "UV"; }
+.factory::before { content: "CH"; }
+.cells::before { content: "BIO"; font-size: 1.22rem; }
+.lifestyle::before { content: "LF"; }
+.social::before { content: "SO"; }
+.signal::before { content: "5G"; }
+
+.body-panel {
+  min-height: 292px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(51, 163, 255, 0.34), transparent 26%),
+    radial-gradient(circle at 50% 75%, rgba(255, 79, 176, 0.22), transparent 19%),
+    linear-gradient(180deg, rgba(51, 163, 255, 0.08), rgba(6, 16, 29, 0.12));
+}
+
+.body-scan-image {
+  width: min(170px, 82%);
+  max-height: 268px;
+  object-fit: contain;
+  border-radius: 14px;
+  filter: drop-shadow(0 0 34px rgba(51, 163, 255, 0.36));
+}
+
+.trigger-list div {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 18px;
+}
+
+.trigger-list span {
+  display: block;
+}
+
+.dysregulation-list div {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 12px;
+}
+
+.dysregulation-list span {
+  color: var(--column-color);
+  font-size: 1.55rem;
+  font-weight: 820;
+  text-align: center;
+}
+
+.balance-card {
+  display: grid;
+  grid-template-columns: 1fr 82px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 18px 12px;
+  color: var(--column-color);
+}
+
+.balance-card strong {
+  width: 82px;
+  height: 82px;
+  border: 2px solid var(--column-color);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 48%, var(--column-color) 49% 51%, transparent 52%),
+    radial-gradient(circle, rgba(137, 255, 122, 0.18), transparent 64%);
+  box-shadow: 0 0 28px rgba(137, 255, 122, 0.18);
+}
+
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.outcome-grid div {
+  min-height: 150px;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 6px;
+  padding: 17px 12px;
+  text-align: center;
+}
+
+.outcome-grid span {
+  display: none;
+}
+
+.outcome-icon {
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 2px;
+  border-radius: 14px;
+}
+
+.why-section {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) 1px minmax(220px, 0.35fr);
+  gap: clamp(22px, 4vw, 54px);
+  align-items: center;
+  margin-bottom: 58px;
+  border: 1px solid rgba(167, 139, 250, 0.54);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 42px);
+  background:
+    radial-gradient(circle at 5% 20%, rgba(51, 163, 255, 0.22), transparent 20rem),
+    linear-gradient(90deg, rgba(8, 31, 62, 0.86), rgba(13, 17, 45, 0.9));
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
+}
+
+.shield-mark,
+.better-card span {
+  width: 94px;
+  height: 94px;
+  border: 2px solid #33a3ff;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(51, 163, 255, 0.34), transparent 28%),
+    rgba(51, 163, 255, 0.08);
+  box-shadow: 0 0 32px rgba(51, 163, 255, 0.26);
+}
+
+.shield-mark {
+  background: url("../images/exposome-shield.png") center / contain no-repeat;
+  border: 0;
+}
+
+.why-section h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 2.4vw, 2.7rem);
+}
+
+.why-section p {
+  margin: 0;
+  color: #eaf0fb;
+  font-size: clamp(1rem, 1.2vw, 1.14rem);
+}
+
+.why-divider {
+  width: 1px;
+  height: 108px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.better-card {
+  display: grid;
+  grid-template-columns: 94px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.better-card span {
+  border-color: #00eaff;
+  border-radius: 50%;
+  background: url("../images/exposome-leaf-health.png") center / contain no-repeat;
+}
+
+.better-card p {
+  color: #00eaff;
+  font-size: clamp(1.12rem, 1.6vw, 1.45rem);
+  font-weight: 760;
+  line-height: 1.55;
+}
+
+.exposome-footer {
+  padding: 0 0 42px;
+}
+
+.exposome-footer a {
+  color: #7be7d4;
+  font-weight: 760;
+}
+
+@media (max-width: 1180px) {
+  .exposome-header .header-inner {
+    min-height: 88px;
+    align-items: center;
+  }
+
+  .exposome-nav {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 0 0 12px;
+    scrollbar-width: thin;
+  }
+
+  .pathway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pathway-column {
+    min-height: auto;
+  }
+
+  .pathway-column:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .exposome-shell {
+    width: min(100vw - 28px, 620px);
+  }
+
+  .exposome-header .header-inner {
+    width: min(100vw - 28px, 620px);
+    gap: 12px;
+  }
+
+  .exposome-header-actions {
+    margin-left: auto;
+  }
+
+  .exposome-contact {
+    min-width: auto;
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+  }
+
+  .exposome-language-select {
+    width: 78px;
+    min-height: 40px;
+    padding: 8px 9px;
+    font-size: 0.82rem;
+  }
+
+  .exposome-nav {
+    gap: 16px;
+  }
+
+  .exposome-nav a {
+    min-height: 38px;
+    font-size: 0.82rem;
+  }
+
+  .exposome-hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    padding: 70px 0 48px;
+  }
+
+  .digital-human,
+  .molecule-field {
+    opacity: 0.34;
+  }
+
+  .pathway-grid,
+  .outcome-grid,
+  .why-section,
+  .better-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-column {
+    padding-top: 58px;
+  }
+
+  .pathway-number {
+    width: 72px;
+    height: 72px;
+    top: -34px;
+    font-size: 2.35rem;
+  }
+
+  .why-divider {
+    display: none;
+  }
+}
