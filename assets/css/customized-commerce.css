@@ -1332,3 +1332,311 @@
     align-items: start;
   }
 }
+
+/* Home-page blue theme override */
+.commerce-page {
+  --shop-ink: #eaf0fb;
+  --shop-muted: #9fb0c9;
+  --shop-soft: #0a1627;
+  --shop-paper: rgba(12, 28, 47, 0.82);
+  --shop-line: rgba(255, 255, 255, 0.14);
+  --shop-gold: #70c8ff;
+  --shop-gold-dark: #7be7d4;
+  --shop-green: #7be7d4;
+  --shop-violet: #a78bfa;
+  --shop-blue: #70c8ff;
+  --shop-aqua: #7be7d4;
+  color: var(--shop-ink);
+  background:
+    radial-gradient(circle at 12% 4%, rgba(112, 200, 255, 0.18), transparent 32rem),
+    radial-gradient(circle at 86% 10%, rgba(167, 139, 250, 0.22), transparent 34rem),
+    linear-gradient(180deg, #06101d 0%, #0a1627 52%, #06101d 100%);
+}
+
+.commerce-page .skip-link {
+  background: #ffffff;
+  color: #08111e;
+}
+
+.commerce-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background: rgba(5, 12, 24, 0.76);
+}
+
+.commerce-nav a,
+.commerce-subnav a {
+  color: rgba(234, 240, 251, 0.76);
+}
+
+.commerce-nav a.active,
+.commerce-subnav a.active,
+.commerce-nav a:hover,
+.commerce-subnav a:hover {
+  color: #ffffff;
+}
+
+.commerce-nav a::after,
+.commerce-subnav a::after {
+  background: linear-gradient(90deg, var(--shop-blue), var(--shop-violet));
+}
+
+.commerce-subnav {
+  border-top-color: rgba(255, 255, 255, 0.08);
+  background: rgba(7, 18, 32, 0.68);
+}
+
+.commerce-icon-button,
+.commerce-cart-button,
+.soft-icon-button {
+  color: #eaf0fb;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.commerce-cart-button span {
+  color: #06101d;
+  background: linear-gradient(135deg, var(--shop-blue), var(--shop-aqua, #7be7d4));
+}
+
+.commerce-header .brand-logo {
+  filter:
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.28))
+    drop-shadow(0 10px 22px rgba(112, 200, 255, 0.24));
+}
+
+.commerce-hero {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(90deg, rgba(6, 16, 29, 0.94), rgba(9, 24, 43, 0.76) 45%, rgba(6, 16, 29, 0.42)),
+    url("../images/customized-banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.commerce-hero::before {
+  background:
+    radial-gradient(circle at 16% 24%, rgba(112, 200, 255, 0.24), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(167, 139, 250, 0.2), transparent 30rem),
+    linear-gradient(90deg, rgba(6, 16, 29, 0.36), rgba(6, 16, 29, 0.08));
+}
+
+.commerce-hero-art {
+  opacity: 0.45;
+  background:
+    radial-gradient(circle at 28% 62%, rgba(112, 200, 255, 0.34), transparent 18%),
+    radial-gradient(circle at 46% 50%, rgba(167, 139, 250, 0.24), transparent 20%),
+    radial-gradient(circle at 38% 74%, rgba(123, 231, 212, 0.2), transparent 18%);
+}
+
+.commerce-eyebrow {
+  color: var(--shop-aqua, #7be7d4);
+}
+
+.commerce-hero h1,
+.commerce-lead,
+.commerce-hero-copy > p:last-child,
+.section-mini-head > span,
+.section-mini-head h2,
+.formula-summary-card h2,
+.product-head h2,
+.admin-head h2,
+.summary-total strong,
+.cart-total strong,
+.checkout-total strong,
+.ingredient-card h3,
+.trust-strip b,
+.cart-head h2,
+.checkout-card h2,
+.cart-item h3,
+.admin-data-grid h3 {
+  color: #f4f7fb;
+}
+
+.commerce-lead,
+.commerce-hero-copy > p:last-child,
+.section-mini-head p,
+.formula-note,
+.formula-summary-card label,
+.summary-row,
+.summary-total,
+.cart-total,
+.checkout-total,
+.ingredient-card p,
+.trust-strip small,
+.cart-item p,
+.checkout-grid label,
+.admin-product-form label,
+.admin-login label,
+.admin-login p,
+.admin-table p {
+  color: var(--shop-muted);
+}
+
+.commerce-process article:not(:last-child)::after {
+  color: rgba(112, 200, 255, 0.62);
+}
+
+.commerce-process span,
+.step-number,
+.mixer-tabs button.active::after,
+.shop-card-badge {
+  background: linear-gradient(135deg, var(--shop-blue), var(--shop-violet));
+}
+
+.commerce-process b {
+  color: #f4f7fb;
+  border-color: rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at 50% 24%, rgba(112, 200, 255, 0.22), transparent 46%),
+    rgba(15, 33, 55, 0.82);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.formula-card,
+.product-section,
+.trust-strip,
+.admin-panel,
+.formula-summary-card,
+.mixer-card,
+.cart-panel,
+.checkout-card {
+  border-color: var(--shop-line);
+  background:
+    linear-gradient(180deg, rgba(19, 42, 69, 0.84), rgba(10, 22, 39, 0.86));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+}
+
+.formula-card,
+.product-section,
+.trust-strip,
+.admin-panel {
+  backdrop-filter: blur(20px);
+}
+
+.axis-row,
+.ingredient-card,
+.shop-product-card,
+.admin-product-form,
+.admin-data-grid article,
+.cart-item {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.formula-note {
+  border-color: rgba(112, 200, 255, 0.22);
+  background: rgba(112, 200, 255, 0.08);
+}
+
+.axis-icon,
+.trust-strip span {
+  color: var(--shop-aqua, #7be7d4);
+  border-color: rgba(123, 231, 212, 0.18);
+  background: rgba(123, 231, 212, 0.08);
+}
+
+.axis-slider input {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.summary-row span:nth-child(2),
+.mix-track {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.formula-summary-card input,
+.formula-summary-card select,
+.checkout-grid input,
+.checkout-grid textarea,
+.admin-product-form input,
+.admin-product-form select,
+.admin-product-form textarea,
+.admin-login input {
+  color: #f4f7fb;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(5, 12, 24, 0.52);
+}
+
+.formula-summary-card input::placeholder,
+.checkout-grid input::placeholder,
+.checkout-grid textarea::placeholder,
+.admin-product-form input::placeholder,
+.admin-product-form textarea::placeholder,
+.admin-login input::placeholder {
+  color: rgba(234, 240, 251, 0.46);
+}
+
+.primary-shop-button,
+.gold-shop-button {
+  color: #06101d;
+  background: linear-gradient(135deg, var(--shop-blue), var(--shop-aqua, #7be7d4));
+  box-shadow: 0 16px 42px rgba(112, 200, 255, 0.22);
+}
+
+.ghost-shop-button {
+  color: #eaf0fb;
+  border-color: rgba(112, 200, 255, 0.28);
+  background: rgba(112, 200, 255, 0.08);
+}
+
+.shop-status,
+.mixer-tabs button.active,
+.product-price,
+.product-price-row button,
+.admin-table th {
+  color: var(--shop-aqua, #7be7d4);
+}
+
+.mixer-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.mixer-tabs button {
+  color: rgba(234, 240, 251, 0.64);
+}
+
+.product-section {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(112, 200, 255, 0.16), transparent 24rem),
+    linear-gradient(180deg, rgba(19, 42, 69, 0.84), rgba(10, 22, 39, 0.86));
+}
+
+.shop-product-media {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.62), transparent 30%),
+    linear-gradient(180deg, rgba(234, 240, 251, 0.92), rgba(179, 206, 236, 0.74));
+}
+
+.product-price-row button,
+.cart-qty button,
+.modal-close,
+.admin-table button {
+  color: #eaf0fb;
+  border-color: rgba(112, 200, 255, 0.22);
+  background: rgba(112, 200, 255, 0.1);
+}
+
+.trust-strip {
+  background:
+    linear-gradient(90deg, rgba(19, 42, 69, 0.86), rgba(10, 22, 39, 0.84));
+}
+
+.cart-drawer,
+.checkout-modal {
+  background: rgba(3, 8, 17, 0.68);
+}
+
+.cart-panel {
+  box-shadow: -24px 0 90px rgba(0, 0, 0, 0.42);
+}
+
+.admin-data-grid h3,
+.admin-table th,
+.admin-table td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-table table {
+  color: #eaf0fb;
+}
