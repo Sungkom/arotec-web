@@ -133,10 +133,7 @@ img {
   background: transparent;
   object-fit: contain;
   object-position: center;
-  filter:
-    drop-shadow(0 0 1px rgba(255, 255, 255, 0.95))
-    drop-shadow(0 0 12px rgba(255, 255, 255, 0.28))
-    drop-shadow(0 10px 22px rgba(112, 200, 255, 0.24));
+  filter: none;
 }
 
 .site-header .brand,
