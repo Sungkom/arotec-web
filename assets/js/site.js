@@ -7,7 +7,7 @@
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
-    { id: "customized", path: "pages/customized.html", nav: true },
+    { id: "customized", path: "pages/customized.html", nav: true, section: "customized" },
     { id: "applied", path: "pages/applied-solutions.html", nav: true, section: "applied" },
     { id: "products", path: "pages/products.html", nav: true, section: "products" },
     { id: "platform", path: "pages/platform.html", nav: true, section: "platform" },
@@ -1528,16 +1528,11 @@
       .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
-    const conceptItems = platform.items.map((item) => {
-      const href = item.href || (item.image === "science-platform-exposome.jpg" ? "pages/exposome.html" : "");
-      const tag = href ? "a" : "article";
-      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title}"` : "";
-      return `
-      <${tag} class="concept-item" style="--concept-card-image:url('${asset(item.image)}')"${linkAttrs}>
+    const conceptItems = platform.items.map((item) => `
+      <article class="concept-item" style="--concept-card-image:url('${asset(item.image)}')">
         <h3>${item.title}</h3>
-      </${tag}>
-    `;
-    }).join("");
+      </article>
+    `).join("");
 
     const researchCards = home.research.cards.map((card, index) => `
       <article class="science-card">

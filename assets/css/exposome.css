@@ -349,7 +349,9 @@
 .outcome-icon,
 .dys-icon {
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  background: #f7fafc;
+  box-shadow: 0 6px 14px rgba(20, 42, 70, 0.08);
 }
 
 .asset-icon {
@@ -404,7 +406,7 @@
 
 .trigger-list div {
   display: grid;
-  grid-template-columns: 54px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: 12px;
   align-items: center;
   min-height: 72px;
@@ -412,8 +414,9 @@
 }
 
 .trigger-list .asset-icon {
-  width: 54px;
-  height: 54px;
+  width: 72px;
+  height: 58px;
+  border-radius: 6px;
 }
 
 .trigger-list span {
@@ -422,7 +425,7 @@
 
 .dysregulation-list div {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1.08fr) 28px minmax(0, 0.92fr);
+  grid-template-columns: 68px minmax(0, 1.08fr) 28px minmax(0, 0.92fr);
   gap: 9px;
   align-items: center;
   min-height: 68px;
@@ -430,11 +433,11 @@
 }
 
 .dys-icon {
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(77, 135, 53, 0.24);
-  border-radius: 50%;
-  background: rgba(77, 135, 53, 0.06);
+  width: 68px;
+  height: 54px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
 }
 
 .dysregulation-list span {
@@ -458,18 +461,12 @@
 }
 
 .balance-card strong {
-  width: 72px;
+  width: 98px;
   height: 72px;
   display: block;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 28%, #6f7680 0 5px, transparent 6px),
-    linear-gradient(90deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
-    linear-gradient(155deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
-    linear-gradient(25deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
-    radial-gradient(circle at 30% 62%, transparent 0 18px, #6f7680 19px 20px, transparent 21px),
-    radial-gradient(circle at 70% 62%, transparent 0 18px, #6f7680 19px 20px, transparent 21px);
-  opacity: 0.78;
+  border-radius: 0;
+  background: url("../images/exposome-icon-balance-scale.png") center / contain no-repeat;
+  opacity: 1;
 }
 
 .outcome-grid {
@@ -481,7 +478,7 @@
 .outcome-grid div {
   min-height: 82px;
   display: grid;
-  grid-template-columns: 56px 1fr;
+  grid-template-columns: 92px 1fr;
   grid-template-areas:
     "icon title"
     "icon text";
@@ -492,8 +489,9 @@
 
 .outcome-icon {
   grid-area: icon;
-  width: 56px;
-  height: 56px;
+  width: 92px;
+  height: 74px;
+  border-radius: 6px;
 }
 
 .outcome-grid b {
@@ -675,7 +673,7 @@
   }
 
   .dysregulation-list div {
-    grid-template-columns: 42px 1fr 24px 1fr;
+    grid-template-columns: 64px 1fr 24px 1fr;
   }
 
   .why-divider {
