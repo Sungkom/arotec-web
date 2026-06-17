@@ -8,13 +8,7 @@
 }
 
 .exposome-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url("../images/exposome-science-human-health-reference.png") top center / min(1720px, 100vw) auto no-repeat;
-  opacity: 0.075;
-  pointer-events: none;
+  display: none;
 }
 
 .exposome-page .skip-link {
@@ -112,9 +106,7 @@
   overflow: hidden;
   isolation: isolate;
   border-bottom: 1px solid rgba(11, 23, 48, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 253, 0.9)),
-    url("../images/exposome-science-human-health-reference.png") center top / cover no-repeat;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 253, 0.94));
 }
 
 .exposome-hero::before,
@@ -135,11 +127,7 @@
 }
 
 .exposome-hero::after {
-  background-image: url("../images/exposome-science-human-health-reference.png");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: min(1720px, 100vw) auto;
-  opacity: 0.07;
+  display: none;
 }
 
 .molecule-field,
@@ -210,14 +198,7 @@
 }
 
 .pathway-section::before {
-  content: "";
-  position: absolute;
-  inset: 12px 0 auto;
-  z-index: -1;
-  height: min(820px, 80vw);
-  background: url("../images/exposome-science-human-health-reference.png") center top / min(1680px, 100vw) auto no-repeat;
-  opacity: 0.045;
-  pointer-events: none;
+  display: none;
 }
 
 .pathway-grid {
@@ -513,9 +494,7 @@
   border-radius: 14px;
   padding: clamp(22px, 3.5vw, 38px);
   color: #0b1730;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 252, 255, 0.84)),
-    url("../images/exposome-science-human-health-reference.png") center / cover no-repeat;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(249, 252, 255, 0.88));
   box-shadow: 0 18px 42px rgba(20, 42, 70, 0.08);
 }
 
