@@ -1,9 +1,20 @@
 .exposome-page {
-  color: #eaf0fb;
+  position: relative;
+  min-height: 100vh;
+  color: #0b1730;
   background:
-    radial-gradient(circle at 14% 8%, rgba(0, 214, 255, 0.16), transparent 30rem),
-    radial-gradient(circle at 84% 16%, rgba(167, 139, 250, 0.18), transparent 34rem),
-    linear-gradient(180deg, #020714 0%, #06101d 48%, #020714 100%);
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.94), rgba(245, 248, 252, 0.98) 42rem),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+}
+
+.exposome-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("../images/exposome-science-human-health-reference.png") top center / min(1720px, 100vw) auto no-repeat;
+  opacity: 0.075;
+  pointer-events: none;
 }
 
 .exposome-page .skip-link {
@@ -11,18 +22,18 @@
 }
 
 .exposome-shell {
-  width: min(1450px, calc(100vw - 44px));
+  width: min(1530px, calc(100vw - 48px));
   margin: 0 auto;
 }
 
 .exposome-header {
-  background: rgba(2, 7, 20, 0.78);
+  background: rgba(5, 12, 24, 0.78);
 }
 
 .exposome-header .header-inner {
-  width: min(1380px, calc(100vw - 44px));
+  width: min(1460px, calc(100vw - 48px));
   min-height: 82px;
-  gap: clamp(20px, 2.4vw, 42px);
+  gap: clamp(16px, 2vw, 34px);
 }
 
 .exposome-nav {
@@ -30,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2vw, 36px);
+  gap: clamp(12px, 1.3vw, 24px);
 }
 
 .exposome-nav a {
@@ -39,7 +50,7 @@
   align-items: center;
   min-height: 42px;
   color: rgba(234, 240, 251, 0.78);
-  font-size: clamp(0.78rem, 0.82vw, 0.94rem);
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
   font-weight: 720;
   line-height: 1.2;
   white-space: nowrap;
@@ -71,19 +82,19 @@
 .exposome-header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .exposome-language-select {
-  width: 92px;
-  min-height: 44px;
+  width: 86px;
+  min-height: 42px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   color: #eaf0fb;
   background: rgba(255, 255, 255, 0.08);
-  padding: 9px 12px;
+  padding: 8px 10px;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 720;
 }
 
@@ -92,20 +103,18 @@
 }
 
 .exposome-contact {
-  min-width: 148px;
+  min-width: 138px;
   white-space: nowrap;
 }
 
 .exposome-hero {
   position: relative;
-  min-height: 430px;
   overflow: hidden;
   isolation: isolate;
-  border-bottom: 1px solid rgba(112, 200, 255, 0.16);
+  border-bottom: 1px solid rgba(11, 23, 48, 0.1);
   background:
-    radial-gradient(circle at 50% 25%, rgba(112, 200, 255, 0.12), transparent 34rem),
-    linear-gradient(180deg, rgba(2, 7, 20, 0.22), rgba(2, 7, 20, 0.86)),
-    #020714;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 253, 0.9)),
+    url("../images/exposome-science-human-health-reference.png") center top / cover no-repeat;
 }
 
 .exposome-hero::before,
@@ -113,185 +122,208 @@
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
 }
 
 .exposome-hero::before {
-  background-image:
-    linear-gradient(rgba(112, 200, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(112, 200, 255, 0.07) 1px, transparent 1px);
-  background-size: 78px 78px;
-  mask-image: radial-gradient(circle at 50% 26%, #000 0 28%, transparent 72%);
+  background:
+    linear-gradient(90deg, transparent, rgba(11, 23, 48, 0.18), transparent) center 74% / min(1060px, 82vw) 1px no-repeat,
+    radial-gradient(circle at 18% 20%, rgba(214, 143, 18, 0.16), transparent 18rem),
+    radial-gradient(circle at 52% 16%, rgba(13, 83, 151, 0.12), transparent 20rem),
+    radial-gradient(circle at 78% 16%, rgba(70, 125, 49, 0.14), transparent 20rem);
 }
 
 .exposome-hero::after {
-  background:
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 7rem),
-    radial-gradient(circle at 68% 18%, rgba(112, 200, 255, 0.22), transparent 1.5rem),
-    radial-gradient(circle at 78% 9%, rgba(167, 139, 250, 0.3), transparent 1rem),
-    radial-gradient(circle at 36% 16%, rgba(123, 231, 212, 0.24), transparent 1rem);
+  background-image: url("../images/exposome-science-human-health-reference.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: min(1720px, 100vw) auto;
+  opacity: 0.07;
+}
+
+.molecule-field,
+.digital-human {
+  display: none;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   display: grid;
   justify-items: center;
   text-align: center;
-  padding: clamp(74px, 9vw, 118px) 0 66px;
+  padding: clamp(42px, 5.3vw, 72px) 0 clamp(24px, 3.6vw, 42px);
 }
 
 .exposome-kicker {
   margin: 0 0 10px;
-  color: #7be7d4;
-  font-size: 0.84rem;
+  color: #c97900;
+  font-size: clamp(0.76rem, 0.9vw, 0.94rem);
   font-weight: 860;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .exposome-hero h1 {
   margin: 0;
-  max-width: 1000px;
-  color: #ffffff;
-  font-size: clamp(3.2rem, 7vw, 6.8rem);
-  line-height: 1.03;
-  font-weight: 860;
-  text-shadow: 0 0 20px rgba(112, 200, 255, 0.18), 0 18px 50px rgba(0, 0, 0, 0.5);
+  max-width: 1180px;
+  color: #081735;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 5vw, 4.95rem);
+  font-weight: 760;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .hero-subtitle {
-  margin: 24px 0 12px;
-  color: #00eaff;
-  font-size: clamp(1.22rem, 2.1vw, 2rem);
-  font-weight: 760;
+  position: relative;
+  margin: 18px 0 0;
+  color: #0b1730;
+  font-size: clamp(0.95rem, 1.55vw, 1.5rem);
+  font-weight: 680;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-subtitle::before,
+.hero-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: min(14vw, 190px);
+  height: 1px;
+  margin: 0 22px 0.34em;
+  background: rgba(11, 23, 48, 0.32);
 }
 
 .hero-copy {
-  max-width: 760px;
-  margin: 0;
-  color: #eaf0fb;
-  font-size: clamp(1rem, 1.35vw, 1.18rem);
-}
-
-.molecule-field {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: min(360px, 34vw);
-  height: 285px;
-  opacity: 0.9;
-  z-index: 1;
-  background: url("../images/exposome-molecule-field.png") left top / contain no-repeat;
-}
-
-.molecule-field span {
-  display: none;
-}
-
-.molecule-field span:nth-child(1) { left: -18px; top: 90px; }
-.molecule-field span:nth-child(2) { left: 72px; top: 146px; }
-.molecule-field span:nth-child(3) { left: 34px; top: 226px; }
-.molecule-field span:nth-child(4) { left: 148px; top: 86px; opacity: 0.58; }
-.molecule-field span:nth-child(5) { left: 192px; top: 202px; opacity: 0.42; }
-
-.digital-human {
-  position: absolute;
-  right: min(5vw, 76px);
-  top: 54px;
-  z-index: 1;
-  width: min(210px, 18vw);
-  aspect-ratio: 0.52;
-  border-radius: 0;
-  background: url("../images/exposome-digital-human.png") center / contain no-repeat;
-  filter: drop-shadow(0 0 32px rgba(112, 200, 255, 0.28));
-  opacity: 0.86;
-}
-
-.digital-human::before,
-.digital-human::after {
-  display: none;
+  max-width: 920px;
+  margin: 18px 0 0;
+  color: #41506a;
+  font-size: clamp(0.98rem, 1.15vw, 1.14rem);
 }
 
 .pathway-section {
-  padding: 30px 0 28px;
+  position: relative;
+  padding: clamp(28px, 4vw, 46px) 0 clamp(28px, 4vw, 54px);
+}
+
+.pathway-section::before {
+  content: "";
+  position: absolute;
+  inset: 12px 0 auto;
+  z-index: -1;
+  height: min(820px, 80vw);
+  background: url("../images/exposome-science-human-health-reference.png") center top / min(1680px, 100vw) auto no-repeat;
+  opacity: 0.045;
+  pointer-events: none;
 }
 
 .pathway-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.96fr 1.16fr 1.18fr;
-  gap: 28px;
+  grid-template-columns: 1.05fr 1fr 1.28fr 1.03fr;
+  gap: clamp(18px, 2.25vw, 34px);
   align-items: stretch;
 }
 
 .pathway-column {
+  --column-color: #0d5397;
+  --column-soft: rgba(13, 83, 151, 0.08);
   position: relative;
-  min-height: 1120px;
-  border: 1px solid var(--column-color);
-  border-radius: 20px;
-  padding: 68px 18px 22px;
+  min-height: 880px;
+  border: 1.5px solid var(--column-color);
+  border-radius: 14px;
+  padding: 24px 14px 16px;
+  color: #0b1730;
   background:
-    radial-gradient(circle at 50% 0%, rgba(112, 200, 255, 0.12), transparent 18rem),
-    linear-gradient(180deg, rgba(6, 16, 29, 0.9), rgba(5, 12, 24, 0.82));
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 24px 90px rgba(0, 0, 0, 0.28);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 253, 255, 0.93)),
+    var(--column-soft);
+  box-shadow:
+    0 18px 42px rgba(20, 42, 70, 0.08),
+    inset 0 0 42px rgba(255, 255, 255, 0.48);
 }
 
-.cyan { --column-color: #00eaff; --column-soft: rgba(0, 234, 255, 0.1); }
-.blue { --column-color: #33a3ff; --column-soft: rgba(51, 163, 255, 0.1); }
-.green { --column-color: #89ff7a; --column-soft: rgba(137, 255, 122, 0.1); }
-.magenta { --column-color: #ff86f8; --column-soft: rgba(255, 134, 248, 0.1); }
+.cyan {
+  --column-color: #d38a06;
+  --column-strong: #c97900;
+  --column-soft: rgba(211, 138, 6, 0.09);
+}
+
+.blue {
+  --column-color: #0d5a9e;
+  --column-strong: #0b4a85;
+  --column-soft: rgba(13, 90, 158, 0.08);
+}
+
+.green {
+  --column-color: #4d8735;
+  --column-strong: #3d7529;
+  --column-soft: rgba(77, 135, 53, 0.08);
+}
+
+.magenta {
+  --column-color: #c52028;
+  --column-strong: #b1111a;
+  --column-soft: rgba(197, 32, 40, 0.07);
+}
 
 .pathway-column:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 70px;
-  right: -38px;
-  width: 50px;
-  height: 30px;
-  background: linear-gradient(90deg, var(--column-color), #7be7d4);
-  clip-path: polygon(0 30%, 62% 30%, 62% 0, 100% 50%, 62% 100%, 62% 70%, 0 70%);
-  filter: drop-shadow(0 0 12px var(--column-color));
+  top: 47%;
+  right: calc(clamp(18px, 2.25vw, 34px) * -1 - 9px);
   z-index: 4;
+  width: 48px;
+  height: 38px;
+  background: linear-gradient(90deg, rgba(82, 99, 118, 0.5), rgba(82, 99, 118, 0.92));
+  clip-path: polygon(0 20%, 62% 20%, 62% 0, 100% 50%, 62% 100%, 62% 80%, 0 80%);
+  filter: drop-shadow(0 3px 7px rgba(31, 52, 76, 0.22));
 }
 
 .pathway-number {
-  position: absolute;
-  top: -42px;
-  left: 50%;
-  width: 86px;
-  height: 86px;
+  position: relative;
+  float: left;
+  width: 58px;
+  height: 58px;
   display: grid;
   place-items: center;
-  transform: translateX(-50%);
-  border: 1px solid var(--column-color);
+  margin: -8px 14px 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: 50%;
   color: #fff;
-  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.34), transparent 24%), #082347;
-  box-shadow: 0 0 28px rgba(112, 200, 255, 0.36);
-  font-size: 3rem;
-  font-weight: 820;
+  background:
+    radial-gradient(circle at 35% 26%, rgba(255, 255, 255, 0.38), transparent 32%),
+    var(--column-strong);
+  box-shadow: 0 6px 16px rgba(28, 47, 70, 0.18);
+  font-size: 2.4rem;
+  font-weight: 860;
+  line-height: 1;
 }
 
 .pathway-column h2 {
   margin: 0;
-  color: var(--column-color);
-  text-align: center;
-  font-size: clamp(1.35rem, 1.8vw, 2rem);
-  line-height: 1.12;
+  color: var(--column-strong);
+  font-size: clamp(1.24rem, 1.55vw, 1.75rem);
+  line-height: 1.06;
+  font-weight: 860;
+  text-transform: uppercase;
 }
 
 .pathway-column > p {
-  min-height: 42px;
-  margin: 10px 0 22px;
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.02rem;
+  min-height: 30px;
+  margin: 5px 0 18px;
+  color: #0b1730;
+  font-size: clamp(0.92rem, 1vw, 1.02rem);
+  line-height: 1.25;
 }
 
 .hazard-list,
 .trigger-list,
 .dysregulation-list {
   display: grid;
-  gap: 14px;
+  gap: 8px;
+  clear: both;
 }
 
 .hazard-card,
@@ -299,30 +331,31 @@
 .dysregulation-list div,
 .outcome-grid div,
 .balance-card {
-  border: 1px solid rgba(112, 200, 255, 0.3);
-  border-radius: 12px;
-  background: var(--column-soft);
-  box-shadow: inset 0 0 28px rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(71, 89, 109, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.44);
 }
 
 .hazard-card {
   display: grid;
-  grid-template-columns: 62px 1fr;
-  gap: 16px;
-  padding: 18px 14px;
+  grid-template-columns: 118px 1fr;
+  gap: 14px;
+  min-height: 112px;
+  padding: 10px 12px;
 }
 
 .asset-icon,
-.outcome-icon {
+.outcome-icon,
+.dys-icon {
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--column-color), transparent 58%));
 }
 
 .asset-icon {
-  width: 62px;
-  height: 62px;
-  border-radius: 12px;
+  width: 118px;
+  height: 92px;
+  border-radius: 6px;
 }
 
 .hazard-card h3,
@@ -330,10 +363,12 @@
 .dysregulation-list b,
 .outcome-grid b {
   display: block;
-  margin: 0 0 5px;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.25;
+  margin: 0 0 4px;
+  color: var(--column-strong);
+  font-size: clamp(0.88rem, 0.94vw, 1rem);
+  font-weight: 860;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 .hazard-card p,
@@ -342,61 +377,43 @@
 .outcome-grid p,
 .balance-card small {
   margin: 0;
-  color: #dbe8fb;
-  font-size: 0.92rem;
+  color: #111827;
+  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
   font-style: normal;
+  line-height: 1.28;
 }
-
-.line-icon {
-  position: relative;
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  color: var(--column-color);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.line-icon::before {
-  font-size: 1.72rem;
-  font-weight: 860;
-  color: var(--column-color);
-}
-
-.sun::before { content: "UV"; }
-.factory::before { content: "CH"; }
-.cells::before { content: "BIO"; font-size: 1.22rem; }
-.lifestyle::before { content: "LF"; }
-.social::before { content: "SO"; }
-.signal::before { content: "5G"; }
 
 .body-panel {
-  min-height: 292px;
+  min-height: 246px;
   display: grid;
   place-items: center;
-  margin-bottom: 18px;
-  border-radius: 18px;
+  clear: both;
+  margin: 4px 0 10px;
+  border-radius: 10px;
   background:
-    radial-gradient(circle at 50% 38%, rgba(51, 163, 255, 0.34), transparent 26%),
-    radial-gradient(circle at 50% 75%, rgba(255, 79, 176, 0.22), transparent 19%),
-    linear-gradient(180deg, rgba(51, 163, 255, 0.08), rgba(6, 16, 29, 0.12));
+    radial-gradient(circle at 50% 48%, rgba(13, 90, 158, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(13, 90, 158, 0.04), rgba(255, 255, 255, 0.44));
 }
 
 .body-scan-image {
-  width: min(170px, 82%);
-  max-height: 268px;
+  width: min(190px, 82%);
+  max-height: 232px;
   object-fit: contain;
-  border-radius: 14px;
-  filter: drop-shadow(0 0 34px rgba(51, 163, 255, 0.36));
+  filter: drop-shadow(0 12px 20px rgba(13, 90, 158, 0.18));
 }
 
 .trigger-list div {
   display: grid;
-  grid-template-columns: 62px 1fr;
-  gap: 14px;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
   align-items: center;
-  padding: 16px 18px;
+  min-height: 72px;
+  padding: 8px 12px;
+}
+
+.trigger-list .asset-icon {
+  width: 54px;
+  height: 54px;
 }
 
 .trigger-list span {
@@ -405,133 +422,149 @@
 
 .dysregulation-list div {
   display: grid;
-  grid-template-columns: 1fr 34px 1fr;
-  gap: 10px;
+  grid-template-columns: 44px minmax(0, 1.08fr) 28px minmax(0, 0.92fr);
+  gap: 9px;
   align-items: center;
-  padding: 14px 12px;
+  min-height: 68px;
+  padding: 8px 10px;
+}
+
+.dys-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(77, 135, 53, 0.24);
+  border-radius: 50%;
+  background: rgba(77, 135, 53, 0.06);
 }
 
 .dysregulation-list span {
-  color: var(--column-color);
-  font-size: 1.55rem;
-  font-weight: 820;
+  color: var(--column-strong);
+  font-size: 1.45rem;
+  font-weight: 860;
   text-align: center;
 }
 
 .balance-card {
   display: grid;
-  grid-template-columns: 1fr 82px 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 72px 1fr;
+  gap: 8px;
   align-items: center;
-  margin-top: 16px;
-  padding: 18px 12px;
-  color: var(--column-color);
+  margin-top: 12px;
+  padding: 13px 10px;
+  color: var(--column-strong);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 860;
 }
 
 .balance-card strong {
-  width: 82px;
-  height: 82px;
-  border: 2px solid var(--column-color);
+  width: 72px;
+  height: 72px;
+  display: block;
   border-radius: 50%;
   background:
-    linear-gradient(90deg, transparent 48%, var(--column-color) 49% 51%, transparent 52%),
-    radial-gradient(circle, rgba(137, 255, 122, 0.18), transparent 64%);
-  box-shadow: 0 0 28px rgba(137, 255, 122, 0.18);
+    radial-gradient(circle at 50% 28%, #6f7680 0 5px, transparent 6px),
+    linear-gradient(90deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
+    linear-gradient(155deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
+    linear-gradient(25deg, transparent 47%, #6f7680 48% 52%, transparent 53%),
+    radial-gradient(circle at 30% 62%, transparent 0 18px, #6f7680 19px 20px, transparent 21px),
+    radial-gradient(circle at 70% 62%, transparent 0 18px, #6f7680 19px 20px, transparent 21px);
+  opacity: 0.78;
 }
 
 .outcome-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 8px;
+  clear: both;
 }
 
 .outcome-grid div {
-  min-height: 150px;
+  min-height: 82px;
   display: grid;
-  align-content: start;
-  justify-items: center;
-  gap: 6px;
-  padding: 17px 12px;
-  text-align: center;
-}
-
-.outcome-grid span {
-  display: none;
+  grid-template-columns: 56px 1fr;
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  gap: 2px 12px;
+  align-content: center;
+  padding: 8px 10px;
 }
 
 .outcome-icon {
-  width: 66px;
-  height: 66px;
-  margin: 0 auto 2px;
-  border-radius: 14px;
+  grid-area: icon;
+  width: 56px;
+  height: 56px;
+}
+
+.outcome-grid b {
+  grid-area: title;
+  color: var(--column-strong);
+}
+
+.outcome-grid p {
+  grid-area: text;
 }
 
 .why-section {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr) 1px minmax(220px, 0.35fr);
-  gap: clamp(22px, 4vw, 54px);
+  grid-template-columns: 112px minmax(0, 1fr) 1px minmax(220px, 0.38fr);
+  gap: clamp(22px, 4vw, 48px);
   align-items: center;
-  margin-bottom: 58px;
-  border: 1px solid rgba(167, 139, 250, 0.54);
-  border-radius: 20px;
-  padding: clamp(24px, 4vw, 42px);
+  margin-bottom: 54px;
+  border: 1px solid rgba(13, 90, 158, 0.18);
+  border-radius: 14px;
+  padding: clamp(22px, 3.5vw, 38px);
+  color: #0b1730;
   background:
-    radial-gradient(circle at 5% 20%, rgba(51, 163, 255, 0.22), transparent 20rem),
-    linear-gradient(90deg, rgba(8, 31, 62, 0.86), rgba(13, 17, 45, 0.9));
-  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 252, 255, 0.84)),
+    url("../images/exposome-science-human-health-reference.png") center / cover no-repeat;
+  box-shadow: 0 18px 42px rgba(20, 42, 70, 0.08);
 }
 
 .shield-mark,
 .better-card span {
-  width: 94px;
-  height: 94px;
-  border: 2px solid #33a3ff;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 50% 38%, rgba(51, 163, 255, 0.34), transparent 28%),
-    rgba(51, 163, 255, 0.08);
-  box-shadow: 0 0 32px rgba(51, 163, 255, 0.26);
-}
-
-.shield-mark {
+  width: 92px;
+  height: 92px;
+  border-radius: 18px;
   background: url("../images/exposome-shield.png") center / contain no-repeat;
-  border: 0;
 }
 
 .why-section h2 {
-  margin: 0 0 10px;
-  color: #ffffff;
+  margin: 0 0 8px;
+  color: #081735;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.8rem, 2.4vw, 2.7rem);
 }
 
 .why-section p {
   margin: 0;
-  color: #eaf0fb;
-  font-size: clamp(1rem, 1.2vw, 1.14rem);
+  color: #33445d;
+  font-size: clamp(0.98rem, 1.12vw, 1.12rem);
 }
 
 .why-divider {
   width: 1px;
-  height: 108px;
-  background: rgba(255, 255, 255, 0.22);
+  height: 104px;
+  background: rgba(11, 23, 48, 0.14);
 }
 
 .better-card {
   display: grid;
-  grid-template-columns: 94px 1fr;
-  gap: 24px;
+  grid-template-columns: 86px 1fr;
+  gap: 20px;
   align-items: center;
 }
 
 .better-card span {
-  border-color: #00eaff;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
-  background: url("../images/exposome-leaf-health.png") center / contain no-repeat;
+  background-image: url("../images/exposome-leaf-health.png");
 }
 
 .better-card p {
-  color: #00eaff;
-  font-size: clamp(1.12rem, 1.6vw, 1.45rem);
+  color: #3d7529;
+  font-size: clamp(1.05rem, 1.42vw, 1.32rem);
   font-weight: 760;
   line-height: 1.55;
 }
@@ -541,11 +574,11 @@
 }
 
 .exposome-footer a {
-  color: #7be7d4;
+  color: #0b4a85;
   font-weight: 760;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
   .exposome-header .header-inner {
     min-height: 88px;
     align-items: center;
@@ -574,14 +607,10 @@
   }
 }
 
-@media (max-width: 760px) {
-  .exposome-shell {
-    width: min(100vw - 28px, 620px);
-  }
-
+@media (max-width: 820px) {
+  .exposome-shell,
   .exposome-header .header-inner {
     width: min(100vw - 28px, 620px);
-    gap: 12px;
   }
 
   .exposome-header-actions {
@@ -611,38 +640,88 @@
     font-size: 0.82rem;
   }
 
-  .exposome-hero {
-    min-height: auto;
-  }
-
   .hero-inner {
-    padding: 70px 0 48px;
+    padding: 46px 0 34px;
   }
 
-  .digital-human,
-  .molecule-field {
-    opacity: 0.34;
+  .hero-subtitle::before,
+  .hero-subtitle::after {
+    display: none;
   }
 
   .pathway-grid,
-  .outcome-grid,
   .why-section,
   .better-card {
     grid-template-columns: 1fr;
   }
 
   .pathway-column {
-    padding-top: 58px;
+    padding: 20px 14px 14px;
   }
 
   .pathway-number {
-    width: 72px;
-    height: 72px;
-    top: -34px;
-    font-size: 2.35rem;
+    width: 52px;
+    height: 52px;
+    font-size: 2rem;
+  }
+
+  .hazard-card {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .asset-icon {
+    width: 96px;
+    height: 78px;
+  }
+
+  .dysregulation-list div {
+    grid-template-columns: 42px 1fr 24px 1fr;
   }
 
   .why-divider {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .exposome-hero h1 {
+    font-size: clamp(2rem, 12vw, 3.1rem);
+  }
+
+  .hero-subtitle {
+    letter-spacing: 0.08em;
+  }
+
+  .hazard-card,
+  .trigger-list div,
+  .dysregulation-list div,
+  .outcome-grid div {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  .hazard-card,
+  .trigger-list div,
+  .dysregulation-list div,
+  .outcome-grid div {
+    justify-items: start;
+  }
+
+  .outcome-icon,
+  .outcome-grid b,
+  .outcome-grid p {
+    grid-area: auto;
+  }
+
+  .dysregulation-list span {
+    display: none;
+  }
+
+  .balance-card {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-card strong {
+    margin: 0 auto;
   }
 }
