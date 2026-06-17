@@ -1528,11 +1528,16 @@
       .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
-    const conceptItems = platform.items.map((item) => `
-      <article class="concept-item" style="--concept-card-image:url('${asset(item.image)}')">
+    const conceptItems = platform.items.map((item) => {
+      const href = item.href || (item.image === "science-platform-exposome.jpg" ? "pages/exposome.html" : "");
+      const tag = href ? "a" : "article";
+      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title}"` : "";
+      return `
+      <${tag} class="concept-item" style="--concept-card-image:url('${asset(item.image)}')"${linkAttrs}>
         <h3>${item.title}</h3>
-      </article>
-    `).join("");
+      </${tag}>
+    `;
+    }).join("");
 
     const researchCards = home.research.cards.map((card, index) => `
       <article class="science-card">

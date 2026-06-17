@@ -611,6 +611,7 @@ h3 {
   border-radius: var(--radius);
   padding: 24px;
   color: var(--paper);
+  text-decoration: none;
   background:
     linear-gradient(180deg, rgba(5, 12, 24, 0.06), rgba(5, 12, 24, 0.76)),
     var(--concept-card-image);
