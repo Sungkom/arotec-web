@@ -21,7 +21,13 @@
 }
 
 .exposome-header {
-  background: rgba(5, 12, 24, 0.78);
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  border-bottom: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .exposome-header .header-inner {
@@ -43,11 +49,14 @@
   display: inline-flex;
   align-items: center;
   min-height: 42px;
-  color: rgba(234, 240, 251, 0.78);
+  color: #113568;
   font-size: clamp(0.72rem, 0.78vw, 0.86rem);
   font-weight: 720;
   line-height: 1.2;
   white-space: nowrap;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.72),
+    0 7px 20px rgba(255, 255, 255, 0.45);
 }
 
 .exposome-nav a::after {
@@ -59,13 +68,14 @@
   height: 2px;
   transform: scaleX(0);
   transform-origin: left;
-  background: linear-gradient(90deg, #70c8ff, #a78bfa);
+  background: linear-gradient(90deg, #0b63c7, #113568);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.54);
   transition: transform 180ms ease;
 }
 
 .exposome-nav a:hover,
 .exposome-nav a:focus-visible {
-  color: #ffffff;
+  color: #0b63c7;
 }
 
 .exposome-nav a:hover::after,
@@ -82,14 +92,16 @@
 .exposome-language-select {
   width: 86px;
   min-height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(17, 53, 104, 0.24);
   border-radius: 999px;
-  color: #eaf0fb;
-  background: rgba(255, 255, 255, 0.08);
+  color: #113568;
+  background: rgba(255, 255, 255, 0.48);
   padding: 8px 10px;
   font: inherit;
   font-size: 0.86rem;
   font-weight: 720;
+  box-shadow: 0 10px 28px rgba(17, 53, 104, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .exposome-language-select option {
@@ -99,6 +111,11 @@
 .exposome-contact {
   min-width: 138px;
   white-space: nowrap;
+  border-color: rgba(17, 53, 104, 0.24);
+  color: #113568;
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 10px 28px rgba(17, 53, 104, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .exposome-hero {
@@ -141,7 +158,7 @@
   display: grid;
   justify-items: center;
   text-align: center;
-  padding: clamp(42px, 5.3vw, 72px) 0 clamp(24px, 3.6vw, 42px);
+  padding: clamp(132px, 12vw, 166px) 0 clamp(24px, 3.6vw, 42px);
 }
 
 .exposome-kicker {
@@ -571,6 +588,10 @@
     scrollbar-width: thin;
   }
 
+  .hero-inner {
+    padding-top: clamp(150px, 18vw, 190px);
+  }
+
   .pathway-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -618,7 +639,7 @@
   }
 
   .hero-inner {
-    padding: 46px 0 34px;
+    padding: 156px 0 34px;
   }
 
   .hero-subtitle::before,

@@ -258,7 +258,7 @@ img {
   background: rgba(255, 255, 255, 0.07);
 }
 
-body[data-page="home"] .site-header {
+.site-header {
   position: absolute;
   inset: 0 0 auto;
   width: 100%;
@@ -268,7 +268,7 @@ body[data-page="home"] .site-header {
   backdrop-filter: none;
 }
 
-body[data-page="home"] .site-header .brand {
+.site-header .brand {
   width: 118px;
   min-width: 118px;
   min-height: 83px;
@@ -281,32 +281,32 @@ body[data-page="home"] .site-header .brand {
   box-shadow: none;
 }
 
-body[data-page="home"] .site-header .brand-logo {
+.site-header .brand-logo {
   width: 88px;
   height: 60px;
   filter: none;
 }
 
-body[data-page="home"] .nav-link {
+.site-header .nav-link {
   color: #113568;
   text-shadow:
     0 1px 0 rgba(255, 255, 255, 0.72),
     0 7px 20px rgba(255, 255, 255, 0.45);
 }
 
-body[data-page="home"] .nav-link:hover,
-body[data-page="home"] .nav-link:focus-visible,
-body[data-page="home"] .nav-link.active {
+.site-header .nav-link:hover,
+.site-header .nav-link:focus-visible,
+.site-header .nav-link.active {
   color: #0b63c7;
 }
 
-body[data-page="home"] .nav-link::after {
+.site-header .nav-link::after {
   background: linear-gradient(90deg, #0b63c7, #113568);
   box-shadow: 0 0 14px rgba(255, 255, 255, 0.54);
 }
 
-body[data-page="home"] .language-select,
-body[data-page="home"] .circle-button {
+.site-header .language-select,
+.site-header .circle-button {
   border-color: rgba(17, 53, 104, 0.24);
   color: #113568;
   background: rgba(255, 255, 255, 0.48);
@@ -314,7 +314,7 @@ body[data-page="home"] .circle-button {
   backdrop-filter: blur(10px);
 }
 
-body[data-page="home"] .contact-pill {
+.site-header .contact-pill {
   border-color: rgba(17, 53, 104, 0.24);
   color: #113568;
   background: rgba(255, 255, 255, 0.52);
@@ -371,9 +371,9 @@ body[data-page="home"] .hero .pill-button {
   background: #123665;
 }
 
-body[data-page="home"] .language-select:focus-visible,
-body[data-page="home"] .circle-button:focus-visible,
-body[data-page="home"] .contact-pill:focus-visible {
+.site-header .language-select:focus-visible,
+.site-header .circle-button:focus-visible,
+.site-header .contact-pill:focus-visible {
   outline: 2px solid rgba(11, 99, 199, 0.36);
   outline-offset: 3px;
 }
@@ -1502,7 +1502,7 @@ h3 {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding: clamp(72px, 8vw, 114px) 0;
+  padding: clamp(132px, 12vw, 166px) 0 clamp(72px, 8vw, 114px);
   background:
     radial-gradient(circle at 80% 24%, rgba(167, 139, 250, 0.23), transparent 30rem),
     linear-gradient(135deg, #08111e, #0f233c 58%, #132a45);
@@ -2086,7 +2086,7 @@ body.search-open .search-modal {
     height: 76px;
   }
 
-  body[data-page="home"] .site-header .brand {
+  .site-header .brand {
     width: 97px;
     min-width: 97px;
     min-height: 68px;
@@ -2094,7 +2094,7 @@ body.search-open .search-modal {
     border-radius: 0 0 16px 16px;
   }
 
-  body[data-page="home"] .site-header .brand-logo {
+  .site-header .brand-logo {
     width: 74px;
     height: 49px;
   }
@@ -2311,7 +2311,7 @@ body.search-open .search-modal {
     height: 66px;
   }
 
-  body[data-page="home"] .site-header .brand {
+  .site-header .brand {
     width: 78px;
     min-width: 78px;
     min-height: 57px;
@@ -2319,7 +2319,7 @@ body.search-open .search-modal {
     border-radius: 0 0 14px 14px;
   }
 
-  body[data-page="home"] .site-header .brand-logo {
+  .site-header .brand-logo {
     width: 62px;
     height: 41px;
   }
