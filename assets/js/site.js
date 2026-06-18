@@ -60,9 +60,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
-          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
-          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "Explore our science",
           secondary: "Customized for you",
           tags: ["Science", "Solutions", "Products"]
@@ -385,9 +385,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
-          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
-          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "สำรวจวิทยาศาสตร์ของเรา",
           secondary: "ปรับเฉพาะคุณ",
           tags: ["Science", "Solutions", "Products"]
@@ -658,9 +658,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
-          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
-          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "探索我們的科學",
           secondary: "為你客製",
           tags: ["Science", "Solutions", "Products"]
@@ -740,9 +740,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec is a company that transforms science into a personalized sensory experience platform.",
-          title: "Engineering Wellness &\nHuman Experience Through\nSensory Science",
-          lead: "Engineering the Future of Human Wellness & Experience Through Sensory Science",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "私たちの科学を見る",
           secondary: "あなたに最適化",
           tags: ["Science", "Solutions", "Products"]
@@ -1516,13 +1516,13 @@
   function renderHome(text, lang) {
     const home = text.home;
     const platform = sciencePlatform[lang] || sciencePlatform.en;
-    const heroSlides = ["hero-slide-1.jpg", "hero-slide-2.jpg", "hero-slide-3.jpg"];
+    const heroSlides = ["hero-bn5.jpg"];
     const heroSlideLayers = heroSlides
       .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
       .join("");
-    const heroDots = heroSlides
+    const heroDots = heroSlides.length > 1 ? heroSlides
       .map((_, index) => `<button class="${index === 0 ? "is-active" : ""}" data-hero-dot="${index}" type="button" aria-label="${text.common.slide || "Slide"} ${index + 1}"></button>`)
-      .join("");
+      .join("") : "";
     const homePageSections = routes
       .filter((route) => route.nav)
       .map((route, index) => renderHomePageSection(text, route.id, index, lang))
@@ -1557,23 +1557,23 @@
           <div class="hero-slides" aria-hidden="true">${heroSlideLayers}</div>
           <div class="section-shell">
             <div class="hero-content">
-              <p class="eyebrow">${home.hero.eyebrow}</p>
+              ${home.hero.eyebrow ? `<p class="eyebrow">${home.hero.eyebrow}</p>` : ""}
               <h1 class="hero-title">${home.hero.title}</h1>
               <h2 class="lead">${home.hero.lead}</h2>
               <div class="button-row">
                 <a class="ghost-button" href="${routeHref("insights")}">${home.hero.primary} ${icons.arrow}</a>
                 <a class="pill-button" href="${routeHref("customized")}">${home.hero.secondary} ${icons.arrow}</a>
               </div>
-              <div class="slider-dots" aria-label="${text.common.slideControls || "Hero slides"}">${heroDots}</div>
+              ${heroDots ? `<div class="slider-dots" aria-label="${text.common.slideControls || "Hero slides"}">${heroDots}</div>` : ""}
             </div>
           </div>
           <div class="hero-tags" aria-label="Research themes">
             ${home.hero.tags.map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <div class="hero-slide-controls" aria-label="${text.common.slideControls || "Hero slides"}">
+          ${heroSlides.length > 1 ? `<div class="hero-slide-controls" aria-label="${text.common.slideControls || "Hero slides"}">
             <button class="hero-slide-button" data-hero-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
             <button class="hero-slide-button" data-hero-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
-          </div>
+          </div>` : ""}
         </section>
 
         <section class="concept section-pad" style="--concept-image:none">

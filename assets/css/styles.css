@@ -288,42 +288,87 @@ body[data-page="home"] .site-header .brand-logo {
 }
 
 body[data-page="home"] .nav-link {
-  color: #ffffff;
+  color: #113568;
   text-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.78),
-    0 0 18px rgba(15, 101, 199, 0.45);
+    0 1px 0 rgba(255, 255, 255, 0.72),
+    0 7px 20px rgba(255, 255, 255, 0.45);
 }
 
 body[data-page="home"] .nav-link:hover,
 body[data-page="home"] .nav-link:focus-visible,
 body[data-page="home"] .nav-link.active {
-  color: #8edbff;
+  color: #0b63c7;
 }
 
 body[data-page="home"] .nav-link::after {
-  background: linear-gradient(90deg, #8edbff, #ffffff);
-  box-shadow: 0 0 14px rgba(142, 219, 255, 0.48);
+  background: linear-gradient(90deg, #0b63c7, #113568);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.54);
 }
 
 body[data-page="home"] .language-select,
 body[data-page="home"] .circle-button {
-  border-color: rgba(255, 255, 255, 0.34);
-  color: #ffffff;
-  background: rgba(2, 10, 26, 0.34);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  border-color: rgba(17, 53, 104, 0.24);
+  color: #113568;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: 0 10px 28px rgba(17, 53, 104, 0.1);
   backdrop-filter: blur(10px);
 }
 
 body[data-page="home"] .contact-pill {
-  border-color: rgba(255, 255, 255, 0.34);
-  color: #ffffff;
-  background: rgba(2, 10, 26, 0.36);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  border-color: rgba(17, 53, 104, 0.24);
+  color: #113568;
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 10px 28px rgba(17, 53, 104, 0.1);
   backdrop-filter: blur(10px);
 }
 
 body[data-page="home"] .hero-content {
   padding-top: clamp(126px, 11vw, 150px);
+}
+
+body[data-page="home"] .hero::before,
+body[data-page="home"] .hero::after {
+  display: none;
+}
+
+body[data-page="home"] .hero-title {
+  max-width: 560px;
+  color: #123665;
+  font-size: clamp(2.65rem, 5.3vw, 5.6rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7),
+    0 18px 42px rgba(255, 255, 255, 0.44);
+}
+
+body[data-page="home"] .hero .lead {
+  max-width: 620px;
+  color: #173f77;
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  font-weight: 680;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+body[data-page="home"] .hero-tags span {
+  color: #123665;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+body[data-page="home"] .hero-tags span::after {
+  background: rgba(18, 54, 101, 0.38);
+}
+
+body[data-page="home"] .hero .ghost-button {
+  border-color: rgba(18, 54, 101, 0.28);
+  color: #123665;
+  background: rgba(255, 255, 255, 0.44);
+  backdrop-filter: blur(10px);
+}
+
+body[data-page="home"] .hero .pill-button {
+  color: #ffffff;
+  background: #123665;
 }
 
 body[data-page="home"] .language-select:focus-visible,
