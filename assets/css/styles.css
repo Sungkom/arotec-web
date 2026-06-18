@@ -278,7 +278,7 @@ body[data-page="home"] .site-header .brand {
   padding: 10px 13px 11px;
   border-radius: 0 0 18px 18px;
   background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+  box-shadow: none;
 }
 
 body[data-page="home"] .site-header .brand-logo {
@@ -344,10 +344,10 @@ body[data-page="home"] .hero-title {
 
 body[data-page="home"] .hero .lead {
   max-width: 620px;
-  color: #173f77;
+  color: #ffffff;
   font-size: clamp(1rem, 1.35vw, 1.22rem);
   font-weight: 680;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.68);
+  text-shadow: none;
 }
 
 body[data-page="home"] .hero-tags span {
