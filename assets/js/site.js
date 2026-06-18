@@ -7,7 +7,7 @@
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
-    { id: "customized", path: "pages/customized.html", nav: true, section: "customized" },
+    { id: "customized", path: "pages/customized.html", nav: true },
     { id: "applied", path: "pages/applied-solutions.html", nav: true, section: "applied" },
     { id: "products", path: "pages/products.html", nav: true, section: "products" },
     { id: "platform", path: "pages/platform.html", nav: true, section: "platform" },

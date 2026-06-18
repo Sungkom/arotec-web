@@ -258,6 +258,46 @@ img {
   background: rgba(255, 255, 255, 0.07);
 }
 
+body[data-page="home"] .site-header {
+  border-bottom: 1px solid rgba(28, 67, 126, 0.16);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 34px rgba(10, 29, 58, 0.1);
+}
+
+body[data-page="home"] .nav-link {
+  color: #173f77;
+}
+
+body[data-page="home"] .nav-link:hover,
+body[data-page="home"] .nav-link:focus-visible,
+body[data-page="home"] .nav-link.active {
+  color: #0b63c7;
+}
+
+body[data-page="home"] .nav-link::after {
+  background: linear-gradient(90deg, #0b63c7, #5aa7ff);
+}
+
+body[data-page="home"] .language-select,
+body[data-page="home"] .circle-button {
+  border-color: rgba(23, 63, 119, 0.2);
+  color: #173f77;
+  background: rgba(23, 63, 119, 0.06);
+}
+
+body[data-page="home"] .contact-pill {
+  border-color: rgba(23, 63, 119, 0.18);
+  color: #173f77;
+  background: rgba(23, 63, 119, 0.08);
+}
+
+body[data-page="home"] .language-select:focus-visible,
+body[data-page="home"] .circle-button:focus-visible,
+body[data-page="home"] .contact-pill:focus-visible {
+  outline: 2px solid rgba(11, 99, 199, 0.36);
+  outline-offset: 3px;
+}
+
 .menu-toggle {
   display: none;
 }
