@@ -373,11 +373,11 @@ body[data-page="home"] .hero .pill-button {
 
 .frontiers-banner {
   position: relative;
-  min-height: clamp(288px, 30.4vw, 432px);
+  min-height: clamp(202px, 21.3vw, 302px);
   display: grid;
   align-items: center;
   overflow: hidden;
-  color: #071220;
+  color: #123665;
   background:
     linear-gradient(90deg, rgba(246, 249, 245, 0.92) 0%, rgba(239, 245, 238, 0.72) 42%, rgba(239, 245, 238, 0.08) 74%),
     url("../images/frontiers-experience.jpg");
@@ -400,13 +400,13 @@ body[data-page="home"] .hero .pill-button {
 
 .frontiers-copy {
   max-width: 650px;
-  padding: clamp(42px, 5.6vw, 72px) 0;
+  padding: clamp(29px, 3.9vw, 50px) 0;
 }
 
 .frontiers-title {
   max-width: 640px;
   margin-bottom: 20px;
-  color: #071220;
+  color: #123665;
   font-size: clamp(2.15rem, 5vw, 4.35rem);
   font-weight: 780;
   line-height: 1.03;
@@ -416,7 +416,7 @@ body[data-page="home"] .hero .pill-button {
 .frontiers-copy p {
   max-width: 640px;
   margin: 0;
-  color: rgba(7, 18, 32, 0.78);
+  color: rgba(18, 54, 101, 0.86);
   font-size: clamp(1rem, 1.35vw, 1.2rem);
   line-height: 1.68;
   font-weight: 560;
@@ -2196,7 +2196,7 @@ body.search-open .search-modal {
 
   .frontiers-copy {
     max-width: 100%;
-    padding: 43px 0 136px;
+    padding: 30px 0 95px;
   }
 
   .frontiers-title {
@@ -2400,7 +2400,7 @@ body.search-open .search-modal {
   }
 
   .frontiers-copy {
-    padding: 37px 0 114px;
+    padding: 26px 0 80px;
   }
 
   .frontiers-title {
