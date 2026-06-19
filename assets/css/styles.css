@@ -371,6 +371,57 @@ body[data-page="home"] .hero .pill-button {
   background: #123665;
 }
 
+.frontiers-banner {
+  position: relative;
+  min-height: clamp(360px, 38vw, 540px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  color: #071220;
+  background:
+    linear-gradient(90deg, rgba(246, 249, 245, 0.92) 0%, rgba(239, 245, 238, 0.72) 42%, rgba(239, 245, 238, 0.08) 74%),
+    url("../images/frontiers-experience.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.frontiers-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(6, 16, 29, 0.08));
+  pointer-events: none;
+}
+
+.frontiers-banner .section-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.frontiers-copy {
+  max-width: 650px;
+  padding: clamp(52px, 7vw, 90px) 0;
+}
+
+.frontiers-title {
+  max-width: 640px;
+  margin-bottom: 20px;
+  color: #071220;
+  font-size: clamp(2.15rem, 5vw, 4.35rem);
+  font-weight: 780;
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+.frontiers-copy p {
+  max-width: 640px;
+  margin: 0;
+  color: rgba(7, 18, 32, 0.78);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.68;
+  font-weight: 560;
+}
+
 .site-header .language-select:focus-visible,
 .site-header .circle-button:focus-visible,
 .site-header .contact-pill:focus-visible {
@@ -2134,6 +2185,30 @@ body.search-open .search-modal {
     height: 44px;
   }
 
+  .frontiers-banner {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgba(246, 249, 245, 0.94) 0%, rgba(239, 245, 238, 0.78) 54%, rgba(239, 245, 238, 0.2) 100%),
+      url("../images/frontiers-experience.jpg");
+    background-position: 58% center;
+    background-size: cover;
+  }
+
+  .frontiers-copy {
+    max-width: 100%;
+    padding: 54px 0 170px;
+  }
+
+  .frontiers-title {
+    max-width: 540px;
+    font-size: clamp(2rem, 10vw, 3.35rem);
+  }
+
+  .frontiers-copy p {
+    max-width: 540px;
+    font-size: 1rem;
+  }
+
   h1 {
     font-size: clamp(2.62rem, 12vw, 4.2rem);
   }
@@ -2322,6 +2397,14 @@ body.search-open .search-modal {
   .site-header .brand-logo {
     width: 62px;
     height: 41px;
+  }
+
+  .frontiers-copy {
+    padding: 46px 0 142px;
+  }
+
+  .frontiers-title {
+    font-size: clamp(1.85rem, 11vw, 2.75rem);
   }
 
   .science-body,

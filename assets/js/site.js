@@ -1576,6 +1576,15 @@
           </div>` : ""}
         </section>
 
+        <section class="frontiers-banner" aria-labelledby="frontiers-title">
+          <div class="section-shell">
+            <div class="frontiers-copy">
+              <h2 class="frontiers-title" id="frontiers-title">Exploring the Frontiers<br>of Human Experience</h2>
+              <p>Health, beauty and wellbeing emerge from the continuous interaction of biology, environment, lifestyle and sensory perception. Understanding these interconnected systems is key to understanding how people feel, adapt and thrive.</p>
+            </div>
+          </div>
+        </section>
+
         <section class="concept section-pad" style="--concept-image:none">
           <div class="section-shell">
             <div class="concept-grid">${conceptItems}</div>
