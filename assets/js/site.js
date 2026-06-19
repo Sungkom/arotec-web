@@ -1551,6 +1551,71 @@
       </article>
     `).join("");
 
+    const wellbeingCards = [
+      {
+        number: "01",
+        title: "Environment",
+        text: "All experiences begin in the physical, social and cultural environment.",
+        color: "#4f8a35"
+      },
+      {
+        number: "02",
+        title: "Exteroception",
+        text: "Our senses detect external stimuli from the environment.",
+        color: "#0f9b8f"
+      },
+      {
+        number: "03",
+        title: "Synesthetic Integration",
+        text: "Information from multiple senses is integrated into unified perception.",
+        color: "#10a7a0"
+      },
+      {
+        number: "04",
+        title: "Interoceptive Modulation",
+        text: "Internal signals are monitored and dynamically regulated.",
+        color: "#176fb5"
+      },
+      {
+        number: "05",
+        title: "Body-Brain Synergy",
+        text: "The body and brain communicate bidirectionally to maintain balance and adaptability.",
+        color: "#7250b8"
+      },
+      {
+        number: "06",
+        title: "Feeling",
+        text: "Integrated signals give rise to subjective feelings and states.",
+        color: "#c03c87"
+      },
+      {
+        number: "07",
+        title: "Emotion",
+        text: "Feelings are amplified and organized into emotional experiences.",
+        color: "#e0526a"
+      },
+      {
+        number: "08",
+        title: "Behavior",
+        text: "Emotions influence decisions, actions and lifestyle choices.",
+        color: "#e56a18"
+      },
+      {
+        number: "09",
+        title: "Health • Beauty • Wellbeing",
+        text: "Sustained patterns of behavior shape long-term health, beauty and wellbeing.",
+        color: "#bd8a18"
+      }
+    ].map((card) => `
+      <article class="wellbeing-card" style="--cascade-color:${card.color}">
+        <span class="wellbeing-number">${card.number}</span>
+        <div class="wellbeing-card-body">
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+        </div>
+      </article>
+    `).join("");
+
     return `
       <main id="main">
         <section class="hero hero-slideshow">
@@ -1582,6 +1647,21 @@
               <h2 class="frontiers-title" id="frontiers-title">Exploring the Frontiers<br>of Human Experience</h2>
               <p>Health, beauty and wellbeing emerge from the continuous interaction of biology, environment, lifestyle and sensory perception. Understanding these interconnected systems is key to understanding how people feel, adapt and thrive.</p>
             </div>
+          </div>
+        </section>
+
+        <section class="wellbeing-cascade section-pad" aria-labelledby="wellbeing-title">
+          <div class="section-shell wellbeing-layout">
+            <div class="wellbeing-intro">
+              <p class="eyebrow">Human experience cascade</p>
+              <h2 class="wellbeing-title" id="wellbeing-title">Engineering Human Wellbeing</h2>
+              <p>At A&amp;S, we believe human wellbeing is shaped not by a single process, but by a continuous biological cascade in which every stage is interconnected. Understanding these connections is the key to understanding how people feel, adapt and thrive.</p>
+              <div class="wellbeing-loop">
+                <strong>Feedback loop</strong>
+                <span>Sustained wellbeing outcomes continuously inform each stage of the experience journey.</span>
+              </div>
+            </div>
+            <div class="wellbeing-flow" aria-label="The biology of human experience">${wellbeingCards}</div>
           </div>
         </section>
 
