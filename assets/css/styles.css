@@ -559,13 +559,13 @@ body[data-page="home"] .hero .pill-button {
   z-index: 1;
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
-  padding: 7px 10px;
+  min-height: 19px;
+  padding: 4px 6px;
   border-radius: 999px;
   color: var(--cascade-color);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 10px 30px rgba(18, 54, 101, 0.12);
-  font-size: clamp(1.42rem, 2.2vw, 1.95rem);
+  font-size: clamp(0.71rem, 1.1vw, 0.98rem);
   font-weight: 800;
   line-height: 1;
 }
@@ -575,12 +575,7 @@ body[data-page="home"] .hero .pill-button {
   z-index: 1;
   width: 100%;
   margin-top: auto;
-  padding: 12px;
-  border: 1px solid color-mix(in srgb, var(--cascade-color) 16%, transparent);
-  border-radius: calc(var(--radius) - 8px);
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.34);
-  backdrop-filter: blur(3px);
+  padding: 0;
 }
 
 .wellbeing-card h3 {
@@ -588,6 +583,7 @@ body[data-page="home"] .hero .pill-button {
   color: var(--cascade-color);
   font-size: clamp(0.88rem, 1.15vw, 1.05rem);
   font-weight: 780;
+  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.72);
 }
 
 .wellbeing-card p {
@@ -596,6 +592,7 @@ body[data-page="home"] .hero .pill-button {
   font-size: 0.76rem;
   line-height: 1.42;
   font-weight: 520;
+  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.72);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2439,12 +2436,12 @@ body.search-open .search-modal {
   }
 
   .wellbeing-number {
-    padding: 7px 10px;
-    font-size: clamp(1.42rem, 6vw, 1.95rem);
+    padding: 4px 6px;
+    font-size: clamp(0.71rem, 3vw, 0.98rem);
   }
 
   .wellbeing-card-body {
-    padding: 12px;
+    padding: 0;
   }
 
   h1 {
@@ -2666,12 +2663,12 @@ body.search-open .search-modal {
   }
 
   .wellbeing-number {
-    padding: 7px 10px;
-    font-size: 1.7rem;
+    padding: 4px 6px;
+    font-size: 0.85rem;
   }
 
   .wellbeing-card-body {
-    padding: 12px;
+    padding: 0;
   }
 
   .wellbeing-card h3 {
