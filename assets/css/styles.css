@@ -527,16 +527,22 @@ body[data-page="home"] .hero .pill-button {
   aspect-ratio: 3 / 4;
   flex-direction: column;
   align-items: flex-start;
+  overflow: hidden;
   padding: 13px;
-  border: 1px solid rgba(18, 54, 101, 0.1);
+  border: 1px solid rgba(18, 54, 101, 0.14);
   border-radius: var(--radius);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 42%, rgba(255, 255, 255, 0.78) 70%, rgba(255, 255, 255, 0.96) 100%),
     var(--wellbeing-card-image),
     rgba(255, 255, 255, 0.84);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 18px 48px rgba(18, 54, 101, 0.1);
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center, center, center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, contain, cover;
+  box-shadow:
+    0 18px 48px rgba(18, 54, 101, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.62);
   transform: translateY(0);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -599,7 +605,9 @@ body[data-page="home"] .hero .pill-button {
   .wellbeing-card:hover,
   .wellbeing-card:focus-within {
     border-color: color-mix(in srgb, var(--cascade-color) 36%, transparent);
-    box-shadow: 0 24px 58px rgba(18, 54, 101, 0.16);
+    box-shadow:
+      0 24px 58px rgba(18, 54, 101, 0.16),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.72);
     transform: translateY(-6px);
   }
 }
@@ -2652,9 +2660,9 @@ body.search-open .search-modal {
   }
 
   .wellbeing-card {
-    min-height: 138px;
-    aspect-ratio: auto;
-    padding: 15px;
+    min-height: 260px;
+    aspect-ratio: 3 / 4;
+    padding: 13px;
   }
 
   .wellbeing-flow::before,
