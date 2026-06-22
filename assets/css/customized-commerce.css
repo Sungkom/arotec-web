@@ -25,45 +25,33 @@
 }
 
 .commerce-header {
-  position: absolute;
-  inset: 0 0 auto;
-  width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 80;
-  border-bottom: 0;
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(22px);
 }
 
 .commerce-header-inner {
-  width: min(1460px, calc(100vw - 48px));
-  min-height: 94px;
+  width: min(1240px, calc(100vw - 42px));
+  min-height: 88px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 118px minmax(0, 1fr) auto;
-  gap: clamp(16px, 2vw, 34px);
+  grid-template-columns: 164px 1fr auto;
+  gap: 20px;
   align-items: center;
 }
 
 .commerce-header .brand {
-  width: 118px;
-  min-width: 118px;
-  min-height: 83px;
-  align-self: start;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 13px 11px;
-  border-radius: 0 0 18px 18px;
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: none;
+  width: 154px;
+  min-width: 154px;
 }
 
 .commerce-header .brand-logo {
-  width: 88px;
-  height: 60px;
+  width: 154px;
+  height: 84px;
   filter: none;
-  object-fit: contain;
 }
 
 .commerce-nav,
@@ -75,18 +63,15 @@
 
 .commerce-nav {
   justify-content: center;
-  gap: clamp(8px, 1.15vw, 18px);
-  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
+  gap: clamp(12px, 2vw, 34px);
+  font-size: 0.92rem;
   font-weight: 680;
 }
 
 .commerce-nav a,
 .commerce-subnav a {
   position: relative;
-  color: #113568;
-  text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.72),
-    0 7px 20px rgba(255, 255, 255, 0.45);
+  color: rgba(17, 24, 39, 0.78);
   white-space: nowrap;
 }
 
@@ -110,7 +95,7 @@
 .commerce-subnav a:hover,
 .commerce-subnav a:focus-visible,
 .commerce-subnav a.active {
-  color: #0b63c7;
+  color: var(--shop-ink);
 }
 
 .commerce-nav a:hover::after,
@@ -179,12 +164,13 @@
 }
 
 .commerce-subnav {
-  min-height: 44px;
+  min-height: 50px;
   justify-content: center;
-  gap: clamp(18px, 4vw, 56px);
+  gap: clamp(18px, 5vw, 76px);
   overflow-x: auto;
-  border-top: 0;
-  background: transparent;
+  border-top: 1px solid rgba(17, 24, 39, 0.06);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.76), rgba(245, 239, 229, 0.84));
   font-size: 0.88rem;
 }
 
@@ -240,7 +226,7 @@
   grid-template-columns: minmax(280px, 0.85fr) minmax(460px, 1.2fr);
   gap: clamp(28px, 5vw, 80px);
   align-items: center;
-  padding: clamp(142px, 13vw, 176px) 0 clamp(46px, 7vw, 86px);
+  padding: clamp(46px, 7vw, 86px) 0;
 }
 
 .commerce-eyebrow {
@@ -1243,7 +1229,7 @@
 
 @media (max-width: 1080px) {
   .commerce-header-inner {
-    grid-template-columns: 118px auto;
+    grid-template-columns: auto auto;
   }
 
   .commerce-nav {
@@ -1256,10 +1242,6 @@
   .commerce-hero-grid,
   .formula-grid {
     grid-template-columns: 1fr;
-  }
-
-  .commerce-hero-grid {
-    padding-top: 186px;
   }
 
   .commerce-process,
@@ -1285,21 +1267,18 @@
   }
 
   .commerce-header-inner {
-    min-height: 76px;
+    min-height: 68px;
     gap: 12px;
   }
 
   .commerce-header .brand {
-    width: 97px;
-    min-width: 97px;
-    min-height: 68px;
-    padding: 8px 10px 10px;
-    border-radius: 0 0 16px 16px;
+    width: 118px;
+    min-width: 118px;
   }
 
   .commerce-header .brand-logo {
-    width: 74px;
-    height: 49px;
+    width: 118px;
+    height: 68px;
   }
 
   .commerce-subnav {
@@ -1309,7 +1288,7 @@
 
   .commerce-hero-grid {
     min-height: auto;
-    padding: 156px 0 42px;
+    padding: 42px 0;
   }
 
   .commerce-process,
@@ -1378,22 +1357,20 @@
 }
 
 .commerce-header {
-  border-bottom-color: transparent;
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background: rgba(5, 12, 24, 0.76);
 }
 
 .commerce-nav a,
 .commerce-subnav a {
-  color: #113568;
+  color: rgba(234, 240, 251, 0.76);
 }
 
 .commerce-nav a.active,
 .commerce-subnav a.active,
 .commerce-nav a:hover,
 .commerce-subnav a:hover {
-  color: #0b63c7;
+  color: #ffffff;
 }
 
 .commerce-nav a::after,
@@ -1402,8 +1379,8 @@
 }
 
 .commerce-subnav {
-  border-top-color: transparent;
-  background: transparent;
+  border-top-color: rgba(255, 255, 255, 0.08);
+  background: rgba(7, 18, 32, 0.68);
 }
 
 .commerce-icon-button,
@@ -1421,20 +1398,6 @@
 
 .commerce-header .brand-logo {
   filter: none;
-}
-
-.commerce-header .commerce-icon-button,
-.commerce-header .commerce-cart-button {
-  color: #113568;
-  border-color: rgba(17, 53, 104, 0.24);
-  background: rgba(255, 255, 255, 0.48);
-  box-shadow: 0 10px 28px rgba(17, 53, 104, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.commerce-header .commerce-cart-button span {
-  color: #ffffff;
-  background: #113568;
 }
 
 .commerce-hero {

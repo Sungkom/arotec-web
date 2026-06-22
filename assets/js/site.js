@@ -1556,58 +1556,67 @@
         number: "01",
         title: "Environment",
         text: "All experiences begin in the physical, social and cultural environment.",
-        color: "#4f8a35"
+        color: "#4f8a35",
+        image: "wellbeing-environment.jpg"
       },
       {
         number: "02",
         title: "Exteroception",
         text: "Our senses detect external stimuli from the environment.",
-        color: "#0f9b8f"
+        color: "#0f9b8f",
+        image: "wellbeing-exteroception.jpg"
       },
       {
         number: "03",
         title: "Synesthetic Integration",
         text: "Information from multiple senses is integrated into unified perception.",
-        color: "#10a7a0"
+        color: "#10a7a0",
+        image: "wellbeing-synesthetic-integration.jpg"
       },
       {
         number: "04",
         title: "Interoceptive Modulation",
         text: "Internal signals are monitored and dynamically regulated.",
-        color: "#176fb5"
+        color: "#176fb5",
+        image: "wellbeing-interoceptive-modulation.jpg"
       },
       {
         number: "05",
         title: "Body-Brain Synergy",
         text: "The body and brain communicate bidirectionally to maintain balance and adaptability.",
-        color: "#7250b8"
+        color: "#7250b8",
+        image: "wellbeing-body-brain-synergy.jpg"
       },
       {
         number: "06",
         title: "Feeling",
         text: "Integrated signals give rise to subjective feelings and states.",
-        color: "#c03c87"
+        color: "#c03c87",
+        image: "wellbeing-feeling.jpg"
       },
       {
         number: "07",
         title: "Emotion",
         text: "Feelings are amplified and organized into emotional experiences.",
-        color: "#e0526a"
+        color: "#e0526a",
+        image: "wellbeing-emotion.jpg"
       },
       {
         number: "08",
         title: "Behavior",
         text: "Emotions influence decisions, actions and lifestyle choices.",
-        color: "#e56a18"
+        color: "#e56a18",
+        image: "wellbeing-behavior.jpg"
       },
       {
         number: "09",
         title: "Health • Beauty • Wellbeing",
         text: "Sustained patterns of behavior shape long-term health, beauty and wellbeing.",
-        color: "#bd8a18"
+        color: "#bd8a18",
+        image: "wellbeing-health-beauty-wellbeing.jpg"
       }
     ].map((card) => `
-      <article class="wellbeing-card" style="--cascade-color:${card.color}">
+      <article class="wellbeing-card" style="--cascade-color:${card.color};--wellbeing-card-image:url('${asset(card.image)}')">
         <span class="wellbeing-number">${card.number}</span>
         <div class="wellbeing-card-body">
           <h3>${card.title}</h3>
