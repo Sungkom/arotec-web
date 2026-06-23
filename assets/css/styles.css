@@ -475,7 +475,7 @@ body[data-page="home"] .hero .pill-button {
   margin: 0 0 24px;
   color: #123665;
   font-family: Georgia, "Times New Roman", var(--font-en);
-  font-size: clamp(2.05rem, 3.05vw, 2.86rem);
+  font-size: clamp(1.64rem, 2.44vw, 2.29rem);
   font-weight: 680;
   line-height: 1.08;
   letter-spacing: 0;
@@ -503,7 +503,7 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 270px;
-  bottom: 2px;
+  bottom: 0;
   width: 128px;
   height: 84px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
@@ -535,7 +535,7 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 270px;
-  top: -110px;
+  top: -106px;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -2597,7 +2597,7 @@ body.search-open .search-modal {
 
   .wellbeing-title {
     max-width: 300px;
-    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+    font-size: clamp(0.96rem, 3.6vw, 1.44rem);
   }
 
   .wellbeing-intro > p {
