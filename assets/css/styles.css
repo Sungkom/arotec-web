@@ -465,17 +465,17 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-intro {
   position: relative;
   justify-self: end;
-  width: min(100%, 250px);
-  min-height: 470px;
-  padding: 48px 0 26px;
+  width: min(100%, 315px);
+  min-height: 620px;
+  padding: 48px 0 24px;
 }
 
 .wellbeing-title {
-  max-width: 190px;
-  margin: 0 0 20px;
+  max-width: 255px;
+  margin: 0 0 24px;
   color: #123665;
   font-family: Georgia, "Times New Roman", var(--font-en);
-  font-size: clamp(1.22rem, 1.93vw, 1.86rem);
+  font-size: clamp(2.05rem, 3.05vw, 2.86rem);
   font-weight: 680;
   line-height: 1.08;
   letter-spacing: 0;
@@ -484,63 +484,63 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-title::after {
   content: "";
   display: block;
-  width: 42px;
+  width: 56px;
   height: 2px;
-  margin-top: 14px;
+  margin-top: 20px;
   background: #cf9b45;
 }
 
 .wellbeing-intro > p {
-  max-width: 210px;
+  max-width: 250px;
   margin: 0;
   color: rgba(10, 35, 70, 0.82);
-  font-size: clamp(0.68rem, 0.78vw, 0.78rem);
-  line-height: 1.5;
+  font-size: clamp(0.82rem, 0.96vw, 0.95rem);
+  line-height: 1.55;
   font-weight: 540;
 }
 
 .wellbeing-intro::after {
   content: "";
   position: absolute;
-  left: 218px;
-  bottom: 18px;
-  width: 58px;
-  height: 40px;
+  left: 270px;
+  bottom: 2px;
+  width: 64px;
+  height: 84px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
   border-left: 2px solid rgba(229, 106, 24, 0.78);
-  border-radius: 0 0 0 18px;
+  border-radius: 0 0 0 34px;
 }
 
 .wellbeing-feedback {
   position: relative;
   display: grid;
-  max-width: 128px;
-  margin: 52px 0 100px 86px;
-  gap: 9px;
+  max-width: 170px;
+  margin: 56px 0 112px 142px;
+  gap: 13px;
 }
 
 .wellbeing-feedback::before {
   content: "";
   position: absolute;
-  left: 86px;
-  top: -70px;
-  width: 118px;
-  height: 68px;
+  left: 72px;
+  top: -106px;
+  width: 206px;
+  height: 106px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
-  border-radius: 96px 0 0 0;
+  border-radius: 132px 0 0 0;
 }
 
 .wellbeing-feedback::after {
   content: "";
   position: absolute;
-  left: 198px;
-  top: -74px;
+  left: 270px;
+  top: -110px;
   width: 0;
   height: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 7px solid #34751f;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #34751f;
 }
 
 .wellbeing-feedback strong,
@@ -550,15 +550,15 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-feedback strong {
   display: grid;
-  width: 76px;
-  min-height: 44px;
+  width: 112px;
+  min-height: 64px;
   place-items: center;
   border: 1px solid rgba(79, 138, 53, 0.52);
-  border-radius: 7px;
+  border-radius: 9px;
   color: #3f7b2e;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: 0 10px 24px rgba(18, 54, 101, 0.1);
-  font-size: 0.68rem;
+  font-size: 0.88rem;
   font-weight: 760;
   line-height: 1.28;
   text-align: center;
@@ -567,8 +567,8 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-feedback span {
   color: rgba(10, 35, 70, 0.88);
-  font-size: 0.66rem;
-  line-height: 1.45;
+  font-size: 0.78rem;
+  line-height: 1.56;
 }
 
 .wellbeing-flow {
@@ -2445,6 +2445,8 @@ body.search-open .search-modal {
   }
 
   .wellbeing-intro {
+    justify-self: stretch;
+    width: min(100%, 620px);
     min-height: auto;
     padding: 0;
   }
