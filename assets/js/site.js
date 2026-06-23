@@ -1625,6 +1625,7 @@
         title: "Health • Beauty • Wellbeing",
         text: "Sustained patterns of behavior shape long-term health, beauty and wellbeing.",
         color: "#bd8a18",
+        title: "Health &bull; Beauty &bull; Wellbeing",
         icon: "lotus"
       }
     ].map((card, index) => `
@@ -1678,13 +1679,12 @@
         <section class="wellbeing-cascade section-pad" aria-labelledby="wellbeing-title">
           <div class="section-shell wellbeing-layout">
             <div class="wellbeing-intro">
-              <p class="eyebrow">Engineering Human Wellbeing</p>
-              <h2 class="wellbeing-title" id="wellbeing-title">The Biology of Human Experience</h2>
-              <p>A continuous biological cascade that transforms environmental experiences into wellbeing outcomes.</p>
               <div class="wellbeing-feedback">
                 <strong>Feedback<br>Loop</strong>
                 <span>Sustained wellbeing outcomes continuously influence and strengthen each stage of the human experience cascade.</span>
               </div>
+              <h2 class="wellbeing-title" id="wellbeing-title">The Biology of Human Experience</h2>
+              <p>A continuous biological cascade that transforms environmental experiences into wellbeing outcomes.</p>
             </div>
             <div class="wellbeing-flow" aria-label="The biology of human experience">${wellbeingCards}</div>
           </div>
