@@ -469,11 +469,11 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-title {
-  max-width: 225px;
+  max-width: 190px;
   margin: 0 0 20px;
   color: #123665;
   font-family: Georgia, "Times New Roman", var(--font-en);
-  font-size: clamp(1.75rem, 2.75vw, 2.65rem);
+  font-size: clamp(1.22rem, 1.93vw, 1.86rem);
   font-weight: 680;
   line-height: 1.08;
   letter-spacing: 0;
@@ -630,6 +630,20 @@ body[data-page="home"] .hero .pill-button {
   border-top: 2px dotted color-mix(in srgb, var(--cascade-color) 80%, transparent);
 }
 
+.wellbeing-card-panel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid var(--cascade-color);
+  filter: drop-shadow(0 1px 1px rgba(18, 54, 101, 0.18));
+  transform: translateY(-50%);
+}
+
 .wellbeing-node {
   position: relative;
   z-index: 2;
@@ -652,11 +666,11 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   right: 50%;
-  bottom: -14px;
-  width: 2px;
-  height: 14px;
-  border-radius: 999px;
-  background: rgba(20, 91, 171, 0.82);
+  bottom: -15px;
+  width: 9px;
+  height: 15px;
+  background: rgba(20, 91, 171, 0.9);
+  clip-path: polygon(38% 0, 62% 0, 62% 55%, 100% 55%, 50% 100%, 0 55%, 38% 55%);
   transform: translateX(50%);
 }
 
@@ -675,6 +689,7 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-card-panel {
+  position: relative;
   display: grid;
   grid-template-columns: 68px 1px minmax(0, 1fr);
   gap: 16px;
@@ -2592,8 +2607,8 @@ body.search-open .search-modal {
   }
 
   .wellbeing-title {
-    max-width: 430px;
-    font-size: clamp(1.7rem, 6.4vw, 2.55rem);
+    max-width: 300px;
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
   }
 
   .wellbeing-intro > p {
@@ -2635,6 +2650,10 @@ body.search-open .search-modal {
   }
 
   .wellbeing-card::after {
+    display: none;
+  }
+
+  .wellbeing-card-panel::before {
     display: none;
   }
 
