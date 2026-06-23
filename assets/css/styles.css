@@ -458,12 +458,14 @@ body[data-page="home"] .hero .pill-button {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(205px, 0.78fr) minmax(520px, 1.45fr);
-  gap: clamp(28px, 3.5vw, 48px);
+  gap: clamp(14px, 2vw, 24px);
   align-items: center;
 }
 
 .wellbeing-intro {
   position: relative;
+  justify-self: end;
+  width: min(100%, 250px);
   min-height: 470px;
   padding: 48px 0 26px;
 }
@@ -573,7 +575,7 @@ body[data-page="home"] .hero .pill-button {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  justify-self: end;
+  justify-self: start;
   width: min(100%, 575px);
   gap: 10px;
   padding-left: 72px;
@@ -646,7 +648,18 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-card:not(:last-child) .wellbeing-node::after {
-  display: none;
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: -17px;
+  z-index: 1;
+  width: 9px;
+  height: 17px;
+  background: color-mix(in srgb, var(--cascade-color) 76%, #145bab);
+  clip-path: polygon(39% 0, 61% 0, 61% 58%, 100% 58%, 50% 100%, 0 58%, 39% 58%);
+  filter: drop-shadow(0 1px 1px rgba(18, 54, 101, 0.16));
+  pointer-events: none;
+  transform: translateX(50%);
 }
 
 .wellbeing-icon-svg {
@@ -2466,8 +2479,7 @@ body.search-open .search-modal {
     gap: 14px;
   }
 
-  .wellbeing-card::before,
-  .wellbeing-card::after {
+  .wellbeing-card::before {
     display: none;
   }
 
