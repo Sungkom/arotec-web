@@ -1551,76 +1551,92 @@
       </article>
     `).join("");
 
+    const wellbeingIcons = {
+      leaf: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 39V18"/><path d="M24 29c-7.2-1.2-12.4-5.9-14-13.1 7.8-1.2 13.3 2.5 14 10"/><path d="M25 25c7.5-.8 12.1-5.4 13.1-13-7.4-.9-12.8 2.4-14 9"/></svg>`,
+      eye: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M5.5 24s6.9-11 18.5-11 18.5 11 18.5 11S35.6 35 24 35 5.5 24 5.5 24Z"/><circle cx="24" cy="24" r="6.5"/></svg>`,
+      network: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="16" r="4"/><circle cx="35" cy="12" r="4"/><circle cx="36" cy="34" r="4"/><circle cx="15" cy="35" r="4"/><circle cx="24" cy="24" r="4"/><path d="m15.5 17.4 5 4.4M28 21l4.6-6.1M27.8 26.5l5.1 5M20.9 27.1l-3.6 4.8"/></svg>`,
+      heartPulse: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 25c-4-8 6.5-15.2 16-6.6C33.5 9.8 44 17 40 25c-2.7 5.8-10.6 11.4-16 15-5.4-3.6-13.3-9.2-16-15Z"/><path d="M12 26h7l3-6 4.5 11 3-5H36"/></svg>`,
+      brain: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 39c-5.2 0-9.5-4.1-9.5-9.2 0-2.6 1.1-5 3-6.6-.8-6 3.3-11.2 9.4-11.2 1.4-3.2 4.6-5.5 8.5-5.5 5.3 0 9.5 4.2 9.5 9.4 3.2 1.7 5.1 5.1 5.1 8.8 0 5.5-4.3 10-9.8 10H31"/><path d="M22 38V12M22 19c-3.8 0-6.3 2.3-6.8 5.5M22 28c-3.2 0-5.6 1.9-6.4 4.7M28 14c3.5.5 5.9 3.1 6.2 6.4M28 27c3.6 0 6.1 2.3 6.5 5.5"/></svg>`,
+      heart: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 25c-4-8 6.5-15.2 16-6.6C33.5 9.8 44 17 40 25c-2.7 5.8-10.6 11.4-16 15-5.4-3.6-13.3-9.2-16-15Z"/></svg>`,
+      smile: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M17 28c2 3.2 4.4 4.7 7 4.7s5-1.5 7-4.7"/><path d="M17.5 20.5h.1M30.5 20.5h.1"/></svg>`,
+      walk: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="25" cy="8" r="4"/><path d="M23 15v11l-7 14M25 26l8 14M23 17l-7 8M25 17l8 7"/></svg>`,
+      lotus: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36c-6.8-5.1-8.5-12.1 0-22 8.5 9.9 6.8 16.9 0 22Z"/><path d="M24 36c-8.4-.2-14.4-4.9-16-14 8.3-.4 13.4 3.6 16 14Z"/><path d="M24 36c8.4-.2 14.4-4.9 16-14-8.3-.4-13.4 3.6-16 14Z"/><path d="M9 38h30"/></svg>`
+    };
+
     const wellbeingCards = [
       {
         number: "01",
         title: "Environment",
         text: "All experiences begin in the physical, social and cultural environment.",
         color: "#4f8a35",
-        image: "wellbeing-environment.jpg"
+        icon: "leaf"
       },
       {
         number: "02",
         title: "Exteroception",
         text: "Our senses detect external stimuli from the environment.",
         color: "#0f9b8f",
-        image: "wellbeing-exteroception.jpg"
+        icon: "eye"
       },
       {
         number: "03",
         title: "Synesthetic Integration",
         text: "Information from multiple senses is integrated into unified perception.",
         color: "#10a7a0",
-        image: "wellbeing-synesthetic-integration.jpg"
+        icon: "network"
       },
       {
         number: "04",
         title: "Interoceptive Modulation",
         text: "Internal signals are monitored and dynamically regulated.",
         color: "#176fb5",
-        image: "wellbeing-interoceptive-modulation.jpg"
+        icon: "heartPulse"
       },
       {
         number: "05",
         title: "Body-Brain Synergy",
         text: "The body and brain communicate bidirectionally to maintain balance and adaptability.",
         color: "#7250b8",
-        image: "wellbeing-body-brain-synergy.jpg"
+        icon: "brain"
       },
       {
         number: "06",
         title: "Feeling",
         text: "Integrated signals give rise to subjective feelings and states.",
         color: "#c03c87",
-        image: "wellbeing-feeling.jpg"
+        icon: "heart"
       },
       {
         number: "07",
         title: "Emotion",
         text: "Feelings are amplified and organized into emotional experiences.",
         color: "#e0526a",
-        image: "wellbeing-emotion.jpg"
+        icon: "smile"
       },
       {
         number: "08",
         title: "Behavior",
         text: "Emotions influence decisions, actions and lifestyle choices.",
         color: "#e56a18",
-        image: "wellbeing-behavior.jpg"
+        icon: "walk"
       },
       {
         number: "09",
         title: "Health • Beauty • Wellbeing",
         text: "Sustained patterns of behavior shape long-term health, beauty and wellbeing.",
         color: "#bd8a18",
-        image: "wellbeing-health-beauty-wellbeing.jpg"
+        icon: "lotus"
       }
-    ].map((card) => `
-      <article class="wellbeing-card" style="--cascade-color:${card.color};--wellbeing-card-image:url('${asset(card.image)}')">
-        <span class="wellbeing-number">${card.number}</span>
-        <div class="wellbeing-card-body">
-          <h3>${card.title}</h3>
-          <p>${card.text}</p>
+    ].map((card, index) => `
+      <article class="wellbeing-card" style="--cascade-color:${card.color};--cascade-index:${index}">
+        <div class="wellbeing-node" aria-hidden="true">${wellbeingIcons[card.icon] || wellbeingIcons.leaf}</div>
+        <div class="wellbeing-card-panel">
+          <span class="wellbeing-number">${card.number}</span>
+          <span class="wellbeing-divider" aria-hidden="true"></span>
+          <div class="wellbeing-card-body">
+            <h3>${card.title}</h3>
+            <p>${card.text}</p>
+          </div>
         </div>
       </article>
     `).join("");
@@ -1662,12 +1678,12 @@
         <section class="wellbeing-cascade section-pad" aria-labelledby="wellbeing-title">
           <div class="section-shell wellbeing-layout">
             <div class="wellbeing-intro">
-              <p class="eyebrow">Human experience cascade</p>
-              <h2 class="wellbeing-title" id="wellbeing-title">Engineering Human Wellbeing</h2>
-              <p>At A&amp;S, we believe human wellbeing is shaped not by a single process, but by a continuous biological cascade in which every stage is interconnected. Understanding these connections is the key to understanding how people feel, adapt and thrive.</p>
-              <div class="wellbeing-loop">
-                <strong>Feedback loop</strong>
-                <span>Sustained wellbeing outcomes continuously inform each stage of the experience journey.</span>
+              <p class="eyebrow">Engineering Human Wellbeing</p>
+              <h2 class="wellbeing-title" id="wellbeing-title">The Biology of Human Experience</h2>
+              <p>A continuous biological cascade that transforms environmental experiences into wellbeing outcomes.</p>
+              <div class="wellbeing-feedback">
+                <strong>Feedback<br>Loop</strong>
+                <span>Sustained wellbeing outcomes continuously influence and strengthen each stage of the human experience cascade.</span>
               </div>
             </div>
             <div class="wellbeing-flow" aria-label="The biology of human experience">${wellbeingCards}</div>
