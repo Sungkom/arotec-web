@@ -591,12 +591,7 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-flow::after {
-  content: "";
-  position: absolute;
-  top: 72px;
-  bottom: 46px;
-  left: 74px;
-  border-left: 2px dotted rgba(29, 116, 130, 0.48);
+  display: none;
 }
 
 .wellbeing-card {
@@ -625,22 +620,26 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   top: 50%;
-  left: 34px;
-  width: 46px;
-  border-top: 2px dotted color-mix(in srgb, var(--cascade-color) 80%, transparent);
+  left: 55px;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cascade-color) 84%, transparent);
+  transform: translateY(-50%);
 }
 
 .wellbeing-card-panel::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -11px;
+  left: -12px;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 8px solid var(--cascade-color);
   filter: drop-shadow(0 1px 1px rgba(18, 54, 101, 0.18));
+  pointer-events: none;
   transform: translateY(-50%);
 }
 
