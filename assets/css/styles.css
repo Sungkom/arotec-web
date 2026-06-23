@@ -500,13 +500,13 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-intro::after {
   content: "";
   position: absolute;
-  left: 168px;
-  bottom: 48px;
-  width: 98px;
-  height: 60px;
+  left: 218px;
+  bottom: 18px;
+  width: 58px;
+  height: 40px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
   border-left: 2px solid rgba(229, 106, 24, 0.78);
-  border-radius: 0 0 0 24px;
+  border-radius: 0 0 0 18px;
 }
 
 .wellbeing-feedback {
@@ -520,10 +520,10 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-feedback::before {
   content: "";
   position: absolute;
-  left: 54px;
+  left: 86px;
   top: -70px;
-  width: 150px;
-  height: 82px;
+  width: 118px;
+  height: 68px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
   border-radius: 96px 0 0 0;
@@ -580,14 +580,7 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-flow::before {
-  content: "";
-  position: absolute;
-  top: 28px;
-  bottom: 28px;
-  left: 102px;
-  width: 2px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #4f8a35 0%, #0f9b8f 24%, #176fb5 43%, #7250b8 58%, #e0526a 74%, #e56a18 88%, #bd8a18 100%);
+  display: none;
 }
 
 .wellbeing-flow::after {
@@ -598,30 +591,21 @@ body[data-page="home"] .hero .pill-button {
   position: relative;
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
-  gap: 17px;
+  gap: 24px;
   align-items: center;
   min-height: 55px;
 }
 
 .wellbeing-card::before {
-  content: "";
-  position: absolute;
-  top: calc(50% - 3.5px);
-  left: 22px;
-  z-index: 1;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--cascade-color);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.94);
+  display: none;
 }
 
 .wellbeing-card::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 55px;
-  width: 18px;
+  left: 58px;
+  width: 10px;
   height: 2px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--cascade-color) 84%, transparent);
@@ -632,12 +616,12 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   top: 50%;
-  left: -12px;
+  left: -18px;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 8px solid var(--cascade-color);
+  border-left: 7px solid var(--cascade-color);
   filter: drop-shadow(0 1px 1px rgba(18, 54, 101, 0.18));
   pointer-events: none;
   transform: translateY(-50%);
@@ -662,15 +646,7 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-card:not(:last-child) .wellbeing-node::after {
-  content: "";
-  position: absolute;
-  right: 50%;
-  bottom: -15px;
-  width: 9px;
-  height: 15px;
-  background: rgba(20, 91, 171, 0.9);
-  clip-path: polygon(38% 0, 62% 0, 62% 55%, 100% 55%, 50% 100%, 0 55%, 38% 55%);
-  transform: translateX(50%);
+  display: none;
 }
 
 .wellbeing-icon-svg {
