@@ -459,15 +459,15 @@ body[data-page="home"] .hero .pill-button {
   display: grid;
   grid-template-columns: minmax(205px, 0.78fr) minmax(520px, 1.45fr);
   gap: clamp(14px, 2vw, 24px);
-  align-items: center;
+  align-items: start;
 }
 
 .wellbeing-intro {
   position: relative;
   justify-self: end;
   width: min(100%, 315px);
-  min-height: 620px;
-  padding: 48px 0 24px;
+  min-height: 584px;
+  padding: 0;
 }
 
 .wellbeing-title {
@@ -504,7 +504,7 @@ body[data-page="home"] .hero .pill-button {
   position: absolute;
   left: 270px;
   bottom: 2px;
-  width: 64px;
+  width: 128px;
   height: 84px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
   border-left: 2px solid rgba(229, 106, 24, 0.78);
@@ -515,7 +515,7 @@ body[data-page="home"] .hero .pill-button {
   position: relative;
   display: grid;
   max-width: 170px;
-  margin: 56px 0 112px 142px;
+  margin: 106px 0 36px 142px;
   gap: 13px;
 }
 
