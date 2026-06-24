@@ -472,11 +472,11 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-title {
-  max-width: 255px;
+  max-width: 210px;
   margin: 0 0 24px 40px;
   color: #123665;
   font-family: inherit;
-  font-size: clamp(1.64rem, 2.44vw, 2.29rem);
+  font-size: clamp(1.38rem, 2vw, 1.86rem);
   font-weight: 680;
   line-height: 1.08;
   letter-spacing: 0;
@@ -492,21 +492,21 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-intro > p {
-  max-width: 250px;
+  max-width: 210px;
   margin: 0 0 0 40px;
   color: rgba(10, 35, 70, 0.82);
-  font-size: clamp(0.82rem, 0.96vw, 0.95rem);
-  line-height: 1.55;
+  font-size: clamp(0.72rem, 0.84vw, 0.82rem);
+  line-height: 1.5;
   font-weight: 540;
 }
 
 .wellbeing-intro::after {
   content: "";
   position: absolute;
-  left: 156px;
+  left: 260px;
   bottom: 0;
-  width: 264px;
-  height: 132px;
+  width: 160px;
+  height: 82px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
   border-left: 2px solid rgba(229, 106, 24, 0.78);
   border-radius: 0 0 0 34px;
@@ -523,9 +523,9 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-feedback::before {
   content: "";
   position: absolute;
-  left: 104px;
+  left: 208px;
   top: -106px;
-  width: 264px;
+  width: 160px;
   height: 106px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
@@ -536,12 +536,13 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 360px;
-  top: -106px;
+  top: -111px;
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 8px solid #34751f;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid #34751f;
+  filter: drop-shadow(0 1px 1px rgba(18, 54, 101, 0.12));
 }
 
 .wellbeing-feedback strong,
@@ -568,8 +569,8 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-feedback span {
   color: rgba(10, 35, 70, 0.88);
-  font-size: 0.78rem;
-  line-height: 1.56;
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
 .wellbeing-flow {
