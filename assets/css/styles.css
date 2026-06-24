@@ -472,11 +472,11 @@ body[data-page="home"] .hero .pill-button {
 }
 
 .wellbeing-title {
-  max-width: 210px;
-  margin: 0 0 24px 40px;
+  max-width: 205px;
+  margin: 0 0 18px 42px;
   color: #123665;
   font-family: inherit;
-  font-size: clamp(1.38rem, 2vw, 1.86rem);
+  font-size: clamp(1.24rem, 1.78vw, 1.68rem);
   font-weight: 680;
   line-height: 1.08;
   letter-spacing: 0;
@@ -485,28 +485,28 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-title::after {
   content: "";
   display: block;
-  width: 56px;
+  width: 46px;
   height: 2px;
-  margin-top: 20px;
+  margin-top: 14px;
   background: #cf9b45;
 }
 
 .wellbeing-intro > p {
-  max-width: 210px;
-  margin: 0 0 0 40px;
+  max-width: 205px;
+  margin: 0 0 0 42px;
   color: rgba(10, 35, 70, 0.82);
-  font-size: clamp(0.72rem, 0.84vw, 0.82rem);
-  line-height: 1.5;
+  font-size: clamp(0.66rem, 0.76vw, 0.74rem);
+  line-height: 1.46;
   font-weight: 540;
 }
 
 .wellbeing-intro::after {
   content: "";
   position: absolute;
-  left: 260px;
+  left: 270px;
   bottom: 0;
-  width: 160px;
-  height: 82px;
+  width: 150px;
+  height: 76px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
   border-left: 2px solid rgba(229, 106, 24, 0.78);
   border-radius: 0 0 0 34px;
@@ -516,27 +516,27 @@ body[data-page="home"] .hero .pill-button {
   position: relative;
   display: grid;
   max-width: 170px;
-  margin: 106px 0 36px 52px;
-  gap: 13px;
+  margin: 144px 0 24px 52px;
+  gap: 11px;
 }
 
 .wellbeing-feedback::before {
   content: "";
   position: absolute;
-  left: 208px;
-  top: -106px;
-  width: 160px;
-  height: 106px;
+  left: 218px;
+  top: -144px;
+  width: 150px;
+  height: 144px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
-  border-radius: 132px 0 0 0;
+  border-radius: 150px 0 0 0;
 }
 
 .wellbeing-feedback::after {
   content: "";
   position: absolute;
   left: 360px;
-  top: -111px;
+  top: -149px;
   width: 0;
   height: 0;
   border-top: 7px solid transparent;
@@ -552,15 +552,15 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-feedback strong {
   display: grid;
-  width: 112px;
-  min-height: 64px;
+  width: 108px;
+  min-height: 60px;
   place-items: center;
   border: 1px solid rgba(79, 138, 53, 0.52);
   border-radius: 9px;
   color: #3f7b2e;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: 0 10px 24px rgba(18, 54, 101, 0.1);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 760;
   line-height: 1.28;
   text-align: center;
@@ -569,8 +569,8 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-feedback span {
   color: rgba(10, 35, 70, 0.88);
-  font-size: 0.72rem;
-  line-height: 1.5;
+  font-size: 0.68rem;
+  line-height: 1.45;
 }
 
 .wellbeing-flow {
