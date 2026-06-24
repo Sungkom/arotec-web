@@ -504,7 +504,7 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   top: 162px;
-  bottom: 96px;
+  bottom: 134px;
   left: 270px;
   width: 2px;
   border-radius: 999px;
@@ -522,7 +522,7 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 270px;
-  bottom: 0;
+  bottom: 38px;
   width: 150px;
   height: 96px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
@@ -542,9 +542,9 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 218px;
-  top: -162px;
+  top: -136px;
   width: 150px;
-  height: 162px;
+  height: 136px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
   border-radius: 150px 0 0 0;
@@ -554,7 +554,7 @@ body[data-page="home"] .hero .pill-button {
   content: "";
   position: absolute;
   left: 360px;
-  top: -167px;
+  top: -143px;
   width: 0;
   height: 0;
   border-top: 7px solid transparent;
