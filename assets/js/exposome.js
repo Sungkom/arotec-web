@@ -383,4 +383,48 @@
   const savedLanguage = localStorage.getItem("as-site-language");
   setLanguage(languageMeta[savedLanguage] ? savedLanguage : "th");
   languageSelect?.addEventListener("change", (event) => setLanguage(event.target.value));
+
+  const galleryTriggers = document.querySelectorAll("[data-exposome-gallery-trigger]");
+  const lightbox = document.querySelector("[data-exposome-lightbox]");
+  const lightboxImage = document.querySelector("[data-exposome-lightbox-image]");
+  const lightboxTitle = document.querySelector("[data-exposome-lightbox-title]");
+  const lightboxClose = document.querySelector("[data-exposome-lightbox-close]");
+  let activeGalleryTrigger = null;
+
+  function closeGalleryImage() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+    if (activeGalleryTrigger) activeGalleryTrigger.focus();
+    activeGalleryTrigger = null;
+  }
+
+  function openGalleryImage(trigger) {
+    if (!lightbox || !lightboxImage) return;
+    activeGalleryTrigger = trigger;
+    const preview = trigger.querySelector("img");
+    const imageSource = trigger.dataset.galleryImage;
+    const imageTitle = trigger.dataset.galleryTitle || "";
+    lightboxImage.src = imageSource;
+    lightboxImage.alt = preview?.alt || imageTitle;
+    if (lightboxTitle) lightboxTitle.textContent = imageTitle;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    lightboxClose?.focus();
+  }
+
+  galleryTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => openGalleryImage(trigger));
+  });
+
+  lightboxClose?.addEventListener("click", closeGalleryImage);
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeGalleryImage();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox && !lightbox.hidden) {
+      closeGalleryImage();
+    }
+  });
 })();
