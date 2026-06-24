@@ -500,6 +500,24 @@ body[data-page="home"] .hero .pill-button {
   font-weight: 540;
 }
 
+.wellbeing-intro::before {
+  content: "";
+  position: absolute;
+  top: 162px;
+  bottom: 96px;
+  left: 270px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    #34751f 0%,
+    #159c9a 32%,
+    #c23a88 64%,
+    rgba(229, 106, 24, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
 .wellbeing-intro::after {
   content: "";
   position: absolute;
@@ -2458,6 +2476,7 @@ body.search-open .search-modal {
     margin-left: 0;
   }
 
+  .wellbeing-intro::before,
   .wellbeing-intro::after,
   .wellbeing-feedback::before,
   .wellbeing-feedback::after {
