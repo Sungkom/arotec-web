@@ -339,10 +339,10 @@
     if (metaDescription) metaDescription.setAttribute("content", page.description);
 
     setText(".skip-link", page.skip);
-    setText(".exposome-kicker", page.hero.kicker);
+    setText(".exposome-hero .exposome-kicker", page.hero.kicker);
     setText(".exposome-hero h1", page.hero.title, true);
-    setText(".hero-subtitle", page.hero.subtitle);
-    setText(".hero-copy", page.hero.copy);
+    setText(".exposome-hero .hero-subtitle", page.hero.subtitle);
+    setText(".exposome-hero .hero-copy", page.hero.copy);
 
     document.querySelectorAll(".pathway-column").forEach((column, index) => {
       const text = page.columns[index];
