@@ -473,7 +473,7 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-title {
   max-width: 255px;
-  margin: 0 0 24px;
+  margin: 0 0 24px 40px;
   color: #123665;
   font-family: inherit;
   font-size: clamp(1.64rem, 2.44vw, 2.29rem);
@@ -493,7 +493,7 @@ body[data-page="home"] .hero .pill-button {
 
 .wellbeing-intro > p {
   max-width: 250px;
-  margin: 0;
+  margin: 0 0 0 40px;
   color: rgba(10, 35, 70, 0.82);
   font-size: clamp(0.82rem, 0.96vw, 0.95rem);
   line-height: 1.55;
@@ -503,29 +503,29 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-intro::after {
   content: "";
   position: absolute;
-  left: 72px;
+  left: 156px;
   bottom: 0;
-  width: 206px;
-  height: 84px;
+  width: 264px;
+  height: 132px;
   border-bottom: 2px solid rgba(229, 106, 24, 0.78);
-  border-right: 2px solid rgba(229, 106, 24, 0.78);
-  border-radius: 0 0 34px 0;
+  border-left: 2px solid rgba(229, 106, 24, 0.78);
+  border-radius: 0 0 0 34px;
 }
 
 .wellbeing-feedback {
   position: relative;
   display: grid;
   max-width: 170px;
-  margin: 106px 0 36px 142px;
+  margin: 106px 0 36px 52px;
   gap: 13px;
 }
 
 .wellbeing-feedback::before {
   content: "";
   position: absolute;
-  left: 72px;
+  left: 104px;
   top: -106px;
-  width: 206px;
+  width: 264px;
   height: 106px;
   border-top: 2px solid #34751f;
   border-left: 2px solid #34751f;
@@ -535,7 +535,7 @@ body[data-page="home"] .hero .pill-button {
 .wellbeing-feedback::after {
   content: "";
   position: absolute;
-  left: 270px;
+  left: 360px;
   top: -106px;
   width: 0;
   height: 0;
@@ -2450,6 +2450,11 @@ body.search-open .search-modal {
     width: min(100%, 620px);
     min-height: auto;
     padding: 0;
+  }
+
+  .wellbeing-title,
+  .wellbeing-intro > p {
+    margin-left: 0;
   }
 
   .wellbeing-intro::after,
