@@ -1528,8 +1528,12 @@
       .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
+    const sciencePlatformLinks = {
+      "science-platform-exposome.jpg": "pages/exposome.html",
+      "science-platform-human-longevity-aging.jpg": "pages/human-longevity-aging.html"
+    };
     const conceptItems = platform.items.map((item) => {
-      const href = item.href || (item.image === "science-platform-exposome.jpg" ? "pages/exposome.html" : "");
+      const href = item.href || sciencePlatformLinks[item.image] || "";
       const tag = href ? "a" : "article";
       const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title}"` : "";
       return `
