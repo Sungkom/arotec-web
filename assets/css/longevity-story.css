@@ -426,8 +426,8 @@ html {
 .image-moment-card h2 {
   max-width: 22rem;
   margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.85rem);
-  line-height: 1.18;
+  font-size: clamp(1.3rem, 2vw, 1.86rem);
+  line-height: 1.05;
 }
 
 .story-section {
@@ -465,8 +465,8 @@ html {
 .section-heading h2 {
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(1rem, 2.15vw, 2.05rem);
-  font-weight: 860;
+  font-size: clamp(2rem, 4.3vw, 4.1rem);
+  font-weight: 780;
   line-height: 1.02;
 }
 
@@ -501,8 +501,8 @@ html {
 .sticky-panel h2 {
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(2rem, 3.3vw, 3.6rem);
-  line-height: 1.02;
+  font-size: clamp(1.45rem, 2.2vw, 2.3rem);
+  line-height: 1.12;
 }
 
 .sticky-panel h2 span {
@@ -1260,8 +1260,9 @@ html {
 .final-copy h2 {
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(1.1rem, 2.5vw, 2.5rem);
-  line-height: 1.04;
+  font-size: clamp(2.35rem, 5.8vw, 5.3rem);
+  font-weight: 780;
+  line-height: 1;
 }
 
 .final-copy p {
@@ -1451,10 +1452,6 @@ html {
 
   .story-section {
     padding: 72px 0;
-  }
-
-  .section-heading h2 {
-    font-size: clamp(1rem, 5.5vw, 1.65rem);
   }
 
   .sticky-panel,
