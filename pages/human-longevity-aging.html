@@ -13,22 +13,80 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
 
-    <header class="site-header longevity-header">
+    <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="../index.html" aria-label="Arotec home">
           <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
         </a>
-        <nav class="nav-links longevity-nav" aria-label="Primary navigation">
-          <a href="../index.html#customized">Customized for you</a>
-          <a href="../index.html#platform">Platform</a>
-          <a href="#axis">Axis</a>
-          <a href="#sadi">SADI</a>
-          <a href="#adi">ADI</a>
-          <a href="#trajectory">Trajectory</a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="../index.html#customized">Customized for you</a>
+          <a class="nav-link" href="../index.html#applied">Applied Solutions</a>
+          <a class="nav-link" href="../index.html#products">Applied Products</a>
+          <a class="nav-link" href="../index.html#platform">Platform</a>
+          <a class="nav-link" href="../index.html#about">Who We Are</a>
+          <a class="nav-link" href="../index.html#insights">Insights</a>
+          <a class="nav-link" href="../index.html#partners">Partners</a>
+          <a class="nav-link" href="../index.html#join">Join Us</a>
         </nav>
-        <a class="pill-button longevity-contact" href="members.html">Get In touch</a>
+        <div class="header-actions">
+          <select class="language-select" id="languageSelect" aria-label="Language">
+            <option value="en" selected>EN</option>
+            <option value="ja">日本語</option>
+            <option value="zh">繁中</option>
+            <option value="th">ไทย</option>
+          </select>
+          <a class="pill-button contact-pill" href="members.html">Get In touch</a>
+          <button class="circle-button" id="searchButton" type="button" title="Search" aria-label="Search">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>
+          </button>
+          <button class="circle-button menu-toggle" id="menuToggle" type="button" title="Open menu" aria-label="Open menu">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+          </button>
+        </div>
       </div>
     </header>
+    <div class="mobile-scrim" id="mobileScrim"></div>
+    <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <div class="mobile-panel-head">
+        <a class="brand" href="../index.html" aria-label="Arotec home">
+          <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
+        </a>
+        <button class="circle-button" id="menuClose" type="button" title="Close menu" aria-label="Close menu">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile primary navigation">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../index.html#customized">Customized for you</a>
+        <a class="nav-link" href="../index.html#applied">Applied Solutions</a>
+        <a class="nav-link" href="../index.html#products">Applied Products</a>
+        <a class="nav-link" href="../index.html#platform">Platform</a>
+        <a class="nav-link" href="../index.html#about">Who We Are</a>
+        <a class="nav-link" href="../index.html#insights">Insights</a>
+        <a class="nav-link" href="../index.html#partners">Partners</a>
+        <a class="nav-link" href="../index.html#join">Join Us</a>
+        <a class="nav-link" href="members.html">Get In touch</a>
+      </nav>
+      <div class="mobile-language" aria-label="Language">
+        <button class="language-chip active" data-lang-chip="en" type="button">EN</button>
+        <button class="language-chip" data-lang-chip="ja" type="button">日本語</button>
+        <button class="language-chip" data-lang-chip="zh" type="button">繁中</button>
+        <button class="language-chip" data-lang-chip="th" type="button">ไทย</button>
+      </div>
+      <a class="pill-button" href="members.html">Get In touch</a>
+    </aside>
+    <div class="search-modal" id="searchModal" aria-label="Search" role="dialog" aria-modal="true">
+      <div class="search-card">
+        <div class="search-head">
+          <h2>Search</h2>
+          <button class="circle-button" id="searchClose" type="button" title="Close search" aria-label="Close search">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+          </button>
+        </div>
+        <input class="search-input" id="searchInput" type="search" placeholder="Search pages, science, solutions" autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
 
     <main id="main">
       <section class="longevity-hero" id="top" aria-labelledby="hero-title">
