@@ -229,7 +229,7 @@ html {
   max-width: 780px;
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(1.6rem, 3.5vw, 3.6rem);
+  font-size: clamp(0.8rem, 1.75vw, 1.8rem);
   font-weight: 880;
   line-height: 0.94;
 }
@@ -465,7 +465,7 @@ html {
 .section-heading h2 {
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(2rem, 4.3vw, 4.1rem);
+  font-size: clamp(1rem, 2.15vw, 2.05rem);
   font-weight: 860;
   line-height: 1.02;
 }
@@ -1260,7 +1260,7 @@ html {
 .final-copy h2 {
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(2.2rem, 5vw, 5rem);
+  font-size: clamp(1.1rem, 2.5vw, 2.5rem);
   line-height: 1.04;
 }
 
@@ -1415,7 +1415,7 @@ html {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.5rem, 7.5vw, 2.4rem);
+    font-size: clamp(0.75rem, 3.75vw, 1.2rem);
   }
 
   .axis-hero-visual {
@@ -1454,7 +1454,7 @@ html {
   }
 
   .section-heading h2 {
-    font-size: clamp(2rem, 11vw, 3.3rem);
+    font-size: clamp(1rem, 5.5vw, 1.65rem);
   }
 
   .sticky-panel,
