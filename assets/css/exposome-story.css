@@ -160,7 +160,16 @@ html {
   text-transform: uppercase;
 }
 
-.hero-copy h1,
+.hero-copy h1 {
+  margin: 0;
+  color: var(--story-navy);
+  font-family: "Noto Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans TC", Arial, sans-serif;
+  font-size: clamp(1.55rem, 4vw, 3.9rem);
+  font-weight: 780;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
 .story-cta h2 {
   margin: 0;
   color: var(--story-navy);
@@ -1652,7 +1661,7 @@ html {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3rem, 16vw, 4.8rem);
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
   }
 
   .hero-visual {
