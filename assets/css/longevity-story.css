@@ -229,9 +229,9 @@ html {
   max-width: 780px;
   margin: 0;
   color: var(--longevity-navy);
-  font-size: clamp(0.8rem, 1.75vw, 1.8rem);
+  font-size: clamp(1.55rem, 4vw, 3.9rem);
   font-weight: 880;
-  line-height: 0.94;
+  line-height: 1.04;
 }
 
 .hero-copy p {
@@ -1415,7 +1415,7 @@ html {
   }
 
   .hero-copy h1 {
-    font-size: clamp(0.75rem, 3.75vw, 1.2rem);
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
   }
 
   .axis-hero-visual {
