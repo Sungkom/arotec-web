@@ -3,10 +3,11 @@
   const pageId = body.dataset.page || "home";
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
+  let heroSlideTimer = null;
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
-    { id: "customized", path: "pages/customized.html", nav: true, section: "customized" },
+    { id: "customized", path: "pages/customized.html", nav: true },
     { id: "applied", path: "pages/applied-solutions.html", nav: true, section: "applied" },
     { id: "products", path: "pages/products.html", nav: true, section: "products" },
     { id: "platform", path: "pages/platform.html", nav: true, section: "platform" },
@@ -59,9 +60,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "Explore our science",
           secondary: "Customized for you",
           tags: ["Science", "Solutions", "Products"]
@@ -108,7 +109,7 @@
           eyebrow: "Customized for you",
           title: "Personalized programs built around real life",
           lead: "Arotec turns lifestyle signals, sensory preferences and wellness goals into a practical recommendation journey.",
-          image: "customized-banner.png",
+          image: "customized-banner.jpg",
           stats: [
             { value: "3", label: "profile layers" },
             { value: "12", label: "daily-life signals" },
@@ -384,9 +385,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "สำรวจวิทยาศาสตร์ของเรา",
           secondary: "ปรับเฉพาะคุณ",
           tags: ["Science", "Solutions", "Products"]
@@ -433,7 +434,7 @@
           eyebrow: "ปรับเฉพาะคุณ",
           title: "โปรแกรมเฉพาะบุคคลที่สร้างจากชีวิตจริง",
           lead: "Arotec เปลี่ยนข้อมูลไลฟ์สไตล์ ความชอบด้านประสาทสัมผัส และเป้าหมายสุขภาวะให้เป็นเส้นทางคำแนะนำที่นำไปใช้ได้จริง",
-          image: "customized-banner.png",
+          image: "customized-banner.jpg",
           stats: [
             { value: "3", label: "ชั้นข้อมูลโปรไฟล์" },
             { value: "12", label: "สัญญาณชีวิตประจำวัน" },
@@ -657,9 +658,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "探索我們的科學",
           secondary: "為你客製",
           tags: ["Science", "Solutions", "Products"]
@@ -739,9 +740,9 @@
       },
       home: {
         hero: {
-          eyebrow: "Arotec Science for Life",
-          title: "We engineer sensory-driven\nbioactive systems for human\nhomeostasis.",
-          lead: "A&S is a science-driven innovation company developing sensory, functional, and bioactive solutions for human well-being.",
+          eyebrow: "",
+          title: "Understanding\nHow People Feel",
+          lead: "Building science-driven platforms and solutions to elevate health, beauty, and the human experience",
           primary: "私たちの科学を見る",
           secondary: "あなたに最適化",
           tags: ["Science", "Solutions", "Products"]
@@ -794,7 +795,7 @@
       eyebrow: "為你客製",
       title: "以真實生活為核心的個人化方案",
       lead: "Arotec 將生活型態訊號、感官偏好與健康目標，轉化為清楚可行的推薦旅程。",
-      image: "customized-banner.png",
+      image: "customized-banner.jpg",
       stats: [
         { value: "3", label: "個人輪廓層級" },
         { value: "12", label: "日常生活訊號" },
@@ -989,7 +990,7 @@
       eyebrow: "あなたに最適化",
       title: "現実の生活に合わせて組み立てるパーソナルプログラム",
       lead: "Arotec は生活シグナル、感覚の好み、ウェルネス目標を、実行しやすい推薦ジャーニーへ変換します。",
-      image: "customized-banner.png",
+      image: "customized-banner.jpg",
       stats: [
         { value: "3", label: "プロフィール層" },
         { value: "12", label: "日常シグナル" },
@@ -1181,6 +1182,7 @@
 
   const icons = {
     arrow: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>',
+    arrowLeft: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"></path><path d="m11 6-6 6 6 6"></path></svg>',
     search: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>',
     menu: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>',
     close: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>',
@@ -1194,6 +1196,257 @@
     pin: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
     chart: '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 16v-5"></path><path d="M12 16V8"></path><path d="M16 16v-3"></path></svg>'
   };
+
+  const sciencePlatform = {
+    en: {
+      title: "Science Platform",
+      items: [
+        { title: "Exposome", image: "science-platform-exposome.jpg" },
+        { title: "Human Longevity & Aging", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "Olfactory Science", image: "science-platform-olfactory-science.jpg" },
+        { title: "Neuro-Scented Therapy", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "Neuro-Skin Care", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "Neuroplasticity", image: "science-platform-neuroplasticity.jpg" },
+        { title: "Pssudo-Synesthesia Perception", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "Homeostasis Regulation", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "Neuro Pathway with Stress", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "Hair Follicle Function", image: "science-platform-hair-follicle-function.jpg" }
+      ]
+    },
+    ja: {
+      title: "サイエンスプラットフォーム",
+      items: [
+        { title: "エクスポソーム", image: "science-platform-exposome.jpg" },
+        { title: "ヒューマンロンジェビティとエイジング", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "嗅覚科学", image: "science-platform-olfactory-science.jpg" },
+        { title: "ニューロセンテッドセラピー", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "ニューロスキンケア", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "神経可塑性", image: "science-platform-neuroplasticity.jpg" },
+        { title: "疑似共感覚知覚", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "ホメオスタシス調節", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "ストレスに関わる神経経路", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "毛包機能", image: "science-platform-hair-follicle-function.jpg" }
+      ]
+    },
+    zh: {
+      title: "科學平台",
+      items: [
+        { title: "暴露體", image: "science-platform-exposome.jpg" },
+        { title: "人類長壽與老化", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "嗅覺科學", image: "science-platform-olfactory-science.jpg" },
+        { title: "神經香氛療法", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "神經肌膚護理", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "神經可塑性", image: "science-platform-neuroplasticity.jpg" },
+        { title: "擬聯覺感知", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "恆定調節", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "壓力相關神經路徑", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "毛囊功能", image: "science-platform-hair-follicle-function.jpg" }
+      ]
+    },
+    th: {
+      title: "แพลตฟอร์มวิทยาศาสตร์",
+      items: [
+        { title: "เอกซ์โพโซม", image: "science-platform-exposome.jpg" },
+        { title: "อายุยืนและการชะลอวัยของมนุษย์", image: "science-platform-human-longevity-aging.jpg" },
+        { title: "วิทยาศาสตร์การรับกลิ่น", image: "science-platform-olfactory-science.jpg" },
+        { title: "การบำบัดด้วยกลิ่นผ่านระบบประสาท", image: "science-platform-neuro-scented-therapy.jpg" },
+        { title: "การดูแลผิวผ่านระบบประสาท", image: "science-platform-neuro-skin-care.jpg" },
+        { title: "ความยืดหยุ่นของสมอง", image: "science-platform-neuroplasticity.jpg" },
+        { title: "การรับรู้แบบ Pssudo-Synesthesia", image: "science-platform-pssudo-synesthesia-perception.jpg" },
+        { title: "การควบคุมภาวะสมดุล", image: "science-platform-homeostasis-regulation.jpg" },
+        { title: "เส้นทางประสาทกับความเครียด", image: "science-platform-neuro-pathway-stress.jpg" },
+        { title: "การทำงานของรูขุมขน", image: "science-platform-hair-follicle-function.jpg" }
+      ]
+    }
+  };
+
+  const appliedSolutions = {
+    en: {
+      cardsTitle: "Applied solution areas",
+      cardsLead: "Four sensory-led application paths that connect science to everyday wellness experiences.",
+      items: [
+        { title: "Sensory Strategies", text: "Programs that use scent, taste, texture, sound and environment to guide daily wellness behavior.", image: "science-platform-1.jpg" },
+        { title: "Synesthetic Flavors", text: "Flavor systems designed to connect taste, aroma, color and emotion into memorable wellness experiences.", image: "science-platform-5.jpg" },
+        { title: "Bio-Responsive Scents", text: "Scent experiences mapped to mood, recovery, focus and sensory feedback.", image: "science-platform-2.jpg" },
+        { title: "Health & Wellness", text: "Integrated routines and product concepts that support energy, balance and long-term well-being.", image: "hero-slide-2.jpg" }
+      ]
+    },
+    ja: {
+      cardsTitle: "応用ソリューション領域",
+      cardsLead: "感覚科学を日常のウェルネス体験につなげる4つの応用領域。",
+      items: [
+        { title: "感覚戦略", text: "香り、味、質感、音、環境を使い、日常のウェルネス行動を導きます。", image: "science-platform-1.jpg" },
+        { title: "共感覚フレーバー", text: "味、香り、色、感情を結び、記憶に残る体験へ設計します。", image: "science-platform-5.jpg" },
+        { title: "生体応答型の香り", text: "気分、回復、集中、感覚フィードバックに合わせた香り体験。", image: "science-platform-2.jpg" },
+        { title: "健康とウェルネス", text: "エネルギー、バランス、長期的な健やかさを支えるルーティンと製品設計。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    zh: {
+      cardsTitle: "應用方案領域",
+      cardsLead: "以感官科學連結日常健康體驗的四個應用方向。",
+      items: [
+        { title: "感官策略", text: "運用氣味、味覺、質地、聲音與環境，引導日常健康行為。", image: "science-platform-1.jpg" },
+        { title: "聯覺風味", text: "把味道、香氣、色彩與情緒連結成可記憶的健康體驗。", image: "science-platform-5.jpg" },
+        { title: "生物反應香氣", text: "依據情緒、恢復、專注與感官回饋設計香氣體驗。", image: "science-platform-2.jpg" },
+        { title: "健康與身心平衡", text: "整合日常儀式與產品概念，支持能量、平衡與長期健康。", image: "hero-slide-2.jpg" }
+      ]
+    },
+    th: {
+      cardsTitle: "กลุ่ม Applied Solutions",
+      cardsLead: "4 แนวทางประยุกต์จากวิทยาศาสตร์ประสาทสัมผัสสู่ประสบการณ์สุขภาวะในชีวิตประจำวัน",
+      items: [
+        { title: "กลยุทธ์ประสาทสัมผัส", text: "ใช้กลิ่น รส สัมผัส เสียง และสภาพแวดล้อม เพื่อออกแบบพฤติกรรมสุขภาวะในแต่ละวัน", image: "science-platform-1.jpg" },
+        { title: "รสชาติแบบผสานประสาทสัมผัส", text: "ออกแบบรสชาติที่เชื่อมรส กลิ่น สี และอารมณ์ให้กลายเป็นประสบการณ์ที่จดจำได้", image: "science-platform-5.jpg" },
+        { title: "กลิ่นที่ตอบสนองต่อชีวภาพ", text: "ออกแบบประสบการณ์กลิ่นให้สัมพันธ์กับอารมณ์ การฟื้นตัว สมาธิ และสัญญาณประสาทสัมผัส", image: "science-platform-2.jpg" },
+        { title: "สุขภาพและสุขภาวะ", text: "ผสานรูทีนและแนวคิดผลิตภัณฑ์เพื่อสนับสนุนพลังงาน สมดุล และสุขภาวะระยะยาว", image: "hero-slide-2.jpg" }
+      ]
+    }
+  };
+
+  function appliedSolutionContent(lang) {
+    return appliedSolutions[lang] || appliedSolutions.en;
+  }
+
+  const customizedShowcase = {
+    en: {
+      catalogTitle: "Personalized recommendation paths",
+      catalogLead: "Choose a profile direction, then guide the user toward a practical sensory-led routine.",
+      collections: [
+        { title: "Mind & Mood", text: "Focus, calm and daily mental clarity.", image: "science-platform-2.jpg" },
+        { title: "Sleep & Stress", text: "Recovery rituals for evening balance.", image: "customized-banner.jpg" },
+        { title: "Skin & Aging", text: "Inner beauty and longevity support.", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "Cognitive profile", text: "A daytime path for clarity, energy and productive rhythm.", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "Recovery profile", text: "A calming scent and lifestyle routine for evening recovery.", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "Beauty profile", text: "A skin and exposome path for glow, confidence and resilience.", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "Sensory profile", text: "A personalized sensory journey for everyday emotional balance.", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    ja: {
+      catalogTitle: "\u30d1\u30fc\u30bd\u30ca\u30eb\u63a8\u85a6\u30d1\u30b9",
+      catalogLead: "\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u65b9\u5411\u3092\u9078\u3073\u3001\u611f\u899a\u79d1\u5b66\u3092\u6d3b\u304b\u3057\u305f\u5b9f\u7528\u7684\u306a\u30eb\u30fc\u30c6\u30a3\u30f3\u3078\u5c0e\u304d\u307e\u3059\u3002",
+      collections: [
+        { title: "\u5fc3\u3068\u6c17\u5206", text: "\u96c6\u4e2d\u3001\u843d\u3061\u7740\u304d\u3001\u65e5\u5e38\u306e\u660e\u77ad\u3055\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u3068\u30b9\u30c8\u30ec\u30b9", text: "\u591c\u306e\u30d0\u30e9\u30f3\u30b9\u3092\u6574\u3048\u308b\u56de\u5fa9\u30ea\u30c1\u30e5\u30a2\u30eb\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u3068\u30a8\u30a4\u30b8\u30f3\u30b0", text: "\u30a4\u30f3\u30ca\u30fc\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u3068\u9577\u5bff\u30b5\u30dd\u30fc\u30c8\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u660e\u77ad\u3055\u3001\u30a8\u30cd\u30eb\u30ae\u30fc\u3001\u751f\u7523\u7684\u306a\u30ea\u30ba\u30e0\u3092\u652f\u3048\u308b\u65e5\u4e2d\u306e\u30d1\u30b9\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u56de\u5fa9\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u591c\u306e\u56de\u5fa9\u3092\u652f\u3048\u308b\u9999\u308a\u3068\u751f\u6d3b\u7fd2\u6163\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u8f1d\u304d\u3001\u81ea\u4fe1\u3001\u808c\u306e\u30ec\u30b8\u30ea\u30a8\u30f3\u30b9\u3092\u652f\u3048\u308b\u30d1\u30b9\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u899a\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb", text: "\u65e5\u5e38\u306e\u611f\u60c5\u30d0\u30e9\u30f3\u30b9\u306e\u305f\u3081\u306e\u30d1\u30fc\u30bd\u30ca\u30eb\u611f\u899a\u4f53\u9a13\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    zh: {
+      catalogTitle: "\u500b\u4eba\u5316\u63a8\u85a6\u8def\u5f91",
+      catalogLead: "\u9078\u64c7\u8f2a\u5ed3\u65b9\u5411\uff0c\u5f15\u5c0e\u4f7f\u7528\u8005\u9032\u5165\u53ef\u57f7\u884c\u7684\u611f\u5b98\u65e5\u5e38\u65b9\u6848\u3002",
+      collections: [
+        { title: "\u5fc3\u667a\u8207\u60c5\u7dd2", text: "\u5c08\u6ce8\u3001\u5b89\u5b9a\u8207\u65e5\u5e38\u6e05\u6670\u611f\u3002", image: "science-platform-2.jpg" },
+        { title: "\u7761\u7720\u8207\u58d3\u529b", text: "\u70ba\u591c\u9593\u5e73\u8861\u8a2d\u8a08\u7684\u6062\u5fa9\u5100\u5f0f\u3002", image: "customized-banner.jpg" },
+        { title: "\u808c\u819a\u8207\u8001\u5316", text: "\u652f\u6301\u5167\u5728\u7f8e\u8207\u5065\u5eb7\u8001\u5316\u3002", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u8a8d\u77e5\u8f2a\u5ed3", text: "\u652f\u6301\u65e5\u9593\u6e05\u6670\u5ea6\u3001\u80fd\u91cf\u8207\u6709\u6548\u7bc0\u594f\u7684\u8def\u5f91\u3002", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u6062\u5fa9\u8f2a\u5ed3", text: "\u4ee5\u8212\u7de9\u9999\u6c23\u8207\u751f\u6d3b\u7fd2\u6163\u652f\u6301\u591c\u9593\u6062\u5fa9\u3002", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u7f8e\u5bb9\u8f2a\u5ed3", text: "\u9762\u5411\u5149\u91c7\u3001\u81ea\u4fe1\u8207\u808c\u819a\u97cc\u6027\u7684\u66b4\u9732\u9ad4\u8def\u5f91\u3002", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u611f\u5b98\u8f2a\u5ed3", text: "\u70ba\u65e5\u5e38\u60c5\u7dd2\u5e73\u8861\u8a2d\u8a08\u7684\u500b\u4eba\u5316\u611f\u5b98\u65c5\u7a0b\u3002", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    },
+    th: {
+      catalogTitle: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e04\u0e33\u0e41\u0e19\u0e30\u0e19\u0e33\u0e41\u0e1a\u0e1a\u0e40\u0e09\u0e1e\u0e32\u0e30\u0e1a\u0e38\u0e04\u0e04\u0e25",
+      catalogLead: "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c \u0e41\u0e25\u0e49\u0e27\u0e19\u0e33\u0e1c\u0e39\u0e49\u0e43\u0e0a\u0e49\u0e44\u0e1b\u0e2a\u0e39\u0e48\u0e23\u0e39\u0e17\u0e35\u0e19\u0e40\u0e0a\u0e34\u0e07\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e17\u0e35\u0e48\u0e19\u0e33\u0e44\u0e1b\u0e43\u0e0a\u0e49\u0e44\u0e14\u0e49\u0e08\u0e23\u0e34\u0e07",
+      collections: [
+        { title: "\u0e2a\u0e21\u0e2d\u0e07\u0e41\u0e25\u0e30\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c", text: "\u0e42\u0e1f\u0e01\u0e31\u0e2a \u0e04\u0e27\u0e32\u0e21\u0e2a\u0e07\u0e1a \u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-2.jpg" },
+        { title: "\u0e01\u0e32\u0e23\u0e19\u0e2d\u0e19\u0e41\u0e25\u0e30\u0e04\u0e27\u0e32\u0e21\u0e40\u0e04\u0e23\u0e35\u0e22\u0e14", text: "\u0e23\u0e34\u0e17\u0e31\u0e27\u0e25\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg" },
+        { title: "\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e27\u0e31\u0e22", text: "\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21\u0e08\u0e32\u0e01\u0e20\u0e32\u0e22\u0e43\u0e19\u0e41\u0e25\u0e30\u0e01\u0e32\u0e23\u0e21\u0e35\u0e2d\u0e32\u0e22\u0e38\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e2a\u0e38\u0e02\u0e20\u0e32\u0e1e", image: "science-platform-3.jpg" }
+      ],
+      recommendations: [
+        { title: "Focus Reset", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e2a\u0e21\u0e2d\u0e07", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e32\u0e07\u0e27\u0e31\u0e19\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e31\u0e14\u0e40\u0e08\u0e19 \u0e1e\u0e25\u0e31\u0e07\u0e07\u0e32\u0e19 \u0e41\u0e25\u0e30\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e30\u0e01\u0e32\u0e23\u0e17\u0e33\u0e07\u0e32\u0e19", image: "science-platform-2.jpg", tags: ["Focus", "Energy", "Mood"] },
+        { title: "Sleep Ritual", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1f\u0e37\u0e49\u0e19\u0e15\u0e31\u0e27", text: "\u0e23\u0e39\u0e17\u0e35\u0e19\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e44\u0e25\u0e1f\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\u0e17\u0e35\u0e48\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e1c\u0e48\u0e2d\u0e19\u0e04\u0e25\u0e32\u0e22\u0e43\u0e19\u0e0a\u0e48\u0e27\u0e07\u0e04\u0e48\u0e33", image: "customized-banner.jpg", tags: ["Sleep", "Calm", "Stress"] },
+        { title: "Skin Longevity", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e04\u0e27\u0e32\u0e21\u0e07\u0e32\u0e21", text: "\u0e41\u0e19\u0e27\u0e17\u0e32\u0e07\u0e1c\u0e34\u0e27\u0e41\u0e25\u0e30\u0e41\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e42\u0e1e\u0e42\u0e0b\u0e21\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e1c\u0e34\u0e27\u0e14\u0e39\u0e14\u0e35 \u0e21\u0e31\u0e48\u0e19\u0e43\u0e08 \u0e41\u0e25\u0e30\u0e22\u0e37\u0e14\u0e2b\u0e22\u0e38\u0e48\u0e19", image: "science-platform-3.jpg", tags: ["Skin", "Aging", "Glow"] },
+        { title: "Scented Balance", type: "\u0e42\u0e1b\u0e23\u0e44\u0e1f\u0e25\u0e4c\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a", text: "\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e01\u0e25\u0e34\u0e48\u0e19\u0e41\u0e25\u0e30\u0e1b\u0e23\u0e30\u0e2a\u0e32\u0e17\u0e2a\u0e31\u0e21\u0e1c\u0e31\u0e2a\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e2a\u0e21\u0e14\u0e38\u0e25\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c\u0e43\u0e19\u0e41\u0e15\u0e48\u0e25\u0e30\u0e27\u0e31\u0e19", image: "science-platform-5.jpg", tags: ["Scent", "Balance", "Daily"] }
+      ]
+    }
+  };
+
+  function customizedCatalogContent(lang) {
+    return customizedShowcase[lang] || customizedShowcase.en;
+  }
+
+  const platformShowcase = {
+    en: {
+      kicker: "View our platform modules",
+      title: "OUR PLATFORM",
+      lead: "Explore science-led modules that can become service pages, consultation tools and member journeys.",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    ja: {
+      kicker: "\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u30e2\u30b8\u30e5\u30fc\u30eb",
+      title: "OUR PLATFORM",
+      lead: "\u30b5\u30fc\u30d3\u30b9\u30da\u30fc\u30b8\u3001\u76f8\u8ac7\u30c4\u30fc\u30eb\u3001\u4f1a\u54e1\u30b8\u30e3\u30fc\u30cb\u30fc\u306b\u5c55\u958b\u3067\u304d\u308b\u79d1\u5b66\u30d9\u30fc\u30b9\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3002",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    zh: {
+      kicker: "\u67e5\u770b\u5e73\u53f0\u6a21\u7d44",
+      title: "OUR PLATFORM",
+      lead: "探索可延伸為服務頁、諮詢工具與會員旅程的科學導向模組。",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    },
+    th: {
+      kicker: "\u0e14\u0e39\u0e42\u0e21\u0e14\u0e39\u0e25\u0e43\u0e19 Platform",
+      title: "OUR PLATFORM",
+      lead: "\u0e2a\u0e33\u0e23\u0e27\u0e08\u0e42\u0e21\u0e14\u0e39\u0e25\u0e40\u0e0a\u0e34\u0e07\u0e27\u0e34\u0e17\u0e22\u0e32\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c\u0e17\u0e35\u0e48\u0e15\u0e48\u0e2d\u0e22\u0e2d\u0e14\u0e40\u0e1b\u0e47\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 \u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e21\u0e37\u0e2d\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e1b\u0e23\u0e36\u0e01\u0e29\u0e32 \u0e41\u0e25\u0e30\u0e40\u0e2a\u0e49\u0e19\u0e17\u0e32\u0e07\u0e2a\u0e21\u0e32\u0e0a\u0e34\u0e01\u0e44\u0e14\u0e49",
+      items: [
+        { title: "Neuro-Scented Therapy", image: "card-scented.jpg" },
+        { title: "Skin Barrier", image: "science-platform-3.jpg" },
+        { title: "Skin Sensitive", image: "customized-banner.jpg" },
+        { title: "Skin Anti-Aging", image: "card-aging.jpg" },
+        { title: "Skin Whitening / Brightening", image: "science-platform-1.jpg" },
+        { title: "Hair Follicle Miniaturization / Hair Loss", image: "science-platform-4.jpg" },
+        { title: "Gray Hair Loss", image: "science-platform-5.jpg" }
+      ]
+    }
+  };
+
+  function platformSliderContent(lang) {
+    return platformShowcase[lang] || platformShowcase.en;
+  }
+
+  function pageWithAppliedSolutions(page, lang) {
+    const solution = appliedSolutionContent(lang);
+    return {
+      ...page,
+      stats: page.stats?.map((stat, index) => index === 0 ? { ...stat, value: "4" } : stat) || [],
+      cardsTitle: solution.cardsTitle,
+      cardsLead: solution.cardsLead,
+      cards: solution.items
+    };
+  }
 
   function asset(name) {
     return new URL(`${root}assets/images/${name}`, document.baseURI).href;
@@ -1260,22 +1513,35 @@
     `;
   }
 
-  function renderHome(text) {
+  function renderHome(text, lang) {
     const home = text.home;
+    const platform = sciencePlatform[lang] || sciencePlatform.en;
+    const heroSlides = ["hero-bn5.jpg"];
+    const heroSlideLayers = heroSlides
+      .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
+      .join("");
+    const heroDots = heroSlides.length > 1 ? heroSlides
+      .map((_, index) => `<button class="${index === 0 ? "is-active" : ""}" data-hero-dot="${index}" type="button" aria-label="${text.common.slide || "Slide"} ${index + 1}"></button>`)
+      .join("") : "";
     const homePageSections = routes
       .filter((route) => route.nav)
-      .map((route, index) => renderHomePageSection(text, route.id, index))
+      .map((route, index) => renderHomePageSection(text, route.id, index, lang))
       .join("");
 
-    const conceptItems = home.concept.items.map((item, index) => `
-      <article class="concept-item">
-        <span class="orb-icon" aria-hidden="true">${icons[index === 2 ? "user" : "atom"]}</span>
-        <div>
-          <h3>${item.title}</h3>
-          <p>${item.text}</p>
-        </div>
-      </article>
-    `).join("");
+    const sciencePlatformLinks = {
+      "science-platform-exposome.jpg": "pages/exposome.html",
+      "science-platform-human-longevity-aging.jpg": "pages/human-longevity-aging.html"
+    };
+    const conceptItems = platform.items.map((item) => {
+      const href = item.href || sciencePlatformLinks[item.image] || "";
+      const tag = href ? "a" : "article";
+      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title}"` : "";
+      return `
+      <${tag} class="concept-item" style="--concept-card-image:url('${asset(item.image)}')"${linkAttrs}>
+        <h3>${item.title}</h3>
+      </${tag}>
+    `;
+    }).join("");
 
     const researchCards = home.research.cards.map((card, index) => `
       <article class="science-card">
@@ -1289,32 +1555,147 @@
       </article>
     `).join("");
 
+    const wellbeingIcons = {
+      leaf: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 39V18"/><path d="M24 29c-7.2-1.2-12.4-5.9-14-13.1 7.8-1.2 13.3 2.5 14 10"/><path d="M25 25c7.5-.8 12.1-5.4 13.1-13-7.4-.9-12.8 2.4-14 9"/></svg>`,
+      eye: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M5.5 24s6.9-11 18.5-11 18.5 11 18.5 11S35.6 35 24 35 5.5 24 5.5 24Z"/><circle cx="24" cy="24" r="6.5"/></svg>`,
+      network: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="16" r="4"/><circle cx="35" cy="12" r="4"/><circle cx="36" cy="34" r="4"/><circle cx="15" cy="35" r="4"/><circle cx="24" cy="24" r="4"/><path d="m15.5 17.4 5 4.4M28 21l4.6-6.1M27.8 26.5l5.1 5M20.9 27.1l-3.6 4.8"/></svg>`,
+      heartPulse: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 25c-4-8 6.5-15.2 16-6.6C33.5 9.8 44 17 40 25c-2.7 5.8-10.6 11.4-16 15-5.4-3.6-13.3-9.2-16-15Z"/><path d="M12 26h7l3-6 4.5 11 3-5H36"/></svg>`,
+      brain: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 39c-5.2 0-9.5-4.1-9.5-9.2 0-2.6 1.1-5 3-6.6-.8-6 3.3-11.2 9.4-11.2 1.4-3.2 4.6-5.5 8.5-5.5 5.3 0 9.5 4.2 9.5 9.4 3.2 1.7 5.1 5.1 5.1 8.8 0 5.5-4.3 10-9.8 10H31"/><path d="M22 38V12M22 19c-3.8 0-6.3 2.3-6.8 5.5M22 28c-3.2 0-5.6 1.9-6.4 4.7M28 14c3.5.5 5.9 3.1 6.2 6.4M28 27c3.6 0 6.1 2.3 6.5 5.5"/></svg>`,
+      heart: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 25c-4-8 6.5-15.2 16-6.6C33.5 9.8 44 17 40 25c-2.7 5.8-10.6 11.4-16 15-5.4-3.6-13.3-9.2-16-15Z"/></svg>`,
+      smile: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M17 28c2 3.2 4.4 4.7 7 4.7s5-1.5 7-4.7"/><path d="M17.5 20.5h.1M30.5 20.5h.1"/></svg>`,
+      walk: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="25" cy="8" r="4"/><path d="M23 15v11l-7 14M25 26l8 14M23 17l-7 8M25 17l8 7"/></svg>`,
+      lotus: `<svg class="wellbeing-icon-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36c-6.8-5.1-8.5-12.1 0-22 8.5 9.9 6.8 16.9 0 22Z"/><path d="M24 36c-8.4-.2-14.4-4.9-16-14 8.3-.4 13.4 3.6 16 14Z"/><path d="M24 36c8.4-.2 14.4-4.9 16-14-8.3-.4-13.4 3.6-16 14Z"/><path d="M9 38h30"/></svg>`
+    };
+
+    const wellbeingCards = [
+      {
+        number: "01",
+        title: "Environment",
+        text: "All experiences begin in the physical, social and cultural environment.",
+        color: "#4f8a35",
+        icon: "leaf"
+      },
+      {
+        number: "02",
+        title: "Exteroception",
+        text: "Our senses detect external stimuli from the environment.",
+        color: "#0f9b8f",
+        icon: "eye"
+      },
+      {
+        number: "03",
+        title: "Synesthetic Integration",
+        text: "Information from multiple senses is integrated into unified perception.",
+        color: "#10a7a0",
+        icon: "network"
+      },
+      {
+        number: "04",
+        title: "Interoceptive Modulation",
+        text: "Internal signals are monitored and dynamically regulated.",
+        color: "#176fb5",
+        icon: "heartPulse"
+      },
+      {
+        number: "05",
+        title: "Body-Brain Synergy",
+        text: "The body and brain communicate bidirectionally to maintain balance and adaptability.",
+        color: "#7250b8",
+        icon: "brain"
+      },
+      {
+        number: "06",
+        title: "Feeling",
+        text: "Integrated signals give rise to subjective feelings and states.",
+        color: "#c03c87",
+        icon: "heart"
+      },
+      {
+        number: "07",
+        title: "Emotion",
+        text: "Feelings are amplified and organized into emotional experiences.",
+        color: "#e0526a",
+        icon: "smile"
+      },
+      {
+        number: "08",
+        title: "Behavior",
+        text: "Emotions influence decisions, actions and lifestyle choices.",
+        color: "#e56a18",
+        icon: "walk"
+      },
+      {
+        number: "09",
+        title: "Health • Beauty • Wellbeing",
+        text: "Sustained patterns of behavior shape long-term health, beauty and wellbeing.",
+        color: "#bd8a18",
+        title: "Health &bull; Beauty &bull; Wellbeing",
+        icon: "lotus"
+      }
+    ].map((card, index) => `
+      <article class="wellbeing-card" style="--cascade-color:${card.color};--cascade-index:${index}">
+        <div class="wellbeing-node" aria-hidden="true">${wellbeingIcons[card.icon] || wellbeingIcons.leaf}</div>
+        <div class="wellbeing-card-panel">
+          <span class="wellbeing-number">${card.number}</span>
+          <span class="wellbeing-divider" aria-hidden="true"></span>
+          <div class="wellbeing-card-body">
+            <h3>${card.title}</h3>
+            <p>${card.text}</p>
+          </div>
+        </div>
+      </article>
+    `).join("");
+
     return `
       <main id="main">
-        <section class="hero" style="--hero-image:url('${asset("home-banner-v3.png")}')">
+        <section class="hero hero-slideshow">
+          <div class="hero-slides" aria-hidden="true">${heroSlideLayers}</div>
           <div class="section-shell">
             <div class="hero-content">
-              <p class="eyebrow">${home.hero.eyebrow}</p>
+              ${home.hero.eyebrow ? `<p class="eyebrow">${home.hero.eyebrow}</p>` : ""}
               <h1 class="hero-title">${home.hero.title}</h1>
               <h2 class="lead">${home.hero.lead}</h2>
               <div class="button-row">
                 <a class="ghost-button" href="${routeHref("insights")}">${home.hero.primary} ${icons.arrow}</a>
                 <a class="pill-button" href="${routeHref("customized")}">${home.hero.secondary} ${icons.arrow}</a>
               </div>
-              <div class="slider-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              ${heroDots ? `<div class="slider-dots" aria-label="${text.common.slideControls || "Hero slides"}">${heroDots}</div>` : ""}
             </div>
           </div>
           <div class="hero-tags" aria-label="Research themes">
             ${home.hero.tags.map((tag) => `<span>${tag}</span>`).join("")}
           </div>
+          ${heroSlides.length > 1 ? `<div class="hero-slide-controls" aria-label="${text.common.slideControls || "Hero slides"}">
+            <button class="hero-slide-button" data-hero-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
+            <button class="hero-slide-button" data-hero-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
+          </div>` : ""}
+        </section>
+
+        <section class="frontiers-banner" aria-labelledby="frontiers-title">
+          <div class="section-shell">
+            <div class="frontiers-copy">
+              <h2 class="frontiers-title" id="frontiers-title">Exploring the Frontiers<br>of Human Experience</h2>
+              <p>Health, beauty and wellbeing emerge from the continuous interaction of biology, environment, lifestyle and sensory perception. Understanding these interconnected systems is key to understanding how people feel, adapt and thrive.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellbeing-cascade section-pad" aria-labelledby="wellbeing-title">
+          <div class="section-shell wellbeing-layout">
+            <div class="wellbeing-intro">
+              <div class="wellbeing-feedback">
+                <strong>Feedback<br>Loop</strong>
+                <span>Sustained wellbeing outcomes continuously influence and strengthen each stage of the human experience cascade.</span>
+              </div>
+              <h2 class="wellbeing-title" id="wellbeing-title">The Biology of Human Experience</h2>
+              <p>A continuous biological cascade that transforms environmental experiences into wellbeing outcomes.</p>
+            </div>
+            <div class="wellbeing-flow" aria-label="The biology of human experience">${wellbeingCards}</div>
+          </div>
         </section>
 
         <section class="concept section-pad" style="--concept-image:none">
           <div class="section-shell">
-            <div class="center-head">
-              <h2>${home.concept.title}</h2>
-              <p class="lead">${home.concept.lead}</p>
-            </div>
             <div class="concept-grid">${conceptItems}</div>
           </div>
         </section>
@@ -1329,28 +1710,8 @@
           </div>
         </section>
 
-        <section class="split-showcase">
-          ${renderShowcasePanel(home.applied, "applied", "solutions-neuron.jpg", false)}
+        <section class="split-showcase products-only">
           ${renderShowcasePanel(home.products, "products", "products-lab.jpg", true)}
-        </section>
-
-        <section class="personalized-band section-pad" style="--profile-image:url('${asset("personalized-profile.jpg")}')">
-          <div class="section-shell cta-row">
-            <div>
-              <h2>${home.personal.title}</h2>
-              <p class="lead">${home.personal.lead}</p>
-              <div class="journey">
-                ${home.personal.steps.map((step, index) => `
-                  <div class="journey-step">
-                    <span class="orb-icon" aria-hidden="true">${icons[index === 1 ? "brain" : index === 2 ? "bottle" : "chart"]}</span>
-                    <p>${step}</p>
-                  </div>
-                  ${index < home.personal.steps.length - 1 ? '<span class="journey-line" aria-hidden="true"></span>' : ""}
-                `).join("")}
-              </div>
-            </div>
-            <a class="pill-button" href="${routeHref("customized")}">${home.personal.button} ${icons.arrow}</a>
-          </div>
         </section>
 
         ${homePageSections}
@@ -1358,21 +1719,128 @@
     `;
   }
 
-  function renderHomePageSection(text, id, index) {
-    const page = text.pages[id] || copy.en.pages[id];
-    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
-    const cards = page.cards.map((card) => `
+  function renderContentCard(card, text) {
+    if (card.image) {
+      return `
+        <article class="content-card image-content-card" style="--card-image:url('${asset(card.image)}')">
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+          <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
+        </article>
+      `;
+    }
+
+    return `
       <article class="content-card">
         <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
         <h3>${card.title}</h3>
         <p>${card.text}</p>
         <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
       </article>
-    `).join("");
+    `;
+  }
+
+  function renderCustomizedLayout(text, page, lang) {
+    const showcase = customizedCatalogContent(lang);
 
     return `
-      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
-        <div class="section-shell">
+      <div class="customized-layout">
+        <div class="customized-top-grid">
+          ${showcase.collections.map((item) => `
+            <article class="customized-feature-tile" style="--custom-image:url('${asset(item.image)}')">
+              <div>
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+
+        <div class="customized-catalog-head">
+          <p class="eyebrow">${page.eyebrow}</p>
+          <h2>${showcase.catalogTitle}</h2>
+          <p class="lead">${showcase.catalogLead}</p>
+        </div>
+
+        <div class="customized-product-grid">
+          ${showcase.recommendations.map((item) => `
+            <article class="customized-product-card">
+              <span class="customized-badge">${item.type}</span>
+              <div class="customized-product-media" style="--custom-product-image:url('${asset(item.image)}')" role="img" aria-label="${item.title}"></div>
+              <div class="customized-product-body">
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+                <div class="customized-swatches" aria-label="${item.title}">
+                  ${item.tags.map((tag, index) => `<span class="customized-swatch swatch-${index + 1}" title="${tag}"></span>`).join("")}
+                </div>
+                <a class="customized-action" href="${routeHref("contact")}">${text.common.learnMore}</a>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPlatformSlider(text, page, lang) {
+    const platform = platformSliderContent(lang);
+
+    return `
+      <div class="platform-showcase">
+        <div class="platform-showcase-head">
+          <div>
+            <p class="eyebrow">${page.eyebrow}</p>
+            <h2>${platform.kicker}</h2>
+          </div>
+          <p>${platform.lead}</p>
+        </div>
+
+        <div class="platform-slider" data-platform-slider>
+          <div class="platform-slider-intro">
+            <p>${page.lead}</p>
+            <h2>${platform.title}</h2>
+          </div>
+          <div class="platform-card-track" data-platform-track tabindex="0" aria-label="${platform.title}">
+            ${platform.items.map((item, index) => `
+              <article class="platform-slide-card${index === 2 ? " is-active" : ""}" data-platform-card style="--platform-card-image:url('${asset(item.image)}')">
+                <span>${String(index + 1).padStart(2, "0")}</span>
+                <h3>${item.title}</h3>
+              </article>
+            `).join("")}
+          </div>
+          <div class="platform-slider-controls" aria-label="${platform.title}">
+            <button class="platform-slider-button" data-platform-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
+            <button class="platform-slider-button" data-platform-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderHomePageSection(text, id, index, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
+    const sectionClass = index % 2 === 0 ? "light-section" : "dark-band";
+    if (id === "customized") {
+      return `
+        <section class="home-page-section ${sectionClass} customized-section section-pad" id="${id}">
+          <div class="section-shell">
+            ${renderCustomizedLayout(text, page, lang)}
+          </div>
+        </section>
+      `;
+    }
+    if (id === "platform") {
+      return `
+        <section class="home-page-section platform-section section-pad" id="${id}">
+          <div class="section-shell">
+            ${renderPlatformSlider(text, page, lang)}
+          </div>
+        </section>
+      `;
+    }
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
+    const sectionHead = id === "applied" ? "" : `
           <div class="home-section-head">
             <div>
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1388,13 +1856,8 @@
               `).join("")}
             </div>
           </div>
-
-          <div class="center-head">
-            <h2>${page.cardsTitle}</h2>
-            <p class="lead">${page.cardsLead}</p>
-          </div>
-          <div class="card-grid">${cards}</div>
-
+    `;
+    const sectionExtras = id === "applied" ? "" : `
           <div class="home-section-feature">
             <div class="feature-panel">
               <p class="eyebrow">${page.eyebrow}</p>
@@ -1421,69 +1884,60 @@
             </div>
             <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
           </div>
+    `;
+
+    return `
+      <section class="home-page-section ${sectionClass} section-pad" id="${id}">
+        <div class="section-shell">
+          ${sectionHead}
+
+          <div class="center-head">
+            <h2>${page.cardsTitle}</h2>
+            <p class="lead">${page.cardsLead}</p>
+          </div>
+          <div class="card-grid${id === "applied" ? " solution-card-grid" : ""}">${cards}</div>
+
+          ${sectionExtras}
         </div>
       </section>
     `;
   }
 
   function renderShowcasePanel(section, routeId, image, isProducts) {
+    const cardGrid = section.cards ? `
+      <div class="showcase-card-grid">
+        ${section.cards.map((card) => `
+          <article class="showcase-mini-card" style="--card-image:url('${asset(card.image)}')">
+            <h3>${card.title}</h3>
+          </article>
+        `).join("")}
+      </div>
+    ` : `
+      <ul class="check-list">
+        ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
+      </ul>
+    `;
+
     return `
       <article class="showcase-panel${isProducts ? " products" : ""}" style="--panel-image:url('${asset(image)}')">
         <div>
           <h2>${section.title}</h2>
           <p class="lead">${section.lead}</p>
-          <ul class="check-list">
-            ${section.items.map((item) => `<li><span class="tiny-icon" aria-hidden="true">${icons.leaf}</span>${item}</li>`).join("")}
-          </ul>
+          ${cardGrid}
           <a class="pill-button" href="${routeHref(routeId)}">${section.button} ${icons.arrow}</a>
         </div>
       </article>
     `;
   }
 
-  function renderGenericPage(text, id) {
-    const page = text.pages[id] || copy.en.pages[id];
+  function renderGenericPage(text, id, lang) {
+    const pageBase = text.pages[id] || copy.en.pages[id];
+    const page = id === "applied" ? pageWithAppliedSolutions(pageBase, lang) : pageBase;
     const useImageHero = id === "customized";
-    const cards = page.cards.map((card) => `
-      <article class="content-card">
-        <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
-        <h3>${card.title}</h3>
-        <p>${card.text}</p>
-        <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
-      </article>
-    `).join("");
-
-    return `
-      <main id="main">
-        <section class="page-hero${useImageHero ? " page-hero-image" : ""}"${useImageHero ? ` style="--page-hero-image:url('${asset(page.image)}')"` : ""}>
-          <div class="section-shell page-hero-grid${useImageHero ? " page-hero-grid-wide" : ""}">
-            <div>
-              <p class="eyebrow">${page.eyebrow}</p>
-              <h1>${page.title}</h1>
-              <p class="lead">${page.lead}</p>
-              <div class="stat-row">
-                ${page.stats.map((stat) => `
-                  <div class="stat-card">
-                    <strong>${stat.value}</strong>
-                    <span>${stat.label}</span>
-                  </div>
-                `).join("")}
-              </div>
-            </div>
-            ${useImageHero ? "" : `<div class="page-media" style="--page-image:url('${asset(page.image)}')" role="img" aria-label="${page.title}"></div>`}
-          </div>
-        </section>
-
-        <section class="light-section section-pad">
-          <div class="section-shell">
-            <div class="center-head">
-              <h2>${page.cardsTitle}</h2>
-              <p class="lead">${page.cardsLead}</p>
-            </div>
-            <div class="card-grid">${cards}</div>
-          </div>
-        </section>
-
+    const useCustomizedLayout = id === "customized";
+    const usePlatformLayout = id === "platform";
+    const cards = page.cards.map((card) => renderContentCard(card, text)).join("");
+    const pageExtras = id === "applied" || useCustomizedLayout || usePlatformLayout ? "" : `
         <section class="dark-band section-pad">
           <div class="section-shell two-column">
             <div class="feature-panel">
@@ -1515,6 +1969,42 @@
             <a class="dark-button" href="${routeHref("contact")}">${text.nav.contact} ${icons.arrow}</a>
           </div>
         </section>
+    `;
+
+    return `
+      <main id="main">
+        <section class="page-hero${useImageHero ? " page-hero-image" : ""}"${useImageHero ? ` style="--page-hero-image:url('${asset(page.image)}')"` : ""}>
+          <div class="section-shell page-hero-grid${useImageHero ? " page-hero-grid-wide" : ""}">
+            <div>
+              <p class="eyebrow">${page.eyebrow}</p>
+              <h1>${page.title}</h1>
+              <p class="lead">${page.lead}</p>
+              <div class="stat-row">
+                ${page.stats.map((stat) => `
+                  <div class="stat-card">
+                    <strong>${stat.value}</strong>
+                    <span>${stat.label}</span>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+            ${useImageHero ? "" : `<div class="page-media" style="--page-image:url('${asset(page.image)}')" role="img" aria-label="${page.title}"></div>`}
+          </div>
+        </section>
+
+        <section class="${usePlatformLayout ? "platform-section" : "light-section"} section-pad">
+          <div class="section-shell">
+            ${useCustomizedLayout ? renderCustomizedLayout(text, page, lang) : usePlatformLayout ? renderPlatformSlider(text, page, lang) : `
+              <div class="center-head">
+                <h2>${page.cardsTitle}</h2>
+                <p class="lead">${page.cardsLead}</p>
+              </div>
+              <div class="card-grid">${cards}</div>
+            `}
+          </div>
+        </section>
+
+        ${pageExtras}
       </main>
     `;
   }
@@ -1682,10 +2172,122 @@
       : `<p>${text.common.searchEmpty}</p>`;
   }
 
-  function renderPage(text) {
-    if (pageId === "home") return renderHome(text);
+  function setupHeroSlideshow() {
+    if (heroSlideTimer) {
+      window.clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+    }
+
+    const slides = Array.from(document.querySelectorAll(".hero-slide"));
+    const dots = Array.from(document.querySelectorAll("[data-hero-dot]"));
+    const controls = Array.from(document.querySelectorAll("[data-hero-control]"));
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (slides.length <= 1) return;
+
+    let current = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+    const showSlide = (next) => {
+      next = (next + slides.length) % slides.length;
+      if (next === current) return;
+      slides[current]?.classList.remove("is-active");
+      dots[current]?.classList.remove("is-active");
+      current = next;
+      slides[current]?.classList.add("is-active");
+      dots[current]?.classList.add("is-active");
+    };
+
+    const startTimer = () => {
+      if (reduceMotion) return;
+      heroSlideTimer = window.setInterval(() => showSlide(current + 1), 15000);
+    };
+
+    const restartTimer = () => {
+      if (heroSlideTimer) window.clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+      startTimer();
+    };
+
+    controls.forEach((button) => {
+      button.addEventListener("click", () => {
+        showSlide(button.dataset.heroControl === "prev" ? current - 1 : current + 1);
+        restartTimer();
+      });
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        showSlide(Number(dot.dataset.heroDot));
+        restartTimer();
+      });
+    });
+
+    startTimer();
+  }
+
+  function setupPlatformSliders() {
+    document.querySelectorAll("[data-platform-slider]").forEach((slider) => {
+      const track = slider.querySelector("[data-platform-track]");
+      const controls = slider.querySelectorAll("[data-platform-control]");
+      const cards = Array.from(slider.querySelectorAll("[data-platform-card]"));
+      if (!track || !controls.length || !cards.length) return;
+
+      const centerCard = (card, behavior = "smooth") => {
+        const left = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
+        track.scrollTo({ left, behavior });
+      };
+
+      const updateActiveCard = () => {
+        const trackRect = track.getBoundingClientRect();
+        const center = trackRect.left + trackRect.width / 2;
+        let closest = cards[0];
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        cards.forEach((card) => {
+          const rect = card.getBoundingClientRect();
+          const cardCenter = rect.left + rect.width / 2;
+          const distance = Math.abs(center - cardCenter);
+          if (distance < closestDistance) {
+            closest = card;
+            closestDistance = distance;
+          }
+        });
+
+        cards.forEach((card) => card.classList.toggle("is-active", card === closest));
+      };
+
+      controls.forEach((button) => {
+        button.addEventListener("click", () => {
+          const activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains("is-active")));
+          const direction = button.dataset.platformControl === "prev" ? -1 : 1;
+          const nextIndex = Math.min(cards.length - 1, Math.max(0, activeIndex + direction));
+          centerCard(cards[nextIndex]);
+        });
+      });
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => centerCard(card));
+      });
+
+      let ticking = false;
+      track.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          updateActiveCard();
+          ticking = false;
+        });
+      }, { passive: true });
+
+      window.requestAnimationFrame(() => {
+        centerCard(cards.find((card) => card.classList.contains("is-active")) || cards[0], "auto");
+        updateActiveCard();
+      });
+    });
+  }
+
+  function renderPage(text, lang) {
+    if (pageId === "home") return renderHome(text, lang);
     if (pageId === "contact") return renderContact(text);
-    return renderGenericPage(text, pageId);
+    return renderGenericPage(text, pageId, lang);
   }
 
   function setLanguage(lang) {
@@ -1751,8 +2353,10 @@
     const text = copy[lang] || copy.th;
     document.documentElement.lang = languageMeta[lang]?.htmlLang || "th";
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
-    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text)}${renderFooter(text)}${renderSearch(text)}`;
+    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
+    setupHeroSlideshow();
+    setupPlatformSliders();
     scrollToCurrentHash();
   }
 
