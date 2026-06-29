@@ -1,0 +1,14 @@
+{
+  "name": "arotec-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arotec static website served for Render Web Service deployment.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
