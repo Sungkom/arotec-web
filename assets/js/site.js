@@ -4,6 +4,9 @@
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
   let heroSlideTimer = null;
+  let heroParallaxCleanup = null;
+  let sectionRevealCleanup = null;
+  let scrollStoryCleanup = null;
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
@@ -1518,7 +1521,7 @@
     const platform = sciencePlatform[lang] || sciencePlatform.en;
     const heroSlides = ["hero-bn5.jpg"];
     const heroSlideLayers = heroSlides
-      .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
+      .map((image, index) => `<span class="hero-slide${index === 0 ? " is-active" : ""}" data-hero-layer style="background-image:url('${asset(image)}')" aria-hidden="true"></span>`)
       .join("");
     const heroDots = heroSlides.length > 1 ? heroSlides
       .map((_, index) => `<button class="${index === 0 ? "is-active" : ""}" data-hero-dot="${index}" type="button" aria-label="${text.common.slide || "Slide"} ${index + 1}"></button>`)
@@ -1648,10 +1651,15 @@
 
     return `
       <main id="main">
-        <section class="hero hero-slideshow">
+        <section class="hero hero-slideshow" data-hero-scene>
           <div class="hero-slides" aria-hidden="true">${heroSlideLayers}</div>
+          <div class="hero-ambient" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="section-shell">
-            <div class="hero-content">
+            <div class="hero-content" data-hero-content>
               ${home.hero.eyebrow ? `<p class="eyebrow">${home.hero.eyebrow}</p>` : ""}
               <h1 class="hero-title">${home.hero.title}</h1>
               <h2 class="lead">${home.hero.lead}</h2>
@@ -1669,6 +1677,7 @@
             <button class="hero-slide-button" data-hero-control="prev" type="button" title="${text.common.previousSlide || "Previous slide"}" aria-label="${text.common.previousSlide || "Previous slide"}">${icons.arrowLeft}</button>
             <button class="hero-slide-button" data-hero-control="next" type="button" title="${text.common.nextSlide || "Next slide"}" aria-label="${text.common.nextSlide || "Next slide"}">${icons.arrow}</button>
           </div>` : ""}
+          <div class="hero-scroll-progress" aria-hidden="true"><span data-hero-progress></span></div>
         </section>
 
         <section class="frontiers-banner" aria-labelledby="frontiers-title">
@@ -2223,6 +2232,65 @@
     startTimer();
   }
 
+  function setupHeroParallax() {
+    if (heroParallaxCleanup) {
+      heroParallaxCleanup();
+      heroParallaxCleanup = null;
+    }
+
+    const hero = document.querySelector("[data-hero-scene]");
+    if (!hero) return;
+
+    const progressBar = hero.querySelector("[data-hero-progress]");
+    const reduceMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    let frame = 0;
+
+    const setHeroVars = (progress, leaving) => {
+      hero.style.setProperty("--hero-scroll", progress.toFixed(4));
+      hero.style.setProperty("--hero-leaving", leaving.toFixed(4));
+      hero.style.setProperty("--hero-bg-y", `${(progress * 56).toFixed(2)}px`);
+      hero.style.setProperty("--hero-bg-scale", (1 + progress * 0.055).toFixed(4));
+      hero.style.setProperty("--hero-copy-y", `${(-leaving * 42).toFixed(2)}px`);
+      hero.style.setProperty("--hero-tags-y", `${(leaving * 28).toFixed(2)}px`);
+      hero.style.setProperty("--hero-content-opacity", (1 - leaving * 0.18).toFixed(4));
+      hero.style.setProperty("--hero-ambient-opacity", (0.58 - leaving * 0.22).toFixed(4));
+      if (progressBar) progressBar.style.transform = `scaleX(${leaving.toFixed(4)})`;
+    };
+
+    const update = () => {
+      frame = 0;
+      if (reduceMotionQuery?.matches) {
+        setHeroVars(0, 0);
+        return;
+      }
+
+      const rect = hero.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+      const progress = Math.min(1, Math.max(0, (viewportHeight - rect.top) / (rect.height + viewportHeight)));
+      const leaving = Math.min(1, Math.max(0, -rect.top / Math.max(1, rect.height * 0.72)));
+      setHeroVars(progress, leaving);
+    };
+
+    const requestUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    const handleMotionChange = () => update();
+
+    update();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    reduceMotionQuery?.addEventListener?.("change", handleMotionChange);
+
+    heroParallaxCleanup = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      reduceMotionQuery?.removeEventListener?.("change", handleMotionChange);
+    };
+  }
+
   function setupPlatformSliders() {
     document.querySelectorAll("[data-platform-slider]").forEach((slider) => {
       const track = slider.querySelector("[data-platform-track]");
@@ -2282,6 +2350,241 @@
         updateActiveCard();
       });
     });
+  }
+
+  function setupSectionReveals() {
+    if (sectionRevealCleanup) {
+      sectionRevealCleanup();
+      sectionRevealCleanup = null;
+    }
+
+    const selectors = [
+      "main > section:not(.hero)",
+      ".center-head",
+      ".home-section-head",
+      ".home-section-feature",
+      ".home-section-cta",
+      ".frontiers-copy",
+      ".wellbeing-intro",
+      ".wellbeing-card",
+      ".concept-item",
+      ".science-card",
+      ".content-card",
+      ".product-card",
+      ".article-card",
+      ".stat-card",
+      ".showcase-panel",
+      ".showcase-mini-card",
+      ".customized-feature-tile",
+      ".customized-product-card",
+      ".platform-showcase-head",
+      ".platform-slider",
+      ".platform-slide-card",
+      ".feature-panel",
+      ".timeline-item",
+      ".contact-card",
+      ".form-card",
+      ".page-media",
+      ".page-hero-grid",
+      ".story-section",
+      ".story-card",
+      ".story-panel",
+      ".pillar-card",
+      ".mechanism-card",
+      ".comparison-card",
+      ".timeline-card",
+      ".outcome-card"
+    ];
+
+    const items = Array.from(document.querySelectorAll(selectors.join(",")))
+      .filter((element, index, list) => element && !element.closest(".search-modal") && list.indexOf(element) === index);
+
+    if (!items.length) return;
+
+    body.classList.add("js-reveal-ready");
+
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    items.forEach((element, index) => {
+      element.classList.add("scroll-reveal");
+      element.style.setProperty("--reveal-index", String(index % 8));
+      if (reduceMotion) element.classList.add("is-visible");
+    });
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      items.forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      rootMargin: "0px 0px -12% 0px",
+      threshold: 0.16
+    });
+
+    items.forEach((element) => observer.observe(element));
+    sectionRevealCleanup = () => observer.disconnect();
+  }
+
+  function setupScrollStorytelling() {
+    if (scrollStoryCleanup) {
+      scrollStoryCleanup();
+      scrollStoryCleanup = null;
+    }
+
+    const main = document.querySelector("main");
+    if (!main) return;
+
+    const sections = Array.from(main.children).filter((element) => element.matches("section"));
+    if (!sections.length) return;
+
+    const reduceMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    const reduceMotion = Boolean(reduceMotionQuery?.matches);
+    let progress = document.querySelector("[data-site-scroll-progress]");
+
+    if (!progress) {
+      progress = document.createElement("div");
+      progress.className = "site-scroll-progress";
+      progress.setAttribute("data-site-scroll-progress", "");
+      progress.setAttribute("aria-hidden", "true");
+      progress.innerHTML = "<span></span>";
+      document.body.appendChild(progress);
+    }
+
+    const progressBar = progress.querySelector("span");
+    document.documentElement.classList.add("smooth-scroll-ready");
+    body.classList.add("storytelling-ready");
+
+    const textTargets = [];
+    sections.forEach((section, index) => {
+      section.classList.add("story-section-frame");
+      section.dataset.storyIndex = String(index + 1).padStart(2, "0");
+
+      const heading = section.querySelector("h1, h2");
+      if (heading) {
+        heading.classList.add("story-heading-reveal");
+        textTargets.push(heading);
+      }
+
+      Array.from(section.querySelectorAll(".lead, .section-copy, p"))
+        .slice(0, 4)
+        .forEach((node) => {
+          node.classList.add("story-text-reveal");
+          textTargets.push(node);
+        });
+    });
+
+    const mediaTargets = Array.from(document.querySelectorAll([
+      ".hero-slide",
+      ".frontiers-banner",
+      ".concept-item",
+      ".science-image",
+      ".image-content-card",
+      ".customized-feature-tile",
+      ".customized-product-media",
+      ".platform-slide-card",
+      ".showcase-panel",
+      ".showcase-mini-card",
+      ".page-media",
+      ".page-hero-grid",
+      ".story-card",
+      ".story-panel",
+      ".pillar-card",
+      ".mechanism-card",
+      ".comparison-card",
+      ".outcome-card"
+    ].join(","))).filter((element, index, list) => list.indexOf(element) === index);
+
+    mediaTargets.forEach((element, index) => {
+      element.classList.add("story-image-reveal");
+      element.style.setProperty("--story-reveal-index", String(index % 10));
+    });
+
+    const revealTargets = Array.from(new Set([
+      ...sections,
+      ...textTargets,
+      ...mediaTargets,
+      ...Array.from(document.querySelectorAll(".timeline-item, .content-card, .science-card, .product-card, .article-card, .stat-card, .wellbeing-card"))
+    ]));
+
+    let observer = null;
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-story-visible");
+        });
+      }, {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12
+      });
+
+      revealTargets.forEach((target, index) => {
+        target.style.setProperty("--story-reveal-index", String(index % 10));
+        observer.observe(target);
+      });
+    } else {
+      revealTargets.forEach((target) => target.classList.add("is-story-visible"));
+    }
+
+    const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+    let frameId = 0;
+
+    const update = () => {
+      frameId = 0;
+
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const pageProgress = clamp(window.scrollY / maxScroll);
+      if (progressBar) progressBar.style.transform = `scaleX(${pageProgress})`;
+
+      const viewportCenter = window.innerHeight * 0.52;
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height));
+        const isCurrent = rect.top <= viewportCenter && rect.bottom >= viewportCenter;
+
+        section.style.setProperty("--story-progress", localProgress.toFixed(4));
+        section.style.setProperty("--story-shift", `${((localProgress - 0.5) * 42).toFixed(2)}px`);
+        section.style.setProperty("--story-depth", (1 + localProgress * 0.018).toFixed(4));
+        section.classList.toggle("is-story-current", isCurrent);
+      });
+
+      mediaTargets.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height));
+        element.style.setProperty("--parallax-y", `${((localProgress - 0.5) * -30).toFixed(2)}px`);
+        element.style.setProperty("--image-reveal-scale", (1.035 - localProgress * 0.024).toFixed(4));
+      });
+    };
+
+    const requestUpdate = () => {
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(update);
+    };
+
+    const handleMotionChange = () => {
+      if (reduceMotionQuery?.matches) {
+        revealTargets.forEach((target) => target.classList.add("is-story-visible"));
+      }
+      requestUpdate();
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    reduceMotionQuery?.addEventListener?.("change", handleMotionChange);
+    update();
+
+    scrollStoryCleanup = () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      reduceMotionQuery?.removeEventListener?.("change", handleMotionChange);
+      observer?.disconnect();
+    };
   }
 
   function renderPage(text, lang) {
@@ -2356,7 +2659,10 @@
     shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
     setupHeroSlideshow();
+    setupHeroParallax();
     setupPlatformSliders();
+    setupSectionReveals();
+    setupScrollStorytelling();
     scrollToCurrentHash();
   }
 

@@ -13,6 +13,24 @@
   const searchResults = document.getElementById("searchResults");
   const searchInput = document.getElementById("searchInput");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const storySections = Array.from(document.querySelectorAll("main > section"));
+  const storyMediaItems = Array.from(document.querySelectorAll([
+    ".axis-hero-visual",
+    ".image-moment-card",
+    ".sticky-panel",
+    ".axis-card",
+    ".signal-card",
+    ".component-card",
+    ".cycle-card",
+    ".formula-card",
+    ".continuum-card",
+    ".driver-card",
+    ".trajectory-visual",
+    ".domain-card",
+    ".modifiable-card",
+    ".adi-sphere",
+    ".final-flow"
+  ].join(",")));
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const searchItems = [
@@ -31,6 +49,31 @@
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
     progressBar.style.transform = `scaleX(${clamp(progress, 0, 1)})`;
+  }
+
+  function updateStoryMotion() {
+    document.documentElement.classList.add("smooth-scroll-ready");
+    body.classList.add("storytelling-ready", "story-motion-ready");
+
+    const viewportCenter = window.innerHeight * 0.52;
+    storySections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0, 1);
+      section.classList.add("story-section-frame");
+      section.dataset.storyIndex = String(index + 1).padStart(2, "0");
+      section.style.setProperty("--story-progress", localProgress.toFixed(4));
+      section.style.setProperty("--story-shift", `${((localProgress - 0.5) * 38).toFixed(2)}px`);
+      section.style.setProperty("--story-depth", (1 + localProgress * 0.016).toFixed(4));
+      section.classList.toggle("is-story-current", rect.top <= viewportCenter && rect.bottom >= viewportCenter);
+    });
+
+    storyMediaItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0, 1);
+      item.classList.add("story-image-reveal");
+      item.style.setProperty("--parallax-y", `${((localProgress - 0.5) * -28).toFixed(2)}px`);
+      item.style.setProperty("--image-reveal-scale", (1.035 - localProgress * 0.024).toFixed(4));
+    });
   }
 
   function revealImmediately() {
@@ -204,6 +247,7 @@
     ticking = true;
     window.requestAnimationFrame(() => {
       updateScrollProgress();
+      if (!reducedMotion) updateStoryMotion();
       ticking = false;
     });
   }
@@ -214,7 +258,8 @@
   setupTrajectoryControls();
   setupHeaderControls();
   updateScrollProgress();
+  updateStoryMotion();
 
   window.addEventListener("scroll", requestProgressUpdate, { passive: true });
-  window.addEventListener("resize", updateScrollProgress);
+  window.addEventListener("resize", requestProgressUpdate);
 })();
