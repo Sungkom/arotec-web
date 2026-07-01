@@ -4,8 +4,7 @@ services:
     name: arotec-web
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python render_server.py
-    healthCheckPath: /healthz
+    startCommand: python server.py
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -13,7 +12,6 @@ services:
           property: connectionString
       - key: AROTEC_ADMIN_PASSWORD
         sync: false
-
 
 databases:
   - name: arotec-members-db

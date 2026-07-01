@@ -1452,7 +1452,8 @@
   }
 
   function asset(name) {
-    return new URL(`${root}assets/images/${name}`, document.baseURI).href;
+    const optimizedName = name.replace(/\.(?:jpe?g|png)$/i, ".webp");
+    return new URL(`${root}assets/images/${optimizedName}`, document.baseURI).href;
   }
 
   function routeHref(id) {
@@ -1467,10 +1468,14 @@
     return id === pageId ? " active" : "";
   }
 
+  function activeAria(id) {
+    return id === pageId ? ' aria-current="page"' : "";
+  }
+
   function navLinks(text) {
     return routes
       .filter((route) => route.nav)
-      .map((route) => `<a class="nav-link${activeClass(route.id)}" href="${routeHref(route.id)}">${text.nav[route.id]}</a>`)
+      .map((route) => `<a class="nav-link${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}>${text.nav[route.id]}</a>`)
       .join("");
   }
 
@@ -1486,7 +1491,7 @@
       <header class="site-header">
         <div class="header-inner">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
-            <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
+            <img class="brand-logo" src="${asset("as-logo.png")}" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
           </a>
           <nav class="desktop-nav" aria-label="Primary navigation">${navLinks(text)}</nav>
           <div class="header-actions">
@@ -1501,14 +1506,14 @@
       <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
         <div class="mobile-panel-head">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
-            <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
+            <img class="brand-logo" src="${asset("as-logo.png")}" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
           </a>
           <button class="circle-button" id="menuClose" type="button" title="${text.common.closeMenu}" aria-label="${text.common.closeMenu}">${icons.close}</button>
         </div>
         <nav class="mobile-nav" aria-label="Mobile primary navigation">
-          <a class="nav-link${activeClass("home")}" href="${routeHref("home")}">${text.nav.home}</a>
+          <a class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
           ${navLinks(text)}
-          <a class="nav-link${activeClass("contact")}" href="${routeHref("contact")}">${text.nav.contact}</a>
+          <a class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
         </nav>
         <div class="mobile-language" aria-label="Language">${chips}</div>
         <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact}</a>
@@ -2087,7 +2092,7 @@
           <div class="footer-grid">
             <div class="footer-col">
               <a class="brand footer-brand" href="${routeHref("home")}" aria-label="Arotec home">
-                <img class="brand-logo" src="${asset("as-logo.png")}" alt="A&S arotec scientist">
+                <img class="brand-logo" src="${asset("as-logo.png")}" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
               </a>
             </div>
             <div class="footer-col">
@@ -2540,21 +2545,27 @@
       const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       const pageProgress = clamp(window.scrollY / maxScroll);
       if (progressBar) progressBar.style.transform = `scaleX(${pageProgress})`;
+      if (reduceMotionQuery?.matches) return;
 
       const viewportCenter = window.innerHeight * 0.52;
+      const motionRange = window.innerHeight * 1.35;
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height));
         const isCurrent = rect.top <= viewportCenter && rect.bottom >= viewportCenter;
+        section.classList.toggle("is-story-current", isCurrent);
+        if (rect.bottom < -motionRange || rect.top > window.innerHeight + motionRange) return;
+
+        const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height));
 
         section.style.setProperty("--story-progress", localProgress.toFixed(4));
         section.style.setProperty("--story-shift", `${((localProgress - 0.5) * 42).toFixed(2)}px`);
         section.style.setProperty("--story-depth", (1 + localProgress * 0.018).toFixed(4));
-        section.classList.toggle("is-story-current", isCurrent);
       });
 
       mediaTargets.forEach((element) => {
         const rect = element.getBoundingClientRect();
+        if (rect.bottom < -motionRange || rect.top > window.innerHeight + motionRange) return;
+
         const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height));
         element.style.setProperty("--parallax-y", `${((localProgress - 0.5) * -30).toFixed(2)}px`);
         element.style.setProperty("--image-reveal-scale", (1.035 - localProgress * 0.024).toFixed(4));

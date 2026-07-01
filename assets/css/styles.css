@@ -380,7 +380,7 @@ body[data-page="home"] .hero .pill-button {
   color: #123665;
   background:
     linear-gradient(90deg, rgba(246, 249, 245, 0.92) 0%, rgba(239, 245, 238, 0.72) 42%, rgba(239, 245, 238, 0.08) 74%),
-    url("../images/frontiers-experience.jpg");
+    url("../images/frontiers-experience.webp");
   background-position: center;
   background-size: cover;
 }
@@ -766,6 +766,53 @@ body[data-page="home"] .hero .pill-button {
       inset 0 1px 0 rgba(255, 255, 255, 0.92);
     transform: translateX(3px);
   }
+}
+
+/* Production performance layer */
+@supports (content-visibility: auto) {
+  main > section:not(.hero):not(.story-hero):not(.longevity-hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 820px;
+  }
+}
+
+.hero-slide,
+.frontiers-banner,
+.page-hero-image,
+.showcase-panel,
+.concept-item,
+.image-content-card,
+.customized-feature-tile,
+.customized-product-media,
+.platform-slide-card,
+.page-media,
+.science-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-slides,
+.hero-slide {
+  contain: paint;
+}
+
+.hero-slideshow,
+.page-hero-image {
+  min-height: clamp(620px, 100svh, 980px);
+}
+
+.page-media,
+.image-content-card,
+.customized-feature-tile,
+.customized-product-media,
+.platform-slide-card,
+.showcase-mini-card,
+.science-image {
+  aspect-ratio: 4 / 3;
+}
+
+.brand-logo {
+  aspect-ratio: 1092 / 680;
 }
 
 .site-header .language-select:focus-visible,
@@ -2591,7 +2638,7 @@ body.search-open .search-modal {
     min-height: auto;
     background:
       linear-gradient(180deg, rgba(246, 249, 245, 0.94) 0%, rgba(239, 245, 238, 0.78) 54%, rgba(239, 245, 238, 0.2) 100%),
-      url("../images/frontiers-experience.jpg");
+      url("../images/frontiers-experience.webp");
     background-position: 58% center;
     background-size: cover;
   }
@@ -4065,7 +4112,7 @@ main > section:not(.hero)::before {
   color: #123665;
   background:
     linear-gradient(90deg, rgba(246, 249, 245, 0.94) 0%, rgba(239, 245, 238, 0.74) 42%, rgba(239, 245, 238, 0.08) 74%),
-    url("../images/frontiers-experience.jpg");
+    url("../images/frontiers-experience.webp");
   background-position: center;
   background-size: cover;
 }

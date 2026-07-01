@@ -6,8 +6,9 @@
     <meta name="description" content="A premium scroll storytelling page explaining Exposome Science and EBII, the Exposome Biological Impact Index.">
     <title>Exposome Science | Arotec</title>
     <link rel="icon" href="../assets/images/as-logo.png" type="image/png">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/exposome-story.css">
+    <link rel="preload" href="../assets/images/frontiers-experience.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="../assets/css/exposome-story.min.css">
   </head>
   <body class="exposome-story-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -16,7 +17,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
+          <img class="brand-logo" src="../assets/images/as-logo.webp" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
           <a class="nav-link" href="../index.html#customized">Customized for you</a>
@@ -49,7 +50,7 @@
     <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
       <div class="mobile-panel-head">
         <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
+          <img class="brand-logo" src="../assets/images/as-logo.webp" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
         </a>
         <button class="circle-button" id="menuClose" type="button" title="Close menu" aria-label="Close menu">
           <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
@@ -105,7 +106,7 @@
             </div>
           </div>
           <figure class="hero-visual hero-media-panel reveal">
-            <img src="../assets/images/frontiers-experience.jpg" alt="Fresh green leaves with water droplets in soft natural light">
+            <img src="../assets/images/frontiers-experience.webp" width="2560" height="1200" alt="Fresh green leaves with water droplets in soft natural light" decoding="async" fetchpriority="high">
             <figcaption>
               <span>Natural Exposome</span>
               <strong>Environment, biology, and time in one living system.</strong>
@@ -117,7 +118,7 @@
       <section class="story-image-moments" aria-label="Exposome science visual themes">
         <div class="story-shell image-moment-grid">
           <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-exposome.jpg" alt="A calm human profile surrounded by environmental and biological signals">
+            <img src="../assets/images/science-platform-exposome.webp" width="1086" height="1448" alt="A calm human profile surrounded by environmental and biological signals" loading="lazy" decoding="async">
             <div>
               <span>Environment</span>
               <h2>Signals around us</h2>
@@ -125,7 +126,7 @@
             </div>
           </article>
           <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-homeostasis-regulation.jpg" alt="A person in a balanced meditative state with warm biological light pathways">
+            <img src="../assets/images/science-platform-homeostasis-regulation.webp" width="1086" height="1448" alt="A person in a balanced meditative state with warm biological light pathways" loading="lazy" decoding="async">
             <div>
               <span>Homeostasis</span>
               <h2>Balance within the body</h2>
@@ -133,7 +134,7 @@
             </div>
           </article>
           <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-human-longevity-aging.jpg" alt="An older couple walking outdoors in a peaceful natural setting">
+            <img src="../assets/images/science-platform-human-longevity-aging.webp" width="1086" height="1448" alt="An older couple walking outdoors in a peaceful natural setting" loading="lazy" decoding="async">
             <div>
               <span>Healthspan</span>
               <h2>Long-term wellbeing</h2>
@@ -238,7 +239,7 @@
             <p>External signals can enter the body through multiple routes. Once absorbed, they interact with tissues, organs, cells, and molecular systems.</p>
           </div>
           <figure class="story-media-card reveal">
-            <img src="../assets/images/science-platform-exposome.jpg" alt="Human profile surrounded by environmental and biological exposure signals">
+            <img src="../assets/images/science-platform-exposome.webp" width="1086" height="1448" alt="Human profile surrounded by environmental and biological exposure signals" loading="lazy" decoding="async">
             <figcaption>
               <span>Exposure Interface</span>
               <strong>The body is an interface between the outer environment and inner biology.</strong>
@@ -282,7 +283,7 @@
             <p>Once exposures interact with the body, they can trigger biological responses across organ systems and cellular mechanisms.</p>
           </div>
           <figure class="story-media-card media-right reveal">
-            <img src="../assets/images/science-platform-homeostasis-regulation.jpg" alt="A calm person with warm biological pathways showing internal balance">
+            <img src="../assets/images/science-platform-homeostasis-regulation.webp" width="1086" height="1448" alt="A calm person with warm biological pathways showing internal balance" loading="lazy" decoding="async">
             <figcaption>
               <span>Biological Response</span>
               <strong>Impact becomes meaningful through the body's ability to regulate and recover.</strong>
@@ -401,7 +402,7 @@
             <p><strong>Exposome Biological Impact Index.</strong> EBII is a conceptual quantitative framework that integrates exposure load, biological susceptibility, adaptive capacity, and time to estimate overall biological impact. It is not a validated medical diagnostic score.</p>
           </div>
           <figure class="story-media-card media-left reveal">
-            <img src="../assets/images/frontiers-experience.jpg" alt="Close view of leaves and water droplets representing resilience and adaptation">
+            <img src="../assets/images/frontiers-experience.webp" width="2560" height="1200" alt="Close view of leaves and water droplets representing resilience and adaptation" loading="lazy" decoding="async">
             <figcaption>
               <span>Adaptive Capacity</span>
               <strong>Resilience is the buffer between exposure load and long-term biological impact.</strong>
@@ -455,7 +456,7 @@
             <p>EBII helps explain how different combinations of exposure, susceptibility, time, and resilience can lead to different biological trajectories.</p>
           </div>
           <figure class="story-media-card reveal">
-            <img src="../assets/images/science-platform-human-longevity-aging.jpg" alt="Healthy older couple walking outdoors in a natural environment">
+            <img src="../assets/images/science-platform-human-longevity-aging.webp" width="1086" height="1448" alt="Healthy older couple walking outdoors in a natural environment" loading="lazy" decoding="async">
             <figcaption>
               <span>Healthspan Direction</span>
               <strong>Lower biological impact supports vitality, beauty, wellbeing, and longer healthspan.</strong>
@@ -570,6 +571,6 @@
       </div>
     </footer>
 
-    <script src="../assets/js/exposome-story.js"></script>
+    <script src="../assets/js/exposome-story.min.js" defer></script>
   </body>
 </html>
