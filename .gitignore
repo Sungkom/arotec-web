@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.log
+database/*.sqlite
+deploy-static/
+*.zip
+preview-*.png

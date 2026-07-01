@@ -49,21 +49,27 @@
   const updateStoryMotion = () => {
     document.documentElement.classList.add("smooth-scroll-ready");
     body.classList.add("storytelling-ready", "story-motion-ready");
+    if (reducedMotion) return;
 
     const viewportCenter = window.innerHeight * 0.52;
+    const motionRange = window.innerHeight * 1.35;
     storySections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
-      const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0, 1);
       section.classList.add("story-section-frame");
       section.dataset.storyIndex = String(index + 1).padStart(2, "0");
+      section.classList.toggle("is-story-current", rect.top <= viewportCenter && rect.bottom >= viewportCenter);
+      if (rect.bottom < -motionRange || rect.top > window.innerHeight + motionRange) return;
+
+      const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0, 1);
       section.style.setProperty("--story-progress", localProgress.toFixed(4));
       section.style.setProperty("--story-shift", `${((localProgress - 0.5) * 38).toFixed(2)}px`);
       section.style.setProperty("--story-depth", (1 + localProgress * 0.016).toFixed(4));
-      section.classList.toggle("is-story-current", rect.top <= viewportCenter && rect.bottom >= viewportCenter);
     });
 
     storyMediaItems.forEach((item) => {
       const rect = item.getBoundingClientRect();
+      if (rect.bottom < -motionRange || rect.top > window.innerHeight + motionRange) return;
+
       const localProgress = clamp((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0, 1);
       item.classList.add("story-image-reveal");
       item.style.setProperty("--parallax-y", `${((localProgress - 0.5) * -28).toFixed(2)}px`);

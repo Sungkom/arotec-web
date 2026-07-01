@@ -639,7 +639,7 @@
   height: 72px;
   display: block;
   border-radius: 0;
-  background: url("../images/exposome-icon-balance-scale.png") center / contain no-repeat;
+  background: url("../images/exposome-icon-balance-scale.webp") center / contain no-repeat;
   opacity: 1;
 }
 
@@ -696,7 +696,7 @@
   width: 92px;
   height: 92px;
   border-radius: 18px;
-  background: url("../images/exposome-shield.png") center / contain no-repeat;
+  background: url("../images/exposome-shield.webp") center / contain no-repeat;
 }
 
 .why-section h2 {
@@ -729,7 +729,7 @@
   width: 86px;
   height: 86px;
   border-radius: 50%;
-  background-image: url("../images/exposome-leaf-health.png");
+  background-image: url("../images/exposome-leaf-health.webp");
 }
 
 .better-card p {
