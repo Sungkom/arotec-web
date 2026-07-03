@@ -1,0 +1,6 @@
+Trigger Render redeploy for Exposome page.
+
+Expected public URL:
+https://arotec-web.onrender.com/pages/exposome.html
+
+If this file exists on main, pages/exposome.html also exists in the repository and should be served by server.py after Render deploys the latest commit.
