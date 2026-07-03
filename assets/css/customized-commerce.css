@@ -203,7 +203,7 @@
   border-bottom: 1px solid rgba(17, 24, 39, 0.08);
   background:
     linear-gradient(100deg, rgba(250, 247, 242, 0.96), rgba(255, 255, 255, 0.68)),
-    url("../images/customized-banner.jpg");
+    url("../images/customized-banner.webp");
   background-position: center;
   background-size: cover;
 }
@@ -1441,7 +1441,7 @@
   border-bottom-color: rgba(255, 255, 255, 0.1);
   background:
     linear-gradient(90deg, rgba(6, 16, 29, 0.94), rgba(9, 24, 43, 0.76) 45%, rgba(6, 16, 29, 0.42)),
-    url("../images/customized-banner.jpg");
+    url("../images/customized-banner.webp");
   background-position: center;
   background-size: cover;
 }
