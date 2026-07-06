@@ -157,7 +157,6 @@
   const status = document.getElementById("memberStatus");
   const languageSelect = document.getElementById("memberLanguageSelect");
   const preferredLanguage = document.getElementById("preferred_language");
-  const renderApiOrigin = "https://arotec-web.onrender.com";
   let currentLang = "th";
 
   function getSavedLanguage() {
@@ -174,32 +173,6 @@
   function translateError(message) {
     const text = copy[currentLang] || copy.th;
     return text.errors[message] || message || text.fallbackError;
-  }
-
-  function apiUrl(path) {
-    if (location.protocol === "file:") return path;
-    if (location.hostname.toLowerCase().endsWith("github.io")) {
-      return `${renderApiOrigin}${path}`;
-    }
-    return path;
-  }
-
-  async function readApiResponse(response) {
-    const raw = await response.text();
-    if (!raw.trim()) {
-      return {
-        ok: response.ok,
-        error: response.ok ? "" : `${response.status} ${response.statusText}`.trim()
-      };
-    }
-    try {
-      return JSON.parse(raw);
-    } catch (error) {
-      return {
-        ok: false,
-        error: response.ok ? "Invalid JSON" : `${response.status} ${response.statusText}`.trim()
-      };
-    }
   }
 
   function renderLanguage(lang, syncPreferredLanguage = false) {
@@ -254,12 +227,12 @@
     setStatus(text.saving);
 
     try {
-      const response = await fetch(apiUrl("/api/members"), {
+      const response = await fetch("/api/members", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
-      const result = await readApiResponse(response);
+      const result = await response.json();
       if (!response.ok || !result.ok) {
         throw new Error(result.error || text.fallbackError);
       }
