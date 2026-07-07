@@ -3,6 +3,7 @@
   const progress = document.querySelector("[data-ex-progress]");
   const navLinks = Array.from(document.querySelectorAll("[data-ex-progress-nav] a"));
   const stages = Array.from(document.querySelectorAll(".infographic-stage"));
+  const stageScrollers = Array.from(document.querySelectorAll(".stage-scroller"));
   const backToTop = document.querySelector("[data-back-to-top]");
 
   const debugMap = {
@@ -75,6 +76,43 @@
     });
   };
 
+  const fitStagesToViewport = () => {
+    stageScrollers.forEach((scroller) => {
+      const stage = scroller.querySelector(".infographic-stage");
+      if (!stage) return;
+
+      const scrollerStyle = window.getComputedStyle(scroller);
+      const paddingTop = parseFloat(scrollerStyle.paddingTop) || 0;
+      const paddingRight = parseFloat(scrollerStyle.paddingRight) || 0;
+      const paddingBottom = parseFloat(scrollerStyle.paddingBottom) || 0;
+      const paddingLeft = parseFloat(scrollerStyle.paddingLeft) || 0;
+
+      scroller.classList.remove("is-fit-scaled");
+      scroller.style.height = "";
+      stage.style.position = "relative";
+      stage.style.top = "";
+      stage.style.left = "";
+      stage.style.margin = "0 auto";
+      stage.style.transform = "none";
+      stage.style.transformOrigin = "top left";
+
+      const availableWidth = Math.max(1, scroller.clientWidth - paddingLeft - paddingRight);
+      const naturalWidth = Math.max(stage.scrollWidth, stage.offsetWidth, 1);
+      const naturalHeight = Math.max(stage.scrollHeight, stage.offsetHeight, 1);
+      const scale = Math.min(1, availableWidth / naturalWidth);
+      const scaledWidth = naturalWidth * scale;
+      const centeredLeft = paddingLeft + Math.max(0, (availableWidth - scaledWidth) / 2);
+
+      stage.style.position = "absolute";
+      stage.style.top = `${paddingTop}px`;
+      stage.style.left = `${centeredLeft}px`;
+      stage.style.margin = "0";
+      stage.style.transform = `scale(${scale})`;
+      scroller.style.height = `${paddingTop + (naturalHeight * scale) + paddingBottom}px`;
+      scroller.classList.add("is-fit-scaled");
+    });
+  };
+
   const revealStage = (stage) => {
     stage.classList.add("is-visible");
     stage.querySelectorAll(".arrow-layer path").forEach((path) => {
@@ -84,6 +122,18 @@
   };
 
   stages.forEach(setupLineDraw);
+  fitStagesToViewport();
+
+  stageScrollers.forEach((scroller) => {
+    scroller.querySelectorAll("img").forEach((img) => {
+      if (img.complete) return;
+      img.addEventListener("load", fitStagesToViewport, { once: true });
+    });
+  });
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(fitStagesToViewport).catch(() => {});
+  }
 
   const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
   if (reduceMotion || !("IntersectionObserver" in window)) {
@@ -105,7 +155,11 @@
   });
 
   window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
+  window.addEventListener("resize", () => {
+    fitStagesToViewport();
+    updateProgress();
+  });
+  fitStagesToViewport();
   updateProgress();
   syncDebugButtons();
 })();
