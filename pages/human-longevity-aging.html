@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A premium scroll storytelling page explaining skin-brain axis, SADI, ADI, and human longevity aging dynamics.">
-    <title>Skin-Brain Axis & Aging Dynamics | Arotec</title>
+    <meta name="description" content="Hybrid interactive infographic page explaining ADI, the Aging Dynamic Index for human longevity and aging.">
+    <title>ADI: Aging Dynamic Index | Arotec</title>
     <link rel="icon" href="../assets/images/as-logo.png" type="image/png">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/longevity-story.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="../assets/css/longevity-adi.min.css?v=20260708-adi-hybrid-v2">
   </head>
-  <body class="longevity-story-page">
+  <body class="adi-hybrid-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+    <div class="adi-scroll-progress" aria-hidden="true"><span data-adi-progress></span></div>
 
-    <header class="site-header">
+    <header class="site-header adi-header">
       <div class="header-inner">
         <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
+          <img class="brand-logo" src="../assets/images/as-logo.webp" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
           <a class="nav-link" href="../index.html#customized">Customized for you</a>
@@ -25,467 +25,392 @@
           <a class="nav-link" href="../index.html#platform">Platform</a>
           <a class="nav-link" href="../index.html#about">Who We Are</a>
           <a class="nav-link" href="../index.html#insights">Insights</a>
-          <a class="nav-link" href="../index.html#partners">Partners</a>
-          <a class="nav-link" href="../index.html#join">Join Us</a>
         </nav>
         <div class="header-actions">
-          <select class="language-select" id="languageSelect" aria-label="Language">
-            <option value="en" selected>EN</option>
-            <option value="ja">日本語</option>
-            <option value="zh">繁中</option>
-            <option value="th">ไทย</option>
-          </select>
           <a class="pill-button contact-pill" href="members.html">Get In touch</a>
-          <button class="circle-button" id="searchButton" type="button" title="Search" aria-label="Search">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>
-          </button>
-          <button class="circle-button menu-toggle" id="menuToggle" type="button" title="Open menu" aria-label="Open menu">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
-          </button>
+          <a class="circle-button" href="../index.html" aria-label="Back to home">A&S</a>
         </div>
       </div>
     </header>
-    <div class="mobile-scrim" id="mobileScrim"></div>
-    <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-      <div class="mobile-panel-head">
-        <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/as-logo.png" alt="A&S arotec scientist">
-        </a>
-        <button class="circle-button" id="menuClose" type="button" title="Close menu" aria-label="Close menu">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
-        </button>
-      </div>
-      <nav class="mobile-nav" aria-label="Mobile primary navigation">
-        <a class="nav-link" href="../index.html">Home</a>
-        <a class="nav-link" href="../index.html#customized">Customized for you</a>
-        <a class="nav-link" href="../index.html#applied">Applied Solutions</a>
-        <a class="nav-link" href="../index.html#products">Applied Products</a>
-        <a class="nav-link" href="../index.html#platform">Platform</a>
-        <a class="nav-link" href="../index.html#about">Who We Are</a>
-        <a class="nav-link" href="../index.html#insights">Insights</a>
-        <a class="nav-link" href="../index.html#partners">Partners</a>
-        <a class="nav-link" href="../index.html#join">Join Us</a>
-        <a class="nav-link" href="members.html">Get In touch</a>
-      </nav>
-      <div class="mobile-language" aria-label="Language">
-        <button class="language-chip active" data-lang-chip="en" type="button">EN</button>
-        <button class="language-chip" data-lang-chip="ja" type="button">日本語</button>
-        <button class="language-chip" data-lang-chip="zh" type="button">繁中</button>
-        <button class="language-chip" data-lang-chip="th" type="button">ไทย</button>
-      </div>
-      <a class="pill-button" href="members.html">Get In touch</a>
-    </aside>
-    <div class="search-modal" id="searchModal" aria-label="Search" role="dialog" aria-modal="true">
-      <div class="search-card">
-        <div class="search-head">
-          <h2>Search</h2>
-          <button class="circle-button" id="searchClose" type="button" title="Close search" aria-label="Close search">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
-          </button>
-        </div>
-        <input class="search-input" id="searchInput" type="search" placeholder="Search pages, science, solutions" autocomplete="off">
-        <div class="search-results" id="searchResults"></div>
-      </div>
-    </div>
+
+    <nav class="adi-progress-nav" data-adi-progress-nav aria-label="ADI infographic sections">
+      <a href="#adi-core" aria-label="Section 1"><span>01</span></a>
+      <a href="#adi-trajectory" aria-label="Section 2"><span>02</span></a>
+      <a href="#adi-domains" aria-label="Section 3"><span>03</span></a>
+      <a href="#adi-outcomes" aria-label="Section 4"><span>04</span></a>
+      <a href="#adi-modifiable" aria-label="Section 5"><span>05</span></a>
+    </nav>
 
     <main id="main">
-      <section class="longevity-hero" id="top" aria-labelledby="hero-title">
-        <div class="particle-field" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
+      <section class="adi-section" id="adi-core" aria-labelledby="adi-core-title">
+        <div class="adi-shell section-head">
+          <p class="adi-kicker">Section 01</p>
+          <h1 id="adi-core-title">ADI: Aging Dynamic Index</h1>
+          <p class="section-subtitle">The central index of human aging</p>
+          <p>ADI integrates intrinsic susceptibility, exposome-driven biological impact, and aging resilience to determine the direction and velocity of aging.</p>
         </div>
-        <div class="longevity-shell hero-grid">
-          <div class="hero-copy reveal">
-            <p class="story-kicker">Arotec Science Platform</p>
-            <h1 id="hero-title">Skin-Brain Axis & Aging Dynamics</h1>
-            <p class="hero-subhead">How exposome signals, skin homeostasis, biological impact, and adaptive capacity shape skin aging, wellbeing, and longevity.</p>
-            <p>Skin is not only a barrier. It is an active sensory, immune, neuroendocrine, and microbial interface that communicates with the brain and responds to the exposome over time.</p>
-            <div class="hero-actions">
-              <a class="story-button primary" href="#axis">Explore the Axis</a>
-              <a class="story-button secondary" href="#adi">Understand the Aging Index</a>
-            </div>
-          </div>
-          <figure class="axis-hero-visual reveal" aria-label="Animated skin-brain signal visual">
-            <div class="hero-brain" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="hero-signal hero-signal-a" aria-hidden="true"></div>
-            <div class="hero-signal hero-signal-b" aria-hidden="true"></div>
-            <div class="hero-signal hero-signal-c" aria-hidden="true"></div>
-            <div class="skin-stack" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <figcaption>
-              <span>Biological Interface</span>
-              <strong>Signals move between skin, nerves, immune mediators, hormones, and the brain.</strong>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="image-moment-band" aria-label="Aging dynamics visual moments">
-        <div class="longevity-shell image-moment-grid">
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-neuro-skin-care.jpg" alt="Calm skin-care visual with warm neural light pathways">
-            <div>
-              <span>Skin Interface</span>
-              <h2>Barrier, sensory, immune, and neuroendocrine signals.</h2>
-            </div>
-          </article>
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-homeostasis-regulation.jpg" alt="Balanced meditative body with warm biological light pathways">
-            <div>
-              <span>Homeostasis</span>
-              <h2>Adaptive balance protects resilience over time.</h2>
-            </div>
-          </article>
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-human-longevity-aging.jpg" alt="Older couple walking outdoors in a natural setting">
-            <div>
-              <span>Healthspan</span>
-              <h2>Longevity is shaped by exposure, biology, and time.</h2>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="story-section" id="axis" aria-labelledby="axis-title">
-        <div class="longevity-shell sticky-story-grid">
-          <aside class="sticky-panel reveal" aria-label="Skin-brain axis signal visual">
-            <p class="story-kicker">Bidirectional Communication</p>
-            <h2>Skin <span>talks</span> to brain. Brain <span>responds</span> to skin.</h2>
-            <div class="signal-map" aria-hidden="true">
-              <div class="map-node skin-node">Skin</div>
-              <div class="map-node nerve-node">Nerve</div>
-              <div class="map-node brain-node">Brain</div>
-              <svg viewBox="0 0 420 280" role="img" aria-label="Bidirectional signal lines">
-                <path class="flow-path blue" d="M70 210 C120 80 250 72 346 72"></path>
-                <path class="flow-path purple" d="M350 92 C280 190 168 196 76 224"></path>
-                <path class="flow-path green" d="M88 222 C190 148 254 154 340 86"></path>
-              </svg>
-            </div>
-          </aside>
-
-          <div class="story-content">
-            <div class="section-heading reveal">
-              <span>01</span>
-              <h2 id="axis-title">Skin and Brain Communicate in Both Directions</h2>
-              <p>The skin-brain axis describes bidirectional neuroimmune and neuroendocrine communication between skin, peripheral nerves, spinal pathways, immune mediators, hormones, and the brain.</p>
-            </div>
-            <div class="axis-grid">
-              <article class="pathway-card reveal accent-blue">
-                <span class="card-index">Afferent</span>
-                <h3>Skin to Brain</h3>
-                <p>Cutaneous, immune, damage-associated, microbial, and metabolic signals travel through peripheral nerve endings, A-delta fibers, C fibers, dorsal root ganglion, and spinal pathways.</p>
-                <ul>
-                  <li>Touch, itch, pain, temperature, UV, and injury signals</li>
-                  <li>Cytokines, chemokines, histamine, DAMPs, ROS, and alarmins</li>
-                  <li>Microbial metabolites, PAMPs, and environmental microbiota signals</li>
-                </ul>
+        <div class="stage-scroll stage-scroller">
+          <div class="adi-stage stage-core">
+            <img class="reference-overlay" src="../public/references/adi-01-core-index.jpg" alt="" aria-hidden="true">
+            <div class="card-layer">
+              <article class="adi-card ebii-driver-card accent-blue">
+                <div class="card-bar">EBII: The Primary Driver and Key Determinant of ADS</div>
+                <div class="ebii-inner">
+                  <h2>EBII</h2>
+                  <h3>Exposome Biological Impact Index</h3>
+                  <p class="strong-note">The strongest factor influencing ADI</p>
+                  <img class="ebii-molecule crop-icon" src="../public/crops/adi/adi-ebii-molecule.png" alt="Molecular network icon cropped from the reference infographic">
+                  <p>EBII quantifies the cumulative biological impact of all relevant exposures.</p>
+                  <ul class="icon-list ebii-list">
+                    <li><img src="../public/crops/adi/adi-ebii-inflammation.png" alt=""><span>Inflammation</span></li>
+                    <li><img src="../public/crops/adi/adi-ebii-oxidative.png" alt=""><span>Oxidative stress</span></li>
+                    <li><img src="../public/crops/adi/adi-ebii-metabolic.png" alt=""><span>Metabolic stress</span></li>
+                    <li><img src="../public/crops/adi/adi-ebii-molecular.png" alt=""><span>Molecular / cellular disruption</span></li>
+                    <li><img src="../public/crops/adi/adi-ebii-susceptibility.png" alt=""><span>Susceptibility</span></li>
+                    <li><img src="../public/crops/adi/adi-ebii-cumulative.png" alt=""><span>Cumulative exposure burden</span></li>
+                  </ul>
+                </div>
+                <div class="blue-label">EBII has the greatest weight and directly drives ADI</div>
               </article>
-              <article class="pathway-card reveal accent-purple">
-                <span class="card-index">Center</span>
-                <h3>Brain Regulation Centers</h3>
-                <p>The prefrontal cortex, anterior cingulate cortex, insula, amygdala, hippocampus, and hypothalamus coordinate emotion, stress appraisal, autonomic control, neuroendocrine rhythm, and sleep.</p>
+
+              <article class="adi-card ip-card accent-purple">
+                <div class="mini-card-bar">IP: Intrinsic Pressure</div>
+                <p class="card-subtitle">Internal susceptibility</p>
+                <div class="factor-list-with-icons">
+                  <img src="../public/crops/adi/adi-ip-icons.png" alt="" aria-hidden="true">
+                  <ul>
+                    <li>Genetics</li>
+                    <li>Epigenetic predisposition</li>
+                    <li>Sex &amp; developmental programming</li>
+                    <li>Baseline physiology</li>
+                    <li>Innate vulnerability</li>
+                  </ul>
+                </div>
               </article>
-              <article class="pathway-card reveal accent-green">
-                <span class="card-index">Efferent</span>
-                <h3>Brain to Skin</h3>
-                <p>Central regulation sends outputs through the HPA axis, autonomic nervous system, neuroendocrine mediators, neuroimmune signals, hormones, cytokines, and growth factors.</p>
-                <ul>
-                  <li>Barrier function and immune regulation</li>
-                  <li>Oxidative and microbiome balance</li>
-                  <li>Neuroendocrine balance and ECM remodeling</li>
-                </ul>
+
+              <article class="adi-card ar-card accent-green">
+                <div class="mini-card-bar">AR: Aging Resilience</div>
+                <p class="card-subtitle">The protective modulator</p>
+                <div class="factor-list-with-icons">
+                  <img src="../public/crops/adi/adi-ar-icons.png" alt="" aria-hidden="true">
+                  <ul>
+                    <li>Repair capacity</li>
+                    <li>Recovery capacity</li>
+                    <li>Adaptation</li>
+                    <li>Functional reserve</li>
+                    <li>Homeostatic stability</li>
+                    <li>Stress tolerance</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="adi-card ebii-note-card accent-orange">
+                <strong>EBII: Exposome Biological Impact Index</strong>
+                <span>Primary Driver</span>
+                <p>Cumulative biological impact from the exposome.</p>
               </article>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="story-section soft-band" id="homeostasis" aria-labelledby="homeostasis-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>02</span>
-            <h2 id="homeostasis-title">Skin Homeostasis Is Maintained by Interconnected Systems</h2>
-            <p>Healthy skin depends on the balance of barrier function, immunity, oxidative control, extracellular matrix integrity, microbiome diversity, and neuroendocrine regulation.</p>
-          </div>
-          <div class="homeostasis-stage">
-            <div class="skin-core-visual reveal" aria-label="Central skin homeostasis visual">
-              <div class="skin-layer layer-one"></div>
-              <div class="skin-layer layer-two"></div>
-              <div class="skin-layer layer-three"></div>
-              <strong>SHS</strong>
-              <span>Skin Homeostasis Status</span>
+            <div class="image-layer">
+              <figure class="adi-core-orb" aria-label="ADI core formula">
+                <img src="../public/crops/adi/adi-core-orb.png" alt="The core formula: ADI equals EBII times IP divided by AR">
+              </figure>
             </div>
-            <div class="homeostasis-grid">
-              <article class="homeostasis-card reveal accent-green"><h3>Barrier Homeostasis</h3><p>Stratum corneum integrity, tight junctions, filaggrin, lipids, and pH balance.</p></article>
-              <article class="homeostasis-card reveal accent-purple"><h3>Immune Homeostasis</h3><p>Langerhans cells, mast cells, macrophages, T cell balance, and immune tolerance.</p></article>
-              <article class="homeostasis-card reveal accent-blue"><h3>Neuroendocrine Homeostasis</h3><p>Cutaneous HPA axis, neurotransmitter receptors, local neuropeptides, and neuroimmune crosstalk.</p></article>
-              <article class="homeostasis-card reveal accent-orange"><h3>Oxidative Homeostasis</h3><p>ROS control, antioxidant defense, SOD, CAT, GPx, and NRF2 signaling.</p></article>
-              <article class="homeostasis-card reveal accent-cyan"><h3>Microbiome Homeostasis</h3><p>Commensal diversity, colonization resistance, and microbial metabolites.</p></article>
-              <article class="homeostasis-card reveal accent-purple"><h3>ECM Homeostasis</h3><p>Collagen, elastin, proteoglycans, fibroblast function, and ECM remodeling.</p></article>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="story-section" id="feedback" aria-labelledby="feedback-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>03</span>
-            <h2 id="feedback-title">Feedback Loops Can Amplify Stress or Restore Balance</h2>
-            <p>The skin-brain axis can create either a stress-inflammation cycle or a resilience-repair cycle.</p>
-          </div>
-          <div class="feedback-toggle reveal" role="group" aria-label="Feedback loop mode">
-            <button type="button" class="is-active" data-feedback-mode="stress">Stress Amplification</button>
-            <button type="button" data-feedback-mode="repair">Resilience Recovery</button>
-          </div>
-          <div class="feedback-grid" data-feedback-stage>
-            <article class="feedback-loop-card stress reveal">
-              <div class="loop-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-              <h3>Negative Feedback Loop</h3>
-              <p class="mini-title">Stress-Inflammation Cycle</p>
-              <ol>
-                <li>Stress and HPA axis activation</li>
-                <li>Cortisol increase and barrier disruption</li>
-                <li>Oxidative stress and inflammation</li>
-                <li>Afferent stress signals and amplified imbalance</li>
-              </ol>
-            </article>
-            <article class="feedback-loop-card repair reveal">
-              <div class="loop-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-              <h3>Positive Feedback Loop</h3>
-              <p class="mini-title">Resilience-Repair Cycle</p>
-              <ol>
-                <li>Positive emotion and social support</li>
-                <li>Parasympathetic activation and higher vagal tone</li>
-                <li>Anti-inflammatory signaling</li>
-                <li>Restored skin homeostasis and improved mood</li>
-              </ol>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section soft-band" id="balance" aria-labelledby="balance-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>04</span>
-            <h2 id="balance-title">Homeostatic Balance Shapes Skin and Aging Outcomes</h2>
-          </div>
-          <div class="continuum-track">
-            <article class="continuum-stage reveal stage-green"><span>01</span><h3>Healthy Homeostasis</h3><p>Intact barrier, immune tolerance, microbiome diversity, low inflammation, and resilient skin-brain balance.</p></article>
-            <article class="continuum-stage reveal stage-yellow"><span>02</span><h3>Adaptive Response</h3><p>Transient inflammation, effective repair, resilience to stress, and return toward homeostasis.</p></article>
-            <article class="continuum-stage reveal stage-orange"><span>03</span><h3>Chronic Dysregulation</h3><p>Persistent inflammation, barrier dysfunction, neuroendocrine dysregulation, and accelerated skin aging signals.</p></article>
-            <article class="continuum-stage reveal stage-red"><span>04</span><h3>Inflammaging & Accelerated Aging</h3><p>Low-grade inflammation, ECM degradation, cellular senescence, impaired repair, and systemic aging burden.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section" id="sadi" aria-labelledby="sadi-title">
-        <div class="longevity-shell formula-story-grid">
-          <div class="section-heading reveal">
-            <span>05</span>
-            <h2 id="sadi-title">From EBII to SADI: Linking Exposome to Skin Aging Dynamics</h2>
-            <p>SADI connects exposome-driven biological impact with skin homeostasis status and skin aging amplification. This is a conceptual framework for explanatory and design purposes, not a clinical diagnostic score.</p>
-          </div>
-          <div class="formula-lab reveal" aria-label="SADI formula visualization">
-            <div class="formula-step"><span>SADI</span><strong>SAF &times; dSHS</strong></div>
-            <div class="formula-step"><span>dSHS</span><strong>EBII / SHS</strong></div>
-            <div class="formula-step final"><span>SADI</span><strong>SAF &times; EBII / SHS</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section soft-band" id="components" aria-labelledby="components-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>06</span>
-            <h2 id="components-title">The Four Components of Skin Aging Dynamics</h2>
-          </div>
-          <div class="component-grid">
-            <article class="index-card reveal accent-blue"><span>EBII</span><h3>Exposome Biological Impact Index</h3><p>Conceptually quantifies total biological impact of exposome-related signals on the skin.</p><small>Higher EBII may increase biological burden.</small></article>
-            <article class="index-card reveal accent-green"><span>SHS</span><h3>Skin Homeostasis Status</h3><p>Represents protective balance across barrier, immune, oxidative, ECM, microbiome, and neuroendocrine systems.</p><small>Strong SHS can buffer disruption.</small></article>
-            <article class="index-card reveal accent-orange"><span>SAF</span><h3>Skin Aging Amplification Factor</h3><p>Genetic susceptibility, epigenetic drift, chronic inflammation, hormonal imbalance, oxidative stress, glycation, psychosocial stress, and lifestyle factors may amplify aging burden.</p><small>Higher SAF may raise SADI.</small></article>
-            <article class="index-card reveal accent-purple"><span>SADI</span><h3>Skin Aging Dynamic Index</h3><p>An integrated conceptual index representing skin aging burden and trajectory.</p><small>SADI = EBII &times; SAF / SHS</small></article>
-          </div>
-
-          <div class="sadi-controls reveal" aria-label="Interactive SADI concept controls">
-            <div>
-              <label for="exposure-load">Exposure Load</label>
-              <input id="exposure-load" type="range" min="1" max="10" value="5" data-sadi-input>
-            </div>
-            <div>
-              <label for="skin-resilience">Skin Resilience</label>
-              <input id="skin-resilience" type="range" min="1" max="10" value="7" data-sadi-input>
-            </div>
-            <div>
-              <label for="aging-amplification">Aging Amplification</label>
-              <input id="aging-amplification" type="range" min="1" max="10" value="4" data-sadi-input>
-            </div>
-            <output class="sadi-meter" data-sadi-output>
-              <span></span>
-              <strong>Adaptive</strong>
-            </output>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section" id="cycles" aria-labelledby="cycles-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>07</span>
-            <h2 id="cycles-title">Skin Aging Can Follow a Vicious or Virtuous Cycle</h2>
-          </div>
-          <div class="cycle-grid">
-            <article class="cycle-card vicious reveal">
-              <h3>Vicious Cycle</h3>
-              <p class="mini-title">Positive Damage Feedback</p>
-              <div class="cycle-flow">EBII up &rarr; dSHS up &rarr; SAF up &rarr; SADI up</div>
-              <p>Exposome-driven burden can amplify skin aging. Chronic inflammation, oxidative stress, and cellular senescence may reinforce damage.</p>
-            </article>
-            <div class="balance-scale reveal" aria-hidden="true"><span></span></div>
-            <article class="cycle-card virtuous reveal">
-              <h3>Virtuous Cycle</h3>
-              <p class="mini-title">Resilience Loop</p>
-              <div class="cycle-flow">Lower EBII &rarr; dSHS down &rarr; SAF down &rarr; SADI down</div>
-              <p>Preserved homeostasis can buffer aging progression. Repair, anti-inflammatory tone, and cellular renewal sustain resilience.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section soft-band" id="sadi-continuum" aria-labelledby="sadi-continuum-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>08</span>
-            <h2 id="sadi-continuum-title">SADI Defines a Skin Aging Continuum</h2>
-            <p>SADI can be used as a conceptual lens to describe progressive decline in skin homeostasis and biological resilience.</p>
-          </div>
-          <div class="sadi-continuum">
-            <span class="moving-marker" aria-hidden="true"></span>
-            <article class="sadi-stage reveal"><span>Low SADI</span><h3>Homeostatic Skin</h3><p>Intact barrier, balanced microbiome, optimal ECM turnover, normal neuroendocrine signaling, and efficient repair.</p></article>
-            <article class="sadi-stage reveal"><span>Moderate SADI</span><h3>Adaptive Aging Skin</h3><p>Compensated stress, mild oxidative load, early ECM remodeling, and delayed recovery.</p></article>
-            <article class="sadi-stage reveal"><span>High SADI</span><h3>Accelerated Aging Skin</h3><p>Persistent oxidative stress, chronic low-grade inflammation, reduced repair capacity, and barrier fragility.</p></article>
-            <article class="sadi-stage reveal"><span>Very High SADI</span><h3>Homeostasis-Collapsed Skin</h3><p>Severe homeostatic failure, cellular senescence accumulation, ECM breakdown, and delayed wound healing.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section" id="adi" aria-labelledby="adi-title">
-        <div class="longevity-shell adi-stage">
-          <div class="section-heading reveal">
-            <span>09</span>
-            <h2 id="adi-title">ADI: Aging Dynamic Index</h2>
-            <p><strong>The central index of human aging.</strong> ADI integrates exposome-driven biological impact and time-intrinsic aging processes to describe the direction and velocity of aging.</p>
-          </div>
-          <div class="adi-sphere reveal" aria-label="ADI formula reveal">
-            <span class="adi-input ebii">EBII</span>
-            <strong>ADI = EBII &times; AF</strong>
-            <span class="adi-input af">AF</span>
-            <p>EBII reflects cumulative biological impact. AF represents intrinsic time-dependent processes that may amplify EBII.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section soft-band" id="drivers" aria-labelledby="drivers-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>10-11</span>
-            <h2 id="drivers-title">EBII and AF Shape Aging Dynamics Together</h2>
-          </div>
-          <div class="driver-grid">
-            <article class="driver-card reveal accent-blue">
-              <h3>EBII: Exposome to Biological Impact</h3>
-              <p>EBII conceptually quantifies the cumulative biological impact of environment, built space, occupational exposure, chemicals, lifestyle, and social factors.</p>
-              <div class="orbit-tags"><span>Inflammation</span><span>Oxidative stress</span><span>Metabolic stress</span><span>Susceptibility</span><span>Cumulative burden</span></div>
-            </article>
-            <article class="driver-card reveal accent-green">
-              <h3>AF: Aging Amplification Factor</h3>
-              <p>AF = f(Telomere + Epigenetic + Stem Cell + Proteostasis). AF tends to increase with age and may amplify the biological effect of EBII.</p>
-              <div class="orbit-tags"><span>Telomere attrition</span><span>Epigenetic drift</span><span>Stem cell exhaustion</span><span>Proteostasis decline</span></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section" id="trajectory" aria-labelledby="trajectory-title">
-        <div class="longevity-shell trajectory-grid">
-          <div class="section-heading reveal">
-            <span>12</span>
-            <h2 id="trajectory-title">ADI Indicates the Direction and Velocity of Aging</h2>
-            <p>Different combinations of exposure, amplification, resilience, and time can shift a person toward healthy, adaptive, or accelerated aging trajectories.</p>
-          </div>
-          <div class="trajectory-visual reveal" data-trajectory-visual>
-            <svg viewBox="0 0 620 360" role="img" aria-label="Animated ADI trajectory graph">
-              <line x1="70" y1="305" x2="570" y2="305"></line>
-              <line x1="70" y1="45" x2="70" y2="305"></line>
-              <path class="line healthy" d="M80 265 C190 246 330 235 560 210"></path>
-              <path class="line adaptive" d="M80 240 C190 220 330 178 560 140"></path>
-              <path class="line accelerated" d="M80 220 C190 168 330 96 560 62"></path>
+            <svg class="arrow-layer" viewBox="0 0 1260 690" aria-hidden="true">
+              <defs>
+                <marker id="adi-arrow-blue" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M1 1 15 8 1 15Z" fill="#1262d6"></path>
+                </marker>
+                <marker id="adi-arrow-purple" markerWidth="15" markerHeight="15" refX="12" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M1 1 14 7.5 1 14Z" fill="#5b21b6"></path>
+                </marker>
+                <marker id="adi-arrow-green" markerWidth="15" markerHeight="15" refX="12" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M1 1 14 7.5 1 14Z" fill="#137333"></path>
+                </marker>
+                <marker id="adi-arrow-orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M1 1 13 7 1 13Z" fill="#f97316"></path>
+                </marker>
+              </defs>
+              <path class="flow-path main-blue" d="M354 342 H492" marker-end="url(#adi-arrow-blue)"></path>
+              <path class="flow-path purple" d="M956 244 C922 282 890 304 850 336" marker-end="url(#adi-arrow-purple)"></path>
+              <path class="flow-path green" d="M956 424 C918 404 888 392 850 374" marker-end="url(#adi-arrow-green)"></path>
+              <path class="flow-path orange" d="M934 570 C904 548 884 514 866 466" marker-end="url(#adi-arrow-orange)"></path>
             </svg>
-            <div class="scenario-controls" role="group" aria-label="Trajectory scenario">
-              <button type="button" data-scenario="healthy" class="is-active">Healthy Resilience</button>
-              <button type="button" data-scenario="adaptive">Adaptive Recovery</button>
-              <button type="button" data-scenario="accelerated">High Burden</button>
-            </div>
           </div>
         </div>
       </section>
 
-      <section class="story-section soft-band" id="domains" aria-labelledby="domains-title">
-        <div class="longevity-shell">
-          <div class="section-heading centered reveal">
-            <span>13-15</span>
-            <h2 id="domains-title">ADI Reflects Multi-Domain Biological Aging</h2>
-            <p>ADI integrates biological impact across interconnected functional domains and may indicate increased risk when biological burden is high.</p>
-          </div>
-          <div class="domain-map">
-            <article class="domain-card reveal accent-blue"><h3>Physical Function</h3><p>Muscle strength, mobility, frailty, and body composition.</p></article>
-            <article class="domain-card reveal accent-purple"><h3>Cognitive Function</h3><p>Memory, executive function, attention, and neuroplasticity.</p></article>
-            <article class="domain-card reveal accent-orange"><h3>Metabolic Function</h3><p>Glucose regulation, lipid metabolism, mitochondrial function, and energy balance.</p></article>
-            <article class="domain-card reveal accent-green"><h3>Homeostatic Function</h3><p>Immune regulation, inflammation control, hormonal balance, and autonomic regulation.</p></article>
-          </div>
-          <div class="outcome-ribbon reveal">
-            <span>Longevity</span><span>Physical function</span><span>Cognitive function</span><span>Metabolic health</span><span>Immune health</span><span>Skin aging</span><span>Quality of life</span>
-          </div>
-          <div class="modifiable-card reveal">
-            <h3>ADI Is Dynamic and Modifiable</h3>
-            <p>Reducing EBII, improving adaptive resilience, and supporting recovery can shift the trajectory toward healthier outcomes over time.</p>
+      <section class="adi-transition" aria-label="ADI formula determines aging trajectory">
+        <span>ADI formula determines aging trajectory</span>
+        <svg viewBox="0 0 160 120" aria-hidden="true">
+          <path d="M80 10 V98" marker-end="url(#transition-arrow)"></path>
+          <defs><marker id="transition-arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 13 7 1 13Z"></path></marker></defs>
+        </svg>
+      </section>
+
+      <section class="adi-section" id="adi-trajectory" aria-labelledby="adi-trajectory-title">
+        <div class="adi-shell section-head compact">
+          <p class="adi-kicker">Section 02</p>
+          <h2 id="adi-trajectory-title">ADI Determines Aging Trajectory</h2>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="adi-stage stage-trajectory">
+            <img class="reference-overlay" src="../public/references/adi-02-aging-trajectory.jpg" alt="" aria-hidden="true">
+            <div class="card-layer">
+              <article class="trajectory-panel adi-card">
+                <div class="trajectory-title">ADI Determines Aging Trajectory</div>
+                <div class="trajectory-row low">
+                  <img src="../public/crops/adi/adi-low-runner.png" alt="Low ADI healthy aging runner">
+                  <div>
+                    <h3>Low ADI <span>Healthy Aging</span></h3>
+                    <ul>
+                      <li>Strong resilience</li>
+                      <li>Minimal biological drift</li>
+                      <li>Preserved function</li>
+                      <li>High quality of life</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="trajectory-row moderate">
+                  <img src="../public/crops/adi/adi-moderate-walker.png" alt="Moderate ADI adaptive aging walker">
+                  <div>
+                    <h3>Moderate ADI <span>Adaptive Aging</span></h3>
+                    <ul>
+                      <li>Compensated decline</li>
+                      <li>Moderate dysfunction</li>
+                      <li>Increased vulnerability</li>
+                      <li>Declining reserve</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="trajectory-row high">
+                  <img src="../public/crops/adi/adi-high-elder.png" alt="High ADI accelerated aging figure">
+                  <div>
+                    <h3>High ADI <span>Accelerated Aging</span></h3>
+                    <ul>
+                      <li>Loss of resilience</li>
+                      <li>Biological dysregulation</li>
+                      <li>Rapid functional decline</li>
+                      <li>High risk of disease / disability</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="trajectory-note">ADI indicates the direction and velocity of an individual's aging process.</p>
+              </article>
+            </div>
+            <div class="image-layer">
+              <div class="gradient-arrow-wrap">
+                <strong>Low<br>ADI</strong>
+                <img src="../public/crops/adi/adi-gradient-arrow.png" alt="ADI gradient arrow from low to high">
+                <strong>High<br>ADI</strong>
+              </div>
+            </div>
+            <svg class="arrow-layer" viewBox="0 0 820 720" aria-hidden="true">
+              <defs>
+                <marker id="traj-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#0f5ead"></path></marker>
+              </defs>
+              <path class="flow-path soft-blue" d="M392 206 C482 212 566 222 642 252" marker-end="url(#traj-arrow)"></path>
+              <path class="flow-path soft-orange" d="M392 360 C484 368 566 386 642 405" marker-end="url(#traj-arrow)"></path>
+              <path class="flow-path soft-red" d="M392 514 C484 528 566 548 642 572" marker-end="url(#traj-arrow)"></path>
+            </svg>
           </div>
         </div>
       </section>
 
-      <section class="story-section final-section" aria-labelledby="final-title">
-        <div class="longevity-shell">
-          <div class="final-flow reveal" aria-label="Integrated model">
-            <span>Exposome Signals</span>
-            <span>Skin-Brain Axis</span>
-            <span>Skin Homeostasis</span>
-            <span>EBII</span>
-            <span>SADI</span>
-            <span>ADI</span>
-            <span>Health, Beauty, Wellbeing, Longevity</span>
-          </div>
-          <div class="final-copy reveal">
-            <p class="story-kicker">Integrated Model</p>
-            <h2 id="final-title">Skin and aging are shaped by continuous dialogue between exposure, biology, resilience, and time.</h2>
-            <p>Measure. Understand. Reduce. Repair. Adapt. Thrive.</p>
-            <div class="hero-actions">
-              <a class="story-button primary" href="../index.html#applied">Explore Science-Driven Solutions</a>
-              <a class="story-button secondary" href="members.html">Start the Assessment Journey</a>
+      <section class="adi-transition multi" aria-label="Aging trajectory emerges across biological domains">
+        <span>Aging trajectory emerges across biological domains</span>
+      </section>
+
+      <section class="adi-section" id="adi-domains" aria-labelledby="adi-domains-title">
+        <div class="adi-shell section-head compact">
+          <p class="adi-kicker">Section 03</p>
+          <h2 id="adi-domains-title">ADI Reflects Multi-Domain Biological Aging</h2>
+          <p>ADI integrates biological impact across four key functional domains.</p>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="adi-stage stage-domains">
+            <img class="reference-overlay" src="../public/references/adi-03-multi-domain-aging.jpg" alt="" aria-hidden="true">
+            <div class="card-layer">
+              <article class="domain-card physical accent-blue">
+                <h3>Physical Function</h3>
+                <img src="../public/crops/adi/adi-physical-function-icon.png" alt="">
+                <ul>
+                  <li>Muscle strength</li>
+                  <li>Mobility</li>
+                  <li>Frailty</li>
+                  <li>Body composition</li>
+                </ul>
+              </article>
+              <article class="domain-card metabolic accent-green">
+                <h3>Metabolic Function</h3>
+                <img src="../public/crops/adi/adi-metabolic-function-icon.png" alt="">
+                <ul>
+                  <li>Glucose regulation</li>
+                  <li>Lipid metabolism</li>
+                  <li>Mitochondrial function</li>
+                  <li>Energy balance</li>
+                </ul>
+              </article>
+              <article class="domain-card cognitive accent-purple">
+                <h3>Cognitive Function</h3>
+                <img src="../public/crops/adi/adi-cognitive-function-icon.png" alt="">
+                <ul>
+                  <li>Memory</li>
+                  <li>Executive function</li>
+                  <li>Attention</li>
+                  <li>Neuroplasticity</li>
+                </ul>
+              </article>
+              <article class="domain-card homeostatic accent-orange">
+                <h3>Homeostatic Function</h3>
+                <img src="../public/crops/adi/adi-homeostatic-function-icon.png" alt="">
+                <ul>
+                  <li>Immune regulation</li>
+                  <li>Inflammation control</li>
+                  <li>Hormonal balance</li>
+                  <li>Autonomic regulation</li>
+                </ul>
+              </article>
+              <p class="domain-summary adi-card">ADI is a quantitative summary of overall biological aging across interconnected functional domains.</p>
             </div>
+            <div class="image-layer">
+              <img class="domain-ring" src="../public/crops/adi/adi-multidomain-ring.png" alt="ADI integrates multi-system aging impact ring">
+            </div>
+            <svg class="arrow-layer" viewBox="0 0 980 560" aria-hidden="true">
+              <defs>
+                <marker id="domain-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#1262d6"></path></marker>
+                <marker id="domain-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#137333"></path></marker>
+                <marker id="domain-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#5b21b6"></path></marker>
+                <marker id="domain-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#f97316"></path></marker>
+              </defs>
+              <path class="flow-path blue" d="M308 154 C360 174 404 204 450 244" marker-end="url(#domain-blue)"></path>
+              <path class="flow-path green" d="M672 154 C620 176 578 206 530 244" marker-end="url(#domain-green)"></path>
+              <path class="flow-path purple" d="M308 336 C362 316 404 292 450 278" marker-end="url(#domain-purple)"></path>
+              <path class="flow-path orange" d="M672 336 C620 318 578 294 530 278" marker-end="url(#domain-orange)"></path>
+              <path class="flow-path dashed-ring" d="M446 260 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="adi-transition convergence" aria-label="Multi-domain aging predicts health and longevity outcomes">
+        <span>Multi-domain aging predicts health and longevity outcomes</span>
+      </section>
+
+      <section class="adi-section" id="adi-outcomes" aria-labelledby="adi-outcomes-title">
+        <div class="adi-shell section-head compact">
+          <p class="adi-kicker">Section 04</p>
+          <h2 id="adi-outcomes-title">ADI Predicts Health and Longevity Outcomes</h2>
+          <p>Higher ADI is associated with worse outcomes across multiple health dimensions.</p>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="adi-stage stage-outcomes">
+            <img class="reference-overlay" src="../public/references/adi-04-health-longevity-outcomes.jpg" alt="" aria-hidden="true">
+            <div class="card-layer">
+              <div class="outcome-dimensions adi-card">
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-longevity-icon.png" alt="">
+                  <span>Longevity</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-physical-function-outcome-icon.png" alt="">
+                  <span>Physical<br>Function</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-cognitive-function-outcome-icon.png" alt="">
+                  <span>Cognitive<br>Function</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-metabolic-health-icon.png" alt="">
+                  <span>Metabolic<br>Health</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-immune-health-icon.png" alt="">
+                  <span>Immune<br>Health</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-skin-aging-icon.png" alt="">
+                  <span>Skin<br>Aging</span>
+                </div>
+                <div class="outcome-icon">
+                  <img src="../public/crops/adi/adi-quality-of-life-icon.png" alt="">
+                  <span>Quality<br>of Life</span>
+                </div>
+              </div>
+              <article class="risk-panel">
+                <h3>High ADI Is Associated With:</h3>
+                <div class="risk-grid">
+                  <div><b class="risk-up">&uarr;</b><span>Disease<br>Risk</span></div>
+                  <div><b class="risk-up">&uarr;</b><span>Functional<br>Decline</span></div>
+                  <div><b class="risk-up">&uarr;</b><span>Hospitalization</span></div>
+                  <div><b class="risk-up">&uarr;</b><span>Disability</span></div>
+                  <div><b class="risk-up">&uarr;</b><span>Mortality</span></div>
+                  <div><b class="risk-down">&darr;</b><span>Healthspan<br>Loss</span></div>
+                  <div><b class="risk-down">&darr;</b><span>Quality<br>of Life</span></div>
+                </div>
+              </article>
+              <p class="outcome-summary adi-card">ADI is a strong integrator and predictor of multi-dimensional health, morbidity, and longevity.</p>
+            </div>
+            <svg class="arrow-layer" viewBox="0 0 1040 540" aria-hidden="true">
+              <defs>
+                <marker id="outcome-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#1262d6"></path></marker>
+              </defs>
+              <path class="flow-path down-blue" d="M520 66 V112" marker-end="url(#outcome-arrow)"></path>
+              <path class="flow-path down-red" d="M520 230 V282" marker-end="url(#outcome-arrow)"></path>
+              <path class="flow-path down-blue" d="M520 394 V438" marker-end="url(#outcome-arrow)"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="adi-transition improvement" aria-label="Because ADI is dynamic, interventions can modify the trajectory">
+        <span>Because ADI is dynamic, interventions can modify the trajectory</span>
+      </section>
+
+      <section class="adi-section" id="adi-modifiable" aria-labelledby="adi-modifiable-title">
+        <div class="adi-shell section-head compact">
+          <p class="adi-kicker">Section 05</p>
+          <h2 id="adi-modifiable-title">ADI Is Dynamic and Modifiable</h2>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="adi-stage stage-modifiable">
+            <img class="reference-overlay" src="../public/references/adi-05-dynamic-modifiable.jpg" alt="" aria-hidden="true">
+            <div class="card-layer">
+              <article class="chart-card adi-card">
+                <h3>ADI Level Over Age / Time</h3>
+                <img class="chart-lines" src="../public/crops/adi/adi-chart-lines.png" alt="ADI chart showing accelerated, adaptive, and healthy aging trajectories">
+              </article>
+              <article class="modifiable-card adi-card accent-green">
+                <h3>ADI Is Modifiable</h3>
+                <ul class="modifiable-list">
+                  <li><img src="../public/crops/adi/adi-modifiable-leaf.png" alt=""><span><strong>Reduce EBII</strong><br>Lower exposures, reduce biological burden</span></li>
+                  <li><img src="../public/crops/adi/adi-modifiable-shield.png" alt=""><span><strong>Improve AR</strong><br>Enhance resilience, repair, recovery</span></li>
+                  <li><img src="../public/crops/adi/adi-modifiable-dna.png" alt=""><span><strong>Optimize IP-related factors</strong><br>Lifestyle, epigenetic health, early-life optimization</span></li>
+                </ul>
+              </article>
+              <p class="modifiable-summary adi-card">Interventions can lower ADI over time and shift aging trajectory toward healthier outcomes.</p>
+            </div>
+            <div class="image-layer">
+              <img class="trajectory-figure accelerated" src="../public/crops/adi/adi-chart-accelerated-elder.png" alt="">
+              <img class="trajectory-figure adaptive" src="../public/crops/adi/adi-chart-adaptive-walker.png" alt="">
+              <img class="trajectory-figure healthy" src="../public/crops/adi/adi-chart-healthy-runner.png" alt="">
+            </div>
+            <svg class="arrow-layer" viewBox="0 0 1000 570" aria-hidden="true">
+              <defs>
+                <marker id="mod-green" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 12 6.5 1 12Z" fill="#137333"></path></marker>
+                <marker id="mod-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 11 6 1 11Z" fill="#1262d6"></path></marker>
+              </defs>
+              <path class="flow-path green intervention" d="M616 286 C570 304 526 330 474 362" marker-end="url(#mod-green)"></path>
+              <path class="flow-path green dashed" d="M616 184 C570 224 532 270 492 326" marker-end="url(#mod-green)"></path>
+              <path class="flow-path down-blue" d="M500 424 V462" marker-end="url(#mod-blue)"></path>
+            </svg>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="longevity-footer">
-      <div class="longevity-shell">
-        <a href="../index.html">Back to Arotec home</a>
-      </div>
-    </footer>
-
-    <script src="../assets/js/longevity-story.js"></script>
+    <button class="adi-back-top" type="button" data-adi-back-top aria-label="Back to top">&uarr;</button>
+    <script src="../assets/js/longevity-adi.min.js?v=20260708-adi-hybrid-v2"></script>
   </body>
 </html>
