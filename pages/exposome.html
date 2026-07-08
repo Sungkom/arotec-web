@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A premium scroll storytelling page explaining Exposome Science and EBII, the Exposome Biological Impact Index.">
-    <title>Exposome Science | Arotec</title>
+    <meta name="description" content="Interactive hybrid infographic page explaining Exposome Science and EBII, the Exposome Biological Impact Index.">
+    <title>Exposome Science & EBII | Arotec</title>
     <link rel="icon" href="../assets/images/as-logo.png" type="image/png">
-    <link rel="preload" href="../assets/images/frontiers-experience.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="stylesheet" href="../assets/css/exposome-story.min.css">
+    <link rel="stylesheet" href="../assets/css/exposome-hybrid.min.css?v=20260708-mobile-card-text-v1">
   </head>
-  <body class="exposome-story-page">
+  <body class="exposome-hybrid-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+    <div class="ex-scroll-progress" aria-hidden="true"><span data-ex-progress></span></div>
 
-    <header class="site-header">
+    <header class="site-header ex-header">
       <div class="header-inner">
         <a class="brand" href="../index.html" aria-label="Arotec home">
           <img class="brand-logo" src="../assets/images/as-logo.webp" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
@@ -26,551 +25,676 @@
           <a class="nav-link" href="../index.html#platform">Platform</a>
           <a class="nav-link" href="../index.html#about">Who We Are</a>
           <a class="nav-link" href="../index.html#insights">Insights</a>
-          <a class="nav-link" href="../index.html#partners">Partners</a>
-          <a class="nav-link" href="../index.html#join">Join Us</a>
         </nav>
         <div class="header-actions">
-          <select class="language-select" id="languageSelect" aria-label="Language">
-            <option value="en" selected>EN</option>
-            <option value="ja">日本語</option>
-            <option value="zh">繁中</option>
-            <option value="th">ไทย</option>
-          </select>
           <a class="pill-button contact-pill" href="members.html">Get In touch</a>
-          <button class="circle-button" id="searchButton" type="button" title="Search" aria-label="Search">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>
-          </button>
-          <button class="circle-button menu-toggle" id="menuToggle" type="button" title="Open menu" aria-label="Open menu">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
-          </button>
+          <a class="circle-button" href="../index.html" aria-label="Back to home">A&S</a>
         </div>
       </div>
     </header>
-    <div class="mobile-scrim" id="mobileScrim"></div>
-    <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-      <div class="mobile-panel-head">
-        <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/as-logo.webp" width="1092" height="680" alt="A&S arotec scientist" decoding="async">
-        </a>
-        <button class="circle-button" id="menuClose" type="button" title="Close menu" aria-label="Close menu">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
-        </button>
-      </div>
-      <nav class="mobile-nav" aria-label="Mobile primary navigation">
-        <a class="nav-link" href="../index.html">Home</a>
-        <a class="nav-link" href="../index.html#customized">Customized for you</a>
-        <a class="nav-link" href="../index.html#applied">Applied Solutions</a>
-        <a class="nav-link" href="../index.html#products">Applied Products</a>
-        <a class="nav-link" href="../index.html#platform">Platform</a>
-        <a class="nav-link" href="../index.html#about">Who We Are</a>
-        <a class="nav-link" href="../index.html#insights">Insights</a>
-        <a class="nav-link" href="../index.html#partners">Partners</a>
-        <a class="nav-link" href="../index.html#join">Join Us</a>
-        <a class="nav-link" href="members.html">Get In touch</a>
-      </nav>
-      <div class="mobile-language" aria-label="Language">
-        <button class="language-chip active" data-lang-chip="en" type="button">EN</button>
-        <button class="language-chip" data-lang-chip="ja" type="button">日本語</button>
-        <button class="language-chip" data-lang-chip="zh" type="button">繁中</button>
-        <button class="language-chip" data-lang-chip="th" type="button">ไทย</button>
-      </div>
-      <a class="pill-button" href="members.html">Get In touch</a>
-    </aside>
-    <div class="search-modal" id="searchModal" aria-label="Search" role="dialog" aria-modal="true">
-      <div class="search-card">
-        <div class="search-head">
-          <h2>Search</h2>
-          <button class="circle-button" id="searchClose" type="button" title="Close search" aria-label="Close search">
-            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
-          </button>
-        </div>
-        <input class="search-input" id="searchInput" type="search" placeholder="Search pages, science, solutions" autocomplete="off">
-        <div class="search-results" id="searchResults"></div>
-      </div>
+
+    <nav class="ex-progress-nav" data-ex-progress-nav aria-label="Exposome infographic sections">
+      <a href="#exposome-science"><span>01</span>Exposome</a>
+      <a href="#biological-impact"><span>02</span>Impact</a>
+      <a href="#ebii-framework"><span>03</span>Framework</a>
+      <a href="#ebii-index"><span>04</span>Index</a>
+      <a href="#ebii-function"><span>05</span>Function</a>
+    </nav>
+
+    <div class="debug-controls" aria-label="Debug controls">
+      <button type="button" data-debug-toggle="reference">R Ref</button>
+      <button type="button" data-debug-toggle="grid">G Grid</button>
+      <button type="button" data-debug-toggle="outlines">H Cards</button>
+      <button type="button" data-debug-toggle="arrows">A Arrows</button>
     </div>
 
     <main id="main">
-      <section class="story-hero" id="top" aria-labelledby="hero-title">
-        <div class="particle-field" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="story-shell hero-grid">
-          <div class="hero-copy reveal">
-            <p class="story-kicker">Arotec Science Platform</p>
-            <h1 id="hero-title">Exposome Science</h1>
-            <p class="hero-subhead">Understanding how environment, lifestyle, biology, and time shape human health, beauty, and wellbeing.</p>
-            <p>The exposome represents the totality of external and internal exposures that interact with the body across life. Air, light, chemicals, nutrition, sleep, stress, microbiome, inflammation, resilience, and timing all influence biological response and long-term health outcomes.</p>
-            <div class="hero-actions">
-              <a class="story-button primary" href="#journey">Explore the Journey</a>
-              <a class="story-button secondary" href="#ebii">Understand EBII</a>
-            </div>
+      <section class="ex-hero" aria-labelledby="ex-hero-title">
+        <div class="ex-shell ex-hero-grid">
+          <div>
+            <p class="ex-kicker">Arotec Science Platform</p>
+            <h1 id="ex-hero-title">Exposome Science &amp; EBII</h1>
+            <p class="ex-lead">A five-part hybrid infographic website rebuilding the original reference materials with CSS cards, cropped source assets, and SVG flow connections.</p>
           </div>
-          <figure class="hero-visual hero-media-panel reveal">
-            <img src="../assets/images/frontiers-experience.webp" width="2560" height="1200" alt="Fresh green leaves with water droplets in soft natural light" decoding="async" fetchpriority="high">
-            <figcaption>
-              <span>Natural Exposome</span>
-              <strong>Environment, biology, and time in one living system.</strong>
-            </figcaption>
-          </figure>
+          <div class="hero-formula-card" aria-label="EBII concept formula">
+            <span>EBII</span>
+            <strong>f(E, S, A, T)</strong>
+            <p>Exposure load, susceptibility, adaptation, and time combine into a biological impact trajectory.</p>
+          </div>
         </div>
       </section>
 
-      <section class="story-image-moments" aria-label="Exposome science visual themes">
-        <div class="story-shell image-moment-grid">
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-exposome.webp" width="1086" height="1448" alt="A calm human profile surrounded by environmental and biological signals" loading="lazy" decoding="async">
-            <div>
-              <span>Environment</span>
-              <h2>Signals around us</h2>
-              <p>Daily air, light, food, stress, sleep, and surroundings form the living context of human biology.</p>
-            </div>
-          </article>
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-homeostasis-regulation.webp" width="1086" height="1448" alt="A person in a balanced meditative state with warm biological light pathways" loading="lazy" decoding="async">
-            <div>
-              <span>Homeostasis</span>
-              <h2>Balance within the body</h2>
-              <p>Adaptive capacity helps the body respond, repair, and return toward steady internal balance.</p>
-            </div>
-          </article>
-          <article class="image-moment-card reveal">
-            <img src="../assets/images/science-platform-human-longevity-aging.webp" width="1086" height="1448" alt="An older couple walking outdoors in a peaceful natural setting" loading="lazy" decoding="async">
-            <div>
-              <span>Healthspan</span>
-              <h2>Long-term wellbeing</h2>
-              <p>The story connects exposure, resilience, aging, beauty, performance, and everyday vitality.</p>
-            </div>
-          </article>
+      <section class="hybrid-section" id="exposome-science" aria-labelledby="section-1-title">
+        <div class="ex-shell section-head">
+          <p class="ex-kicker">Section 01</p>
+          <h2 id="section-1-title">Exposome Science</h2>
+          <p>The interplay of external exposome, internal exposome, and exposure dynamics shapes human health across the lifespan.</p>
         </div>
-      </section>
-
-      <section class="story-section" id="journey" aria-labelledby="dimensions-title">
-        <div class="story-shell story-grid">
-          <aside class="sticky-visual-panel reveal" aria-label="Exposome relationship visual">
-            <p class="story-kicker">Exposome System</p>
-            <h2>The biological effect of exposure emerges through interaction.</h2>
-            <div class="dimension-orbit" aria-hidden="true">
-              <span>External</span>
-              <span>Internal</span>
-              <span>Time</span>
-              <strong>Body</strong>
-            </div>
-            <div class="compact-formula">Exposome = External × Internal × Dynamics</div>
-          </aside>
-
-          <div class="story-content">
-            <div class="section-heading reveal">
-              <span>01</span>
-              <h2 id="dimensions-title">The Exposome is Built from Three Interacting Dimensions</h2>
-              <p>The biological effect of exposure is not determined by one factor alone. It emerges from the interaction between external exposures, internal biological state, and exposure dynamics over time.</p>
-            </div>
-
-            <div class="dimension-cards">
-              <article class="feature-card reveal accent-teal">
-                <span class="card-index">01</span>
-                <h3>External Exposome</h3>
-                <p class="mini-title">Environmental Exposures</p>
-                <p>All non-genetic exposures from the external environment.</p>
-                <ul>
-                  <li>Physical environment: air pollution, UV radiation, noise, temperature, light</li>
-                  <li>Chemical environment: chemicals, heavy metals, pesticides, endocrine disruptors</li>
-                  <li>Biological environment: pathogens, allergens, environmental microbiota</li>
-                  <li>Built & social environment: urban space, indoor environment, occupation, social factors</li>
-                  <li>Other exposures: microplastics, electromagnetic fields, water quality, food contaminants</li>
-                </ul>
-              </article>
-              <article class="feature-card reveal accent-blue">
-                <span class="card-index">02</span>
-                <h3>Internal Exposome</h3>
-                <p class="mini-title">Lifestyle & Individual Biological Factors</p>
-                <p>Endogenous and modifiable factors within the individual.</p>
-                <div class="split-list">
-                  <ul>
-                    <li>Diet / nutrition</li>
-                    <li>Physical activity</li>
-                    <li>Sleep</li>
-                    <li>Stress</li>
-                    <li>Smoking, alcohol, medications</li>
-                    <li>Social interaction</li>
-                  </ul>
-                  <ul>
-                    <li>Immune function</li>
-                    <li>Inflammation and oxidative stress</li>
-                    <li>Metabolism and hormones</li>
-                    <li>Gut microbiome</li>
-                    <li>Genetics / epigenetics</li>
-                    <li>Neuroendocrine function</li>
-                  </ul>
+        <div class="stage-scroll stage-scroller">
+          <div class="infographic-stage stage-one">
+            <img class="reference-overlay" src="../public/references/01-exposome-science.jpg" alt="" aria-hidden="true">
+            <aside class="feedback-panel" aria-label="Feedback loop">
+              <img class="feedback-loop-image" src="../assets/images/exposome-crops/Feedback Loop.png" alt="Feedback Loop. Resilience and adaptive capacity can reduce biological impact and improve aging trajectory.">
+            </aside>
+            <div class="s1-top-panels">
+              <article class="info-card accent-green external-exposome-card">
+                <div class="external-card-heading">
+                  <span class="card-index">1</span>
+                  <div>
+                    <h3>External Exposome</h3>
+                    <p class="card-subtitle">Environmental Exposures</p>
+                  </div>
+                </div>
+                <p class="external-card-intro">All non-genetic exposures from<br>the external environment</p>
+                <div class="external-source-list">
+                  <div class="external-source-row">
+                    <img src="../assets/images/exposome-crops/Physical Environment.png" alt="">
+                    <strong>Physical<br>Environment</strong>
+                    <ul>
+                      <li>Air pollution</li>
+                      <li>UV / IR radiation</li>
+                      <li>Noise</li>
+                      <li>Temperature / Climate</li>
+                      <li>Light (visible / blue light)</li>
+                    </ul>
+                  </div>
+                  <div class="external-source-row">
+                    <img src="../assets/images/exposome-crops/Chemical Environment.png" alt="">
+                    <strong>Chemical<br>Environment</strong>
+                    <ul>
+                      <li>Chemicals</li>
+                      <li>Heavy metals</li>
+                      <li>Pesticides</li>
+                      <li>Endocrine disruptors</li>
+                      <li>Pharmaceuticals</li>
+                    </ul>
+                  </div>
+                  <div class="external-source-row">
+                    <img src="../assets/images/exposome-crops/Biological Environment.png" alt="">
+                    <strong>Biological<br>Environment</strong>
+                    <ul>
+                      <li>Pathogens (bacteria, virus, fungi)</li>
+                      <li>Allergens</li>
+                      <li>Microbiota (environmental)</li>
+                    </ul>
+                  </div>
+                  <div class="external-source-row">
+                    <img src="../assets/images/exposome-crops/Built  Social Environment.png" alt="">
+                    <strong>Built / Social<br>Environment</strong>
+                    <ul>
+                      <li>Urban environment</li>
+                      <li>Occupational exposures</li>
+                      <li>Indoor environment</li>
+                      <li>Social &amp; economic factors</li>
+                    </ul>
+                  </div>
+                  <div class="external-source-row">
+                    <img src="../assets/images/exposome-crops/Other Exposome.png" alt="">
+                    <strong>Other</strong>
+                    <ul>
+                      <li>Microplastics</li>
+                      <li>Electromagnetic fields</li>
+                      <li>Water quality</li>
+                      <li>Food contaminants</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
-              <article class="feature-card reveal accent-purple">
-                <span class="card-index">03</span>
-                <h3>Exposure Dynamics</h3>
-                <p class="mini-title">Quantifying Exposure Over Time</p>
-                <p>Exposure impact depends on how much, how long, how often, when, and in what combinations.</p>
-                <ul>
-                  <li>Intensity: how much exposure</li>
-                  <li>Duration: how long exposure lasts</li>
-                  <li>Frequency: how often exposure occurs</li>
-                  <li>Timing: time of day, season, life stage, critical windows</li>
-                  <li>Mixture / interactions: combined effects of multiple exposures</li>
-                  <li>Cumulative burden: total accumulated exposure across life</li>
-                </ul>
+              <span class="s1-x-separator" aria-hidden="true">&times;</span>
+              <div class="internal-exposome-stack">
+              <article class="info-card accent-blue internal-exposome-card">
+                <div class="internal-card-heading">
+                  <span class="card-index">2</span>
+                  <div>
+                    <h3>Internal Exposome</h3>
+                    <p class="card-subtitle">Lifestyle &amp; Individual Factors</p>
+                  </div>
+                </div>
+                <p class="internal-card-intro">Endogenous and modifiable factors<br>within the individual</p>
+                <div class="internal-factor-shell">
+                  <div class="internal-factor-panel">
+                    <h4>Lifestyle &amp;<br>Behavioral Factors</h4>
+                    <ul>
+                      <li><img src="../assets/images/exposome-crops/Diet nutrition.png" alt=""><span>Diet / Nutrition</span></li>
+                      <li><img src="../assets/images/exposome-crops/Physical activity.png" alt=""><span>Physical Activity</span></li>
+                      <li><img src="../assets/images/exposome-crops/Sleep.png" alt=""><span>Sleep</span></li>
+                      <li><img src="../assets/images/exposome-crops/Stress.png" alt=""><span>Stress</span></li>
+                      <li><img src="../assets/images/exposome-crops/Smoking.png" alt=""><span>Smoking</span></li>
+                      <li><img src="../assets/images/exposome-crops/Alcohol.png" alt=""><span>Alcohol</span></li>
+                      <li><img src="../assets/images/exposome-crops/Medications.png" alt=""><span>Medications</span></li>
+                      <li><img src="../assets/images/exposome-crops/Social interaction.png" alt=""><span>Social Interaction</span></li>
+                    </ul>
+                  </div>
+                  <span class="internal-panel-arrow" aria-hidden="true">→</span>
+                  <div class="internal-factor-panel">
+                    <h4>Internal Biological<br>State &amp; Processes</h4>
+                    <ul>
+                      <li><img src="../assets/images/exposome-crops/Immune function.png" alt=""><span>Immune Function</span></li>
+                      <li><img src="../assets/images/exposome-crops/Inflammation.png" alt=""><span>Inflammation</span></li>
+                      <li><img src="../assets/images/exposome-crops/Oxidative stress.png" alt=""><span>Oxidative Stress</span></li>
+                      <li><img src="../assets/images/exposome-crops/Metabolism.png" alt=""><span>Metabolism</span></li>
+                      <li><img src="../assets/images/exposome-crops/Hormonal status.png" alt=""><span>Hormonal Status</span></li>
+                      <li><img src="../assets/images/exposome-crops/Gut microbiome.png" alt=""><span>Gut Microbiome</span></li>
+                      <li><img src="../assets/images/exposome-crops/Genetics epigenetics.png" alt=""><span>Genetics / Epigenetics</span></li>
+                      <li><img src="../assets/images/exposome-crops/Neuroendocrine function.png" alt=""><span>Neuroendocrine Function</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <img class="internal-flow-strip" src="../assets/images/exposome-crops/Internal Exposome Flow.png" alt="">
+              </div>
+              <span class="s1-x-separator" aria-hidden="true">&times;</span>
+              <article class="info-card accent-purple exposure-dynamics-card">
+                <div class="dynamics-card-heading">
+                  <span class="card-index">3</span>
+                  <div>
+                    <h3>Exposure Dynamics</h3>
+                    <p class="card-subtitle">Quantifying Exposure Over Time</p>
+                  </div>
+                </div>
+                <p class="dynamics-card-intro">How much, how long, how often,<br>and when we are exposed</p>
+                <div class="dynamics-factor-list">
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Intensity.png" alt="">
+                    <strong>Intensity<br><span>(How much)</span></strong>
+                    <p>High<br>High concentration</p>
+                  </div>
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Duration.png" alt="">
+                    <strong>Duration<br><span>(How long)</span></strong>
+                    <p>Length of time<br>of each exposure</p>
+                  </div>
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Frequency.png" alt="">
+                    <strong>Frequency<br><span>(How often)</span></strong>
+                    <p>How frequently<br>the exposure occurs</p>
+                  </div>
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Timing.png" alt="">
+                    <strong>Timing<br><span>(When)</span></strong>
+                    <p>Time of day, day of week,<br>season, and life stage<br>(critical windows)</p>
+                  </div>
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Mixture.png" alt="">
+                    <strong>Mixture / Interactions<br><span>(What combinations)</span></strong>
+                    <p>Combined effects of<br>multiple exposures</p>
+                  </div>
+                  <div class="dynamics-factor-row">
+                    <img src="../assets/images/exposome-crops/Cumulative burden.png" alt="">
+                    <strong>Cumulative Burden<br><span>(Over the lifespan)</span></strong>
+                    <p>Total accumulated<br>exposures over time</p>
+                  </div>
+                </div>
               </article>
             </div>
-
-            <div class="formula-strip reveal" aria-label="Exposome formula">
-              <span>External Exposome</span>
-              <b>×</b>
-              <span>Internal Exposome</span>
-              <b>×</b>
-              <span>Exposure Dynamics</span>
-              <strong>Exposome</strong>
+            <div class="formula-bar s1-formula-bar">
+              <span class="formula-label">EXPOSOME =</span><b class="formula-factor factor-external">External<br>Exposome</b><span class="formula-times">&times;</span><b class="formula-factor factor-internal">Internal<br>Exposome</b><span class="formula-times">&times;</span><b class="formula-factor factor-dynamics">Exposure<br>Dynamics</b>
+              <small>The totality of exposures and their interactions over the lifespan.</small>
+            </div>
+            <div class="flow-row s1-impact-row">
+              <div class="s1-row-title">
+                <strong>Biological Impact</strong>
+                <span>(Biological Response)</span>
+                <p>How the body responds to the exposome</p>
+              </div>
+              <div class="s1-icon-strip impact-icons">
+                <div><img src="../assets/images/exposome-crops/Biological Impact_Oxidative stress.png" alt=""><span>Oxidative<br>Stress</span></div>
+                <div><img src="../assets/images/exposome-crops/Biological Impact_inflammation.png" alt=""><span>Inflammation</span></div>
+                <div><img src="../assets/images/exposome-crops/Biological Impact_immune response.png" alt=""><span>Immune<br>Response</span></div>
+                <div><img src="../assets/images/exposome-crops/Biological Impact_neuroendocrine changes.png" alt=""><span>Neuroendocrine<br>Changes</span></div>
+                <div><img src="../assets/images/exposome-crops/Biological Impact_metabolic dysregulation.png" alt=""><span>Metabolic<br>Dysregulation</span></div>
+                <div><img src="../assets/images/exposome-crops/Biological Impact_epigenetic alteration.png" alt=""><span>Epigenetic<br>Alterations</span></div>
+              </div>
+            </div>
+            <div class="trajectory-row s1-trajectory-row">
+              <div class="s1-row-title">
+                <strong>Aging Trajectory</strong>
+                <span>(Long-Term Consequence)</span>
+                <p>How biological impact translates into aging over time</p>
+              </div>
+              <div class="trajectory-visual">
+                <div class="trajectory-side healthy-side">
+                  <strong>Healthy Aging</strong>
+                  <img src="../assets/images/exposome-crops/Healthy Aging.png" alt="">
+                  <span>High Resilience<br>Low Vulnerability</span>
+                </div>
+                <div class="trajectory-center">
+                  <img src="../assets/images/exposome-crops/Adaptive Zone.png" alt="">
+                  <strong>Adaptive Zone</strong>
+                  <span>(Balance Point)</span>
+                </div>
+                <div class="trajectory-side accelerated-side">
+                  <strong>Accelerated Aging</strong>
+                  <img src="../assets/images/exposome-crops/Accelerated Aging.png" alt="">
+                  <span>Low Resilience<br>High Vulnerability</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow-row health-row s1-health-row">
+              <div class="s1-row-title health-title">
+                <img src="../assets/images/exposome-crops/Health Outcomes.png" alt="">
+                <div>
+                  <strong>Health Outcomes</strong>
+                  <span>(Healthspan / Functional Outcomes)</span>
+                  <p>The ultimate impact on quality of life</p>
+                </div>
+              </div>
+              <div class="s1-icon-strip health-icons">
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_Physical function.png" alt=""><span>Physical<br>Function</span></div>
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_cognitive function.png" alt=""><span>Cognitive<br>Function</span></div>
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_emotional wellbeing.png" alt=""><span>Emotional<br>Wellbeing</span></div>
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_metabolic health.png" alt=""><span>Metabolic<br>Health</span></div>
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_skin health.png" alt=""><span>Skin<br>Health</span></div>
+                <div><img src="../assets/images/exposome-crops/Health Outcomes_longevity.png" alt=""><span>Longevity</span></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="story-section soft-band" aria-labelledby="entry-title">
-        <div class="story-shell">
-          <div class="section-heading centered reveal">
-            <span>02</span>
-            <h2 id="entry-title">Exposure Becomes Biological When It Enters the Body</h2>
-            <p>External signals can enter the body through multiple routes. Once absorbed, they interact with tissues, organs, cells, and molecular systems.</p>
-          </div>
-          <figure class="story-media-card reveal">
-            <img src="../assets/images/science-platform-exposome.webp" width="1086" height="1448" alt="Human profile surrounded by environmental and biological exposure signals" loading="lazy" decoding="async">
-            <figcaption>
-              <span>Exposure Interface</span>
-              <strong>The body is an interface between the outer environment and inner biology.</strong>
-            </figcaption>
-          </figure>
-          <div class="entry-flow">
-            <article class="flow-column reveal">
+      <section class="hybrid-section" id="biological-impact" aria-labelledby="section-2-title">
+        <div class="ex-shell section-head">
+          <p class="ex-kicker">Section 02</p>
+          <h2 id="section-2-title">Biological Impact</h2>
+          <p>How exposures enter the body, create biological effects, and translate into acute, chronic, developmental, reproductive, and long-term quality-of-life outcomes.</p>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="infographic-stage stage-two">
+            <img class="reference-overlay" src="../public/references/02-biological-impact.jpg" alt="" aria-hidden="true">
+            <span class="s2-flow-arrow s2-flow-arrow-1" aria-hidden="true"></span>
+            <span class="s2-flow-arrow s2-flow-arrow-2" aria-hidden="true"></span>
+            <span class="s2-flow-arrow s2-flow-arrow-3" aria-hidden="true"></span>
+            <span class="s2-flow-arrow s2-flow-arrow-4" aria-hidden="true"></span>
+            <article class="impact-sources panel-card s2-card">
               <h3>Exposure Sources</h3>
-              <div class="icon-grid">
-                <span>Air pollution</span><span>Chemicals</span><span>UV radiation</span><span>Heavy metals</span>
-                <span>Pesticides</span><span>Lifestyle factors</span><span>Pharmaceuticals</span><span>Nanoparticles</span>
+              <div class="s2-source-list">
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Air pollution.png" alt=""><span>Air Pollution</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Chemicals.png" alt=""><span>Chemicals</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/UV radiation.png" alt=""><span>UV Radiation</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Heavy metals.png" alt=""><span>Heavy Metals</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Pesticides.png" alt=""><span>Pesticides</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Lifestyle factors.png" alt=""><span>Lifestyle Factors<small>(diet, smoking, alcohol, stress)</small></span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Pharmaceuticals.png" alt=""><span>Pharmaceuticals</span></div>
+                <div class="s2-source-row"><img src="../assets/images/Biological Impact/Nanoparticles.png" alt=""><span>Nanoparticles</span></div>
               </div>
             </article>
-            <div class="flow-arrow reveal" aria-hidden="true"></div>
-            <article class="absorption-panel reveal">
-              <h3>Entry & Absorption</h3>
-              <div class="body-barrier" aria-hidden="true">
-                <span></span><span></span><span></span><span></span>
+            <article class="entry-card panel-card s2-card">
+              <h3>Entry &amp; Absorption</h3>
+              <div class="s2-entry-layout">
+                <div class="s2-entry-routes">
+                  <div><img src="../assets/images/Biological Impact/Inhalation.png" alt=""><span>Inhalation</span></div>
+                  <div><img src="../assets/images/Biological Impact/Ingestion.png" alt=""><span>Ingestion</span></div>
+                  <div><img src="../assets/images/Biological Impact/Dermal contact.png" alt=""><span>Dermal Contact</span></div>
+                  <div><img src="../assets/images/Biological Impact/Injection.png" alt=""><span>Injection</span></div>
+                </div>
+                <div class="s2-entry-visual">
+                  <span class="s2-entry-arrow s2-entry-arrow-top" aria-hidden="true"></span>
+                  <img class="s2-entry-absorption" src="../assets/images/Biological Impact/Entry & Absorption.png" alt="">
+                  <span class="s2-entry-arrow s2-entry-arrow-bottom" aria-hidden="true"></span>
+                </div>
               </div>
-              <ul>
-                <li>Inhalation</li>
-                <li>Ingestion</li>
-                <li>Dermal contact</li>
-                <li>Injection</li>
+            </article>
+            <article class="effects-card panel-card s2-card">
+              <h3 class="s2-effect-pill">Biological Effects</h3>
+              <div class="body-effects">
+                <div class="s2-organ-column">
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Neurological.png" alt="">
+                    <div><strong>Neurological</strong><ul><li>Oxidative stress</li><li>Neuroinflammation</li><li>Cognitive impairment</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Cardiovascular.png" alt="">
+                    <div><strong>Cardiovascular</strong><ul><li>Inflammation</li><li>Endothelial dysfunction</li><li>Hypertension</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Hepatic.png" alt="">
+                    <div><strong>Hepatic</strong><ul><li>Detoxification burden</li><li>Oxidative stress</li><li>Steatosis</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Immune.png" alt="">
+                    <div><strong>Immune</strong><ul><li>Immune dysregulation</li><li>Chronic inflammation</li><li>Autoimmunity</li></ul></div>
+                  </div>
+                </div>
+                <img class="body-img" src="../assets/images/Biological Impact/Body.png" alt="Human body anatomy diagram">
+                <div class="s2-organ-column">
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Respiratory.png" alt="">
+                    <div><strong>Respiratory</strong><ul><li>Inflammation</li><li>Oxidative damage</li><li>Decreased lung function</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Endocrine.png" alt="">
+                    <div><strong>Endocrine</strong><ul><li>Hormone disruption</li><li>Metabolic imbalance</li><li>Thyroid dysfunction</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Gastrointestinal.png" alt="">
+                    <div><strong>Gastrointestinal</strong><ul><li>Microbiome disruption</li><li>Barrier dysfunction</li><li>Inflammation</li></ul></div>
+                  </div>
+                  <div class="s2-organ-block">
+                    <img src="../assets/images/Biological Impact/Developmental & reproductive.png" alt="">
+                    <div><strong>Reproductive</strong><ul><li>Hormonal imbalance</li><li>Reduced fertility</li><li>Developmental toxicity</li></ul></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cellular-strip">
+                <h4>Cellular &amp; Molecular Effects</h4>
+                <div class="s2-cellular-icons">
+                  <div><img src="../assets/images/Biological Impact/Oxidative stress.png" alt=""><span>Oxidative<br>Stress</span></div>
+                  <div><img src="../assets/images/Biological Impact/DNA damage.png" alt=""><span>DNA<br>Damage</span></div>
+                  <div><img src="../assets/images/Biological Impact/epigenetic alteration.png" alt=""><span>Epigenetic<br>Alterations</span></div>
+                  <div><img src="../assets/images/Biological Impact/mitochondrial dysfunction.png" alt=""><span>Mitochondrial<br>Dysfunction</span></div>
+                  <div><img src="../assets/images/Biological Impact/protein misfolding.png" alt=""><span>Protein<br>Misfolding</span></div>
+                  <div><img src="../assets/images/Biological Impact/cell death.png" alt=""><span>Cell Death<br>(Apoptosis)</span></div>
+                </div>
+              </div>
+            </article>
+            <article class="outcomes-card panel-card s2-card">
+              <h3>Health Outcomes</h3>
+              <div class="s2-outcome-list">
+                <div class="s2-outcome-row"><img src="../assets/images/Biological Impact/Acute effects.png" alt=""><div><strong>Acute Effects</strong><ul><li>Irritation</li><li>Allergic reactions</li><li>Poisoning</li></ul></div></div>
+                <div class="s2-outcome-row"><img src="../assets/images/Biological Impact/Chronic effects.png" alt=""><div><strong>Chronic Effects</strong><ul><li>Chronic disease</li><li>Organ dysfunction</li><li>Metabolic disorders</li></ul></div></div>
+                <div class="s2-outcome-row"><img src="../assets/images/Biological Impact/Developmental & reproductive.png" alt=""><div><strong>Developmental &amp;<br>Reproductive Effects</strong><ul><li>Birth defects</li><li>Developmental delays</li><li>Infertility</li></ul></div></div>
+                <div class="s2-outcome-row"><img src="../assets/images/Biological Impact/Cancer.png" alt=""><div><strong>Cancer</strong><ul><li>Mutagenesis</li><li>Tumor promotion</li><li>Carcinogenesis</li></ul></div></div>
+              </div>
+            </article>
+            <article class="quality-card panel-card s2-card">
+              <img src="../assets/images/Biological Impact/Reduced Quality of Life.png" alt="">
+              <div>
+                <h3>Reduced Quality of Life</h3>
+                <ul><li>Physical limitations</li><li>Mental health issues</li><li>Reduced longevity</li></ul>
+              </div>
+            </article>
+            <article class="mechanism-strip panel-card s2-card">
+              <h3>Key Mechanisms</h3>
+              <div class="s2-mechanism-list">
+                <div><img src="../assets/images/Biological Impact/Key Oxidative stress.png" alt=""><strong>Oxidative Stress</strong><p>Imbalance between free radicals and antioxidants</p></div>
+                <div><img src="../assets/images/Biological Impact/Key inflammation.png" alt=""><strong>Inflammation</strong><p>Chronic inflammation leads to tissue and organ damage</p></div>
+                <div><img src="../assets/images/Biological Impact/Key DNA damage.png" alt=""><strong>DNA Damage</strong><p>Mutations and genomic instability increase disease risk</p></div>
+                <div><img src="../assets/images/Biological Impact/Key endocrine disruption.png" alt=""><strong>Endocrine Disruption</strong><p>Interference with hormones affects normal functions</p></div>
+                <div><img src="../assets/images/Biological Impact/Key  immune dysregulation.png" alt=""><strong>Immune Dysregulation</strong><p>Impaired immune response or chronic immune activation</p></div>
+                <div><img src="../assets/images/Biological Impact/Key metabolic dysfunction.png" alt=""><strong>Metabolic Dysfunction</strong><p>Disrupted metabolism leads to obesity, diabetes and other disorders</p></div>
+              </div>
+            </article>
+            <article class="prevention-card panel-card s2-card">
+              <img src="../assets/images/Biological Impact/Prevention & Mitigation.png" alt="">
+              <div>
+                <h3>Prevention &amp; Mitigation</h3>
+                <ul><li>Reduce exposure</li><li>Strengthen resilience</li><li>Protective interventions</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="hybrid-section" id="ebii-framework" aria-labelledby="section-3-title">
+        <div class="ex-shell section-head">
+          <p class="ex-kicker">Section 03</p>
+          <h2 id="section-3-title">EBII Framework</h2>
+          <p>A quantitative model integrating exposure, susceptibility, adaptation, and time.</p>
+        </div>
+        <div class="stage-scroll stage-scroller">
+          <div class="infographic-stage stage-three">
+            <img class="reference-overlay" src="../public/references/03-ebii-framework.jpg" alt="" aria-hidden="true">
+            <svg class="ebii3-arrow-layer" viewBox="0 0 1562 742" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="ebii3-arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="ebii3-arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="ebii3-arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="ebii3-arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="ebii3-arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+              </defs>
+              <path class="ebii3-arrow ebii3-arrow-blue dashed" d="M280 230 H305"></path>
+              <path class="ebii3-arrow ebii3-arrow-purple dashed" d="M530 230 H555"></path>
+              <path class="ebii3-arrow ebii3-arrow-green dashed back" d="M1188 230 H1162"></path>
+              <path class="ebii3-arrow ebii3-arrow-orange dashed back" d="M1430 230 H1406"></path>
+              <path class="ebii3-arrow ebii3-arrow-gray thick" d="M380 565 H470"></path>
+              <path class="ebii3-arrow ebii3-arrow-gray thick" d="M835 565 H925"></path>
+              <path class="ebii3-arrow ebii3-arrow-gray thick" d="M1190 565 H1280"></path>
+            </svg>
+
+            <article class="ebii3-load-card ebii3-card panel-card">
+              <h3><span>E</span> Exposome Load</h3>
+              <div class="ebii3-load-item">
+                <img src="../assets/images/EBII Framework/External exposome.png" alt="">
+                <div><strong>External exposome</strong><p>(air, water, chemicals, UV, noise, diet, lifestyle, psychosocial, etc.)</p></div>
+              </div>
+              <div class="ebii3-load-item">
+                <img src="../assets/images/EBII Framework/internal exposome.png" alt="">
+                <div><strong>Internal exposome</strong><p>(metabolism, inflammation, microbiome, hormones, immune status, etc.)</p></div>
+              </div>
+              <div class="ebii3-load-item">
+                <img src="../assets/images/EBII Framework/exposure dosimeter.png" alt="">
+                <div><strong>Exposure dosimeter</strong><p>(intensity, frequency, duration, route, timing, accumulation)</p></div>
+              </div>
+            </article>
+
+            <article class="ebii3-susceptibility-card ebii3-card panel-card">
+              <h3><span>S</span> Susceptibility</h3>
+              <ul class="ebii3-list">
+                <li><img src="../assets/images/EBII Framework/Genetics.png" alt="">Genetics</li>
+                <li><img src="../assets/images/EBII Framework/epigenetics.png" alt="">Epigenetics</li>
+                <li><img src="../assets/images/EBII Framework/age.png" alt="">Age</li>
+                <li><img src="../assets/images/EBII Framework/sex.png" alt="">Sex</li>
+                <li><img src="../assets/images/EBII Framework/developmental stage.png" alt="">Developmental stage</li>
+                <li><img src="../assets/images/EBII Framework/disease status.png" alt="">Disease status</li>
+                <li><img src="../assets/images/EBII Framework/lifestyle factors.png" alt="">Lifestyle factors</li>
               </ul>
             </article>
-            <div class="flow-arrow reveal" aria-hidden="true"></div>
-            <article class="flow-column reveal">
-              <h3>Biological Effects</h3>
-              <p>Signals move from exposure sources into biological systems where they may influence inflammatory, oxidative, metabolic, immune, and neuroendocrine responses.</p>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="story-section" aria-labelledby="impact-title">
-        <div class="story-shell">
-          <div class="section-heading reveal">
-            <span>03</span>
-            <h2 id="impact-title">The Body Translates Exposure into Biological Impact</h2>
-            <p>Once exposures interact with the body, they can trigger biological responses across organ systems and cellular mechanisms.</p>
-          </div>
-          <figure class="story-media-card media-right reveal">
-            <img src="../assets/images/science-platform-homeostasis-regulation.webp" width="1086" height="1448" alt="A calm person with warm biological pathways showing internal balance" loading="lazy" decoding="async">
-            <figcaption>
-              <span>Biological Response</span>
-              <strong>Impact becomes meaningful through the body's ability to regulate and recover.</strong>
-            </figcaption>
-          </figure>
-          <div class="impact-stage">
-            <div class="body-system reveal" aria-hidden="true">
-              <div class="body-glow"></div>
-              <span>Neurological</span>
-              <span>Respiratory</span>
-              <span>Immune</span>
+            <div class="ebii3-main-formula panel-card">
+              <span>EBII =</span>
+              <div class="ebii3-fraction">
+                <strong>(<b class="e">E</b> &times; <b class="s">S</b>)</strong>
+                <em>A</em>
+              </div>
+              <span>&times; <b class="t">T</b></span>
+              <div class="ebii3-formula-notes">
+                <p><b>Exposure load</b><br>amplified by susceptibility</p>
+                <p><b>Buffered by</b><br>adaptive capacity<br>(biological resilience)</p>
+                <p><b>Accumulated</b><br>over time</p>
+              </div>
             </div>
-            <div class="organ-grid">
-              <article class="organ-card reveal"><h3>Neurological</h3><p>Oxidative stress, neuroinflammation, cognitive impairment</p></article>
-              <article class="organ-card reveal"><h3>Respiratory</h3><p>Inflammation, oxidative damage, decreased lung function</p></article>
-              <article class="organ-card reveal"><h3>Cardiovascular</h3><p>Inflammation, endothelial dysfunction, hypertension</p></article>
-              <article class="organ-card reveal"><h3>Endocrine</h3><p>Hormone disruption, metabolic imbalance, thyroid dysfunction</p></article>
-              <article class="organ-card reveal"><h3>Hepatic</h3><p>Detoxification burden, oxidative stress, steatosis</p></article>
-              <article class="organ-card reveal"><h3>Gastrointestinal</h3><p>Microbiome disruption, barrier dysfunction, inflammation</p></article>
-              <article class="organ-card reveal"><h3>Immune</h3><p>Immune dysregulation, chronic inflammation, autoimmunity</p></article>
-              <article class="organ-card reveal"><h3>Reproductive</h3><p>Hormonal imbalance, reduced fertility, developmental toxicity</p></article>
-            </div>
-          </div>
-          <div class="micro-grid reveal">
-            <h3>Cellular & Molecular Effects</h3>
-            <span>Oxidative stress</span><span>DNA damage</span><span>Epigenetic alterations</span><span>Mitochondrial dysfunction</span><span>Protein misfolding</span><span>Cell death / apoptosis</span>
-          </div>
-          <div class="outcome-row">
-            <article class="outcome-card reveal">Acute effects</article>
-            <article class="outcome-card reveal">Chronic effects</article>
-            <article class="outcome-card reveal">Developmental & reproductive effects</article>
-            <article class="outcome-card reveal">Cancer-related risk</article>
-            <article class="outcome-card reveal">Reduced quality of life</article>
-          </div>
-        </div>
-      </section>
 
-      <section class="story-section soft-band" aria-labelledby="mechanisms-title">
-        <div class="story-shell">
-          <div class="section-heading centered reveal">
-            <span>04</span>
-            <h2 id="mechanisms-title">Key Mechanisms Behind Biological Impact</h2>
-            <p>EBII connects exposure with biological mechanisms that may influence aging, resilience, disease risk, and functional outcomes.</p>
-          </div>
-          <div class="mechanism-chain" aria-label="Key biological mechanisms">
-            <article class="mechanism-card reveal accent-blue">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">ROS</span>
-                <span class="mechanism-number">01</span>
-              </div>
-              <h3>Oxidative Stress</h3>
-              <p>Imbalance between free radicals and antioxidants.</p>
-            </article>
-            <article class="mechanism-card reveal accent-orange">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">IL</span>
-                <span class="mechanism-number">02</span>
-              </div>
-              <h3>Inflammation</h3>
-              <p>Chronic inflammatory response that may affect tissues and organs.</p>
-            </article>
-            <article class="mechanism-card reveal accent-purple">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">DNA</span>
-                <span class="mechanism-number">03</span>
-              </div>
-              <h3>DNA Damage</h3>
-              <p>Genomic instability associated with long-term biological risk.</p>
-            </article>
-            <article class="mechanism-card reveal accent-cyan">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">H</span>
-                <span class="mechanism-number">04</span>
-              </div>
-              <h3>Endocrine Disruption</h3>
-              <p>Interference with hormone signaling and normal physiological function.</p>
-            </article>
-            <article class="mechanism-card reveal accent-green">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">IMM</span>
-                <span class="mechanism-number">05</span>
-              </div>
-              <h3>Immune Dysregulation</h3>
-              <p>Altered immune response or chronic immune activation.</p>
-            </article>
-            <article class="mechanism-card reveal accent-blue">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">MET</span>
-                <span class="mechanism-number">06</span>
-              </div>
-              <h3>Metabolic Dysfunction</h3>
-              <p>Disrupted metabolism that may affect energy balance and disease risk.</p>
-            </article>
-            <article class="mechanism-card prevention reveal accent-green">
-              <div class="mechanism-topline">
-                <span class="mechanism-icon" aria-hidden="true">RES</span>
-                <span class="mechanism-number">07</span>
-              </div>
-              <h3>Prevention & Mitigation</h3>
-              <p>Reduce exposure. Strengthen resilience. Support protective interventions.</p>
-              <ul class="mechanism-actions" aria-label="Prevention and mitigation actions">
-                <li>Reduce exposure</li>
-                <li>Strengthen resilience</li>
-                <li>Support protective interventions</li>
+            <article class="ebii3-adaptation-card ebii3-card panel-card">
+              <h3><span>A</span> Adaptation <small>(Adaptive Capacity)</small></h3>
+              <ul class="ebii3-list">
+                <li><img src="../assets/images/EBII Framework/Detoxification.png" alt="">Detoxification capacity</li>
+                <li><img src="../assets/images/EBII Framework/immune resilience.png" alt="">Immune resilience</li>
+                <li><img src="../assets/images/EBII Framework/repair capacity.png" alt="">Repair capacity</li>
+                <li><img src="../assets/images/EBII Framework/neuroplasticity.png" alt="">Neuroplasticity</li>
+                <li><img src="../assets/images/EBII Framework/metabolic flexibility.png" alt="">Metabolic flexibility</li>
+                <li><img src="../assets/images/EBII Framework/recovery capacity.png" alt="">Recovery capacity</li>
               </ul>
             </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="story-section" id="ebii" aria-labelledby="framework-title">
-        <div class="story-shell">
-          <div class="section-heading reveal">
-            <span>05</span>
-            <h2 id="framework-title">EBII Framework</h2>
-            <p><strong>Exposome Biological Impact Index.</strong> EBII is a conceptual quantitative framework that integrates exposure load, biological susceptibility, adaptive capacity, and time to estimate overall biological impact. It is not a validated medical diagnostic score.</p>
-          </div>
-          <figure class="story-media-card media-left reveal">
-            <img src="../assets/images/frontiers-experience.webp" width="2560" height="1200" alt="Close view of leaves and water droplets representing resilience and adaptation" loading="lazy" decoding="async">
-            <figcaption>
-              <span>Adaptive Capacity</span>
-              <strong>Resilience is the buffer between exposure load and long-term biological impact.</strong>
-            </figcaption>
-          </figure>
-          <div class="pillar-grid">
-            <article class="pillar-card reveal accent-blue"><span>E</span><h3>E — Exposome Load</h3><p>The total burden of external and internal exposures.</p><ul><li>External exposome: air, water, chemicals, UV, noise, diet, lifestyle</li><li>Internal exposome: metabolism, inflammation, microbiome, hormones, immune status</li><li>Exposure dosimeter: intensity, frequency, duration, route, timing, accumulation</li></ul></article>
-            <article class="pillar-card reveal accent-purple"><span>S</span><h3>S — Biological Susceptibility</h3><p>Intrinsic factors that influence individual sensitivity.</p><ul><li>Genetics</li><li>Epigenetics</li><li>Age and sex</li><li>Developmental stage</li><li>Disease status</li><li>Lifestyle factors</li></ul></article>
-            <article class="pillar-card reveal accent-green"><span>A</span><h3>A — Adaptation / Adaptive Capacity</h3><p>The capacity of the body to respond, repair, recover, and adapt.</p><ul><li>Detoxification capacity</li><li>Immune resilience</li><li>Repair capacity</li><li>Neuroplasticity</li><li>Metabolic flexibility</li><li>Homeostasis maintenance</li></ul></article>
-            <article class="pillar-card reveal accent-orange"><span>T</span><h3>T — Time / Temporal Accumulation</h3><p>The temporal dimension of exposure and biological response.</p><ul><li>Duration</li><li>Frequency</li><li>Timing</li><li>Cumulative burden</li><li>Critical windows</li><li>Life course stage</li></ul></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section formula-section" aria-labelledby="formula-title">
-        <div class="story-shell">
-          <div class="section-heading centered reveal">
-            <span>06</span>
-            <h2 id="formula-title">How EBII Combines Load, Susceptibility, Adaptation, and Time</h2>
-            <p>Higher exposure load, susceptibility, and temporal accumulation may increase biological impact. Higher resilience and adaptation may buffer and reduce the final impact.</p>
-          </div>
-          <div class="formula-stage reveal">
-            <div class="formula-block">
-              <p>Conceptual state function</p>
-              <strong>EBII = f(E, S, A, T)</strong>
-            </div>
-            <div class="formula-block fraction">
-              <p>Approximate conceptual model</p>
-              <strong><span>E × S × T</span><em>R</em></strong>
-              <small>EBII ≈ numerator buffered by resilience</small>
-            </div>
-            <div class="resilience-shield">
-              <span>R</span>
-              <p>Biological resilience acts as a buffer and protective factor, reducing the final impact.</p>
-            </div>
-          </div>
-          <div class="formula-legend reveal">
-            <span><b>E</b> Exposome Load</span>
-            <span><b>S</b> Biological Susceptibility</span>
-            <span><b>T</b> Temporal Accumulation</span>
-            <span><b>R</b> Biological Resilience / Adaptive Capacity</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section comparison-section" aria-labelledby="compare-title">
-        <div class="story-shell">
-          <div class="section-heading centered reveal">
-            <span>07</span>
-            <h2 id="compare-title">High EBII vs Low EBII</h2>
-            <p>EBII helps explain how different combinations of exposure, susceptibility, time, and resilience can lead to different biological trajectories.</p>
-          </div>
-          <figure class="story-media-card reveal">
-            <img src="../assets/images/science-platform-human-longevity-aging.webp" width="1086" height="1448" alt="Healthy older couple walking outdoors in a natural environment" loading="lazy" decoding="async">
-            <figcaption>
-              <span>Healthspan Direction</span>
-              <strong>Lower biological impact supports vitality, beauty, wellbeing, and longer healthspan.</strong>
-            </figcaption>
-          </figure>
-          <div class="comparison-grid">
-            <article class="comparison-panel high reveal">
-              <div class="gauge" aria-hidden="true"><span></span></div>
-              <h3>High EBII</h3>
-              <p class="mini-title">Higher Biological Impact</p>
-              <ul>
-                <li>High exposure load and/or susceptibility</li>
-                <li>Longer or greater temporal accumulation</li>
-                <li>Low resilience or poor adaptation</li>
-                <li>Greater biological impact and risk</li>
+            <article class="ebii3-time-card ebii3-card panel-card">
+              <h3><span>T</span> Time</h3>
+              <ul class="ebii3-list">
+                <li><img src="../assets/images/EBII Framework/Duration.png" alt="">Duration</li>
+                <li><img src="../assets/images/EBII Framework/frequency.png" alt="">Frequency</li>
+                <li><img src="../assets/images/EBII Framework/timing.png" alt="">Timing</li>
+                <li><img src="../assets/images/EBII Framework/cumulative burden.png" alt="">Cumulative burden</li>
+                <li><img src="../assets/images/EBII Framework/critical windows.png" alt="">Critical windows</li>
+                <li><img src="../assets/images/EBII Framework/life course stage.png" alt="">Life course stage</li>
               </ul>
-              <h4>Possible outcomes</h4>
-              <p>Oxidative stress, chronic inflammation, cellular senescence, organ dysfunction, premature aging, reduced quality of life, and lower physical or cognitive function.</p>
             </article>
-            <article class="comparison-panel low reveal">
-              <div class="gauge" aria-hidden="true"><span></span></div>
-              <h3>Low EBII</h3>
-              <p class="mini-title">Lower Biological Impact</p>
-              <ul>
-                <li>Low exposure load and/or susceptibility</li>
-                <li>Shorter or lower temporal accumulation</li>
-                <li>High resilience and strong adaptation</li>
-                <li>Lower biological impact and risk</li>
-              </ul>
-              <h4>Possible outcomes</h4>
-              <p>Balanced inflammation, healthy cell function, optimal organ function, better vitality, healthy aging, higher quality of life, and longer healthspan.</p>
+
+            <article class="ebii3-higher-es ebii3-bottom-card panel-card">
+              <div><img src="../assets/images/EBII Framework/Higher E.png" alt=""><p><strong>Higher E</strong><br>More exposure load</p></div>
+              <div><img src="../assets/images/EBII Framework/Higher S.png" alt=""><p><strong>Higher S</strong><br>Greater susceptibility</p></div>
+            </article>
+
+            <article class="ebii3-higher-a ebii3-bottom-card panel-card">
+              <img src="../assets/images/EBII Framework/Higher A.png" alt="">
+              <p><strong>Higher A <small>(Adaptation)</small></strong><br>Stronger biological resilience<br><b>&rarr; Lower EBII (Protective)</b></p>
+            </article>
+
+            <article class="ebii3-greater-t ebii3-bottom-card panel-card">
+              <img src="../assets/images/EBII Framework/Longer.png" alt="">
+              <p><strong>Longer / Greater T</strong><br>More temporal accumulation<br><b>&rarr; Higher EBII (Risk)</b></p>
+            </article>
+
+            <article class="ebii3-result panel-card">
+              <strong>EBII</strong>
+              <p>Exposome Biological<br>Impact Index</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="story-section soft-band" aria-labelledby="cascade-title">
-        <div class="story-shell">
-          <div class="section-heading reveal">
-            <span>08</span>
-            <h2 id="cascade-title">EBII Impacts Across Multiple Biological Levels</h2>
-            <p>Biological impact can accumulate from molecular changes to cellular dysfunction, tissue and organ decline, whole-body vulnerability, and long-term human outcomes.</p>
-          </div>
-          <div class="biological-cascade">
-            <article class="cascade-node reveal"><h3>Molecular Level</h3><p>DNA damage, epigenetic alterations, oxidative stress, mitochondrial dysfunction, proteostasis disruption</p></article>
-            <article class="cascade-node reveal"><h3>Cellular Level</h3><p>Cellular senescence, stem cell exhaustion, dysregulated inflammation, impaired signaling</p></article>
-            <article class="cascade-node reveal"><h3>Tissue / Organ Level</h3><p>Neuroaging, cardiovascular decline, metabolic dysfunction, immune dysregulation, skin aging, gut dysbiosis</p></article>
-            <article class="cascade-node reveal"><h3>Whole Body Level</h3><p>Physiological decline, reduced resilience, impaired recovery, lower adaptability, increased vulnerability</p></article>
-            <article class="cascade-node reveal"><h3>Human Outcomes</h3><p>Healthspan, wellbeing, functional ability, quality of life, longevity</p></article>
-          </div>
+      <section class="hybrid-section" id="ebii-index" aria-labelledby="section-4-title">
+        <div class="ex-shell section-head">
+          <p class="ex-kicker">Section 04</p>
+          <h2 id="section-4-title">Exposome Biological Impact Index</h2>
+          <p>A quantitative framework for assessing lifetime exposome impact on human health.</p>
         </div>
-      </section>
+        <div class="stage-scroll stage-scroller">
+          <div class="infographic-stage stage-four">
+            <img class="reference-overlay" src="../public/references/04-ebii-index.jpg" alt="" aria-hidden="true">
+            <svg class="s4-arrow-layer" viewBox="0 0 1806 745" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="s4-arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="s4-arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="s4-arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+                <marker id="s4-arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z"></path></marker>
+              </defs>
+              <path class="s4-arrow s4-arrow-purple dashed" d="M434 142 H516"></path>
+              <path class="s4-arrow s4-arrow-green dashed" d="M1372 142 H1290"></path>
+              <path class="s4-arrow s4-arrow-blue s4-branch-stem" d="M903 237 V257"></path>
+              <path class="s4-arrow s4-arrow-orange s4-branch-arrow dashed" d="M903 257 H696 V277"></path>
+              <path class="s4-arrow s4-arrow-blue s4-branch-arrow dashed" d="M903 257 H1110 V277"></path>
+              <path class="s4-arrow s4-arrow-blue" d="M903 527 V561"></path>
+              <path class="s4-arrow s4-arrow-green dashed" d="M1028 184 H1232 V277"></path>
+            </svg>
 
-      <section class="story-section" aria-labelledby="drivers-title">
-        <div class="story-shell">
-          <div class="section-heading centered reveal">
-            <span>09</span>
-            <h2 id="drivers-title">What Makes EBII Higher or Lower?</h2>
-          </div>
-          <div class="drivers-grid">
-            <article class="driver-card high reveal">
-              <h3>What Makes EBII Higher?</h3>
-              <ul>
-                <li>High exposure environment: pollution, toxins, UV, etc.</li>
-                <li>Unhealthy lifestyle: poor diet, lack of sleep, sedentary behavior, smoking, alcohol, chronic stress</li>
-                <li>High susceptibility: genetics, age, disease, epigenetics</li>
-                <li>Longer and cumulative time: chronic exposure, delayed recovery</li>
-                <li>Low resilience: poor detoxification, weak immunity, stress overload, poor adaptability</li>
-              </ul>
+            <article class="index-load panel-card s4-card">
+              <h3><span>E =</span> Exposome Load</h3>
+              <span class="s4-load-cross s4-load-cross-one" aria-hidden="true">&times;</span>
+              <span class="s4-load-cross s4-load-cross-two" aria-hidden="true">&times;</span>
+              <div class="index-load-stack">
+                <div class="index-load-row">
+                  <img src="../assets/images/Exposome Biological Impact Index/E_External exposome.png" alt="">
+                  <div><strong>External Exposome</strong><ul><li>Air pollution</li><li>Chemicals</li><li>UV radiation</li><li>Climate</li><li>Diet &amp; lifestyle</li><li>Psychosocial stress</li><li>Sensory environment</li></ul></div>
+                </div>
+                <div class="index-load-row">
+                  <img src="../assets/images/Exposome Biological Impact Index/E_Internal exposome.png" alt="">
+                  <div><strong>Internal Exposome</strong><ul><li>Metabolism</li><li>Inflammation</li><li>Oxidative stress</li><li>Hormones</li><li>Immune status</li><li>Microbiome</li><li>Neural activity</li><li>Epigenetic regulation</li></ul></div>
+                </div>
+                <div class="index-load-row">
+                  <img src="../assets/images/Exposome Biological Impact Index/E_Exposure dosimeter.png" alt="">
+                  <div><strong>Exposure Dosimeter</strong><ul><li>Intensity</li><li>Frequency</li><li>Duration</li><li>Timing</li><li>Route</li><li>Accumulation</li></ul></div>
+                </div>
+              </div>
             </article>
-            <div class="balance-visual reveal" aria-hidden="true">
-              <span>Higher EBII</span>
-              <strong></strong>
-              <span>Lower EBII</span>
+
+            <div class="index-formula panel-card">
+              <span>EBII =</span>
+              <div class="fraction"><strong><b class="purple">E</b> &times; <b class="orange">S</b> &times; <b class="blue">T</b></strong><em>R</em></div>
             </div>
-            <article class="driver-card low reveal">
-              <h3>What Makes EBII Lower?</h3>
-              <ul>
-                <li>Cleaner environment and reduced exposure</li>
-                <li>Healthy lifestyle: nutrition, exercise, sleep, non-smoking, stress control</li>
-                <li>Lower susceptibility or early prevention</li>
-                <li>Manage time and reduce cumulative burden</li>
-                <li>Stronger resilience: detoxification, immunity, repair, stress resilience, recovery</li>
-              </ul>
+
+            <article class="index-resilience panel-card s4-card">
+              <h3><span>R =</span> Biological Resilience</h3>
+              <div class="index-r-grid">
+                <img src="../assets/images/Exposome Biological Impact Index/Biological Resilience.png" alt="">
+                <ul><li>Detoxification capacity</li><li>Immune resilience</li><li>Repair mechanisms</li><li>Neuroplasticity</li><li>Metabolic flexibility</li><li>Recovery capacity</li><li>Antioxidant defense</li><li>Homeostasis maintenance</li></ul>
+              </div>
+              <p>Biological Resilience acts as a buffer and protective factor, reducing the final impact.</p>
+            </article>
+
+            <article class="index-s panel-card s4-card">
+              <h3><span>S =</span> Biological Susceptibility</h3>
+              <img src="../assets/images/Exposome Biological Impact Index/Biological Susceptibility.png" alt="">
+              <ul><li>Genetics</li><li>Epigenetics</li><li>Age</li><li>Sex</li><li>Developmental stage</li><li>Disease status</li><li>Lifestyle factors</li></ul>
+            </article>
+
+            <article class="index-t panel-card s4-card">
+              <h3><span>T =</span> Temporal Accumulation</h3>
+              <img src="../assets/images/Exposome Biological Impact Index/Temporal Accumulation.png" alt="">
+              <ul><li>Acute exposure</li><li>Chronic exposure</li><li>Cumulative burden</li><li>Exposure timing</li><li>Critical windows</li><li>Life course stages</li></ul>
+            </article>
+
+            <article class="index-legend panel-card">
+              <p><b class="purple">E</b> = Exposome Load</p>
+              <p><b class="orange">S</b> = Biological Susceptibility</p>
+              <p><b class="blue">T</b> = Temporal Accumulation</p>
+              <p><b class="green">R</b> = Biological Resilience</p>
+              <p><b>EBII</b> = Exposome Biological<br>Impact Index</p>
+            </article>
+
+            <article class="index-result panel-card">
+              <img src="../assets/images/Exposome Biological Impact Index/Overall Biological Impact.png" alt="">
+              <div><h3>EBII = Overall Biological Impact</h3><p>The net result of exposome load, individual susceptibility, and time, modulated by biological resilience.</p></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="story-cta" aria-labelledby="takeaway-title">
-        <div class="particle-field small" aria-hidden="true">
-          <span></span><span></span><span></span>
+      <section class="hybrid-section" id="ebii-function" aria-labelledby="section-5-title">
+        <div class="ex-shell section-head">
+          <p class="ex-kicker">Section 05</p>
+          <h2 id="section-5-title">EBII = f(E, S, A, T)</h2>
+          <p>EBII is a state function jointly determined by exposome, susceptibility, adaptation, and time.</p>
         </div>
-        <div class="story-shell reveal">
-          <p class="story-kicker">Key Takeaway</p>
-          <h2 id="takeaway-title">EBII is the bridge between your lifetime exposome and your biological future.</h2>
-          <p class="takeaway-line">Measure. Understand. Reduce. Adapt. Thrive.</p>
-          <div class="outcome-chain" aria-label="Lower EBII outcome chain">
-            <span>Lower EBII</span><span>Lower Biological Impact</span><span>Better Health</span><span>Beauty</span><span>Wellbeing</span><span>Longer Healthspan</span>
-          </div>
-          <div class="hero-actions">
-            <a class="story-button primary" href="../index.html#applied">Explore science-driven solutions</a>
-            <a class="story-button secondary" href="../index.html#platform">Discover the platform</a>
+        <div class="stage-scroll stage-scroller">
+          <div class="infographic-stage stage-five">
+            <img class="reference-overlay" src="../public/references/05-ebii-function.jpg" alt="" aria-hidden="true">
+            <svg class="s5-arrow-layer" viewBox="0 0 1680 700" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="s5-arrow-blue" markerWidth="22" markerHeight="18" refX="21" refY="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L22,9 L0,18 Z"></path></marker>
+                <marker id="s5-arrow-purple" markerWidth="22" markerHeight="18" refX="21" refY="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L22,9 L0,18 Z"></path></marker>
+                <marker id="s5-arrow-green" markerWidth="22" markerHeight="18" refX="21" refY="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L22,9 L0,18 Z"></path></marker>
+                <marker id="s5-arrow-orange" markerWidth="22" markerHeight="18" refX="21" refY="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L22,9 L0,18 Z"></path></marker>
+              </defs>
+              <path class="s5-flow s5-blue" d="M220 442 V486 H645 V512"></path>
+              <path class="s5-flow s5-purple" d="M633 442 V486 H735 V512"></path>
+              <path class="s5-flow s5-green" d="M1046 442 V486 H900 V512"></path>
+              <path class="s5-flow s5-orange" d="M1460 442 V486 H1030 V512"></path>
+              <path class="s5-flow s5-blue dashed" d="M1126 602 H1238"></path>
+            </svg>
+            <article class="function-card panel-card accent-blue">
+              <div class="function-card-head"><span>E</span><h3>Exposome</h3></div>
+              <p>The totality of lifetime environmental exposures</p>
+              <div class="function-card-body">
+                <img src="../assets/images/EBII = f(E, S, A, T)/Exposome Load.png" alt="">
+                <ul><li>Chemical</li><li>Physical</li><li>Biological</li><li>Social</li><li>Lifestyle</li><li>Sensory</li></ul>
+              </div>
+              <b>Exposome Load</b>
+            </article>
+            <article class="function-card panel-card accent-purple">
+              <div class="function-card-head"><span>S</span><h3>Susceptibility</h3></div>
+              <p>Intrinsic factors that influence individual sensitivity</p>
+              <div class="function-card-body">
+                <img src="../assets/images/EBII = f(E, S, A, T)/Biological Susceptibility.png" alt="">
+                <ul><li>Genetics</li><li>Epigenetics</li><li>Age</li><li>Sex</li><li>Developmental stage</li><li>Disease status</li></ul>
+              </div>
+              <b>Biological Susceptibility</b>
+            </article>
+            <article class="function-card panel-card accent-green">
+              <div class="function-card-head"><span>A</span><h3>Adaptation</h3></div>
+              <p>The capacity of the body to respond and adapt to exposure</p>
+              <div class="function-card-body">
+                <img src="../assets/images/EBII = f(E, S, A, T)/Adaptive Capacity.png" alt="">
+                <ul><li>Detoxification</li><li>Immune resilience</li><li>Repair capacity</li><li>Neuroplasticity</li><li>Metabolic flexibility</li><li>Recovery capacity</li></ul>
+              </div>
+              <b>Adaptive Capacity</b>
+            </article>
+            <article class="function-card panel-card accent-orange">
+              <div class="function-card-head"><span>T</span><h3>Time</h3></div>
+              <p>The temporal dimension of exposure and biological response</p>
+              <div class="function-card-body">
+                <img src="../assets/images/EBII = f(E, S, A, T)/Temporal Dynamics.png" alt="">
+                <ul><li>Duration</li><li>Frequency</li><li>Timing</li><li>Cumulative burden</li><li>Life course stage</li></ul>
+              </div>
+              <b>Temporal Dynamics</b>
+            </article>
+            <div class="function-formula panel-card"><strong>EBII = f(E, S, A, T)</strong><p>A state function integrating the combined effects of exposome, susceptibility, adaptation, and time.</p></div>
+            <figure class="chart-card panel-card"><img src="../public/crops/s5-chart.png" alt="Non-linear interaction chart from original infographic"><figcaption>f(.) reflects complex, non-linear interactions and feedbacks.</figcaption></figure>
           </div>
         </div>
       </section>
+
     </main>
 
-    <footer class="story-footer">
-      <div class="story-shell">
-        <a href="../index.html">Back to Arotec home</a>
-      </div>
-    </footer>
-
-    <script src="../assets/js/exposome-story.min.js" defer></script>
+    <button class="back-to-top" data-back-to-top type="button" aria-label="Back to top">Top</button>
+    <script src="../assets/js/exposome-hybrid.min.js?v=20260708-mobile-card-text-v1" defer></script>
   </body>
 </html>
