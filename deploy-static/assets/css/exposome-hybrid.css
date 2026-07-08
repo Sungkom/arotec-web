@@ -3510,17 +3510,23 @@ html {
     min-width: 1100px;
   }
 
-  .infographic-stage :where(
-    h3,
-    h4,
-    p,
-    li,
-    strong,
-    b,
-    small,
-    span,
-    figcaption
-  ) {
+  .stage-one {
+    min-width: 1460px;
+  }
+
+  .stage-five {
+    min-width: 1680px;
+  }
+
+  .infographic-stage h3,
+  .infographic-stage h4,
+  .infographic-stage p,
+  .infographic-stage li,
+  .infographic-stage strong,
+  .infographic-stage b,
+  .infographic-stage small,
+  .infographic-stage span,
+  .infographic-stage figcaption {
     min-width: 0;
     max-width: 100%;
     overflow-wrap: anywhere;
@@ -3528,7 +3534,11 @@ html {
     hyphens: auto;
   }
 
-  .infographic-stage :where(.panel-card, .info-card, .formula-bar, .flow-row, .trajectory-row) {
+  .infographic-stage .panel-card,
+  .infographic-stage .info-card,
+  .infographic-stage .formula-bar,
+  .infographic-stage .flow-row,
+  .infographic-stage .trajectory-row {
     min-width: 0;
   }
 
