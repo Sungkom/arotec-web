@@ -1538,12 +1538,13 @@
 
     const sciencePlatformLinks = {
       "science-platform-exposome.jpg": "pages/exposome.html",
-      "science-platform-human-longevity-aging.jpg": "pages/human-longevity-aging.html"
+      "science-platform-human-longevity-aging.jpg": "pages/human-longevity-aging.html",
+      "science-platform-neuro-skin-care.jpg": "neuro-skin-care.html"
     };
     const conceptItems = platform.items.map((item) => {
       const href = item.href || sciencePlatformLinks[item.image] || "";
       const tag = href ? "a" : "article";
-      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title}"` : "";
+      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title === "Neuro-Skin Care" ? "Open Neuro-Skin Care page" : item.title}"` : "";
       return `
       <${tag} class="concept-item" style="--concept-card-image:url('${asset(item.image)}')"${linkAttrs}>
         <h3>${item.title}</h3>
