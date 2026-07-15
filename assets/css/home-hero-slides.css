@@ -1,0 +1,75 @@
+/* Home hero slide copy stays synchronized with the active background image. */
+body[data-page="home"] .hero-copy-stage {
+  position: relative;
+  display: grid;
+  width: min(760px, 100%);
+}
+
+/* The storytelling reveal system must not override the slideshow's active state. */
+body[data-page="home"].storytelling-ready .hero-slide.story-image-reveal {
+  opacity: 0;
+  clip-path: none;
+  transform: scale(1.015);
+  transition:
+    opacity 1400ms var(--ease-premium),
+    transform 1800ms var(--ease-premium),
+    filter 1800ms var(--ease-premium);
+}
+
+body[data-page="home"].storytelling-ready .hero-slide.story-image-reveal.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body[data-page="home"] .hero-copy-stage .hero-content {
+  grid-area: 1 / 1;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate3d(0, calc(var(--hero-copy-y, 0px) + 18px), 0);
+  transition:
+    opacity 560ms ease,
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 760ms;
+}
+
+body[data-page="home"] .hero-copy-stage .hero-content.is-active {
+  opacity: var(--hero-content-opacity, 1);
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate3d(0, var(--hero-copy-y, 0px), 0);
+  transition-delay: 90ms, 90ms, 0s;
+}
+
+body[data-page="home"] .hero-slider-dots {
+  grid-area: 1 / 1;
+  align-self: end;
+  justify-self: start;
+  z-index: 3;
+  margin: 0 0 clamp(52px, 6vw, 78px) var(--home-hero-copy-offset, clamp(11px, 1.1vw, 15px));
+}
+
+body[data-page="home"] .hero-slide-controls,
+body[data-page="home"] .hero-slide-button,
+body[data-page="home"] .hero-slider-dots,
+body[data-page="home"] .hero-slider-dots button {
+  pointer-events: auto;
+}
+
+body[data-page="home"] .hero-slide-controls {
+  z-index: 8;
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .hero-slider-dots {
+    margin-left: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .hero-copy-stage .hero-content {
+    transform: none;
+    transition: none;
+  }
+}

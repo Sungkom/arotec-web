@@ -1,0 +1,132 @@
+/* Shared white navigation treatment for every Arotec page. */
+:root {
+  --header-surface: rgba(255, 255, 255, 0.97);
+  --header-ink: #113568;
+  --header-line: rgba(17, 53, 104, 0.14);
+}
+
+.site-header,
+.commerce-header {
+  color: var(--header-ink) !important;
+  border-bottom: 1px solid var(--header-line) !important;
+  background: var(--header-surface) !important;
+  box-shadow: 0 10px 30px rgba(17, 53, 104, 0.1) !important;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.site-header .brand,
+.commerce-header .brand,
+.mobile-panel-head .brand {
+  align-self: center !important;
+  justify-content: center !important;
+  width: 118px !important;
+  min-width: 118px !important;
+  min-height: 76px !important;
+  padding: 6px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.site-header .brand-logo,
+.commerce-header .brand-logo,
+.mobile-panel-head .brand-logo,
+.footer-brand .brand-logo {
+  width: 94px !important;
+  height: 68px !important;
+  aspect-ratio: 250 / 229 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  filter: none !important;
+}
+
+.site-header .nav-link,
+.commerce-header .commerce-nav a {
+  color: var(--header-ink) !important;
+  text-shadow: none !important;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus-visible,
+.site-header .nav-link.active,
+.commerce-header .commerce-nav a:hover,
+.commerce-header .commerce-nav a:focus-visible,
+.commerce-header .commerce-nav a.active {
+  color: #0b63c7 !important;
+}
+
+.site-header .nav-link::after {
+  background: linear-gradient(90deg, #0b63c7, #113568) !important;
+  box-shadow: none !important;
+}
+
+.site-header .language-select,
+.site-header .circle-button,
+.site-header .contact-pill,
+.commerce-header .commerce-icon-button,
+.commerce-header .commerce-button {
+  color: var(--header-ink) !important;
+  border-color: rgba(17, 53, 104, 0.2) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  box-shadow: none !important;
+}
+
+.site-footer {
+  color: var(--header-ink) !important;
+  background: #ffffff !important;
+  border-top: 1px solid var(--header-line) !important;
+}
+
+.site-footer .footer-col h3 {
+  color: var(--header-ink) !important;
+}
+
+.site-footer .footer-col a,
+.site-footer .footer-col p,
+.site-footer .footer-bottom {
+  color: rgba(17, 53, 104, 0.72) !important;
+}
+
+.site-footer .footer-col a:hover,
+.site-footer .footer-col a:focus-visible {
+  color: #0b63c7 !important;
+}
+
+.site-footer .footer-bottom {
+  border-top-color: var(--header-line) !important;
+}
+
+.site-footer .newsletter input {
+  color: var(--header-ink) !important;
+  border-color: rgba(17, 53, 104, 0.2) !important;
+  background: #ffffff !important;
+}
+
+.site-footer .newsletter input::placeholder {
+  color: rgba(17, 53, 104, 0.56) !important;
+}
+
+.site-footer .circle-button {
+  color: var(--header-ink) !important;
+  border-color: rgba(17, 53, 104, 0.2) !important;
+  background: rgba(17, 53, 104, 0.06) !important;
+}
+
+@media (max-width: 760px) {
+  .site-header .brand,
+  .commerce-header .brand {
+    width: 88px !important;
+    min-width: 88px !important;
+    min-height: 62px !important;
+  }
+
+  .site-header .brand-logo,
+  .commerce-header .brand-logo {
+    width: 74px !important;
+    height: 54px !important;
+  }
+}

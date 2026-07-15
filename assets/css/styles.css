@@ -2353,8 +2353,9 @@ h3 {
 }
 
 .site-footer {
-  background: #08111e;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #123665;
+  background: #ffffff;
+  border-top: 1px solid rgba(18, 54, 101, 0.16);
 }
 
 .footer-grid {
@@ -2366,6 +2367,7 @@ h3 {
 
 .footer-col h3 {
   margin-bottom: 12px;
+  color: #123665;
   font-size: 0.98rem;
 }
 
@@ -2373,8 +2375,13 @@ h3 {
 .footer-col p {
   display: block;
   margin: 0 0 8px;
-  color: var(--muted);
+  color: rgba(18, 54, 101, 0.72);
   font-size: 0.92rem;
+}
+
+.footer-col a:hover,
+.footer-col a:focus-visible {
+  color: #0b63c7;
 }
 
 .footer-brand {
@@ -2399,9 +2406,9 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid rgba(18, 54, 101, 0.14);
   padding: 18px 0 26px;
-  color: var(--muted);
+  color: rgba(18, 54, 101, 0.72);
   font-size: 0.88rem;
 }
 

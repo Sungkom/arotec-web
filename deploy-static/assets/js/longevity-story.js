@@ -39,7 +39,7 @@
     { title: "Applied Solutions", text: "Sensory strategies and wellness applications", href: "../index.html#applied" },
     { title: "Applied Products", text: "Product platform and bioactive applications", href: "../index.html#products" },
     { title: "Science Platform", text: "Exposome, longevity, olfactory science and neuro-skin care", href: "../index.html#platform" },
-    { title: "Exposome Science", text: "EBII and exposome biological impact", href: "exposome.html" },
+    { title: "Exposome Science", text: "Science Platform overview", href: "../index.html#platform" },
     { title: "Human Longevity & Aging", text: "Skin-brain axis, SADI and ADI aging dynamics", href: "human-longevity-aging.html" },
     { title: "Get In touch", text: "Membership and enquiry form", href: "members.html" }
   ];

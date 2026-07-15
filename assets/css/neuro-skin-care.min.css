@@ -1,1 +1,4474 @@
-:root{--neuro-navy:#071b4d;--neuro-blue:#1264be;--neuro-purple:#5b2594;--neuro-green:#20833c;--neuro-orange:#e36a15;--neuro-red:#ce283f;--neuro-brown:#914f32;--neuro-ink:#0d1a38;--neuro-muted:#52627b;--neuro-line:#c9d5e4;--neuro-paper:#f7f9fc;--neuro-white:#ffffff;--neuro-shadow:0 12px 34px rgba(19,45,79,0.08)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}body.neuro-page{margin:0;overflow-x:clip;color:var(--neuro-ink);background:var(--neuro-paper);font-family:var(--font-en)}.neuro-page main>section{content-visibility:visible !important;contain-intrinsic-size:none !important}.neuro-page img{display:block;max-width:100%;object-fit:contain}.neuro-page h1,.neuro-page h2,.neuro-page h3,.neuro-page h4,.neuro-page p,.neuro-page figure,.neuro-page ul,.neuro-page ol,.neuro-page dl{margin-top:0}.neuro-page h1,.neuro-page h2,.neuro-page h3,.neuro-page h4{letter-spacing:0}.neuro-page ul,.neuro-page ol{padding-left:1.15rem}.neuro-page li{margin-block:0.18rem}.neuro-page .site-header{position:sticky;inset:auto;top:0;z-index:80;width:100%;border-bottom:1px solid rgba(255,255,255,0.11);background:rgba(4,15,36,0.94);box-shadow:0 8px 30px rgba(4,15,36,0.16);backdrop-filter:blur(18px)}.neuro-page .site-header .brand{width:118px;min-width:118px;min-height:82px;padding:9px 12px 10px;border-radius:0 0 8px 8px;background:#fff}.neuro-page .site-header .brand-logo{width:88px;height:60px}.neuro-page .site-header .nav-link{color:#eef7ff;text-shadow:none}.neuro-page .site-header .nav-link:hover,.neuro-page .site-header .nav-link:focus-visible{color:#78e5d4}.neuro-page .site-header .contact-pill,.neuro-page .site-header .circle-button{border-color:rgba(255,255,255,0.22);color:#fff;background:rgba(255,255,255,0.1)}.neuro-scroll-progress{position:fixed;inset:0 0 auto;z-index:100;height:3px;background:rgba(255,255,255,0.08)}.neuro-scroll-progress span{display:block;width:0;height:100%;background:#62dfcd}.neuro-progress-nav{position:sticky;top:94px;z-index:70;display:flex;justify-content:center;gap:6px;width:100%;padding:8px max(16px,calc((100vw - 1220px) / 2));overflow-x:auto;border-bottom:1px solid #d7e0ea;background:rgba(247,249,252,0.96);scrollbar-width:none;backdrop-filter:blur(16px)}.neuro-progress-nav::-webkit-scrollbar{display:none}.neuro-progress-nav a{flex:0 0 auto;padding:8px 12px;border:1px solid transparent;border-radius:999px;color:#314462;background:rgba(255,255,255,0.78);font-size:0.78rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:color 180ms ease,background 180ms ease,border-color 180ms ease}.neuro-progress-nav a span{margin-right:5px;color:#0d9c96}.neuro-progress-nav a:hover,.neuro-progress-nav a:focus-visible,.neuro-progress-nav a.is-active{border-color:rgba(18,100,190,0.24);color:var(--neuro-blue);background:#fff;outline:none}.neuro-shell{width:min(1220px,calc(100% - 40px));margin-inline:auto}.neuro-hero{padding:54px 0 46px;color:#fff;background:var(--neuro-navy)}.neuro-hero-inner{max-width:980px;margin-inline:auto}.neuro-kicker{margin-bottom:10px;color:#0aa29d;font-size:0.78rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase}.neuro-hero .neuro-kicker{color:#70e5d4}.neuro-hero h1{margin-bottom:8px;font-size:3rem;line-height:1.02}.neuro-hero h2{margin-bottom:16px;color:#c9d9ee;font-size:1.35rem;line-height:1.3}.neuro-hero p:last-child{max-width:860px;margin-bottom:0;color:#d9e4f2;font-size:1rem;line-height:1.75}.neuro-section{padding:74px 0 30px;scroll-margin-top:145px}.neuro-section:nth-of-type(even){background:#eef3f8}.section-heading{margin-bottom:26px;text-align:left}.section-heading h2{max-width:1080px;margin-bottom:8px;color:var(--neuro-navy);font-size:2.05rem;line-height:1.15}.section-heading>p:last-child{max-width:900px;margin-bottom:0;color:var(--neuro-muted);font-size:1rem;line-height:1.6}.infographic-scroll{width:100%;overflow-x:auto;overflow-y:visible;overscroll-behavior-inline:contain;padding:0 max(16px,calc((100vw - 1540px) / 2)) 34px;-webkit-overflow-scrolling:touch}.infographic-stage{position:relative;z-index:0;width:1500px;min-width:1180px;margin-inline:auto;padding:24px;overflow:visible;border:1px solid #d8e1ec;border-radius:8px;background:#fff;box-shadow:0 24px 70px rgba(27,50,85,0.09);isolation:isolate}.stage-s2,.stage-s6{width:1280px}.reference-overlay{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:fill !important;opacity:0;pointer-events:none;transition:opacity 160ms ease}.connector-layer,.loop-layer{position:absolute;inset:0;z-index:4;width:100%;height:100%;overflow:visible;pointer-events:none}.connector-layer path,.loop-layer path{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}.connector-layer path.is-dashed,.loop-layer path{stroke-dasharray:9 8}.connector-layer path.is-animated,.loop-layer path{animation:dash-flow 4s linear infinite}.connector-layer path.is-linked{filter:drop-shadow(0 0 5px currentColor)}@keyframes dash-flow{to{stroke-dashoffset:-34}}.neuro-card{position:relative;z-index:2;min-width:0;height:auto;overflow:visible;padding:16px;border:1.5px solid var(--card-color,var(--neuro-line));border-radius:8px;background:#fff;box-shadow:var(--neuro-shadow);transition:transform 180ms ease,box-shadow 180ms ease,border-color 180ms ease}.neuro-card:hover,.neuro-card:focus-within,.neuro-card.is-linked{z-index:5;transform:translateY(-3px);border-color:var(--card-accent,#80a9d6);box-shadow:0 18px 44px rgba(24,51,86,0.13)}.neuro-card h3{margin-bottom:8px;color:var(--card-accent,var(--neuro-navy));font-size:1.02rem;line-height:1.25;text-align:center;text-transform:uppercase}.neuro-card h4{margin-bottom:6px;font-size:0.84rem;line-height:1.3}.neuro-card p,.neuro-card li,.neuro-card figcaption,.neuro-card span,.neuro-card dd,.neuro-card dt{font-size:0.76rem;line-height:1.45}.neuro-card img,.infographic-stage figure img{position:relative;z-index:3}.numbered-title{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px;text-align:center}.numbered-title>span,.core-number{display:inline-grid;flex:0 0 34px;width:34px;height:34px;place-items:center;border-radius:50%;color:#fff;background:var(--neuro-blue);font-weight:800}.numbered-title h3,.numbered-title p{margin-bottom:0}.numbered-title p{color:var(--neuro-muted);font-size:0.7rem;font-weight:700}.section-strip-title{margin-bottom:12px}.inner-card{min-width:0;padding:12px;border:1px solid #b9c7d9;border-radius:7px;background:#fbfdff}.inner-card h4{text-align:center;text-transform:uppercase}.cascade-list{display:grid;gap:3px;margin-bottom:8px;padding:0;list-style:none;text-align:center}.cascade-list li:not(:last-child)::after{display:block;margin-top:3px;color:var(--neuro-blue);content:"\2193"}.cascade-list.compact li{font-size:0.72rem}.feedback-note{margin-bottom:0;color:var(--neuro-blue);font-weight:700;text-align:center}.visual-label-grid,.outcome-icon-grid,.clinical-grid,.cell-response-grid,.cell-icon-row{display:grid;gap:10px}.visual-label-grid figure,.outcome-icon-grid figure,.clinical-grid figure,.cell-response-grid figure,.cell-icon-row figure{min-width:0;margin:0;text-align:center}.visual-label-grid img,.outcome-icon-grid img,.clinical-grid img,.cell-response-grid img,.cell-icon-row img{width:100%;height:76px;margin:0 auto 5px;object-fit:contain;transition:transform 180ms ease}.visual-label-grid figure:hover img,.outcome-icon-grid figure:hover img,.clinical-grid figure:hover img,.cell-response-grid figure:hover img,.cell-icon-row figure:hover img,.ingredient-grid figure:hover img{transform:scale(1.035)}.s1-layout{display:grid;grid-template-columns:minmax(0,1fr) 252px;gap:18px}.s1-main-flow{display:grid;gap:24px}.stressor-stage{--card-color:#92acd0;--card-accent:var(--neuro-blue)}.stressor-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.icon-label{display:grid;min-height:105px;place-items:center;align-content:center;gap:4px;padding:7px 5px;border-right:1px solid #dde5ee;text-align:center}.icon-label:last-child{border-right:0}.icon-label img{width:68px;height:58px}.icon-label span{font-weight:700;line-height:1.25}.central-response-stage{--card-accent:var(--neuro-blue);--card-color:#a7b9d0}.central-response-grid{display:grid;grid-template-columns:245px 330px minmax(0,1fr);gap:18px;align-items:stretch}.hpa-card{border-color:#6a8fb8}.brain-visual{display:grid;place-items:center;margin:0;text-align:center}.brain-visual img{width:300px;height:230px}.brain-visual figcaption{color:var(--neuro-muted);font-weight:700}.central-side-stack{display:grid;gap:12px}.autonomic-card{border-color:#708fbb}.autonomic-columns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.autonomic-columns>div{display:grid;place-items:center;gap:3px;padding:8px;text-align:center}.autonomic-columns>div:first-child{color:var(--neuro-purple);background:#f7f1fc}.autonomic-columns>div:last-child{color:var(--neuro-green);background:#eff8f0}.autonomic-columns img{width:54px;height:54px}.autonomic-columns span{font-size:0.68rem}.neuroimmune-card{text-align:center}.neuroimmune-card p{margin-bottom:0}.peripheral-wrap,.loss-stage{position:relative;z-index:2}.peripheral-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 190px;gap:12px}.system-card{display:flex;flex-direction:column;min-height:390px}.nervous-system{--card-accent:var(--neuro-purple);--card-color:#9b78bd}.immune-system{--card-accent:var(--neuro-green);--card-color:#70a879}.endocrine-system{--card-accent:var(--neuro-orange);--card-color:#e1a16f}.system-illustration{width:155px;height:145px;margin:2px auto 8px}.system-card>h4,.system-card>p{text-align:center}.system-card>ul{margin-bottom:12px}.system-output{margin-top:auto;padding:10px;border:1px solid currentColor;border-radius:6px;text-align:center}.system-output p{margin:4px 0 0}.cell-icon-row{grid-template-columns:repeat(4,1fr);margin:16px 0}.cell-icon-row img{height:68px}.cell-icon-row figcaption{font-size:0.64rem}.communication-card{--card-accent:var(--neuro-navy);align-self:stretch}.pathway-list{display:grid;gap:16px;margin:22px 0 0;padding-left:0;list-style:none}.pathway-list li{padding-left:24px;font-weight:700}.pathway-list li::before{float:left;margin-left:-24px;content:"\2192"}.purple{color:var(--neuro-purple)}.green{color:var(--neuro-green)}.orange{color:var(--neuro-orange)}.red{color:var(--neuro-red)}.blue{color:var(--neuro-blue)}.brown{color:var(--neuro-brown)}.blue-bg{background:var(--neuro-blue)}.green-bg{background:var(--neuro-green)}.cellular-stage{--card-accent:var(--neuro-blue)}.cell-response-grid{grid-template-columns:repeat(7,minmax(0,1fr))}.cell-response-grid figure{padding:7px;border-right:1px solid #dce3ec}.cell-response-grid figure:last-child{border-right:0}.cell-response-grid img{height:70px}.cell-response-grid figcaption{display:grid;gap:4px}.cell-response-grid span{color:#384b65;font-size:0.68rem}.loss-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}.mini-outcome{min-height:145px;padding:12px}.mini-outcome h4{color:var(--neuro-red)}.mini-outcome p{margin-bottom:0}.clinical-panel{--card-accent:var(--neuro-red);--card-color:#dfa5ad;margin-top:12px}.clinical-grid{grid-template-columns:repeat(6,1fr)}.clinical-grid img{height:78px}.core-systems-panel{--card-color:#9eb1cb;--card-accent:var(--neuro-navy);position:sticky;top:160px;align-self:start;padding:14px}.core-systems-panel>h3{padding-bottom:10px;border-bottom:1px solid #ccd6e3}.core-systems-panel section{position:relative;padding:14px 0}.core-systems-panel section+section{border-top:1px dashed #9bacbf}.core-systems-panel h4{margin:8px 0 12px;color:var(--neuro-navy)}.core-system-flow{display:grid;place-items:center;gap:4px;margin:10px 0}.core-system-flow i{color:var(--neuro-blue);font-style:normal}.circle-system{position:relative;width:176px;height:176px;margin:10px auto 14px;border:3px solid transparent;border-top-color:var(--neuro-purple);border-right-color:var(--neuro-green);border-bottom-color:var(--neuro-orange);border-radius:50%}.circle-system::after{position:absolute;inset:20px;display:grid;place-items:center;border:1px dashed #99abc0;border-radius:50%;color:var(--neuro-navy);content:"Skin Axis";font-size:0.7rem;font-weight:800}.circle-system span{position:absolute;z-index:1;padding:2px 5px;background:#fff;font-size:0.62rem;font-weight:800}.circle-system span:nth-child(1){top:-2px;left:56px;color:var(--neuro-purple)}.circle-system span:nth-child(2){right:-3px;bottom:30px;color:var(--neuro-orange)}.circle-system span:nth-child(3){bottom:28px;left:-4px;color:var(--neuro-green)}.section-transition{display:grid;width:min(780px,calc(100% - 40px));margin:20px auto 0;place-items:center;gap:12px;color:#42536c;font-size:0.82rem;font-weight:700;line-height:1.5;text-align:center}.section-transition i{position:relative;width:3px;height:46px;background:var(--neuro-blue)}.section-transition i::after{position:absolute;right:50%;bottom:-2px;width:15px;height:15px;border-right:3px solid var(--neuro-blue);border-bottom:3px solid var(--neuro-blue);content:"";transform:translateX(50%) rotate(45deg)}.stage-s2{padding:30px}.axis-brain{position:relative;z-index:3;width:330px;margin:0 auto 20px;text-align:center}.axis-brain figcaption{margin-bottom:5px;color:var(--neuro-navy);font-size:1rem;font-weight:800;text-transform:uppercase}.axis-brain img{width:300px;height:230px;margin-inline:auto}.s2-loop-layer{top:55px;height:900px}.purple-loop{stroke:var(--neuro-purple)}.purple-loop+defs path,#s2-purple-head path{fill:var(--neuro-purple)}.green-loop{stroke:var(--neuro-green)}#s2-green-head path{fill:var(--neuro-green)}.axis-main-grid{position:relative;z-index:2;display:grid;grid-template-columns:235px 680px 235px;grid-template-rows:auto 1fr;gap:16px 20px;align-items:start}.axis-center-column{display:grid;grid-column:2;grid-row:1 / span 2;gap:16px}.signal-card{min-height:260px;padding:20px}.signal-card h3,.signal-card>p{text-align:center}.signal-card>p{font-weight:800}.efferent-card{--card-accent:var(--neuro-purple);--card-color:#a08abc}.afferent-card{--card-accent:var(--neuro-green);--card-color:#87aa8b;grid-column:3}.icon-bullet-list{display:grid;gap:14px;margin:20px 0 0}.modulating-card{--card-accent:var(--neuro-purple);width:460px;margin-inline:auto}.modulating-card ul{display:grid;gap:8px;margin-bottom:0}.axis-skin{margin:0}.axis-skin img{width:680px;height:440px}.mediator-side{min-height:220px}.mediator-side.left{--card-accent:var(--neuro-purple);grid-column:1}.mediator-side.right{--card-accent:var(--neuro-green);grid-column:3}.axis-row-card{margin-top:18px}.axis-row-card h3{color:var(--neuro-purple)}.visual-label-grid.six{grid-template-columns:repeat(6,1fr)}.visual-label-grid.seven{grid-template-columns:repeat(7,1fr)}.visual-label-grid figure{padding:8px;border-right:1px solid #dfe6ee}.visual-label-grid figure:last-child{border-right:0}.visual-label-grid img{height:92px}.feedback-loop-card{width:460px;margin:18px auto 0;text-align:center}.feedback-loop-card p{margin-bottom:0}.direct-stressor-card{--card-accent:var(--neuro-purple);margin-bottom:20px}.direct-stressor-card h3 small{display:block;margin-top:3px;font-size:0.68rem}.compact-stressor-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.compact-stressor-grid>div{display:grid;grid-template-columns:56px 1fr;grid-template-rows:auto auto;gap:3px 7px;align-items:center;padding:7px;border-right:1px solid #e1e6ee}.compact-stressor-grid>div:last-child{border-right:0}.compact-stressor-grid img{grid-row:1 / 3;width:56px;height:54px}.compact-stressor-grid b{font-size:0.7rem}.compact-stressor-grid span{color:#4d5d73;font-size:0.62rem;line-height:1.35}.direct-main-grid{display:grid;grid-template-columns:250px minmax(0,1fr) 278px;gap:16px}.direct-targets-card{--card-accent:var(--neuro-purple)}.target-list{display:grid;gap:7px}.target-list>div{display:grid;grid-template-columns:62px 1fr;gap:8px;align-items:center;padding-bottom:6px;border-bottom:1px solid #e6eaf0}.target-list>div:last-child{padding-bottom:0;border-bottom:0}.target-list img{width:62px;height:46px}.target-list p{display:grid;gap:2px;margin-bottom:0}.target-list b{font-size:0.71rem}.target-list span{color:#53627a;font-size:0.62rem}.direct-center-column{display:grid;align-content:start;gap:14px}.mediator-card{--card-accent:var(--neuro-red);--card-color:#dfa4aa}.mediator-card>div{display:grid;grid-template-columns:repeat(4,1fr)}.mediator-card span{display:grid;gap:2px;padding:6px 10px;border-right:1px solid #e3c7ca;text-align:center}.mediator-card span:last-child{border-right:0}.direct-skin-visual{position:relative;z-index:3;margin:0;padding:6px;border:1px solid #e3c1bd;border-radius:8px;background:#fff8f6}.direct-skin-visual img{width:100%;height:420px}.direct-skin-visual figcaption{position:absolute;top:110px;left:3px;display:grid;gap:112px;color:var(--neuro-purple);font-size:0.64rem;font-weight:800}.direct-right-stack{display:grid;align-content:start;gap:14px}.signaling-card{--card-accent:var(--neuro-blue)}.signaling-list{display:grid;gap:7px}.signaling-list span{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:8px;font-size:0.68rem}.signaling-list img{width:64px;height:42px}.effector-card{--card-accent:var(--neuro-green)}.effector-card ul{margin-bottom:0}.tissue-effects-card{--card-accent:var(--neuro-orange);--card-color:#e1bc8f;margin-top:16px}.effect-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr))}.effect-grid>div{min-height:130px;padding:10px;border-right:1px solid #e5ddd4}.effect-grid>div:last-child{border-right:0}.effect-grid b{display:block;margin-bottom:7px;color:var(--neuro-navy);font-size:0.68rem}.effect-grid span{color:#495870;font-size:0.61rem}.direct-outcomes-card{--card-accent:var(--neuro-red);--card-color:#e4a7b1;margin-top:16px}.outcome-icon-grid.ten{grid-template-columns:repeat(10,1fr)}.outcome-icon-grid img{height:75px}.outcome-icon-grid figcaption{font-size:0.64rem}.compact-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:12px;padding-top:10px;border-top:1px solid #dce4ed;font-size:0.67rem;font-weight:700}.compact-legend span::before{margin-right:5px;content:"\2192"}.barrier-layout{display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:18px}.barrier-main{display:grid;align-content:start;gap:14px}.barrier-top-row{display:grid;grid-template-columns:230px 1fr;gap:14px}.exposome-source-card{--card-accent:var(--neuro-red);display:grid;grid-template-columns:94px 1fr;align-items:center;gap:8px}.burst-label{grid-column:1 / -1;justify-self:center;padding:12px 17px;color:#fff;background:var(--neuro-red);clip-path:polygon(50% 0%,61% 22%,82% 8%,78% 33%,100% 38%,78% 51%,91% 72%,65% 68%,60% 100%,45% 75%,23% 91%,27% 64%,0 62%,22% 45%,7% 25%,34% 30%);font-size:0.78rem;font-weight:800;line-height:1.1;text-align:center;text-transform:uppercase}.exposome-source-card img{width:94px;height:72px}.exposome-source-card ul{margin-bottom:0}.barrier-mediators-card{--card-accent:var(--neuro-red);--card-color:#e1aeb4}.barrier-mediators-card>div{display:grid;grid-template-columns:repeat(4,1fr)}.barrier-mediators-card span{position:relative;display:grid;min-height:112px;align-content:start;gap:4px;padding:10px;border-right:1px solid #e3c9cd;text-align:center}.barrier-mediators-card span:last-child{border-right:0}.barrier-mediators-card small{font-size:0.64rem;line-height:1.35}.particle{display:block;width:54px;height:30px;margin:8px auto 0;background-image:radial-gradient(circle,currentColor 0 3px,transparent 4px);background-size:18px 15px}.blue-particle{color:#3174bd}.purple-particle{color:#8b3aa2}.green-particle{color:#779b4b}.orange-particle{color:#d86a2b}.action-cells-card,.molecular-response-card{--card-accent:var(--neuro-purple);--card-color:#c6b5d8}.barrier-action-grid{display:grid;grid-template-columns:repeat(5,1fr)}.barrier-action-grid figure,.molecular-grid figure{display:grid;min-width:0;align-content:start;gap:5px;margin:0;padding:9px;border-right:1px solid #ded8e7;text-align:center}.barrier-action-grid figure:last-child,.molecular-grid figure:last-child{border-right:0}.barrier-action-grid img{width:100%;height:92px}.barrier-action-grid b{font-size:0.7rem}.molecular-grid{display:grid;grid-template-columns:repeat(6,1fr)}.molecular-grid img{width:100%;height:75px}.molecular-grid b{min-height:36px;font-size:0.66rem}.damaged-barrier-card{--card-accent:var(--neuro-purple);padding:14px 14px 12px}.damaged-barrier-card figcaption{text-align:center}.damaged-barrier-card figcaption p{margin-bottom:8px;color:#4b5b72}.damaged-barrier-card img{width:100%;height:180px}.damage-labels{display:grid;grid-template-columns:repeat(4,1fr);margin-top:7px;text-align:center}.damage-labels span{font-size:0.66rem;font-weight:700}.barrier-side{display:grid;align-content:start;gap:14px}.barrier-comparison,.consequence-card,.vicious-cycle-card{--card-accent:var(--neuro-purple);--card-color:#b69cca}.barrier-comparison>div{display:grid;grid-template-columns:1fr 1fr;gap:12px}.barrier-comparison section{min-width:0}.barrier-comparison h4{text-align:center;text-transform:uppercase}.barrier-comparison img{width:100%;height:72px}.barrier-comparison ul{margin:8px 0 0}.positive li::marker{color:var(--neuro-green)}.negative li::marker{color:var(--neuro-red)}.consequence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.consequence-grid figure{margin:0;text-align:center}.consequence-grid img{width:100%;height:84px}.consequence-grid figcaption{font-size:0.6rem}.vicious-cycle{position:relative;width:290px;height:250px;margin:10px auto 0;border:4px solid transparent;border-top-color:var(--neuro-purple);border-right-color:var(--neuro-purple);border-bottom-color:var(--neuro-purple);border-radius:50%;animation:cycle-pulse 4s ease-in-out infinite}@keyframes cycle-pulse{50%{box-shadow:0 0 24px rgba(91,37,148,0.14)}}.vicious-cycle span{position:absolute;inset:82px 70px;display:grid;place-items:center;color:#fff;background:var(--neuro-red);clip-path:polygon(50% 0%,60% 25%,85% 8%,78% 35%,100% 43%,76% 55%,91% 82%,63% 72%,50% 100%,39% 73%,11% 89%,24% 58%,0 45%,25% 34%,12% 8%,40% 25%);font-weight:800;text-align:center}.vicious-cycle b{position:absolute;width:104px;font-size:0.63rem;line-height:1.25;text-align:center}.vicious-cycle b:nth-of-type(1){top:-4px;left:92px}.vicious-cycle b:nth-of-type(2){top:105px;right:-18px}.vicious-cycle b:nth-of-type(3){bottom:-1px;left:91px}.vicious-cycle b:nth-of-type(4){top:105px;left:-25px}.barrier-legend{margin-top:18px}.sadi-formula-card{position:relative;z-index:2;display:grid;grid-template-columns:330px 1fr 390px;gap:18px;align-items:center;margin-bottom:18px;padding:18px 22px;border:1.5px solid #cbbd91;border-radius:8px;background:#fffcf6;box-shadow:var(--neuro-shadow)}.sadi-formula-card>p{margin-bottom:0;color:#233458;font-family:Georgia,serif;font-size:0.9rem;font-style:italic;font-weight:700;line-height:1.5;text-align:center}.formula{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--neuro-navy);font-size:1.65rem;white-space:nowrap}.formula b{color:#ba192d}.formula em{color:var(--neuro-orange);font-style:normal;font-weight:800}.fraction{display:inline-grid;align-items:center;text-align:center}.fraction i{padding:0 6px;font-style:normal}.fraction i:first-child{border-bottom:2px solid currentColor}.sadi-formula-card dl{display:grid;gap:4px;margin-bottom:0}.sadi-formula-card dl>div{display:grid;grid-template-columns:46px 1fr;gap:7px}.sadi-formula-card dt{color:var(--neuro-purple);font-weight:800}.sadi-formula-card dd{margin:0}.sadi-main-flow{display:grid;grid-template-columns:160px 520px 180px 205px 205px;gap:12px;align-items:stretch}.sadi-main-flow>.neuro-card{min-height:510px;padding:12px}.ebii-card{--card-accent:var(--neuro-purple);--card-color:#a88cc2;text-align:center}.shs-card{--card-accent:var(--neuro-navy);--card-color:#93a9c5}.dshs-card{--card-accent:var(--neuro-purple);--card-color:#aa90c4;text-align:center}.saf-card{--card-accent:var(--neuro-orange);--card-color:#dcaa78}.sadi-card{--card-accent:var(--neuro-red);--card-color:#dc9ca5;text-align:center}.ebii-card img{width:130px;height:135px;margin:20px auto}.mini-formula{padding:8px;border:1px solid #b5a4ce;border-radius:6px;font-size:0.62rem;font-weight:700}.shs-card>h3,.shs-card>p{text-align:center}.shs-system-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin-top:12px}.shs-system-grid section{min-width:0;padding:6px;border-right:1px solid #dce4ed}.shs-system-grid section:last-child{border-right:0}.shs-system-grid img{width:100%;height:68px}.shs-system-grid h4{min-height:45px;font-size:0.61rem;text-align:center}.shs-system-grid ul{margin-bottom:0;padding-left:0.9rem}.shs-system-grid li{font-size:0.55rem;line-height:1.35}.shs-continuum{display:grid;grid-template-columns:repeat(4,1fr);margin-top:12px;border-radius:5px;overflow:clip}.shs-continuum span{display:grid;gap:2px;padding:8px 4px;font-weight:700;text-align:center}.shs-continuum small{font-size:0.54rem}.shs-continuum span:nth-child(1){background:#a7cc53}.shs-continuum span:nth-child(2){background:#f0d653}.shs-continuum span:nth-child(3){background:#ef9851}.shs-continuum span:nth-child(4){color:#fff;background:#e84d65}.vertical-formula{display:flex;align-items:center;justify-content:center;gap:7px;margin:18px 0;color:var(--neuro-purple);font-size:1rem}.dshs-card ul,.sadi-card ul,.saf-card ul{padding-left:1rem}.sadi-lower-grid{display:grid;grid-template-columns:292px 292px minmax(0,1fr);gap:14px;align-items:stretch;margin-top:16px}.cycle-card h3 small{display:block;font-size:0.62rem}.cycle-card.vicious{--card-accent:var(--neuro-red);--card-color:#dfacb3}.cycle-card.virtuous{--card-accent:var(--neuro-green);--card-color:#9ec9a6}.cycle-content{display:grid;grid-template-columns:1fr 90px 1fr;grid-template-rows:auto auto;gap:8px;align-items:center;margin:16px 0;text-align:center}.cycle-content img{grid-row:1 / 3;grid-column:2;width:90px;height:82px}.cycle-content b{padding:6px;border:1px solid currentColor;border-radius:5px;font-size:0.65rem}.cycle-content b:nth-of-type(1){grid-column:1;grid-row:1 / 3}.cycle-content b:nth-of-type(2){grid-column:3;grid-row:1}.cycle-content b:nth-of-type(3){grid-column:3;grid-row:2}.cycle-card>p{margin-bottom:0;text-align:center}.aging-continuum{--card-accent:var(--neuro-red);--card-color:#dfa5ad}.aging-continuum>p{text-align:center}.aging-stage-grid{display:grid;grid-template-columns:repeat(4,1fr)}.aging-stage-grid section{min-width:0;padding:8px;border-right:1px solid #e3dce2}.aging-stage-grid section:last-child{border-right:0}.aging-stage-grid img{width:72px;height:65px;margin-inline:auto}.aging-stage-grid h4{min-height:52px;text-align:center}.aging-stage-grid>section>b{display:block;margin-bottom:7px;text-align:center;font-size:0.64rem}.aging-stage-grid ul{padding-left:0.9rem}.aging-stage-grid li,.aging-stage-grid p,.aging-stage-grid p b{font-size:0.54rem;line-height:1.35}.sadi-increase-arrow{position:relative;height:18px;margin:8px 18px 0;color:#9b3a22;background:linear-gradient(90deg,#7aad42,#f0d650,#ef8f3f,#d52f42);clip-path:polygon(0 35%,93% 35%,93% 0,100% 50%,93% 100%,93% 65%,0 65%)}.sadi-increase-arrow span{position:absolute;top:-17px;left:44%;font-size:0.58rem;font-weight:800}.sadi-legend{margin-top:16px}.stage-s6{padding:28px}.neurocosmetic-intro{max-width:780px;margin:0 auto 20px;color:#34445f;font-size:0.88rem;font-weight:600;line-height:1.65;text-align:center}.mechanism-panel,.benefits-panel,.ingredient-panel{--card-accent:var(--neuro-purple);--card-color:#b5a5ca}.mechanism-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:14px}.mechanism-steps section{position:relative;min-height:100px;padding:10px 12px 10px 40px;border-bottom:1px solid #e0d9e9}.mechanism-steps span{position:absolute;top:8px;left:8px;display:grid;width:26px;height:26px;place-items:center;border-radius:50%;color:#fff;background:var(--neuro-purple);font-weight:800}.mechanism-steps p{margin-bottom:0}.mechanism-visual{display:grid;grid-template-columns:300px minmax(0,1fr) 170px;gap:12px;align-items:center;min-height:390px;padding:10px;border:1px solid #ddd4e8;border-radius:7px;background:#fbfaff}.mechanism-visual .neurons{width:300px;height:280px}.mechanism-visual .cell{width:100%;height:360px}.mechanism-results{display:grid;gap:12px}.mechanism-results figure{margin:0;text-align:center}.mechanism-results img{width:130px;height:98px;margin-inline:auto}.mechanism-results figcaption{font-size:0.64rem;font-weight:700}.mechanism-message,.ingredient-message{width:fit-content;max-width:90%;margin:12px auto 0;padding:10px 20px;border:1px solid #cfc3dd;border-radius:999px;color:var(--neuro-navy);background:#fff;font-weight:700;text-align:center}.benefits-panel{margin-top:18px}.benefits-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:20px}.problem-stack{display:grid;align-content:center;gap:8px}.problem-stack section{padding:14px;border:1px solid #d8a9af;border-radius:7px;background:#fff7f8}.problem-stack section:first-child{text-align:center}.problem-stack h4{color:var(--neuro-red);text-transform:uppercase}.problem-stack i{color:var(--neuro-red);font-size:1.4rem;font-style:normal;text-align:center}.problem-stack ul{margin-bottom:0}.benefit-pathways{display:grid;gap:8px}.benefit-pathways section{display:grid;grid-template-columns:84px 220px 175px minmax(0,1fr);gap:10px;align-items:center;min-height:94px;padding:8px 10px;border-bottom:1px solid #e1dbe8}.benefit-pathways section:last-child{border-bottom:0}.benefit-pathways img{width:80px;height:70px}.benefit-pathways h4{margin-bottom:0;color:var(--neuro-navy);font-size:0.82rem;text-transform:uppercase}.benefit-pathways>section>b{padding:8px;border:1px solid #d7cce4;border-radius:6px;font-size:0.68rem;text-align:center}.benefit-pathways ul{margin-bottom:0}.ingredient-panel{margin-top:18px}.ingredient-grid{display:grid;grid-template-columns:repeat(5,1fr)}.ingredient-grid figure{display:grid;min-width:0;gap:7px;margin:0;padding:12px;border-right:1px solid #ded7e7;text-align:center}.ingredient-grid figure:last-child{border-right:0}.ingredient-grid img{width:100%;height:120px;transition:transform 180ms ease}.ingredient-grid figcaption{display:grid;gap:7px}.ingredient-grid b{min-height:42px;color:var(--neuro-navy);font-size:0.72rem}.ingredient-grid span{color:#46556e;font-size:0.64rem}.ingredient-message{color:#fff;background:var(--neuro-purple)}.back-home-link{display:block;width:fit-content;margin:30px auto 72px;padding:11px 18px;border:1px solid #b5c5d8;border-radius:999px;color:var(--neuro-navy);background:#fff;font-size:0.78rem;font-weight:800;text-decoration:none}.back-to-top{position:fixed;right:18px;bottom:18px;z-index:60;width:48px;height:48px;border:1px solid rgba(255,255,255,0.24);border-radius:50%;color:#fff;background:rgba(7,27,77,0.9);box-shadow:0 12px 30px rgba(7,27,77,0.2);cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity 180ms ease,transform 180ms ease}.back-to-top.is-visible{opacity:1;transform:translateY(0)}.neuro-page.is-enhanced .neuro-card,.neuro-page.is-enhanced .axis-brain,.neuro-page.is-enhanced .direct-skin-visual,.neuro-page.is-enhanced .sadi-formula-card{opacity:0;transform:translateY(12px)}.neuro-page.is-enhanced .neuro-card.is-revealed,.neuro-page.is-enhanced .axis-brain.is-revealed,.neuro-page.is-enhanced .direct-skin-visual.is-revealed,.neuro-page.is-enhanced .sadi-formula-card.is-revealed{opacity:1;transform:translateY(0);transition:opacity 440ms ease,transform 440ms ease,box-shadow 180ms ease,border-color 180ms ease}.neuro-page.is-enhanced .neuro-card.is-revealed:hover{transform:translateY(-3px)}.formula>*{transition:color 180ms ease,text-shadow 180ms ease,transform 180ms ease}.formula>.is-formula-active{color:var(--neuro-red);text-shadow:0 0 16px rgba(206,40,63,0.24);transform:translateY(-2px)}.show-reference .reference-overlay{opacity:0.3}.show-grid .infographic-stage{background-image:linear-gradient(rgba(18,100,190,0.09) 1px,transparent 1px),linear-gradient(90deg,rgba(18,100,190,0.09) 1px,transparent 1px);background-size:24px 24px}.show-outlines .neuro-card,.show-outlines .inner-card{outline:1px solid #ef3e58;outline-offset:2px}.show-anchors [data-node]{outline:2px dashed #08a19b;outline-offset:3px}@media (max-width:1060px){.neuro-page .site-header .brand{width:100px;min-width:100px}.neuro-progress-nav{top:88px;justify-content:flex-start}.neuro-hero{padding-top:42px}.infographic-scroll{padding-inline:14px}.infographic-stage{margin-inline:0}}@media (max-width:760px){html{scroll-padding-top:128px}.neuro-page .site-header .brand{width:86px;min-width:86px;min-height:68px;padding:7px 9px 8px}.neuro-page .site-header .brand-logo{width:68px;height:49px}.neuro-progress-nav{top:68px;padding:6px 10px}.neuro-progress-nav a{padding:7px 10px;font-size:0.7rem}.neuro-shell{width:min(100% - 28px,700px)}.neuro-hero{padding:34px 0 30px}.neuro-hero h1{font-size:2.25rem}.neuro-hero h2{font-size:1.05rem}.neuro-hero p:last-child{font-size:0.9rem}.neuro-section{padding-top:54px;scroll-margin-top:120px}.section-heading{margin-bottom:18px}.section-heading h2{font-size:1.55rem}.section-heading>p:last-child{font-size:0.9rem}.infographic-scroll{padding:0 10px 24px}.infographic-stage{min-width:1180px;padding:20px}.stage-s1,.stage-s3,.stage-s4,.stage-s5{width:1480px}.stage-s2,.stage-s6{width:1240px;min-width:1240px}.section-transition{font-size:0.76rem}.back-to-top{right:12px;bottom:12px;width:44px;height:44px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:0.001ms !important}.neuro-page.is-enhanced .neuro-card,.neuro-page.is-enhanced .axis-brain,.neuro-page.is-enhanced .direct-skin-visual,.neuro-page.is-enhanced .sadi-formula-card{opacity:1;transform:none}}
+:root {
+  --neuro-navy: #071b4d;
+  --neuro-blue: #1264be;
+  --neuro-purple: #5b2594;
+  --neuro-green: #20833c;
+  --neuro-orange: #e36a15;
+  --neuro-red: #ce283f;
+  --neuro-brown: #914f32;
+  --neuro-ink: #0d1a38;
+  --neuro-muted: #52627b;
+  --neuro-line: #c9d5e4;
+  --neuro-paper: #f7f9fc;
+  --neuro-white: #ffffff;
+  --neuro-shadow: 0 12px 34px rgba(19, 45, 79, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+body.neuro-page {
+  margin: 0;
+  overflow-x: clip;
+  color: var(--neuro-ink);
+  background: var(--neuro-paper);
+  font-family: var(--font-en);
+}
+
+.neuro-page main > section {
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+}
+
+.neuro-page img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.neuro-page h1,
+.neuro-page h2,
+.neuro-page h3,
+.neuro-page h4,
+.neuro-page p,
+.neuro-page figure,
+.neuro-page ul,
+.neuro-page ol,
+.neuro-page dl {
+  margin-top: 0;
+}
+
+.neuro-page h1,
+.neuro-page h2,
+.neuro-page h3,
+.neuro-page h4 {
+  letter-spacing: 0;
+}
+
+.neuro-page ul,
+.neuro-page ol {
+  padding-left: 1.15rem;
+}
+
+.neuro-page li {
+  margin-block: 0.18rem;
+}
+
+.neuro-page .site-header {
+  position: sticky;
+  inset: auto;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(4, 15, 36, 0.94);
+  box-shadow: 0 8px 30px rgba(4, 15, 36, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.neuro-page .site-header .brand {
+  width: 118px;
+  min-width: 118px;
+  min-height: 82px;
+  padding: 9px 12px 10px;
+  border-radius: 0 0 8px 8px;
+  background: #fff;
+}
+
+.neuro-page .site-header .brand-logo {
+  width: 88px;
+  height: 60px;
+}
+
+.neuro-page .site-header .nav-link {
+  color: #eef7ff;
+  text-shadow: none;
+}
+
+.neuro-page .site-header .nav-link:hover,
+.neuro-page .site-header .nav-link:focus-visible {
+  color: #78e5d4;
+}
+
+.neuro-page .site-header .contact-pill,
+.neuro-page .site-header .circle-button {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.neuro-scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.neuro-scroll-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #62dfcd;
+}
+
+.neuro-progress-nav {
+  position: sticky;
+  top: 94px;
+  z-index: 70;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px max(16px, calc((100vw - 1220px) / 2));
+  overflow-x: auto;
+  border-bottom: 1px solid #d7e0ea;
+  background: rgba(247, 249, 252, 0.96);
+  scrollbar-width: none;
+  backdrop-filter: blur(16px);
+}
+
+.neuro-progress-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.neuro-progress-nav a {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #314462;
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.neuro-progress-nav a span {
+  margin-right: 5px;
+  color: #0d9c96;
+}
+
+.neuro-progress-nav a:hover,
+.neuro-progress-nav a:focus-visible,
+.neuro-progress-nav a.is-active {
+  border-color: rgba(18, 100, 190, 0.24);
+  color: var(--neuro-blue);
+  background: #fff;
+  outline: none;
+}
+
+.neuro-shell {
+  width: min(1220px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.neuro-hero {
+  padding: 54px 0 46px;
+  color: #fff;
+  background: var(--neuro-navy);
+}
+
+.neuro-hero-inner {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.neuro-kicker {
+  margin-bottom: 10px;
+  color: #0aa29d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.neuro-hero .neuro-kicker {
+  color: #70e5d4;
+}
+
+.neuro-hero h1 {
+  margin-bottom: 8px;
+  font-size: 3rem;
+  line-height: 1.02;
+}
+
+.neuro-hero h2 {
+  margin-bottom: 16px;
+  color: #c9d9ee;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.neuro-hero p:last-child {
+  max-width: 860px;
+  margin-bottom: 0;
+  color: #d9e4f2;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.neuro-section {
+  padding: 74px 0 30px;
+  scroll-margin-top: 145px;
+}
+
+.neuro-section:nth-of-type(even) {
+  background: #eef3f8;
+}
+
+.section-heading {
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.section-heading h2 {
+  max-width: 1080px;
+  margin-bottom: 8px;
+  color: var(--neuro-navy);
+  font-size: 2.05rem;
+  line-height: 1.15;
+}
+
+.section-heading > p:last-child {
+  max-width: 900px;
+  margin-bottom: 0;
+  color: var(--neuro-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.infographic-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-inline: contain;
+  padding: 0 max(16px, calc((100vw - 1540px) / 2)) 34px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.infographic-stage {
+  position: relative;
+  z-index: 0;
+  width: 1500px;
+  min-width: 1180px;
+  margin-inline: auto;
+  padding: 24px;
+  overflow: visible;
+  border: 1px solid #d8e1ec;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(27, 50, 85, 0.09);
+  isolation: isolate;
+}
+
+.stage-s2,
+.stage-s6 {
+  width: 1280px;
+}
+
+/* Section 3: Brain-skin neurocutaneous feedback loop */
+.stage-s3loop {
+  width: 1500px;
+  padding: 24px;
+}
+
+.feedback-loop-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 250px;
+  gap: 30px;
+  align-items: start;
+}
+
+.feedback-loop-left,
+.feedback-loop-center,
+.feedback-loop-right {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+}
+
+.feedback-stressor-card,
+.feedback-brain-card,
+.feedback-skin-card,
+.feedback-pathway-card,
+.feedback-control-card {
+  --card-accent: var(--neuro-navy);
+}
+
+.feedback-stressor-card {
+  --card-color: #d7af72;
+  text-align: center;
+}
+
+.feedback-stressor-card img {
+  width: 180px;
+  height: 132px;
+  margin: 0 auto 10px;
+}
+
+.feedback-stressor-card ul,
+.feedback-skin-card ul {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.feedback-stressor-card p,
+.feedback-brain-card p,
+.feedback-chpa-card > p {
+  margin-bottom: 0;
+  color: var(--neuro-muted);
+}
+
+.feedback-brain-card {
+  --card-color: #86acd5;
+  text-align: center;
+}
+
+.feedback-brain-card img {
+  width: 190px;
+  height: 210px;
+  margin: 0 auto 10px;
+}
+
+.feedback-hpa-card,
+.feedback-sam-card,
+.feedback-chpa-card {
+  --card-color: #d49a9a;
+}
+
+.feedback-vagus-card,
+.feedback-sensory-card {
+  --card-color: #9b82c6;
+}
+
+.feedback-control-card {
+  --card-color: #86acd5;
+}
+
+.feedback-pathway-card h3,
+.feedback-control-card h3 {
+  margin-bottom: 12px;
+  color: #522580;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  text-transform: none;
+}
+
+.feedback-cascade,
+.feedback-sam-rows p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.feedback-cascade {
+  justify-content: space-between;
+}
+
+.feedback-cascade > i,
+.feedback-sam-rows p > i {
+  flex: 0 0 auto;
+  color: var(--neuro-navy);
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.feedback-step {
+  flex: 1 1 auto;
+  min-width: 76px;
+  padding: 8px 9px;
+  border: 1px solid #8fb0d3;
+  border-radius: 5px;
+  color: var(--neuro-ink);
+  background: #f8fbff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.feedback-step.signal-step {
+  border-color: #d7a1a1;
+  background: #fffafa;
+}
+
+.feedback-cascade > b,
+.feedback-sam-rows p > b {
+  flex: 1 1 auto;
+  min-width: 112px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.feedback-middle-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.feedback-middle-grid > .neuro-card {
+  height: 100%;
+}
+
+.feedback-control-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 12px;
+}
+
+.feedback-control-grid section {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #d7e2ef;
+  border-radius: 6px;
+  background: #f8fbff;
+}
+
+.feedback-control-grid h4 {
+  color: var(--neuro-blue);
+  text-align: center;
+}
+
+.feedback-control-grid p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.feedback-sam-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.feedback-sam-rows p .feedback-step:first-child {
+  min-width: 112px;
+}
+
+.feedback-sam-rows p .signal-step {
+  min-width: 190px;
+}
+
+.feedback-chpa-card > p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.feedback-loop-right {
+  gap: 16px;
+}
+
+.feedback-loop-right .feedback-stressor-card img {
+  width: 205px;
+  height: 118px;
+}
+
+.feedback-skin-card {
+  --card-color: #d8a898;
+}
+
+.feedback-skin-card img {
+  width: 210px;
+  height: 175px;
+  margin: 0 auto 10px;
+}
+
+.feedback-skin-card:last-child img {
+  height: 185px;
+}
+
+.reference-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.connector-layer,
+.loop-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.connector-layer > path,
+.loop-layer path {
+  fill: none;
+  opacity: 1;
+  visibility: visible;
+  stroke-width: var(--connector-width, 3px);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition: filter 160ms ease;
+}
+
+.connector-layer > path.is-dashed,
+.loop-layer path {
+  stroke-dasharray: 9 8;
+}
+
+.connector-layer > path.is-animated,
+.loop-layer path {
+  animation: dash-flow 4s linear infinite;
+}
+
+.connector-layer > path.is-linked {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.connector-debug {
+  display: none;
+  font: 700 9px/1 sans-serif;
+  pointer-events: none;
+}
+
+.show-anchors .connector-debug {
+  display: block;
+}
+
+.connector-debug text {
+  paint-order: stroke;
+  fill: #092b63;
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.connector-debug .debug-source { fill: #087fdb; stroke: #fff; stroke-width: 1.5px; }
+.connector-debug .debug-target { fill: #df2748; stroke: #fff; stroke-width: 1.5px; }
+.connector-debug .debug-control { fill: #f09a21; stroke: #fff; stroke-width: 1.2px; }
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -34; }
+}
+
+.neuro-card {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  height: auto;
+  overflow: visible;
+  padding: 16px;
+  border: 1.5px solid var(--card-color, var(--neuro-line));
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--neuro-shadow);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.neuro-card:hover,
+.neuro-card:focus-within,
+.neuro-card.is-linked {
+  z-index: 3;
+  transform: translateY(-3px);
+  border-color: var(--card-accent, #80a9d6);
+  box-shadow: 0 18px 44px rgba(24, 51, 86, 0.13);
+}
+
+.neuro-card h3 {
+  margin-bottom: 8px;
+  color: var(--card-accent, var(--neuro-navy));
+  font-size: 1.02rem;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.neuro-card h4 {
+  margin-bottom: 6px;
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.neuro-card p,
+.neuro-card li,
+.neuro-card figcaption,
+.neuro-card span,
+.neuro-card dd,
+.neuro-card dt {
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.neuro-card img,
+.infographic-stage figure img {
+  position: relative;
+  z-index: 3;
+}
+
+.numbered-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.numbered-title > span,
+.core-number {
+  display: inline-grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--neuro-blue);
+  font-weight: 800;
+}
+
+.numbered-title h3,
+.numbered-title p {
+  margin-bottom: 0;
+}
+
+.numbered-title p {
+  color: var(--neuro-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.section-strip-title {
+  position: relative;
+  z-index: 5;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 12px;
+  padding-inline: 12px;
+  background: #fff;
+}
+
+.inner-card {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #b9c7d9;
+  border-radius: 7px;
+  background: #fbfdff;
+}
+
+.inner-card h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cascade-list {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 8px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.cascade-list li:not(:last-child)::after {
+  display: block;
+  margin-top: 3px;
+  color: var(--neuro-blue);
+  content: "\2193";
+}
+
+.cascade-list.compact li {
+  font-size: 0.72rem;
+}
+
+.feedback-note {
+  margin-bottom: 0;
+  color: var(--neuro-blue);
+  font-weight: 700;
+  text-align: center;
+}
+
+.visual-label-grid,
+.outcome-icon-grid,
+.clinical-grid,
+.cell-response-grid,
+.cell-icon-row {
+  display: grid;
+  gap: 10px;
+}
+
+.visual-label-grid figure,
+.outcome-icon-grid figure,
+.clinical-grid figure,
+.cell-response-grid figure,
+.cell-icon-row figure {
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.visual-label-grid img,
+.outcome-icon-grid img,
+.clinical-grid img,
+.cell-response-grid img,
+.cell-icon-row img {
+  width: 100%;
+  height: 76px;
+  margin: 0 auto 5px;
+  object-fit: contain;
+  transition: transform 180ms ease;
+}
+
+.visual-label-grid figure:hover img,
+.outcome-icon-grid figure:hover img,
+.clinical-grid figure:hover img,
+.cell-response-grid figure:hover img,
+.cell-icon-row figure:hover img,
+.ingredient-grid figure:hover img {
+  transform: scale(1.035);
+}
+
+/* Section 1 */
+.s1-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 252px;
+  gap: 18px;
+}
+
+.s1-main-flow {
+  display: grid;
+  gap: 24px;
+}
+
+.stressor-stage {
+  --card-color: #92acd0;
+  --card-accent: var(--neuro-blue);
+}
+
+.stressor-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.icon-label {
+  display: grid;
+  min-height: 105px;
+  place-items: center;
+  align-content: center;
+  gap: 4px;
+  padding: 7px 5px;
+  border-right: 1px solid #dde5ee;
+  text-align: center;
+}
+
+.icon-label:last-child {
+  border-right: 0;
+}
+
+.icon-label img {
+  width: 68px;
+  height: 58px;
+}
+
+.icon-label span {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.central-response-stage {
+  --card-accent: var(--neuro-blue);
+  --card-color: #a7b9d0;
+}
+
+.central-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.central-row > .central-response-stage,
+.central-row > .arrow-legend-card {
+  height: 100%;
+}
+
+.arrow-legend-card {
+  --card-accent: var(--neuro-navy);
+  --card-color: #a7b9d0;
+  padding: 13px 12px 14px;
+}
+
+.arrow-legend-card > h3 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.arrow-legend-card h3 small {
+  display: block;
+  margin-top: 3px;
+  color: var(--neuro-navy);
+  font-size: 0.59rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.arrow-legend-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arrow-legend-card li {
+  display: grid;
+  min-height: 34px;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+  color: var(--neuro-navy);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.arrow-legend-card li i {
+  --legend-arrow-color: var(--neuro-blue);
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin-left: 1px;
+  color: var(--legend-arrow-color);
+  background: var(--legend-arrow-color);
+}
+
+.arrow-legend-card li i::after {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  width: 0;
+  height: 0;
+  border-block: 4.5px solid transparent;
+  border-left: 7px solid var(--legend-arrow-color);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.arrow-legend-card li span small {
+  display: block;
+  margin-top: 1px;
+  color: #36465f;
+  font-size: 0.54rem;
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.arrow-legend-card .legend-primary i { --legend-arrow-color: var(--neuro-blue); }
+.arrow-legend-card .legend-neural i { --legend-arrow-color: var(--neuro-purple); }
+.arrow-legend-card .legend-humoral i { --legend-arrow-color: var(--neuro-green); }
+.arrow-legend-card .legend-endocrine i { --legend-arrow-color: var(--neuro-orange); }
+.arrow-legend-card .legend-paracrine i { --legend-arrow-color: var(--neuro-brown); }
+.arrow-legend-card .legend-feedback i { --legend-arrow-color: var(--neuro-blue); }
+.arrow-legend-card .legend-bidirectional i { --legend-arrow-color: var(--neuro-navy); }
+.arrow-legend-card .legend-feedback i,
+.arrow-legend-card .legend-paracrine i {
+  height: 0;
+  border-top: 2px dashed var(--legend-arrow-color);
+  background: transparent;
+}
+
+.arrow-legend-card .legend-bidirectional i::before {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  width: 0;
+  height: 0;
+  border-block: 4.5px solid transparent;
+  border-right: 7px solid var(--legend-arrow-color);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.central-response-grid {
+  display: grid;
+  grid-template-columns: 245px 330px minmax(0, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.hpa-card {
+  position: relative;
+  padding-left: 58px;
+  border-color: #6a8fb8;
+}
+
+.hpa-cascade {
+  gap: 10px;
+}
+
+.hpa-cascade li::after {
+  display: none !important;
+}
+
+.hpa-card .feedback-note {
+  position: absolute;
+  top: 51%;
+  left: 5px;
+  width: 48px;
+  font-size: 0.62rem;
+  line-height: 1.18;
+  transform: translateY(-50%);
+}
+
+.brain-visual {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  text-align: center;
+}
+
+.brain-visual img {
+  width: 300px;
+  height: 230px;
+}
+
+.brain-visual figcaption {
+  color: var(--neuro-muted);
+  font-weight: 700;
+}
+
+.central-side-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.autonomic-card {
+  border-color: #708fbb;
+}
+
+.autonomic-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.autonomic-columns > div {
+  display: grid;
+  place-items: center;
+  gap: 3px;
+  padding: 8px;
+  text-align: center;
+}
+
+.autonomic-columns > div:first-child {
+  color: var(--neuro-purple);
+  background: #f7f1fc;
+}
+
+.autonomic-columns > div:last-child {
+  color: var(--neuro-green);
+  background: #eff8f0;
+}
+
+.autonomic-columns img {
+  width: 54px;
+  height: 54px;
+}
+
+.autonomic-columns span {
+  font-size: 0.68rem;
+}
+
+.neuroimmune-card {
+  text-align: center;
+}
+
+.neuroimmune-card p {
+  margin-bottom: 0;
+}
+
+.peripheral-wrap,
+.loss-stage {
+  position: relative;
+  z-index: auto;
+}
+
+.peripheral-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) 190px;
+  gap: 28px;
+}
+
+.system-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+}
+
+.nervous-system {
+  --card-accent: var(--neuro-purple);
+  --card-color: #9b78bd;
+}
+
+.immune-system {
+  --card-accent: var(--neuro-green);
+  --card-color: #70a879;
+}
+
+.endocrine-system {
+  --card-accent: var(--neuro-orange);
+  --card-color: #e1a16f;
+}
+
+.system-illustration {
+  width: 155px;
+  height: 145px;
+  margin: 2px auto 8px;
+}
+
+.system-card > h4,
+.system-card > p {
+  text-align: center;
+}
+
+.system-card > ul {
+  margin-bottom: 12px;
+}
+
+.system-output {
+  margin-top: auto;
+  padding: 10px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.system-output p {
+  margin: 4px 0 0;
+}
+
+.cell-icon-row {
+  grid-template-columns: repeat(4, 1fr);
+  margin: 16px 0;
+}
+
+.cell-icon-row img {
+  height: 68px;
+}
+
+.cell-icon-row figcaption {
+  font-size: 0.64rem;
+}
+
+.communication-card {
+  --card-accent: var(--neuro-navy);
+  align-self: stretch;
+}
+
+.pathway-list {
+  display: grid;
+  gap: 16px;
+  margin: 22px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pathway-list li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding-left: 0;
+  font-weight: 700;
+}
+
+.pathway-list li::before {
+  display: none;
+  content: none;
+}
+
+.pathway-list img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.purple { color: var(--neuro-purple); }
+.green { color: var(--neuro-green); }
+.orange { color: var(--neuro-orange); }
+.red { color: var(--neuro-red); }
+.blue { color: var(--neuro-blue); }
+.brown { color: var(--neuro-brown); }
+.blue-bg { background: var(--neuro-blue); }
+.green-bg { background: var(--neuro-green); }
+
+.cellular-stage {
+  --card-accent: var(--neuro-blue);
+}
+
+.cell-response-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.cell-response-grid figure {
+  padding: 7px;
+  border-right: 1px solid #dce3ec;
+}
+
+.cell-response-grid figure:last-child {
+  border-right: 0;
+}
+
+.cell-response-grid img {
+  height: 70px;
+}
+
+.cell-response-grid figcaption {
+  display: grid;
+  gap: 4px;
+}
+
+.cell-response-grid span {
+  color: #384b65;
+  font-size: 0.68rem;
+}
+
+.loss-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.loss-stage {
+  margin-top: 24px;
+}
+
+.loss-stage-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: end;
+}
+
+.loss-mechanisms-wrap {
+  min-width: 0;
+}
+
+.mini-outcome {
+  display: grid;
+  min-height: 205px;
+  grid-template-rows: auto 72px auto;
+  align-content: start;
+  padding: 12px;
+}
+
+.mini-outcome h4 {
+  color: var(--neuro-red);
+  text-align: center;
+}
+
+.mini-outcome img {
+  width: 100%;
+  height: 68px;
+  margin: 2px auto 8px;
+  object-fit: contain;
+}
+
+.mini-outcome p {
+  margin-bottom: 0;
+}
+
+.clinical-panel {
+  --card-accent: var(--neuro-red);
+  --card-color: #dfa5ad;
+  display: flex;
+  min-height: 205px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.clinical-grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.clinical-grid img {
+  height: 78px;
+}
+
+.core-systems-panel {
+  --card-color: #9eb1cb;
+  --card-accent: var(--neuro-navy);
+  position: sticky;
+  top: 160px;
+  align-self: start;
+  padding: 14px;
+}
+
+.core-systems-panel > h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccd6e3;
+}
+
+.core-systems-panel section {
+  position: relative;
+  padding: 14px 0;
+}
+
+.core-systems-panel section + section {
+  border-top: 1px dashed #9bacbf;
+}
+
+.core-systems-panel h4 {
+  margin: 8px 0 12px;
+  color: var(--neuro-navy);
+}
+
+.core-system-flow {
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.core-system-flow > span {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 5px 8px;
+  border: 1px solid #e0e7ef;
+  border-radius: 6px;
+  background: #fbfdff;
+}
+
+.core-system-flow img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.circle-system {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  margin: 10px auto 14px;
+  border: 2px solid #d9e3ee;
+  border-radius: 50%;
+}
+
+.circle-system::after {
+  position: absolute;
+  inset: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #99abc0;
+  border-radius: 50%;
+  color: var(--neuro-navy);
+  content: "Skin Axis";
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.circle-system span {
+  position: absolute;
+  z-index: 1;
+  padding: 2px 5px;
+  background: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.circle-system span:nth-child(1) { top: -2px; left: 56px; color: var(--neuro-purple); }
+.circle-system span:nth-child(2) { right: -3px; bottom: 30px; color: var(--neuro-orange); }
+.circle-system span:nth-child(3) { bottom: 28px; left: -4px; color: var(--neuro-green); }
+
+/* Section transitions */
+.section-transition {
+  display: grid;
+  width: min(780px, calc(100% - 40px));
+  margin: 20px auto 0;
+  place-items: center;
+  gap: 12px;
+  color: #42536c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.section-transition i {
+  position: relative;
+  width: 3px;
+  height: 46px;
+  background: var(--neuro-blue);
+}
+
+.section-transition i::after {
+  position: absolute;
+  right: 50%;
+  bottom: -2px;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid var(--neuro-blue);
+  border-bottom: 3px solid var(--neuro-blue);
+  content: "";
+  transform: translateX(50%) rotate(45deg);
+}
+
+/* Section 2 */
+.stage-s2 {
+  padding: 30px;
+}
+
+.axis-brain {
+  position: relative;
+  z-index: 3;
+  width: 330px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.axis-brain figcaption {
+  margin-bottom: 5px;
+  color: var(--neuro-navy);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.axis-brain img {
+  width: 300px;
+  height: 230px;
+  margin-inline: auto;
+}
+
+.s2-loop-layer {
+  top: 55px;
+  height: 900px;
+}
+
+.purple-loop {
+  stroke: var(--neuro-purple);
+}
+
+.purple-loop + defs path,
+#s2-purple-head path {
+  fill: var(--neuro-purple);
+}
+
+.green-loop {
+  stroke: var(--neuro-green);
+}
+
+#s2-green-head path {
+  fill: var(--neuro-green);
+}
+
+.axis-main-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 235px 680px 235px;
+  grid-template-rows: auto 1fr;
+  gap: 16px 20px;
+  align-items: start;
+}
+
+.axis-center-column {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  gap: 16px;
+}
+
+.signal-card {
+  padding: 20px;
+}
+
+.signal-card h3,
+.signal-card > p {
+  text-align: center;
+}
+
+.signal-card > p {
+  font-weight: 800;
+}
+
+.efferent-card {
+  --card-accent: var(--neuro-purple);
+  --card-color: #a08abc;
+}
+
+.afferent-card {
+  --card-accent: var(--neuro-green);
+  --card-color: #87aa8b;
+  grid-column: 3;
+}
+
+.icon-bullet-list {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0 0;
+}
+
+.modulating-card {
+  --card-accent: var(--neuro-purple);
+  width: 460px;
+  margin-inline: auto;
+}
+
+.modulating-card ul {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.axis-skin {
+  margin: 0;
+}
+
+.axis-skin img {
+  width: 680px;
+  height: 440px;
+}
+
+.mediator-side {
+  min-height: 220px;
+}
+
+.mediator-side.left {
+  --card-accent: var(--neuro-purple);
+  grid-column: 1;
+}
+
+.mediator-side.right {
+  --card-accent: var(--neuro-green);
+  grid-column: 3;
+}
+
+.axis-row-card {
+  margin-top: 18px;
+}
+
+.axis-row-card h3 {
+  color: var(--neuro-purple);
+}
+
+.visual-label-grid.six { grid-template-columns: repeat(6, 1fr); }
+.visual-label-grid.seven { grid-template-columns: repeat(7, 1fr); }
+.visual-label-grid figure { padding: 8px; border-right: 1px solid #dfe6ee; }
+.visual-label-grid figure:last-child { border-right: 0; }
+.visual-label-grid img { height: 92px; }
+
+.feedback-loop-card {
+  width: 460px;
+  margin: 18px auto 0;
+  text-align: center;
+}
+
+.feedback-loop-card p {
+  margin-bottom: 0;
+}
+
+/* Section 3 */
+.direct-stressor-card {
+  --card-accent: var(--neuro-purple);
+  margin-bottom: 20px;
+}
+
+.direct-stressor-card h3 small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.68rem;
+}
+
+.compact-stressor-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.compact-stressor-grid > div {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  grid-template-rows: auto auto;
+  gap: 3px 7px;
+  align-items: center;
+  padding: 7px;
+  border-right: 1px solid #e1e6ee;
+}
+
+.compact-stressor-grid > div:last-child {
+  border-right: 0;
+}
+
+.compact-stressor-grid img {
+  grid-row: 1 / 3;
+  width: 56px;
+  height: 54px;
+}
+
+.compact-stressor-grid b {
+  font-size: 0.7rem;
+}
+
+.compact-stressor-grid span {
+  color: #4d5d73;
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.direct-main-grid {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr) 278px;
+  gap: 16px;
+}
+
+.direct-targets-card {
+  --card-accent: var(--neuro-purple);
+}
+
+.target-list {
+  display: grid;
+  gap: 7px;
+}
+
+.target-list > div {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.target-list > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.target-list img {
+  width: 62px;
+  height: 46px;
+}
+
+.target-list p {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 0;
+}
+
+.target-list b {
+  font-size: 0.71rem;
+}
+
+.target-list span {
+  color: #53627a;
+  font-size: 0.62rem;
+}
+
+.direct-center-column {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.mediator-card {
+  --card-accent: var(--neuro-red);
+  --card-color: #dfa4aa;
+}
+
+.mediator-card > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mediator-card span {
+  display: grid;
+  gap: 2px;
+  padding: 6px 10px;
+  border-right: 1px solid #e3c7ca;
+  text-align: center;
+}
+
+.mediator-card span:last-child { border-right: 0; }
+
+.direct-skin-visual {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  padding: 6px;
+  border: 1px solid #e3c1bd;
+  border-radius: 8px;
+  background: #fff8f6;
+}
+
+.direct-skin-visual img {
+  width: 100%;
+  height: 420px;
+}
+
+.direct-skin-visual figcaption {
+  position: absolute;
+  top: 110px;
+  left: 3px;
+  display: grid;
+  gap: 112px;
+  color: var(--neuro-purple);
+  font-size: 0.64rem;
+  font-weight: 800;
+}
+
+.direct-right-stack {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.signaling-card {
+  --card-accent: var(--neuro-blue);
+}
+
+.signaling-list {
+  display: grid;
+  gap: 7px;
+}
+
+.signaling-list span {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+}
+
+.signaling-list img {
+  width: 64px;
+  height: 42px;
+}
+
+.effector-card {
+  --card-accent: var(--neuro-green);
+}
+
+.effector-card ul {
+  margin-bottom: 0;
+}
+
+.tissue-effects-card {
+  --card-accent: var(--neuro-orange);
+  --card-color: #e1bc8f;
+  margin-top: 16px;
+}
+
+.effect-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.effect-grid > div {
+  min-height: 130px;
+  padding: 10px;
+  border-right: 1px solid #e5ddd4;
+}
+
+.effect-grid > div:last-child { border-right: 0; }
+.effect-grid b { display: block; margin-bottom: 7px; color: var(--neuro-navy); font-size: 0.68rem; }
+.effect-grid span { color: #495870; font-size: 0.61rem; }
+
+.direct-outcomes-card {
+  --card-accent: var(--neuro-red);
+  --card-color: #e4a7b1;
+  margin-top: 16px;
+}
+
+.outcome-icon-grid.ten {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.outcome-icon-grid img { height: 75px; }
+.outcome-icon-grid figcaption { font-size: 0.64rem; }
+
+.compact-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #dce4ed;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.compact-legend span::before {
+  margin-right: 5px;
+  content: "\2192";
+}
+
+/* Section 4 */
+.barrier-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 370px;
+  gap: 18px;
+}
+
+.barrier-main {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.barrier-top-row {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 14px;
+}
+
+.exposome-source-card {
+  --card-accent: var(--neuro-red);
+  display: grid;
+  grid-template-columns: 94px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.burst-label {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 12px 17px;
+  color: #fff;
+  background: var(--neuro-red);
+  clip-path: polygon(50% 0%, 61% 22%, 82% 8%, 78% 33%, 100% 38%, 78% 51%, 91% 72%, 65% 68%, 60% 100%, 45% 75%, 23% 91%, 27% 64%, 0 62%, 22% 45%, 7% 25%, 34% 30%);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.exposome-source-card img {
+  width: 94px;
+  height: 72px;
+}
+
+.exposome-source-card ul { margin-bottom: 0; }
+
+.barrier-mediators-card {
+  --card-accent: var(--neuro-red);
+  --card-color: #e1aeb4;
+}
+
+.barrier-mediators-card > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.barrier-mediators-card span {
+  position: relative;
+  display: grid;
+  min-height: 112px;
+  align-content: start;
+  gap: 4px;
+  padding: 10px;
+  border-right: 1px solid #e3c9cd;
+  text-align: center;
+}
+
+.barrier-mediators-card span:last-child { border-right: 0; }
+.barrier-mediators-card small { font-size: 0.64rem; line-height: 1.35; }
+
+.particle {
+  display: block;
+  width: 54px;
+  height: 30px;
+  margin: 8px auto 0;
+  background-image: radial-gradient(circle, currentColor 0 3px, transparent 4px);
+  background-size: 18px 15px;
+}
+
+.blue-particle { color: #3174bd; }
+.purple-particle { color: #8b3aa2; }
+.green-particle { color: #779b4b; }
+.orange-particle { color: #d86a2b; }
+
+.action-cells-card,
+.molecular-response-card {
+  --card-accent: var(--neuro-purple);
+  --card-color: #c6b5d8;
+}
+
+.barrier-action-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.barrier-action-grid figure,
+.molecular-grid figure {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 5px;
+  margin: 0;
+  padding: 9px;
+  border-right: 1px solid #ded8e7;
+  text-align: center;
+}
+
+.barrier-action-grid figure:last-child,
+.molecular-grid figure:last-child { border-right: 0; }
+.barrier-action-grid img { width: 100%; height: 92px; }
+.barrier-action-grid b { font-size: 0.7rem; }
+
+.molecular-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.molecular-grid img { width: 100%; height: 75px; }
+.molecular-grid b { min-height: 36px; font-size: 0.66rem; }
+
+.damaged-barrier-card {
+  --card-accent: var(--neuro-purple);
+  padding: 14px 14px 12px;
+}
+
+.damaged-barrier-card figcaption {
+  text-align: center;
+}
+
+.damaged-barrier-card figcaption p {
+  margin-bottom: 8px;
+  color: #4b5b72;
+}
+
+.damaged-barrier-card img {
+  width: 100%;
+  height: 180px;
+}
+
+.damage-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 7px;
+  text-align: center;
+}
+
+.damage-labels span { font-size: 0.66rem; font-weight: 700; }
+
+.barrier-side {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.barrier-comparison,
+.consequence-card,
+.vicious-cycle-card {
+  --card-accent: var(--neuro-purple);
+  --card-color: #b69cca;
+}
+
+.barrier-comparison > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.barrier-comparison section { min-width: 0; }
+.barrier-comparison h4 { text-align: center; text-transform: uppercase; }
+.barrier-comparison img { width: 100%; height: 72px; }
+.barrier-comparison ul { margin: 8px 0 0; }
+.positive li::marker { color: var(--neuro-green); }
+.negative li::marker { color: var(--neuro-red); }
+
+.consequence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.consequence-grid figure { margin: 0; text-align: center; }
+.consequence-grid img { width: 100%; height: 84px; }
+.consequence-grid figcaption { font-size: 0.6rem; }
+
+.vicious-cycle {
+  position: relative;
+  width: 290px;
+  height: 250px;
+  margin: 10px auto 0;
+  border: 4px solid transparent;
+  border-top-color: var(--neuro-purple);
+  border-right-color: var(--neuro-purple);
+  border-bottom-color: var(--neuro-purple);
+  border-radius: 50%;
+  animation: cycle-pulse 4s ease-in-out infinite;
+}
+
+@keyframes cycle-pulse {
+  50% { box-shadow: 0 0 24px rgba(91, 37, 148, 0.14); }
+}
+
+.vicious-cycle span {
+  position: absolute;
+  inset: 82px 70px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--neuro-red);
+  clip-path: polygon(50% 0%, 60% 25%, 85% 8%, 78% 35%, 100% 43%, 76% 55%, 91% 82%, 63% 72%, 50% 100%, 39% 73%, 11% 89%, 24% 58%, 0 45%, 25% 34%, 12% 8%, 40% 25%);
+  font-weight: 800;
+  text-align: center;
+}
+
+.vicious-cycle b {
+  position: absolute;
+  width: 104px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 0.63rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.vicious-cycle b:nth-of-type(1) { top: -8px; left: 92px; }
+.vicious-cycle b:nth-of-type(2) { top: 105px; right: -18px; }
+.vicious-cycle b:nth-of-type(3) { bottom: -1px; left: 91px; }
+.vicious-cycle b:nth-of-type(4) { top: 105px; left: -25px; }
+
+.barrier-legend {
+  margin-top: 18px;
+}
+
+/* Section 5 */
+.sadi-formula-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 330px 1fr 390px;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 18px 22px;
+  border: 1.5px solid #cbbd91;
+  border-radius: 8px;
+  background: #fffcf6;
+  box-shadow: var(--neuro-shadow);
+}
+
+.sadi-formula-card > p {
+  margin-bottom: 0;
+  color: #233458;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--neuro-navy);
+  font-size: 1.65rem;
+  white-space: nowrap;
+}
+
+.formula b { color: #ba192d; }
+.formula em { color: var(--neuro-orange); font-style: normal; font-weight: 800; }
+
+.fraction {
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+}
+
+.fraction i {
+  padding: 0 6px;
+  font-style: normal;
+}
+
+.fraction i:first-child {
+  border-bottom: 2px solid currentColor;
+}
+
+.sadi-formula-card dl {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.sadi-formula-card dl > div {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 7px;
+}
+
+.sadi-formula-card dt { color: var(--neuro-purple); font-weight: 800; }
+.sadi-formula-card dd { margin: 0; }
+
+.sadi-main-flow {
+  display: grid;
+  grid-template-columns: 160px 520px 180px 205px 205px;
+  gap: 12px;
+  align-items: start;
+}
+
+.sadi-main-flow > .neuro-card {
+  padding: 12px;
+}
+
+.ebii-card { --card-accent: var(--neuro-purple); --card-color: #a88cc2; text-align: center; }
+.shs-card { --card-accent: var(--neuro-navy); --card-color: #93a9c5; }
+.dshs-card { --card-accent: var(--neuro-purple); --card-color: #aa90c4; text-align: center; }
+.saf-card { --card-accent: var(--neuro-orange); --card-color: #dcaa78; }
+.sadi-card { --card-accent: var(--neuro-red); --card-color: #dc9ca5; text-align: center; }
+
+.ebii-card img { width: 130px; height: 135px; margin: 20px auto; }
+.mini-formula { padding: 8px; border: 1px solid #b5a4ce; border-radius: 6px; font-size: 0.62rem; font-weight: 700; }
+
+.shs-card > h3,
+.shs-card > p { text-align: center; }
+
+.shs-system-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.shs-system-grid section {
+  min-width: 0;
+  padding: 6px;
+  border-right: 1px solid #dce4ed;
+}
+
+.shs-system-grid section:last-child { border-right: 0; }
+.shs-system-grid img { width: 100%; height: 68px; }
+.shs-system-grid h4 { min-height: 45px; font-size: 0.61rem; text-align: center; }
+.shs-system-grid ul { margin-bottom: 0; padding-left: 0.9rem; }
+.shs-system-grid li { font-size: 0.55rem; line-height: 1.35; }
+
+.shs-continuum {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
+  border-radius: 5px;
+  overflow: clip;
+}
+
+.shs-continuum span {
+  display: grid;
+  gap: 2px;
+  padding: 8px 4px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.shs-continuum small { font-size: 0.54rem; }
+.shs-continuum span:nth-child(1) { background: #a7cc53; }
+.shs-continuum span:nth-child(2) { background: #f0d653; }
+.shs-continuum span:nth-child(3) { background: #ef9851; }
+.shs-continuum span:nth-child(4) { color: #fff; background: #e84d65; }
+
+.vertical-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 18px 0;
+  color: var(--neuro-purple);
+  font-size: 1rem;
+}
+
+.dshs-card ul,
+.sadi-card ul,
+.saf-card ul { padding-left: 1rem; }
+
+.sadi-lower-grid {
+  display: grid;
+  grid-template-columns: 292px 292px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.cycle-card h3 small { display: block; font-size: 0.62rem; }
+.cycle-card.vicious { --card-accent: var(--neuro-red); --card-color: #dfacb3; }
+.cycle-card.virtuous { --card-accent: var(--neuro-green); --card-color: #9ec9a6; }
+
+.cycle-content {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  grid-template-rows: auto auto;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.cycle-content img { grid-row: 1 / 3; grid-column: 2; width: 90px; height: 82px; }
+.cycle-content b { padding: 6px; border: 1px solid currentColor; border-radius: 5px; font-size: 0.65rem; }
+.cycle-content b:nth-of-type(1) { grid-column: 1; grid-row: 1 / 3; }
+.cycle-content b:nth-of-type(2) { grid-column: 3; grid-row: 1; }
+.cycle-content b:nth-of-type(3) { grid-column: 3; grid-row: 2; }
+.cycle-card > p { margin-bottom: 0; text-align: center; }
+
+.aging-continuum { --card-accent: var(--neuro-red); --card-color: #dfa5ad; }
+.aging-continuum > p { text-align: center; }
+
+.aging-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.aging-stage-grid section {
+  min-width: 0;
+  padding: 8px;
+  border-right: 1px solid #e3dce2;
+}
+
+.aging-stage-grid section:last-child { border-right: 0; }
+.aging-stage-grid img { width: 72px; height: 65px; margin-inline: auto; }
+.aging-stage-grid h4 { min-height: 52px; text-align: center; }
+.aging-stage-grid > section > b { display: block; margin-bottom: 7px; text-align: center; font-size: 0.64rem; }
+.aging-stage-grid ul { padding-left: 0.9rem; }
+.aging-stage-grid li,
+.aging-stage-grid p,
+.aging-stage-grid p b { font-size: 0.54rem; line-height: 1.35; }
+
+.sadi-increase-arrow {
+  position: relative;
+  height: 18px;
+  margin: 8px 18px 0;
+  color: #9b3a22;
+  background: linear-gradient(90deg, #7aad42, #f0d650, #ef8f3f, #d52f42);
+  clip-path: polygon(0 35%, 93% 35%, 93% 0, 100% 50%, 93% 100%, 93% 65%, 0 65%);
+}
+
+.sadi-increase-arrow span {
+  position: absolute;
+  top: -17px;
+  left: 44%;
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.sadi-legend { margin-top: 16px; }
+
+/* Section 6 */
+.stage-s6 {
+  padding: 28px;
+}
+
+.neurocosmetic-intro {
+  max-width: 780px;
+  margin: 0 auto 20px;
+  color: #34445f;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.mechanism-panel,
+.benefits-panel,
+.ingredient-panel {
+  --card-accent: var(--neuro-purple);
+  --card-color: #b5a5ca;
+}
+
+.mechanism-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.mechanism-steps section {
+  position: relative;
+  min-height: 100px;
+  padding: 10px 12px 10px 40px;
+  border-bottom: 1px solid #e0d9e9;
+}
+
+.mechanism-steps span {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--neuro-purple);
+  font-weight: 800;
+}
+
+.mechanism-steps p { margin-bottom: 0; }
+
+.mechanism-visual {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 170px;
+  gap: 12px;
+  align-items: center;
+  min-height: 390px;
+  padding: 10px;
+  border: 1px solid #ddd4e8;
+  border-radius: 7px;
+  background: #fbfaff;
+}
+
+.mechanism-visual .neurons { width: 300px; height: 280px; }
+.mechanism-visual .cell { width: 100%; height: 360px; }
+
+.mechanism-results {
+  display: grid;
+  gap: 12px;
+}
+
+.mechanism-results figure { margin: 0; text-align: center; }
+.mechanism-results img { width: 130px; height: 98px; margin-inline: auto; }
+.mechanism-results figcaption { font-size: 0.64rem; font-weight: 700; }
+
+.mechanism-message,
+.ingredient-message {
+  width: fit-content;
+  max-width: 90%;
+  margin: 12px auto 0;
+  padding: 10px 20px;
+  border: 1px solid #cfc3dd;
+  border-radius: 999px;
+  color: var(--neuro-navy);
+  background: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.benefits-panel {
+  margin-top: 18px;
+}
+
+.benefits-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.problem-stack {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+}
+
+.problem-stack section {
+  padding: 14px;
+  border: 1px solid #d8a9af;
+  border-radius: 7px;
+  background: #fff7f8;
+}
+
+.problem-stack section:first-child { text-align: center; }
+.problem-stack h4 { color: var(--neuro-red); text-transform: uppercase; }
+.problem-stack i { color: var(--neuro-red); font-size: 1.4rem; font-style: normal; text-align: center; }
+.problem-stack ul { margin-bottom: 0; }
+
+.benefit-pathways {
+  display: grid;
+  gap: 8px;
+}
+
+.benefit-pathways section {
+  display: grid;
+  grid-template-columns: 84px 220px 175px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 94px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e1dbe8;
+}
+
+.benefit-pathways section:last-child { border-bottom: 0; }
+.benefit-pathways img { width: 80px; height: 70px; }
+.benefit-pathways h4 { margin-bottom: 0; color: var(--neuro-navy); font-size: 0.82rem; text-transform: uppercase; }
+.benefit-pathways > section > b { padding: 8px; border: 1px solid #d7cce4; border-radius: 6px; font-size: 0.68rem; text-align: center; }
+.benefit-pathways ul { margin-bottom: 0; }
+
+.ingredient-panel {
+  margin-top: 18px;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.ingredient-grid figure {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  margin: 0;
+  padding: 12px;
+  border-right: 1px solid #ded7e7;
+  text-align: center;
+}
+
+.ingredient-grid figure:last-child { border-right: 0; }
+.ingredient-grid img { width: 100%; height: 120px; transition: transform 180ms ease; }
+.ingredient-grid figcaption { display: grid; gap: 7px; }
+.ingredient-grid b { min-height: 42px; color: var(--neuro-navy); font-size: 0.72rem; }
+.ingredient-grid span { color: #46556e; font-size: 0.64rem; }
+
+.ingredient-message {
+  color: #fff;
+  background: var(--neuro-purple);
+}
+
+.back-home-link {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 72px;
+  padding: 11px 18px;
+  border: 1px solid #b5c5d8;
+  border-radius: 999px;
+  color: var(--neuro-navy);
+  background: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(7, 27, 77, 0.9);
+  box-shadow: 0 12px 30px rgba(7, 27, 77, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section 1: 1536 x 1024 reference-alignment pass */
+.s1-scroll {
+  padding-inline: 0;
+}
+
+.stage-s1 {
+  --s1-font-major-title: clamp(11px, 0.92cqw, 14px);
+  --s1-font-card-title: clamp(10px, 0.78cqw, 12px);
+  --s1-font-subheading: clamp(8px, 0.66cqw, 10px);
+  --s1-font-body: clamp(8px, 0.62cqw, 9.5px);
+  --s1-font-small: clamp(7px, 0.54cqw, 8.3px);
+  --s1-font-micro: clamp(6.5px, 0.48cqw, 7.4px);
+  --s1-space-1: 0.2cqw;
+  --s1-space-2: 0.33cqw;
+  --s1-space-3: 0.52cqw;
+  --s1-space-4: 0.72cqw;
+  box-sizing: border-box;
+  width: min(100%, 1536px);
+  min-width: 1180px;
+  aspect-ratio: 1536 / 1024;
+  container-type: inline-size;
+  padding: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  font-family: "Arial Narrow", "Roboto Condensed", Inter, Arial, sans-serif;
+}
+
+.stage-s1 *,
+.stage-s1 *::before,
+.stage-s1 *::after {
+  box-sizing: border-box;
+}
+
+.stage-s1 .reference-overlay {
+  z-index: 10;
+  object-fit: contain !important;
+}
+
+.show-reference .stage-s1 .reference-overlay {
+  opacity: 0.35;
+}
+
+.stage-s1 .s1-layout {
+  display: grid;
+  height: 55.6cqw;
+  grid-template-columns: minmax(0, 4.64fr) minmax(0, 1fr);
+  gap: 1.2cqw;
+  align-items: stretch;
+  margin-inline: 0.65cqw;
+}
+
+.stage-s1 .s1-main-flow {
+  display: grid;
+  min-width: 0;
+  height: 100%;
+  grid-template-rows: 6.5cqw 16.3cqw 18cqw 10.35cqw;
+  gap: 1.48cqw;
+}
+
+.stage-s1 .neuro-card {
+  min-width: 0;
+  height: auto;
+  overflow: visible;
+  padding: var(--s1-space-3) var(--s1-space-4);
+  border-width: 1px;
+  border-radius: clamp(7px, 0.72cqw, 11px);
+  box-shadow: none;
+}
+
+.stage-s1 .neuro-card:hover,
+.stage-s1 .neuro-card:focus-within,
+.stage-s1 .neuro-card.is-linked {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(24, 51, 86, 0.09);
+}
+
+.stage-s1 .neuro-card h3 {
+  margin-bottom: var(--s1-space-2);
+  font-size: var(--s1-font-major-title);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.stage-s1 .neuro-card h4 {
+  margin-bottom: var(--s1-space-1);
+  font-size: var(--s1-font-card-title);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.stage-s1 .neuro-card p,
+.stage-s1 .neuro-card li,
+.stage-s1 .neuro-card figcaption,
+.stage-s1 .neuro-card span,
+.stage-s1 .neuro-card dd,
+.stage-s1 .neuro-card dt {
+  font-size: var(--s1-font-body);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.stage-s1 .neuro-card ul {
+  margin: 0;
+  padding-left: 1.15em;
+}
+
+.stage-s1 .neuro-card li {
+  margin: 0 0 0.22em;
+}
+
+.stage-s1 .numbered-title {
+  min-height: 1.28cqw;
+  gap: var(--s1-space-2);
+  margin-bottom: var(--s1-space-2);
+}
+
+.stage-s1 .numbered-title > span {
+  display: inline;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  color: var(--neuro-navy);
+  background: transparent;
+  font-size: var(--s1-font-major-title);
+  line-height: 1;
+}
+
+.stage-s1 .numbered-title > span::after {
+  content: ".";
+}
+
+.stage-s1 .numbered-title h3,
+.stage-s1 .numbered-title p {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.stage-s1 .numbered-title p {
+  color: var(--neuro-navy);
+  font-size: var(--s1-font-small);
+  font-weight: 700;
+}
+
+.stage-s1 .section-strip-title {
+  min-height: 1.3cqw;
+  margin: 0 auto;
+  padding-inline: var(--s1-space-3);
+}
+
+.stage-s1 .stressor-stage {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 0.28cqw 0.48cqw 0.22cqw;
+}
+
+.stage-s1 .stressor-stage .numbered-title > div {
+  display: flex;
+  gap: 0.35cqw;
+  align-items: baseline;
+}
+
+.stage-s1 .stressor-stage .numbered-title p::before { content: "("; }
+.stage-s1 .stressor-stage .numbered-title p::after { content: ")"; }
+
+.stage-s1 .stressor-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 1.05fr 0.95fr 1.08fr 0.95fr 0.95fr 0.9fr 1.1fr;
+  gap: 0;
+  align-items: stretch;
+}
+
+.stage-s1 .icon-label {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: minmax(2.7cqw, 3.6cqw) minmax(0, 1fr);
+  gap: 0.28cqw;
+  place-items: center start;
+  align-content: center;
+  padding: 0.12cqw 0.26cqw;
+  text-align: left;
+}
+
+.stage-s1 .icon-label img {
+  width: 100%;
+  height: 3.35cqw;
+  object-fit: contain;
+}
+
+.stage-s1 .icon-label span {
+  color: #111827;
+  font-size: var(--s1-font-subheading);
+  font-weight: 700;
+  line-height: 1.12;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.stage-s1 .central-row {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 15.3cqw;
+  gap: 1.15cqw;
+  align-items: stretch;
+}
+
+.stage-s1 .central-response-stage,
+.stage-s1 .arrow-legend-card {
+  height: 100%;
+}
+
+.stage-s1 .central-response-stage {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 0.45cqw 0.55cqw 0.5cqw;
+}
+
+.stage-s1 .central-response-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 25fr 37fr 28fr;
+  gap: 2.3%;
+  align-items: stretch;
+}
+
+.stage-s1 .inner-card {
+  min-height: 0;
+  padding: 0.45cqw;
+  border-radius: 0.45cqw;
+}
+
+.stage-s1 .inner-card h4 {
+  font-size: var(--s1-font-card-title);
+  line-height: 1;
+}
+
+.stage-s1 .hpa-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 0.38cqw 0.42cqw 0.28cqw 3.1cqw;
+}
+
+.stage-s1 .hpa-card > h4,
+.stage-s1 .autonomic-card > h4,
+.stage-s1 .neuroimmune-card > h4 {
+  margin: -0.38cqw -0.42cqw 0.25cqw;
+  padding: 0.22cqw 0.35cqw;
+  border-radius: 0.38cqw 0.38cqw 0 0;
+  color: #fff;
+  background: #4f83b8;
+  text-align: center;
+}
+
+.stage-s1 .hpa-card > h4 {
+  margin-left: -3.1cqw;
+}
+
+.stage-s1 .hpa-cascade {
+  align-content: space-evenly;
+  gap: 0.08cqw;
+  margin: 0;
+}
+
+.stage-s1 .hpa-cascade li {
+  margin: 0;
+  font-size: var(--s1-font-body);
+  line-height: 1.05;
+}
+
+.stage-s1 .hpa-card .feedback-note {
+  left: 0.18cqw;
+  width: 2.65cqw;
+  font-size: var(--s1-font-small);
+  line-height: 1.12;
+}
+
+.stage-s1 .brain-visual {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr) auto;
+  place-items: center;
+}
+
+.stage-s1 .brain-visual img {
+  width: 100%;
+  height: 11.1cqw;
+  object-fit: contain;
+}
+
+.stage-s1 .brain-visual figcaption {
+  font-size: var(--s1-font-micro);
+  line-height: 1;
+}
+
+.stage-s1 .central-side-stack {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: 1.12fr 0.76fr;
+  gap: 0.45cqw;
+}
+
+.stage-s1 .autonomic-card,
+.stage-s1 .neuroimmune-card {
+  display: grid;
+  min-height: 0;
+  padding: 0.38cqw 0.42cqw;
+}
+
+.stage-s1 .autonomic-card { grid-template-rows: auto minmax(0, 1fr); }
+
+.stage-s1 .autonomic-columns {
+  min-height: 0;
+  gap: 0.25cqw;
+}
+
+.stage-s1 .autonomic-columns > div {
+  align-content: center;
+  gap: 0.08cqw;
+  padding: 0.22cqw;
+}
+
+.stage-s1 .autonomic-columns img {
+  width: 2.45cqw;
+  height: 2.45cqw;
+  object-fit: contain;
+}
+
+.stage-s1 .autonomic-columns b,
+.stage-s1 .autonomic-columns span,
+.stage-s1 .neuroimmune-card b,
+.stage-s1 .neuroimmune-card p {
+  font-size: var(--s1-font-small);
+  line-height: 1.12;
+}
+
+.stage-s1 .neuroimmune-card {
+  align-content: start;
+  text-align: center;
+}
+
+.stage-s1 .neuroimmune-card p { margin: 0.12cqw 0 0; }
+
+.stage-s1 .arrow-legend-card {
+  padding: 0.55cqw 0.55cqw 0.45cqw;
+}
+
+.stage-s1 .arrow-legend-card > h3 { font-size: var(--s1-font-card-title); }
+
+.stage-s1 .arrow-legend-card h3 small {
+  display: inline;
+  margin: 0;
+  font-size: var(--s1-font-micro);
+}
+
+.stage-s1 .arrow-legend-card ul {
+  display: grid;
+  height: calc(100% - 1.2cqw);
+  gap: 0.18cqw;
+  align-content: space-evenly;
+  margin: 0.25cqw 0 0;
+}
+
+.stage-s1 .arrow-legend-card li {
+  min-height: 0;
+  grid-template-columns: 2.2cqw minmax(0, 1fr);
+  gap: 0.35cqw;
+  padding: 0;
+  font-size: var(--s1-font-small);
+  line-height: 1.1;
+}
+
+.stage-s1 .arrow-legend-card li i { width: 2cqw; }
+
+.stage-s1 .arrow-legend-card li span,
+.stage-s1 .arrow-legend-card li span small {
+  font-size: var(--s1-font-small);
+  line-height: 1.08;
+}
+
+.stage-s1 .peripheral-wrap {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: 1.32cqw minmax(0, 1fr);
+}
+
+.stage-s1 .peripheral-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 28fr 30fr 27fr 14fr;
+  gap: 2.4cqw;
+  align-items: stretch;
+}
+
+.stage-s1 .system-card,
+.stage-s1 .communication-card {
+  height: 100%;
+  min-height: 0;
+  padding: 0.52cqw 0.58cqw;
+}
+
+.stage-s1 .system-card { display: flex; }
+
+.stage-s1 .system-card > h3,
+.stage-s1 .communication-card > h3 {
+  margin-bottom: 0.3cqw;
+  font-size: var(--s1-font-card-title);
+}
+
+.stage-s1 .nervous-system {
+  display: grid;
+  grid-template-columns: 41% minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  column-gap: 0.48cqw;
+}
+
+.stage-s1 .nervous-system > h3,
+.stage-s1 .nervous-system > .system-output {
+  grid-column: 1 / -1;
+}
+
+.stage-s1 .nervous-system > h3 { grid-row: 1; }
+.stage-s1 .nervous-system > .system-illustration { grid-column: 1; grid-row: 2 / 4; }
+.stage-s1 .nervous-system > h4 { grid-column: 2; grid-row: 2; }
+.stage-s1 .nervous-system > ul { grid-column: 2; grid-row: 3; }
+.stage-s1 .nervous-system > .system-output { grid-row: 4; }
+
+.stage-s1 .system-illustration {
+  width: 100%;
+  height: 8.1cqw;
+  margin: 0;
+  object-fit: contain;
+}
+
+.stage-s1 .system-card > h4,
+.stage-s1 .system-card > p,
+.stage-s1 .system-card > ul {
+  margin-bottom: 0.2cqw;
+}
+
+.stage-s1 .system-card > ul { align-self: start; }
+
+.stage-s1 .system-output {
+  margin-top: auto;
+  padding: 0.32cqw;
+  border-radius: 0.35cqw;
+}
+
+.stage-s1 .system-output p {
+  margin: 0.12cqw 0 0;
+  font-size: var(--s1-font-small);
+  line-height: 1.12;
+}
+
+.stage-s1 .cell-icon-row {
+  gap: 0.22cqw;
+  margin: 0.45cqw 0;
+}
+
+.stage-s1 .cell-icon-row img {
+  height: 3.25cqw;
+  object-fit: contain;
+}
+
+.stage-s1 .cell-icon-row figcaption {
+  font-size: var(--s1-font-small);
+  line-height: 1.08;
+}
+
+.stage-s1 .pathway-list {
+  height: calc(100% - 1.35cqw);
+  gap: 0.2cqw;
+  align-content: space-evenly;
+  margin: 0.2cqw 0 0;
+}
+
+.stage-s1 .pathway-list li {
+  grid-template-columns: 2.2cqw minmax(0, 1fr);
+  gap: 0.25cqw;
+  padding: 0;
+  font-size: var(--s1-font-small);
+  line-height: 1.08;
+}
+
+.stage-s1 .pathway-list img {
+  width: 2.05cqw;
+  height: 2.05cqw;
+}
+
+.stage-s1 .cellular-stage {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1.22cqw minmax(0, 1fr);
+  padding: 0.28cqw 0.55cqw 0.35cqw;
+}
+
+.stage-s1 .cellular-stage .numbered-title {
+  min-height: 0;
+  margin: 0;
+}
+
+.stage-s1 .cell-response-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0;
+}
+
+.stage-s1 .cell-response-grid figure {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: center;
+  padding: 0.18cqw 0.42cqw;
+}
+
+.stage-s1 .cell-response-grid figure > img {
+  grid-row: 2;
+  width: 100%;
+  height: 3.55cqw;
+  margin: 0;
+  object-fit: contain;
+}
+
+.stage-s1 .cell-response-grid figcaption { display: contents; }
+
+.stage-s1 .cell-response-grid figcaption > b {
+  grid-row: 1;
+  font-size: var(--s1-font-subheading);
+  line-height: 1.05;
+}
+
+.stage-s1 .cell-response-grid figcaption > span {
+  grid-row: 3;
+  color: #111827;
+  font-size: var(--s1-font-small);
+  line-height: 1.12;
+}
+
+.stage-s1 .core-systems-panel {
+  position: relative;
+  top: auto;
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 0.93fr 1.07fr;
+  align-self: stretch;
+  padding: 0.62cqw 0.65cqw;
+}
+
+.stage-s1 .core-systems-panel > h3 {
+  margin: 0;
+  padding: 0 0 0.45cqw;
+  font-size: var(--s1-font-major-title);
+}
+
+.stage-s1 .core-systems-panel section {
+  min-height: 0;
+  padding: 0.55cqw 0;
+}
+
+.stage-s1 .core-systems-panel h4 {
+  margin: 0.1cqw 0 0.4cqw 2.25cqw;
+  font-size: var(--s1-font-card-title);
+  line-height: 1.18;
+}
+
+.stage-s1 .core-number {
+  position: absolute;
+  top: 0.42cqw;
+  left: 0;
+  width: 1.75cqw;
+  height: 1.75cqw;
+  font-size: var(--s1-font-card-title);
+}
+
+.stage-s1 .core-system-flow {
+  gap: 0.22cqw;
+  margin: 0.25cqw 0;
+}
+
+.stage-s1 .core-system-flow > span {
+  grid-template-columns: 2.35cqw minmax(0, 1fr);
+  gap: 0.35cqw;
+  padding: 0.16cqw 0.25cqw;
+  border: 0;
+  background: transparent;
+}
+
+.stage-s1 .core-system-flow img {
+  width: 2.2cqw;
+  height: 2.2cqw;
+}
+
+.stage-s1 .core-system-flow b,
+.stage-s1 .core-systems-panel p {
+  font-size: var(--s1-font-small);
+  line-height: 1.15;
+}
+
+.stage-s1 .core-systems-panel p { margin: 0.25cqw 0 0; }
+
+.stage-s1 .circle-system {
+  width: 8.1cqw;
+  height: 8.1cqw;
+  margin: 0.25cqw auto 0.4cqw;
+}
+
+.stage-s1 .circle-system::after {
+  inset: 1.05cqw;
+  font-size: var(--s1-font-small);
+}
+
+.stage-s1 .circle-system span {
+  padding: 0.1cqw 0.22cqw;
+  font-size: var(--s1-font-small);
+}
+
+.stage-s1 .loss-stage {
+  height: 9.35cqw;
+  margin: 1.55cqw 0.65cqw 0;
+}
+
+.stage-s1 .loss-stage-row {
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(0, 4.64fr) minmax(0, 1fr);
+  gap: 1.2cqw;
+  align-items: stretch;
+}
+
+.stage-s1 .loss-mechanisms-wrap {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: 1.32cqw minmax(0, 1fr);
+}
+
+.stage-s1 .loss-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid #9eb1cb;
+  border-radius: 0.6cqw;
+  background: #fff;
+}
+
+.stage-s1 .mini-outcome {
+  display: grid;
+  min-height: 0;
+  height: 100%;
+  grid-template-rows: auto minmax(2.7cqw, 1fr) auto;
+  align-content: stretch;
+  padding: 0.35cqw 0.42cqw;
+  border: 0;
+  border-right: 1px solid #dce3ec;
+  border-radius: 0;
+}
+
+.stage-s1 .mini-outcome:last-child { border-right: 0; }
+
+.stage-s1 .mini-outcome h4 {
+  margin: 0;
+  font-size: var(--s1-font-subheading);
+  line-height: 1.05;
+}
+
+.stage-s1 .mini-outcome img {
+  width: 100%;
+  height: 3.25cqw;
+  margin: 0.1cqw auto;
+  object-fit: contain;
+}
+
+.stage-s1 .mini-outcome p {
+  margin: 0;
+  font-size: var(--s1-font-small);
+  line-height: 1.12;
+}
+
+.stage-s1 .clinical-panel {
+  display: grid;
+  min-height: 0;
+  height: 100%;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+  padding: 0.45cqw 0.5cqw;
+}
+
+.stage-s1 .clinical-panel > h3 {
+  margin: 0;
+  font-size: var(--s1-font-card-title);
+}
+
+.stage-s1 .clinical-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.12cqw;
+  align-items: center;
+}
+
+.stage-s1 .clinical-grid img {
+  width: 100%;
+  height: 3.8cqw;
+  margin: 0;
+  object-fit: contain;
+}
+
+.stage-s1 .clinical-grid figcaption {
+  font-size: var(--s1-font-micro);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.show-outlines .stage-s1 .is-overflowing {
+  outline: 2px solid #e5233f !important;
+  outline-offset: 2px;
+}
+
+/* Reveal and debugging */
+.neuro-page.is-enhanced .neuro-card,
+.neuro-page.is-enhanced .axis-brain,
+.neuro-page.is-enhanced .direct-skin-visual,
+.neuro-page.is-enhanced .sadi-formula-card {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.neuro-page.is-enhanced .neuro-card.is-revealed,
+.neuro-page.is-enhanced .axis-brain.is-revealed,
+.neuro-page.is-enhanced .direct-skin-visual.is-revealed,
+.neuro-page.is-enhanced .sadi-formula-card.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 440ms ease, transform 440ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.neuro-page.is-enhanced .neuro-card.is-revealed:hover {
+  transform: translateY(-3px);
+}
+
+.formula > * {
+  transition: color 180ms ease, text-shadow 180ms ease, transform 180ms ease;
+}
+
+.formula > .is-formula-active {
+  color: var(--neuro-red);
+  text-shadow: 0 0 16px rgba(206, 40, 63, 0.24);
+  transform: translateY(-2px);
+}
+
+.show-reference .reference-overlay { opacity: 0.3; }
+.show-grid .infographic-stage { background-image: linear-gradient(rgba(18, 100, 190, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(18, 100, 190, 0.09) 1px, transparent 1px); background-size: 24px 24px; }
+.show-outlines .neuro-card,
+.show-outlines .inner-card { outline: 1px solid #ef3e58; outline-offset: 2px; }
+.show-anchors [data-node] { outline: 2px dashed #08a19b; outline-offset: 3px; }
+
+@media (max-width: 1060px) {
+  .neuro-page .site-header .brand {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .neuro-progress-nav {
+    top: 88px;
+    justify-content: flex-start;
+  }
+
+  .neuro-hero {
+    padding-top: 42px;
+  }
+
+  .infographic-scroll {
+    padding-inline: 14px;
+  }
+
+  .infographic-stage {
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 128px; }
+
+  .neuro-page .site-header .brand {
+    width: 86px;
+    min-width: 86px;
+    min-height: 68px;
+    padding: 7px 9px 8px;
+  }
+
+  .neuro-page .site-header .brand-logo {
+    width: 68px;
+    height: 49px;
+  }
+
+  .neuro-progress-nav {
+    top: 68px;
+    padding: 6px 10px;
+  }
+
+  .neuro-progress-nav a {
+    padding: 7px 10px;
+    font-size: 0.7rem;
+  }
+
+  .neuro-shell {
+    width: min(100% - 28px, 700px);
+  }
+
+  .neuro-hero {
+    padding: 34px 0 30px;
+  }
+
+  .neuro-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .neuro-hero h2 {
+    font-size: 1.05rem;
+  }
+
+  .neuro-hero p:last-child {
+    font-size: 0.9rem;
+  }
+
+  .neuro-section {
+    padding-top: 54px;
+    scroll-margin-top: 120px;
+  }
+
+  .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .section-heading > p:last-child {
+    font-size: 0.9rem;
+  }
+
+  .infographic-scroll {
+    padding: 0 10px 24px;
+  }
+
+  .infographic-stage {
+    min-width: 1180px;
+    padding: 20px;
+  }
+
+  .stage-s1,
+  .stage-s3,
+  .stage-s4,
+  .stage-s5 {
+    width: 1480px;
+  }
+
+  .stage-s2,
+  .stage-s6 {
+    width: 1240px;
+    min-width: 1240px;
+  }
+
+  .section-transition {
+    font-size: 0.76rem;
+  }
+
+  .back-to-top {
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.001ms !important; }
+  .neuro-page.is-enhanced .neuro-card,
+  .neuro-page.is-enhanced .axis-brain,
+  .neuro-page.is-enhanced .direct-skin-visual,
+  .neuro-page.is-enhanced .sadi-formula-card { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1179px) {
+  .s1-scroll {
+    padding: 0 0 24px;
+  }
+
+  .stage-s1 {
+    width: 1180px;
+    min-width: 1180px;
+    padding: 0;
+  }
+}
+
+/* Section 1 native 1536 x 1024 reconstruction. Keep major regions on the
+   measured reference coordinate system; only card internals may reflow. */
+.s1-scroll {
+  width: 100%;
+  padding: 0 0 18px;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+#skin-homeostasis-network.stage-s1 {
+  --font-page-title: 32px;
+  --font-page-subtitle: 20px;
+  --font-section-title: 16px;
+  --font-major-card-title: 14px;
+  --font-card-title: 12px;
+  --font-item-title: 10.5px;
+  --font-body: 9.5px;
+  --font-small: 8.5px;
+  --font-micro: 7.5px;
+  position: relative;
+  display: block;
+  width: 1536px;
+  height: 1024px;
+  min-width: 1536px;
+  min-height: 1024px;
+  margin-inline: auto;
+  padding: 0;
+  overflow: visible;
+  container-type: normal;
+  aspect-ratio: auto;
+  isolation: isolate;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  color: #111827;
+  font-family: Arial, "Arial Narrow", Helvetica, sans-serif;
+}
+
+#skin-homeostasis-network,
+#skin-homeostasis-network *,
+#skin-homeostasis-network *::before,
+#skin-homeostasis-network *::after {
+  box-sizing: border-box;
+}
+
+#skin-homeostasis-network h1,
+#skin-homeostasis-network h2,
+#skin-homeostasis-network h3,
+#skin-homeostasis-network h4,
+#skin-homeostasis-network p,
+#skin-homeostasis-network ul,
+#skin-homeostasis-network ol,
+#skin-homeostasis-network figure,
+#skin-homeostasis-network figcaption {
+  margin: 0;
+}
+
+#skin-homeostasis-network ul,
+#skin-homeostasis-network ol {
+  padding-left: 14px;
+}
+
+#skin-homeostasis-network li {
+  margin: 0 0 2px;
+}
+
+#skin-homeostasis-network li:last-child {
+  margin-bottom: 0;
+}
+
+#skin-homeostasis-network .s1-layout,
+#skin-homeostasis-network .s1-main-flow,
+#skin-homeostasis-network .central-row,
+#skin-homeostasis-network .peripheral-wrap,
+#skin-homeostasis-network .peripheral-grid,
+#skin-homeostasis-network .loss-stage,
+#skin-homeostasis-network .loss-stage-row {
+  display: contents;
+}
+
+#skin-homeostasis-network .s1-canvas-heading {
+  display: contents;
+}
+
+#skin-homeostasis-network .s1-canvas-heading .neuro-kicker {
+  display: none;
+}
+
+#skin-homeostasis-network .s1-canvas-heading h2 {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: none;
+  color: #082a7e;
+  font-family: Arial, "Arial Narrow", Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#skin-homeostasis-network .s1-canvas-heading > p:last-child {
+  z-index: 2;
+  max-width: none;
+  color: #26345e;
+  font-size: var(--font-page-subtitle);
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#skin-homeostasis-network .reference-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: block;
+  width: 1536px;
+  height: 1024px;
+  max-width: none;
+  object-fit: contain !important;
+  opacity: var(--reference-opacity, 0);
+  pointer-events: none;
+}
+
+.show-reference #skin-homeostasis-network .reference-overlay {
+  opacity: 0.32;
+}
+
+#skin-homeostasis-network .connector-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 1536px;
+  height: 1024px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#skin-homeostasis-network .neuro-card,
+#skin-homeostasis-network .inner-card {
+  min-width: 0;
+  overflow: visible;
+  background: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+#skin-homeostasis-network .neuro-card {
+  z-index: 2;
+  padding: 8px 10px;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+#skin-homeostasis-network .inner-card {
+  position: relative;
+  z-index: 2;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+#skin-homeostasis-network .neuro-card:hover,
+#skin-homeostasis-network .neuro-card:focus-within,
+#skin-homeostasis-network .neuro-card.is-linked,
+#skin-homeostasis-network .neuro-card.is-revealed,
+#skin-homeostasis-network .neuro-card.is-revealed:hover,
+#skin-homeostasis-network .inner-card:hover,
+#skin-homeostasis-network .inner-card.is-linked {
+  z-index: 2;
+  opacity: 1 !important;
+  transform: none !important;
+  box-shadow: none;
+}
+
+#skin-homeostasis-network .neuro-card h3,
+#skin-homeostasis-network .neuro-card h4 {
+  letter-spacing: 0;
+}
+
+#skin-homeostasis-network .neuro-card h3 {
+  font-size: var(--font-major-card-title);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+#skin-homeostasis-network .neuro-card h4 {
+  font-size: var(--font-card-title);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+#skin-homeostasis-network .neuro-card p,
+#skin-homeostasis-network .neuro-card li,
+#skin-homeostasis-network .neuro-card figcaption,
+#skin-homeostasis-network .neuro-card span,
+#skin-homeostasis-network .inner-card p,
+#skin-homeostasis-network .inner-card li,
+#skin-homeostasis-network .inner-card span {
+  font-size: var(--font-body);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+#skin-homeostasis-network img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .numbered-title {
+  display: flex;
+  min-height: 0;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  color: #092d84;
+  text-align: center;
+}
+
+#skin-homeostasis-network .numbered-title > span {
+  display: inline;
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+  color: inherit;
+  background: transparent;
+  border-radius: 0;
+  font-size: var(--font-section-title);
+  font-weight: 800;
+  line-height: 19px;
+}
+
+#skin-homeostasis-network .numbered-title > span::after {
+  content: ".";
+}
+
+#skin-homeostasis-network .numbered-title > div {
+  min-width: 0;
+}
+
+#skin-homeostasis-network .numbered-title h3 {
+  color: inherit;
+  font-size: var(--font-section-title);
+  font-weight: 800;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .numbered-title p {
+  color: inherit;
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Top stressor strip */
+#skin-homeostasis-network .stressor-stage {
+  display: grid;
+  grid-template-rows: 20px 64px;
+  padding: 4px 8px 3px;
+  border-color: #214d9c;
+}
+
+#skin-homeostasis-network .stressor-stage .numbered-title > div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+#skin-homeostasis-network .stressor-stage .numbered-title p::before {
+  content: "(";
+}
+
+#skin-homeostasis-network .stressor-stage .numbered-title p::after {
+  content: ")";
+}
+
+#skin-homeostasis-network .stressor-grid {
+  display: grid;
+  height: 64px;
+  grid-template-columns: 1.08fr 0.92fr 1.05fr 0.94fr 0.98fr 0.9fr 1.08fr;
+  align-items: center;
+  column-gap: 8px;
+  padding-inline: 8px;
+}
+
+#skin-homeostasis-network .icon-label {
+  display: grid;
+  min-width: 0;
+  height: 58px;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  text-align: left;
+}
+
+#skin-homeostasis-network .icon-label img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .icon-label span {
+  color: #111;
+  font-size: var(--font-item-title);
+  font-weight: 700;
+  line-height: 1.12;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-align: left;
+}
+
+/* Central stress response */
+#skin-homeostasis-network .central-response-stage {
+  display: grid;
+  grid-template-rows: 22px 198px;
+  padding: 6px 10px 7px;
+  border-color: #214d9c;
+}
+
+#skin-homeostasis-network .central-response-stage > .numbered-title p {
+  display: none;
+}
+
+#skin-homeostasis-network .central-response-grid {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 174px 68px 250px 68px 234px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+}
+
+#skin-homeostasis-network .hpa-card {
+  grid-column: 1;
+  display: grid;
+  width: 174px;
+  height: 190px;
+  grid-template-rows: 23px 1fr;
+  padding: 0 7px 6px 42px;
+  border-color: #4f83b8;
+}
+
+#skin-homeostasis-network .hpa-card > h4,
+#skin-homeostasis-network .autonomic-card > h4,
+#skin-homeostasis-network .neuroimmune-card > h4 {
+  display: flex;
+  min-height: 23px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 3px 6px;
+  border-radius: 7px 7px 0 0;
+  color: #fff;
+  background: linear-gradient(#4e94cd, #2b6da6);
+  font-size: var(--font-card-title);
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+#skin-homeostasis-network .hpa-card > h4 {
+  margin-left: -42px;
+  margin-right: -7px;
+}
+
+#skin-homeostasis-network .hpa-cascade {
+  display: grid;
+  height: 158px;
+  align-content: space-between;
+  justify-items: center;
+  gap: 0;
+  padding: 5px 0 1px;
+  list-style: none;
+}
+
+#skin-homeostasis-network .hpa-cascade li {
+  position: relative;
+  z-index: 3;
+  padding: 0 2px;
+  background: #fff;
+  font-size: var(--font-body);
+  line-height: 1.05;
+  text-align: center;
+}
+
+#skin-homeostasis-network .hpa-cascade b {
+  color: #153f92;
+}
+
+#skin-homeostasis-network .hpa-card .feedback-note {
+  position: absolute;
+  left: 4px;
+  top: 89px;
+  width: 38px;
+  color: #163c8b;
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+}
+
+#skin-homeostasis-network .brain-visual {
+  grid-column: 3;
+  display: grid;
+  width: 245px;
+  height: 190px;
+  grid-template-rows: 174px 12px;
+  place-items: center;
+}
+
+#skin-homeostasis-network .brain-visual img {
+  width: 245px;
+  height: 174px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .brain-visual figcaption {
+  color: #52627a;
+  font-size: var(--font-micro);
+  line-height: 12px;
+  text-align: center;
+}
+
+#skin-homeostasis-network .central-side-stack {
+  grid-column: 5;
+  display: grid;
+  width: 234px;
+  height: 190px;
+  grid-template-rows: 105px 80px;
+  gap: 5px;
+}
+
+#skin-homeostasis-network .autonomic-card,
+#skin-homeostasis-network .neuroimmune-card {
+  display: grid;
+  min-height: 0;
+  padding: 0 6px 5px;
+  border-color: #4f83b8;
+}
+
+#skin-homeostasis-network .autonomic-card {
+  grid-template-rows: 23px 1fr;
+}
+
+#skin-homeostasis-network .neuroimmune-card {
+  grid-template-rows: 23px 16px 1fr;
+  align-content: start;
+  text-align: center;
+}
+
+#skin-homeostasis-network .autonomic-card > h4,
+#skin-homeostasis-network .neuroimmune-card > h4 {
+  margin-inline: -6px;
+}
+
+#skin-homeostasis-network .autonomic-columns {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+#skin-homeostasis-network .autonomic-columns > div {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 26px 17px 12px;
+  place-items: center;
+  padding: 4px 2px 0;
+  text-align: center;
+}
+
+#skin-homeostasis-network .autonomic-columns > div + div {
+  border-left: 1px solid #b8c8dc;
+}
+
+#skin-homeostasis-network .autonomic-columns img {
+  width: 26px;
+  height: 26px;
+}
+
+#skin-homeostasis-network .autonomic-columns b,
+#skin-homeostasis-network .autonomic-columns span,
+#skin-homeostasis-network .neuroimmune-card b,
+#skin-homeostasis-network .neuroimmune-card p {
+  font-size: var(--font-small);
+  line-height: 1.1;
+}
+
+#skin-homeostasis-network .neuroimmune-card p {
+  padding-top: 2px;
+}
+
+/* Legend */
+#skin-homeostasis-network .arrow-legend-card {
+  display: grid;
+  grid-template-rows: 26px 1fr;
+  padding: 8px 10px;
+  border-color: #214d9c;
+}
+
+#skin-homeostasis-network .arrow-legend-card > h3 {
+  color: #142e76;
+  font-size: var(--font-card-title);
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .arrow-legend-card h3 small {
+  display: inline;
+  font-size: var(--font-micro);
+}
+
+#skin-homeostasis-network .arrow-legend-card ul {
+  display: grid;
+  height: 191px;
+  grid-template-rows: repeat(7, 1fr);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#skin-homeostasis-network .arrow-legend-card li {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+#skin-homeostasis-network .arrow-legend-card li i {
+  width: 28px;
+}
+
+#skin-homeostasis-network .arrow-legend-card li span,
+#skin-homeostasis-network .arrow-legend-card li span small {
+  font-size: var(--font-small);
+  line-height: 1.08;
+}
+
+/* Peripheral network */
+#skin-homeostasis-network .peripheral-network-title,
+#skin-homeostasis-network [data-node="peripheral-network-title"] {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #092d84;
+  background: #fff;
+}
+
+#skin-homeostasis-network .peripheral-network-title h3,
+#skin-homeostasis-network [data-node="peripheral-network-title"] h3 {
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+#skin-homeostasis-network .peripheral-network-title > span,
+#skin-homeostasis-network [data-node="peripheral-network-title"] > span {
+  font-size: var(--font-section-title);
+  line-height: 21px;
+}
+
+#skin-homeostasis-network .system-card,
+#skin-homeostasis-network .communication-card {
+  padding: 6px 8px;
+}
+
+#skin-homeostasis-network .system-card > h3,
+#skin-homeostasis-network .communication-card > h3 {
+  color: #222261;
+  font-size: var(--font-card-title);
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .nervous-system {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: 22px 20px 142px 58px;
+  column-gap: 7px;
+  border-color: #6f3c87;
+}
+
+#skin-homeostasis-network .nervous-system > h3,
+#skin-homeostasis-network .nervous-system > .system-output {
+  grid-column: 1 / -1;
+}
+
+#skin-homeostasis-network .nervous-system > h3 {
+  grid-row: 1;
+}
+
+#skin-homeostasis-network .nervous-system > .system-illustration {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  align-self: center;
+  width: 112px;
+  height: 160px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .nervous-system > h4 {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+}
+
+#skin-homeostasis-network .nervous-system > ul {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+  padding-top: 7px;
+}
+
+#skin-homeostasis-network .nervous-system > .system-output {
+  grid-row: 4;
+}
+
+#skin-homeostasis-network .system-card > h4,
+#skin-homeostasis-network .system-card > p,
+#skin-homeostasis-network .system-card > ul {
+  margin: 0;
+}
+
+#skin-homeostasis-network .system-output {
+  align-self: stretch;
+  margin: 0;
+  padding: 6px 7px;
+  border: 1px solid #9fb1c8;
+  border-radius: 7px;
+  background: #fff;
+  text-align: center;
+}
+
+#skin-homeostasis-network .system-output b {
+  color: #244f8b;
+  font-size: var(--font-item-title);
+}
+
+#skin-homeostasis-network .system-output p {
+  margin-top: 3px;
+  font-size: var(--font-small);
+  line-height: 1.15;
+}
+
+#skin-homeostasis-network .immune-system {
+  display: grid;
+  grid-template-rows: 20px 18px 105px 1fr;
+  gap: 2px;
+  border-color: #5f8d69;
+}
+
+#skin-homeostasis-network .immune-system > h3,
+#skin-homeostasis-network .immune-system > h4 {
+  color: #25663d;
+  text-align: center;
+}
+
+#skin-homeostasis-network .immune-system > h4 {
+  align-self: center;
+  font-size: var(--font-item-title);
+}
+
+#skin-homeostasis-network .cell-icon-row {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: end;
+  gap: 5px;
+  margin: 0;
+}
+
+#skin-homeostasis-network .cell-icon-row figure {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 72px 25px;
+  justify-items: center;
+  align-content: start;
+  gap: 3px;
+  text-align: center;
+}
+
+#skin-homeostasis-network .cell-icon-row img {
+  width: 68px;
+  height: 72px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .cell-icon-row figcaption {
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+#skin-homeostasis-network .immune-system .system-output b {
+  color: #25663d;
+}
+
+#skin-homeostasis-network .endocrine-system {
+  display: grid;
+  grid-template-rows: 20px 18px 18px 83px 1fr;
+  gap: 2px;
+  border-color: #d06c4c;
+  text-align: center;
+}
+
+#skin-homeostasis-network .endocrine-system > h3,
+#skin-homeostasis-network .endocrine-system > h4,
+#skin-homeostasis-network .endocrine-system .system-output b,
+#skin-homeostasis-network .endocrine-system .cascade-list b {
+  color: #c84d33;
+}
+
+#skin-homeostasis-network .endocrine-system > h4,
+#skin-homeostasis-network .endocrine-system > p {
+  align-self: center;
+  font-size: var(--font-small);
+}
+
+#skin-homeostasis-network .endocrine-system .cascade-list {
+  display: grid;
+  height: 83px;
+  align-content: space-around;
+  justify-items: center;
+  padding: 3px 0;
+  list-style: none;
+}
+
+#skin-homeostasis-network .endocrine-system .cascade-list li {
+  font-size: var(--font-body);
+}
+
+#skin-homeostasis-network .endocrine-system .system-output {
+  border-color: #e0a38f;
+}
+
+#skin-homeostasis-network .communication-card {
+  display: grid;
+  grid-template-rows: 32px 1fr;
+  border-color: #4d729e;
+}
+
+#skin-homeostasis-network .communication-card > h3 {
+  font-size: var(--font-item-title);
+  line-height: 1.15;
+}
+
+#skin-homeostasis-network .pathway-list {
+  display: grid;
+  height: 217px;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#skin-homeostasis-network .pathway-list li {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 35px minmax(0, 1fr);
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+}
+
+#skin-homeostasis-network .pathway-list img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .pathway-list span {
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Cellular response strip */
+#skin-homeostasis-network .cellular-stage {
+  display: grid;
+  grid-template-rows: 22px 107px;
+  padding: 5px 7px 6px;
+  border-color: #5077a6;
+}
+
+#skin-homeostasis-network .cellular-stage .numbered-title {
+  align-items: center;
+}
+
+#skin-homeostasis-network .cell-response-grid {
+  display: grid;
+  height: 107px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0;
+}
+
+#skin-homeostasis-network .cell-response-grid figure {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 20px 51px minmax(0, 1fr);
+  align-items: start;
+  justify-items: center;
+  padding: 1px 8px 4px;
+  border-right: 1px solid #7fa1c9;
+  text-align: center;
+}
+
+#skin-homeostasis-network .cell-response-grid figure:last-child {
+  border-right: 0;
+}
+
+#skin-homeostasis-network .cell-response-grid figure > img {
+  grid-row: 2;
+  width: 100%;
+  height: 51px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .cell-response-grid figcaption {
+  display: contents;
+}
+
+#skin-homeostasis-network .cell-response-grid figcaption > b {
+  grid-row: 1;
+  align-self: center;
+  font-size: var(--font-item-title);
+  line-height: 1.05;
+}
+
+#skin-homeostasis-network .cell-response-grid figcaption > span {
+  grid-row: 3;
+  align-self: start;
+  font-size: var(--font-small);
+  line-height: 1.12;
+}
+
+/* Two independent core systems */
+#skin-homeostasis-network .core-systems-panel {
+  display: grid;
+  grid-template-rows: 28px 303px 376px;
+  align-content: start;
+  padding: 8px 11px 6px;
+  border-color: #214d9c;
+}
+
+#skin-homeostasis-network .core-systems-panel > h3 {
+  color: #092d84;
+  font-size: var(--font-major-card-title);
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .core-systems-panel section {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  align-content: start;
+  padding: 12px 0 8px;
+}
+
+#skin-homeostasis-network .core-systems-panel section + section {
+  border-top: 1px dotted #7185aa;
+}
+
+#skin-homeostasis-network .core-systems-panel h4 {
+  min-height: 42px;
+  margin: 0 0 8px 34px;
+  color: #173c89;
+  font-size: var(--font-card-title);
+  line-height: 1.15;
+}
+
+#skin-homeostasis-network .core-number {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: var(--font-card-title);
+  font-weight: 800;
+}
+
+#skin-homeostasis-network .core-system-flow {
+  display: grid;
+  grid-template-rows: repeat(3, 56px);
+  gap: 8px;
+  margin: 0;
+}
+
+#skin-homeostasis-network .core-system-flow > span {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 55px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  border: 0;
+  background: transparent;
+}
+
+#skin-homeostasis-network .core-system-flow img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .core-system-flow b {
+  font-size: var(--font-item-title);
+  line-height: 1.1;
+}
+
+#skin-homeostasis-network .core-systems-panel section:first-of-type > p {
+  margin-top: 8px;
+  padding-left: 63px;
+  font-size: var(--font-small);
+  line-height: 1.2;
+}
+
+#skin-homeostasis-network .circle-system {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 8px auto 10px;
+  border: 2px solid #2c773d;
+  border-radius: 50%;
+}
+
+#skin-homeostasis-network .circle-system::after {
+  position: absolute;
+  inset: 56px 45px;
+  display: grid;
+  place-items: center;
+  content: "Skin";
+  color: #1e4a2c;
+  font-size: var(--font-item-title);
+  font-weight: 800;
+}
+
+#skin-homeostasis-network .circle-system span {
+  position: absolute;
+  padding: 2px 4px;
+  background: #fff;
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1;
+}
+
+#skin-homeostasis-network .circle-system span:nth-child(1) {
+  left: 58px;
+  top: -5px;
+  color: #5b2594;
+}
+
+#skin-homeostasis-network .circle-system span:nth-child(2) {
+  right: -4px;
+  bottom: 37px;
+  color: #ce283f;
+}
+
+#skin-homeostasis-network .circle-system span:nth-child(3) {
+  left: -3px;
+  bottom: 37px;
+  color: #20833c;
+}
+
+#skin-homeostasis-network .core-systems-panel section:last-child > p {
+  font-size: var(--font-small);
+  line-height: 1.22;
+  text-align: center;
+}
+
+/* Loss of homeostasis and clinical outcomes */
+#skin-homeostasis-network .loss-mechanisms-wrap {
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 24px 144px;
+  overflow: visible;
+}
+
+#skin-homeostasis-network .loss-mechanisms-wrap > .section-strip-title {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #fff;
+}
+
+#skin-homeostasis-network .loss-grid {
+  display: grid;
+  height: 144px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  overflow: visible;
+  border: 1px solid #8da8c8;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#skin-homeostasis-network .mini-outcome {
+  display: grid;
+  min-width: 0;
+  height: 142px;
+  grid-template-rows: 18px 58px minmax(0, 1fr);
+  align-items: start;
+  padding: 1px 10px 4px;
+  border: 0;
+  border-right: 1px solid #8da8c8;
+  border-radius: 0;
+}
+
+#skin-homeostasis-network .mini-outcome:last-child {
+  border-right: 0;
+}
+
+#skin-homeostasis-network .mini-outcome h4 {
+  align-self: center;
+  color: #14387d;
+  font-size: var(--font-small);
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .mini-outcome img {
+  width: 100%;
+  height: 58px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .mini-outcome p {
+  align-self: start;
+  font-size: var(--font-small);
+  line-height: 1.12;
+}
+
+#skin-homeostasis-network .clinical-panel {
+  display: grid;
+  grid-template-rows: 22px 115px;
+  align-content: start;
+  padding: 6px 10px 6px;
+  border-color: #d04d5c;
+}
+
+#skin-homeostasis-network .clinical-panel > h3 {
+  color: #b52634;
+  font-size: var(--font-card-title);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skin-homeostasis-network .clinical-grid {
+  display: grid;
+  height: 115px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 5px;
+  padding: 6px 0 5px;
+}
+
+#skin-homeostasis-network .clinical-grid figure {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 64px auto;
+  justify-items: center;
+  align-items: start;
+  gap: 3px;
+  text-align: center;
+}
+
+#skin-homeostasis-network .clinical-grid img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+#skin-homeostasis-network .clinical-grid figcaption {
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.show-outlines #skin-homeostasis-network .is-overflowing {
+  outline: 2px solid #e5233f !important;
+  background-color: rgba(255, 0, 0, 0.05) !important;
+}
+
+@media (max-width: 1535px) {
+  .s1-scroll {
+    padding-inline: 0;
+  }
+
+  #skin-homeostasis-network.stage-s1 {
+    width: 1536px;
+    min-width: 1536px;
+    height: 1024px;
+    min-height: 1024px;
+    margin-inline: 0;
+  }
+}
+
+/* Development-only Section 1 capture mode. This removes surrounding page UI
+   without changing the production layout or the 1536 x 1024 stage geometry. */
+body.qa-section-one-only {
+  min-width: 1536px;
+  margin: 0;
+  background: #fff;
+}
+
+.qa-section-one-only .skip-link,
+.qa-section-one-only .site-header,
+.qa-section-one-only .neuro-scroll-progress,
+.qa-section-one-only .neuro-progress-nav,
+.qa-section-one-only .neuro-hero,
+.qa-section-one-only #main > .section-transition,
+.qa-section-one-only #main > .neuro-section:not(#skin-homeostasis),
+.qa-section-one-only .back-to-top {
+  display: none !important;
+}
+
+.qa-section-one-only .back-home-link {
+  display: none !important;
+}
+
+.qa-section-one-only #main,
+.qa-section-one-only #skin-homeostasis,
+.qa-section-one-only .s1-scroll {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.qa-section-one-only .s1-scroll {
+  overflow: visible !important;
+}
+
+.qa-section-one-only #skin-homeostasis-network.stage-s1 {
+  margin: 0 !important;
+}

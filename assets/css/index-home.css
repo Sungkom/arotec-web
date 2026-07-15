@@ -1,0 +1,607 @@
+/* Home-only header behavior and hero alignment. */
+body[data-page="home"] .site-header {
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    backdrop-filter 220ms ease;
+  will-change: transform;
+}
+
+/* The logo image is already transparent; remove the white holder behind it. */
+body[data-page="home"] .site-header .brand {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* The header becomes a floating navigation bar only after scrolling down. */
+body[data-page="home"].home-header-scroll-active .site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  border-bottom: 1px solid rgba(17, 53, 104, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 53, 104, 0.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+/* Scrolling upward hides the floating menu until the next downward scroll. */
+body[data-page="home"].home-header-scroll-hidden .site-header {
+  transform: translate3d(0, calc(-100% - 10px), 0);
+}
+
+/* Align the hero copy below the Customized for you link in the desktop menu. */
+body[data-page="home"] .hero-content {
+  padding-inline-start: var(--home-hero-copy-offset, clamp(11px, 1.1vw, 15px));
+}
+
+/* Half the previous home-page H1 scale. */
+body[data-page="home"] .hero-title {
+  font-size: clamp(1.3rem, 3.1vw, 3.4rem);
+  line-height: 0.98;
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"].home-header-scroll-active .header-inner {
+    min-height: 68px;
+  }
+
+  body[data-page="home"] .hero-content {
+    padding-inline-start: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .site-header {
+    transition: none;
+  }
+}
+
+/* Biology of Human Experience: restrained infographic treatment. */
+body[data-page="home"] .wellbeing-cascade {
+  min-height: 0;
+  padding-block: clamp(68px, 7vw, 112px);
+  background: linear-gradient(180deg, #f8fbfc 0%, #f3f7fa 100%);
+}
+
+body[data-page="home"] .wellbeing-cascade::before {
+  background:
+    linear-gradient(90deg, rgba(210, 228, 235, 0.54), transparent 33%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), transparent 42%);
+  opacity: 1;
+}
+
+body[data-page="home"] .wellbeing-cascade .section-shell {
+  width: min(1320px, calc(100% - clamp(40px, 6vw, 96px)));
+}
+
+body[data-page="home"] .wellbeing-layout {
+  grid-template-columns: minmax(250px, 0.72fr) minmax(640px, 1.72fr);
+  gap: clamp(62px, 7vw, 116px);
+  align-items: stretch;
+}
+
+body[data-page="home"] .wellbeing-intro {
+  align-self: stretch;
+  width: min(100%, 300px);
+  min-height: 930px;
+  margin: 0;
+  padding-top: 180px;
+}
+
+body[data-page="home"] .wellbeing-feedback {
+  max-width: 238px;
+  margin: 0 0 52px;
+  gap: 18px;
+}
+
+body[data-page="home"] .wellbeing-feedback strong {
+  width: 170px;
+  min-height: 92px;
+  border-color: rgba(53, 102, 73, 0.45);
+  border-radius: 12px;
+  color: #3c704a;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: none;
+  font-size: 1.02rem;
+  line-height: 1.34;
+}
+
+body[data-page="home"] .wellbeing-feedback span {
+  color: rgba(18, 54, 101, 0.78);
+  font-size: 0.91rem;
+  line-height: 1.58;
+}
+
+body[data-page="home"] .wellbeing-title {
+  max-width: 286px;
+  margin: 0;
+  color: #123665;
+  font-size: clamp(2rem, 2.85vw, 3.35rem);
+  font-weight: 760;
+  line-height: 1.08;
+}
+
+body[data-page="home"] .wellbeing-title::after {
+  width: 58px;
+  margin-top: 22px;
+  background: #c69644;
+}
+
+body[data-page="home"] .wellbeing-intro > p {
+  max-width: 268px;
+  margin: 24px 0 0;
+  color: rgba(18, 54, 101, 0.78);
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
+/* One quiet connector color keeps the long feedback path legible. */
+body[data-page="home"] .wellbeing-intro::before {
+  top: 40px;
+  bottom: 132px;
+  left: calc(100% + 96px);
+  width: 2px;
+  background: #183146;
+}
+
+body[data-page="home"] .wellbeing-intro::after {
+  left: calc(100% + 96px);
+  bottom: 52px;
+  width: 176px;
+  height: 80px;
+  border-color: #183146;
+  border-radius: 0 0 0 42px;
+}
+
+body[data-page="home"] .wellbeing-feedback::before {
+  left: calc(100% + 96px);
+  top: -140px;
+  width: 178px;
+  height: 140px;
+  border-color: #183146;
+  border-radius: 178px 0 0 0;
+}
+
+body[data-page="home"] .wellbeing-feedback::after {
+  left: calc(100% + 268px);
+  top: -147px;
+  border-left-color: #183146;
+}
+
+body[data-page="home"] .wellbeing-flow {
+  width: min(100%, 850px);
+  gap: 18px;
+  padding-left: 88px;
+}
+
+body[data-page="home"] .wellbeing-card {
+  --cascade-color: #1d6782 !important;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 32px;
+  min-height: 94px;
+}
+
+body[data-page="home"] .wellbeing-card:first-child,
+body[data-page="home"] .wellbeing-card:last-child {
+  --cascade-color: #527e5d !important;
+}
+
+body[data-page="home"] .wellbeing-card::after {
+  left: 76px;
+  width: 15px;
+  height: 2px;
+  background: rgba(29, 103, 130, 0.76);
+}
+
+body[data-page="home"] .wellbeing-card-panel::before {
+  left: -22px;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+  border-left-width: 9px;
+}
+
+body[data-page="home"] .wellbeing-node {
+  width: 76px;
+  height: 76px;
+  border-color: rgba(29, 103, 130, 0.45);
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(18, 54, 101, 0.1);
+}
+
+body[data-page="home"] .wellbeing-card:not(:last-child) .wellbeing-node::after {
+  bottom: -24px;
+  width: 12px;
+  height: 24px;
+  background: #1d6782;
+}
+
+body[data-page="home"] .wellbeing-icon-svg {
+  width: 38px;
+  height: 38px;
+  stroke-width: 3;
+  filter: none;
+}
+
+body[data-page="home"] .wellbeing-card-panel {
+  grid-template-columns: 104px 1px minmax(0, 1fr);
+  gap: 22px;
+  min-height: 94px;
+  padding: 16px 30px;
+  border-color: rgba(18, 54, 101, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 28px rgba(18, 54, 101, 0.08);
+}
+
+body[data-page="home"] .wellbeing-number {
+  font-size: clamp(2.45rem, 3.2vw, 3.65rem);
+  font-weight: 760;
+}
+
+body[data-page="home"] .wellbeing-divider {
+  height: 58px;
+  background: rgba(29, 103, 130, 0.42);
+}
+
+body[data-page="home"] .wellbeing-card h3 {
+  margin-bottom: 6px;
+  color: #1d6782;
+  font-size: clamp(1rem, 1.38vw, 1.46rem);
+  font-weight: 760;
+  line-height: 1.16;
+}
+
+body[data-page="home"] .wellbeing-card p {
+  color: rgba(18, 54, 101, 0.8);
+  font-size: clamp(0.78rem, 0.95vw, 1rem);
+  font-weight: 560;
+  line-height: 1.48;
+}
+
+body[data-page="home"] .wellbeing-card:first-child h3,
+body[data-page="home"] .wellbeing-card:last-child h3 {
+  color: #527e5d;
+}
+
+@media (max-width: 1040px) {
+  body[data-page="home"] .wellbeing-layout {
+    grid-template-columns: minmax(220px, 0.72fr) minmax(520px, 1.72fr);
+    gap: 52px;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    min-height: 900px;
+  }
+
+  body[data-page="home"] .wellbeing-intro::before,
+  body[data-page="home"] .wellbeing-intro::after,
+  body[data-page="home"] .wellbeing-feedback::before,
+  body[data-page="home"] .wellbeing-feedback::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .wellbeing-cascade .section-shell {
+    width: min(100% - 28px, var(--container));
+  }
+
+  body[data-page="home"] .wellbeing-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    min-height: auto;
+    max-width: 560px;
+    padding-top: 0;
+  }
+
+  body[data-page="home"] .wellbeing-feedback {
+    margin-bottom: 30px;
+  }
+
+  body[data-page="home"] .wellbeing-flow {
+    max-width: 100%;
+    gap: 14px;
+    padding-left: 0;
+  }
+
+  body[data-page="home"] .wellbeing-card {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 16px;
+    min-height: 0;
+  }
+
+  body[data-page="home"] .wellbeing-card::after,
+  body[data-page="home"] .wellbeing-card-panel::before {
+    display: none;
+  }
+
+  body[data-page="home"] .wellbeing-node {
+    width: 54px;
+    height: 54px;
+  }
+
+  body[data-page="home"] .wellbeing-card:not(:last-child) .wellbeing-node::after {
+    bottom: -19px;
+    width: 9px;
+    height: 19px;
+  }
+
+  body[data-page="home"] .wellbeing-icon-svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  body[data-page="home"] .wellbeing-card-panel {
+    grid-template-columns: 54px 1px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 74px;
+    padding: 12px 14px;
+  }
+
+  body[data-page="home"] .wellbeing-number {
+    font-size: clamp(1.6rem, 7vw, 2.25rem);
+  }
+
+  body[data-page="home"] .wellbeing-divider {
+    height: 42px;
+  }
+
+  body[data-page="home"] .wellbeing-card h3 {
+    margin-bottom: 3px;
+    font-size: clamp(0.9rem, 4vw, 1.08rem);
+  }
+
+  body[data-page="home"] .wellbeing-card p {
+    font-size: clamp(0.72rem, 3.25vw, 0.86rem);
+    line-height: 1.38;
+  }
+}
+
+/* Match the compact, left-to-right infographic proportion of the reference. */
+body[data-page="home"] .wellbeing-cascade {
+  padding-block: clamp(48px, 5vw, 76px);
+}
+
+body[data-page="home"] .wellbeing-cascade .section-shell {
+  width: min(1080px, calc(100% - clamp(40px, 6vw, 80px)));
+}
+
+body[data-page="home"] .wellbeing-layout {
+  grid-template-columns: minmax(230px, 0.72fr) minmax(570px, 1.58fr);
+  gap: clamp(54px, 6vw, 76px);
+}
+
+body[data-page="home"] .wellbeing-intro {
+  width: min(100%, 260px);
+  min-height: 652px;
+  padding-top: 0;
+}
+
+body[data-page="home"] .wellbeing-feedback {
+  max-width: 170px;
+  margin: 160px 0 24px 24px;
+  gap: 11px;
+}
+
+body[data-page="home"] .wellbeing-feedback strong {
+  width: 112px;
+  min-height: 62px;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  line-height: 1.28;
+}
+
+body[data-page="home"] .wellbeing-feedback span {
+  font-size: 0.7rem;
+  line-height: 1.46;
+}
+
+body[data-page="home"] .wellbeing-title {
+  max-width: 220px;
+  margin: 0 0 18px 24px;
+  font-size: clamp(1.55rem, 2.28vw, 2.25rem);
+  line-height: 1.08;
+}
+
+body[data-page="home"] .wellbeing-title::after {
+  width: 46px;
+  height: 2px;
+  margin-top: 15px;
+}
+
+body[data-page="home"] .wellbeing-intro > p {
+  max-width: 220px;
+  margin: 0 0 0 24px;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+/* The loop aligns with the first and last icon nodes rather than the text cards. */
+body[data-page="home"] .wellbeing-intro::before {
+  top: 160px;
+  bottom: 134px;
+  left: 238px;
+  width: 2px;
+}
+
+body[data-page="home"] .wellbeing-intro::after {
+  left: 238px;
+  bottom: 38px;
+  width: 158px;
+  height: 96px;
+  border-radius: 0 0 0 34px;
+}
+
+body[data-page="home"] .wellbeing-feedback::before {
+  left: 206px;
+  top: -136px;
+  width: 162px;
+  height: 136px;
+  border-radius: 162px 0 0 0;
+}
+
+body[data-page="home"] .wellbeing-feedback::after {
+  left: 360px;
+  top: -143px;
+}
+
+body[data-page="home"] .wellbeing-flow {
+  width: min(100%, 620px);
+  gap: 10px;
+  padding-left: 70px;
+}
+
+body[data-page="home"] .wellbeing-card {
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 24px;
+  min-height: 58px;
+}
+
+body[data-page="home"] .wellbeing-card::after {
+  left: 56px;
+  width: 11px;
+}
+
+body[data-page="home"] .wellbeing-card-panel::before {
+  left: -18px;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 7px;
+}
+
+body[data-page="home"] .wellbeing-node {
+  width: 52px;
+  height: 52px;
+  box-shadow: 0 8px 18px rgba(18, 54, 101, 0.09);
+}
+
+body[data-page="home"] .wellbeing-card:not(:last-child) .wellbeing-node::after {
+  bottom: -17px;
+  width: 9px;
+  height: 17px;
+}
+
+body[data-page="home"] .wellbeing-icon-svg {
+  width: 31px;
+  height: 31px;
+  stroke-width: 3.2;
+}
+
+body[data-page="home"] .wellbeing-card-panel {
+  grid-template-columns: 68px 1px minmax(0, 1fr);
+  gap: 16px;
+  min-height: 58px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(18, 54, 101, 0.07);
+}
+
+body[data-page="home"] .wellbeing-number {
+  font-size: clamp(1.65rem, 2.25vw, 2.2rem);
+}
+
+body[data-page="home"] .wellbeing-divider {
+  height: 34px;
+}
+
+body[data-page="home"] .wellbeing-card h3 {
+  margin-bottom: 2px;
+  font-size: clamp(0.8rem, 0.94vw, 0.96rem);
+  line-height: 1.12;
+}
+
+body[data-page="home"] .wellbeing-card p {
+  font-size: clamp(0.6rem, 0.7vw, 0.69rem);
+  line-height: 1.32;
+}
+
+@media (max-width: 1040px) {
+  body[data-page="home"] .wellbeing-layout {
+    grid-template-columns: minmax(205px, 0.7fr) minmax(500px, 1.5fr);
+    gap: 42px;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    min-height: 632px;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .wellbeing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    width: 100%;
+    min-height: auto;
+  }
+
+  body[data-page="home"] .wellbeing-feedback,
+  body[data-page="home"] .wellbeing-title,
+  body[data-page="home"] .wellbeing-intro > p {
+    margin-left: 0;
+  }
+
+  body[data-page="home"] .wellbeing-flow {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  body[data-page="home"] .wellbeing-card {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  body[data-page="home"] .wellbeing-card-panel {
+    grid-template-columns: 54px 1px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 74px;
+    padding: 12px 14px;
+  }
+}
+
+/* Desktop alignment: the feedback copy sits inside the loop and every loop end meets a node. */
+@media (min-width: 1181px) {
+  body[data-page="home"] .wellbeing-layout {
+    grid-template-columns: 390px 620px;
+    justify-content: center;
+    gap: 44px;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    width: 390px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback {
+    margin-left: 104px;
+  }
+
+  body[data-page="home"] .wellbeing-title,
+  body[data-page="home"] .wellbeing-intro > p {
+    margin-left: 104px;
+  }
+
+  /* Vertical feedback rail starts before the copy; horizontal paths meet node 01 and node 09. */
+  body[data-page="home"] .wellbeing-intro::before {
+    left: 26px;
+  }
+
+  body[data-page="home"] .wellbeing-intro::after {
+    left: 26px;
+    width: 478px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before {
+    left: -78px;
+    width: 478px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::after {
+    left: 389px;
+  }
+}
