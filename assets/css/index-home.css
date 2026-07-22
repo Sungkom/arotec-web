@@ -62,13 +62,18 @@ body[data-page="home"] .hero-title {
 body[data-page="home"] .wellbeing-cascade {
   min-height: 0;
   padding-block: clamp(68px, 7vw, 112px);
-  background: linear-gradient(180deg, #f8fbfc 0%, #f3f7fa 100%);
+  isolation: isolate;
+  background-color: #dcecf4;
+  background-image: url("../images/biology-human-experience-background.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body[data-page="home"] .wellbeing-cascade::before {
   background:
-    linear-gradient(90deg, rgba(210, 228, 235, 0.54), transparent 33%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.62), transparent 42%);
+    linear-gradient(90deg, rgba(229, 243, 249, 0.76) 0%, rgba(235, 247, 251, 0.58) 34%, rgba(222, 239, 247, 0.38) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(216, 235, 244, 0.42) 100%);
   opacity: 1;
 }
 
@@ -102,8 +107,10 @@ body[data-page="home"] .wellbeing-feedback strong {
   border-color: rgba(53, 102, 73, 0.45);
   border-radius: 12px;
   color: #3c704a;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: none;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 38px rgba(18, 54, 101, 0.1);
+  backdrop-filter: blur(14px) saturate(118%);
+  -webkit-backdrop-filter: blur(14px) saturate(118%);
   font-size: 1.02rem;
   line-height: 1.34;
 }
@@ -121,6 +128,7 @@ body[data-page="home"] .wellbeing-title {
   font-size: clamp(2rem, 2.85vw, 3.35rem);
   font-weight: 760;
   line-height: 1.08;
+  text-shadow: 0 1px 20px rgba(255, 255, 255, 0.86);
 }
 
 body[data-page="home"] .wellbeing-title::after {
@@ -231,8 +239,10 @@ body[data-page="home"] .wellbeing-card-panel {
   padding: 16px 30px;
   border-color: rgba(18, 54, 101, 0.1);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 10px 28px rgba(18, 54, 101, 0.08);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 34px rgba(18, 54, 101, 0.12);
+  backdrop-filter: blur(13px) saturate(118%);
+  -webkit-backdrop-filter: blur(13px) saturate(118%);
 }
 
 body[data-page="home"] .wellbeing-number {
@@ -243,6 +253,11 @@ body[data-page="home"] .wellbeing-number {
 body[data-page="home"] .wellbeing-divider {
   height: 58px;
   background: rgba(29, 103, 130, 0.42);
+}
+
+body[data-page="home"] .wellbeing-card-body {
+  width: auto;
+  min-width: 0;
 }
 
 body[data-page="home"] .wellbeing-card h3 {
@@ -284,6 +299,16 @@ body[data-page="home"] .wellbeing-card:last-child h3 {
 }
 
 @media (max-width: 760px) {
+  body[data-page="home"] .wellbeing-cascade {
+    background-position: 41% top;
+  }
+
+  body[data-page="home"] .wellbeing-cascade::before {
+    background:
+      linear-gradient(180deg, rgba(235, 247, 251, 0.72) 0%, rgba(224, 240, 247, 0.58) 42%, rgba(223, 239, 247, 0.76) 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(216, 235, 244, 0.2));
+  }
+
   body[data-page="home"] .wellbeing-cascade .section-shell {
     width: min(100% - 28px, var(--container));
   }
@@ -558,10 +583,14 @@ body[data-page="home"] .wellbeing-card p {
   }
 
   body[data-page="home"] .wellbeing-card-panel {
-    grid-template-columns: 54px 1px minmax(0, 1fr);
-    gap: 12px;
-    min-height: 74px;
-    padding: 12px 14px;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 68px;
+    padding: 10px 14px;
+  }
+
+  body[data-page="home"] .wellbeing-divider {
+    display: none;
   }
 }
 
@@ -603,5 +632,170 @@ body[data-page="home"] .wellbeing-card p {
 
   body[data-page="home"] .wellbeing-feedback::after {
     left: 389px;
+  }
+}
+
+/* Keep the complete nine-step cascade within one desktop viewport. */
+@media (min-width: 761px) {
+  body[data-page="home"] .wellbeing-cascade {
+    padding-block: clamp(28px, 2.8vw, 40px);
+  }
+
+  body.storytelling-ready[data-page="home"] main > .wellbeing-cascade.story-section-frame {
+    min-height: 0 !important;
+    display: block !important;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    min-height: 518px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback {
+    margin-top: 130px;
+    margin-bottom: 18px;
+  }
+
+  body[data-page="home"] .wellbeing-intro::before {
+    top: 130px;
+    bottom: 96px;
+  }
+
+  body[data-page="home"] .wellbeing-intro::after {
+    bottom: 28px;
+    height: 68px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before {
+    top: -104px;
+    height: 104px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::after {
+    top: -111px;
+  }
+
+  body[data-page="home"] .wellbeing-flow {
+    gap: 4px;
+  }
+
+  body[data-page="home"] .wellbeing-card {
+    min-height: 54px;
+  }
+
+  body[data-page="home"] .wellbeing-card:not(:last-child) .wellbeing-node::after {
+    bottom: -12px;
+    height: 13px;
+  }
+
+  body[data-page="home"] .wellbeing-card-panel {
+    min-height: 54px;
+    padding-block: 6px;
+  }
+
+  body[data-page="home"] .wellbeing-divider {
+    height: 32px;
+  }
+}
+
+/* This compact diagram should be understandable immediately, without staged scrolling. */
+body[data-page="home"].js-reveal-ready .wellbeing-cascade .wellbeing-card,
+body[data-page="home"].storytelling-ready .wellbeing-cascade .story-heading-reveal,
+body[data-page="home"].storytelling-ready .wellbeing-cascade .story-text-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Science Platform: compact ten-card grid on the left, preserving the person on the right. */
+body[data-page="home"] .concept {
+  isolation: isolate;
+  padding-block: clamp(36px, 4vw, 60px);
+  background-color: #cfded8;
+  background-image: url("../images/science-platform-cards-background.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body[data-page="home"] .concept::before {
+  background:
+    linear-gradient(90deg, rgba(229, 242, 237, 0.62) 0%, rgba(222, 238, 233, 0.42) 43%, rgba(205, 226, 220, 0.1) 64%, rgba(23, 58, 54, 0.04) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(23, 57, 53, 0.1) 100%);
+  opacity: 1;
+}
+
+body[data-page="home"] .concept .section-shell {
+  width: min(760px, 52vw) !important;
+  margin-right: auto !important;
+  margin-left: clamp(120px, 18vw, 280px) !important;
+}
+
+body[data-page="home"] .concept-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(9px, 1vw, 14px);
+}
+
+body[data-page="home"] .concept .concept-item {
+  min-height: clamp(164px, 14vw, 190px);
+  padding: clamp(12px, 1.15vw, 16px);
+  border: 1px solid rgba(235, 255, 252, 0.68);
+  border-radius: clamp(14px, 1.4vw, 20px);
+  background:
+    linear-gradient(180deg, rgba(10, 38, 37, 0.03) 10%, rgba(12, 29, 28, 0.78) 100%),
+    var(--concept-card-image);
+  background-position: center;
+  background-size: cover;
+  box-shadow:
+    0 22px 52px rgba(24, 68, 66, 0.22),
+    inset 0 1px 0 rgba(244, 255, 253, 0.38);
+}
+
+body[data-page="home"] .concept .concept-item h3 {
+  color: #f9fffd;
+  font-size: clamp(0.72rem, 0.92vw, 0.96rem);
+  line-height: 1.12;
+  text-shadow: 0 2px 18px rgba(7, 31, 30, 0.76);
+}
+
+@media (max-width: 1180px) and (min-width: 761px) {
+  body[data-page="home"] .concept .section-shell {
+    width: min(660px, 64vw) !important;
+    margin-left: clamp(22px, 3vw, 40px) !important;
+  }
+
+  body[data-page="home"] .concept-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  body[data-page="home"] .concept .concept-item {
+    min-height: 132px;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .concept {
+    background-position: 91% top;
+    background-size: auto 860px;
+  }
+
+  body[data-page="home"] .concept::before {
+    background:
+      linear-gradient(180deg, rgba(240, 251, 249, 0.66) 0%, rgba(222, 241, 239, 0.48) 52%, rgba(205, 228, 225, 0.6) 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(24, 75, 73, 0.13));
+  }
+
+  body[data-page="home"] .concept .section-shell {
+    width: min(100% - 28px, var(--container)) !important;
+    margin-inline: auto !important;
+  }
+
+  body[data-page="home"] .concept-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  body[data-page="home"] .concept .concept-item {
+    min-height: 210px;
   }
 }
