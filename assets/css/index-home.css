@@ -757,6 +757,17 @@ body[data-page="home"] .concept .concept-item h3 {
   text-shadow: 0 2px 18px rgba(7, 31, 30, 0.76);
 }
 
+/* Keep the long Neuroplasticity label inside its compact card. */
+body[data-page="home"] .concept .concept-item[style*="science-platform-neuroplasticity"] h3 {
+  width: 100%;
+  font-size: clamp(0.78rem, 1vw, 1rem);
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: balance;
+}
+
 @media (max-width: 1180px) and (min-width: 761px) {
   body[data-page="home"] .concept .section-shell {
     width: min(660px, 64vw) !important;
