@@ -1263,6 +1263,26 @@
     }
   };
 
+  // Keep every language in the same Science Platform card order.
+  const sciencePlatformCardOrder = new Map([
+    ["science-platform-exposome.jpg", 0],
+    ["science-platform-neuro-pathway-stress.jpg", 1],
+    ["science-platform-homeostasis-regulation.jpg", 2],
+    ["science-platform-human-longevity-aging.jpg", 3],
+    ["science-platform-olfactory-science.jpg", 4],
+    ["science-platform-pssudo-synesthesia-perception.jpg", 5],
+    ["science-platform-neuroplasticity.jpg", 6],
+    ["science-platform-neuro-scented-therapy.jpg", 7],
+    ["science-platform-neuro-skin-care.jpg", 8],
+    ["science-platform-hair-follicle-function.jpg", 9]
+  ]);
+
+  Object.values(sciencePlatform).forEach((platform) => {
+    platform.items.sort((left, right) =>
+      sciencePlatformCardOrder.get(left.image) - sciencePlatformCardOrder.get(right.image)
+    );
+  });
+
   const appliedSolutions = {
     en: {
       cardsTitle: "Applied solution areas",
