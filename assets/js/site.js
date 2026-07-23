@@ -7,6 +7,7 @@
   let heroParallaxCleanup = null;
   let sectionRevealCleanup = null;
   let scrollStoryCleanup = null;
+  let wellbeingScaleCleanup = null;
 
   const routes = [
     { id: "home", path: "index.html", nav: false },
@@ -2617,6 +2618,45 @@
     };
   }
 
+  function setupWellbeingMobileScale() {
+    if (wellbeingScaleCleanup) {
+      wellbeingScaleCleanup();
+      wellbeingScaleCleanup = null;
+    }
+
+    const layout = document.querySelector(".wellbeing-layout");
+    const sectionShell = layout?.closest(".section-shell");
+    if (!layout || !sectionShell) return;
+
+    let frameId = 0;
+    const update = () => {
+      frameId = 0;
+      if (window.innerWidth > 760) {
+        layout.style.removeProperty("--wellbeing-mobile-scale");
+        sectionShell.style.removeProperty("--wellbeing-mobile-height");
+        return;
+      }
+
+      const availableWidth = Math.max(1, sectionShell.clientWidth);
+      const scale = Math.min(1, availableWidth / 1080);
+      layout.style.setProperty("--wellbeing-mobile-scale", scale.toFixed(5));
+      sectionShell.style.setProperty("--wellbeing-mobile-height", `${Math.ceil(518 * scale)}px`);
+    };
+
+    const requestUpdate = () => {
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(update);
+    };
+
+    window.addEventListener("resize", requestUpdate, { passive: true });
+    update();
+
+    wellbeingScaleCleanup = () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }
+
   function renderPage(text, lang) {
     if (pageId === "home") return renderHome(text, lang);
     if (pageId === "contact") return renderContact(text);
@@ -2691,6 +2731,7 @@
     setupHeroSlideshow();
     setupHeroParallax();
     setupPlatformSliders();
+    setupWellbeingMobileScale();
     setupSectionReveals();
     setupScrollStorytelling();
     scrollToCurrentHash();
