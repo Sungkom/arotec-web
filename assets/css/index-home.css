@@ -734,21 +734,110 @@ body[data-page="home"].storytelling-ready .wellbeing-cascade .story-text-reveal 
   filter: none !important;
 }
 
-/* Final mobile feedback-loop geometry: these rules follow the compact desktop overrides. */
-@media (max-width: 760px) {
-  body[data-page="home"] .wellbeing-feedback::before {
+/* Authoritative feedback-loop geometry. The base stylesheet hides these paths below 1060px,
+   so each viewport range explicitly restores the line and anchors it to the cascade nodes. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  body[data-page="home"] .wellbeing-layout {
+    --loop-intro-width: 230px;
+    --loop-gap: clamp(22px, 3vw, 34px);
+    --loop-flow-pad: 48px;
+    --loop-rail-x: 18px;
+    --loop-feedback-x: 48px;
+    --loop-target-x: calc(var(--loop-intro-width) + var(--loop-gap) + var(--loop-flow-pad));
+    grid-template-columns: var(--loop-intro-width) minmax(0, 620px);
+    gap: var(--loop-gap);
+    justify-content: center;
+  }
+
+  body[data-page="home"] .wellbeing-intro {
+    position: relative;
+    justify-self: stretch;
+    width: var(--loop-intro-width);
+    min-height: 518px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback {
+    margin: 130px 0 18px var(--loop-feedback-x);
+  }
+
+  body[data-page="home"] .wellbeing-flow {
+    justify-self: start;
+    width: 100%;
+    max-width: 620px;
+    padding-left: var(--loop-flow-pad);
+  }
+
+  body[data-page="home"] .wellbeing-intro::before,
+  body[data-page="home"] .wellbeing-intro::after,
+  body[data-page="home"] .wellbeing-feedback::before,
+  body[data-page="home"] .wellbeing-feedback::after {
     display: block;
+    pointer-events: none;
+  }
+
+  body[data-page="home"] .wellbeing-intro::before {
+    top: 130px;
+    bottom: 96px;
+    left: var(--loop-rail-x);
+    width: 2px;
+    background: #183146;
+  }
+
+  body[data-page="home"] .wellbeing-intro::after {
+    left: var(--loop-rail-x);
+    bottom: 28px;
+    width: calc(var(--loop-target-x) - var(--loop-rail-x));
+    height: 68px;
+    border-color: #183146;
+    border-radius: 0 0 0 34px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before {
+    left: calc(var(--loop-rail-x) - var(--loop-feedback-x));
+    top: -104px;
+    width: calc(var(--loop-target-x) - var(--loop-rail-x));
+    height: 104px;
+    border-color: #183146;
+    border-radius: calc(var(--loop-target-x) - var(--loop-rail-x)) 0 0 0;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::after {
+    left: calc(var(--loop-target-x) - var(--loop-feedback-x) - 11px);
+    top: -111px;
+    border-left-color: #183146;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .wellbeing-intro {
+    position: relative;
+  }
+
+  body[data-page="home"] .wellbeing-feedback {
+    position: relative;
+    overflow: visible;
+    padding-top: 34px;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before,
+  body[data-page="home"] .wellbeing-feedback::after {
+    display: block;
+    pointer-events: none;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before {
     left: 0;
     top: 0;
     width: 112px;
     height: 28px;
+    border-color: #183146;
     border-radius: 112px 0 0 0;
   }
 
   body[data-page="home"] .wellbeing-feedback::after {
-    display: block;
     left: 104px;
     top: -7px;
+    border-left-color: #183146;
   }
 }
 
