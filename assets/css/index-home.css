@@ -290,12 +290,6 @@ body[data-page="home"] .wellbeing-card:last-child h3 {
     min-height: 900px;
   }
 
-  body[data-page="home"] .wellbeing-intro::before,
-  body[data-page="home"] .wellbeing-intro::after,
-  body[data-page="home"] .wellbeing-feedback::before,
-  body[data-page="home"] .wellbeing-feedback::after {
-    display: none;
-  }
 }
 
 @media (max-width: 760px) {
@@ -326,6 +320,28 @@ body[data-page="home"] .wellbeing-card:last-child h3 {
 
   body[data-page="home"] .wellbeing-feedback {
     margin-bottom: 30px;
+    padding-top: 34px;
+  }
+
+  /* On a single-column layout, the feedback loop becomes a compact arc above its label. */
+  body[data-page="home"] .wellbeing-intro::before,
+  body[data-page="home"] .wellbeing-intro::after {
+    display: none;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::before {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 112px;
+    height: 28px;
+    border-radius: 112px 0 0 0;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::after {
+    display: block;
+    left: 104px;
+    top: -7px;
   }
 
   body[data-page="home"] .wellbeing-flow {
@@ -340,9 +356,21 @@ body[data-page="home"] .wellbeing-card:last-child h3 {
     min-height: 0;
   }
 
-  body[data-page="home"] .wellbeing-card::after,
+  /* Preserve the node-to-card arrow at mobile widths. */
+  body[data-page="home"] .wellbeing-card::after {
+    display: block;
+    left: 54px;
+    width: 9px;
+    height: 2px;
+    background: color-mix(in srgb, var(--cascade-color) 84%, transparent);
+  }
+
   body[data-page="home"] .wellbeing-card-panel::before {
-    display: none;
+    display: block;
+    left: -14px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 7px;
   }
 
   body[data-page="home"] .wellbeing-node {
@@ -706,6 +734,24 @@ body[data-page="home"].storytelling-ready .wellbeing-cascade .story-text-reveal 
   filter: none !important;
 }
 
+/* Final mobile feedback-loop geometry: these rules follow the compact desktop overrides. */
+@media (max-width: 760px) {
+  body[data-page="home"] .wellbeing-feedback::before {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 112px;
+    height: 28px;
+    border-radius: 112px 0 0 0;
+  }
+
+  body[data-page="home"] .wellbeing-feedback::after {
+    display: block;
+    left: 104px;
+    top: -7px;
+  }
+}
+
 /* Science Platform: compact ten-card grid on the left, preserving the person on the right. */
 body[data-page="home"] .concept {
   isolation: isolate;
@@ -758,14 +804,26 @@ body[data-page="home"] .concept .concept-item h3 {
 }
 
 /* Keep the long Neuroplasticity label inside its compact card. */
+body[data-page="home"] .concept .concept-item[style*="science-platform-neuroplasticity"] {
+  padding-bottom: clamp(18px, 1.55vw, 22px);
+}
+
 body[data-page="home"] .concept .concept-item[style*="science-platform-neuroplasticity"] h3 {
   width: 100%;
   font-size: clamp(0.78rem, 1vw, 1rem);
-  line-height: 1.16;
+  line-height: 1.22;
   letter-spacing: -0.04em;
   overflow-wrap: anywhere;
   word-break: break-word;
   text-wrap: balance;
+}
+
+html[lang="th"] body[data-page="home"] .concept .concept-item[style*="science-platform-neuroplasticity"] h3 {
+  font-size: clamp(0.48rem, 0.73vw, 0.66rem);
+  letter-spacing: -0.085em;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 @media (max-width: 1180px) and (min-width: 761px) {
