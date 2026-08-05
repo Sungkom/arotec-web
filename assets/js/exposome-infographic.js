@@ -176,6 +176,44 @@
     update();
   };
 
+  const initNavigationMotion = () => {
+    if (document.body.classList.contains("capture-mode")) return;
+
+    const body = document.body;
+    const header = document.querySelector(".exposome-site-header");
+    const sectionNav = document.querySelector(".ex-progress-nav");
+    if (!header || !sectionNav) return;
+
+    const revealAfter = 84;
+    const directionThreshold = 5;
+    let lastScrollY = Math.max(0, window.scrollY || 0);
+    let frame = 0;
+
+    const update = () => {
+      frame = 0;
+      const currentScrollY = Math.max(0, window.scrollY || 0);
+      const delta = currentScrollY - lastScrollY;
+      const hasScrolled = currentScrollY > revealAfter;
+
+      body.classList.toggle("exposome-nav-scroll-active", hasScrolled);
+
+      if (!hasScrolled) {
+        body.classList.remove("exposome-nav-scroll-hidden");
+      } else if (Math.abs(delta) >= directionThreshold) {
+        body.classList.toggle("exposome-nav-scroll-hidden", delta < 0);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  };
+
   const initDebug = () => {
     const currentStage = () => Array.from(document.querySelectorAll(".infographic-stage")).reduce((best, stage) => {
       const distance = Math.abs(stage.getBoundingClientRect().top - innerHeight * 0.2);
@@ -206,6 +244,7 @@
     document.querySelector("[data-back-to-top]")?.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
     initObservers();
     initProgress();
+    initNavigationMotion();
     initDebug();
     initHighlights();
     await waitForAssets();
