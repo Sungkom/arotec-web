@@ -95,6 +95,7 @@ html {
 
 .ex-progress-nav a,
 .adi-progress-nav a {
+  position: relative;
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -115,7 +116,27 @@ html {
   text-decoration: none;
   white-space: nowrap;
   transform: none;
-  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+  transition:
+    transform 280ms var(--ease-premium, cubic-bezier(0.22, 1, 0.36, 1)),
+    box-shadow 280ms var(--ease-premium, cubic-bezier(0.22, 1, 0.36, 1)),
+    border-color 280ms var(--ease-premium, cubic-bezier(0.22, 1, 0.36, 1)),
+    background-color 280ms var(--ease-premium, cubic-bezier(0.22, 1, 0.36, 1)),
+    color 280ms var(--ease-premium, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.ex-progress-nav a::after,
+.adi-progress-nav a::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  bottom: 3px;
+  left: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0b63c7, #113568);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 180ms ease;
 }
 
 .ex-progress-nav a span,
@@ -138,11 +159,54 @@ html {
   border-color: rgba(18, 100, 190, 0.24);
   color: #1264be;
   background: #ffffff;
-  outline: none;
   transform: none;
 }
 
+.ex-progress-nav a:hover::after,
+.ex-progress-nav a:focus-visible::after,
+.ex-progress-nav a.is-active::after,
+.adi-progress-nav a:hover::after,
+.adi-progress-nav a:focus-visible::after,
+.adi-progress-nav a.is-active::after {
+  transform: scaleX(1);
+}
+
+/* Mirror the index-page navigation motion for the Exposome primary and
+   section menus, while keeping both bars aligned as one navigation unit. */
+.exposome-infographic-body {
+  --exposome-header-offset: 94px;
+  --exposome-header-hide-offset: -94px;
+}
+
+.exposome-infographic-body .exposome-site-header,
+.exposome-infographic-body .ex-progress-nav {
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+  will-change: transform;
+}
+
+.exposome-infographic-body.exposome-nav-scroll-active .ex-progress-nav {
+  background: rgba(247, 249, 252, 0.92);
+  box-shadow: 0 12px 34px rgba(17, 53, 104, 0.1);
+}
+
+.exposome-infographic-body.exposome-nav-scroll-hidden .exposome-site-header {
+  transform: translate3d(0, calc(-100% - 10px), 0);
+}
+
+.exposome-infographic-body.exposome-nav-scroll-hidden .ex-progress-nav {
+  transform: translate3d(0, calc(var(--exposome-header-hide-offset) - 100% - 10px), 0);
+}
+
 @media (max-width: 1060px) {
+  .exposome-infographic-body {
+    --exposome-header-offset: 88px;
+    --exposome-header-hide-offset: -88px;
+  }
+
   .ex-progress-nav,
   .adi-progress-nav {
     top: 88px;
@@ -151,6 +215,11 @@ html {
 }
 
 @media (max-width: 760px) {
+  .exposome-infographic-body {
+    --exposome-header-offset: 68px;
+    --exposome-header-hide-offset: -68px;
+  }
+
   html {
     scroll-padding-top: 128px;
   }
@@ -187,5 +256,14 @@ html {
   .exposome-hybrid-page .section-head p:not(.ex-kicker),
   .adi-hybrid-page .section-head p:last-child {
     font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exposome-infographic-body .exposome-site-header,
+  .exposome-infographic-body .ex-progress-nav,
+  .ex-progress-nav a,
+  .ex-progress-nav a::after {
+    transition: none;
   }
 }
