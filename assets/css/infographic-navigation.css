@@ -1,0 +1,191 @@
+/* Shared navigation and type treatment for the Exposome and ADI infographic pages. */
+
+.exposome-hybrid-page,
+.adi-hybrid-page {
+  font-family: var(--font-en);
+}
+
+/* Use the same Noto Sans stack throughout each scientific infographic. */
+.exposome-hybrid-page *,
+.adi-hybrid-page * {
+  font-family: var(--font-en);
+  letter-spacing: 0;
+}
+
+/* Keep the primary heading scale identical to the Neuro-Skin Care page. */
+.exposome-hybrid-page .ex-hero h1,
+.adi-hybrid-page .section-head h1 {
+  font-size: 3rem;
+  line-height: 1.02;
+}
+
+.exposome-hybrid-page .ex-lead,
+.adi-hybrid-page .section-subtitle {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+/* Section titles and their supporting copy follow the Neuro-Skin Care scale. */
+.exposome-hybrid-page .section-head h2,
+.adi-hybrid-page .section-head h2 {
+  font-size: 2.05rem;
+  line-height: 1.15;
+}
+
+.exposome-hybrid-page .section-head p:not(.ex-kicker),
+.adi-hybrid-page .section-head p:last-child {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+html {
+  scroll-padding-top: 150px;
+}
+
+/* Match the Neuro-Skin Care header: a stable primary menu above the section menu. */
+.exposome-hybrid-page .site-header,
+.adi-hybrid-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+}
+
+/* These pages previously placed the header over their first section. Keep the
+   opening rhythm balanced now that the shared navigation occupies document flow. */
+.exposome-hybrid-page .ex-hero {
+  padding-top: clamp(64px, 8vw, 96px);
+}
+
+.adi-hybrid-page .adi-section:first-of-type {
+  padding-top: clamp(68px, 8vw, 96px);
+}
+
+/* Match the Neuro-Skin Care section-navigation pills on both infographic pages. */
+.ex-progress-nav,
+.adi-progress-nav {
+  position: sticky;
+  top: 94px;
+  right: auto;
+  z-index: 70;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin: 0;
+  padding: 8px max(16px, calc((100vw - 1220px) / 2));
+  overflow-x: auto;
+  overflow-y: visible;
+  border: 0;
+  border-bottom: 1px solid #d7e0ea;
+  border-radius: 0;
+  background: rgba(247, 249, 252, 0.96);
+  box-shadow: none;
+  scrollbar-width: none;
+  transform: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.ex-progress-nav::-webkit-scrollbar,
+.adi-progress-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.ex-progress-nav a,
+.adi-progress-nav a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 34px;
+  height: auto;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #314462;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: none;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+  white-space: nowrap;
+  transform: none;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.ex-progress-nav a span,
+.adi-progress-nav a span {
+  display: inline;
+  min-width: 0;
+  margin-right: 5px;
+  color: #0d9c96;
+  font-family: var(--font-en);
+  font-size: inherit;
+  font-weight: 800;
+}
+
+.ex-progress-nav a:hover,
+.ex-progress-nav a:focus-visible,
+.ex-progress-nav a.is-active,
+.adi-progress-nav a:hover,
+.adi-progress-nav a:focus-visible,
+.adi-progress-nav a.is-active {
+  border-color: rgba(18, 100, 190, 0.24);
+  color: #1264be;
+  background: #ffffff;
+  outline: none;
+  transform: none;
+}
+
+@media (max-width: 1060px) {
+  .ex-progress-nav,
+  .adi-progress-nav {
+    top: 88px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 128px;
+  }
+
+  .ex-progress-nav,
+  .adi-progress-nav {
+    top: 68px;
+    justify-content: flex-start;
+    padding-inline: 14px;
+  }
+
+  .ex-progress-nav a,
+  .adi-progress-nav a {
+    min-height: 32px;
+    padding: 7px 10px;
+    font-size: 0.72rem;
+  }
+
+  .exposome-hybrid-page .ex-hero h1,
+  .adi-hybrid-page .section-head h1 {
+    font-size: 2.25rem;
+  }
+
+  .exposome-hybrid-page .ex-lead,
+  .adi-hybrid-page .section-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .exposome-hybrid-page .section-head h2,
+  .adi-hybrid-page .section-head h2 {
+    font-size: 1.55rem;
+  }
+
+  .exposome-hybrid-page .section-head p:not(.ex-kicker),
+  .adi-hybrid-page .section-head p:last-child {
+    font-size: 0.9rem;
+  }
+}
