@@ -1474,7 +1474,7 @@
 
   function asset(name) {
     // The Arotec Scientist mark is a transparent PNG, not an optimized photo asset.
-    const optimizedName = name === "arotec-scientist-logo.png" || name.startsWith("social/")
+    const optimizedName = name === "arotec-scientist-logo.png" || name.startsWith("social/") || sciencePlatformCardOrder.has(name)
       ? name
       : name.replace(/\.(?:jpe?g|png)$/i, ".webp");
     return new URL(`${root}assets/images/${optimizedName}`, document.baseURI).href;
