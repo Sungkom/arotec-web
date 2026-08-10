@@ -562,6 +562,19 @@ body[data-page="home"] .research-product-icon svg + svg {
   stroke-width: 1.75;
 }
 
+body[data-page="home"] .research-product-icon img {
+  width: 82px;
+  height: 90px;
+  display: block;
+  padding: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 18px rgba(7, 40, 76, 0.13);
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
 body[data-page="home"] .research-product-card:hover,
 body[data-page="home"] .research-product-card:focus-visible {
   z-index: 5;
@@ -831,6 +844,13 @@ body[data-page="home"] .research-solutions .research-topic {
     height: 64px;
   }
 
+  body[data-page="home"] .research-product-icon img {
+    width: 72px;
+    height: 84px;
+    padding: 6px;
+    border-radius: 14px;
+  }
+
   body[data-page="home"] .research-product-card h3,
   body[data-page="home"] .card-olfactory-system h3 {
     font-size: clamp(1.2rem, 6vw, 1.45rem);
@@ -1008,6 +1028,13 @@ body[data-page="home"] .research-solutions .research-topic {
   body[data-page="home"] .card-olfactory-system .research-product-icon svg {
     width: 60px;
     height: 60px;
+  }
+
+  body[data-page="home"] .research-product-icon img {
+    width: 68px;
+    height: 76px;
+    padding: 6px;
+    border-radius: 14px;
   }
 
   body[data-page="home"] .research-product-icon svg + svg {
