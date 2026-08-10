@@ -1,0 +1,1172 @@
+/* ================================================================
+   From Research to Solutions & Products
+   Responsive infographic added after The Biology of Human Experience
+   ================================================================ */
+
+body[data-page="home"] .research-solutions {
+  --research-navy: #09265f;
+  --research-navy-dark: #061b48;
+  --research-blue: #1596c4;
+  --research-teal: #26a6a4;
+  --research-green: #5a9f43;
+  --research-purple: #7065b5;
+  --research-orange: #f28c3c;
+  --research-yellow: #e5b542;
+  --research-pink: #dc5d98;
+  --research-text: #15213b;
+  --research-muted: #6f7c92;
+  --research-line: #cad4e5;
+  position: relative;
+  z-index: 1;
+  content-visibility: visible !important;
+  contain-intrinsic-size: auto !important;
+  overflow: hidden;
+  padding: clamp(26.4px, 2.88vw, 40.8px) 0 clamp(26.4px, 3.24vw, 45.6px);
+  color: var(--research-text);
+  background:
+    radial-gradient(circle at 84% 9%, rgba(207, 222, 240, 0.32), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  font-family: "Inter", var(--font-en, ui-sans-serif, system-ui, sans-serif);
+}
+
+body[data-page="home"] .research-solutions *,
+body[data-page="home"] .research-solutions *::before,
+body[data-page="home"] .research-solutions *::after {
+  box-sizing: border-box;
+}
+
+body[data-page="home"] .research-shell {
+  width: min(1360px, calc(100% - clamp(32px, 5vw, 72px)));
+  margin: 0 auto;
+  zoom: 0.6;
+}
+
+/* Section 1: Hero Header */
+body[data-page="home"] .research-hero {
+  position: relative;
+  z-index: 2;
+  min-height: clamp(210px, 22vw, 300px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  align-items: start;
+  gap: 48px;
+  padding: 0 clamp(16px, 2vw, 28px);
+}
+
+body[data-page="home"] .research-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+body[data-page="home"] .research-hero h2 {
+  max-width: 760px;
+  margin: 0;
+  color: var(--research-navy);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.55rem, 2.28vw, 2.25rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+@media (min-width: 1024px) {
+  body[data-page="home"] .research-hero h2 {
+    font-size: min(2.34375vw, 48px);
+  }
+}
+
+body[data-page="home"] .research-hero p {
+  max-width: 680px;
+  margin: clamp(14px, 1.6vw, 24px) 0 0;
+  color: var(--research-navy-dark);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.35rem, 2.15vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+body[data-page="home"] .research-hero-art {
+  position: relative;
+  min-height: 250px;
+  color: #8ca9ce;
+  opacity: 0.27;
+  pointer-events: none;
+}
+
+body[data-page="home"] .research-hero-art svg {
+  position: absolute;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.75;
+}
+
+body[data-page="home"] .research-hero-art svg:nth-child(1) {
+  top: -42px;
+  right: 36px;
+  width: clamp(210px, 23vw, 320px);
+  height: clamp(210px, 23vw, 320px);
+}
+
+body[data-page="home"] .research-hero-art svg:nth-child(2) {
+  top: 74px;
+  left: 2%;
+  width: clamp(136px, 14vw, 196px);
+  height: clamp(136px, 14vw, 196px);
+  transform: rotate(18deg);
+}
+
+body[data-page="home"] .research-hero-art svg:nth-child(3) {
+  right: -18px;
+  bottom: -54px;
+  width: clamp(150px, 16vw, 224px);
+  height: clamp(150px, 16vw, 224px);
+  transform: rotate(-11deg);
+}
+
+/* Shared stage and connector layer */
+body[data-page="home"] .research-stage {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+body[data-page="home"] .research-connector-layer,
+body[data-page="home"] .research-arrow-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+body[data-page="home"] .research-connector-layer {
+  z-index: 0;
+}
+
+body[data-page="home"] .research-arrow-layer {
+  z-index: 12;
+}
+
+body[data-page="home"] .research-connector-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition: opacity 220ms ease, stroke-width 220ms ease, filter 220ms ease;
+}
+
+body[data-page="home"] .research-connector-path.topic-path {
+  display: block;
+  stroke-dasharray: none;
+  stroke-width: 1.35;
+  opacity: 0.54;
+}
+
+body[data-page="home"] .research-connector-path.product-path {
+  stroke-width: 2.15;
+  opacity: 0.96;
+}
+
+body[data-page="home"] .research-connector-path.axis-path {
+  stroke: #e8fffb;
+  stroke-width: 2.4;
+  opacity: 1;
+  filter: drop-shadow(0 1px 3px rgba(0, 27, 38, 0.42));
+}
+
+body[data-page="home"] .research-connector-path.is-highlighted {
+  stroke-width: 3.2;
+  opacity: 1;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+body[data-page="home"] .research-connector-dot {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Section 2: A&S Science Platform */
+body[data-page="home"] .research-platform {
+  position: relative;
+  z-index: 2;
+  min-height: 392px;
+  overflow: hidden;
+  padding: 129.8px 16px 28px;
+  border: 2px solid var(--research-navy);
+  border-bottom-color: rgba(9, 38, 95, 0.58);
+  border-radius: 52% 52% 7% 7% / 34% 34% 8% 8%;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 18px 50px rgba(9, 38, 95, 0.055);
+}
+
+body[data-page="home"] .research-platform::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  left: 18px;
+  height: 1px;
+  background: rgba(123, 146, 181, 0.56);
+}
+
+body[data-page="home"] .research-platform-heading {
+  position: absolute;
+  top: 27.5px;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+body[data-page="home"] .research-platform-heading h3 {
+  margin: 0;
+  color: var(--research-navy);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(2rem, 2.7vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+body[data-page="home"] .research-platform-heading p {
+  margin: 4px 0 0;
+  color: var(--research-navy-dark);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1rem, 1.45vw, 1.42rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+body[data-page="home"] .research-topics {
+  position: relative;
+  z-index: 2;
+  min-height: 244px;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  align-items: start;
+}
+
+body[data-page="home"] .research-topic {
+  position: relative;
+  min-width: 0;
+  min-height: 226px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px;
+  border: 0;
+  border-left: 1px solid rgba(151, 170, 200, 0.64);
+  outline: 0;
+  background: transparent;
+  text-align: center;
+  transform: translateY(var(--arc-shift, 0));
+  transition: color 220ms ease, transform 240ms ease;
+}
+
+body[data-page="home"] .research-topic:first-child {
+  border-left: 0;
+}
+
+body[data-page="home"] .research-topic:nth-child(1),
+body[data-page="home"] .research-topic:nth-child(10) { --arc-shift: 52px; }
+body[data-page="home"] .research-topic:nth-child(2),
+body[data-page="home"] .research-topic:nth-child(9) { --arc-shift: 28px; }
+body[data-page="home"] .research-topic:nth-child(3),
+body[data-page="home"] .research-topic:nth-child(8) { --arc-shift: 14px; }
+body[data-page="home"] .research-topic:nth-child(4),
+body[data-page="home"] .research-topic:nth-child(7) { --arc-shift: 5px; }
+
+body[data-page="home"] .research-topic-number {
+  width: clamp(34px, 3.2vw, 44px);
+  height: clamp(34px, 3.2vw, 44px);
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--research-navy);
+  box-shadow: 0 5px 12px rgba(9, 38, 95, 0.16);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.15rem, 1.55vw, 1.48rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+body[data-page="home"] .research-topic h4 {
+  min-height: 48px;
+  margin: 0;
+  color: #10182d;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(0.88rem, 1.05vw, 1.08rem);
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+body[data-page="home"] .research-topic-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  color: var(--research-navy);
+}
+
+body[data-page="home"] .research-topic-icon svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+}
+
+body[data-page="home"] .research-topic-icon svg + svg {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.8;
+}
+
+body[data-page="home"] .research-topic:hover,
+body[data-page="home"] .research-topic:focus-visible {
+  color: var(--research-blue);
+  transform: translateY(calc(var(--arc-shift, 0px) - 5px));
+}
+
+body[data-page="home"] .research-topic:focus-visible {
+  border-radius: 12px;
+  outline: 3px solid rgba(21, 150, 196, 0.25);
+  outline-offset: -2px;
+}
+
+/* Sections 3-7: central research-to-product flow */
+body[data-page="home"] .research-flow-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(310px, 1fr) minmax(260px, 0.78fr) minmax(310px, 1fr);
+  grid-template-rows: 244px 142px 272px 250px;
+  gap: 24px clamp(48px, 5.8vw, 84px);
+  align-items: center;
+  padding: 36px 14px 0;
+}
+
+body[data-page="home"] .research-axis-node,
+body[data-page="home"] .research-product-card {
+  position: relative;
+  z-index: 3;
+}
+
+body[data-page="home"] .research-core {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+body[data-page="home"] .research-translation {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: stretch;
+}
+
+body[data-page="home"] .research-hub {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: center;
+}
+
+body[data-page="home"] .research-double-circle,
+body[data-page="home"] .research-single-circle {
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  color: var(--research-navy);
+  background: rgba(255, 255, 255, 0.98);
+  text-align: center;
+}
+
+body[data-page="home"] .research-double-circle {
+  width: 216px;
+  height: 216px;
+  border: 3px double var(--research-navy);
+  box-shadow: 0 0 0 8px #ffffff, 0 0 0 10px rgba(9, 38, 95, 0.74), 0 14px 36px rgba(9, 38, 95, 0.08);
+}
+
+body[data-page="home"] .research-single-circle {
+  width: 238px;
+  height: 238px;
+  border: 2px solid #8a9ab6;
+  box-shadow: 0 13px 36px rgba(9, 38, 95, 0.07);
+}
+
+body[data-page="home"] .research-double-circle h3,
+body[data-page="home"] .research-single-circle h3,
+body[data-page="home"] .research-translation h3 {
+  margin: 0;
+  color: var(--research-navy);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+}
+
+body[data-page="home"] .research-double-circle h3 {
+  font-size: 2.1rem;
+  line-height: 0.98;
+}
+
+body[data-page="home"] .research-double-circle svg {
+  width: 38px;
+  height: 38px;
+  margin: 8px auto 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+body[data-page="home"] .research-translation {
+  min-height: 106px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 18px;
+  border: 1.5px solid #94b1d0;
+  border-radius: 18px;
+  color: var(--research-navy);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 10px 26px rgba(9, 38, 95, 0.055);
+  text-align: center;
+}
+
+body[data-page="home"] .research-translation h3 {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+body[data-page="home"] .research-translation p {
+  margin: 8px 0 0;
+  color: var(--research-navy-dark);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+body[data-page="home"] .research-single-circle h3 {
+  font-size: 1.72rem;
+  line-height: 0.98;
+}
+
+body[data-page="home"] .research-single-circle p {
+  margin: 10px 0 0;
+  color: var(--research-navy-dark);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.18;
+}
+
+body[data-page="home"] .research-single-circle svg {
+  width: 24px;
+  height: 24px;
+  margin: 7px auto 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+}
+
+/* Section 6: Product Solution Cards */
+body[data-page="home"] .research-product-card {
+  min-height: 198px;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 76%, white);
+  border-radius: 20px;
+  outline: 0;
+  color: var(--research-text);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 12px 30px rgba(20, 48, 87, 0.055);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+body[data-page="home"] .research-product-card::after {
+  display: none;
+}
+
+body[data-page="home"] .research-product-card h3 {
+  margin: 0 0 8px;
+  color: color-mix(in srgb, var(--accent) 82%, #061b48);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.28rem, 1.65vw, 1.66rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+body[data-page="home"] .research-product-card p {
+  margin: -2px 0 8px;
+  color: #344057;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+body[data-page="home"] .research-product-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #172137;
+  font-size: clamp(0.82rem, 1.05vw, 1.02rem);
+  line-height: 1.48;
+}
+
+body[data-page="home"] .research-product-card li::marker {
+  color: var(--research-navy-dark);
+}
+
+body[data-page="home"] .research-product-icon {
+  position: relative;
+  min-height: 90px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+body[data-page="home"] .research-product-icon svg {
+  width: 76px;
+  height: 76px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+}
+
+body[data-page="home"] .research-product-icon svg + svg {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  stroke-width: 1.75;
+}
+
+body[data-page="home"] .research-product-card:hover,
+body[data-page="home"] .research-product-card:focus-visible {
+  z-index: 5;
+  border-color: var(--accent);
+  box-shadow: 0 18px 38px color-mix(in srgb, var(--accent) 16%, transparent);
+  transform: translateY(-5px) scale(1.01);
+}
+
+body[data-page="home"] .research-product-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  outline-offset: 3px;
+}
+
+body[data-page="home"] .card-bio-response { grid-column: 1; grid-row: 2; }
+body[data-page="home"] .card-sensory { grid-column: 1; grid-row: 3; }
+body[data-page="home"] .card-aromaceuticals { grid-column: 1; grid-row: 4; }
+body[data-page="home"] .card-neuro-cosmetics { grid-column: 3; grid-row: 2; }
+body[data-page="home"] .card-flavors { grid-column: 3; grid-row: 3; }
+body[data-page="home"] .card-homeostasis { grid-column: 3; grid-row: 4; }
+body[data-page="home"] .card-olfactory-system { grid-column: 2; grid-row: 4; }
+
+body[data-page="home"] .card-olfactory-system {
+  min-height: 198px;
+  grid-template-columns: 76px minmax(0, 1fr);
+  padding-inline: 18px;
+}
+
+body[data-page="home"] .card-olfactory-system .research-product-icon svg {
+  width: 62px;
+  height: 62px;
+}
+
+body[data-page="home"] .card-olfactory-system h3 {
+  font-size: 1.28rem;
+}
+
+body[data-page="home"] .card-olfactory-system ul {
+  font-size: 0.8rem;
+}
+
+/* Animation and reveal states */
+body[data-page="home"] .research-solutions [data-research-animate] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 640ms cubic-bezier(0.22, 1, 0.36, 1), transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body[data-page="home"] .research-solutions [data-research-animate].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+body[data-page="home"] .research-solutions .research-topic {
+  animation: researchTopicReveal 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--topic-delay) * 55ms + 180ms);
+}
+
+@keyframes researchTopicReveal {
+  from { opacity: 0; filter: blur(3px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes researchLineDraw {
+  from { stroke-dashoffset: 120; opacity: 0; }
+  to { stroke-dashoffset: 0; opacity: 0.56; }
+}
+
+/* Tablet: 5 research topics per row and a two-column card layout */
+@media (max-width: 1199px) {
+  body[data-page="home"] .research-shell {
+    width: min(100% - 36px, 1040px);
+  }
+
+  body[data-page="home"] .research-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  }
+
+  body[data-page="home"] .research-platform {
+    min-height: 610px;
+    padding: 129.8px 18px 26px;
+    border-radius: 110px 110px 24px 24px;
+  }
+
+  body[data-page="home"] .research-topics {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px 0;
+  }
+
+  body[data-page="home"] .research-topic,
+  body[data-page="home"] .research-topic:hover,
+  body[data-page="home"] .research-topic:focus-visible {
+    min-height: 210px;
+    transform: none;
+  }
+
+  body[data-page="home"] .research-topic:nth-child(6) {
+    border-left: 0;
+  }
+
+  body[data-page="home"] .research-flow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 230px 120px 250px repeat(3, minmax(198px, auto)) minmax(198px, auto);
+    gap: 22px;
+    padding-inline: 10px;
+  }
+
+  body[data-page="home"] .research-core { grid-column: 1 / -1; grid-row: 1; }
+  body[data-page="home"] .research-translation { grid-column: 1 / -1; grid-row: 2; width: min(420px, 100%); justify-self: center; }
+  body[data-page="home"] .research-hub { grid-column: 1 / -1; grid-row: 3; }
+  body[data-page="home"] .card-bio-response { grid-column: 1; grid-row: 4; }
+  body[data-page="home"] .card-neuro-cosmetics { grid-column: 2; grid-row: 4; }
+  body[data-page="home"] .card-sensory { grid-column: 1; grid-row: 5; }
+  body[data-page="home"] .card-flavors { grid-column: 2; grid-row: 5; }
+  body[data-page="home"] .card-aromaceuticals { grid-column: 1; grid-row: 6; }
+  body[data-page="home"] .card-homeostasis { grid-column: 2; grid-row: 6; }
+  body[data-page="home"] .card-olfactory-system { grid-column: 1 / -1; grid-row: 7; width: min(520px, 100%); justify-self: center; }
+}
+
+/* Mobile: two topic columns, one product column, and simple vertical links */
+@media (max-width: 767px) {
+  body[data-page="home"] .research-solutions {
+    padding: 40.8px 0 51.6px;
+  }
+
+  body[data-page="home"] .research-shell {
+    width: min(100% - 24px, 540px);
+  }
+
+  body[data-page="home"] .research-hero {
+    min-height: 340px;
+    display: block;
+    padding-inline: 6px;
+  }
+
+  body[data-page="home"] .research-hero h2 {
+    max-width: 100%;
+    line-height: 0.96;
+  }
+
+  body[data-page="home"] .research-hero p {
+    font-size: clamp(1.2rem, 5.4vw, 1.6rem);
+  }
+
+  body[data-page="home"] .research-hero-art {
+    position: absolute;
+    right: -44px;
+    bottom: -20px;
+    width: 250px;
+    min-height: 190px;
+    opacity: 0.17;
+  }
+
+  body[data-page="home"] .research-hero-art svg:nth-child(1) {
+    top: 12px;
+    right: 20px;
+    width: 180px;
+    height: 180px;
+  }
+
+  body[data-page="home"] .research-hero-art svg:nth-child(2),
+  body[data-page="home"] .research-hero-art svg:nth-child(3) {
+    display: none;
+  }
+
+  body[data-page="home"] .research-platform {
+    min-height: 0;
+    padding: 129.8px 10px 22px;
+    border-width: 1.5px;
+    border-radius: 72px 72px 20px 20px;
+  }
+
+  body[data-page="home"] .research-platform-heading {
+    top: 33px;
+    padding-inline: 10px;
+  }
+
+  body[data-page="home"] .research-platform-heading h3 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  body[data-page="home"] .research-platform-heading p {
+    font-size: 0.95rem;
+  }
+
+  body[data-page="home"] .research-topics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  body[data-page="home"] .research-topic,
+  body[data-page="home"] .research-topic:hover,
+  body[data-page="home"] .research-topic:focus-visible {
+    min-height: 202px;
+    gap: 8px;
+    padding: 18px 8px;
+    border-top: 1px solid rgba(151, 170, 200, 0.45);
+    transform: none;
+  }
+
+  body[data-page="home"] .research-topic:nth-child(odd) {
+    border-left: 0;
+  }
+
+  body[data-page="home"] .research-topic:nth-child(-n + 2) {
+    border-top: 0;
+  }
+
+  body[data-page="home"] .research-topic h4 {
+    min-height: 42px;
+    font-size: 1rem;
+  }
+
+  body[data-page="home"] .research-topic-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  body[data-page="home"] .research-topic-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  body[data-page="home"] .research-flow-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 224px 118px 248px repeat(7, minmax(190px, auto));
+    gap: 22px;
+    padding: 34px 4px 0;
+  }
+
+  body[data-page="home"] .research-core { grid-column: 1; grid-row: 1; }
+  body[data-page="home"] .research-translation { grid-column: 1; grid-row: 2; width: 100%; }
+  body[data-page="home"] .research-hub { grid-column: 1; grid-row: 3; }
+  body[data-page="home"] .card-bio-response { grid-column: 1; grid-row: 4; }
+  body[data-page="home"] .card-sensory { grid-column: 1; grid-row: 5; }
+  body[data-page="home"] .card-aromaceuticals { grid-column: 1; grid-row: 6; }
+  body[data-page="home"] .card-neuro-cosmetics { grid-column: 1; grid-row: 7; }
+  body[data-page="home"] .card-flavors { grid-column: 1; grid-row: 8; }
+  body[data-page="home"] .card-homeostasis { grid-column: 1; grid-row: 9; }
+  body[data-page="home"] .card-olfactory-system { grid-column: 1; grid-row: 10; width: 100%; }
+
+  body[data-page="home"] .research-double-circle {
+    width: 196px;
+    height: 196px;
+  }
+
+  body[data-page="home"] .research-single-circle {
+    width: 218px;
+    height: 218px;
+  }
+
+  body[data-page="home"] .research-product-card,
+  body[data-page="home"] .card-olfactory-system {
+    min-height: 190px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  body[data-page="home"] .research-product-icon {
+    min-height: 76px;
+  }
+
+  body[data-page="home"] .research-product-icon svg,
+  body[data-page="home"] .card-olfactory-system .research-product-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  body[data-page="home"] .research-product-card h3,
+  body[data-page="home"] .card-olfactory-system h3 {
+    font-size: clamp(1.2rem, 6vw, 1.45rem);
+  }
+
+  body[data-page="home"] .research-product-card ul,
+  body[data-page="home"] .card-olfactory-system ul {
+    font-size: clamp(0.78rem, 3.6vw, 0.92rem);
+  }
+
+  body[data-page="home"] .research-connector-path.topic-path,
+  body[data-page="home"] .research-connector-path.product-path {
+    display: none;
+  }
+}
+
+/* Desktop height compaction: shorten the complete infographic frame by about 30%. */
+@media (min-width: 1200px) {
+  body[data-page="home"] .research-solutions {
+    padding: 24px 0 16.8px;
+  }
+
+  body[data-page="home"] .research-hero {
+    min-height: 160px;
+  }
+
+  body[data-page="home"] .research-platform {
+    min-height: 300px;
+    padding: 96.8px 16px 14px;
+  }
+
+  body[data-page="home"] .research-platform-heading {
+    top: 19.8px;
+  }
+
+  body[data-page="home"] .research-topics {
+    min-height: 198px;
+  }
+
+  body[data-page="home"] .research-topic,
+  body[data-page="home"] .research-topic:hover,
+  body[data-page="home"] .research-topic:focus-visible {
+    min-height: 170px;
+    gap: 6px;
+    padding-inline: 6px;
+  }
+
+  body[data-page="home"] .research-topic:nth-child(1),
+  body[data-page="home"] .research-topic:nth-child(10) { --arc-shift: 30px; }
+  body[data-page="home"] .research-topic:nth-child(2),
+  body[data-page="home"] .research-topic:nth-child(9) { --arc-shift: 18px; }
+  body[data-page="home"] .research-topic:nth-child(3),
+  body[data-page="home"] .research-topic:nth-child(8) { --arc-shift: 9px; }
+  body[data-page="home"] .research-topic:nth-child(4),
+  body[data-page="home"] .research-topic:nth-child(7) { --arc-shift: 3px; }
+
+  body[data-page="home"] .research-topic-number {
+    width: 38px;
+    height: 38px;
+    font-size: 1.25rem;
+  }
+
+  body[data-page="home"] .research-topic h4 {
+    min-height: 40px;
+  }
+
+  body[data-page="home"] .research-topic-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  body[data-page="home"] .research-topic-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  body[data-page="home"] .research-topic-icon svg + svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  body[data-page="home"] .research-flow-grid {
+    grid-template-rows: 176px repeat(3, 160px);
+    gap: 30px clamp(48px, 5.8vw, 84px);
+    padding: 8px 14px 0;
+  }
+
+  body[data-page="home"] .research-double-circle {
+    width: 176px;
+    height: 176px;
+  }
+
+  body[data-page="home"] .research-single-circle {
+    width: 184px;
+    height: 184px;
+  }
+
+  body[data-page="home"] .research-hub {
+    translate: 0 -18px;
+  }
+
+  body[data-page="home"] .research-double-circle h3 {
+    font-size: 1.82rem;
+  }
+
+  body[data-page="home"] .research-double-circle svg {
+    width: 32px;
+    height: 32px;
+    margin-top: 6px;
+  }
+
+  body[data-page="home"] .research-translation {
+    height: 88px;
+    min-height: 88px;
+    align-self: center;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  body[data-page="home"] .research-translation h3 {
+    font-size: 1.55rem;
+  }
+
+  body[data-page="home"] .research-translation p {
+    margin-top: 6px;
+    font-size: 0.88rem;
+  }
+
+  body[data-page="home"] .research-single-circle h3 {
+    font-size: 1.5rem;
+  }
+
+  body[data-page="home"] .research-single-circle p {
+    margin-top: 7px;
+    font-size: 0.82rem;
+  }
+
+  body[data-page="home"] .research-single-circle svg {
+    width: 21px;
+    height: 21px;
+    margin-top: 5px;
+  }
+
+  body[data-page="home"] .research-product-card,
+  body[data-page="home"] .card-olfactory-system {
+    min-height: 160px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 18px;
+  }
+
+  body[data-page="home"] .research-product-card h3,
+  body[data-page="home"] .card-olfactory-system h3 {
+    margin-bottom: 6px;
+    font-size: clamp(1.12rem, 1.35vw, 1.4rem);
+  }
+
+  body[data-page="home"] .research-product-card p {
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+  }
+
+  body[data-page="home"] .research-product-card ul,
+  body[data-page="home"] .card-olfactory-system ul {
+    font-size: clamp(0.74rem, 0.88vw, 0.88rem);
+    line-height: 1.36;
+  }
+
+  body[data-page="home"] .research-product-icon {
+    min-height: 72px;
+  }
+
+  body[data-page="home"] .research-product-icon svg,
+  body[data-page="home"] .card-olfactory-system .research-product-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  body[data-page="home"] .research-product-icon svg + svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .research-solutions *,
+  body[data-page="home"] .research-solutions *::before,
+  body[data-page="home"] .research-solutions *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body[data-page="home"] .research-solutions [data-research-animate] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Neural glass theme: supplied neuron artwork, vivid accents, and borderless transparency. */
+body[data-page="home"] .research-solutions {
+  --research-navy: #e8fffb;
+  --research-navy-dark: #d3f7f1;
+  --research-text: #f7fffd;
+  --research-muted: #c8e8e4;
+  --research-line: rgba(216, 255, 249, 0.34);
+  background-color: #063942;
+  background-image:
+    linear-gradient(90deg, rgba(1, 25, 36, 0.68) 0%, rgba(4, 77, 82, 0.38) 48%, rgba(2, 34, 45, 0.54) 100%),
+    url("assets/images/research-neural-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body[data-page="home"] .research-hero {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body[data-page="home"] .research-hero-copy {
+  max-width: 760px;
+}
+
+body[data-page="home"] .research-hero h2,
+body[data-page="home"] .research-hero p {
+  color: #f4fffc;
+  text-shadow: 0 2px 18px rgba(0, 22, 31, 0.42);
+}
+
+body[data-page="home"] .research-platform {
+  border: 0;
+  background: rgba(2, 42, 50, 0.26);
+  box-shadow: none;
+  backdrop-filter: blur(6px) saturate(115%);
+  -webkit-backdrop-filter: blur(6px) saturate(115%);
+}
+
+body[data-page="home"] .research-platform::after {
+  display: none;
+}
+
+body[data-page="home"] .research-platform-heading h3,
+body[data-page="home"] .research-platform-heading p,
+body[data-page="home"] .research-topic h4 {
+  color: #f4fffc;
+  text-shadow: 0 1px 12px rgba(0, 19, 29, 0.34);
+}
+
+body[data-page="home"] .research-topic,
+body[data-page="home"] .research-topic:first-child,
+body[data-page="home"] .research-topic:nth-child(6) {
+  border-color: transparent;
+}
+
+body[data-page="home"] .research-topic-number {
+  color: #ffffff;
+  background: rgba(3, 42, 53, 0.76);
+  box-shadow: 0 7px 18px rgba(0, 25, 35, 0.26);
+}
+
+body[data-page="home"] .research-topic-icon {
+  color: #d9fff9;
+  filter: drop-shadow(0 4px 14px rgba(0, 28, 36, 0.32));
+}
+
+body[data-page="home"] .research-double-circle,
+body[data-page="home"] .research-single-circle,
+body[data-page="home"] .research-translation {
+  border: 0;
+  color: #f7fffd;
+  background: rgba(2, 35, 44, 0.38);
+  box-shadow: 0 14px 36px rgba(0, 22, 31, 0.14);
+  backdrop-filter: blur(8px) saturate(118%);
+  -webkit-backdrop-filter: blur(8px) saturate(118%);
+}
+
+body[data-page="home"] .research-product-card {
+  border: 0;
+  color: #f7fffd;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 38px rgba(0, 22, 31, 0.2);
+  backdrop-filter: blur(9px) saturate(118%);
+  -webkit-backdrop-filter: blur(9px) saturate(118%);
+}
+
+body[data-page="home"] .research-double-circle,
+body[data-page="home"] .research-single-circle {
+  box-shadow: 0 14px 34px rgba(0, 20, 29, 0.2);
+}
+
+body[data-page="home"] .research-double-circle h3,
+body[data-page="home"] .research-single-circle h3,
+body[data-page="home"] .research-translation h3,
+body[data-page="home"] .research-translation p,
+body[data-page="home"] .research-single-circle p {
+  color: #f4fffc;
+  text-shadow: 0 1px 10px rgba(0, 20, 29, 0.34);
+}
+
+body[data-page="home"] .research-product-card h3 {
+  color: var(--accent);
+  text-shadow: 0 1px 12px rgba(0, 20, 29, 0.24);
+}
+
+body[data-page="home"] .research-product-card p,
+body[data-page="home"] .research-product-card ul {
+  color: #f2fffc;
+}
+
+body[data-page="home"] .research-product-card li::marker {
+  color: #d8fff8;
+}
+
+body[data-page="home"] .research-product-card:hover,
+body[data-page="home"] .research-product-card:focus-visible {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 20px 44px rgba(0, 22, 31, 0.24);
+}
+
+body[data-page="home"] .research-connector-path.topic-path {
+  opacity: 0.48;
+}
+
+body[data-page="home"] .research-connector-path.product-path {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  body[data-page="home"] .research-solutions {
+    background-position: 68% center;
+  }
+
+  body[data-page="home"] .research-topic,
+  body[data-page="home"] .research-topic:hover,
+  body[data-page="home"] .research-topic:focus-visible {
+    border-color: transparent;
+  }
+
+  body[data-page="home"] .research-product-card,
+  body[data-page="home"] .card-olfactory-system {
+    background: rgba(255, 255, 255, 0.18);
+  }
+}
