@@ -330,6 +330,13 @@ body[data-page="home"] .research-topic-icon svg + svg {
   stroke-width: 1.8;
 }
 
+body[data-page="home"] .research-topic-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 body[data-page="home"] .research-topic:hover,
 body[data-page="home"] .research-topic:focus-visible {
   color: var(--research-blue);
