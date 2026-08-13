@@ -1,0 +1,114 @@
+@import url("./human-longevity-aging2.css?v=20260813-aging-icons-v2-base");
+
+.biomedical-icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.exposome-orb .biomedical-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 8px rgba(47, 196, 255, .5));
+}
+
+.icon-item .biomedical-icon {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 0 5px rgba(22, 200, 255, .38));
+  transition: transform .22s ease, filter .22s ease;
+}
+
+.icon-item:hover .biomedical-icon,
+.icon-item:focus-visible .biomedical-icon {
+  transform: scale(1.045);
+  filter: drop-shadow(0 0 8px rgba(22, 200, 255, .85));
+}
+
+.organ-grid .biomedical-icon {
+  width: 82px;
+  height: 82px;
+  filter: drop-shadow(0 0 6px rgba(229, 154, 182, .38));
+}
+
+.support-icon .biomedical-icon {
+  width: 78px;
+  height: 78px;
+}
+
+.support-icon.brain .biomedical-icon,
+.support-icon.cells .biomedical-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.support-side-icon {
+  filter: drop-shadow(0 0 5px rgba(22, 200, 255, .35));
+}
+
+.support-side-icons {
+  position: relative;
+  justify-self: end;
+  width: 86px;
+  height: 92px;
+}
+
+.support-side-icons .biomedical-icon {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  filter: drop-shadow(0 0 5px rgba(22, 200, 255, .35));
+}
+
+.support-side-icons .biomedical-icon:first-child {
+  top: 0;
+  right: 17px;
+}
+
+.support-side-icons .biomedical-icon:last-child {
+  right: -3px;
+  bottom: -1px;
+}
+
+.adi-step .biomedical-icon {
+  width: 78px;
+  height: 78px;
+  filter: drop-shadow(0 0 5px rgba(22, 200, 255, .34));
+}
+
+.adi-step:last-child .biomedical-icon {
+  width: 69px;
+  height: 79px;
+}
+
+@media (max-width: 900px) {
+  .support-icon .biomedical-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .organ-grid .biomedical-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .adi-step .biomedical-icon {
+    width: 53px;
+    height: 53px;
+  }
+
+  .adi-step:last-child .biomedical-icon {
+    width: 48px;
+    height: 56px;
+  }
+}
+
+/* Keep raster icons stable after the card reveal animation clears its filter. */
+.is-ready .glass-card[data-reveal="card"] {
+  animation-fill-mode: forwards;
+}

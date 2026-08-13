@@ -1,0 +1,132 @@
+.aging-dynamics-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.aging-main-header.site-header {
+  position: relative;
+  inset: auto;
+  z-index: 900;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.aging-main-header .header-inner {
+  width: var(--container);
+  min-height: 94px;
+  gap: 22px;
+}
+
+.aging-main-header .desktop-nav {
+  gap: clamp(8px, 1.15vw, 18px);
+}
+
+.aging-main-header .nav-link {
+  font-size: clamp(.72rem, .78vw, .86rem);
+}
+
+/* Reinstate the explicit icon sizing after the shared site stylesheet. */
+.exposome-orb .biomedical-icon { width: 100%; height: 100%; }
+.icon-item .biomedical-icon { width: 64px; height: 64px; }
+.organ-grid .biomedical-icon { width: 82px; height: 82px; }
+.support-icon .biomedical-icon { width: 78px; height: 78px; }
+.support-icon.brain .biomedical-icon,
+.support-icon.cells .biomedical-icon { width: 84px; height: 84px; }
+.support-side-icon.body-scan { width: 58px; height: 88px; }
+.support-side-icon.neuron { width: 82px; height: 82px; }
+.support-side-icon.network { width: 76px; height: 76px; }
+.support-side-icons .biomedical-icon { width: 59px; height: 59px; }
+.adi-step .biomedical-icon { width: 78px; height: 78px; }
+.adi-step:last-child .biomedical-icon { width: 69px; height: 79px; }
+
+.aging-dynamics-body > .aging-dynamics {
+  flex: 0 0 auto;
+}
+
+.aging-main-footer {
+  flex: 0 0 auto;
+  padding: 26px 20px;
+  border-top: 1px solid #d6dee8;
+  color: #113568;
+  background: #fff;
+}
+
+.aging-main-footer > div {
+  display: flex;
+  align-items: center;
+  width: min(100% - 30px, 1180px);
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.aging-main-footer img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.aging-main-footer p {
+  margin: 0;
+  color: #536078;
+  font-size: 13px;
+}
+
+.aging-main-footer .footer-contact {
+  margin-left: auto;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: #113568;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 1120px) {
+  .aging-main-header .desktop-nav { gap: 10px; }
+  .aging-main-header .nav-link { font-size: .69rem; }
+  .aging-main-header .contact-pill { padding-inline: 15px; }
+}
+
+@media (max-width: 980px) {
+  .aging-main-header .header-inner { min-height: 82px; }
+  .aging-main-header .desktop-nav { display: none; }
+  .aging-main-header .header-actions { margin-left: auto; }
+}
+
+@media (max-width: 560px) {
+  .aging-main-header .header-inner {
+    width: min(100% - 28px, var(--container));
+    min-height: 74px;
+  }
+
+  .aging-main-header .contact-pill {
+    min-height: 40px;
+    padding-inline: 14px;
+    font-size: .78rem;
+  }
+
+  .aging-main-header .circle-button {
+    width: 40px;
+    height: 40px;
+    font-size: .76rem;
+  }
+
+  .aging-main-footer > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .aging-main-footer .footer-contact { margin-left: 0; }
+}
+
+@media (max-width: 900px) {
+  .support-icon .biomedical-icon { width: 56px; height: 56px; }
+}
+
+@media (max-width: 767px) {
+  .organ-grid .biomedical-icon { width: 70px; height: 70px; }
+  .adi-step .biomedical-icon { width: 53px; height: 53px; }
+  .adi-step:last-child .biomedical-icon { width: 48px; height: 56px; }
+}

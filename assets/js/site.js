@@ -1591,7 +1591,10 @@
     const conceptItems = platform.items.map((item) => {
       const href = item.href || sciencePlatformLinks[item.image] || "";
       const tag = href ? "a" : "article";
-      const linkAttrs = href ? ` href="${root}${href}" aria-label="${item.title === "Neuro-Skin Science" ? "Open Neuro-Skin Science page" : item.title}"` : "";
+      const itemAriaLabel = item.image === "science-platform-human-longevity-aging.png"
+        ? "Open Human Longevity & Aging page"
+        : item.title === "Neuro-Skin Science" ? "Open Neuro-Skin Science page" : item.title;
+      const linkAttrs = href ? ` href="${root}${href}" aria-label="${itemAriaLabel}"` : "";
       return `
       <${tag} class="concept-item" style="--concept-card-image:url('${asset(item.image)}')"${linkAttrs}>
         <h3>${item.title}</h3>
