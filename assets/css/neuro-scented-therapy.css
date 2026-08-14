@@ -1,0 +1,760 @@
+:root {
+  --nst-bg: #020817;
+  --nst-bg-2: #061326;
+  --nst-panel: rgba(7, 22, 48, 0.74);
+  --nst-panel-strong: rgba(8, 28, 58, 0.9);
+  --nst-border: rgba(67, 170, 255, 0.45);
+  --nst-border-bright: rgba(47, 221, 255, 0.58);
+  --nst-cyan: #42d9ff;
+  --nst-blue: #278cff;
+  --nst-violet: #9b6cff;
+  --nst-magenta: #e35cca;
+  --nst-green: #4ee6ac;
+  --nst-orange: #ffad45;
+  --nst-red: #ff5d70;
+  --nst-text: #f2f8ff;
+  --nst-text-2: #aac4df;
+  --nst-muted: #738ba8;
+  --nst-radius: 22px;
+  --nst-head: "Arial Narrow", "Roboto Condensed", "DIN Condensed", "Segoe UI", sans-serif;
+  --nst-body: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 18px; }
+body { margin: 0; min-width: 320px; overflow-x: clip; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+
+.nst-page {
+  color: var(--nst-text);
+  background:
+    radial-gradient(circle at 72% 7%, rgba(31, 101, 188, .22), transparent 24%),
+    radial-gradient(circle at 11% 42%, rgba(55, 35, 130, .15), transparent 22%),
+    radial-gradient(circle at 88% 70%, rgba(23, 114, 154, .11), transparent 25%),
+    linear-gradient(180deg, #010612 0%, #031024 42%, #020817 100%);
+  font-family: var(--nst-body);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.nst-page .aging-main-header,
+.nst-page .aging-main-footer {
+  font-family: var(--nst-body);
+  line-height: 1.6;
+}
+
+.nst-page::before,
+.nst-page::after {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+}
+
+.nst-page::before {
+  opacity: .34;
+  background-image:
+    radial-gradient(circle, rgba(91, 190, 255, .82) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(157, 107, 255, .65) 0 1px, transparent 1.7px);
+  background-position: 0 0, 39px 52px;
+  background-size: 83px 83px, 117px 117px;
+  mask-image: linear-gradient(to bottom, #000 0 25%, transparent 70%);
+}
+
+.nst-page::after {
+  z-index: 30;
+  box-shadow: inset 0 0 110px 34px rgba(0, 3, 12, .76);
+}
+
+.nst-skip {
+  position: fixed;
+  left: 14px;
+  top: 10px;
+  z-index: 100;
+  padding: 10px 14px;
+  color: #00101c;
+  background: var(--nst-cyan);
+  border-radius: 8px;
+  transform: translateY(-180%);
+}
+.nst-skip:focus { transform: translateY(0); }
+
+.nst-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 99;
+  height: 2px;
+  background: rgba(255,255,255,.05);
+}
+.nst-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--nst-violet), var(--nst-cyan));
+  box-shadow: 0 0 12px var(--nst-cyan);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.nst-header {
+  position: sticky;
+  top: 10px;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: minmax(235px, 1fr) auto minmax(235px, 1fr);
+  align-items: center;
+  width: min(calc(100% - 24px), 1512px);
+  min-height: 68px;
+  margin: 10px auto 0;
+  padding: 8px 14px;
+  border: 1px solid rgba(70, 164, 234, .34);
+  border-radius: 18px;
+  background: rgba(2, 8, 23, .68);
+  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 12px 30px rgba(0,0,0,.18);
+  backdrop-filter: blur(12px) saturate(130%);
+  transition: background .3s ease, box-shadow .3s ease;
+}
+
+.nst-header.is-scrolled {
+  background: rgba(2, 8, 23, .92);
+  box-shadow: inset 0 1px rgba(255,255,255,.06), 0 16px 36px rgba(0,0,0,.36), 0 0 24px rgba(30, 130, 255, .08);
+}
+
+.nst-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 10px;
+  color: var(--nst-text);
+  text-decoration: none;
+  font-family: var(--nst-head);
+  font-size: 20px;
+  letter-spacing: .035em;
+}
+.nst-brand img { width: 42px; height: 42px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(66,217,255,.6)); }
+
+.nst-nav { display: flex; align-items: center; justify-content: center; gap: clamp(22px, 3.2vw, 54px); }
+.nst-nav a {
+  position: relative;
+  padding: 18px 0 16px;
+  color: #d7e9fa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--nst-head);
+  font-size: 15px;
+  letter-spacing: .05em;
+}
+.nst-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: var(--nst-cyan);
+  box-shadow: 0 0 8px var(--nst-cyan);
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+.nst-nav a:hover,
+.nst-nav a:focus-visible,
+.nst-nav a.is-active { color: #fff; text-shadow: 0 0 11px rgba(66,217,255,.68); }
+.nst-nav a:hover::after,
+.nst-nav a:focus-visible::after,
+.nst-nav a.is-active::after { transform: scaleX(1); }
+
+.nst-explore,
+.nst-menu-button {
+  min-height: 44px;
+  color: #effaff;
+  border: 1px solid rgba(97, 211, 255, .8);
+  border-radius: 12px;
+  background: linear-gradient(110deg, rgba(77, 45, 177, .28), rgba(10, 113, 172, .22));
+  box-shadow: inset 0 0 16px rgba(87,103,255,.17), 0 0 14px rgba(39,140,255,.24);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--nst-head);
+  font-weight: 600;
+  letter-spacing: .05em;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.nst-explore { justify-self: end; min-width: 214px; padding: 0 24px; }
+.nst-menu-button { display: none; }
+.nst-explore:hover,
+.nst-explore:focus-visible,
+.nst-menu-button:hover,
+.nst-menu-button:focus-visible {
+  outline: 2px solid transparent;
+  border-color: #9ff3ff;
+  background: linear-gradient(110deg, rgba(93, 57, 208, .42), rgba(8, 136, 205, .34));
+  box-shadow: inset 0 0 22px rgba(87,103,255,.22), 0 0 22px rgba(39,140,255,.42);
+}
+
+.nst-main { width: min(calc(100% - 40px), 1350px); margin: 0 auto 32px; }
+.nst-hero,
+.nst-section,
+.nst-disease-spectrum {
+  position: relative;
+  border: 1px solid rgba(66, 155, 229, .38);
+  border-radius: var(--nst-radius);
+  background: linear-gradient(145deg, rgba(8, 24, 50, .69), rgba(3, 13, 30, .8));
+  box-shadow: inset 0 1px rgba(255,255,255,.04), 0 0 26px rgba(20,109,200,.05);
+  overflow: hidden;
+}
+
+.nst-hero {
+  display: block;
+  min-height: 492px;
+  border-color: transparent;
+  background: #02030c;
+  box-shadow: none;
+}
+.nst-hero::after {
+  position: absolute;
+  inset: auto -5% 0 22%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(66,217,255,.48), transparent);
+}
+.nst-hero-copy { position: relative; z-index: 3; width: 44%; min-height: 492px; padding: 34px 18px 20px 46px; }
+.nst-eyebrow {
+  margin: 0 0 11px;
+  color: var(--nst-cyan);
+  text-transform: uppercase;
+  font-family: var(--nst-head);
+  font-weight: 600;
+  letter-spacing: .15em;
+}
+.nst-hero h1 {
+  margin: 0;
+  color: #e7f4ff;
+  text-transform: uppercase;
+  font-family: "Segoe UI Light", "Segoe UI", Arial, sans-serif;
+  font-size: clamp(46px, 3.55vw, 54px);
+  font-weight: 200;
+  line-height: 1.015;
+  letter-spacing: .015em;
+  text-shadow: 0 0 22px rgba(73,138,255,.25);
+}
+.nst-hero-lede { margin: 15px 0 18px; color: #bdcfe0; font-size: 18px; font-weight: 350; line-height: 1.48; }
+.nst-hero-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: min(100%, 570px); }
+.nst-mini-card {
+  min-height: 172px;
+  padding: 13px 12px 10px;
+  border: 1px solid rgba(63,171,255,.42);
+  border-radius: 13px;
+  background: linear-gradient(155deg, rgba(9,31,63,.75), rgba(4,13,31,.8));
+  box-shadow: inset 0 1px rgba(255,255,255,.035);
+}
+.nst-mini-card h3 { margin: 0 0 4px; color: #a7dcff; font: 600 15px/1 var(--nst-head); text-transform: uppercase; }
+.nst-mini-card p { margin: 0; color: var(--nst-text-2); font-size: 12px; line-height: 1.35; }
+.nst-mini-card img { display: block; width: 100%; height: 86px; margin-top: 6px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(78,157,255,.32)); }
+
+.nst-hero-visual {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  min-width: 0;
+  pointer-events: none;
+}
+.nst-hero-visual::before {
+  position: absolute;
+  inset: 5% 2% 7% 6%;
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30,122,255,.14), transparent 64%);
+  filter: blur(12px);
+}
+.nst-hero-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  mix-blend-mode: normal;
+  filter: none;
+  animation: none;
+}
+.nst-neural-pulse { position: absolute; z-index: 2; width: 12px; height: 12px; border-radius: 50%; background: #ff7d55; box-shadow: 0 0 12px 5px rgba(255,90,67,.42); animation: nst-pulse 2.2s ease-in-out infinite; }
+.pulse-one { left: 67%; top: 27%; }
+.pulse-two { left: 80%; top: 70%; animation-delay: .8s; }
+
+.nst-section { margin-top: 12px; padding: 0 14px 14px; }
+.nst-section-olfactory { min-height: 805px; }
+.nst-section-dermal { min-height: 760px; }
+.nst-section-integration { min-height: 735px; }
+.nst-section-heading { display: flex; align-items: center; gap: 18px; min-height: 82px; padding: 10px 10px 8px; }
+.nst-section-number {
+  display: grid;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 1px solid rgba(109,151,255,.76);
+  border-radius: 50%;
+  color: #bceeff;
+  background: radial-gradient(circle, rgba(33,132,230,.28), rgba(85,54,183,.13) 62%, transparent 64%);
+  box-shadow: 0 0 15px rgba(76,119,255,.3), inset 0 0 14px rgba(43,166,255,.12);
+  font: 700 34px/1 var(--nst-head);
+}
+.nst-section-heading h2 { margin: 0; color: #93ddff; text-transform: uppercase; font: 600 clamp(22px, 2vw, 31px)/1.08 var(--nst-head); letter-spacing: .025em; }
+.nst-section-heading p { margin: 3px 0 0; color: #b9d4ef; text-transform: uppercase; font: 500 14px/1.2 var(--nst-head); letter-spacing: .04em; }
+
+.nst-section-one-layout { display: grid; grid-template-columns: minmax(0, 1fr) 274px; gap: 16px; }
+.nst-section-one-main { min-width: 0; }
+.nst-input-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; height: 125px; }
+.nst-flow-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(53,144,218,.45);
+  border-radius: 12px;
+  background: rgba(6,24,50,.78);
+}
+.nst-flow-card img { width: 78px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(68,157,255,.38)); }
+.nst-flow-card h3 { margin: 0 0 4px; color: #d8f4ff; text-transform: uppercase; font: 600 15px/1.05 var(--nst-head); }
+.nst-flow-card p { margin: 0; color: var(--nst-text-2); font-size: 12px; }
+.nst-flow-arrow { position: absolute; z-index: 2; top: 50%; right: -27px; width: 28px; height: 16px; overflow: visible; transform: translateY(-50%); }
+.nst-flow-arrow path { fill: none; stroke: #bfecff; stroke-width: 1.8; stroke-linecap: round; }
+.nst-flow-arrow polygon { fill: #c9f3ff; }
+.nst-flow-card:last-child .nst-flow-arrow { display: none; }
+
+.nst-axis-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, 1fr); gap: 11px; height: 564px; margin-top: 10px; }
+.nst-axis-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-rows: 42px minmax(0, 1fr);
+  align-items: stretch;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--axis-color) 52%, transparent);
+  border-radius: 14px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--axis-color) 9%, rgba(4,15,34,.82)), rgba(3,13,29,.84));
+  box-shadow: inset 0 1px rgba(255,255,255,.035);
+  outline: none;
+  transition: border-color .22s ease, box-shadow .22s ease;
+}
+.nst-axis-card:hover,
+.nst-axis-card:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 82%, white 8%); box-shadow: inset 0 0 20px color-mix(in srgb, var(--axis-color) 9%, transparent), 0 0 16px color-mix(in srgb, var(--axis-color) 17%, transparent); }
+.nst-axis-intro { display: flex; grid-row: 1 / 3; flex-direction: column; align-items: center; justify-content: flex-start; gap: 7px; min-width: 0; }
+.nst-axis-number { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--axis-color); border-radius: 50%; color: #fff; background: color-mix(in srgb, var(--axis-color) 25%, #061326); box-shadow: 0 0 11px color-mix(in srgb, var(--axis-color) 32%, transparent); font: 700 23px/1 var(--nst-head); }
+.nst-axis-icon { width: 82px; height: 88px; object-fit: contain; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--axis-color) 35%, transparent)); transition: transform .2s ease; }
+.nst-axis-card:hover .nst-axis-icon,
+.nst-axis-card:focus-visible .nst-axis-icon { transform: scale(1.03); }
+.nst-axis-title { display: flex; grid-column: 2; grid-row: 1; align-items: center; padding: 2px 8px; color: var(--axis-color); text-transform: uppercase; font: 600 15px/1.1 var(--nst-head); letter-spacing: .015em; }
+.nst-axis-steps { display: flex; grid-column: 2; grid-row: 2; min-width: 0; align-items: center; gap: 4px; }
+.nst-step { display: grid; flex: 1 1 0; min-width: 0; min-height: 76px; place-items: center; padding: 7px 5px; border: 1px solid color-mix(in srgb, var(--axis-color) 39%, transparent); border-radius: 8px; color: #dcecff; background: rgba(5,20,43,.75); text-align: center; font-size: 12.5px; line-height: 1.3; overflow-wrap: anywhere; }
+.nst-step-link { flex: 0 0 15px; width: 15px; height: 12px; overflow: visible; }
+.nst-step-link path { fill: none; stroke: var(--axis-color); stroke-width: 1.6; stroke-dasharray: 18; animation: nst-flow 2s linear infinite; }
+.nst-step-link polygon { fill: var(--axis-color); }
+.nst-tooltip {
+  position: absolute;
+  right: 12px;
+  bottom: calc(100% - 8px);
+  z-index: 12;
+  width: min(320px, calc(100% - 24px));
+  padding: 9px 11px;
+  border: 1px solid color-mix(in srgb, var(--axis-color) 60%, transparent);
+  border-radius: 9px;
+  color: #eaf7ff;
+  background: rgba(2,10,25,.96);
+  box-shadow: 0 12px 28px rgba(0,0,0,.4);
+  font-size: 11px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+.nst-axis-card:hover .nst-tooltip,
+.nst-axis-card:focus-visible .nst-tooltip,
+.nst-system-card:hover .nst-tooltip,
+.nst-system-card:focus-visible .nst-tooltip { opacity: 1; transform: translateY(0); }
+
+.nst-outcome-panel {
+  min-width: 0;
+  padding: 12px 11px;
+  border: 1px solid rgba(96,137,224,.48);
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(7,28,58,.85), rgba(3,13,29,.82));
+  box-shadow: inset 0 1px rgba(255,255,255,.04), 0 0 20px rgba(45,96,210,.08);
+}
+.nst-outcome-panel h3 { margin: 0 0 4px; color: #8fceff; text-align: center; text-transform: uppercase; font: 600 18px/1.12 var(--nst-head); letter-spacing: .04em; }
+.nst-outcome-item { display: grid; grid-template-columns: 62px 1fr 22px; align-items: center; min-height: 80px; gap: 9px; border-bottom: 1px solid rgba(99,142,205,.22); }
+.nst-outcome-item:last-child { border-bottom: 0; }
+.nst-outcome-item img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(86,154,255,.32)); }
+.nst-outcome-item p { margin: 0; color: #dfeeff; text-transform: uppercase; font: 500 13px/1.25 var(--nst-head); }
+.nst-trend-svg { width: 18px; height: 32px; overflow: visible; }
+.nst-trend-svg path { fill: none; stroke-width: 2.2; }
+.nst-trend-svg polygon { stroke: none; }
+.nst-trend-up path { stroke: var(--nst-red); filter: drop-shadow(0 0 4px rgba(255,93,112,.55)); }
+.nst-trend-up polygon { fill: var(--nst-red); }
+.nst-trend-down path { stroke: #4ba4ff; filter: drop-shadow(0 0 4px rgba(39,140,255,.6)); }
+.nst-trend-down polygon { fill: #4ba4ff; }
+
+.nst-dermal-layout { display: grid; grid-template-columns: 500px minmax(0, 1fr) 246px; gap: 14px; min-height: 650px; }
+.nst-dermal-entry { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 9px; min-width: 0; }
+.nst-skin-figure { position: relative; min-width: 0; margin: 0; }
+.nst-skin-figure figcaption { position: absolute; z-index: 3; top: 4px; width: 100%; color: #c8adff; text-align: center; text-transform: uppercase; font: 600 16px/1 var(--nst-head); text-shadow: 0 0 9px rgba(155,108,255,.55); }
+.nst-skin-figure img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 13px rgba(36,134,255,.24)); animation: nst-scan 6.5s linear infinite; }
+.nst-dermal-entry-flow { display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+.nst-entry-card { position: relative; min-height: 136px; padding: 12px 9px; border: 1px solid rgba(70,161,235,.38); border-radius: 11px; background: rgba(6,24,49,.78); }
+.nst-entry-card h3 { margin: 0 0 6px; color: #8ae6ff; text-transform: uppercase; font: 600 14px/1.12 var(--nst-head); }
+.nst-entry-card p { margin: 0; color: #c2d5e6; font-size: 11.5px; line-height: 1.4; }
+.nst-entry-card img { width: 100%; height: 55px; margin-top: 7px; object-fit: contain; }
+.nst-entry-card:not(:last-child)::after { position: absolute; left: 50%; top: calc(100% + 3px); height: 18px; border-left: 1px solid #78dfff; content: ""; }
+
+.nst-dermal-axes { display: grid; grid-template-rows: 1.04fr 1.25fr 1.42fr .92fr .8fr; gap: 8px; min-width: 0; }
+.nst-dermal-axis {
+  --axis-color: var(--nst-blue);
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px 188px minmax(0,1fr);
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, var(--axis-color) 50%, transparent);
+  border-radius: 12px;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--axis-color) 8%, rgba(5,19,41,.86)), rgba(3,14,30,.83));
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.nst-dermal-axis:hover,
+.nst-dermal-axis:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 80%, white 7%); box-shadow: 0 0 14px color-mix(in srgb, var(--axis-color) 13%, transparent); }
+.nst-dermal-axis .nst-axis-number { width: 34px; height: 34px; font-size: 21px; }
+.nst-dermal-axis h3 { margin: 0; padding: 0 7px; color: var(--axis-color); text-transform: uppercase; font: 600 14px/1.13 var(--nst-head); }
+.nst-dermal-flow { display: flex; align-items: center; min-width: 0; gap: 4px; }
+.nst-dermal-flow .nst-step { min-height: 54px; font-size: 11.5px; }
+.nst-dermal-outcomes { display: flex; align-items: center; padding-top: 4px; padding-bottom: 4px; }
+.nst-dermal-outcomes > div { width: 100%; }
+.nst-dermal-outcomes .nst-outcome-item { min-height: 75px; }
+
+.nst-integration-top { display: grid; grid-template-columns: 226px 420px minmax(300px, 1fr) 265px; gap: 12px; height: 320px; }
+.nst-stage-card,
+.nst-head-visual,
+.nst-multisystem { border: 1px solid rgba(74,142,219,.4); border-radius: 13px; background: rgba(5,20,43,.76); }
+.nst-stage-card { position: relative; min-width: 0; padding: 12px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.nst-stage-card:hover,
+.nst-stage-card:focus-visible { border-color: rgba(102,198,255,.72); box-shadow: 0 0 16px rgba(52,130,255,.14); }
+.nst-stage-card h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: #b6a5ff; text-transform: uppercase; font: 600 17px/1.1 var(--nst-head); }
+.nst-stage-card h3 span,
+.nst-multisystem h3 span { display: grid; flex: 0 0 33px; width: 33px; height: 33px; place-items: center; border: 1px solid #69bfff; border-radius: 50%; color: #d9f5ff; background: rgba(29,117,198,.22); font: 700 21px/1 var(--nst-head); }
+.nst-stage-flow { position: relative; display: grid; place-items: center; min-height: 51px; margin: 11px 0; padding: 6px; border: 1px solid rgba(68,150,221,.36); border-radius: 7px; color: #dbeeff; text-align: center; font-size: 11px; }
+.nst-stage-flow:not(:last-child)::after { position: absolute; top: calc(100% + 2px); left: 50%; height: 9px; border-left: 1px solid #8adaff; content: ""; }
+.nst-head-visual { position: relative; margin: 0; overflow: hidden; }
+.nst-head-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; mix-blend-mode: screen; filter: saturate(1.1) contrast(1.04); animation: nst-breathe 5s ease-in-out infinite; }
+.nst-anatomy-label { position: absolute; z-index: 2; padding: 3px 6px; border: 1px solid rgba(106,177,244,.48); border-radius: 5px; color: #dbf2ff; background: rgba(4,17,39,.84); font: 500 10px/1.1 var(--nst-body); box-shadow: 0 0 8px rgba(39,140,255,.13); }
+.label-bulb { left: 21%; top: 39%; }
+.label-amygdala { right: 15%; top: 37%; }
+.label-hippocampus { right: 9%; top: 52%; }
+.label-hypothalamus { right: 10%; top: 68%; }
+.nst-central-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.nst-central-columns > div { padding: 10px; border: 1px solid rgba(89,138,213,.34); border-radius: 9px; }
+.nst-central-columns h4 { margin: 0 0 9px; color: #d3edff; font: 600 15px/1 var(--nst-head); }
+.nst-central-columns ul { margin: 0; padding-left: 17px; color: #bfcee0; font-size: 11px; line-height: 1.75; }
+.nst-dysregulation-stage { display: grid; grid-template-columns: 1fr 105px; gap: 4px; overflow: hidden; }
+.nst-dysregulation-stage h3 { align-items: flex-start; font-size: 15px; }
+.nst-dysregulation-stage p { margin: 4px 0 0; color: #c8b5d7; font-size: 10.5px; }
+.nst-dysregulation-stage img { align-self: end; width: 125px; height: 242px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 0 12px rgba(255,67,123,.25)); }
+
+.nst-multisystem { margin-top: 10px; padding: 8px 10px 11px; }
+.nst-multisystem > h3 { display: flex; align-items: center; justify-content: center; gap: 9px; margin: 0 0 8px; color: #b9a6ff; text-transform: uppercase; font: 600 17px/1 var(--nst-head); letter-spacing: .03em; }
+.nst-system-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.nst-system-card {
+  --axis-color: var(--nst-violet);
+  position: relative;
+  min-width: 0;
+  min-height: 238px;
+  padding: 11px 9px 8px;
+  border: 1px solid color-mix(in srgb, var(--axis-color) 44%, transparent);
+  border-radius: 10px;
+  background: rgba(5,21,45,.8);
+  text-align: center;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.nst-system-card:hover,
+.nst-system-card:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 78%, white 8%); box-shadow: 0 0 14px color-mix(in srgb, var(--axis-color) 14%, transparent); }
+.nst-system-card h4 { min-height: 37px; margin: 0; color: #d6ecff; text-transform: uppercase; font: 600 14px/1.15 var(--nst-head); }
+.nst-system-card img { width: 75px; height: 70px; margin: 8px auto; object-fit: contain; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--axis-color) 28%, transparent)); transition: transform .2s ease; }
+.nst-system-card:hover img,
+.nst-system-card:focus-visible img { transform: scale(1.03); }
+.nst-system-card ul { margin: 0; padding-left: 15px; color: #bfd0e1; text-align: left; font-size: 11.5px; line-height: 1.5; }
+.nst-system-card .nst-tooltip { --axis-color: var(--nst-violet); }
+
+.nst-disease-spectrum {
+  margin-top: 12px;
+  padding: 12px 10px 14px;
+  border-color: rgba(224,79,99,.38);
+  background: linear-gradient(155deg, rgba(47,10,21,.66), rgba(13,8,23,.84));
+}
+.nst-disease-spectrum h2 { margin: 0 0 10px; color: #ff7183; text-align: center; text-transform: uppercase; font: 600 22px/1 var(--nst-head); letter-spacing: .04em; }
+.nst-disease-grid { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; }
+.nst-disease-card { min-width: 0; min-height: 226px; padding: 10px 6px 8px; border: 1px solid rgba(235,85,104,.35); border-radius: 9px; background: rgba(37,8,17,.46); text-align: center; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.nst-disease-card:hover,
+.nst-disease-card:focus-visible { border-color: rgba(255,104,125,.72); box-shadow: inset 0 0 16px rgba(255,57,86,.07), 0 0 12px rgba(255,57,86,.13); }
+.nst-disease-card h3 { min-height: 38px; margin: 0; color: #ff7586; text-transform: uppercase; font: 600 12px/1.12 var(--nst-head); }
+.nst-disease-card img { width: 61px; height: 62px; margin: 10px auto 7px; object-fit: contain; filter: sepia(.5) saturate(2) hue-rotate(295deg) drop-shadow(0 0 5px rgba(255,72,92,.3)); }
+.nst-disease-card p { margin: 0; color: #d9bcc3; font-size: 11px; line-height: 1.37; }
+
+.nst-pathway-dialog { width: min(640px, calc(100% - 28px)); padding: 0; border: 1px solid rgba(78,190,255,.54); border-radius: 18px; color: var(--nst-text); background: rgba(3,13,31,.96); box-shadow: 0 24px 80px rgba(0,0,0,.68), 0 0 28px rgba(52,124,255,.22); }
+.nst-pathway-dialog::backdrop { background: rgba(0,5,17,.72); backdrop-filter: blur(7px); }
+.nst-dialog-card { display: grid; gap: 10px; padding: 20px; }
+.nst-dialog-heading { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 4px; }
+.nst-dialog-heading p { margin: 0; color: var(--nst-cyan); text-transform: uppercase; font: 600 13px/1 var(--nst-head); letter-spacing: .1em; }
+.nst-dialog-heading h2 { margin: 5px 0 0; font: 600 28px/1 var(--nst-head); }
+.nst-dialog-heading button,
+.nst-dialog-card > button { min-height: 48px; border: 1px solid rgba(76,159,226,.45); border-radius: 10px; color: #e5f6ff; background: rgba(8,29,57,.8); cursor: pointer; }
+.nst-dialog-heading button { min-width: 76px; }
+.nst-dialog-card > button { display: grid; grid-template-columns: 47px 1fr; grid-template-rows: auto auto; align-items: center; padding: 10px 14px; text-align: left; }
+.nst-dialog-card > button span { grid-row: 1 / 3; color: var(--nst-cyan); font: 700 28px/1 var(--nst-head); }
+.nst-dialog-card > button b { text-transform: uppercase; font: 600 17px/1 var(--nst-head); }
+.nst-dialog-card > button small { color: var(--nst-text-2); }
+.nst-dialog-heading button:hover,
+.nst-dialog-heading button:focus-visible,
+.nst-dialog-card > button:hover,
+.nst-dialog-card > button:focus-visible { outline: 2px solid transparent; border-color: var(--nst-cyan); box-shadow: 0 0 13px rgba(66,217,255,.18); }
+
+.nst-back-top { position: fixed; right: 18px; bottom: 18px; z-index: 25; width: 48px; height: 48px; border: 1px solid rgba(75,189,255,.56); border-radius: 50%; color: #dff8ff; background: rgba(5,21,43,.88); box-shadow: 0 0 16px rgba(47,151,255,.2); cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(8px); transition: bottom .2s ease, opacity .2s ease, transform .2s ease; }
+.nst-back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.nst-back-top.is-footer-near { bottom: 128px; }
+.nst-back-top:focus-visible { outline: 2px solid var(--nst-cyan); outline-offset: 3px; }
+
+.nst-reveal {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(13px) scale(.985);
+  transition: opacity .72s cubic-bezier(.2,.75,.25,1), filter .72s cubic-bezier(.2,.75,.25,1), transform .72s cubic-bezier(.2,.75,.25,1);
+}
+.nst-reveal.is-visible { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+
+/* Human Longevity visual language: glass depth, cyan glow and pointer tilt. */
+.nst-section,
+.nst-disease-spectrum,
+.nst-outcome-panel,
+.nst-multisystem {
+  border-radius: 22px;
+  box-shadow: 0 0 18px rgba(22,200,255,.2), inset 0 0 24px rgba(22,139,255,.08);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.nst-mini-card,
+.nst-flow-card,
+.nst-axis-card,
+.nst-entry-card,
+.nst-dermal-axis,
+.nst-stage-card,
+.nst-system-card,
+.nst-disease-card {
+  border-radius: 22px;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.nst-mini-card,
+.nst-flow-card,
+.nst-entry-card,
+.nst-stage-card,
+.nst-system-card {
+  background: linear-gradient(145deg, rgba(4,32,66,.75), rgba(2,14,34,.88));
+  box-shadow: 0 0 18px rgba(22,200,255,.12), inset 0 0 24px rgba(22,139,255,.06);
+}
+
+.nst-axis-card,
+.nst-dermal-axis {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--axis-color) 10%, rgba(4,32,66,.78)), rgba(2,14,34,.9));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--axis-color) 15%, transparent), inset 0 0 24px color-mix(in srgb, var(--axis-color) 7%, transparent);
+}
+
+.nst-disease-spectrum {
+  box-shadow: 0 0 18px rgba(229,154,182,.18), inset 0 0 26px rgba(229,154,182,.08);
+}
+
+.nst-disease-card {
+  --nst-card-accent: #e59ab6;
+  background: linear-gradient(140deg, rgba(59,22,55,.73), rgba(22,15,38,.9));
+  box-shadow: 0 0 18px rgba(229,154,182,.12), inset 0 0 26px rgba(229,154,182,.06);
+}
+
+.nst-tilt-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  --nst-card-accent: var(--axis-color, var(--nst-cyan));
+  transform: perspective(800px) rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform .24s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+  will-change: transform;
+}
+
+.nst-tilt-card:hover,
+.nst-tilt-card:focus-visible,
+.nst-tilt-card:focus-within {
+  z-index: 8;
+  border-color: color-mix(in srgb, var(--nst-card-accent) 88%, white 12%);
+  background: linear-gradient(145deg, rgba(5,43,87,.83), rgba(2,18,42,.94));
+  box-shadow: 0 0 26px color-mix(in srgb, var(--nst-card-accent) 28%, transparent), inset 0 0 30px color-mix(in srgb, var(--nst-card-accent) 12%, transparent);
+}
+
+.nst-disease-card.nst-tilt-card { --nst-card-accent: #e59ab6; }
+
+.nst-disease-card.nst-tilt-card:hover,
+.nst-disease-card.nst-tilt-card:focus-visible,
+.nst-disease-card.nst-tilt-card:focus-within {
+  background: linear-gradient(140deg, rgba(71,27,65,.83), rgba(28,17,45,.94));
+}
+
+@keyframes nst-breathe { 0%, 100% { opacity: .94; filter: saturate(1.03) brightness(.98); } 50% { opacity: 1; filter: saturate(1.1) brightness(1.08); } }
+@keyframes nst-pulse { 0%, 100% { transform: scale(.8); opacity: .55; } 50% { transform: scale(1.28); opacity: 1; } }
+@keyframes nst-flow { to { stroke-dashoffset: -36; } }
+@keyframes nst-scan { 0%, 100% { filter: drop-shadow(0 0 10px rgba(36,134,255,.2)) brightness(.96); } 50% { filter: drop-shadow(0 0 18px rgba(64,196,255,.36)) brightness(1.05); } }
+
+@media (max-width: 1279px) {
+  .nst-page { font-size: 13px; }
+  .nst-header { grid-template-columns: minmax(205px,1fr) auto minmax(180px,1fr); }
+  .nst-explore { min-width: 180px; padding-inline: 15px; }
+  .nst-nav { gap: 24px; }
+  .nst-hero-copy { padding-left: 28px; }
+  .nst-section-one-layout { grid-template-columns: 1fr; }
+  .nst-section-one-main { min-height: 710px; }
+  .nst-axis-card { grid-template-columns: 82px minmax(0, 1fr); }
+  .nst-axis-icon { width: 58px; height: 68px; }
+  .nst-step { font-size: 10px; }
+  .nst-outcome-panel { display: grid; grid-template-columns: 190px 1fr; align-items: center; }
+  .nst-outcome-panel > div { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .nst-outcome-item { min-height: 90px; padding: 5px; border-right: 1px solid rgba(99,142,205,.22); }
+  .nst-outcome-item:nth-child(4n) { border-right: 0; }
+  .nst-section-olfactory { min-height: auto; }
+  .nst-dermal-layout { grid-template-columns: 1fr 255px; }
+  .nst-dermal-entry { grid-column: 1 / 3; grid-template-columns: 300px 1fr; min-height: 330px; }
+  .nst-dermal-entry-flow { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-content: center; gap: 12px; }
+  .nst-entry-card { min-height: 155px; }
+  .nst-entry-card:not(:last-child)::after { display: none; }
+  .nst-dermal-outcomes { display: block; }
+  .nst-dermal-outcomes > div { display: block; }
+  .nst-dermal-outcomes .nst-outcome-item { min-height: 72px; }
+  .nst-integration-top { grid-template-columns: 1fr 1.5fr; height: auto; }
+  .nst-stage-card,
+  .nst-head-visual { min-height: 310px; }
+  .nst-system-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .nst-system-card { min-height: 218px; }
+  .nst-disease-grid { grid-template-columns: repeat(6, minmax(0,1fr)); }
+  .nst-disease-card { min-height: 205px; }
+}
+
+@media (max-width: 900px) {
+  .nst-header { grid-template-columns: 1fr auto auto; }
+  .nst-menu-button { display: inline-grid; place-items: center; min-width: 70px; padding: 0 12px; }
+  .nst-explore { min-width: 152px; }
+  .nst-nav { position: absolute; top: calc(100% + 7px); right: 0; left: 0; display: none; padding: 8px; border: 1px solid rgba(68,163,229,.4); border-radius: 13px; background: rgba(2,10,25,.97); box-shadow: 0 18px 40px rgba(0,0,0,.4); }
+  .nst-nav.is-open { display: grid; grid-template-columns: repeat(4,1fr); }
+  .nst-nav a { min-height: 44px; padding: 13px 8px; text-align: center; }
+  .nst-hero { grid-template-columns: 47% 53%; min-height: 510px; }
+  .nst-hero-copy { padding-left: 14px; }
+  .nst-hero-inputs { gap: 7px; }
+  .nst-mini-card { padding-inline: 8px; }
+  .nst-mini-card h3 { font-size: 12px; }
+  .nst-axis-card { grid-template-columns: 70px minmax(0, 1fr); }
+  .nst-axis-icon { width: 48px; height: 58px; }
+  .nst-axis-title { font-size: 13px; }
+  .nst-step { font-size: 9px; }
+  .nst-outcome-panel { grid-template-columns: 150px 1fr; }
+  .nst-outcome-panel > div { grid-template-columns: repeat(2,1fr); }
+  .nst-outcome-item:nth-child(2n) { border-right: 0; }
+  .nst-outcome-item:nth-child(4n) { border-right: 0; }
+}
+
+@media (max-width: 767px) {
+  html { scroll-padding-top: 18px; }
+  .nst-page { font-size: 14px; }
+  .nst-page::after { box-shadow: inset 0 0 60px 12px rgba(0,3,12,.55); }
+  .nst-header { top: 6px; grid-template-columns: minmax(0,1fr) auto; width: calc(100% - 12px); min-height: 58px; margin-top: 6px; padding: 5px 8px; border-radius: 14px; }
+  .nst-brand { font-size: 16px; }
+  .nst-brand img { width: 36px; height: 36px; }
+  .nst-menu-button { min-width: 66px; min-height: 44px; }
+  .nst-explore { grid-column: 1 / 3; width: 100%; min-height: 40px; margin-top: 5px; }
+  .nst-nav { top: calc(100% + 6px); }
+  .nst-nav.is-open { grid-template-columns: 1fr 1fr; }
+  .nst-main { width: calc(100% - 32px); margin-top: 0; }
+  .nst-hero { display: flex; flex-direction: column; min-height: 0; }
+  .nst-hero-copy { width: 100%; min-height: 0; padding: 28px 12px 8px; }
+  .nst-hero h1 { font-size: clamp(37px, 11.3vw, 54px); line-height: 1.03; }
+  .nst-hero-lede { font-size: clamp(15px, 4.3vw, 18px); }
+  .nst-hero-inputs { grid-template-columns: 1fr; width: 100%; }
+  .nst-mini-card { display: grid; grid-template-columns: 1fr 96px; grid-template-rows: auto 1fr; min-height: 105px; }
+  .nst-mini-card img { grid-column: 2; grid-row: 1 / 3; height: 82px; margin: 0; }
+  .nst-hero-visual { position: relative; inset: auto; order: 2; width: 100%; min-height: 0; aspect-ratio: 2560 / 941; }
+  .nst-hero-visual img { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .nst-neural-pulse { display: none; }
+  .nst-section { margin-top: 8px; padding: 0 8px 10px; }
+  .nst-section-heading { align-items: flex-start; min-height: 94px; gap: 10px; padding-inline: 2px; }
+  .nst-section-number { flex-basis: 49px; width: 49px; height: 49px; margin-top: 2px; font-size: 26px; }
+  .nst-section-heading h2 { font-size: 20px; }
+  .nst-section-heading p { font-size: 12px; }
+  .nst-section-one-main { min-height: 0; }
+  .nst-input-flow { grid-template-columns: 1fr; height: auto; gap: 9px; }
+  .nst-flow-card { min-height: 96px; }
+  .nst-flow-arrow { top: auto; right: 50%; bottom: -14px; width: 18px; transform: translateX(50%) rotate(90deg); }
+  .nst-axis-grid { grid-template-columns: 1fr; grid-template-rows: none; height: auto; margin-top: 12px; }
+  .nst-axis-card { grid-template-columns: 48px 1fr; grid-template-rows: auto auto; min-height: 235px; padding: 10px 8px; }
+  .nst-axis-intro { grid-row: 1 / 3; }
+  .nst-axis-title { grid-row: 1; font-size: 15px; }
+  .nst-axis-steps { grid-column: 1 / 3; align-self: end; min-height: 96px; }
+  .nst-step { min-height: 85px; font-size: 9.5px; }
+  .nst-outcome-panel { display: block; margin-top: 10px; }
+  .nst-outcome-panel h3 { margin-bottom: 8px; }
+  .nst-outcome-panel > div { display: block; }
+  .nst-outcome-item { min-height: 68px; border-right: 0; }
+  .nst-dermal-layout { display: block; }
+  .nst-dermal-entry { display: block; }
+  .nst-skin-figure { height: 350px; }
+  .nst-dermal-entry-flow { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .nst-entry-card { min-height: 104px; }
+  .nst-dermal-axes { display: grid; grid-template-rows: none; gap: 8px; margin-top: 10px; }
+  .nst-dermal-axis { grid-template-columns: 43px 1fr; grid-template-rows: auto auto; min-height: 185px; }
+  .nst-dermal-axis h3 { font-size: 14px; }
+  .nst-dermal-flow { grid-column: 1 / 3; }
+  .nst-dermal-flow .nst-step { min-height: 75px; font-size: 9px; }
+  .nst-dermal-outcomes { margin-top: 10px; }
+  .nst-integration-top { grid-template-columns: 1fr; }
+  .nst-stage-card,
+  .nst-head-visual { min-height: 300px; }
+  .nst-head-visual { order: 2; }
+  .nst-central-stage { order: 3; }
+  .nst-dysregulation-stage { order: 4; }
+  .nst-dysregulation-stage img { justify-self: end; }
+  .nst-system-grid { grid-template-columns: 1fr 1fr; }
+  .nst-system-card { min-height: 220px; }
+  .nst-disease-spectrum { margin-top: 8px; }
+  .nst-disease-spectrum h2 { font-size: 18px; line-height: 1.1; }
+  .nst-disease-grid { grid-template-columns: 1fr 1fr; }
+  .nst-disease-card { min-height: 190px; }
+  .nst-disease-card h3 { font-size: 13px; }
+  .nst-disease-card p { font-size: 10.5px; }
+  .nst-back-top.is-footer-near { bottom: 224px; }
+}
+
+@media (max-width: 420px) {
+  .nst-brand span { max-width: 105px; line-height: 1; }
+  .nst-step-link { flex-basis: 9px; width: 9px; }
+  .nst-axis-steps { gap: 2px; }
+  .nst-step { padding-inline: 2px; font-size: 8.5px; }
+  .nst-dermal-flow .nst-step { font-size: 8px; }
+  .nst-central-columns { grid-template-columns: 1fr; }
+  .nst-system-card { min-height: 232px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .nst-reveal { opacity: 1; transform: none; }
+}
