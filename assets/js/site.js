@@ -1585,6 +1585,7 @@
     `).join("");
     const sciencePlatformLinks = {
       "science-platform-exposome.png": "pages/exposome.html",
+      "science-platform-homeostasis-regulation.png": "pages/homeostasis-regulation.html",
       "science-platform-human-longevity-aging.png": "pages/human-longevity-aging.html",
       "science-platform-neuro-scented-therapy.png": "pages/neuro-scented-therapy.html",
       "science-platform-neuro-skin-care.png": "Neuro-Skin-Science.html"
@@ -1594,6 +1595,8 @@
       const tag = href ? "a" : "article";
       const itemAriaLabel = item.image === "science-platform-human-longevity-aging.png"
         ? "Open Human Longevity & Aging page"
+        : item.image === "science-platform-homeostasis-regulation.png"
+          ? "Open Homeostasis Regulation page"
         : item.image === "science-platform-neuro-scented-therapy.png"
           ? "Open Neuro-Scented Therapy page"
         : item.title === "Neuro-Skin Science" ? "Open Neuro-Skin Science page" : item.title;
