@@ -1,0 +1,223 @@
+:root {
+  --arotec-header-surface: rgba(255, 255, 255, 0.97);
+  --arotec-header-ink: #113568;
+  --arotec-header-line: rgba(17, 53, 104, 0.14);
+  --arotec-shell: min(1168px, calc(100vw - 40px));
+}
+
+.aging-main-header.site-header {
+  position: relative;
+  z-index: 900;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--arotec-header-line);
+  color: var(--arotec-header-ink);
+  background: var(--arotec-header-surface);
+  box-shadow: 0 10px 30px rgba(17, 53, 104, 0.1);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.aging-main-header .header-inner {
+  width: var(--arotec-shell);
+  min-height: 94px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.aging-main-header .brand {
+  width: 118px;
+  min-width: 118px;
+  min-height: 76px;
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.aging-main-header .brand-logo {
+  width: 94px;
+  height: 68px;
+  display: block;
+  aspect-ratio: 250 / 229;
+  object-fit: contain;
+  object-position: center;
+}
+
+.aging-main-header .desktop-nav {
+  display: flex;
+  flex: 1;
+  gap: clamp(8px, 1.15vw, 18px);
+  align-items: center;
+  justify-content: center;
+}
+
+.aging-main-header .nav-link {
+  position: relative;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--arotec-header-ink);
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
+  font-weight: 680;
+  white-space: nowrap;
+}
+
+.aging-main-header .nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #0b63c7, #113568);
+  transition: transform 180ms ease;
+}
+
+.aging-main-header .nav-link:hover,
+.aging-main-header .nav-link:focus-visible,
+.aging-main-header .nav-link.active {
+  color: #0b63c7;
+}
+
+.aging-main-header .nav-link:hover::after,
+.aging-main-header .nav-link:focus-visible::after,
+.aging-main-header .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.aging-main-header .header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.aging-main-header .pill-button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(17, 53, 104, 0.2);
+  border-radius: 999px;
+  padding: 0 22px;
+  color: var(--arotec-header-ink);
+  background: rgba(255, 255, 255, 0.84);
+  font-size: 0.92rem;
+  font-weight: 760;
+  transition: transform 180ms ease;
+}
+
+.aging-main-header .pill-button:hover { transform: translateY(-2px); }
+
+.aging-main-header .circle-button {
+  width: 46px;
+  height: 46px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(17, 53, 104, 0.2);
+  border-radius: 999px;
+  color: var(--arotec-header-ink);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.aging-main-header .nav-link:focus-visible,
+.aging-main-header .circle-button:focus-visible,
+.aging-main-header .contact-pill:focus-visible {
+  outline: 2px solid rgba(11, 99, 199, 0.36);
+  outline-offset: 3px;
+}
+
+.aging-main-footer {
+  flex: 0 0 auto;
+  padding: 26px 20px;
+  border-top: 1px solid #d6dee8;
+  color: #113568;
+  background: #fff;
+}
+
+.aging-main-footer > div {
+  width: min(100% - 30px, 1180px);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.aging-main-footer img {
+  width: 58px;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+}
+
+.aging-main-footer p {
+  margin: 0;
+  color: #536078;
+  font-size: 13px;
+}
+
+.aging-main-footer .footer-contact {
+  margin-left: auto;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: #113568;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 1120px) {
+  .aging-main-header .desktop-nav { gap: 10px; }
+  .aging-main-header .nav-link { font-size: 0.69rem; }
+  .aging-main-header .contact-pill { padding-inline: 15px; }
+}
+
+@media (max-width: 1060px) {
+  .aging-main-header .desktop-nav,
+  .aging-main-header .contact-pill { display: none; }
+  .aging-main-header .header-inner { justify-content: space-between; }
+}
+
+@media (max-width: 980px) {
+  .aging-main-header .header-inner { min-height: 82px; }
+  .aging-main-header .header-actions { margin-left: auto; }
+}
+
+@media (max-width: 760px) {
+  .aging-main-header .brand {
+    width: 88px;
+    min-width: 88px;
+    min-height: 62px;
+  }
+
+  .aging-main-header .brand-logo {
+    width: 74px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 560px) {
+  .aging-main-header .header-inner {
+    width: min(100% - 28px, var(--arotec-shell));
+    min-height: 74px;
+  }
+
+  .aging-main-header .circle-button {
+    width: 40px;
+    height: 40px;
+    font-size: 0.76rem;
+  }
+
+  .aging-main-footer > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .aging-main-footer .footer-contact { margin-left: 0; }
+}
