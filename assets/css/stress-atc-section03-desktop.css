@@ -1,0 +1,51 @@
+/* Section 03 desktop proportion correction */
+@media(min-width:901px){
+.section-03 .section-03-heading{min-height:126px;padding-bottom:8px}
+.section-03 .dementia-stage{margin-bottom:14px}
+.section-03 .stress-dysregulation-stage{min-height:223px}
+.section-03 .allostasis-grid{height:188px;grid-template-columns:minmax(0,1fr) 164px minmax(0,1fr)}
+.section-03 .allostasis-panel{height:188px;grid-template-rows:48px 1fr 29px}
+.section-03 .mini-flow{padding:6px 10px 3px}
+.section-03 .mini-flow>span{grid-template-rows:61px auto auto;gap:2px;font-size:9px;line-height:1.08}
+.section-03 .mini-flow .medical-raster-icon{width:58px;height:58px}
+.section-03 .mini-flow span>b{font-size:9.5px;line-height:1.08}
+.section-03 .mini-flow span>small{font-size:7px;line-height:1.12}
+.section-03 .allostasis-summary{padding:7px 8px 5px;font-size:9px}
+.section-03 .load-bridge{height:188px}
+.section-03 .load-bridge__card{width:100px;min-height:124px;padding:13px 8px 11px;gap:5px;font-size:10px;line-height:1.15}
+.section-03 .load-bridge__card strong{font-size:11px}
+.section-03 .load-bridge__in{top:77px;width:39px}
+.section-03 .load-bridge__down{bottom:-19px;height:57px}
+.section-03 .chronic-mechanism-stage{min-height:220px}
+.section-03 .mechanism-grid{height:185px}
+.section-03 .mechanism-card,.section-03 .mechanism-card:first-child,.section-03 .mechanism-card:last-child{min-height:185px;height:185px;padding:9px 12px 8px;grid-template-rows:43px 68px 1fr;gap:3px}
+.section-03 .mechanism-card>.medical-raster-icon{width:66px;height:66px}
+.section-03 .mental-disorder-stage{min-height:238px}
+.section-03 .disorder-layout{height:111px;margin-top:7px}
+.section-03 .side-list,.section-03 .disorder-center{height:104px;padding:7px 9px}
+.section-03 .disorder-center>div{height:72px}
+.section-03 .disorder-item{grid-template-rows:48px 1fr;font-size:7.8px;line-height:1.08}
+.section-03 .disorder-item .medical-raster-icon{width:48px;height:48px}
+.section-03 .path-loop-icon{width:39px;height:39px}
+.section-03 .progression-strip{min-height:84px;padding-top:9px}
+.section-03 .progression-strip>#potential-progression{height:57px}
+.section-03 .progression-stage{min-height:57px;padding:4px 6px;grid-template-columns:42px minmax(0,1fr);gap:4px;font-size:8.1px;line-height:1.08}
+.section-03 .progression-stage .medical-raster-icon{width:40px;height:40px}
+.section-03 .dementia-outcome-stage{min-height:212px}
+.section-03 .dementia-grid{height:148px;padding-top:7px}
+.section-03 .dementia-card{min-height:140px;height:140px;padding:7px 8px 6px}
+.section-03 .dementia-card .micro-process{height:74px}
+.section-03 .dementia-card .process-chip{grid-template-rows:43px 1fr;font-size:6.6px;line-height:1.06}
+.section-03 .dementia-card .process-chip .medical-raster-icon{width:41px;height:41px}
+.section-03 .dementia-card>p{margin-top:5px;font-size:7.7px;line-height:1.1}
+.section-03 .neurodegeneration-card>div{min-height:92px;grid-template-columns:62px minmax(0,1fr);gap:4px}
+.section-03 .large-medical-icon.medical-raster-icon{width:60px;height:60px}
+.section-03 .manifestations{height:98px;gap:3px}
+.section-03 .manifestation{grid-template-rows:36px 1fr;font-size:6.6px;line-height:1.04}
+.section-03 .manifestation .medical-raster-icon{width:36px;height:36px}
+.section-03 .head-progression{height:77px;margin-top:4px}
+.section-03 .head-stage{grid-template-rows:49px 1fr;font-size:6.4px;line-height:1.04}
+.section-03 .head-stage .medical-raster-icon,.section-03 .head-stage:nth-child(2) .medical-raster-icon,.section-03 .head-stage:nth-child(3) .medical-raster-icon,.section-03 .head-stage:nth-child(4) .medical-raster-icon{width:47px;height:47px}
+.section-03 .dementia-influences{min-height:24px;margin:6px 8px 7px;padding:5px 9px 4px;gap:9px;font-size:7.4px}
+.section-03-legend{min-height:42px;margin-top:8px;padding:5px 12px;font-size:7.8px;line-height:1.05}
+}
