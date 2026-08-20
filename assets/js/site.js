@@ -1589,6 +1589,7 @@
       "science-platform-homeostasis-regulation.png": "pages/homeostasis-regulation.html",
       "science-platform-human-longevity-aging.png": "pages/human-longevity-aging.html",
       "science-platform-olfactory-science.png": "pages/olfactory-science.html",
+      "science-platform-pssudo-synesthesia-perception.png": "pages/synesthesia-inspired-perception.html",
       "science-platform-neuro-scented-therapy.png": "pages/neuro-scented-therapy.html",
       "science-platform-neuro-skin-care.png": "Neuro-Skin-Science.html"
     };
@@ -1603,6 +1604,8 @@
           ? "Open Homeostasis Regulation page"
         : item.image === "science-platform-olfactory-science.png"
           ? "Open Olfactory Science page"
+        : item.image === "science-platform-pssudo-synesthesia-perception.png"
+          ? "Open Synesthesia-Inspired Perception page"
         : item.image === "science-platform-neuro-scented-therapy.png"
           ? "Open Neuro-Scented Therapy page"
         : item.title === "Neuro-Skin Science" ? "Open Neuro-Skin Science page" : item.title;
