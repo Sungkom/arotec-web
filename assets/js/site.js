@@ -3,6 +3,8 @@
   const pageId = body.dataset.page || "home";
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
+  const footerShell = document.getElementById("site-footer-shell");
+  const shellOnly = body.hasAttribute("data-shell-only");
   let heroSlideTimer = null;
   let heroParallaxCleanup = null;
   let sectionRevealCleanup = null;
@@ -20,6 +22,22 @@
     { id: "partners", path: "pages/partners.html", nav: true, section: "partners" },
     { id: "join", path: "pages/join-us.html", nav: true, section: "join" },
     { id: "contact", path: "pages/members.html", nav: false }
+  ];
+
+  const insightMenuItems = [
+    { id: "exercise-beauty", label: "Exercise x Beauty", href: "pages/exercise-beauty.html" },
+    { id: "exercise-health", label: "Exercise x Health" },
+    { id: "sleep-beauty", label: "Sleep x Beauty" },
+    { id: "sleep-health", label: "Sleep x Health" }
+  ];
+  const platformMenuItems = [
+    { id: "travion", label: "Travion™" },
+    { id: "meraxyl", label: "Meraxyl™" },
+    { id: "melacor", label: "Melacor™" },
+    { id: "cortiva", label: "Cortiva™" },
+    { id: "morphagen", label: "Morphagen™" },
+    { id: "chromagen", label: "Chromagen™" },
+    { id: "olfactiva", label: "Olfactiva™" }
   ];
 
   const languageMeta = {
@@ -1489,17 +1507,37 @@
   }
 
   function activeClass(id) {
-    return id === pageId ? " active" : "";
+    const activePageId = pageId === "exercise-beauty" ? "insights" : pageId;
+    return id === activePageId ? " active" : "";
   }
 
   function activeAria(id) {
-    return id === pageId ? ' aria-current="page"' : "";
+    const activePageId = pageId === "exercise-beauty" ? "insights" : pageId;
+    return id === activePageId ? ' aria-current="page"' : "";
   }
 
-  function navLinks(text) {
+  function submenuLinks(items, page, className) {
+    return items
+      .map((item) => `<a class="${className}" href="${item.href ? `${root}${item.href}` : `${root}pages/${page}.html#${item.id}`}">${item.label}</a>`)
+      .join("");
+  }
+
+  function navLinks(text, mobile = false) {
     return routes
       .filter((route) => route.nav)
-      .map((route) => `<a class="nav-link${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}>${text.nav[route.id]}</a>`)
+      .map((route) => {
+        const dropdown = route.id === "insights"
+          ? { items: insightMenuItems, page: "insights", label: "Insight topics" }
+          : route.id === "platform"
+            ? { items: platformMenuItems, page: "platform", label: "Platform modules" }
+            : null;
+        const link = `<a class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
+        if (!dropdown) return link;
+        if (mobile) {
+          return `<div class="mobile-nav-group">${link}<div class="mobile-nav-submenu" aria-label="${dropdown.label}">${submenuLinks(dropdown.items, dropdown.page, "mobile-nav-sublink")}</div></div>`;
+        }
+        return `<div class="nav-dropdown">${link}<div class="nav-submenu" aria-label="${dropdown.label}">${submenuLinks(dropdown.items, dropdown.page, "nav-sublink")}</div></div>`;
+      })
       .join("");
   }
 
@@ -1522,12 +1560,12 @@
             <select class="language-select" id="languageSelect" aria-label="Language">${options}</select>
             <a class="pill-button contact-pill" href="${routeHref("contact")}">${text.nav.contact}</a>
             <button class="circle-button" id="searchButton" type="button" title="${text.common.search}" aria-label="${text.common.search}">${icons.search}</button>
-            <button class="circle-button menu-toggle" id="menuToggle" type="button" title="${text.common.openMenu}" aria-label="${text.common.openMenu}">${icons.menu}</button>
+            <button class="circle-button menu-toggle" id="menuToggle" type="button" title="${text.common.openMenu}" aria-label="${text.common.openMenu}" aria-controls="mobilePanel" aria-expanded="false">${icons.menu}</button>
           </div>
         </div>
       </header>
       <div class="mobile-scrim" id="mobileScrim"></div>
-      <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" aria-hidden="true" inert>
         <div class="mobile-panel-head">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
             <img class="brand-logo" src="${asset("arotec-scientist-logo.png")}" width="250" height="229" alt="Arotec Scientist" decoding="async">
@@ -1536,7 +1574,7 @@
         </div>
         <nav class="mobile-nav" aria-label="Mobile primary navigation">
           <a class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
-          ${navLinks(text)}
+          ${navLinks(text, true)}
           <a class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
         </nav>
         <div class="mobile-language" aria-label="Language">${chips}</div>
@@ -2693,6 +2731,7 @@
 
   function setLanguage(lang) {
     localStorage.setItem("as-site-language", lang);
+    body.classList.remove("menu-open", "search-open");
     render(lang);
   }
 
@@ -2702,13 +2741,28 @@
       button.addEventListener("click", () => setLanguage(button.dataset.langChip));
     });
 
-    const openMenu = () => body.classList.add("menu-open");
-    const closeMenu = () => body.classList.remove("menu-open");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+    const openMenu = () => {
+      body.classList.add("menu-open");
+      menuToggle?.setAttribute("aria-expanded", "true");
+      mobilePanel?.setAttribute("aria-hidden", "false");
+      mobilePanel?.removeAttribute("inert");
+      window.requestAnimationFrame(() => document.getElementById("menuClose")?.focus());
+    };
+    const closeMenu = (restoreFocus = false) => {
+      const wasOpen = body.classList.contains("menu-open");
+      body.classList.remove("menu-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      mobilePanel?.setAttribute("aria-hidden", "true");
+      mobilePanel?.setAttribute("inert", "");
+      if (restoreFocus && wasOpen) menuToggle?.focus();
+    };
     document.getElementById("menuToggle")?.addEventListener("click", openMenu);
-    document.getElementById("menuClose")?.addEventListener("click", closeMenu);
-    document.getElementById("mobileScrim")?.addEventListener("click", closeMenu);
-    document.querySelectorAll(".mobile-nav .nav-link").forEach((link) => {
-      link.addEventListener("click", closeMenu);
+    document.getElementById("menuClose")?.addEventListener("click", () => closeMenu(true));
+    document.getElementById("mobileScrim")?.addEventListener("click", () => closeMenu(true));
+    document.querySelectorAll(".mobile-nav a").forEach((link) => {
+      link.addEventListener("click", () => closeMenu(false));
     });
 
     const openSearch = () => {
@@ -2737,7 +2791,7 @@
 
     document.onkeydown = (event) => {
       if (event.key === "Escape") {
-        closeMenu();
+        closeMenu(true);
         closeSearch();
       }
     };
@@ -2753,6 +2807,12 @@
   function render(lang) {
     const text = copy[lang] || copy.th;
     document.documentElement.lang = languageMeta[lang]?.htmlLang || "th";
+    if (shellOnly) {
+      shell.innerHTML = `${renderHeader(text, lang)}${renderSearch(text)}`;
+      if (footerShell) footerShell.innerHTML = renderFooter(text);
+      wireEvents(text, lang);
+      return;
+    }
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
     shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
@@ -2786,6 +2846,6 @@
 
   loadNotoFonts();
   const savedLanguage = localStorage.getItem("as-site-language");
-  render(languageMeta[savedLanguage] ? savedLanguage : "th");
+  const defaultLanguage = languageMeta[body.dataset.defaultLanguage] ? body.dataset.defaultLanguage : "th";
+  render(languageMeta[savedLanguage] ? savedLanguage : defaultLanguage);
 })();
-
