@@ -1672,3 +1672,112 @@
 .admin-table table {
   color: #eaf0fb;
 }
+
+/* Page-specific commerce controls that sit below the shared site navigation. */
+.commerce-context-bar {
+  position: absolute;
+  top: 94px;
+  right: 0;
+  left: 0;
+  z-index: 70;
+  min-height: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(112, 200, 255, 0.2);
+  background: rgba(5, 16, 31, 0.88);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.commerce-context-inner {
+  width: min(1460px, calc(100vw - 48px));
+  min-height: 48px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.commerce-context-bar .commerce-subnav {
+  min-width: 0;
+  min-height: 48px;
+  justify-content: flex-start;
+  gap: clamp(16px, 2.4vw, 38px);
+  padding: 0 2px;
+  scrollbar-width: none;
+}
+
+.commerce-context-bar .commerce-subnav::-webkit-scrollbar {
+  display: none;
+}
+
+.commerce-context-bar .commerce-subnav a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  color: rgba(234, 240, 251, 0.82);
+  text-shadow: none;
+}
+
+.commerce-context-bar .commerce-subnav a:hover,
+.commerce-context-bar .commerce-subnav a:focus-visible,
+.commerce-context-bar .commerce-subnav a.active {
+  color: #ffffff;
+}
+
+.commerce-context-bar .commerce-subnav a::after {
+  bottom: 5px;
+  background: linear-gradient(90deg, var(--shop-blue), var(--shop-aqua));
+}
+
+.commerce-context-bar .commerce-actions {
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.commerce-context-bar .commerce-icon-button,
+.commerce-context-bar .commerce-cart-button {
+  width: 38px;
+  height: 38px;
+  color: #eaf0fb;
+  border-color: rgba(112, 200, 255, 0.24);
+  background: rgba(112, 200, 255, 0.1);
+  box-shadow: none;
+}
+
+.commerce-context-bar .commerce-cart-button span {
+  top: -3px;
+  right: -5px;
+  min-width: 19px;
+  height: 19px;
+  color: #06101d;
+  background: linear-gradient(135deg, var(--shop-blue), var(--shop-aqua));
+  font-size: 0.68rem;
+}
+
+@media (max-width: 760px) {
+  .commerce-context-bar {
+    top: 88px;
+  }
+
+  .commerce-context-inner {
+    width: min(100vw - 28px, 620px);
+    gap: 10px;
+  }
+
+  .commerce-context-bar .commerce-subnav {
+    gap: 20px;
+    padding: 0;
+  }
+
+  .commerce-context-bar .commerce-actions {
+    gap: 6px;
+  }
+
+  .commerce-context-bar .commerce-icon-button,
+  .commerce-context-bar .commerce-cart-button {
+    width: 36px;
+    height: 36px;
+  }
+}

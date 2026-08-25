@@ -155,7 +155,7 @@
 
   const form = document.getElementById("memberForm");
   const status = document.getElementById("memberStatus");
-  const languageSelect = document.getElementById("memberLanguageSelect");
+  const languageSelect = document.getElementById("languageSelect");
   const preferredLanguage = document.getElementById("preferred_language");
   const renderApiOrigin = "https://arotec-web.onrender.com";
   let currentLang = "th";
@@ -163,6 +163,15 @@
   function getSavedLanguage() {
     const saved = localStorage.getItem("as-site-language");
     return languageMeta[saved] ? saved : "th";
+  }
+
+  function getLanguageFromEvent(event) {
+    const detail = event?.detail;
+    const requested = typeof detail === "string"
+      ? detail
+      : detail?.language || detail?.lang || event?.target?.value;
+    if (requested === "zh-Hant") return "zh";
+    return languageMeta[requested] ? requested : getSavedLanguage();
   }
 
   function setStatus(message, isError = false) {
@@ -226,12 +235,16 @@
 
   renderLanguage(getSavedLanguage(), true);
 
-  languageSelect?.addEventListener("change", (event) => {
-    const nextLang = event.target.value;
+  function handleLanguageChange(event) {
+    const nextLang = getLanguageFromEvent(event);
     localStorage.setItem("as-site-language", nextLang);
     setStatus("");
     renderLanguage(nextLang, true);
-  });
+  }
+
+  languageSelect?.addEventListener("change", handleLanguageChange);
+  document.addEventListener("arotec:languagechange", handleLanguageChange);
+  window.addEventListener("arotec:languagechange", handleLanguageChange);
 
   if (!form || !status) return;
 

@@ -10,24 +10,23 @@
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     <link rel="stylesheet" href="../assets/css/customized-commerce.min.css">
     <link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715">
+    <link rel="stylesheet" href="../assets/css/site-navigation.min.css?v=20260825-unified-main-menu-v37">
   </head>
-  <body class="commerce-page">
+  <body class="commerce-page" data-page="customized" data-nav-active="customized" data-root="../" data-default-language="th" data-shell-only>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="commerce-header">
-      <div class="commerce-header-inner">
-        <a class="brand" href="../index.html" aria-label="Arotec home">
-          <img class="brand-logo" src="../assets/images/arotec-scientist-logo.png" width="250" height="229" alt="Arotec Scientist" decoding="async">
-        </a>
-        <nav class="commerce-nav" aria-label="Primary navigation">
-          <a class="active" href="customized.html">Customized for you</a>
-          <a href="applied-solutions.html">Applied Solutions</a>
-          <a href="products.html">Applied Products</a>
-          <a href="platform.html">Platform</a>
-          <a href="who-we-are.html">Who We Are</a>
-          <a href="insights.html">Insights</a>
-          <a href="partners.html">Partners</a>
-          <a href="join-us.html">Join Us</a>
+    <div id="site-shell"></div>
+
+    <div class="commerce-context-bar">
+      <div class="commerce-context-inner">
+        <nav class="commerce-subnav" aria-label="Customized categories">
+          <a href="#focus">Our Focus</a>
+          <a class="active" href="#formula">Neuro-Cosmetics</a>
+          <a href="#learn">Learn / New In</a>
+          <a href="#admin">B2B</a>
+          <a href="#products">Best Sellers</a>
+          <a href="#products">Shop by Lifestyles</a>
+          <a href="#formula">Shop by Concerns</a>
         </nav>
         <div class="commerce-actions">
           <button class="commerce-icon-button" type="button" data-open-admin aria-label="Admin">
@@ -39,16 +38,7 @@
           </button>
         </div>
       </div>
-      <nav class="commerce-subnav" aria-label="Customized categories">
-        <a href="#focus">Our Focus</a>
-        <a class="active" href="#formula">Neuro-Cosmetics</a>
-        <a href="#learn">Learn / New In</a>
-        <a href="#admin">B2B</a>
-        <a href="#products">Best Sellers</a>
-        <a href="#products">Shop by Lifestyles</a>
-        <a href="#formula">Shop by Concerns</a>
-      </nav>
-    </header>
+    </div>
 
     <main id="main">
       <section class="commerce-hero" id="focus">
@@ -240,7 +230,7 @@
       </form>
     </div>
 
+    <script src="../assets/js/site.min.js?v=20260825-unified-main-menu-v37" defer></script>
     <script src="../assets/js/customized-commerce.min.js" defer></script>
-    <script src="../assets/js/static-page-navigation.js" defer></script>
   </body>
 </html>
