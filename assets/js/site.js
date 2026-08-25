@@ -26,7 +26,7 @@
 
   const insightMenuItems = [
     { id: "exercise-beauty", label: "Exercise x Beauty", href: "pages/exercise-beauty.html" },
-    { id: "exercise-health", label: "Exercise x Health" },
+    { id: "exercise-health", label: "Exercise x Health", href: "pages/exercise-health.html" },
     { id: "sleep-beauty", label: "Sleep x Beauty" },
     { id: "sleep-health", label: "Sleep x Health" }
   ];
@@ -1507,12 +1507,12 @@
   }
 
   function activeClass(id) {
-    const activePageId = pageId === "exercise-beauty" ? "insights" : pageId;
+    const activePageId = ["exercise-beauty", "exercise-health"].includes(pageId) ? "insights" : pageId;
     return id === activePageId ? " active" : "";
   }
 
   function activeAria(id) {
-    const activePageId = pageId === "exercise-beauty" ? "insights" : pageId;
+    const activePageId = ["exercise-beauty", "exercise-health"].includes(pageId) ? "insights" : pageId;
     return id === activePageId ? ' aria-current="page"' : "";
   }
 
