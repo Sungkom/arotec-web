@@ -1,6 +1,11 @@
 (() => {
   const body = document.body;
   const pageId = body.dataset.page || "home";
+  const activeNavId = body.dataset.navActive || (["exercise-beauty", "exercise-health"].includes(pageId) ? "insights" : pageId);
+  const headerClass = (body.dataset.headerClass || "")
+    .split(/\s+/)
+    .filter((className) => /^[A-Za-z0-9_-]+$/.test(className))
+    .join(" ");
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
   const footerShell = document.getElementById("site-footer-shell");
@@ -1507,13 +1512,11 @@
   }
 
   function activeClass(id) {
-    const activePageId = ["exercise-beauty", "exercise-health"].includes(pageId) ? "insights" : pageId;
-    return id === activePageId ? " active" : "";
+    return id === activeNavId ? " active" : "";
   }
 
   function activeAria(id) {
-    const activePageId = ["exercise-beauty", "exercise-health"].includes(pageId) ? "insights" : pageId;
-    return id === activePageId ? ' aria-current="page"' : "";
+    return id === activeNavId ? ' aria-current="page"' : "";
   }
 
   function submenuLinks(items, page, className) {
@@ -1550,7 +1553,7 @@
       .join("");
 
     return `
-      <header class="site-header">
+      <header class="site-header${headerClass ? ` ${headerClass}` : ""}">
         <div class="header-inner">
           <a class="brand" href="${routeHref("home")}" aria-label="Arotec home">
             <img class="brand-logo" src="${asset("arotec-scientist-logo.png")}" width="250" height="229" alt="Arotec Scientist" decoding="async">
@@ -1558,7 +1561,7 @@
           <nav class="desktop-nav" aria-label="Primary navigation">${navLinks(text)}</nav>
           <div class="header-actions">
             <select class="language-select" id="languageSelect" aria-label="Language">${options}</select>
-            <a class="pill-button contact-pill" href="${routeHref("contact")}">${text.nav.contact}</a>
+            <a class="pill-button contact-pill${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
             <button class="circle-button" id="searchButton" type="button" title="${text.common.search}" aria-label="${text.common.search}">${icons.search}</button>
             <button class="circle-button menu-toggle" id="menuToggle" type="button" title="${text.common.openMenu}" aria-label="${text.common.openMenu}" aria-controls="mobilePanel" aria-expanded="false">${icons.menu}</button>
           </div>
@@ -2733,6 +2736,7 @@
     localStorage.setItem("as-site-language", lang);
     body.classList.remove("menu-open", "search-open");
     render(lang);
+    document.dispatchEvent(new CustomEvent("arotec:languagechange", { detail: { lang } }));
   }
 
   function wireEvents(text, lang) {
