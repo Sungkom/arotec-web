@@ -204,6 +204,10 @@
   transform: translateX(2px);
 }
 
+#site-shell .content-card[id] {
+  scroll-margin-top: 112px;
+}
+
 #site-shell .header-actions {
   display: flex;
   gap: 10px;
