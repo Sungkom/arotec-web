@@ -29,6 +29,12 @@
     { id: "contact", path: "pages/members.html", nav: false }
   ];
 
+  const appliedMenuItems = [
+    { id: "sensory-strategies", label: "Sensory Strategies" },
+    { id: "synesthetic-flavors", label: "Synesthetic Flavors" },
+    { id: "bio-responsive-scents", label: "Bio-Responsive Scents" },
+    { id: "health-wellness-scented-supplements", label: "Health & Wellness : Scented Supplements" }
+  ];
   const insightMenuItems = [
     { id: "exercise-beauty", label: "Exercise x Beauty", href: "pages/exercise-beauty.html" },
     { id: "exercise-health", label: "Exercise x Health", href: "pages/exercise-health.html" },
@@ -1315,7 +1321,7 @@
         { title: "Sensory Strategies", text: "Programs that use scent, taste, texture, sound and environment to guide daily wellness behavior.", image: "science-platform-1.jpg" },
         { title: "Synesthetic Flavors", text: "Flavor systems designed to connect taste, aroma, color and emotion into memorable wellness experiences.", image: "science-platform-5.jpg" },
         { title: "Bio-Responsive Scents", text: "Scent experiences mapped to mood, recovery, focus and sensory feedback.", image: "science-platform-2.jpg" },
-        { title: "Health & Wellness", text: "Integrated routines and product concepts that support energy, balance and long-term well-being.", image: "hero-slide-2.jpg" }
+        { title: "Health & Wellness : Scented Supplements", text: "Integrated routines and product concepts that support energy, balance and long-term well-being.", image: "hero-slide-2.jpg" }
       ]
     },
     ja: {
@@ -1491,7 +1497,10 @@
       stats: page.stats?.map((stat, index) => index === 0 ? { ...stat, value: "4" } : stat) || [],
       cardsTitle: solution.cardsTitle,
       cardsLead: solution.cardsLead,
-      cards: solution.items
+      cards: solution.items.map((item, index) => ({
+        ...item,
+        id: appliedMenuItems[index]?.id
+      }))
     };
   }
 
@@ -1529,11 +1538,13 @@
     return routes
       .filter((route) => route.nav)
       .map((route) => {
-        const dropdown = route.id === "insights"
-          ? { items: insightMenuItems, page: "insights", label: "Insight topics" }
-          : route.id === "platform"
-            ? { items: platformMenuItems, page: "platform", label: "Platform modules" }
-            : null;
+        const dropdown = route.id === "applied"
+          ? { items: appliedMenuItems, page: "applied-solutions", label: "Applied solution areas" }
+          : route.id === "insights"
+            ? { items: insightMenuItems, page: "insights", label: "Insight topics" }
+            : route.id === "platform"
+              ? { items: platformMenuItems, page: "platform", label: "Platform modules" }
+              : null;
         const link = `<a class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
         if (!dropdown) return link;
         if (mobile) {
@@ -1801,9 +1812,10 @@
   }
 
   function renderContentCard(card, text) {
+    const id = card.id ? ` id="${card.id}"` : "";
     if (card.image) {
       return `
-        <article class="content-card image-content-card" style="--card-image:url('${asset(card.image)}')">
+        <article class="content-card image-content-card"${id} style="--card-image:url('${asset(card.image)}')">
           <h3>${card.title}</h3>
           <p>${card.text}</p>
           <a class="inline-link" href="${routeHref("contact")}">${text.common.learnMore} ${icons.arrow}</a>
@@ -1812,7 +1824,7 @@
     }
 
     return `
-      <article class="content-card">
+      <article class="content-card"${id}>
         <span class="orb-icon" aria-hidden="true">${icons.atom}</span>
         <h3>${card.title}</h3>
         <p>${card.text}</p>
@@ -2802,10 +2814,17 @@
   }
 
   function scrollToCurrentHash() {
-    if (pageId !== "home" || !window.location.hash) return;
-    const target = document.getElementById(window.location.hash.slice(1));
+    const rawId = window.location.hash.slice(1);
+    if (!rawId) return;
+    let targetId = rawId;
+    try {
+      targetId = decodeURIComponent(rawId);
+    } catch {
+      // Keep the raw fragment when it is not valid URI-encoded text.
+    }
+    const target = document.getElementById(targetId);
     if (!target) return;
-    window.requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    window.requestAnimationFrame(() => target.scrollIntoView({ block: "start", behavior: "instant" }));
   }
 
   function render(lang) {
@@ -2820,13 +2839,13 @@
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
     shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
     wireEvents(text, lang);
+    scrollToCurrentHash();
     setupHeroSlideshow();
     setupHeroParallax();
     setupPlatformSliders();
     setupWellbeingMobileScale();
     setupSectionReveals();
     setupScrollStorytelling();
-    scrollToCurrentHash();
   }
 
   function loadNotoFonts() {
