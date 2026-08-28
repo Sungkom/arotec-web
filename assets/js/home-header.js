@@ -7,18 +7,28 @@
   let lastScrollY = Math.max(0, window.scrollY || 0);
   let frame = 0;
 
-  const alignHeroCopyToCustomizedMenu = () => {
+  const preserveLegacyHeroCopyAlignment = () => {
     const heroShell = document.querySelector(".hero .section-shell");
-    const customizedLink = document.querySelector('.desktop-nav .nav-link[href*="customized"]');
 
-    if (!heroShell || !customizedLink || window.innerWidth <= 760) {
+    if (!heroShell || window.innerWidth <= 760) {
       body.style.removeProperty("--home-hero-copy-offset");
       return;
     }
 
+    // The original one-row header used a 1168px grid, a 118px logo column,
+    // and a 22px gap before Customized for you. Keep that anchor stable so
+    // rearranging the new menu never changes the legacy hero copy or dots.
+    if (window.innerWidth <= 1060) {
+      body.style.setProperty("--home-hero-copy-offset", "0px");
+      return;
+    }
+
+    const layoutWidth = document.documentElement.clientWidth;
+    const legacyHeaderWidth = Math.min(1168, Math.max(0, layoutWidth - 40));
+    const legacyHeaderLeft = Math.max(0, (layoutWidth - legacyHeaderWidth) / 2);
+    const legacyCustomizedLeft = legacyHeaderLeft + 118 + 22;
     const shellLeft = heroShell.getBoundingClientRect().left;
-    const linkLeft = customizedLink.getBoundingClientRect().left;
-    const offset = Math.max(0, Math.round(linkLeft - shellLeft));
+    const offset = Math.max(0, Math.round(legacyCustomizedLeft - shellLeft));
     body.style.setProperty("--home-hero-copy-offset", `${offset}px`);
   };
 
@@ -37,7 +47,7 @@
     }
 
     lastScrollY = currentScrollY;
-    alignHeroCopyToCustomizedMenu();
+    preserveLegacyHeroCopyAlignment();
   };
 
   const onScroll = () => {
@@ -47,11 +57,5 @@
   updateHeader();
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll, { passive: true });
-  window.addEventListener("load", alignHeroCopyToCustomizedMenu, { once: true });
-
-  const shell = document.getElementById("site-shell");
-  if (shell) {
-    new MutationObserver(() => window.requestAnimationFrame(alignHeroCopyToCustomizedMenu))
-      .observe(shell, { childList: true, subtree: true });
-  }
+  window.addEventListener("load", preserveLegacyHeroCopyAlignment, { once: true });
 })();

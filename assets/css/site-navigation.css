@@ -1,11 +1,27 @@
 /* Canonical Arotec navigation shared by index.html and every content page. */
+body[data-page="home"] {
+  --arotec-home-frame: min(1248px, calc(80vw - 57.6px));
+}
+
 #site-shell {
-  --arotec-nav-container: min(1168px, calc(100vw - 40px));
+  --arotec-nav-container: min(1560px, calc(100vw - 72px));
   --arotec-nav-ink: #113568;
   --arotec-nav-blue: #0b63c7;
   --arotec-nav-paper: #ffffff;
-  --arotec-nav-line: rgba(17, 53, 104, 0.14);
+  --arotec-nav-plum: #321273;
+  --arotec-nav-line: rgba(50, 18, 115, 0.28);
   --arotec-nav-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+  --arotec-utility-height: 28.56px;
+  --arotec-utility-control-height: 24px;
+  --arotec-main-height: 60px;
+  --arotec-brand-width: 80px;
+  --arotec-brand-height: 54px;
+  --arotec-logo-width: 76px;
+  --arotec-logo-height: 47px;
+  --arotec-main-font-size: clamp(0.648rem, 0.6336vw, 0.72rem);
+  --arotec-utility-font-size: clamp(0.564rem, 0.5472vw, 0.648rem);
+  --arotec-main-gap: clamp(14px, 1.29vw, 25px);
+  --arotec-utility-gap: clamp(13px, 1.2vw, 24px);
   color: var(--arotec-nav-ink);
   font-family: "Noto Sans", "Noto Sans Thai", "Noto Sans TC", "Noto Sans JP", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
@@ -40,32 +56,154 @@
 #site-shell > .site-header {
   z-index: 900;
   width: 100%;
-  color: var(--arotec-nav-ink) !important;
-  border-bottom: 1px solid var(--arotec-nav-line) !important;
-  background: rgba(255, 255, 255, 0.97) !important;
-  box-shadow: 0 10px 30px rgba(17, 53, 104, 0.1) !important;
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  overflow: visible;
+  color: var(--arotec-nav-paper) !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body[data-page="home"] #site-shell {
+  --arotec-utility-height: 30.6px;
+  --arotec-main-height: 80px;
+  --arotec-brand-width: 106px;
+  --arotec-brand-height: 80px;
+  --arotec-logo-width: 99px;
+  --arotec-logo-height: 61px;
+  --arotec-main-font-size: clamp(0.756rem, 0.864vw, 1.044rem);
+  --arotec-utility-font-size: clamp(0.66rem, 0.72vw, 0.864rem);
+  --arotec-main-gap: clamp(18px, 1.26vw, 24px);
+  --arotec-utility-gap: clamp(19px, 1.32vw, 25px);
+}
+
+#site-shell .header-utility {
+  position: relative;
+  z-index: 2;
+  height: var(--arotec-utility-height);
+  min-height: var(--arotec-utility-height);
+  overflow: visible;
+  background: var(--arotec-nav-plum);
+}
+
+#site-shell .header-utility-inner {
+  width: var(--arotec-nav-container);
+  height: var(--arotec-utility-height);
+  min-height: 0;
+  display: flex;
+  gap: clamp(11px, 0.93vw, 18px);
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+#site-shell .utility-nav,
+#site-shell .utility-actions {
+  display: flex;
+  min-height: 0;
+  align-items: center;
+}
+
+#site-shell .utility-nav {
+  gap: var(--arotec-utility-gap);
+}
+
+#site-shell .utility-actions {
+  flex: 0 0 auto;
+  gap: 7px;
+}
+
+body[data-page="home"] #site-shell .header-utility-inner {
+  width: var(--arotec-home-frame);
+  gap: clamp(19px, 1.32vw, 25px);
+}
+
+body[data-page="home"] #site-shell .utility-actions {
+  gap: 12px;
+}
+
+#site-shell .header-main {
+  position: relative;
+  z-index: 1;
+  min-height: var(--arotec-main-height);
+  overflow: visible;
+  border-bottom: 1px solid var(--arotec-nav-line);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+  transition: background-color 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+}
+
+body[data-page="home"].home-header-scroll-active #site-shell .header-main {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 14px 34px rgba(30, 12, 70, 0.14);
+  backdrop-filter: blur(18px) saturate(118%);
+  -webkit-backdrop-filter: blur(18px) saturate(118%);
+}
+
+body[data-page="home"].home-header-scroll-active #site-shell .desktop-nav .nav-link {
+  color: var(--arotec-nav-plum) !important;
+  text-shadow: none !important;
+}
+
+body[data-page="home"].home-header-scroll-active #site-shell .desktop-nav .nav-link:hover,
+body[data-page="home"].home-header-scroll-active #site-shell .desktop-nav .nav-link:focus-visible,
+body[data-page="home"].home-header-scroll-active #site-shell .desktop-nav .nav-link.active {
+  color: var(--arotec-nav-blue) !important;
+}
+
+body[data-page="home"].home-header-scroll-active #site-shell .desktop-nav .nav-link::after {
+  background: linear-gradient(90deg, var(--arotec-nav-blue), var(--arotec-nav-plum)) !important;
+  box-shadow: none !important;
+}
+
+body[data-page="home"].home-header-scroll-active #site-shell .header-actions .circle-button {
+  color: var(--arotec-nav-plum) !important;
+  border-color: rgba(50, 18, 115, 0.28) !important;
+  background: transparent !important;
+}
+
+body:not([data-page="home"]) #site-shell .desktop-nav .nav-link {
+  color: var(--arotec-nav-plum) !important;
+  text-shadow: none !important;
+}
+
+body:not([data-page="home"]) #site-shell .desktop-nav .nav-link:hover,
+body:not([data-page="home"]) #site-shell .desktop-nav .nav-link:focus-visible,
+body:not([data-page="home"]) #site-shell .desktop-nav .nav-link.active {
+  color: var(--arotec-nav-blue) !important;
+}
+
+body:not([data-page="home"]) #site-shell .desktop-nav .nav-link::after {
+  background: linear-gradient(90deg, var(--arotec-nav-blue), var(--arotec-nav-plum)) !important;
+  box-shadow: none !important;
+}
+
+body:not([data-page="home"]) #site-shell .header-actions .circle-button {
+  color: var(--arotec-nav-plum) !important;
+  border-color: rgba(50, 18, 115, 0.28) !important;
+  background: transparent !important;
 }
 
 #site-shell .header-inner {
   width: var(--arotec-nav-container);
-  min-height: 94px;
+  min-height: var(--arotec-main-height);
   display: flex;
-  gap: 22px;
+  gap: clamp(13px, 1.2vw, 23px);
   align-items: center;
   margin: 0 auto;
 }
 
 #site-shell .brand {
-  width: 118px !important;
-  min-width: 118px !important;
-  min-height: 76px !important;
+  width: var(--arotec-brand-width) !important;
+  min-width: var(--arotec-brand-width) !important;
+  min-height: var(--arotec-brand-height) !important;
   display: inline-flex;
   align-self: center !important;
   align-items: center;
   justify-content: center !important;
-  padding: 6px 0 !important;
+  padding: 2px 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -73,10 +211,10 @@
 }
 
 #site-shell .brand-logo {
-  width: 94px !important;
-  height: 68px !important;
+  width: var(--arotec-logo-width) !important;
+  height: var(--arotec-logo-height) !important;
   display: block;
-  aspect-ratio: 250 / 229 !important;
+  aspect-ratio: 1092 / 680 !important;
   padding: 0 !important;
   object-fit: contain !important;
   object-position: center !important;
@@ -86,22 +224,48 @@
 #site-shell .desktop-nav {
   display: flex;
   flex: 1;
-  gap: clamp(8px, 1.15vw, 18px);
+  gap: var(--arotec-main-gap);
   align-items: center;
   justify-content: center;
 }
 
+body[data-page="home"] #site-shell .header-inner {
+  width: var(--arotec-home-frame);
+  gap: 0;
+}
+
+body[data-page="home"] #site-shell > main > .hero > .section-shell {
+  width: var(--arotec-home-frame);
+  margin-inline: auto;
+}
+
+body[data-page="home"] #site-shell .desktop-nav {
+  justify-content: flex-end;
+}
+
+body[data-page="home"] #site-shell .header-actions {
+  margin-left: clamp(18px, 1.26vw, 24px);
+}
+
 #site-shell .nav-link {
   position: relative;
-  min-height: 40px;
+  min-height: 24px;
   display: inline-flex;
   align-items: center;
-  color: var(--arotec-nav-ink) !important;
-  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
-  font-weight: 680;
+  color: var(--arotec-nav-plum) !important;
+  font-size: var(--arotec-main-font-size);
+  font-weight: 450;
   line-height: 1.25;
   text-shadow: none !important;
   white-space: nowrap;
+}
+
+#site-shell .utility-nav .nav-link {
+  min-height: var(--arotec-utility-height);
+  font-size: var(--arotec-utility-font-size);
+  font-weight: 500;
+  color: var(--arotec-nav-paper) !important;
+  text-shadow: none !important;
 }
 
 #site-shell .nav-link::after {
@@ -114,7 +278,7 @@
   transform: scaleX(0);
   transform-origin: left;
   background: linear-gradient(90deg, var(--arotec-nav-blue), var(--arotec-nav-ink)) !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.54) !important;
   transition: transform 180ms ease;
 }
 
@@ -122,6 +286,17 @@
 #site-shell .nav-link:focus-visible,
 #site-shell .nav-link.active {
   color: var(--arotec-nav-blue) !important;
+}
+
+#site-shell .utility-nav .nav-link::after {
+  background: linear-gradient(90deg, #ffffff, #9ddcff) !important;
+  box-shadow: 0 2px 12px rgba(68, 178, 255, 0.34) !important;
+}
+
+#site-shell .utility-nav .nav-link:hover,
+#site-shell .utility-nav .nav-link:focus-visible,
+#site-shell .utility-nav .nav-link.active {
+  color: #d7efff !important;
 }
 
 #site-shell .nav-link:hover::after,
@@ -164,7 +339,7 @@
   opacity: 0;
   border: 1px solid rgba(17, 53, 104, 0.14);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 18px 44px rgba(17, 53, 104, 0.18);
   transform: translate(-50%, -8px);
   transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
@@ -189,10 +364,12 @@
   padding: 7px 10px;
   border-radius: 8px;
   color: var(--arotec-nav-ink) !important;
-  font-size: 0.78rem;
-  font-weight: 650;
-  line-height: 1.3;
+  font-family: inherit;
+  font-size: var(--arotec-main-font-size);
+  font-weight: 450;
+  line-height: 1.25;
   white-space: nowrap;
+  text-shadow: none !important;
   transition: color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
@@ -205,28 +382,39 @@
 }
 
 #site-shell .content-card[id] {
-  scroll-margin-top: 112px;
+  scroll-margin-top: calc(var(--arotec-utility-height) + var(--arotec-main-height) + 18px);
 }
 
 #site-shell .header-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
 }
 
 #site-shell .language-select {
-  width: 78px;
-  min-height: 46px;
-  border: 1px solid rgba(17, 53, 104, 0.2) !important;
+  width: 70px;
+  height: var(--arotec-utility-control-height);
+  min-height: var(--arotec-utility-control-height);
+  max-height: var(--arotec-utility-control-height);
+  flex: 0 0 auto;
+  padding-block: 0;
+  border: 1px solid rgba(255, 255, 255, 0.76) !important;
   border-radius: 999px;
-  padding: 9px 10px;
-  color: var(--arotec-nav-ink) !important;
-  background: rgba(255, 255, 255, 0.84) !important;
+  padding: 3px 7px;
+  color: var(--arotec-nav-plum) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
   box-shadow: none !important;
+  font-size: 0.624rem;
 }
 
 #site-shell .language-select option {
   color: #08111e;
+}
+
+body[data-page="home"] #site-shell .language-select {
+  width: 61.6px;
+  padding-inline: 7px;
+  font-size: 0.72rem;
 }
 
 #site-shell .pill-button {
@@ -236,10 +424,10 @@
   align-items: center;
   justify-content: center;
   padding: 0 22px;
-  border: 1px solid rgba(17, 53, 104, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.78) !important;
   border-radius: 999px;
-  color: var(--arotec-nav-ink) !important;
-  background: rgba(255, 255, 255, 0.84) !important;
+  color: var(--arotec-nav-plum) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
   box-shadow: none !important;
   font-size: 0.92rem;
   font-weight: 760;
@@ -249,28 +437,54 @@
 #site-shell .pill-button:hover,
 #site-shell .pill-button:focus-visible,
 #site-shell .contact-pill.active {
-  color: var(--arotec-nav-blue) !important;
-  border-color: rgba(11, 99, 199, 0.38) !important;
+  color: #171032 !important;
+  border-color: #ffffff !important;
   transform: translateY(-2px);
 }
 
+#site-shell .utility-actions .contact-pill {
+  height: var(--arotec-utility-control-height);
+  min-height: var(--arotec-utility-control-height);
+  max-height: var(--arotec-utility-control-height);
+  flex: 0 0 auto;
+  padding: 0 11px;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+body[data-page="home"] #site-shell .utility-actions .contact-pill {
+  padding-inline: 14px;
+  font-size: 0.72rem;
+  font-weight: 520;
+}
+
 #site-shell .circle-button {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
   display: inline-grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(17, 53, 104, 0.2) !important;
+  border: 1px solid rgba(17, 53, 104, 0.3) !important;
   border-radius: 999px;
   color: var(--arotec-nav-ink) !important;
-  background: rgba(255, 255, 255, 0.84) !important;
+  background: rgba(255, 255, 255, 0.46) !important;
   box-shadow: none !important;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+#site-shell .circle-button:hover,
+#site-shell .circle-button:focus-visible {
+  border-color: rgba(11, 99, 199, 0.52) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  transform: translateY(-2px);
 }
 
 #site-shell .icon-svg {
-  width: 19px;
-  height: 19px;
+  width: 11px;
+  height: 11px;
   flex: 0 0 auto;
   fill: none;
   stroke: currentColor;
@@ -280,7 +494,7 @@
 }
 
 #site-shell :is(.nav-link, .nav-sublink, .language-select, .circle-button, .pill-button):focus-visible {
-  outline: 2px solid rgba(11, 99, 199, 0.42);
+  outline: 2px solid rgba(157, 220, 255, 0.82);
   outline-offset: 3px;
 }
 
@@ -368,9 +582,10 @@ body.menu-open #site-shell .mobile-panel {
   padding: 6px 10px;
   border-radius: 7px;
   color: rgba(255, 255, 255, 0.76) !important;
-  font-size: 0.78rem;
-  font-weight: 620;
-  line-height: 1.3;
+  font-family: inherit;
+  font-size: var(--arotec-main-font-size);
+  font-weight: 450;
+  line-height: 1.25;
 }
 
 #site-shell .mobile-nav-sublink:hover,
@@ -393,6 +608,11 @@ body.menu-open #site-shell .mobile-panel {
   border-radius: 999px;
   color: #ffffff;
   background: rgba(255, 255, 255, 0.06);
+  font-size: 1.2rem;
+}
+
+#site-shell .mobile-panel > .pill-button {
+  font-size: 1.104rem;
 }
 
 #site-shell .language-chip.active {
@@ -426,7 +646,7 @@ body.search-open {
   z-index: 1100;
   display: none;
   place-items: start center;
-  padding: 92px 20px 30px;
+  padding: calc(var(--arotec-utility-height) + var(--arotec-main-height) + 18px) 20px 30px;
   color: #eaf0fb;
   background: rgba(2, 6, 14, 0.76);
   backdrop-filter: blur(20px);
@@ -458,15 +678,23 @@ body.search-open #site-shell .search-modal {
   margin: 0;
   color: #ffffff;
   font-family: inherit;
-  font-size: 1.35rem;
+  font-size: 1.62rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
 #site-shell .search-head .circle-button {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.2) !important;
   background: rgba(255, 255, 255, 0.08) !important;
+}
+
+#site-shell .search-head .icon-svg {
+  width: 18px;
+  height: 18px;
 }
 
 #site-shell .search-input {
@@ -477,6 +705,7 @@ body.search-open #site-shell .search-modal {
   border-radius: 8px;
   color: #ffffff;
   background: rgba(255, 255, 255, 0.08);
+  font-size: 1.2rem;
 }
 
 #site-shell .search-input::placeholder {
@@ -506,35 +735,85 @@ body.search-open #site-shell .search-modal {
 
 #site-shell .search-result strong {
   display: block;
+  font-size: 1.2rem;
 }
 
 #site-shell .search-result span,
 #site-shell .search-results p {
   color: #9fb0c9;
-  font-size: 0.9rem;
+  font-size: 1.08rem;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1280px) {
+  body[data-page="home"] {
+    --arotec-home-frame: min(944px, calc(80% - 38.4px));
+  }
+
+  #site-shell {
+    --arotec-nav-container: min(100% - 48px, 1180px);
+  }
+
+  body[data-page="home"] #site-shell {
+    --arotec-utility-height: 28.56px;
+    --arotec-main-height: 71px;
+    --arotec-brand-width: 90px;
+    --arotec-brand-height: 71px;
+    --arotec-logo-width: 87px;
+    --arotec-logo-height: 54px;
+    --arotec-main-font-size: 0.72rem;
+    --arotec-utility-font-size: 0.624rem;
+    --arotec-main-gap: 13px;
+    --arotec-utility-gap: 12px;
+  }
+
   #site-shell .desktop-nav {
-    gap: 10px;
+    gap: var(--arotec-main-gap);
   }
 
   #site-shell .nav-link {
-    font-size: 0.69rem;
+    font-size: var(--arotec-main-font-size);
+  }
+
+  #site-shell .utility-nav {
+    gap: var(--arotec-utility-gap);
+  }
+
+  #site-shell .utility-nav .nav-link {
+    font-size: var(--arotec-utility-font-size);
   }
 
   #site-shell .contact-pill {
-    padding-inline: 15px;
+    padding-inline: 9px;
   }
 }
 
 @media (max-width: 1060px) {
-  #site-shell .desktop-nav,
-  #site-shell .header-actions .contact-pill {
+  body[data-page="home"] {
+    --arotec-home-frame: min(1180px, calc(100vw - 48px));
+  }
+
+  #site-shell {
+    --arotec-main-height: 94px;
+    --arotec-brand-width: 132px;
+    --arotec-brand-height: 90px;
+    --arotec-logo-width: 126px;
+    --arotec-logo-height: 78px;
+  }
+
+  #site-shell .header-utility,
+  #site-shell .desktop-nav {
     display: none !important;
   }
 
+  #site-shell .header-main {
+    min-height: 94px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px) saturate(125%);
+    -webkit-backdrop-filter: blur(12px) saturate(125%);
+  }
+
   #site-shell .header-inner {
+    min-height: 94px;
     justify-content: space-between;
   }
 
@@ -542,14 +821,41 @@ body.search-open #site-shell .search-modal {
     margin-left: auto;
   }
 
+  #site-shell .circle-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  #site-shell .icon-svg {
+    width: 19px;
+    height: 19px;
+  }
+
   #site-shell .menu-toggle {
     display: inline-grid !important;
+  }
+
+  #site-shell .search-modal {
+    padding-top: 110px;
   }
 }
 
 @media (max-width: 760px) {
+  body[data-page="home"] #site-shell {
+    --arotec-main-height: 74px;
+    --arotec-brand-width: 88px;
+    --arotec-brand-height: 62px;
+    --arotec-logo-width: 84px;
+    --arotec-logo-height: 53px;
+  }
+
   #site-shell .header-inner {
     width: min(100% - 28px, var(--arotec-nav-container));
+    min-height: 74px;
+  }
+
+  #site-shell .header-main {
     min-height: 74px;
   }
 
@@ -560,14 +866,8 @@ body.search-open #site-shell .search-modal {
   }
 
   #site-shell .site-header .brand-logo {
-    width: 74px !important;
-    height: 54px !important;
-  }
-
-  #site-shell .language-select {
-    width: 66px;
-    min-height: 40px;
-    padding: 7px 8px;
+    width: 84px !important;
+    height: 53px !important;
   }
 
   #site-shell .circle-button {
@@ -578,6 +878,10 @@ body.search-open #site-shell .search-modal {
 }
 
 @media (max-width: 420px) {
+  body[data-page="home"] {
+    --arotec-home-frame: calc(100vw - 20px);
+  }
+
   #site-shell .header-inner {
     width: calc(100% - 20px);
     gap: 8px;
@@ -587,10 +891,6 @@ body.search-open #site-shell .search-modal {
     gap: 7px;
   }
 
-  #site-shell .language-select {
-    width: 60px;
-    font-size: 0.78rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
