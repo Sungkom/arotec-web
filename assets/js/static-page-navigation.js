@@ -12,6 +12,59 @@
     ["partners.html", "Partners"],
     ["join-us.html", "Join Us"],
   ];
+  const dropdownMenus = {
+    "Applied Solutions": {
+      ariaLabel: "Applied solution areas",
+      href: "applied-solutions.html",
+      items: [
+        ["sensory-strategies", "Sensory Strategies"],
+        ["synesthetic-flavors", "Synesthetic Flavors", "synesthetic-flavor.html"],
+        ["bio-responsive-scents", "Bio-Responsive Scents"],
+        ["health-wellness-scented-supplements", "Health & Wellness : Scented Supplements"],
+      ],
+    },
+    Insights: {
+      ariaLabel: "Insight topics",
+      href: "insights.html",
+      items: [
+        ["exercise-beauty", "Exercise x Beauty"],
+        ["exercise-health", "Exercise x Health", "exercise-health.html"],
+        ["sleep-beauty", "Sleep x Beauty"],
+        ["sleep-health", "Sleep x Health"],
+      ],
+    },
+    Platform: {
+      ariaLabel: "Platform modules",
+      href: "platform.html",
+      items: [
+        ["travion", "Travion™"],
+        ["meraxyl", "Meraxyl™"],
+        ["melacor", "Melacor™"],
+        ["cortiva", "Cortiva™"],
+        ["morphagen", "Morphagen™"],
+        ["chromagen", "Chromagen™"],
+        ["olfactiva", "Olfactiva™"],
+      ],
+    },
+  };
+  const dropdownLinks = (menu, className) => menu.items
+    .map(([id, label, href]) => `<a class="${className}" href="${href || `${menu.href}#${id}`}">${label}</a>`)
+    .join("");
+
+  const desktopNav = header.querySelector(".desktop-nav, .commerce-nav");
+  Object.entries(dropdownMenus).forEach(([label, menu]) => {
+    const desktopLink = Array.from(desktopNav?.children || [])
+      .find((item) => item.matches("a") && item.textContent.trim() === label);
+    if (!desktopLink) return;
+    const dropdown = document.createElement("div");
+    dropdown.className = "nav-dropdown";
+    desktopLink.before(dropdown);
+    desktopLink.classList.add("nav-dropdown-trigger");
+    desktopLink.setAttribute("aria-haspopup", "true");
+    desktopLink.insertAdjacentHTML("beforeend", '<span class="nav-dropdown-chevron" aria-hidden="true"></span>');
+    dropdown.append(desktopLink);
+    dropdown.insertAdjacentHTML("beforeend", `<div class="nav-submenu" aria-label="${menu.ariaLabel}">${dropdownLinks(menu, "nav-sublink")}</div>`);
+  });
 
   const isCommerce = header.classList.contains("commerce-header");
   let actions = header.querySelector(".header-actions, .commerce-actions");
@@ -48,7 +101,12 @@
       </button>
     </div>
     <nav class="mobile-nav">
-      ${links.map(([href, label]) => `<a class="nav-link" href="${href}">${label}</a>`).join("")}
+      ${links.map(([href, label]) => {
+        const menu = dropdownMenus[label];
+        return menu
+          ? `<div class="mobile-nav-group"><a class="nav-link nav-dropdown-trigger" href="${href}" aria-haspopup="true">${label}<span class="nav-dropdown-chevron" aria-hidden="true"></span></a><div class="mobile-nav-submenu" aria-label="${menu.ariaLabel}">${dropdownLinks(menu, "mobile-nav-sublink")}</div></div>`
+          : `<a class="nav-link" href="${href}">${label}</a>`;
+      }).join("")}
     </nav>
     <a class="pill-button" href="members.html">Get In touch</a>
   `;
