@@ -36,7 +36,7 @@
 
   const appliedMenuItems = [
     { id: "sensory-strategies", label: "Sensory Strategies" },
-    { id: "synesthetic-flavors", label: "Synesthetic Flavors" },
+    { id: "synesthetic-flavors", label: "Synesthetic Flavors", href: "pages/synesthetic-flavor.html" },
     { id: "bio-responsive-scents", label: "Bio-Responsive Scents" },
     { id: "health-wellness-scented-supplements", label: "Health & Wellness : Scented Supplements" }
   ];

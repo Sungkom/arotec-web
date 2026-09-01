@@ -1,6 +1,9 @@
 (() => {
   const body = document.body;
-  if (!body || body.dataset.page !== "home") return;
+  if (
+    !body ||
+    (body.dataset.page !== "home" && body.dataset.headerVariant !== "home")
+  ) return;
 
   const revealAfter = 84;
   const directionThreshold = 5;
