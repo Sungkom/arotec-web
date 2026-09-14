@@ -1,0 +1,140 @@
+/* Scientific foreground frames only. Atmospheric hero pictures, section
+   backgrounds, particle canvases, main elements and navigation stay in place.
+   The shared foreground helper resolves each frame's original viewport origin;
+   its translation is independent of existing reveal/parallax transforms. */
+@layer arotec-content-layout {
+  @media (min-width: 1200px) {
+    html body :is(
+      .exercise-beauty-content > section > .eb-shell:not(.hero-main),
+      .exercise-health-content > section > .eh-shell:not(.eh-hero-grid),
+      .shb-page main > .shb-section,
+      .shb-page .shb-closing > .shb-closing-inner,
+      .np-page main > section > .np-shell:not(.hero-grid),
+      .neuro-page main > section > .neuro-shell,
+      .neuro-page main > section > .infographic-scroll,
+      .neuro-page main > section > .barrier-stage-scroll,
+      .neuro-page main > section > .esf-stage-scroll,
+      .neuro-page main > section > .neurocosmetics-stage-scroll,
+      .sy-page main > .sy-dashboard,
+      .follicle-page main > .science-shell,
+      .follicle-page main > .final-cta > .science-shell,
+      .exposome-neo-body main > .ex-section:not(.ex-hero) > .ex-shell,
+      .nst-page main > .nst-section,
+      .nst-page main > .nst-disease-spectrum,
+      .stress-atc-page main > .story-section,
+      .homeostasis-page main > .science-panel,
+      .olf-page main > section:not(.hero),
+      .brain-skin-loop-page > .loop-heading,
+      .brain-skin-loop-page > .overlay-hint,
+      .sf-page .sf-multi-grid,
+      .sf-page .sf-equation__grid,
+      .sf-page .sf-offerings > .sf-container
+    ) {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+      box-sizing: border-box !important;
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+    }
+
+    /* Copy-only targets in mixed hero shells: never move their sibling
+       anatomy/portrait pictures or the shell that positions those pictures. */
+    html body :is(
+      .exercise-beauty-content .hero-main > .hero-copy,
+      .exercise-health-content .eh-hero-grid > .hero-copy,
+      .shb-page .shb-hero-grid > .shb-hero-copy,
+      .np-page .np-hero .hero-copy,
+      .nst-page .nst-hero > .nst-hero-copy,
+      .olf-page .hero > .hero-copy,
+      .follicle-page .hero-layout > .hero-copy,
+      .stress-atc-page .hero > .hero__copy,
+      .homeostasis-page .hero__inner > .hero__copy,
+      .sy-page .sy-hero__inner > .sy-hero__copy,
+      .exposome-neo-body .ex-hero-copy,
+      .exposome-neo-body .ex-hero-cards,
+      .exposome-neo-body .ex-personal-band
+    ) {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+    }
+
+    /* Keep the legacy copy's authored width caps: widening one of these
+       would shorten its section and resize the neighbouring background. */
+    html body :is(
+      .sf-page .sf-hero__copy,
+      .sf-page .sf-split > .sf-copy,
+      .sf-page .sf-memory__content,
+      .sf-page .sf-copy--wellbeing,
+      .sf-page .sf-copy--better,
+      .sf-page .sf-copy--emotion,
+      .sf-page .sf-partnership__heading,
+      .sf-page .sf-final-cta__copy
+    ) {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+    }
+
+    /* Aging's shell contains foreground diagram coordinates only. */
+    html body.aging-dynamics-body #cascade > .stage-shell {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+    }
+
+    html body.aging-dynamics-body #cascade > .stage-shell {
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+    }
+
+    /* Inset only the native diagram's scroll viewport, never rescale its
+       fixed coordinates. Preserve the original full-width white backdrop. */
+    html body.brain-skin-loop-page > .loop-panel {
+      background: #fff;
+    }
+    html body.brain-skin-loop-page .loop-panel > .loop-scroll {
+      width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+      margin-inline: var(--arotec-content-left, 150px) var(--arotec-content-right, 150px) !important;
+    }
+    html body.brain-skin-loop-page .loop-scroll > .loop-stage {
+      margin-inline: 0 !important;
+      translate: none !important;
+    }
+
+    /* The legacy flavor composition mixes two partnership text columns with
+       an atmospheric photograph. Shift only those foreground columns by the
+       same container-origin delta; keep their authored separation intact. */
+    html body.sf-page :is(
+      .sf-partnership__features,
+      .sf-partnership__approach,
+      .sf-final-cta .sf-values
+    ) {
+      translate: calc(var(--arotec-content-left, 150px) - (100vw - var(--sf-container)) / 2) 0 !important;
+    }
+    html body.sf-page .sf-final-cta .sf-values {
+      /* Keep the existing 43% copy rail and 25px gap, fitting the icon row
+         into the remaining space between the two foreground gutters. */
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px) - var(--sf-container) * .43 - 25px) !important;
+    }
+
+    /* Right-hand foreground groups use the opposite edge of the same frame.
+       Their mixed-layout grid and atmospheric photograph stay untouched. */
+    html body.sf-page .sf-indicator-row--wellbeing {
+      translate: calc((100vw - var(--sf-container)) / 2 - var(--arotec-content-right, 150px)) 0 !important;
+    }
+    html body.sf-page .sf-photo--partnership__analysis {
+      /* Reserve the source grid's 32% + 27% copy columns and 32px gap,
+         then 24px separation and 20px for the existing image rotation. */
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px) - var(--sf-container) * .59 - 76px) !important;
+      /* Rebase only the boxed inset's right edge from its unmoved photograph. */
+      right: calc(var(--arotec-content-right, 150px) + 16px - (100vw - var(--sf-container)) / 2 - max(-25px, (100vw - 1440px) / -2)) !important;
+      translate: none !important;
+    }
+  }
+
+  @media (min-width: 1241px) {
+    /* Reserve the original copy rail while the adjacent responsive sensory
+       diagram takes the narrower frame. This avoids changing section height
+       and shifting all later atmospheric photographs vertically. */
+    html body.sf-page .sf-multi-grid {
+      grid-template-columns: calc(var(--sf-container) * .4) minmax(0, 1fr) !important;
+    }
+  }
+}

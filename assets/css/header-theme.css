@@ -1,6 +1,6 @@
 /* Shared white navigation treatment for every Arotec page. */
 :root {
-  --header-surface: rgba(255, 255, 255, 0.97);
+  --header-surface: #ffffff;
   --header-ink: #113568;
   --header-line: rgba(17, 53, 104, 0.14);
 }
@@ -11,8 +11,8 @@
   border-bottom: 1px solid var(--header-line) !important;
   background: var(--header-surface) !important;
   box-shadow: 0 10px 30px rgba(17, 53, 104, 0.1) !important;
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .site-header .brand,
@@ -71,7 +71,7 @@
 .commerce-header .commerce-button {
   color: var(--header-ink) !important;
   border-color: rgba(17, 53, 104, 0.2) !important;
-  background: rgba(255, 255, 255, 0.84) !important;
+  background: #ffffff !important;
   box-shadow: none !important;
 }
 
@@ -128,5 +128,65 @@
   .commerce-header .brand-logo {
     width: 74px !important;
     height: 54px !important;
+  }
+}
+
+/* Compact shared footer: brand left, subscription and social links right. */
+.site-footer .footer-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.site-footer .footer-grid > .footer-col:last-child {
+  width: 100%;
+  max-width: 320px;
+  justify-self: end;
+}
+
+.site-footer .footer-brand {
+  margin: 0;
+}
+
+.site-footer .footer-brand .brand-logo {
+  width: auto;
+  height: 76px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.site-footer .newsletter {
+  margin: 0;
+}
+
+.site-footer .newsletter input {
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+.site-footer .social-row {
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.site-footer .footer-bottom {
+  gap: 8px 16px;
+  padding: 10px 0 14px;
+}
+
+@media (max-width: 480px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .site-footer .footer-brand .brand-logo {
+    height: 60px;
   }
 }

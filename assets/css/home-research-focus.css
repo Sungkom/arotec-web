@@ -1,0 +1,273 @@
+/* Lower homepage research cards, matched to the supplied 1706 × 959 reference. */
+/* The closed navigation drawer must not cast a shadow over the white artwork. */
+body[data-page="home"] #site-shell .mobile-panel[aria-hidden="true"] {
+  box-shadow: none;
+}
+
+@font-face {
+  font-family: "Research Focus Sans";
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body[data-page="home"] #research-focus {
+  --research-blue: #002b78;
+  position: relative;
+  display: block !important;
+  width: 100%;
+  min-height: 0 !important;
+  aspect-ratio: 1706 / 959;
+  padding: 0;
+  color: var(--research-blue);
+  background: #fff url("../images/research-focus-hands.jpg") center / 100% 100% no-repeat;
+  scroll-margin-top: 80px;
+}
+
+#research-focus .research-focus-heading {
+  position: absolute;
+  top: 7.55%;
+  inset-inline: 5%;
+  text-align: center;
+}
+
+#research-focus #research-focus-title {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto !important;
+  padding: 0 0 0.55vw;
+  color: var(--research-blue) !important;
+  font: 700 clamp(28px, 2.815vw, 58px) / 1.2 "Research Focus Sans", Arial, sans-serif !important;
+  letter-spacing: 0.062em !important;
+  text-transform: none;
+}
+
+#research-focus #research-focus-title::after {
+  content: "";
+  display: block;
+  width: 8vw;
+  height: 2px;
+  margin: 0.23vw auto 0;
+  background: #91e3ed;
+}
+
+#research-focus .research-focus-subtitle {
+  margin: 0 !important;
+  color: var(--research-blue) !important;
+  font: 400 clamp(25px, 2.815vw, 58px) / 1.25 "Research Focus Sans", Arial, sans-serif !important;
+  letter-spacing: 0.105em !important;
+}
+
+#research-focus .research-focus-tagline {
+  margin: 0.65vw 0 0 !important;
+  color: var(--research-blue) !important;
+  font: 600 clamp(10px, 0.821vw, 17px) / 1.5 "Research Focus Sans", Arial, sans-serif !important;
+  letter-spacing: 0.49em !important;
+}
+
+#research-focus .research-focus-navigation {
+  position: absolute;
+  inset-inline: 8.3%;
+  bottom: 5.9%;
+}
+
+#research-focus .research-focus-caption {
+  margin: 0 0 1vw !important;
+  color: var(--research-blue) !important;
+  text-align: center;
+  font: 600 clamp(11px, 0.88vw, 18px) / 1.25 "Research Focus Sans", Arial, sans-serif !important;
+  letter-spacing: 0.38em !important;
+}
+
+#research-focus .research-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.94vw 0.82vw;
+}
+
+#research-focus .research-focus-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45vw;
+  min-width: 0;
+  min-height: 4.34vw;
+  padding: 0.72vw 0.82vw 0.72vw 1.12vw;
+  border: 2px solid #214381;
+  border-radius: 10px;
+  color: var(--research-blue);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 7px rgba(27, 43, 70, 0.14);
+  text-decoration: none;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+#research-focus .research-focus-card-copy {
+  min-width: 0;
+}
+
+#research-focus .research-focus-label {
+  display: block;
+  margin-bottom: 0.3vw;
+  color: var(--research-blue);
+  font: 700 clamp(9px, 0.645vw, 13px) / 1.2 "Research Focus Sans", Arial, sans-serif !important;
+  letter-spacing: 0.18em !important;
+}
+
+#research-focus .research-focus-card h3 {
+  margin: 0 !important;
+  color: var(--research-blue) !important;
+  font: 400 clamp(10px, 1.055vw, 22px) / 1.15 "DM Sans", Arial, sans-serif !important;
+  letter-spacing: -0.05em !important;
+  text-wrap: nowrap;
+}
+
+#research-focus .research-focus-arrow {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.23vw;
+  height: 2.23vw;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--research-blue);
+}
+
+#research-focus .research-focus-arrow .ph {
+  color: inherit;
+  font-size: 1.4vw !important;
+}
+
+#research-focus .research-focus-card:hover {
+  background: #edf8fc;
+  box-shadow: 0 5px 12px rgba(0, 43, 120, 0.22);
+}
+
+#research-focus .research-focus-card:focus-visible {
+  outline: 3px solid var(--research-blue);
+  outline-offset: 4px;
+  background: #edf8fc;
+}
+
+@media (max-width: 1100px) {
+  body[data-page="home"] #research-focus {
+    aspect-ratio: auto;
+    padding: 36px 5% 40px;
+    background-size: 100% auto;
+    background-position: center 65px;
+  }
+
+  #research-focus .research-focus-heading {
+    position: relative;
+    inset: auto;
+  }
+
+  #research-focus #research-focus-title {
+    padding-bottom: 10px;
+    font-size: clamp(24px, 3.4vw, 36px) !important;
+  }
+
+  #research-focus #research-focus-title::after {
+    width: 90px;
+    margin-top: 12px;
+  }
+
+  #research-focus .research-focus-subtitle {
+    font-size: clamp(20px, 3.3vw, 36px) !important;
+  }
+
+  #research-focus .research-focus-tagline {
+    max-width: 680px;
+    margin: 12px auto 0 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.25em !important;
+  }
+
+  #research-focus .research-focus-navigation {
+    position: relative;
+    inset: auto;
+    margin-top: 37vw;
+  }
+
+  #research-focus .research-focus-caption {
+    margin-bottom: 16px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.28em !important;
+  }
+
+  #research-focus .research-focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #research-focus .research-focus-card {
+    min-height: 74px;
+    gap: 12px;
+    padding: 13px 15px;
+  }
+
+  #research-focus .research-focus-label {
+    margin-bottom: 5px;
+    font-size: 10px !important;
+  }
+
+  #research-focus .research-focus-card h3 {
+    font-size: 18px !important;
+    text-wrap: wrap;
+  }
+
+  #research-focus .research-focus-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  #research-focus .research-focus-arrow .ph {
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body[data-page="home"] #research-focus {
+    padding: 32px 20px;
+    background-position: center 130px;
+  }
+
+  #research-focus #research-focus-title {
+    font-size: clamp(21px, 5.7vw, 28px) !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  #research-focus .research-focus-subtitle {
+    max-width: 340px;
+    margin-inline: auto !important;
+    font-size: 22px !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  #research-focus .research-focus-tagline {
+    max-width: 360px;
+    font-size: 9px !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  #research-focus .research-focus-navigation {
+    margin-top: 48vw;
+  }
+
+  #research-focus .research-focus-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #research-focus .research-focus-card {
+    min-height: 70px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #research-focus .research-focus-card {
+    transition: none;
+  }
+}

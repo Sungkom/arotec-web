@@ -31,9 +31,17 @@ body[data-page="home"].home-header-scroll-hidden .site-header {
   transform: translate3d(0, calc(-100% - 10px), 0);
 }
 
-/* Align the hero copy below the Customized for you link in the desktop menu. */
+/* Keep the hero copy on the same left edge as the logo in the current menu. */
 body[data-page="home"] .hero-content {
-  padding-inline-start: var(--home-hero-copy-offset, clamp(11px, 1.1vw, 15px));
+  padding-inline-start: var(--home-hero-copy-offset, 0px);
+}
+
+/* Lower the complete hero message without changing the height of the hero. */
+@media (min-width: 761px) {
+  body[data-page="home"] .hero-content {
+    padding-top: clamp(158px, 18vh, 210px);
+    padding-bottom: clamp(44px, 6vh, 76px);
+  }
 }
 
 /* Half the previous home-page H1 scale. */
@@ -1959,4 +1967,61 @@ body[data-page="home"] .wellbeing-cascade .wellbeing-feedback::after {
     font-weight: 560;
     line-height: 1.18;
   }
+}
+
+/* The section heading uses the shared, unscaled typography specification.
+   Only the infographic remains on its original responsive reference canvas. */
+body[data-page="home"] .wellbeing-cascade,
+body.storytelling-ready[data-page="home"] main > .wellbeing-cascade.story-section-frame {
+  position: relative;
+  display: block !important;
+  height: auto;
+  min-height: 0 !important;
+  padding-block: clamp(48px, 5vw, 80px);
+  overflow: hidden;
+}
+
+body[data-page="home"] .wellbeing-cascade > .section-shell.wellbeing-heading,
+body.storytelling-ready[data-page="home"] main > .wellbeing-cascade.story-section-frame > .section-shell.wellbeing-heading {
+  position: relative;
+  inset: auto;
+  display: grid;
+  gap: 24px;
+  width: min(1320px, calc(100% - clamp(40px, 6vw, 96px))) !important;
+  height: auto !important;
+  margin: 0 auto 32px !important;
+  overflow: visible;
+  transform: none !important;
+}
+
+body[data-page="home"] .wellbeing-heading > .wellbeing-title {
+  position: static;
+  inset: auto;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0;
+  text-wrap: balance;
+}
+
+body[data-page="home"] .wellbeing-heading > .wellbeing-title::after {
+  display: none;
+}
+
+body[data-page="home"] .wellbeing-heading > p {
+  position: static;
+  width: 100%;
+  max-width: 960px;
+  margin: 0;
+  color: rgba(246, 252, 255, 0.9);
+  text-shadow: 0 2px 18px rgba(0, 18, 48, 0.46);
+}
+
+body[data-page="home"] .wellbeing-diagram {
+  position: relative;
+  width: 100%;
+  height: min(38.525390625vw, 789px);
+}
+
+body[data-page="home"] .wellbeing-diagram > .wellbeing-layout {
+  top: 0;
 }

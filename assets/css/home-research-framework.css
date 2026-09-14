@@ -1,0 +1,163 @@
+/* Original connected-panel composition, reduced 20% from the previous 160% scale. */
+#research-solutions.science-solution-framework{display:block;width:100%;min-height:0;margin:0;padding:0;background:#050e29;color:#031326;container-type:inline-size}
+#research-solutions .framework-canvas{position:relative;width:128%;margin-left:-14%;aspect-ratio:2067/761;container-type:inline-size;background:#050e29 url('../images/science-to-solution-molecular-background.png') center/cover no-repeat}
+#research-solutions .framework-image{display:block;width:100%;height:100%}
+/* Keep illustration centers opaque and feather their edges into card backgrounds
+   with 20% transparency (80% opacity). Mask bounds use the 2067 x 761 artwork. */
+#research-solutions .framework-image {
+  mask:
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 21.80717% 55.32234% / 4.16062% 12.35217% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 26.81818% 55.32234% / 4.20900% 12.35217% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 31.73320% 55.32234% / 4.25738% 12.35217% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 36.68519% 55.32234% / 4.25738% 12.35217% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 41.61616% 55.05279% / 4.20900% 12.87779% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 21.80717% 78.58220% / 4.16062% 12.87779% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 26.81818% 78.73303% / 4.20900% 12.87779% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 31.73320% 78.79699% / 4.25738% 12.61498% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 36.68519% 78.79699% / 4.25738% 12.61498% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 41.61616% 78.79699% / 4.20900% 12.61498% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 62.43550% 52.67857% / 6.24093% 11.69514% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 70.02075% 52.67857% / 6.72472% 11.69514% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 77.72021% 52.67857% / 6.62796% 11.69514% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 62.41611% 68.57562% / 6.28931% 10.51248% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 70.02075% 68.57562% / 6.72472% 10.51248% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 77.72021% 68.57562% / 6.62796% 10.51248% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 62.41611% 82.33618% / 6.28931% 7.75296% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 70.02075% 82.33618% / 6.72472% 7.75296% no-repeat,
+    radial-gradient(ellipse farthest-side, #000 82%, transparent 100%) 77.72021% 82.33618% / 6.62796% 7.75296% no-repeat,
+    linear-gradient(rgb(0 0 0 / 80%) 0 0);
+  mask-composite: add;
+}
+/* Clip the existing artwork to its connected panels so the supplied background
+   shows around it. Original illustrations and overlay coordinates stay intact. */
+#research-solutions .framework-image{
+  clip-path:polygon(
+    21.3867% 29.8408%,
+    41.9922% 29.8408%,
+    42.7246% 30.2387%,
+    43.3594% 31.0345%,
+    43.9453% 32.4934%,
+    44.3848% 34.2175%,
+    44.6777% 36.2069%,
+    44.7266% 39.5225%,
+    44.8242% 41.9098%,
+    45.0684% 43.6340%,
+    45.6055% 45.4907%,
+    46.3379% 46.9496%,
+    47.4121% 48.8064%,
+    48.3398% 50.3979%,
+    49.1699% 49.0716%,
+    49.9512% 48.1432%,
+    50.7324% 47.3475%,
+    51.4160% 47.0822%,
+    52.3438% 47.3475%,
+    53.1738% 48.1432%,
+    54.0527% 49.4695%,
+    54.7363% 51.3263%,
+    55.2246% 53.5809%,
+    56.6406% 53.5809%,
+    57.1289% 53.1830%,
+    57.4219% 52.2546%,
+    57.4219% 33.9523%,
+    57.5195% 32.4934%,
+    57.7637% 31.2997%,
+    58.2031% 30.3714%,
+    58.8867% 29.8408%,
+    78.4668% 29.8408%,
+    79.0039% 30.1061%,
+    79.4922% 31.0345%,
+    79.7852% 32.3607%,
+    79.9316% 33.9523%,
+    79.9316% 85.6764%,
+    79.7852% 87.1353%,
+    79.4922% 88.4615%,
+    79.0039% 89.2573%,
+    78.4180% 89.6552%,
+    58.9355% 89.6552%,
+    58.3008% 89.2573%,
+    57.8125% 88.3289%,
+    57.5195% 87.0027%,
+    57.3730% 85.6764%,
+    57.3730% 67.9045%,
+    57.2266% 66.9761%,
+    56.9824% 66.3130%,
+    56.6406% 66.0477%,
+    55.2246% 66.0477%,
+    54.6875% 68.1698%,
+    54.0527% 69.8939%,
+    53.3203% 71.2202%,
+    52.4414% 72.0159%,
+    51.4648% 72.4138%,
+    50.4883% 72.1485%,
+    49.6094% 71.4854%,
+    48.9746% 72.0159%,
+    48.2910% 73.3422%,
+    47.6563% 74.9337%,
+    46.8750% 76.2599%,
+    46.0449% 77.4536%,
+    45.4590% 78.5146%,
+    45.0195% 80.1061%,
+    44.7754% 81.6976%,
+    44.7266% 84.2175%,
+    44.5801% 86.2069%,
+    44.3359% 87.5332%,
+    43.8965% 88.5942%,
+    43.3105% 89.3899%,
+    42.7246% 89.6552%,
+    21.4355% 89.6552%,
+    20.8008% 89.2573%,
+    20.3125% 88.3289%,
+    20.0195% 86.8700%,
+    19.9707% 85.4111%,
+    19.9707% 33.9523%,
+    20.1172% 32.3607%,
+    20.3613% 31.1671%,
+    20.8496% 30.2387%
+  );
+}
+#research-solutions .framework-type{margin:0!important;font:var(--fw-weight,500) var(--fw-size,.6cqw)/var(--fw-leading,1.2) var(--site-font)!important;letter-spacing:var(--fw-tracking,0)!important;text-transform:none!important;color:inherit}
+#research-solutions .framework-header{position:absolute;top:10.5%;left:5%;width:90%;text-align:center}
+#research-solutions .framework-title{--fw-size:2.05cqw;--fw-weight:700}
+#research-solutions .framework-subtitle{--fw-size:1.85cqw;--fw-weight:400;padding-top:.2cqw}
+#research-solutions .framework-tagline{--fw-size:.91cqw;--fw-tracking:.18cqw;padding-top:.4cqw}
+#research-solutions .framework-platform{position:absolute;inset:32% auto auto 20.75%;width:23.3%;height:55.8%}
+#research-solutions .framework-panel-heading{display:flex;align-items:center;gap:.65cqw;height:24%;padding-left:.55cqw}
+#research-solutions .framework-number{--fw-size:4.25cqw;--fw-weight:800;--fw-leading:1;color:#009aa5}
+#research-solutions .framework-panel-title{--fw-size:1.48cqw;--fw-weight:700;white-space:nowrap}
+#research-solutions .framework-panel-caption{--fw-size:.83cqw;--fw-weight:400;padding-top:.65cqw}
+#research-solutions .framework-topics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr 1.1fr;gap:.35cqw;position:absolute;inset:25.8% 0 0}
+#research-solutions .framework-topic{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:.32cqw .12cqw .4cqw;border-radius:1.2cqw;text-decoration:none;color:inherit;text-align:center}
+#research-solutions .framework-topic-number{--fw-size:.68cqw;--fw-weight:700}
+#research-solutions .framework-topic-label{--fw-size:.56cqw;min-height:2.1em;display:flex;align-items:center;justify-content:center}
+#research-solutions .framework-topic:hover{background:rgba(0,159,171,.08);box-shadow:inset 0 0 0 2px rgba(0,145,159,.45)}
+#research-solutions .framework-topic:focus-visible{outline:3px solid #087d91;outline-offset:2px;background:rgba(0,159,171,.08)}
+#research-solutions .framework-transform{position:absolute;left:47.6%;top:37%;width:7.5%;text-align:center;--fw-size:1.05cqw;--fw-weight:700}
+#research-solutions .framework-discovery{position:absolute;left:44.6%;top:49%;width:3%;height:27%;display:flex;flex-direction:column;justify-content:space-between;list-style:none;padding:0;margin:0}
+#research-solutions .framework-discovery .framework-type{--fw-size:.46cqw}
+#research-solutions .framework-translation{position:absolute;top:52%;left:47.65%;width:7.55%;height:16%;text-align:center}
+#research-solutions .framework-translation .framework-number{--fw-size:2.25cqw;color:#62bde9}
+#research-solutions .framework-translation-title{--fw-size:.98cqw;--fw-weight:700;padding-top:.45cqw}
+#research-solutions .framework-translation-caption{--fw-size:.48cqw;--fw-leading:1.6;padding-top:.3cqw}
+#research-solutions .framework-impact{position:absolute;left:55.8%;top:58.9%;width:2.8%;text-align:center;--fw-size:.46cqw}
+#research-solutions .framework-results{position:absolute;left:58.4%;top:32%;width:20.8%;height:55.8%}
+#research-solutions .framework-results .framework-panel-heading{height:21%;padding-left:.4cqw}
+#research-solutions .framework-results .framework-number{color:#77c3ca}
+#research-solutions .framework-results .framework-panel-caption{--fw-size:.73cqw;padding-top:.15cqw;white-space:nowrap}
+#research-solutions .framework-results-caption{position:absolute;top:21%;width:100%;text-align:center;--fw-size:.83cqw;--fw-weight:400}
+#research-solutions .framework-outcomes{position:absolute;inset:27.5% 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:104fr 97fr 92fr;gap:.35cqw;list-style:none;padding:0;margin:0}
+#research-solutions .framework-outcomes li{display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:0 .3cqw .16cqw}
+#research-solutions .framework-outcomes li:nth-child(-n+6){padding-bottom:0}
+#research-solutions .framework-outcome-label{--fw-size:.56cqw;--fw-leading:1.05;display:block;text-align:center}
+
+/* Crop only the source's empty side margins; preserve the entire diagram. */
+#research-solutions .framework-scroll { overflow-x: auto; overflow-y: hidden; }
+#research-solutions .framework-viewport { width: 100%; min-width: 1400px; overflow: hidden; }
+#research-solutions .framework-scroll-hint { display: none; }
+#research-solutions .framework-scroll:focus-visible { outline: 3px solid #087d91; outline-offset: -3px; }
+@media (max-width: 1399px) {
+  #research-solutions .framework-scroll-hint { display: block; padding: 14px 20px; margin: 0 !important; font: 500 14px/1.5 var(--site-font) !important; color: #087d91; text-align: center; }
+}
+/* Maintain readable headings over the dark molecular background. */
+#research-solutions .framework-header,
+#research-solutions .framework-transform { color: #fff; text-shadow: 0 1px 3px rgb(0 0 0 / 35%); }
+#research-solutions .framework-scroll-hint { color: #dceaff; }

@@ -1,0 +1,2843 @@
+/*
+ * Arotec global typography system
+ * Matched to the live dsm-firmenich typography on 2026-09-04.
+ * This file must remain the last stylesheet in each rendered document.
+ */
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Desktop heading-edge calibration.
+   The primary heading bounds follow the same 1248px frame as .header-inner.
+   Offsets are scoped to headings only, so section grids and images do not move. */
+@media (min-width: 1600px) {
+  html body.sfv-page {
+    --sfv-heading-frame-width: 1248px;
+    --sfv-heading-frame-left: calc((100% - var(--sfv-heading-frame-width)) / 2);
+  }
+
+  html body.sfv-page main .sf-page-heading {
+    box-sizing: border-box !important;
+  }
+
+  html body.sfv-page #sfv-hero-title {
+    position: relative !important;
+    left: 136px !important;
+    max-width: calc(100% - 136px) !important;
+  }
+
+  html body.sfv-page #sfv-culture-title {
+    position: relative !important;
+    left: -109px !important;
+    max-width: calc(100% - 109px) !important;
+  }
+
+  html body.sfv-page #sfv-sensory-title {
+    position: relative !important;
+    left: 0 !important;
+  }
+
+  html body.sfv-page #sfv-equation-title,
+  html body.sfv-page #sfv-memory-title {
+    position: relative !important;
+    left: 155px !important;
+    max-width: calc(100% - 155px) !important;
+  }
+
+  html body.sfv-page #sfv-wellbeing-title {
+    position: relative !important;
+    left: 92px !important;
+    max-width: calc(100% - 92px) !important;
+  }
+
+  html body.sfv-page #sfv-better-title {
+    position: relative !important;
+    left: -19px !important;
+    max-width: calc(100% - 19px) !important;
+  }
+
+  html body.sfv-page #sfv-emotion-title,
+  html body.sfv-page #sfv-partner-title {
+    position: relative !important;
+    left: -9px !important;
+    max-width: calc(100% - 9px) !important;
+  }
+
+  html body.sfv-page #sfv-offers-title {
+    position: relative !important;
+    left: 2px !important;
+  }
+}
+
+/* Use the BETTER FOR YOU heading width as the shared information width. */
+@media (min-width: 1100px) {
+  html body.sfv-page main #sfv-hero-title.sf-page-heading,
+  html body.sfv-page main #sfv-culture-title.sf-page-heading,
+  html body.sfv-page main #sfv-sensory-title.sf-page-heading,
+  html body.sfv-page main #sfv-equation-title.sf-page-heading,
+  html body.sfv-page main #sfv-memory-title.sf-page-heading,
+  html body.sfv-page main #sfv-wellbeing-title.sf-page-heading,
+  html body.sfv-page main #sfv-better-title.sf-page-heading,
+  html body.sfv-page main #sfv-emotion-title.sf-page-heading,
+  html body.sfv-page main #sfv-partner-title.sf-page-heading,
+  html body.sfv-page main #sfv-offers-title.sf-page-heading {
+    box-sizing: border-box !important;
+    width: 1020px !important;
+    max-width: 1020px !important;
+  }
+}
+
+@media (max-width: 1099px) {
+  html body.sfv-page main .sf-page-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+  }
+}
+
+/* Synesthetic Flavor Cultural Memory: widen only the text so each sentence follows the authored line. */
+@media (min-width: 1400px) {
+  html body.sfv-page #culture .sfv-copy {
+    width: 640px !important;
+    max-width: 640px !important;
+    justify-self: start;
+  }
+
+  html body.sfv-page #culture .sf-page-heading,
+  html body.sfv-page #culture .sfv-copy p {
+    width: 100%;
+    max-width: 640px !important;
+  }
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --site-font: "DM Sans", "Noto Sans Thai", "Noto Sans TC", "Noto Sans JP", sans-serif;
+  --site-type-h1: 72px;
+  --site-type-h2: 32px;
+  --site-type-h3: 28px;
+  --site-type-h4: 26px;
+  --site-type-body: 16px;
+  --site-type-small: 14px;
+  --site-line-h1: 80px;
+  --site-line-h2: 38px;
+  --site-line-h3: 36px;
+  --site-line-h4: 36px;
+  --site-line-body: 28px;
+  --site-letter-h1: -1.44px;
+  --site-letter-h2: -0.64px;
+  --site-letter-h3: -0.56px;
+  --site-letter-h4: 0;
+  --site-type-sub: 16px;
+  --site-line-tightest: var(--site-line-h1);
+  --site-line-tight: 1.4;
+  --site-line-base: 1.75;
+
+  /* Compatibility with the typography tokens used by existing page families. */
+  --font-en: var(--site-font);
+  --font-th: var(--site-font);
+  --font-tc: var(--site-font);
+  --font-jp: var(--site-font);
+  --font: var(--site-font);
+  --font-ui: var(--site-font);
+  --font-display: var(--site-font);
+  --body-font: var(--site-font);
+  --display-font: var(--site-font);
+  --ex-font-body: var(--site-font);
+  --ex-font-display: var(--site-font);
+  --nst-body: var(--site-font);
+  --nst-head: var(--site-font);
+  --olf-font: var(--site-font);
+  --stress-body: var(--site-font);
+  --stress-head: var(--site-font);
+  --sy-ui: var(--site-font);
+  --sy-display: var(--site-font);
+  --sfv-font-en: var(--site-font);
+  --sfv-sans: var(--site-font);
+  --sfv-serif: var(--site-font);
+  --sfc-sans: var(--site-font);
+  --sfc-serif: var(--site-font);
+  --sf-sans: var(--site-font);
+  --sf-serif: var(--site-font);
+  --shb-sans: var(--site-font);
+  --shb-serif: var(--site-font);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-type-h1: 72px;
+    --site-type-h2: 48px;
+    --site-type-h3: 40px;
+    --site-type-h4: 32px;
+    --site-line-h1: 80px;
+    --site-line-h2: 58px;
+    --site-line-h3: 56px;
+    --site-line-h4: 38px;
+    --site-letter-h1: -1.44px;
+    --site-letter-h2: -0.96px;
+    --site-letter-h3: -0.8px;
+    --site-type-sub: 16px;
+    --site-type-small: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --site-type-h1: 72px;
+  }
+}
+
+html body,
+html body[class] {
+  /* Re-alias locally-scoped legacy tokens, including pages that redeclare them. */
+  --font-en: var(--site-font) !important;
+  --font-th: var(--site-font) !important;
+  --font-tc: var(--site-font) !important;
+  --font-jp: var(--site-font) !important;
+  --font: var(--site-font) !important;
+  --font-ui: var(--site-font) !important;
+  --font-display: var(--site-font) !important;
+  --body-font: var(--site-font) !important;
+  --display-font: var(--site-font) !important;
+  --ex-font-body: var(--site-font) !important;
+  --ex-font-display: var(--site-font) !important;
+  --nst-body: var(--site-font) !important;
+  --nst-head: var(--site-font) !important;
+  --olf-font: var(--site-font) !important;
+  --stress-body: var(--site-font) !important;
+  --stress-head: var(--site-font) !important;
+  --sy-ui: var(--site-font) !important;
+  --sy-display: var(--site-font) !important;
+  --sfv-font-en: var(--site-font) !important;
+  --sfv-sans: var(--site-font) !important;
+  --sfv-serif: var(--site-font) !important;
+  --sfc-sans: var(--site-font) !important;
+  --sfc-serif: var(--site-font) !important;
+  --sf-sans: var(--site-font) !important;
+  --sf-serif: var(--site-font) !important;
+  --shb-sans: var(--site-font) !important;
+  --shb-serif: var(--site-font) !important;
+
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-body) !important;
+  line-height: var(--site-line-body) !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+ * dsm-firmenich heading scale. The extra ID specificity ensures this final
+ * typography layer wins over legacy page-level heading declarations.
+ */
+html body h1:not(#dsm-type-lock) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h1) !important;
+  font-weight: var(--arotec-display-weight) !important;
+  line-height: var(--site-line-h1) !important;
+  letter-spacing: var(--site-letter-h1) !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+html body h2:not(#dsm-type-lock) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h2) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h2) !important;
+  letter-spacing: var(--site-letter-h2) !important;
+  margin-top: 0 !important;
+  margin-bottom: 32px !important;
+}
+
+html body h3:not(#dsm-type-lock) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h3) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h3) !important;
+  letter-spacing: var(--site-letter-h3) !important;
+  margin-top: 0 !important;
+  margin-bottom: 32px !important;
+}
+
+html body h4:not(#dsm-type-lock) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h4) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h4) !important;
+  letter-spacing: var(--site-letter-h4) !important;
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+html body :is(main, #site-shell) p {
+  font-family: var(--site-font) !important;
+}
+
+html body #site-shell,
+html body [data-static-mobile-panel] {
+  font-family: var(--site-font) !important;
+}
+
+/*
+ * Override literal page-level families while leaving Phosphor icon glyphs and
+ * monospace/code content untouched. The :is() list intentionally contains the
+ * shell id so this final layer wins over legacy class-specific declarations.
+ */
+html body :is(header, main, footer, #site-shell, [data-static-mobile-panel]) :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  label,
+  legend,
+  li,
+  dt,
+  dd,
+  strong,
+  small,
+  blockquote,
+  figcaption,
+  th,
+  td
+) {
+  font-family: var(--site-font) !important;
+}
+
+/*
+ * Complete-site family enforcement. Many legacy compositions place visible
+ * copy directly in div/span/SVG nodes, so a semantic-tag-only override leaves
+ * pockets of the old display and serif faces behind. Apply the Surventis
+ * family to every descendant and every generated text node, while protecting
+ * known icon-font glyph containers.
+ */
+html body :where(*):not(:is(
+    .ph,
+    .ph-duotone,
+    [class^="ph-"],
+    [class*=" ph-"],
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fat,
+    .fad,
+    .fab,
+    .fa-solid,
+    .fa-regular,
+    .fa-brands,
+    [class^="fa-"],
+    [class*=" fa-"],
+    .bi,
+    [class^="bi-"],
+    [class*=" bi-"],
+    .material-icons,
+    .material-symbols-outlined,
+    .material-symbols-rounded,
+    [data-icon-font]
+  )) {
+  font-family: var(--site-font) !important;
+}
+
+html body :where(*):not(:is(
+    .ph,
+    .ph-duotone,
+    [class^="ph-"],
+    [class*=" ph-"],
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fat,
+    .fad,
+    .fab,
+    .fa-solid,
+    .fa-regular,
+    .fa-brands,
+    [class^="fa-"],
+    [class*=" fa-"],
+    .bi,
+    [class^="bi-"],
+    [class*=" bi-"],
+    .material-icons,
+    .material-symbols-outlined,
+    .material-symbols-rounded,
+    [data-icon-font]
+  ))::before,
+html body :where(*):not(:is(
+    .ph,
+    .ph-duotone,
+    [class^="ph-"],
+    [class*=" ph-"],
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fat,
+    .fad,
+    .fab,
+    .fa-solid,
+    .fa-regular,
+    .fa-brands,
+    [class^="fa-"],
+    [class*=" fa-"],
+    .bi,
+    [class^="bi-"],
+    [class*=" bi-"],
+    .material-icons,
+    .material-symbols-outlined,
+    .material-symbols-rounded,
+    [data-icon-font]
+  ))::after,
+html body :where(input, textarea, select)::placeholder {
+  font-family: var(--site-font) !important;
+}
+
+/* Explicitly restore the only two icon-font families shipped by this site. */
+html body .ph,
+html body .ph::before,
+html body .ph::after {
+  font-family: "Phosphor" !important;
+}
+
+html body .ph-duotone,
+html body .ph-duotone::before,
+html body .ph-duotone::after {
+  font-family: "Phosphor-Duotone" !important;
+}
+
+/* Surventis H1: 48 mobile, 64 tablet, 80 desktop; medium weight and 1:1 leading. */
+html body :is(main, #site-shell) :is(
+  h1,
+  .hero-title,
+  .page-title,
+  .content-layer > h1,
+  .opening-title h1,
+  .native-opening-title h1,
+  .sfv-hero__copy h1,
+  .sfc-hero h1,
+  .sf-hero__copy h1,
+  .shb-hero-copy h1
+) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h1) !important;
+  font-weight: 500 !important;
+  line-height: var(--site-line-tightest) !important;
+  letter-spacing: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+html body :is(main, #site-shell) h1 :where(span, strong, b) {
+  font-weight: inherit !important;
+  white-space: inherit !important;
+}
+
+/*
+ * Primary headings introduce a new page section, so they intentionally share
+ * the exact H1 scale instead of falling back to each legacy page's H2 size.
+ * Card, dialog, and fixed-infographic headings are not part of this list.
+ */
+html body.sfv-page :is(main, #site-shell) h2.sf-page-heading,
+html body.sf-page :is(main, #site-shell) h2.sf-page-heading,
+html body.sfc-page :is(main, #site-shell) .sfc-country__copy > h2,
+html body.sfc-page :is(main, #site-shell) .sfc-comparison__header > h2,
+html body.sfc-page :is(main, #site-shell) .sfc-cta__copy > h2,
+html body :is(main, #site-shell) .center-head > h2,
+html body :is(main, #site-shell) .home-section-head > div > h2,
+html body :is(main, #site-shell) .platform-slider-intro > h2,
+html body :is(main, #site-shell) .customized-catalog-head > h2,
+html body :is(main, #site-shell) .research-hero-copy > h2,
+html body :is(main, #site-shell) > section.dark-band > .section-shell > .feature-panel > h2,
+html body :is(main, #site-shell) > section.concept > .section-shell.cta-row h2,
+html body.neuro-page :is(main, #site-shell) > section.neuro-section > .section-heading > h2,
+html body.exercise-health-page :is(main, #site-shell) h2.major-heading,
+html body.exposome-neo-body :is(main, #site-shell) h2.ex-section-title,
+html body.exposome-neo-body :is(main, #site-shell) .ex-bridge-copy > h2,
+html body.nst-page :is(main, #site-shell) .nst-section-heading h2,
+html body.nst-page :is(main, #site-shell) .nst-disease-spectrum > h2,
+html body.np-page :is(main, #site-shell) h2.numbered-heading,
+html body.np-page :is(main, #site-shell) .final-cta .cta-copy > h2,
+html body.olf-page :is(main, #site-shell) .obsi-intro > header > h2,
+html body.stress-atc-page :is(main, #site-shell) > section.story-section > .section-heading h2,
+html body.shb-page :is(main, #site-shell) .shb-section-heading h2,
+html body.shb-page .shb-closing h2 {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-h1) !important;
+  font-weight: 500 !important;
+  line-height: var(--site-line-tightest) !important;
+  letter-spacing: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+html body :where(
+  h2.sf-page-heading,
+  .sfc-country__copy > h2,
+  .sfc-comparison__header > h2,
+  .sfc-cta__copy > h2,
+  .center-head > h2,
+  .home-section-head > div > h2,
+  .platform-slider-intro > h2,
+  .customized-catalog-head > h2,
+  .research-hero-copy > h2,
+  h2.major-heading,
+  h2.ex-section-title,
+  .ex-bridge-copy > h2,
+  .nst-section-heading h2,
+  .nst-disease-spectrum > h2,
+  h2.numbered-heading,
+  .final-cta .cta-copy > h2,
+  .obsi-intro > header > h2,
+  .shb-section-heading h2,
+  .shb-closing h2
+) :where(span, strong, b) {
+  font-weight: inherit !important;
+  white-space: inherit !important;
+}
+
+/* Surventis lead/subtitle: 18 mobile, 20 from tablet upward. */
+html body :is(main, #site-shell) :is(
+  .lead,
+  .hero-lead,
+  .hero-subtitle,
+  .hero__subtitle,
+  .page-lead,
+  .page-subtitle,
+  .section-lead,
+  .section-subtitle,
+  .commerce-lead,
+  .ex-hero-lead,
+  .nst-hero-lede,
+  .opening-subtitle,
+  .native-opening-subtitle,
+  .sfv-hero__lead,
+  .sfc-hero__lead,
+  .sfc-hero__subtitle,
+  .sf-hero__lead,
+  .sf-page-subtitle,
+  .shb-hero-copy > p,
+  .follicle-page .hero-copy > p,
+  .aging-dynamics-body .hero-copy > p,
+  .homeostasis-page .hero__copy > p:not(.eyebrow),
+  .neuro-page .neuro-hero p:last-child,
+  .sy-page .sy-hero__copy > p:not(.sy-eyebrow),
+  .exercise-beauty-content .hero-copy > p,
+  .exercise-health-content .hero-copy > p
+) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-sub) !important;
+  font-weight: 400 !important;
+  line-height: var(--site-line-tight) !important;
+  letter-spacing: normal !important;
+}
+
+/* High-level body copy follows the Surventis base token without resizing dense diagrams. */
+html body :is(main, #site-shell) :is(
+  .hero-body,
+  .page-body,
+  .sfv-hero__body,
+  .sfc-hero__body,
+  .sf-hero__body
+) {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-body) !important;
+  font-weight: 400 !important;
+  line-height: var(--site-line-base) !important;
+  letter-spacing: normal !important;
+}
+
+/* Keep the Synesthetic Flavor closing panels inside the same global rhythm. */
+body[data-page="synesthetic-flavor"][data-header-variant="home"]
+  :is(.sfv-emotion, .sfv-partner) .sf-page-subtitle {
+  font-family: var(--site-font) !important;
+  font-size: var(--site-type-sub) !important;
+  font-weight: 400 !important;
+  line-height: var(--site-line-tight) !important;
+  letter-spacing: normal !important;
+}
+
+@media (min-width: 942px) {
+  /* The original Sleep & Beauty hero was sized for a 49px title. */
+  html body.shb-page :is(.shb-hero, .shb-hero-grid) {
+    height: 440px;
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Preserve the 48px reference size while allowing long culture-title rows to wrap. */
+  html body .sfc-hero h1 span {
+    white-space: normal;
+  }
+}
+
+/*
+ * The Synesthetic Flavor page began as a set of fixed editorial canvases.
+ * Let those canvases grow with the shared H1 scale so no heading, copy, or
+ * control is clipped when the desktop token reaches 64–80px.
+ */
+@media (min-width: 821px) {
+  html body.sfv-page #culture.sfv-culture {
+    height: clamp(700px, 52vw, 750px) !important;
+  }
+
+  html body.sfv-page #culture .sfv-copy {
+    align-self: center;
+  }
+}
+
+@media (min-width: 960px) {
+  html body.sfv-page #science.sfv-sensory {
+    height: clamp(720px, 52vw, 780px) !important;
+  }
+
+  html body.sfv-page #science .sfv-sensory__grid {
+    grid-template-columns: minmax(430px, 44%) minmax(0, 56%);
+  }
+
+  html body.sfv-page #science .sfv-sensory__intro {
+    width: 100% !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  html body.sfv-page #science .sfv-sensory__intro .sf-page-heading,
+  html body.sfv-page #experience .sfv-delicious__copy > .sf-page-heading,
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-heading {
+    width: auto !important;
+    max-width: none !important;
+    overflow-wrap: normal !important;
+    text-wrap: wrap !important;
+    white-space: normal !important;
+  }
+
+  html body.sfv-page #experience.sfv-equation {
+    min-height: 760px !important;
+  }
+
+  html body.sfv-page #experience > .sfv-delicious {
+    grid-template-columns: 540px minmax(0, 1fr);
+  }
+
+  html body.sfv-page #memory.sfv-memory {
+    height: 600px !important;
+  }
+
+  html body.sfv-page #about.sfv-wellbeing {
+    height: 570px !important;
+  }
+
+  html body.sfv-page #applications.sfv-better {
+    height: clamp(700px, 52.8vw, 760px) !important;
+  }
+
+  html body.sfv-page #emotion.sfv-emotion {
+    height: clamp(660px, 48vw, 700px) !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content {
+    width: min(56vw, 700px);
+  }
+
+  html body.sfv-page #partner.sfv-partner {
+    height: 760px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading {
+    width: min(68vw, 850px);
+  }
+
+  html body.sfv-page #partner .sfv-partner__grid::before,
+  html body.sfv-page #partner .sfv-partner__features,
+  html body.sfv-page #partner .sfv-partner__approach {
+    top: max(260px, 34%);
+  }
+
+  html body.sfv-page #offerings.sfv-offers {
+    height: 540px !important;
+  }
+
+  html body.sfv-page #offerings .sfv-offers__track {
+    top: 126px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+  html body.sfv-page #science .sfv-sensory__grid {
+    grid-template-columns: minmax(410px, 48%) minmax(0, 52%);
+  }
+
+  html body.sfv-page #science .sfv-sensory__diagram {
+    left: auto !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  html body.sfv-page #experience > .sfv-delicious {
+    grid-template-columns: minmax(390px, 44%) minmax(0, 56%);
+  }
+}
+
+/*
+ * Long hero titles keep the shared H1 token.  These page-specific column
+ * adjustments give the words enough room instead of silently shrinking an
+ * individual title below the site scale.
+ */
+@media (min-width: 768px) and (max-width: 959px) {
+  html body.nst-page .nst-hero-copy {
+    width: 62%;
+  }
+
+  html body.np-page .hero-grid {
+    grid-template-columns: 63% 37%;
+  }
+
+  html body.sy-page .sy-hero__inner {
+    grid-template-columns: 62% 38%;
+  }
+
+  html body.sy-page .sy-hero__copy {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1399px) {
+  html body.nst-page .nst-hero-copy {
+    width: 50%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+  html body.np-page .hero-grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  html body.np-page .hero-visual {
+    left: 50%;
+  }
+
+  html body.np-page #therapy .scented-copy {
+    width: 45%;
+  }
+
+  html body.sy-page .sy-hero__inner {
+    grid-template-columns: 47% 53%;
+  }
+
+  html body.sy-page .sy-hero__copy {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  html body.exercise-beauty-page .eb-hero {
+    height: 520px;
+    min-height: 520px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+  html body.exercise-health-page .eh-hero {
+    height: 440px;
+    min-height: 440px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html body.sfc-page .sfc-hero__grid {
+    grid-template-columns: 520px minmax(0, 1fr);
+  }
+
+  html body.sfc-page .sfc-hero__copy {
+    grid-column: 1;
+  }
+
+  html body.sfc-page .sfc-hero__visual {
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body.sfc-page .sfc-hero__copy {
+    grid-column: 1 / 7;
+  }
+
+  html body.sy-page .sy-hero__inner {
+    grid-template-columns: minmax(567px, 42%) minmax(0, 1fr);
+  }
+
+  html body.sy-page .sy-hero__copy {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html body.sfc-page .sfc-hero__grid {
+    grid-template-columns: 520px minmax(0, 1fr);
+  }
+
+  html body.sfc-page .sfc-hero__copy {
+    grid-column: 1;
+  }
+
+  html body.sfc-page .sfc-hero__visual {
+    grid-column: 2;
+  }
+}
+
+/* The legacy editorial flavor page needs wider copy rails at the H1 scale. */
+@media (min-width: 801px) and (max-width: 1240px) {
+  html body.sf-page .sf-copy--multi {
+    width: max(40%, 360px);
+  }
+
+  html body.sf-page .sf-sensory-map {
+    width: 68%;
+  }
+
+}
+
+@media (min-width: 801px) and (max-width: 959px) {
+  html body.sf-page .sf-wellbeing__grid {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto;
+  }
+
+  html body.sf-page .sf-indicator-row--wellbeing {
+    grid-column: 1 / -1;
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1240px) {
+  html body.sf-page .sf-wellbeing__grid {
+    grid-template-columns: 27% 38% 35%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1060px) {
+  html body.sf-page #multisensory .sf-copy--multi {
+    width: 420px;
+  }
+
+  html body.sf-page #multisensory .sf-sensory-map {
+    transform: scale(0.86);
+  }
+}
+
+@media (min-width: 1241px) {
+  html body.sf-page .sf-multi-grid {
+    grid-template-columns: 40% 60%;
+  }
+
+  html body.sf-page .sf-copy--multi {
+    max-width: none;
+  }
+
+  html body.sf-page .sf-wellbeing__grid {
+    grid-template-columns: 30% 36% 34%;
+  }
+}
+
+@media (min-width: 768px) {
+  html body.sy-page .sy-hero {
+    height: 540px;
+    min-height: 540px;
+  }
+}
+
+/* Fixed desktop story canvases expand to the common H1 line count. */
+@media (min-width: 1280px) {
+  html body.np-page :is(
+    .pathways-section,
+    .mechanisms-section,
+    .impacts-section
+  ) {
+    height: auto !important;
+  }
+
+  html body.np-page .final-cta {
+    height: auto !important;
+    min-height: 300px;
+  }
+
+  html body.np-page .final-cta .cta-grid {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 900px) {
+  html body.stress-atc-page .section-02 .section-heading h2 {
+    white-space: normal !important;
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 901px) {
+  html body.shb-page :is(
+    .shb-section--hair,
+    .shb-section--systems,
+    .shb-section--skin
+  ),
+  html body.shb-page .shb-closing {
+    height: auto !important;
+  }
+}
+
+/* Keep the page heading in normal flow, outside the horizontally scrollable
+ * scientific canvas. Diagram cards and connector coordinates stay unchanged. */
+html body.brain-skin-loop-page .loop-heading {
+  width: min(1248px, calc(100% - 40px));
+  margin-inline: auto;
+  padding-block: 24px;
+  text-align: center;
+}
+
+html body.brain-skin-loop-page .loop-heading > h1 {
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+/* Final dsm-firmenich type lock: keep this block last in the stylesheet. */
+html body h1:not(#dsm-type-lock) {
+  font-size: var(--site-type-h1) !important;
+  font-weight: var(--arotec-display-weight) !important;
+  line-height: var(--site-line-h1) !important;
+  letter-spacing: var(--site-letter-h1) !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+html body h2:not(#dsm-type-lock) {
+  font-size: var(--site-type-h2) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h2) !important;
+  letter-spacing: var(--site-letter-h2) !important;
+  margin-top: 0 !important;
+  margin-bottom: 32px !important;
+}
+
+html body h3:not(#dsm-type-lock) {
+  font-size: var(--site-type-h3) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h3) !important;
+  letter-spacing: var(--site-letter-h3) !important;
+  margin-top: 0 !important;
+  margin-bottom: 32px !important;
+}
+
+html body h4:not(#dsm-type-lock) {
+  font-size: var(--site-type-h4) !important;
+  font-weight: 700 !important;
+  line-height: var(--site-line-h4) !important;
+  letter-spacing: var(--site-letter-h4) !important;
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+/* Arotec global typography specification - 2026-09-04 */
+:root {
+  --arotec-font-family: "DM Sans", sans-serif;
+  --arotec-display-size: 72px;
+  --arotec-display-weight: 700;
+  --arotec-display-line-height: 80px;
+  --arotec-display-letter-spacing: -1.44px;
+  --arotec-supporting-size: 24px;
+  --arotec-supporting-weight: 500;
+  --arotec-supporting-line-height: 32px;
+  --arotec-body-size: 18px;
+  --arotec-body-line-height: 28px;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--arotec-font-family) !important;
+}
+
+*,
+*::before,
+*::after {
+  font-style: normal !important;
+}
+
+h1,
+.h1,
+.display-title,
+.hero-title,
+[class$="__title--display"] {
+  font-family: var(--arotec-font-family) !important;
+  font-size: var(--arotec-display-size) !important;
+  font-weight: var(--arotec-display-weight) !important;
+  line-height: var(--arotec-display-line-height) !important;
+  letter-spacing: var(--arotec-display-letter-spacing) !important;
+}
+
+.subtitle,
+.section-subtitle,
+.hero-subtitle,
+.subheading,
+.lead,
+[class$="__subtitle"],
+[class$="__subheading"],
+[class$="__lead"] {
+  font-family: var(--arotec-font-family) !important;
+  font-size: var(--arotec-supporting-size) !important;
+  font-weight: 500 !important;
+  line-height: var(--arotec-supporting-line-height) !important;
+}
+
+main p,
+main li,
+main dt,
+main dd,
+.body-copy,
+[class$="__body"],
+[class$="__copy"] p {
+  font-family: var(--arotec-font-family) !important;
+  font-size: var(--arotec-body-size) !important;
+  font-weight: 400 !important;
+  line-height: var(--arotec-body-line-height) !important;
+}
+
+.btn,
+.button,
+.cta,
+a[class*="cta"],
+button[class*="cta"],
+a[class*="button"],
+button[class*="button"] {
+  font-family: var(--arotec-font-family) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.site-header nav a,
+.site-header .menu a,
+.main-menu a,
+.main-nav a,
+.primary-nav a,
+.nav-menu a,
+[role="navigation"] a {
+  font-family: var(--arotec-font-family) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.login,
+.login a,
+a.login,
+.login-button,
+.login-link,
+[class*="login"] a,
+a[class*="login"] {
+  font-family: var(--arotec-font-family) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Home Hero leaf slide: preserve the authored two-line headline on desktop. */
+@media (min-width: 1100px) {
+  body[data-page="home"] .hero-content--frontiers {
+    width: min(1040px, calc(100vw - 80px));
+    max-width: none;
+  }
+
+  html body[data-page="home"] :is(main, #site-shell) .hero-content--frontiers .hero-title {
+    width: 100%;
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Final global main-navigation surface: #d5d5d5, 20% transparent. */
+html body #site-shell > .site-header {
+  background: transparent !important;
+}
+
+html body #site-shell > .site-header .header-main {
+  background: rgba(213, 213, 213, 0.8) !important;
+}
+
+/* Specificity lock for page shells that force an opaque navigation surface. */
+html body #site-shell:is(#site-shell) > .site-header {
+  background: transparent !important;
+}
+
+html body #site-shell:is(#site-shell) > .site-header .header-main {
+  background: rgba(213, 213, 213, 0.8) !important;
+}
+
+/* Synesthetic Flavor Memory: reference-aligned editorial composition. */
+@media (min-width: 1400px) {
+  html body.sfv-page #memory.sfv-memory {
+    height: 750px !important;
+    min-height: 750px !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__grid {
+    width: min(82vw, 1550px) !important;
+    max-width: none !important;
+    height: 750px !important;
+    padding: 64px 0 52px !important;
+    grid-template-columns: minmax(0, 1000px) minmax(0, 1fr) !important;
+    gap: clamp(68px, 4vw, 76px) !important;
+    align-items: stretch !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__content {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__intro {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  html body.sfv-page #memory .sf-page-heading {
+    width: 960px !important;
+    max-width: 960px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #memory#memory .sf-page-subtitle {
+    width: 960px !important;
+    max-width: 960px !important;
+    margin: 64px 0 0 !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 32px !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__body {
+    width: 960px !important;
+    max-width: 960px !important;
+    margin: 26px 0 0 !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__items {
+    width: 700px !important;
+    max-width: 700px !important;
+    margin: 44px 0 0 24px !important;
+    grid-template-columns: repeat(5, 120px) !important;
+    gap: 25px !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__items figure {
+    width: 120px !important;
+    grid-template-columns: 120px !important;
+    gap: 16px !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__items figcaption {
+    width: 120px !important;
+    gap: 10px !important;
+    font-size: 13px !important;
+    line-height: 14px !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__items i {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 34px !important;
+  }
+
+  html body.sfv-page #memory .sfv-memory__items picture,
+  html body.sfv-page #memory .sfv-memory__items img {
+    width: 116px !important;
+    height: 116px !important;
+  }
+
+  html body.sfv-page #memory blockquote {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+    align-self: center !important;
+    justify-self: start !important;
+  }
+}
+
+/* Synesthetic Flavor: wellbeing section layout matched to the supplied desktop reference */
+@media (min-width: 1400px) {
+  html body.sfv-page #about.sfv-wellbeing {
+    height: 710px !important;
+    min-height: 710px !important;
+    overflow: hidden !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__grid {
+    height: 710px !important;
+    min-height: 710px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__content {
+    box-sizing: border-box !important;
+    height: 710px !important;
+    min-height: 710px !important;
+  padding: 64px 64px 48px max(96px, calc((100vw - 1440px) / 2)) !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__intro {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__intro .sf-page-heading {
+  width: 100% !important;
+  margin: 0 !important;
+    padding: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 61.333px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 80px !important;
+    letter-spacing: -1.44px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__intro .sf-page-subtitle {
+    width: 100% !important;
+    margin: 55px 0 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 32px !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__body {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: 50px !important;
+    width: 100% !important;
+    margin: 48px 0 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 23px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__body p {
+    margin: 0 !important;
+    font: inherit !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__concepts {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    margin: 20px 0 0 !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__concepts > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__concepts span {
+    width: 54px !important;
+    height: 54px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__concepts svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__concepts small {
+    margin-top: 6px !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 16px !important;
+  }
+
+  html body.sfv-page #about blockquote {
+    margin: 24px 0 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 32px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 38px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__grid > picture,
+  html body.sfv-page #about .sfv-wellbeing__grid > picture img {
+    width: 100% !important;
+    height: 710px !important;
+  }
+
+  html body.sfv-page #about .sfv-wellbeing__grid > picture img {
+    object-fit: cover !important;
+  }
+}
+
+/* Synesthetic Flavor: stronger wellbeing subtitle */
+@media (min-width: 1400px) {
+  html body.sfv-page #about .sfv-wellbeing__intro .sf-page-subtitle {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 36px !important;
+  }
+}
+
+/* Synesthetic Flavor: strong wellbeing subtitle at every viewport */
+html body.sfv-page #about .sfv-wellbeing__intro .sf-page-subtitle {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+}
+
+@media (min-width: 1400px) {
+  html body.sfv-page #about .sfv-wellbeing__intro .sf-page-subtitle {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+}
+
+/* Synesthetic Flavor: Better For You layout matched to the supplied desktop reference */
+@media (min-width: 1400px) {
+  html body.sfv-page #applications.sfv-better {
+    height: 740px !important;
+    min-height: 740px !important;
+    overflow: hidden !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__grid {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 23.75% !important;
+    grid-template-rows: 740px !important;
+    width: 100% !important;
+    height: 740px !important;
+    min-height: 740px !important;
+  }
+
+  html body.sfv-page #applications .sfv-copy {
+    box-sizing: border-box !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 32px 0 0 max(72px, calc((100vw - 1218px) / 2)) !important;
+  }
+
+  html body.sfv-page #applications .sfv-copy .sf-page-heading {
+    width: 1020px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 61.333px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 80px !important;
+    letter-spacing: -1.44px !important;
+  }
+
+  html body.sfv-page #applications .sfv-copy .sf-page-subtitle {
+    width: 900px !important;
+    max-width: none !important;
+    margin: 56px 0 0 !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__body {
+    width: 900px !important;
+    max-width: none !important;
+    margin: 23px 0 0 !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__details {
+    position: absolute !important;
+    top: 454px !important;
+    left: max(72px, calc((100vw - 1218px) / 2)) !important;
+    width: 670px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits {
+    display: grid !important;
+    grid-template-columns: repeat(4, 60px) !important;
+    grid-auto-rows: 73px !important;
+    column-gap: 108px !important;
+    row-gap: 14px !important;
+    width: 564px !important;
+    margin: 0 0 0 6px !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 60px !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(5),
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(6),
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(7) {
+    transform: translateX(84px) !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits span {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits small {
+    margin-top: 6px !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 13px !important;
+    text-align: center !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__details blockquote {
+    box-sizing: border-box !important;
+    width: 670px !important;
+    margin: 20px 0 0 !important;
+    padding: 14px 0 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 27px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 32px !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__grid > figure {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    height: 740px !important;
+    margin: 0 !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__grid > figure picture,
+  html body.sfv-page #applications .sfv-better__grid > figure img {
+    display: block !important;
+    width: 100% !important;
+    height: 740px !important;
+  }
+
+  html body.sfv-page #applications .sfv-better__grid > figure img {
+    object-fit: cover !important;
+  }
+}
+
+/* Synesthetic Flavor: Better For You final desktop alignment */
+@media (min-width: 1400px) {
+  html body.sfv-page #applications .sfv-copy {
+    align-self: start !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits > div {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(1) { grid-column: 1 !important; grid-row: 1 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(2) { grid-column: 2 !important; grid-row: 1 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(3) { grid-column: 3 !important; grid-row: 1 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(4) { grid-column: 4 !important; grid-row: 1 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(5) { grid-column: 1 !important; grid-row: 2 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(6) { grid-column: 2 !important; grid-row: 2 !important; }
+  html body.sfv-page #applications .sfv-benefits > div:nth-child(7) { grid-column: 3 !important; grid-row: 2 !important; }
+}
+
+/* Synesthetic Flavor: emotion section matched to the supplied desktop reference */
+@media (min-width: 1024px) {
+  html body.sfv-page #emotion.sfv-emotion {
+    position: relative !important;
+    height: 802px !important;
+    min-height: 802px !important;
+    overflow: hidden !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 802px !important;
+    min-height: 802px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content {
+    position: absolute !important;
+    top: 80px !important;
+    left: max(72px, calc((100vw - 1238px) / 2)) !important;
+    width: 700px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content .sf-page-heading {
+    width: 700px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 61.333px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 80px !important;
+    letter-spacing: -1.44px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content .sf-page-subtitle {
+    width: 700px !important;
+    margin: 97px 0 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons {
+    display: grid !important;
+    grid-template-columns: repeat(4, 130px) !important;
+    grid-template-rows: repeat(2, 52px) !important;
+    column-gap: 0 !important;
+    row-gap: 17px !important;
+    width: 520px !important;
+    height: 121px !important;
+    margin: 7px 0 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 130px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons span {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons small {
+    margin-top: 4px !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 13px !important;
+    text-align: center !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content blockquote {
+    position: absolute !important;
+    top: 578px !important;
+    left: 876px !important;
+    box-sizing: border-box !important;
+    width: 392px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 27px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure {
+    position: absolute !important;
+    top: 164px !important;
+    left: calc(50vw + 230px) !important;
+    width: 392px !important;
+    height: 481px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure picture,
+  html body.sfv-page #emotion .sfv-emotion__grid > figure img {
+    display: block !important;
+    width: 392px !important;
+    height: 481px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure img {
+    object-fit: cover !important;
+  }
+}
+
+/* Synesthetic Flavor: lock the Emotion image to the reference top edge */
+@media (min-width: 1024px) {
+  html body.sfv-page #emotion .sfv-emotion__grid > figure {
+    align-self: start !important;
+    justify-self: start !important;
+  }
+}
+
+/* Synesthetic Flavor: Emotion quote placement after the image */
+@media (min-width: 1024px) {
+  html body.sfv-page #emotion .sfv-emotion__grid > blockquote {
+    position: absolute !important;
+    top: 658px !important;
+    left: calc(50vw + 257px) !important;
+    box-sizing: border-box !important;
+    width: 365px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 27px !important;
+  }
+}
+
+/* Synesthetic Flavor: emphasized partnership subtitle. */
+html body.sfv-page section#partner .sfv-partner__heading > p.sf-page-subtitle {
+  width: 100% !important;
+  max-width: none !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 24px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+  text-align: left !important;
+}
+
+html body.sfv-page section#partner > .sfv-container > p.sfv-partner__line {
+  height: 28px !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 28px !important;
+  letter-spacing: 0 !important;
+}
+
+@media (min-width: 960px) {
+  html body.sfv-page section#offerings.sfv-offers {
+    height: 660px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article > h3 {
+    width: 100% !important;
+    min-height: 92px !important;
+    margin-top: 10px !important;
+    padding-inline: 8px !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: clamp(20px, 1.25vw, 24px) !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article > p {
+    width: 100% !important;
+    min-height: 104px !important;
+    margin: 0 !important;
+    padding-inline: 10px !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: clamp(13px, .84vw, 16px) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body.sfv-page section#offerings.sfv-offers {
+    height: 790px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__heading {
+    top: 27px !important;
+    right: max(36px, calc((100vw - 1560px) / 2)) !important;
+    left: max(36px, calc((100vw - 1560px) / 2)) !important;
+    gap: 30px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__heading > h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 88px !important;
+    font-weight: 700 !important;
+    line-height: 96px !important;
+    letter-spacing: -1.76px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__ornament {
+    height: 96px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__ornament > svg {
+    top: -8px !important;
+    width: 16px !important;
+    height: 16px !important;
+    padding: 2px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track {
+    top: 120px !important;
+    bottom: 22px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article {
+    height: 100% !important;
+    padding-top: 66px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offer__icon {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article > h3 {
+    min-height: 60px !important;
+    margin: 18px 0 25px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article > i {
+    margin: 7px 0 20px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article > picture {
+    bottom: 49px !important;
+  }
+
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(1) > picture { width: 140px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(2) > picture { width: 122px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(3) > picture { width: 132px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(4) > picture { width: 125px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(5) > picture { width: 132px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(6) > picture { width: 130px !important; }
+  html body.sfv-page section#offerings .sfv-offers__track article:nth-child(7) > picture { width: 150px !important; }
+}
+
+@media (min-width: 1100px) {
+  html body.sfv-page main h1,
+  html body.sfv-page main h2 {
+    width: min(100%, min(1440px, calc(100vw - 192px))) !important;
+    max-width: min(1440px, calc(100vw - 192px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+html body h1:not(#dsm-type-lock),
+html body .h1,
+html body .display-title,
+html body .hero-title,
+html body [class$="__title--display"] {
+  font-weight: var(--arotec-display-weight) !important;
+}
+
+/* Synesthetic Flavor: refined mobile typography and rhythm for partnership. */
+@media (max-width: 1023px) {
+  html body.sfv-page #partner .sfv-partner__heading h2 {
+    font-size: 30px !important;
+    line-height: 36px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.6px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-subtitle {
+    max-width: 420px !important;
+    margin-top: 14px !important;
+    font-size: 17px !important;
+    line-height: 26px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    align-items: start !important;
+    padding: 20px 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article > span {
+    align-self: start !important;
+    margin-top: 2px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article h3 {
+    margin: 0 !important;
+    font-size: 22px !important;
+    line-height: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.22px !important;
+    text-align: left !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article p {
+    margin: 6px 0 0 !important;
+    font-size: 17px !important;
+    line-height: 26px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach {
+    margin-top: 32px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach h3 {
+    margin: 4px 0 0 !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
+    letter-spacing: -0.3px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach > p:not(.sfv-partner__eyebrow) {
+    margin-top: 16px !important;
+    font-size: 17px !important;
+    line-height: 26px !important;
+  }
+}
+
+/* Synesthetic Flavor: balanced desktop partnership composition. */
+@media (min-width: 1024px) {
+  html body.sfv-page #partner,
+  html body.sfv-page #partner > .sfv-container,
+  html body.sfv-page #partner .sfv-partner__grid {
+    height: 760px !important;
+    min-height: 760px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading h2 {
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 61.333px !important;
+    line-height: 80px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -1.44px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-subtitle {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features {
+    top: 226px !important;
+    width: 348px !important;
+    height: auto !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article {
+    box-sizing: border-box !important;
+    width: 348px !important;
+    min-height: 122px !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    padding: 8px 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article > span {
+    align-self: start !important;
+    margin-top: 36px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article h3 {
+    margin: 0 !important;
+    font-size: 26px !important;
+    line-height: 30px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.52px !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article p {
+    margin: 5px 0 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach {
+    top: 226px !important;
+    width: 279px !important;
+    height: auto !important;
+    padding-top: 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach h3 {
+    margin: 8px 0 0 !important;
+    font-size: 34px !important;
+    line-height: 42px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.68px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach > p:not(.sfv-partner__eyebrow) {
+    margin: 14px 0 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__promise {
+    position: static !important;
+    box-sizing: border-box !important;
+    width: 279px !important;
+    height: 58px !important;
+    margin: 14px 0 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__promise strong {
+    font-size: 12px !important;
+    line-height: 13px !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__line {
+    top: auto !important;
+    bottom: 18px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+
+/* Synesthetic Flavor: icon scale and label alignment from the supplied reference. */
+html body.sfv-page #emotion .sfv-emotion__icons > div {
+  width: 44px !important;
+  min-width: 44px !important;
+  display: grid !important;
+  justify-items: center !important;
+  align-content: start !important;
+}
+
+html body.sfv-page #emotion .sfv-emotion__icons > div > span {
+  width: 44px !important;
+  height: 44px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+html body.sfv-page #emotion .sfv-emotion__icons > div > span svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+html body.sfv-page #emotion .sfv-emotion__icons > div > small {
+  margin-top: 6px !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 13px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+@media (min-width: 1024px) {
+  html body.sfv-page #emotion .sfv-emotion__icons {
+    grid-template-columns: repeat(4, 44px) !important;
+    column-gap: 89px !important;
+    width: 443px !important;
+  }
+}
+
+/* Synesthetic Flavor: desktop partnership matched to the supplied 1885 x 936 reference. */
+@media (min-width: 1024px) {
+  html body.sfv-page #partner,
+  html body.sfv-page #partner > .sfv-container,
+  html body.sfv-page #partner .sfv-partner__grid,
+  html body.sfv-page #partner .sfv-partner__grid > figure {
+    height: 936px !important;
+    min-height: 936px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading {
+    top: 101px !important;
+    left: max(24px, calc((100vw - 1237px) / 2)) !important;
+    width: 850px !important;
+    height: auto !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading h2 {
+    margin: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 61.333px !important;
+    line-height: 80px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -1.44px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__rule {
+    display: none !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-subtitle {
+    width: 850px !important;
+    margin: 12px 0 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features {
+    top: 311px !important;
+    left: max(24px, calc((100vw - 1237px) / 2)) !important;
+    width: 348px !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 348px !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: auto !important;
+    row-gap: 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article {
+    box-sizing: border-box !important;
+    width: 348px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    padding: 4px 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article > span {
+    align-self: start !important;
+    margin-top: 39px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article h3 {
+    margin: 0 !important;
+    font-size: 26px !important;
+    line-height: 30px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.52px !important;
+    white-space: nowrap !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article p {
+    margin: 5px 0 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach {
+    top: 311px !important;
+    left: max(388px, calc((100vw - 1237px) / 2 + 364px)) !important;
+    box-sizing: border-box !important;
+    width: 301px !important;
+    height: auto !important;
+    padding: 0 0 0 21px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__eyebrow {
+    width: 279px !important;
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach h3 {
+    width: 279px !important;
+    margin: 8px 0 0 !important;
+    font-size: 34px !important;
+    line-height: 42px !important;
+    letter-spacing: -0.68px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach > p:not(.sfv-partner__eyebrow) {
+    width: 279px !important;
+    margin: 14px 0 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__promise {
+    position: static !important;
+    box-sizing: border-box !important;
+    width: 279px !important;
+    height: 58px !important;
+    margin: 14px 0 0 !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__grid > figure > picture:first-child {
+    top: 87px !important;
+    left: calc(50vw + 374px) !important;
+    width: 247px !important;
+    height: 743px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__grid > figure > picture:first-child img {
+    width: 247px !important;
+    height: 743px !important;
+    object-fit: cover !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__analysis {
+    top: 376px !important;
+    left: calc(50vw + 306px) !important;
+    width: 322px !important;
+    height: 293px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__analysis img {
+    width: 322px !important;
+    height: 293px !important;
+    object-fit: cover !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__line {
+    top: auto !important;
+    bottom: 48px !important;
+    left: max(24px, calc((100vw - 1237px) / 2)) !important;
+    width: 625px !important;
+    height: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__line > span,
+  html body.sfv-page #partner .sfv-partner__line > svg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-subtitle {
+    margin-top: 26px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features {
+    align-self: start !important;
+    row-gap: 5px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__features article:nth-child(4) {
+    margin-top: 4px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach {
+    align-self: start !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__approach > p:not(.sfv-partner__eyebrow) {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__promise {
+    margin-top: 10px !important;
+  }
+
+  html body.sfv-page #partner .sfv-partner__analysis {
+    left: calc(50vw + 298px) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html body.sfv-page #partner .sfv-partner__heading .sf-page-subtitle {
+    width: 850px !important;
+    margin: 26px 0 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 32px !important;
+    text-align: center !important;
+  }
+}
+
+/* Synesthetic Flavor: exact desktop emotion composition from the supplied reference. */
+@media (min-width: 1024px) {
+  #emotion .sfv-emotion__content h2 {
+    font-size: 84px !important;
+    line-height: 80px !important;
+    letter-spacing: -1.68px !important;
+  }
+
+  #emotion .sfv-emotion__icons {
+    grid-template-columns: repeat(4, 44px) !important;
+    column-gap: 89px !important;
+    width: 443px !important;
+    margin-top: 29px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html body.sfv-page #emotion .sfv-emotion__grid > blockquote {
+    width: 392px !important;
+    white-space: nowrap !important;
+  }
+}
+
+html body.sfv-page #partner #sfv-partner-title {
+  max-width: 850px !important;
+  padding: 0 !important;
+  font-size: clamp(32px, 3.4vw, 64px) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important;
+  text-wrap: balance !important;
+}
+
+@media (max-width: 640px) {
+  html body.sfv-page #partner #sfv-partner-title {
+    font-size: 32px !important;
+    line-height: 38px !important;
+    letter-spacing: -0.64px !important;
+  }
+}
+
+/* Synesthetic Flavor: responsive Emotion layout without horizontal scrolling */
+@media (max-width: 1023px) {
+  html body.sfv-page #emotion.sfv-emotion {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 52px 24px 64px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content .sf-page-heading {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: clamp(42px, 10vw, 58px) !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -1px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__content .sf-page-subtitle {
+    width: 100% !important;
+    margin: 48px 0 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 56px) !important;
+    gap: 18px 0 !important;
+    width: 100% !important;
+    height: 130px !important;
+    margin: 28px 0 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: auto !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons span {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons small {
+    margin-top: 4px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    line-height: 12px !important;
+    text-align: center !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure {
+    position: static !important;
+    align-self: center !important;
+    width: min(392px, 100%) !important;
+    height: auto !important;
+    margin: 52px auto 0 !important;
+    padding: 0 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure picture,
+  html body.sfv-page #emotion .sfv-emotion__grid > figure img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 392 / 481 !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > figure img {
+    object-fit: cover !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__grid > blockquote {
+    position: static !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
+    width: min(392px, 100%) !important;
+    margin: 12px auto 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 27px !important;
+  }
+}
+
+/* Synesthetic Flavor: one consistent icon scale across every content section */
+html body.sfv-page main section:is(#taste, #culture, #science, #experience, #memory, #about, #applications, #emotion, #partner, #offerings)[id][class] div > span:has(> svg) {
+  box-sizing: border-box !important;
+  width: 54px !important;
+  min-width: 54px !important;
+  max-width: 54px !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  flex-basis: 54px !important;
+}
+
+html body.sfv-page main section:is(#taste, #culture, #science, #experience, #memory, #about, #applications, #emotion, #partner, #offerings)[id][class] div > span:has(> svg) > svg {
+  width: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+}
+
+/* Synesthetic Flavor: final normalized icon dimensions across all real icon groups */
+html body.sfv-page #taste .sfv-icon,
+html body.sfv-page #science .sfv-sense__icon,
+html body.sfv-page #experience .sfv-delicious__icon,
+html body.sfv-page #memory .sfv-memory__items figcaption > i,
+html body.sfv-page #about .sfv-wellbeing__concepts > div > span,
+html body.sfv-page #applications .sfv-benefits > div > span,
+html body.sfv-page #emotion .sfv-emotion__icons > div > span,
+html body.sfv-page #partner .sfv-partner__features > div > span,
+html body.sfv-page #offerings .sfv-offer__icon {
+  box-sizing: border-box !important;
+  width: 54px !important;
+  min-width: 54px !important;
+  max-width: 54px !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  flex-basis: 54px !important;
+}
+
+html body.sfv-page #taste .sfv-icon > i,
+html body.sfv-page #memory .sfv-memory__items figcaption > i {
+  font-size: 26px !important;
+  line-height: 1 !important;
+}
+
+html body.sfv-page #science .sfv-sense__icon > svg,
+html body.sfv-page #experience .sfv-delicious__icon > svg,
+html body.sfv-page #about .sfv-wellbeing__concepts > div > span > svg,
+html body.sfv-page #applications .sfv-benefits > div > span > svg,
+html body.sfv-page #emotion .sfv-emotion__icons > div > span > svg,
+html body.sfv-page #partner .sfv-partner__features > div > span > svg,
+html body.sfv-page #offerings .sfv-offer__icon > svg {
+  width: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+}
+
+/* Synesthetic Flavor: include every Partner feature item in the shared icon scale */
+html body.sfv-page #partner .sfv-partner__features > * > span {
+  box-sizing: border-box !important;
+  width: 54px !important;
+  min-width: 54px !important;
+  max-width: 54px !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  flex-basis: 54px !important;
+}
+
+html body.sfv-page #partner .sfv-partner__features > * > span > svg {
+  width: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+}
+
+/* Synesthetic Flavor: prevent Sensory orbit icons from touching on narrow screens */
+@media (max-width: 767px) {
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Trigeminal sensations"] {
+    margin-top: 4px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Texture, viscosity"] {
+    margin-top: 8px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Temperature changes"] {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Visual cues"] {
+    margin-top: 30px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Feelings influence"] {
+    margin-top: 6px !important;
+  }
+}
+
+/* Synesthetic Flavor: strict non-overlap spacing for the Sensory orbit at 360px and below */
+@media (max-width: 380px) {
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Trigeminal sensations"] {
+    margin-top: 8px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Texture, viscosity"] {
+    margin-top: 16px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Temperature changes"] {
+    margin-top: 26px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Visual cues"] {
+    margin-top: 50px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="What we anticipate"] {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Feelings influence"] {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Past experiences"] {
+    margin-top: 8px !important;
+  }
+}
+
+/* Synesthetic Flavor: preserve strict icon separation on extra-narrow mobile screens */
+@media (max-width: 340px) {
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Trigeminal sensations"] {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Texture, viscosity"] {
+    margin-top: 24px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Temperature changes"] {
+    margin-top: 36px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Visual cues"] {
+    margin-top: 60px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="What we anticipate"] {
+    margin-top: 21px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Feelings influence"] {
+    margin-top: 18px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Past experiences"] {
+    margin-top: 18px !important;
+  }
+}
+
+/* Synesthetic Flavor: continuous strict separation across the complete small-mobile range */
+@media (max-width: 390px) {
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Trigeminal sensations"] {
+    margin-top: 12px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Texture, viscosity"] {
+    margin-top: 24px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Temperature changes"] {
+    margin-top: 36px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Visual cues"] {
+    margin-top: 60px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="What we anticipate"] {
+    margin-top: 21px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Feelings influence"] {
+    margin-top: 18px !important;
+  }
+
+  html body.sfv-page #science .sfv-sense[data-sfv-sense^="Past experiences"] {
+    margin-top: 18px !important;
+  }
+}
+
+/* Synesthetic Flavor: keep Emotion icon labels clear of the following row */
+@media (max-width: 767px) {
+  html body.sfv-page #emotion .sfv-emotion__icons {
+    row-gap: 28px !important;
+  }
+
+  html body.sfv-page #emotion .sfv-emotion__icons > div {
+    min-height: 82px !important;
+  }
+}
+
+/* Synesthetic Flavor: separate both Emotion icon rows at every viewport size */
+html body.sfv-page #emotion .sfv-emotion__icons {
+  row-gap: 36px !important;
+}
+
+html body.sfv-page #emotion .sfv-emotion__icons > div {
+  box-sizing: border-box !important;
+  min-height: 92px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Global display/supporting specification updated on 2026-09-10:
+   Display: DM Sans 700, 72px / 80px, -1.44px letter spacing.
+   Supporting: DM Sans 500, 24px / 32px.
+   site-typography.js reads the role-marked rules for Title Case, including
+   dynamically rendered copy. Keep casing scope and font scope together.
+   Important declarations in this sublayer outrank legacy page overrides,
+   including declarations directly in the parent display-headings layer.
+   Keep card titles, navigation and diagram labels at their own scale.
+   Applied Products' art-directed hero is an explicit local-scale exception
+   restored to the original composition on 2026-09-10. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body :is(
+    #research-focus-title,
+    #ci-help-title,
+    #ci-form-title,
+    .ci-section-title,
+    .brs-v5-routes-heading > h2,
+    .brs-t20-rail > h2,
+    .brs-r22-rail > h2,
+    .commerce-page :is(.section-mini-head, .product-head, .admin-head) h2,
+    .ca-section-heading h2,
+    #adminPanel .admin-toolbar h2,
+    .ap-panel-inner > h2,
+    .ju-section-heading > h2,
+    .pl-section h2,
+    .sakae-section h2,
+    .kb-page :is(.kb-heritage-copy, .kb-expertise, .kb-official) h2,
+    .wwa-copy > h2,
+    .sp-section h2:not(.sp-purpose h2),
+    .cf-section h2,
+    .brs-v3-section h2,
+    .dsw-chapter :is(.depth-heading, .mineral-heading, .application-heading, .principal-heading, .dswb-heading, .dswa-wellness-heading) h2,
+    .wellbeing-title,
+    .section-heading h2,
+    .frame-title h2,
+    .sy-panel__header h2,
+    .he-copy > h2,
+    .platform-showcase-head h2,
+    .bd-stage-heading > h2,
+    h1:not(.ap-hero-title),
+    .h1,
+    .display-title,
+    .hero-title,
+    .page-title,
+    [class$="__title--display"],
+    h2.sf-page-heading,
+    .sfc-country__copy > h2,
+    .sfc-comparison__header > h2,
+    .sfc-cta__copy > h2,
+    .center-head > h2,
+    .home-section-head > div > h2,
+    .platform-slider-intro > h2,
+    .customized-catalog-head > h2,
+    .research-hero-copy > h2,
+    section.dark-band > .section-shell > .feature-panel > h2,
+    section.concept > .section-shell.cta-row h2,
+    .neuro-section > .section-heading > h2,
+    h2.major-heading,
+    h2.ex-section-title,
+    .ex-bridge-copy > h2,
+    .nst-section-heading h2,
+    .nst-disease-spectrum > h2,
+    h2.numbered-heading,
+    .final-cta .cta-copy > h2,
+    .obsi-intro > header > h2,
+    section.story-section > .section-heading h2,
+    .shb-section-heading h2,
+    .shb-closing h2
+  ) {
+    --arotec-title-role: display;
+    font-family: var(--site-font) !important;
+    font-style: normal !important;
+    font-weight: var(--arotec-display-weight) !important;
+    font-size: var(--arotec-display-size) !important;
+    line-height: var(--arotec-display-line-height) !important;
+    letter-spacing: var(--arotec-display-letter-spacing) !important;
+    text-transform: none !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Nested accents must render with the same heading face and weight. */
+  html body :is(
+    #research-focus-title, .ap-panel-inner > h2,
+    #ci-help-title, #ci-form-title, .ci-section-title,
+    .brs-v5-routes-heading > h2, .brs-t20-rail > h2, .brs-r22-rail > h2,
+    .commerce-page :is(.section-mini-head, .product-head, .admin-head) h2,
+    .ca-section-heading h2, #adminPanel .admin-toolbar h2,
+    .ju-section-heading > h2,
+    .pl-section h2, .sakae-section h2,
+    .kb-page :is(.kb-heritage-copy, .kb-expertise, .kb-official) h2,
+    .wwa-copy > h2,
+    .sp-section h2:not(.sp-purpose h2), .cf-section h2, .brs-v3-section h2,
+    .dsw-chapter :is(.depth-heading, .mineral-heading, .application-heading, .principal-heading, .dswb-heading, .dswa-wellness-heading) h2,
+    .wellbeing-title, .section-heading h2, .frame-title h2,
+    .sy-panel__header h2, .he-copy > h2, .platform-showcase-head h2,
+    .bd-stage-heading > h2,
+    h1:not(.ap-hero-title), .h1, .display-title, .hero-title, .page-title,
+    [class$="__title--display"], h2.sf-page-heading,
+    .sfc-country__copy > h2, .sfc-comparison__header > h2, .sfc-cta__copy > h2,
+    .center-head > h2, .home-section-head > div > h2, .platform-slider-intro > h2,
+    .customized-catalog-head > h2, .research-hero-copy > h2,
+    section.dark-band > .section-shell > .feature-panel > h2,
+    section.concept > .section-shell.cta-row h2,
+    .neuro-section > .section-heading > h2, h2.major-heading, h2.ex-section-title,
+    .ex-bridge-copy > h2, .nst-section-heading h2, .nst-disease-spectrum > h2,
+    h2.numbered-heading, .final-cta .cta-copy > h2, .obsi-intro > header > h2,
+    section.story-section > .section-heading h2, .shb-section-heading h2, .shb-closing h2
+  ) :where(span, strong, b, em, a):not(.pl-subtitle, .pl-subtitle *) {
+    font-family: inherit !important;
+    font-style: normal !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: none !important;
+  }
+
+  @media (max-width: 767px) {
+    html body :is(h1, .hero-title, .page-title, .sf-page-heading),
+    html body :is(h1, .hero-title, .page-title, .sf-page-heading) :where(span, strong, b, em) {
+      white-space: normal !important;
+    }
+  }
+}
+
+/* Role-marked supporting copy is deliberately narrower than all body paragraphs
+   or suffix-based diagram/card selectors. The helper uses this same scope. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body :is(main, #site-shell) :is(
+    .subtitle, .subheading, .lead, .hero-lead, .hero-subtitle, .hero__subtitle,
+    .page-lead, .page-subtitle, .section-lead, .section-subtitle,
+    .section-heading__subtitle, .commerce-lead, .ex-hero-lead, .nst-hero-lede,
+    .opening-subtitle, .native-opening-subtitle,
+    .sfv-hero__lead, .sfc-hero__lead, .sfc-hero__subtitle, .sf-hero__lead,
+    .sfc-country__subtitle, .wellbeing-intro > p, .wellbeing-heading > p,
+    .platform-showcase-head > p,
+    .sf-page-subtitle, .shb-hero-copy > p,
+    .follicle-page .hero-copy > p, .aging-dynamics-body .hero-copy > p,
+    .homeostasis-page .hero__copy > p:not(.eyebrow),
+    .neuro-page .neuro-hero p:last-child,
+    .sy-page .sy-hero__copy > p:not(.sy-eyebrow), .sy-page .sy-hero__copy > h2,
+    .exercise-beauty-content .hero-copy > p, .exercise-health-content .hero-copy > p,
+    .exercise-health-content .hero-copy > h2, .exercise-beauty-content .hero-copy > h2,
+    .sp-lead, .wwa-lead, .cf-lead, .he-lead, .bf-lead, .partners-lead,
+    .kb-hero-lead, .ju-lead, .pl-lead, .pl-subtitle, .sakae-lead,
+    .brs-v5-lead, .brs-a17-lead, .brs-reference-lead,
+    .brs-p18-subtitle, .brs-r22-sublead, .brs-t20-benefit, .brs-r22-benefit,
+    .dswa-cosmetics-subtitle,
+    .research-focus-subtitle, .research-hero-copy > p, .ci-hero-copy > h2,
+    .ci-form-intro, .aso-heading > p, .platform-slider-intro > p,
+    .neuro-page .neuro-hero-inner > h2, .frame-title > p,
+    .section-heading > div > p:not(.eyebrow, .neuro-kicker),
+    .nst-section-heading > div > p:not(.eyebrow, .nst-kicker),
+    .bd-stage-heading > p, .final-cta .cta-copy > p,
+    .shb-section-heading > div > p, .brs-v5-routes-heading > p, .ca-section-heading > div > p,
+    .obsi-intro > header > p:not(.eyebrow), .ex-bridge-copy > p,
+    .wat-sem-strapline, .dswa-wellness-intro,
+    .dswb-copy > p:not(.sp-eyebrow), .dswb-copy > div > h2 + p,
+    .commerce-page .section-mini-head > div > p, .sp-purpose > h2,
+    .ju-section-heading > p, .section-heading > p:not(.eyebrow, .neuro-kicker),
+    .home-section-head > div > p:not(.eyebrow)
+  ) {
+    --arotec-title-role: supporting;
+    font-family: var(--site-font) !important;
+    font-style: normal !important;
+    font-weight: var(--arotec-supporting-weight) !important;
+    font-size: var(--arotec-supporting-size) !important;
+    line-height: var(--arotec-supporting-line-height) !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+  }
+
+  html body :is(main, #site-shell) :is(
+    .subtitle, .subheading, .lead, .hero-lead, .hero-subtitle, .hero__subtitle,
+    .page-lead, .page-subtitle, .section-lead, .section-subtitle,
+    .section-heading__subtitle, .commerce-lead, .ex-hero-lead, .nst-hero-lede,
+    .opening-subtitle, .native-opening-subtitle,
+    .sfv-hero__lead, .sfc-hero__lead, .sfc-hero__subtitle, .sf-hero__lead,
+    .sfc-country__subtitle, .wellbeing-intro > p, .wellbeing-heading > p,
+    .platform-showcase-head > p,
+    .sf-page-subtitle, .shb-hero-copy > p,
+    .follicle-page .hero-copy > p, .aging-dynamics-body .hero-copy > p,
+    .homeostasis-page .hero__copy > p:not(.eyebrow),
+    .neuro-page .neuro-hero p:last-child,
+    .sy-page .sy-hero__copy > p:not(.sy-eyebrow), .sy-page .sy-hero__copy > h2,
+    .exercise-beauty-content .hero-copy > p, .exercise-health-content .hero-copy > p,
+    .exercise-health-content .hero-copy > h2, .exercise-beauty-content .hero-copy > h2,
+    .sp-lead, .wwa-lead, .cf-lead, .he-lead, .bf-lead, .partners-lead,
+    .kb-hero-lead, .ju-lead, .pl-lead, .pl-subtitle, .sakae-lead,
+    .brs-v5-lead, .brs-a17-lead, .brs-reference-lead,
+    .brs-p18-subtitle, .brs-r22-sublead, .brs-t20-benefit, .brs-r22-benefit,
+    .dswa-cosmetics-subtitle,
+    .research-focus-subtitle, .research-hero-copy > p, .ci-hero-copy > h2,
+    .ci-form-intro, .aso-heading > p, .platform-slider-intro > p,
+    .neuro-page .neuro-hero-inner > h2, .frame-title > p,
+    .section-heading > div > p:not(.eyebrow, .neuro-kicker),
+    .nst-section-heading > div > p:not(.eyebrow, .nst-kicker),
+    .bd-stage-heading > p, .final-cta .cta-copy > p,
+    .shb-section-heading > div > p, .brs-v5-routes-heading > p, .ca-section-heading > div > p,
+    .obsi-intro > header > p:not(.eyebrow), .ex-bridge-copy > p,
+    .wat-sem-strapline, .dswa-wellness-intro,
+    .dswb-copy > p:not(.sp-eyebrow), .dswb-copy > div > h2 + p,
+    .commerce-page .section-mini-head > div > p, .sp-purpose > h2,
+    .ju-section-heading > p, .section-heading > p:not(.eyebrow, .neuro-kicker),
+    .home-section-head > div > p:not(.eyebrow)
+  ) :where(span, strong, b, em, a) {
+    font-family: inherit !important;
+    font-style: normal !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: none !important;
+  }
+}
+
+/* The ingredient rail is narrower than the shared display size. Permit real
+   wrapping instead of letting a legacy nowrap title cover its adjacent figure. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body :is(.brs-t20-rail, .brs-r22-rail) > h2 {
+    white-space: normal !important;
+    text-wrap: wrap !important;
+    max-width: 100% !important;
+  }
+
+  /* Full-sized display and supporting copy need separate rows before the
+     desktop Exposure Routes header has enough room for both text blocks. */
+  @media (max-width: 1399px) {
+    html body .brs-v5-routes-heading {
+      display: block !important;
+    }
+
+    html body .brs-v5-routes-heading > :is(h2, p) {
+      white-space: normal !important;
+      max-width: 100% !important;
+    }
+
+    html body .brs-v5-routes-heading > .brs-v5-rule {
+      margin: 16px 0 !important;
+    }
+  }
+}

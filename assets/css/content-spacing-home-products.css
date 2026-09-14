@@ -1,0 +1,56 @@
+/* Home and product-scene foregrounds; photographic layers stay untouched. */
+@layer arotec-content-layout {
+  /* On smaller screens preserve the original artwork's containing block. */
+  html body #research-solutions .framework-foreground { display: contents; }
+  @media (min-width: 1200px) {
+    html body .hero-slideshow > .section-shell {
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: var(--arotec-content-right) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+      justify-self: start !important;
+    }
+    html body .hero-slideshow .hero-content { padding-left: 0 !important; }
+
+    /* The radial figure and its labels form one foreground diagram. */
+    html body #biology-experience .biology-canvas {
+      width: min(1448px, calc(100% - var(--arotec-content-left) - var(--arotec-content-right))) !important;
+      max-width: none !important;
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: var(--arotec-content-right) !important;
+    }
+    /* The live labels and clipped picture share one foreground coordinate
+       system. Only this group fits between gutters; the molecular canvas stays. */
+    html body #research-solutions .framework-foreground {
+      display: block;
+      position: absolute;
+      inset: 0;
+      transform-origin: 0 0;
+      translate: var(--framework-foreground-x, 0px) var(--framework-foreground-y, 0px) !important;
+      scale: var(--framework-foreground-scale, 1);
+    }
+    html body #research-solutions .framework-header {
+      left: var(--framework-content-x) !important;
+      width: var(--framework-content-width) !important;
+    }
+    /* The fitted desktop panels are fully visible; keep the original horizontal
+       exploration behavior only on smaller screens. */
+    html body #research-solutions .framework-scroll { overflow-x: hidden !important; }
+    html body #research-solutions .framework-scroll-hint { display: none !important; }
+    html body #research-focus :is(.research-focus-heading, .research-focus-navigation) {
+      left: var(--arotec-content-left) !important;
+      right: var(--arotec-content-right) !important;
+    }
+
+    /* Product-bound labels stay with their photograph; the editorial copy and
+       framed Bespoke card use the shared foreground gutter. */
+    html body.ap-products-page #main.ap-main :is(.ap-intro, .ap-bespoke) {
+      left: var(--arotec-content-left) !important;
+    }
+    html body.ap-products-page #main.ap-main .ap-panel-inner {
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: var(--arotec-content-right) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+      padding-left: 0 !important;
+    }
+  }
+}

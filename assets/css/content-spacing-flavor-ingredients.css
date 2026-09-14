@@ -1,0 +1,156 @@
+/* Foreground-only desktop gutter. Full-bleed photos, their containing blocks,
+   and the Bio-Responsive reference sheets stay at their authored coordinates.
+   A measured role is applied once, to the outermost foreground group only. */
+@layer arotec-content-layout {
+  @media (min-width: 1200px) {
+    html body.sfv-page :is(
+      .sfv-hero__copy,
+      .sfv-culture__grid,
+      .sfv-sensory__grid,
+      .sfv-delicious,
+      .sfv-memory__grid,
+      .sfv-wellbeing__content,
+      #applications .sfv-copy,
+      .sfv-better__details,
+      .sfv-emotion__content,
+      .sfv-emotion__grid > blockquote,
+      .sfv-offers__heading,
+      .sfv-offers__track,
+      .sfv-offers__actions
+    ) {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+      box-sizing: border-box !important;
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+    }
+
+    /* This caption is a sibling of the copy, not a child of it. Let it follow
+       the real content height instead of retaining the old top:658px anchor
+       after both foreground groups have been aligned to the same left edge. */
+    html body.sfv-page #emotion .sfv-emotion__grid > blockquote {
+      position: relative !important;
+      inset: auto !important;
+      margin: 0 0 64px !important;
+    }
+
+    /* Remove only inset padding that would otherwise add a second gutter.
+       Top/bottom rhythm, font sizes, and the authored 1020px heading width stay. */
+    html body.sfv-page :is(
+      .sfv-sensory__intro,
+      .sfv-wellbeing__content,
+      #applications .sfv-copy,
+      .sfv-emotion__content
+    ) {
+      padding-left: 0 !important;
+    }
+
+    /* Previous heading-only logo calibrations cannot compound the new copy
+       anchor. Widths and all other authored typography remain untouched. */
+    html body.sfv-page :is(
+      #sfv-hero-title,
+      #sfv-culture-title,
+      #sfv-equation-title,
+      #sfv-memory-title,
+      #sfv-wellbeing-title,
+      #sfv-better-title,
+      #sfv-emotion-title,
+      #sfv-partner-title,
+      #sfv-offers-title
+    ) {
+      left: 0 !important;
+    }
+
+    /* Retain each Offer photo inside its foreground card. */
+    html body.sfv-page .sfv-offers__track article > picture {
+      max-width: 100% !important;
+    }
+
+    /* Partner's figure covers its whole grid and is a background panel.
+       Rebase the two text columns without moving that grid/figure. */
+    html body.sfv-page #partner :is(.sfv-partner__heading, .sfv-partner__features, .sfv-partner__line) {
+      left: var(--arotec-content-left, 150px) !important;
+    }
+    html body.sfv-page #partner .sfv-partner__approach {
+      left: calc(var(--arotec-content-left, 150px) + 364px) !important;
+    }
+    html body.sfv-page #partner .sfv-partner__grid::before {
+      left: calc(var(--arotec-content-left, 150px) + 365px) !important;
+    }
+
+    html body.brs-page :is(
+      .brs-v5-hero-copy,
+      .brs-v5-exposure-inner,
+      .brs-a17-copy,
+      .brs-a17-body,
+      .brs-reference-container,
+      .brs-p18-heading,
+      .brs-p18-grid,
+      .brs-t20-layout,
+      .brs-r22-layout
+    ) {
+      --arotec-foreground-measure: 1;
+      translate: var(--arotec-foreground-shift-x, 0px) 0 !important;
+      box-sizing: border-box !important;
+      max-width: calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px)) !important;
+    }
+
+    html body.brs-page .brs-v5-hero-copy {
+      max-width: min(760px, calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px))) !important;
+    }
+    html body.brs-page .brs-reference-container {
+      max-width: min(1480px, calc(100vw - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px))) !important;
+    }
+
+    html body.brs-page :is(
+      .brs-v5-exposure-inner,
+      .brs-a17-copy,
+      .brs-a17-body,
+      .brs-p18-heading,
+      .brs-t20-layout,
+      .brs-r22-layout
+    ) {
+      padding-left: 0 !important;
+    }
+
+    /* Background sheets retain their container-query widths. Foreground
+       columns begin at the left gutter and retain the sheet's right edge,
+       capped above so the viewport's right gutter also stays clear. */
+    html body.brs-page :is(.brs-v5-exposure-inner, .brs-a17-copy, .brs-a17-body) {
+      width: calc(100% - var(--arotec-content-left, 150px) + max(0px, (100vw - 1280px) / 2)) !important;
+    }
+    html body.brs-page .brs-t20-layout {
+      width: calc(100% - var(--arotec-content-left, 150px) + max(0px, (100vw - 1440px) / 2)) !important;
+    }
+    html body.brs-page :is(.brs-p18-heading, .brs-r22-layout) {
+      width: calc(100% - var(--arotec-content-left, 150px) + max(0px, (100vw - 1672px) / 2)) !important;
+    }
+    html body.brs-page .brs-p18-grid {
+      width: calc(100% - var(--arotec-content-left, 150px) + max(0px, (100vw - 1672px) / 2) - 1.45cqw) !important;
+    }
+
+    /* The background artwork keeps its own clipping box; only copy may extend
+       left of the centered 1280px sheet on wide desktop screens. */
+    html body.brs-page #approach .brs-a17-hero {
+      overflow: visible !important;
+    }
+    html body.brs-page .brs-more-actions--introduction {
+      padding-left: var(--arotec-content-left, 150px) !important;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    /* Stacked Memory copy needs natural height so its boxed photos do not
+       intrude into the next section. Preserve the former 600px minimum. */
+    html body.sfv-page #memory .sfv-memory__intro {
+      display: block !important;
+    }
+    html body.sfv-page #memory .sfv-memory__body {
+      margin-top: 26px !important;
+    }
+    html body.sfv-page #memory.sfv-memory,
+    html body.sfv-page #memory .sfv-memory__grid {
+      height: auto !important;
+      min-height: 600px !important;
+    }
+  }
+}

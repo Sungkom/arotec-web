@@ -11,185 +11,240 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.min.css?v=20260824-exercise-insight-menu-v36">
-  <link rel="stylesheet" href="assets/css/index-home.css?v=20260810-concept-card-font-unified-v22">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
+  <link rel="stylesheet" href="assets/css/index-home.css?v=20260910-typography-title-case-v3">
   <link rel="stylesheet" href="assets/css/home-hero-slides.css?v=20260715-hero-slides-display-fix">
   <link rel="stylesheet" href="assets/css/header-theme.css?v=20260715-home-footer-cleanup">
   <link rel="stylesheet" href="style.css?v=20260810-product-card-icons-v24">
-  <link rel="stylesheet" href="assets/css/site-navigation.min.css?v=20260828-utility-frame-minus20-bg-full-v56">
+  <link rel="stylesheet" href="assets/css/site-navigation.min.css?v=20260910-closed-panel-shadow-v1">
+    <link rel="stylesheet" href="assets/vendor/phosphor-icons/regular/style.css">
+    <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20260911-toolbar-removed-v1">
+    <link rel="stylesheet" href="assets/css/home-research-focus.css?v=20260910-white-reference-v4">
+    <link rel="stylesheet" href="assets/css/home-research-framework.css?v=20260911-framework-smaller-20-v1">
+    <link rel="stylesheet" href="assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
+    <link rel="stylesheet" href="assets/css/site-typography.css?v=20260910-typography-complete-v5"><script src="assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
+    <script src="assets/js/applied-solutions-navigation.js?v=20260909-v1" defer></script>
+    <script src="assets/js/kobayashi-navigation.js?v=20260909-v1" defer></script>
   </head>
   <body data-page="home" data-root="">
     <a class="skip-link" href="#main">Skip to content</a>
     <div id="site-shell"></div>
 
+    <!-- Biology: all native text uses the original 1448 × 1131 reference coordinates. -->
+    <template id="biology-experience-template">
+      <section class="biology-experience" id="biology-experience" aria-labelledby="wellbeing-title" lang="en" data-active-stage="0">
+        <div class="biology-viewport" role="region" aria-label="Biology of Human Experience diagram" tabindex="0">
+          <div class="biology-canvas">
+            <div class="biology-artwork">
+              <img class="biology-art" src="assets/images/biology-human-experience-art.webp" width="1419" height="1108" loading="lazy" decoding="async" alt="Nine colored radial forms connected in a continuous curve, with a returning feedback loop.">
+              <div class="biology-nodes" aria-hidden="true">
+                <span class="biology-node" data-biology-node="0" style="--stage-color:#256b32;left:33.218232%;top:31.741821%"></span>
+                <span class="biology-node" data-biology-node="1" style="--stage-color:#087d86;left:41.298343%;top:36.339523%"></span>
+                <span class="biology-node" data-biology-node="2" style="--stage-color:#067ba0;left:52.762431%;top:41.909814%"></span>
+                <span class="biology-node" data-biology-node="3" style="--stage-color:#1755a6;left:61.256906%;top:48.541114%"></span>
+                <span class="biology-node" data-biology-node="4" style="--stage-color:#6024a3;left:65.953039%;top:57.913351%"></span>
+                <span class="biology-node" data-biology-node="5" style="--stage-color:#962b9f;left:62.845304%;top:67.992927%"></span>
+                <span class="biology-node" data-biology-node="6" style="--stage-color:#bf4726;left:55.248619%;top:73.916888%"></span>
+                <span class="biology-node" data-biology-node="7" style="--stage-color:#ba333d;left:46.477901%;top:71.529620%"></span>
+                <span class="biology-node" data-biology-node="8" style="--stage-color:#9c650b;left:65.883978%;top:84.792219%"></span>
+              </div>
+            </div>
+            <header class="biology-heading">
+              <p class="biology-eyebrow">A&amp;S Human Experience Research</p>
+              <h2 id="wellbeing-title">The Biology of Human Experience</h2>
+              <p class="biology-subtitle">How the world around us becomes perception, feeling, behavior and wellbeing.</p>
+            </header>
+            <div class="biology-phases"><span class="biology-phase biology-signals">Signals</span><span class="biology-phase biology-regulation">Regulation</span><span class="biology-phase biology-outcomes">Outcomes</span><span class="biology-feedback" aria-label="Feedback loop"><span aria-hidden="true"><span style="left:21.339779%;top:53.580902%;transform:rotate(88deg)">F</span><span style="left:21.356141%;top:54.774536%;transform:rotate(86deg)">E</span><span style="left:21.405228%;top:55.968170%;transform:rotate(84deg)">E</span><span style="left:21.487039%;top:57.161804%;transform:rotate(82deg)">D</span><span style="left:21.601575%;top:58.355438%;transform:rotate(80deg)">B</span><span style="left:21.748835%;top:59.549072%;transform:rotate(78deg)">A</span><span style="left:21.928819%;top:60.742706%;transform:rotate(76deg)">C</span><span style="left:22.141528%;top:61.936340%;transform:rotate(74deg)">K</span><span style="left:22.665119%;top:64.323607%;transform:rotate(70deg)">L</span><span style="left:22.976001%;top:65.517241%;transform:rotate(68deg)">O</span><span style="left:23.319608%;top:66.710875%;transform:rotate(66deg)">O</span><span style="left:23.695939%;top:67.904509%;transform:rotate(64deg)">P</span></span></span></div>
+            <ol class="biology-stages" aria-label="Nine stages of human experience">
+              <li style="--stage-color:#256b32;left:18.922652%;top:24.933687%;width:10.980663%;height:7.957560%;--stage-order:0;--text-left:2.486188cqw;--title-top:0.138122cqw;--copy-top:2.486188cqw">
+                <button class="biology-stage" type="button" data-biology-stage="0" aria-pressed="true">
+                  <span class="biology-stage-number">01</span><span class="biology-stage-content"><span class="biology-stage-title">Surroundings</span><span class="biology-stage-copy">People, places, objects and<br>moments that shape<br>human experience.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#087d86;left:42.403315%;top:25.906278%;width:11.256906%;height:6.012378%;--stage-order:1;--text-left:2.555249cqw;--title-top:0.069061cqw;--copy-top:2.209945cqw">
+                <button class="biology-stage" type="button" data-biology-stage="1" aria-pressed="false">
+                  <span class="biology-stage-number">02</span><span class="biology-stage-content"><span class="biology-stage-title">Exteroception</span><span class="biology-stage-copy">Our senses detect signals<br>from the world around us.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#067ba0;left:58.218232%;top:30.061892%;width:13.950276%;height:7.603890%;--stage-order:2;--text-left:2.624309cqw;--title-top:-0.069061cqw;--copy-top:2.209945cqw">
+                <button class="biology-stage" type="button" data-biology-stage="2" aria-pressed="false">
+                  <span class="biology-stage-number">03</span><span class="biology-stage-content"><span class="biology-stage-title">Synesthetic Integration</span><span class="biology-stage-copy">Information from multiple senses<br>is integrated into unified<br>perception.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#1755a6;left:68.370166%;top:42.705570%;width:15.055249%;height:6.012378%;--stage-order:3;--text-left:2.831492cqw;--title-top:-0.138122cqw;--copy-top:2.209945cqw">
+                <button class="biology-stage" type="button" data-biology-stage="3" aria-pressed="false">
+                  <span class="biology-stage-number">04</span><span class="biology-stage-content"><span class="biology-stage-title">Interoceptive Modulation</span><span class="biology-stage-copy">Internal signals are monitored<br>and dynamically regulated.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#6024a3;left:73.066298%;top:54.641910%;width:14.986188%;height:7.515473%;--stage-order:4;--text-left:2.762431cqw;--title-top:-0.207182cqw;--copy-top:2.140884cqw">
+                <button class="biology-stage" type="button" data-biology-stage="4" aria-pressed="false">
+                  <span class="biology-stage-number">05</span><span class="biology-stage-content"><span class="biology-stage-title">Body–Brain Synergy</span><span class="biology-stage-copy">The body and brain communicate<br>bidirectionally to maintain balance<br>and adaptability.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#962b9f;left:67.610497%;top:67.374005%;width:14.019337%;height:5.835544%;--stage-order:5;--text-left:2.762431cqw;--title-top:-0.207182cqw;--copy-top:2.071823cqw">
+                <button class="biology-stage" type="button" data-biology-stage="5" aria-pressed="false">
+                  <span class="biology-stage-number">06</span><span class="biology-stage-content"><span class="biology-stage-title">Feeling</span><span class="biology-stage-copy">Integrated signals give rise<br>to subjective feelings and states.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#bf4726;left:56.353591%;top:76.215738%;width:11.395028%;height:7.073386%;--stage-order:6;--text-left:2.693370cqw;--title-top:-0.276243cqw;--copy-top:1.795580cqw">
+                <button class="biology-stage" type="button" data-biology-stage="6" aria-pressed="false">
+                  <span class="biology-stage-number">07</span><span class="biology-stage-content"><span class="biology-stage-title">Emotion</span><span class="biology-stage-copy">Feelings are amplified<br>and organized into<br>emotional experiences.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#ba333d;left:35.842541%;top:59.858532%;width:10.773481%;height:7.338638%;--stage-order:7;--text-left:2.900552cqw;--title-top:-0.207182cqw;--copy-top:2.002762cqw">
+                <button class="biology-stage" type="button" data-biology-stage="7" aria-pressed="false">
+                  <span class="biology-stage-number">08</span><span class="biology-stage-content"><span class="biology-stage-title">Behavior</span><span class="biology-stage-copy">Emotions influence<br>decisions, actions and<br>lifestyle choices.</span></span>
+                </button>
+              </li>
+              <li style="--stage-color:#9c650b;left:73.687845%;top:82.051282%;width:15.676796%;height:7.427056%;--stage-order:8;--text-left:2.762431cqw;--title-top:-0.276243cqw;--copy-top:2.071823cqw">
+                <button class="biology-stage" type="button" data-biology-stage="8" aria-pressed="false">
+                  <span class="biology-stage-number">09</span><span class="biology-stage-content"><span class="biology-stage-title">Health · Beauty · Wellbeing</span><span class="biology-stage-copy">Sustained patterns of behavior<br>shape long-term health, beauty<br>and wellbeing.</span></span>
+                </button>
+              </li>
+            </ol>
+            <aside class="biology-attribution">
+              <h3>An Original Framework by Dr. Yen</h3>
+              <p>Developed by A&amp;S founder Dr. Yen, this original nine-stage framework<br>maps how the world around us is sensed, integrated and regulated—<br>then transformed into feeling, emotion, behavior and long-term wellbeing.</p>
+            </aside>
+          </div>
+        </div>
+        <div class="biology-toolbar">
+          <button class="biology-zoom" type="button" data-biology-zoom aria-pressed="false" hidden><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i><span data-biology-zoom-label>Enlarge diagram</span></button>
+        </div>
+      </section>
+    </template>
+
+    <!-- Research focus: editable cards with their original destinations. -->
+    <template id="research-focus-template">
+      <section class="concept research-focus" id="research-focus" aria-labelledby="research-focus-title">
+        <header class="research-focus-heading">
+          <h2 id="research-focus-title">A&amp;S RESEARCH FOCUS</h2>
+          <p class="research-focus-subtitle">SCIENCE OF HUMAN RESPONSE</p>
+          <p class="research-focus-tagline">THE SCIENTIFIC FIELDS WE ARE COMMITTED TO EXPLORING</p>
+        </header>
+        <nav class="research-focus-navigation" aria-label="Explore our research">
+          <p class="research-focus-caption">EXPLORE OUR RESEARCH</p>
+          <div class="research-focus-grid">
+            <a class="research-focus-card" href="pages/exposome.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Exposome</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/human-longevity-aging.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Human Longevity</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/stress-atc.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Neural Pathways &amp; Stress</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="Neuro-Skin-Science.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Neuro Skincare</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/hair-follicle-biology.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Hair Follicle Function</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/homeostasis-regulation.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Homeostasis Regulation</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/olfactory-science.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Olfactory Science</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/neuro-scented-therapy.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Neuro-Scented Therapy</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/synesthesia-inspired-perception.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Synesthetic Perception</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+            <a class="research-focus-card" href="pages/neuroplasticity.html">
+              <div class="research-focus-card-copy"><span class="research-focus-label">EXPLORE</span><h3>Neuroplasticity</h3></div>
+              <span class="research-focus-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+          </div>
+        </nav>
+      </section>
+    </template>
+
     <!-- From Research to Solutions & Products infographic -->
     <template id="research-solutions-template">
-      <section class="research-solutions" id="research-solutions" aria-labelledby="research-solutions-title">
-        <div class="research-shell">
-          <!-- Section 1: Hero Header -->
-          <header class="research-hero" data-research-animate>
-            <div class="research-hero-copy">
-              <h2 id="research-solutions-title">From Research<br>to Solutions &amp; Products</h2>
-              <p>A Translational Framework for Cognitive,<br>Sensory, and Healthy Aging Innovation</p>
-            </div>
+      <section class="science-solution-framework" id="research-solutions" aria-labelledby="research-solutions-title">
+        <p class="framework-scroll-hint">Scroll horizontally to explore the full framework.</p>
+        <div class="framework-scroll" role="region" aria-label="Science-to-Solution framework diagram" tabindex="0">
+          <div class="framework-viewport">
+        <div class="framework-canvas">
+          <header class="framework-header">
+            <h2 class="framework-type framework-title" id="research-solutions-title">A&amp;S Science-to-Solution Framework</h2>
+            <p class="framework-type framework-subtitle">From Science Platform to Solutions &amp; Products</p>
+            <p class="framework-type framework-tagline">Core Research &bull; Translation &bull; Outcomes</p>
           </header>
-
-          <div class="research-stage" data-research-stage>
-            <svg class="research-connector-layer" data-research-connectors aria-hidden="true"></svg>
-            <svg class="research-arrow-layer" data-research-arrows aria-hidden="true"></svg>
-
-            <!-- Section 2: A&S Science Platform -->
-            <section class="research-platform" aria-labelledby="science-platform-title" data-research-animate>
-              <header class="research-platform-heading">
-                <h3 id="science-platform-title">A&amp;S SCIENCE PLATFORM</h3>
-                <p>Core Research Platform / Research Topics</p>
-              </header>
-              <div class="research-topics" aria-label="A&amp;S research topics">
-                <a class="research-topic" href="pages/exposome.html" data-topic="0" data-target-card="bio-response" style="--topic-delay:0" aria-label="Open Exposome Science page">
-                  <span class="research-topic-number">1</span>
-                  <h4>Exposome<br>Science</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Exposome Science.png" alt="" decoding="async"></span>
-                </a>
-                <article class="research-topic" tabindex="0" data-topic="1" data-target-card="sensory" style="--topic-delay:1">
-                  <span class="research-topic-number">2</span>
-                  <h4>Stress<br>Neurobiology</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Stress Neurobiology.png" alt="" decoding="async"></span>
-                </article>
-                <a class="research-topic" href="pages/homeostasis-regulation.html" data-topic="2" data-target-card="bio-response" style="--topic-delay:2" aria-label="Open Homeostasis Regulation page">
-                  <span class="research-topic-number">3</span>
-                  <h4>Homeostasis<br>Regulation</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Homeostasis Regulation.png" alt="" decoding="async"></span>
-                </a>
-                <a class="research-topic" href="pages/human-longevity-aging.html" data-topic="3" data-target-card="aromaceuticals" style="--topic-delay:3" aria-label="Open Human Longevity &amp; Aging page">
-                  <span class="research-topic-number">4</span>
-                  <h4>Longevity<br>&amp; Aging</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Longevity &amp; Aging.png" alt="" decoding="async"></span>
-                </a>
-                <a class="research-topic" href="pages/olfactory-science.html" data-topic="4" data-target-card="olfactory-system" style="--topic-delay:4" aria-label="Open Olfactory Science page" title="View Olfactory Science">
-                  <span class="research-topic-number">5</span>
-                  <h4>Olfactory<br>Science</h4>
-                  <span class="research-topic-icon"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Olfactory Science.png" alt="Olfactory Science" decoding="async"></span>
-                </a>
-                <a class="research-topic" href="pages/synesthesia-inspired-perception.html" data-topic="5" data-target-card="flavors" style="--topic-delay:5" aria-label="Open Synesthesia-Inspired Perception page">
-                  <span class="research-topic-number">6</span>
-                  <h4>Synesthesia-Inspired<br>Perception</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Synesthesia-Inspired Perception.png" alt="" decoding="async"></span>
-                </a>
-                <a class="research-topic" href="pages/neuroplasticity.html" data-topic="6" data-target-card="neuro-cosmetics" style="--topic-delay:6" aria-label="Open Neuroplasticity page">
-                  <span class="research-topic-number">7</span>
-                  <h4>Neuro-<br>plasticity</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Neuro-plasticity.png" alt="" decoding="async"></span>
-                </a>
-                <a class="research-topic" href="pages/neuro-scented-therapy.html" data-topic="7" data-target-card="homeostasis" style="--topic-delay:7" aria-label="Open Neuro-Scented Therapy page">
-                  <span class="research-topic-number">8</span>
-                  <h4>Neuro-Scented<br>Therapy</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Neuro-Scented Therapy.png" alt="" decoding="async"></span>
-                </a>
-                <article class="research-topic" tabindex="0" data-topic="8" data-target-card="neuro-cosmetics" style="--topic-delay:8">
-                  <span class="research-topic-number">9</span>
-                  <h4>Neuro<br>Skincare</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Neuro Skincare.png" alt="" decoding="async"></span>
-                </article>
-                <a class="research-topic" href="pages/hair-follicle-biology.html" data-topic="9" data-target-card="homeostasis" style="--topic-delay:9" aria-label="Open Hair Follicle Biology page">
-                  <span class="research-topic-number">10</span>
-                  <h4>Hair Follicle<br>Biology</h4>
-                  <span class="research-topic-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Hair Follicle Biology.png" alt="" decoding="async"></span>
-                </a>
-              </div>
-            </section>
-
-            <div class="research-flow-grid" aria-label="Translation from research into science solutions and products">
-              <!-- Section 3: A&S Science Core -->
-              <section class="research-core research-axis-node" data-research-core data-research-animate aria-labelledby="science-core-title">
-                <div class="research-double-circle">
-                  <h3 id="science-core-title">A&amp;S<br>SCIENCE<br>CORE</h3>
-                  <i data-lucide="flask-conical" aria-hidden="true"></i>
-                </div>
-              </section>
-
-              <!-- Section 4: Translation -->
-              <section class="research-translation research-axis-node" data-research-translation data-research-animate aria-labelledby="translation-title">
-                <h3 id="translation-title">TRANSLATION</h3>
-                <p>Integration <span aria-hidden="true">•</span> Application <span aria-hidden="true">•</span> Innovation</p>
-              </section>
-
-              <!-- Section 5: Science Solutions & Products -->
-              <section class="research-hub research-axis-node" data-research-hub data-research-animate aria-labelledby="science-solutions-title">
-                <div class="research-single-circle">
-                  <h3 id="science-solutions-title">SCIENCE<br>SOLUTIONS &amp;<br>PRODUCTS</h3>
-                  <p>Solutions and Products<br>Derived from the<br>A&amp;S Science Platform</p>
-                  <i data-lucide="package" aria-hidden="true"></i>
-                </div>
-              </section>
-
-              <!-- Section 6: Product Solution Cards -->
-              <article class="research-product-card card-bio-response" tabindex="0" data-card="bio-response" data-research-animate style="--accent:#a6eb78">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Aroma Bio-Response Ingredients.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Aroma Bio-Response<br>Ingredients</h3>
-                  <ul><li>Botanical Actives</li><li>Aroma Actives</li><li>Bio-Response Actives</li></ul>
-                </div>
-              </article>
-
-              <article class="research-product-card card-sensory" tabindex="0" data-card="sensory" data-research-animate style="--accent:#5fdcff">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Sensory Strategies.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Sensory<br>Strategies</h3>
-                  <ul><li>Sensory Modulation</li><li>Mood &amp; Behavior Support</li><li>Environment Design</li><li>Experience Design</li></ul>
-                </div>
-              </article>
-
-              <article class="research-product-card card-aromaceuticals" tabindex="0" data-card="aromaceuticals" data-research-animate style="--accent:#69e5d6">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Aromaceuticals.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Aromaceuticals</h3>
-                  <ul><li>Aroma Wellness</li><li>Functional Blends</li><li>Stress &amp; Balance Support</li><li>Daily Well-being</li></ul>
-                </div>
-              </article>
-
-              <article class="research-product-card card-neuro-cosmetics" tabindex="0" data-card="neuro-cosmetics" data-research-animate style="--accent:#c9bcff">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Neuro-Cosmetics.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Neuro-Cosmetics</h3>
-                  <ul><li>Neuro-Active Skincare</li><li>Barrier &amp; Repair Support</li><li>Anti-Aging Solutions</li></ul>
-                </div>
-              </article>
-
-              <article class="research-product-card card-flavors" tabindex="0" data-card="flavors" data-research-animate style="--accent:#ffbd72">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Synesthetic Flavors.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Synesthetic Flavors</h3>
-                  <p>Cross-sensory flavor experiences</p>
-                  <ul><li>Cross-Modal Flavors</li><li>Emotion-Linked Taste</li><li>Experience Innovation</li></ul>
-                </div>
-              </article>
-
-              <article class="research-product-card card-homeostasis" tabindex="0" data-card="homeostasis" data-research-animate style="--accent:#ff98cd">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Multisensory Homeostasis Modulator.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Multisensory Homeostasis<br>Modulator</h3>
-                  <p>A device for relaxation and autonomic balance</p>
-                  <ul><li>Multi-Sensory Integration</li><li>Allostasis Support</li><li>Resilience Enhancement</li></ul>
-                </div>
-              </article>
-
-              <!-- Section 7: Olfactory Neuromodulation System -->
-              <article class="research-product-card card-olfactory-system" tabindex="0" data-card="olfactory-system" data-research-animate style="--accent:#ffe47c">
-                <div class="research-product-icon" aria-hidden="true"><img src="assets/images/homepage/A&amp;S SCIENCE PLATFORM/Olfactory Neuromodulation System.png" alt="" decoding="async"></div>
-                <div>
-                  <h3>Olfactory Neuromodulation<br>System</h3>
-                  <ul><li>Odor Delivery Systems</li><li>Neuromodulation</li><li>Homeostasis Support</li></ul>
-                </div>
-              </article>
-            </div>
+          <div class="framework-foreground">
+          <img class="framework-image" src="assets/images/science-to-solution-framework-art.png" width="2067" height="761" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <section class="framework-platform" aria-labelledby="framework-platform-title">
+            <header class="framework-panel-heading">
+              <span class="framework-type framework-number" aria-hidden="true">01</span>
+              <div><h3 class="framework-type framework-panel-title" id="framework-platform-title">Science Platform</h3><p class="framework-type framework-panel-caption">10 Core Research Topics</p></div>
+            </header>
+            <nav class="framework-topics" aria-label="Science platform research topics">
+              <a class="framework-topic" href="pages/exposome.html" aria-label="Exposome"><span class="framework-type framework-topic-number" aria-hidden="true">01</span><span class="framework-type framework-topic-label">Exposome</span></a>
+              <a class="framework-topic" href="pages/human-longevity-aging.html" aria-label="Anti-Aging"><span class="framework-type framework-topic-number" aria-hidden="true">02</span><span class="framework-type framework-topic-label">Anti-Aging</span></a>
+              <a class="framework-topic" href="pages/stress-atc.html" aria-label="Neuro Pathway with Stress"><span class="framework-type framework-topic-number" aria-hidden="true">03</span><span class="framework-type framework-topic-label">Neuro Pathway with Stress</span></a>
+              <a class="framework-topic" href="Neuro-Skin-Science.html" aria-label="Neuro Skincare"><span class="framework-type framework-topic-number" aria-hidden="true">04</span><span class="framework-type framework-topic-label">Neuro Skincare</span></a>
+              <a class="framework-topic" href="pages/hair-follicle-biology.html" aria-label="Hair Follicle Function"><span class="framework-type framework-topic-number" aria-hidden="true">05</span><span class="framework-type framework-topic-label">Hair Follicle Function</span></a>
+              <a class="framework-topic" href="pages/homeostasis-regulation.html" aria-label="Homeostasis Regulation"><span class="framework-type framework-topic-number" aria-hidden="true">06</span><span class="framework-type framework-topic-label">Homeostasis Regulation</span></a>
+              <a class="framework-topic" href="pages/olfactory-science.html" aria-label="Olfactory Science"><span class="framework-type framework-topic-number" aria-hidden="true">07</span><span class="framework-type framework-topic-label">Olfactory Science</span></a>
+              <a class="framework-topic" href="pages/neuro-scented-therapy.html" aria-label="Neuro Scented Therapy"><span class="framework-type framework-topic-number" aria-hidden="true">08</span><span class="framework-type framework-topic-label">Neuro Scented Therapy</span></a>
+              <a class="framework-topic" href="pages/synesthesia-inspired-perception.html" aria-label="Synesthesia Perception"><span class="framework-type framework-topic-number" aria-hidden="true">09</span><span class="framework-type framework-topic-label">Synesthesia Perception</span></a>
+              <a class="framework-topic" href="pages/neuroplasticity.html" aria-label="Neuro Plasticity"><span class="framework-type framework-topic-number" aria-hidden="true">10</span><span class="framework-type framework-topic-label">Neuro Plasticity</span></a>
+            </nav>
+          </section>
+          <div class="framework-type framework-transform">Transform</div>
+          <ul class="framework-discovery">
+            <li class="framework-type">Basic Discovery</li>
+            <li class="framework-type">Biological Mechanisms</li>
+            <li class="framework-type">Sensory Processing</li>
+            <li class="framework-type">Systems Integration</li>
+            <li class="framework-type">Translational Insights</li>
+          </ul>
+          <section class="framework-translation" aria-labelledby="framework-translation-title">
+            <span class="framework-type framework-number" aria-hidden="true">02</span>
+            <h3 class="framework-type framework-translation-title" id="framework-translation-title">Translation</h3>
+            <p class="framework-type framework-translation-caption">Integration &bull; Application &bull; Innovation</p>
+          </section>
+          <p class="framework-type framework-impact">From Knowledge to Impact</p>
+          <section class="framework-results" aria-labelledby="framework-results-title">
+            <header class="framework-panel-heading">
+              <span class="framework-type framework-number" aria-hidden="true">03</span>
+              <div><h3 class="framework-type framework-panel-title" id="framework-results-title">Outcomes</h3><p class="framework-type framework-panel-caption">Science Solutions &amp; Products</p></div>
+            </header>
+            <p class="framework-type framework-results-caption">9 Solutions &amp; Products</p>
+            <ul class="framework-outcomes">
+              <li><span class="framework-type framework-outcome-label">Neuro<br>Cosmetics</span></li>
+              <li><span class="framework-type framework-outcome-label">Sensory<br>Strategies</span></li>
+              <li><span class="framework-type framework-outcome-label">Synesthetic<br>Flavors</span></li>
+              <li><span class="framework-type framework-outcome-label">Scented<br>Therapy</span></li>
+              <li><span class="framework-type framework-outcome-label">Nutraceutical<br>Ingredients</span></li>
+              <li><span class="framework-type framework-outcome-label">Bio-Responsive<br>Ingredients</span></li>
+              <li><span class="framework-type framework-outcome-label">Performance<br>Chemicals</span></li>
+              <li><span class="framework-type framework-outcome-label">Bioactive Food<br>Ingredients</span></li>
+              <li><span class="framework-type framework-outcome-label">Wellness<br>Hardwares</span></li>
+            </ul>
+          </section>
+          </div>
+        </div>
           </div>
         </div>
       </section>
     </template>
 
-  <script src="assets/js/site.min.js?v=20260901-synesthetic-flavor-menu-link-v40" defer></script>
-  <script src="assets/js/home-header.js?v=20260831-shared-scroll-effect-v2" defer></script>
+  <script src="assets/js/site.min.js?v=20260914-zh-cn-v1" defer></script>
+  <script src="assets/js/home-biology-experience.js?v=20260911-toolbar-removed-v1" defer></script>
+  <script src="assets/js/home-header.js?v=20260904-hero-logo-align-v3" defer></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="script.js?v=20260807-research-clean-routing-v8" defer></script>
+  <script src="script.js?v=20260911-biology-reference-v1" defer></script>
 </body>
 </html>

@@ -1,0 +1,201 @@
+/* Desktop foreground alignment for editorial pages. Keep main, section paint,
+   panoramic media, navigation and dialogs in their original coordinate space. */
+@layer arotec-content-layout {
+  @media (min-width: 1200px) {
+    /* These shells contain copy and framed artwork, not section backgrounds.
+       Direct/outermost scopes avoid applying the inset to nested content. */
+    html body.sfc-page main > section > .sfc-shell,
+    html body.sp-page main > .sp-section > .sp-container,
+    html body.cf-page main > .cf-section > .cf-container,
+    html body.he-page main > .he-section > .he-shell,
+    html body.bf-page main > .bf-section > .bf-shell,
+    html body.ci-page main > section > .ci-container,
+    html body.pl-page main .pl-container:not(.pl-container .pl-container),
+    html body.kb-page main > section > .kb-shell,
+    html body:is([data-page="platform"], [data-page="insights"]) #site-shell > main > section > .section-shell {
+      box-sizing: border-box !important;
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: 0 !important;
+      min-width: 0 !important;
+      width: min(var(--editorial-content-max, 1320px), calc(100% - var(--arotec-content-left) - var(--arotec-content-right))) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+    }
+
+    /* Preserve the culture family's existing, narrower breakpoint shell cap. */
+    html body.sfc-page main > section > .sfc-shell {
+      --editorial-content-max: var(--sfc-shell);
+      padding-left: 0 !important;
+    }
+
+    html body.ci-page main > section > .ci-container {
+      --editorial-content-max: 1500px;
+    }
+
+    html body.pl-page main .pl-container:not(.pl-container .pl-container) {
+      --editorial-content-max: 1248px;
+    }
+
+    html body.kb-page main > section > .kb-shell {
+      --editorial-content-max: 1480px;
+      padding-left: 0 !important;
+    }
+
+    html body:is([data-page="platform"], [data-page="insights"]) #site-shell > main > section > .section-shell {
+      --editorial-content-max: 1168px;
+    }
+
+    /* These parents already have 5.3vw of padding on both sides. Compensate
+       for both in the available width without moving their background layer. */
+    html body.ju-page main > .ju-section > .ju-container,
+    html body.ca-page main > .ca-container,
+    html body.sakae-page main > .sakae-section > .sakae-container {
+      box-sizing: border-box !important;
+      margin-left: calc(var(--arotec-content-left) - 5.3vw) !important;
+      margin-right: 0 !important;
+      min-width: 0 !important;
+      width: min(var(--editorial-content-max, 1500px), calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 10.6vw)) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 10.6vw) !important;
+    }
+
+    html body.sakae-page main > .sakae-section > .sakae-container {
+      --editorial-content-max: 1600px;
+    }
+
+    /* Partners has sibling foreground blocks instead of a shared inner shell.
+       Its section keeps its original full-width background and 4.5vw padding. */
+    html body.partners-page main > .partners-section > :is(.partners-intro, .partners-grid, .partners-commitment) {
+      box-sizing: border-box !important;
+      width: min(1388px, calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 9vw)) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 9vw) !important;
+      margin-left: calc(var(--arotec-content-left) - 4.5vw) !important;
+      margin-right: 0 !important;
+      min-width: 0 !important;
+    }
+
+    /* Standalone registration/admin pages have no page class. Their form IDs
+       identify the document without touching header/footer section shells. */
+    html body:has(#memberForm, #adminLoginForm) > main > section > .section-shell,
+    html body.commerce-page > main > .commerce-shell,
+    html body.commerce-page > main > .commerce-hero > .commerce-shell {
+      box-sizing: border-box !important;
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: 0 !important;
+      min-width: 0 !important;
+      width: min(var(--editorial-extra-max, 1168px), calc(100% - var(--arotec-content-left) - var(--arotec-content-right))) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+    }
+
+    html body.commerce-page > main > .commerce-shell,
+    html body.commerce-page > main > .commerce-hero > .commerce-shell {
+      --editorial-extra-max: 1188px;
+    }
+
+    /* The inset makes the summary's content column narrower than its URL and
+       input min-content widths. Let the existing grid and status copy wrap. */
+    html body.commerce-page main .formula-summary-card {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    html body.commerce-page main .formula-summary-card > * {
+      min-width: 0 !important;
+    }
+    html body.commerce-page main .summary-row {
+      grid-template-columns: minmax(0, 1fr) minmax(40px, 92px) 42px !important;
+    }
+    html body.commerce-page main .shop-status {
+      overflow-wrap: anywhere;
+    }
+
+    /* Water banners own their scenery; their outermost sp-container children
+       hold only editable text, specifications and separately framed artwork. */
+    html body:is(.wa-page, .dsw-solutions-page, .dswb-solutions-page) main .sp-container:not(.sp-container .sp-container) {
+      box-sizing: border-box !important;
+      margin-left: var(--arotec-content-left) !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      min-width: 0 !important;
+      width: min(var(--editorial-water-max, 1320px), calc(100% - var(--arotec-content-left) - var(--arotec-content-right))) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+    }
+
+    html body.wa-page main .sp-container:not(.sp-container .sp-container) {
+      --editorial-water-max: 1480px;
+    }
+
+    /* The overview illustration and its linked hotspot labels keep their
+       authored scene coordinates. Only its independent editorial heading moves. */
+    html body.aso-page main > .aso-stage > .aso-heading {
+      left: var(--arotec-content-left) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+    }
+
+    /* Application chapters interleave live copy and absolute panoramic art.
+       Offset the live children within the existing grid, never the backdrop. */
+    html body.dswa-page main #cosmetics .dswa-cosmetics-hero > :is(.dswa-cosmetics-heading, .dswa-cosmetics-subtitle, .dswa-cosmetics-intro, .dswa-skincare-features) {
+      --editorial-dswa-inset: clamp(20px, 2.5vw, 40px);
+      box-sizing: border-box !important;
+      margin-left: calc(var(--arotec-content-left) - var(--editorial-dswa-inset)) !important;
+      width: calc(100% - var(--arotec-content-left) + var(--editorial-dswa-inset)) !important;
+      max-width: calc(100vw - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+      min-width: 0 !important;
+    }
+
+    html body.dswa-page main .dswa-wellness-scene > :is(.dswa-wellness-heading, .dswa-wellness-intro),
+    html body.dswa-page main .dswa-wellness-rows > .dswa-wellness-row {
+      left: var(--arotec-content-left) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right)) !important;
+    }
+
+    html body.dswa-page main .dswa-wellness-rows > .dswa-wellness-row {
+      width: calc(54.2% - var(--arotec-content-left)) !important;
+    }
+
+    /* The small map is foreground artwork, unlike the full-width hero photo. */
+    html body.dswa-page main #cosmetics .dswa-map-labels {
+      right: var(--arotec-content-right) !important;
+    }
+
+    /* Preserve the white/navy section paint and the research panel border;
+       position their foreground headings, content grids and notes separately. */
+    html body.dswa-page main .dswa-product-applications > :is(.dswa-rule-title, .dswa-product-grid),
+    html body.dswa-page main .dswa-research > :is(.dswa-rule-title, ul, .dswa-research-note),
+    html body.dswa-page main .dswa-brand-benefits > :is(h2, ul) {
+      box-sizing: border-box !important;
+      margin-left: calc(var(--arotec-content-left) - var(--editorial-dswa-parent-inset, 3.8vw)) !important;
+      margin-right: 0 !important;
+      width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 2 * var(--editorial-dswa-parent-inset, 3.8vw)) !important;
+      max-width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 2 * var(--editorial-dswa-parent-inset, 3.8vw)) !important;
+      min-width: 0 !important;
+    }
+
+    html body.dswa-page main .dswa-research {
+      --editorial-dswa-parent-inset: calc(8.3vw + 1px);
+    }
+
+    html body.dswa-page main .dswa-brand-benefits {
+      --editorial-dswa-parent-inset: 4.7vw;
+    }
+
+    /* Existing heading layers force margin:0. A relative offset keeps these
+       foreground titles aligned without depending on font-layer load order. */
+    html body.dswa-page main .dswa-product-applications > .dswa-rule-title,
+    html body.dswa-page main .dswa-research > .dswa-rule-title,
+    html body.dswa-page main .dswa-brand-benefits > h2 {
+      position: relative !important;
+      left: calc(var(--arotec-content-left) - var(--editorial-dswa-parent-inset, 3.8vw)) !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-height: 760px) {
+    html body.dswa-page main #cosmetics .dswa-cosmetics-hero > :is(.dswa-cosmetics-heading, .dswa-cosmetics-subtitle, .dswa-cosmetics-intro, .dswa-skincare-features) {
+      --editorial-dswa-inset: 28px;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1350px) {
+    /* Keep product copy inside its framed cards at the reduced desktop width. */
+    html body.commerce-page main .product-carousel {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+  }
+}

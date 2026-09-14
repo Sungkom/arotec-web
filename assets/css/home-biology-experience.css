@@ -1,0 +1,117 @@
+/* One shared coordinate system preserves the supplied 1448 × 1131 layout. */
+#biology-experience.biology-experience {
+  position:relative;display:block !important;width:100%;height:auto;min-height:0 !important;
+  margin:0;padding:0 0 24px !important;scroll-margin-top:112px;overflow:hidden;
+  background:#fff;color:#07164d;opacity:1;transform:none;filter:none;font-family:var(--site-font);
+}
+#biology-experience::before,#biology-experience::after { display:none; }
+#biology-experience * { box-sizing:border-box; }
+#biology-experience .biology-viewport { width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-margin-top:112px; }
+#biology-experience .biology-canvas { position:relative;container-type:inline-size;width:100%;max-width:1448px;aspect-ratio:1448 / 1131;margin:0 auto; }
+#biology-experience .biology-artwork { position:absolute;inset:0; }
+#biology-experience .biology-art { display:block;width:100%;height:100%;object-fit:fill; }
+#biology-experience .biology-heading { position:absolute;inset:0;pointer-events:none; }
+html body #biology-experience.biology-experience .biology-heading > * {
+  position:absolute;left:50%;width:max-content;max-width:none;margin:0 !important;padding:0;border:0;
+  transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--site-font) !important;letter-spacing:0 !important;color:#07164d;
+}
+html body #biology-experience.biology-experience .biology-heading .biology-eyebrow {
+  top:5.481875%;font-size:2.624309cqw !important;line-height:3.176796cqw !important;font-weight:700 !important;text-transform:uppercase;
+}
+#biology-experience #wellbeing-title {
+  top:9.637489%;font-size:3.314917cqw !important;line-height:4.005525cqw !important;font-weight:400 !important;
+}
+html body #biology-experience.biology-experience .biology-heading .biology-subtitle {
+  top:14.854996%;font-size:1.243094cqw !important;line-height:1.795580cqw !important;font-weight:400 !important;color:#647d9b;
+}
+#biology-experience .biology-stages { margin:0;padding:0;list-style:none; }
+#biology-experience .biology-stages > li { position:absolute;margin:0;padding:0;z-index:2; }
+#biology-experience .biology-stage {
+  position:relative;display:block;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:0;
+  background:transparent;color:var(--stage-color);text-align:left;cursor:pointer;
+}
+#biology-experience .biology-stage-content { display:contents; }
+/* Use real font sizes: never squeeze glyphs to fit the reference's condensed lettering. */
+#biology-experience .biology-stage-number {
+  position:absolute;left:0;top:0;width:max-content;font-size:1.657459cqw;line-height:2.071823cqw;
+  font-weight:400;letter-spacing:0;
+}
+#biology-experience .biology-stage-title {
+  position:absolute;left:var(--text-left);top:var(--title-top);display:block;width:max-content;
+  font-size:1.104972cqw;font-weight:500;line-height:1.657459cqw;letter-spacing:0;white-space:nowrap;
+}
+#biology-experience .biology-stage-copy {
+  position:absolute;left:var(--text-left);top:calc(var(--copy-top) - .138122cqw);display:block;width:max-content;
+  color:#50647f;font-size:.759669cqw;font-weight:400;line-height:1.243094cqw;letter-spacing:0;white-space:nowrap;
+}
+#biology-experience .biology-stage:hover .biology-stage-title,
+#biology-experience.biology-has-interacted .biology-stage[aria-pressed="true"] .biology-stage-title {
+  text-shadow:0 0 12px color-mix(in srgb,var(--stage-color) 28%,transparent);
+  text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1px;
+}
+#biology-experience .biology-stage:focus-visible { outline:1px solid var(--stage-color);outline-offset:5px;border-radius:4px; }
+#biology-experience .biology-nodes { position:absolute;inset:0;pointer-events:none; }
+#biology-experience .biology-node {
+  position:absolute;width:2.348066cqw;aspect-ratio:1;border:1px solid currentColor;border-radius:50%;
+  color:var(--stage-color);transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;
+  box-shadow:0 0 0 .552486cqw color-mix(in srgb,var(--stage-color) 12%,transparent);
+}
+#biology-experience.biology-has-interacted[data-active-stage="0"] [data-biology-node="0"],
+#biology-experience.biology-has-interacted[data-active-stage="1"] [data-biology-node="1"],
+#biology-experience.biology-has-interacted[data-active-stage="2"] [data-biology-node="2"],
+#biology-experience.biology-has-interacted[data-active-stage="3"] [data-biology-node="3"],
+#biology-experience.biology-has-interacted[data-active-stage="4"] [data-biology-node="4"],
+#biology-experience.biology-has-interacted[data-active-stage="5"] [data-biology-node="5"],
+#biology-experience.biology-has-interacted[data-active-stage="6"] [data-biology-node="6"],
+#biology-experience.biology-has-interacted[data-active-stage="7"] [data-biology-node="7"],
+#biology-experience.biology-has-interacted[data-active-stage="8"] [data-biology-node="8"] { opacity:1; }
+#biology-experience .biology-phases { position:absolute;inset:0;pointer-events:none; }
+#biology-experience .biology-phase {
+  position:absolute;display:block;color:#526785;font-size:.828729cqw;line-height:1.104972cqw;font-weight:600;
+  letter-spacing:.32em;text-transform:uppercase;transform-origin:left top;
+}
+#biology-experience .biology-signals { left:40.055249%;top:41.644562%;color:#247d86;transform:rotate(15deg); }
+#biology-experience .biology-regulation { left:54.350829%;top:64.279399%;color:#503490;transform:rotate(-42deg); }
+#biology-experience .biology-outcomes { left:48.895028%;top:79.133510%;color:#a66a20;transform:rotate(34deg); }
+#biology-experience .biology-feedback,#biology-experience .biology-feedback > span { position:absolute;inset:0; }
+#biology-experience .biology-feedback > span > span {
+  position:absolute;display:block;font-size:.828729cqw;line-height:1.104972cqw;color:#6d819b;font-weight:600;transform-origin:left top;
+}
+#biology-experience .biology-attribution { position:absolute;left:6.767956%;top:80.813439%;width:33.011050%;height:11%; }
+#biology-experience .biology-attribution::before { content:'';position:absolute;left:.069061cqw;top:0;width:4.419890cqw;height:.207182cqw;background:#67cddd; }
+html body #biology-experience.biology-experience .biology-attribution > * {
+  position:absolute;left:0;width:max-content;max-width:none;padding:0;margin:0 !important;white-space:nowrap;
+  letter-spacing:0 !important;
+}
+html body #biology-experience.biology-experience .biology-attribution h3 {
+  top:.759669cqw;font-size:1.519337cqw !important;line-height:2.348066cqw !important;font-weight:700 !important;
+}
+html body #biology-experience.biology-experience .biology-attribution p {
+  left:.069061cqw;top:3.591160cqw;font-size:.966851cqw !important;line-height:1.519337cqw !important;font-weight:400 !important;color:#50647f;
+}
+#biology-experience .biology-toolbar { display:none;justify-content:center;align-items:center;margin:4px auto 0;padding:0 20px; }
+#biology-experience .biology-zoom {
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:9px 19px;
+  border:1px solid #d6dfe9;border-radius:24px;background:#fff;color:#122b59;font:600 13px/1.4 var(--site-font);
+  cursor:pointer;transition:background .2s,border-color .2s;
+}
+#biology-experience .biology-zoom:hover { background:#f1f7fc;border-color:#7896b2; }
+#biology-experience .biology-zoom[aria-pressed="true"] { background:#122b59;color:#fff;border-color:#122b59; }
+#biology-experience .biology-zoom:focus-visible,#biology-experience .biology-viewport:focus-visible { outline:2px solid #122b59;outline-offset:3px; }
+#biology-experience .biology-zoom[hidden] { display:none; }
+#biology-experience .biology-toolbar .ph { font-size:16px; }
+@media (max-width:1447px) {
+  #biology-experience .biology-toolbar { display:flex; }
+  #biology-experience.biology-is-zoomed .biology-canvas { width:1448px;max-width:none; }
+}
+@media (max-width:599px) {
+  #biology-experience.biology-experience,#biology-experience .biology-viewport { scroll-margin-top:88px; }
+}
+@keyframes biology-arrive { from { opacity:0; } to { opacity:1; } }
+@media (prefers-reduced-motion:no-preference) {
+  #biology-experience.biology-is-visible .biology-stages > li { animation:biology-arrive .7s both;animation-delay:calc(.1s + var(--stage-order) * .05s); }
+}
+@media (prefers-reduced-motion:reduce) {
+  #biology-experience *,#biology-experience *::before { animation:none !important;transition:none !important; }
+}

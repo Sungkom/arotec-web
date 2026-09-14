@@ -10,28 +10,18 @@
   let lastScrollY = Math.max(0, window.scrollY || 0);
   let frame = 0;
 
-  const preserveLegacyHeroCopyAlignment = () => {
+  const alignHeroCopyWithBrand = () => {
     const heroShell = document.querySelector(".hero .section-shell");
+    const brandLogo = document.querySelector("#site-shell .header-main .brand-logo");
 
-    if (!heroShell || window.innerWidth <= 760) {
+    if (!heroShell || !brandLogo || window.innerWidth <= 760) {
       body.style.removeProperty("--home-hero-copy-offset");
       return;
     }
 
-    // The original one-row header used a 1168px grid, a 118px logo column,
-    // and a 22px gap before Customized for you. Keep that anchor stable so
-    // rearranging the new menu never changes the legacy hero copy or dots.
-    if (window.innerWidth <= 1060) {
-      body.style.setProperty("--home-hero-copy-offset", "0px");
-      return;
-    }
-
-    const layoutWidth = document.documentElement.clientWidth;
-    const legacyHeaderWidth = Math.min(1168, Math.max(0, layoutWidth - 40));
-    const legacyHeaderLeft = Math.max(0, (layoutWidth - legacyHeaderWidth) / 2);
-    const legacyCustomizedLeft = legacyHeaderLeft + 118 + 22;
+    const logoLeft = brandLogo.getBoundingClientRect().left;
     const shellLeft = heroShell.getBoundingClientRect().left;
-    const offset = Math.max(0, Math.round(legacyCustomizedLeft - shellLeft));
+    const offset = Math.max(0, Math.round(logoLeft - shellLeft));
     body.style.setProperty("--home-hero-copy-offset", `${offset}px`);
   };
 
@@ -50,7 +40,7 @@
     }
 
     lastScrollY = currentScrollY;
-    preserveLegacyHeroCopyAlignment();
+    alignHeroCopyWithBrand();
   };
 
   const onScroll = () => {
@@ -60,5 +50,5 @@
   updateHeader();
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll, { passive: true });
-  window.addEventListener("load", preserveLegacyHeroCopyAlignment, { once: true });
+  window.addEventListener("load", alignHeroCopyWithBrand, { once: true });
 })();

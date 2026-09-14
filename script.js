@@ -17,7 +17,7 @@
   function mountInfographic() {
     if (!template || !shell || document.getElementById("research-solutions")) return;
 
-    const biologySection = shell.querySelector(".wellbeing-cascade");
+    const biologySection = shell.querySelector(".biology-experience, .wellbeing-cascade");
     if (!biologySection) return;
 
     biologySection.insertAdjacentElement("afterend", template.content.firstElementChild.cloneNode(true));
