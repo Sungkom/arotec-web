@@ -1,0 +1,226 @@
+.strategy-process-page .st-copy {
+  min-width: 0;
+}
+
+.strategy-process-page .st-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 32px 0 0;
+  list-style: none;
+}
+
+.strategy-process-page .st-cards-odd > :last-child {
+  grid-column: 1 / -1;
+}
+
+.strategy-process-page .st-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--sp-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.strategy-process-page .st-card .sp-icon {
+  margin-bottom: 16px;
+}
+
+html body.strategy-process-page main#main .st-card h3,
+html body.strategy-process-page main#main .st-steps h3 {
+  margin: 0 0 8px;
+  color: var(--sp-ink) !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  overflow-wrap: anywhere;
+}
+
+html body.strategy-process-page main#main .st-card p,
+html body.strategy-process-page main#main .st-steps p {
+  margin: 0;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+.strategy-process-page .st-steps {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 30px 0 0;
+  list-style: none;
+}
+
+.strategy-process-page .st-steps > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 0 0 25px;
+}
+
+.strategy-process-page .st-steps > li:last-child {
+  padding-bottom: 0;
+}
+
+.strategy-process-page .st-steps > li:not(:last-child)::before {
+  position: absolute;
+  top: 57px;
+  bottom: 3px;
+  left: 26px;
+  width: 1px;
+  content: "";
+  background: var(--sp-line);
+}
+
+.strategy-process-page .st-step-marker {
+  position: relative;
+  display: block;
+}
+
+.strategy-process-page .st-step-number {
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f8fbff;
+  border-radius: 50%;
+  background: var(--sp-blue);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.strategy-process-page .st-support {
+  margin-top: 40px;
+}
+
+.strategy-process-page .st-support-cards {
+  grid-template-columns: repeat(var(--st-columns, 3), minmax(0, 1fr));
+  margin-top: 0;
+}
+
+html body.strategy-process-page main#main .st-note {
+  margin: 28px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--sp-line);
+  color: var(--sp-blue) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+
+.strategy-process-page .st-note-centered {
+  text-align: center;
+}
+
+.strategy-process-page .st-map-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+  border: 1px solid var(--sp-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.strategy-process-page .st-map-scroll:focus-visible {
+  outline: 3px solid rgba(18, 119, 213, 0.4);
+  outline-offset: 4px;
+}
+
+.strategy-process-page .st-map {
+  width: 100%;
+  min-width: 480px;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: var(--sp-ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.strategy-process-page .st-map caption {
+  padding: 16px;
+  color: var(--sp-soft);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.strategy-process-page .st-map th,
+.strategy-process-page .st-map td {
+  padding: 15px 12px;
+  border: 0;
+  border-top: 1px solid var(--sp-line);
+  font-weight: 500;
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.strategy-process-page .st-map thead th {
+  background: #e8f3fd;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.strategy-process-page .st-map-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strategy-process-page .st-map-cell > i {
+  flex: 0 0 auto;
+  color: var(--sp-blue);
+  font-size: 23px;
+}
+
+@media (max-width: 1199px) {
+  .strategy-process-page .st-support-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .strategy-process-page .sp-split > .sp-art {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 599px) {
+  .strategy-process-page .st-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .strategy-process-page .st-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .strategy-process-page .st-support {
+    margin-top: 28px;
+  }
+
+  .strategy-process-page .st-support-cards {
+    margin-top: 0;
+  }
+
+  .strategy-process-page .st-map-scroll {
+    border-radius: 16px;
+  }
+}

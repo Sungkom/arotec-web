@@ -1,0 +1,676 @@
+/* CSS vector icons. No bitmap images are used to render icon glyphs. */
+.services-experience-page {
+  --sl-i-perfume: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%226%22%20y%3D%229%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%209V5h6v4M8%202h8v3H8zM9%2013h6v5H9z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-dropper: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10%208V4a2%202%200%200%201%204%200v4M9%208h6v3l3%203v6a2%202%200%200%201-2%202H8a2%202%200%200%201-2-2v-6l3-3zM12%2015c-3%203-2%205%200%205s3-2%200-5z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-megaphone: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%209h4l12-5v16L8%2015H4a2%202%200%200%201-2-2v-2a2%202%200%200%201%202-2zM8%209v6M6%2015l2%206h3l-2-6M23%209v6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-waves: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M2%205c3-4%207%204%2010%200s7%204%2010%200M2%2012c3-4%207%204%2010%200s7%204%2010%200M2%2019c3-4%207%204%2010%200s7%204%2010%200%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-scent: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%202C-1%2010%2013%2012%206%2022M12%202c-7%208%207%2010%200%2020M18%202c-7%208%207%2010%200%2020%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-flask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%203h6M10%203v7L4%2020a1%201%200%200%200%201%201h14a1%201%200%200%200%201-1l-6-10V3M7%2015h10%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2213%22%20r%3D%22.6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-leaf: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20%203c0%2012-3%2018-10%2018a7%207%200%200%201-7-7C3%207%2012%208%2020%203zM3%2022%2016%209M8%2017l-1-5M11%2014h5%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-bottle: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%202h6v5l3%203v11H6V10l3-3zM9%205h6M6%2012h12%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-pump: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%226%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M10%2010V6h4v4M12%206V3M8%203h10v3M9%2014h6v5H9z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-tooth: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%204c-5-4-10%200-9%206%201%205%202%2012%205%2012%202%200%201-8%204-8s2%208%204%208c3%200%204-7%205-12%201-6-4-10-9-6z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-snowflake: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%201v22M2.5%206.5l19%2011M2.5%2017.5l19-11M8%203l4%204%204-4M8%2021l4-4%204%204M2%2011l5-2-1-5M22%2013l-5%202%201%205M2%2013l5%202-1%205M22%2011l-5-2%201-5%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-bag: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%207h14l2%2015H3zM8%209V5a4%204%200%200%201%208%200v4%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-cloche: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2017a9%209%200%200%201%2018%200M2%2018h20v3H2zM12%208V5M10%205h4%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-users: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%226%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%227%22%20r%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M2%2021v-3a7%207%200%200%201%2014%200v3zM17%2013a5%205%200%200%201%205%205v3h-3%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-cube: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%202%2010%205v11l-10%205-10-5V7zM2%207l10%205%2010-5M12%2012v11M7%204.5l10%205%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-star: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%202%203.1%206.5%207.2%201-5.2%205.1%201.2%207.2-6.3-3.4-6.3%203.4%201.2-7.2-5.2-5.1%207.2-1z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-openbox: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%207%207-4%204%204-7%204zm0%200L5%203%201%207l7%204zm0%208%207-4%204%204-7%204zm0%200-7-4-4%204%207%204zM5%2017v4l7%203%207-3v-4M12%2015v9%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-user: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%226%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M3%2022v-3a9%209%200%200%201%2018%200v3z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-link: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m10%2013%204-4M9%2016l-2%202a4%204%200%200%201-6-6l5-5a4%204%200%200%201%206%200M15%208l2-2a4%204%200%200%201%206%206l-5%205a4%204%200%200%201-6%200%22%20transform%3D%22translate(1%200)%20scale(.92%201)%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-tongue: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M2%205c2%200%202%202%204%202s2-2%204-2%202%202%204%202%202-2%204-2%202%202%204%202M7%207v9a5%205%200%200%200%2010%200V7M12%207v7%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-armchair: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%2012V6a3%203%200%200%201%203-3h6a3%203%200%200%201%203%203v6M5%2021v-3m14%203v-3M5%2018h14v-6a2%202%200%200%201%204%200v4a2%202%200%200%201-2%202H3a2%202%200%200%201-2-2v-4a2%202%200%200%201%204%200v6M5%2014h14%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-touch: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M7%2010V7a5%205%200%200%201%2010%200v3M4%2010V7a8%208%200%200%201%2016%200v3M10%2014V7a2%202%200%200%201%204%200v6l2%201%202%201%202%201v4a3%203%200%200%201-3%203h-5L5%2016a2%202%200%200%201%203-2l2%202%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-search: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22%2F%3E%3Cpath%20d%3D%22m15%2015%207%207%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-heart: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20.8%204.6a5.5%205.5%200%200%200-7.8%200l-1%201-1-1a5.5%205.5%200%200%200-7.8%207.8L12%2021l8.8-8.6a5.5%205.5%200%200%200%200-7.8z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-return: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20%208a9%209%200%201%200%201%208M20%202v6h-6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-lounge: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%207%203%2012h11M6%2019l-1%203m10-3%202%203M4%2012h10l3%207M19%203l-3%207h7zM19%2010v12M17%2022h5%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-candle: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2210%22%20rx%3D%228%22%20ry%3D%223%22%2F%3E%3Cpath%20d%3D%22M4%2010v11c0%203%2016%203%2016%200V10M12%2010V7M12%207c-5-1-1-5%200-7%203%204%204%206%200%207z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-crosshair: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M12%201v6m0%2010v6M1%2012h6m10%200h6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-shield: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202c3%203%206%204%209%204v6c0%206-5%209-9%2011-4-2-9-5-9-11V6c3%200%206-1%209-4zM7%2012l3%203%207-7%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-compass: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2213%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22m16%209-2%206-6%202%202-6zM12%201v3%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-monitor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%222%22%20y%3D%223%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M5%206h14v8H5zM12%2017v5M8%2022h8%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-bookmark: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%202h14v21l-7-5-7%205z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-gift: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M2%208h20v5H2zM4%2013v9h16v-9M12%208v14%22%2F%3E%3Cpath%20d%3D%22M12%208H7a3%203%200%201%201%203-3zm0%200h5a3%203%200%201%200-3-3z%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-hand: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m2%2017%206-5h7a2%202%200%200%201%200%204h-4M4%2022l4-4h8l6-8a2%202%200%200%200-3-2l-5%205M7%207l3-3m2%204%204-5%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-door: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2022V3l12-2v21M16%201h4v21M2%2022h20M12%2011v3%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-corners: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%203H3v6m12-6h6v6M3%2015v6h6m12-6v6h-6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-lamp: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%202-6%2011h20L16%202zM10%2013v8m4-8v8M7%2022h10%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-chat: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%203h16a2%202%200%200%201%202%202v12a2%202%200%200%201-2%202h-9l-6%204v-4H4a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2zM6%208h12M6%2012h8%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-cloud: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%2018a5%205%200%201%201%200-10%206%206%200%200%201%2012%200%205%205%200%201%201%200%2010zM3%2022h18%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-brain: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%204c-2-4-7-2-6%202-4-1-6%205-3%207-3%204%201%207%204%206-1%204%205%205%205%201V4zm0%200c2-4%207-2%206%202%204-1%206%205%203%207%203%204-1%207-4%206%201%204-5%205-5%201M6%206c0%203%203%203%203%205M3%2013h4M7%2019v-4m11-9c0%203-3%203-3%205m6%202h-4m0%206v-4%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-connection: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%2010%206%205a3%203%200%200%201%206-3%203%203%200%200%201%206%203z%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2213%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2213%22%20r%3D%222%22%2F%3E%3Cpath%20d%3D%22M1%2023v-4a4%204%200%200%201%208%200v4m6%200v-4a4%204%200%200%201%208%200v4%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-texture: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%224%22%20cy%3D%224%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%224%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%224%22%20cy%3D%2212%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2212%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%224%22%20cy%3D%2220%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2220%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-frame: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2220%22%20height%3D%2220%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2212%22%20height%3D%2212%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-journey: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%225%22%20cy%3D%225%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2219%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M11%203h6a4%204%200%200%201%200%208H7a4%204%200%200%200%200%208h6%22%2F%3E%3C%2Fsvg%3E");
+  --sl-i-eye: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-1%20-1%2026%2026%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.65%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208S1%2012%201%2012z%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%224%22%2F%3E%3C%2Fsvg%3E");
+}
+
+html body.services-experience-page main#main .sl-card > .sp-icon,
+html body.services-experience-page main#main .sl-outcomes .sp-icon,
+html body.services-experience-page main#main .sl-card-media > .sl-media-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  box-sizing: border-box;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid var(--sp-blue);
+  border-radius: 50%;
+  color: var(--sp-blue);
+  background: #fff;
+  overflow: hidden;
+}
+html body.services-experience-page main#main .sl-card .sp-icon::before,
+html body.services-experience-page main#main .sl-outcomes .sp-icon::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: currentColor;
+  -webkit-mask: var(--sl-icon) center / contain no-repeat;
+  mask: var(--sl-icon) center / contain no-repeat;
+}
+.services-experience-page .sl-outcomes .sp-icon i {
+  display: none;
+}
+/* Hide baked-in artwork badges separately so CSS icons can stay a fixed size. */
+html body.services-experience-page main#main .sl-card .sl-card-media::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: var(--sl-photo-end);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  pointer-events: none;
+}
+html body.services-experience-page main#main .sl-card .sl-card-media > .sl-media-icon {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: var(--sl-badge-y);
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+html body.services-experience-page main#main .sl-card .sl-media-icon::before {
+  /* Match the 26px glyphs used by the other detail pages, without grid sizing. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html body.services-experience-page main#main .sl-card .sl-card-media {
+  margin-bottom: 12px;
+}
+html body.services-experience-page main#main .sl-card h3 {
+  min-height: 2.7em;
+}
+html body.services-experience-page main#main .sl-offers li {
+  position: relative;
+  padding: 9px 0 9px 36px;
+}
+html body.services-experience-page main#main .sl-offers li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  color: var(--sp-blue);
+  background: currentColor;
+  -webkit-mask: var(--sl-icon) center / contain no-repeat;
+  mask: var(--sl-icon) center / contain no-repeat;
+}
+
+.services-experience-page #sl-scent-and-brand .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-perfume);
+}
+
+.services-experience-page #sl-scent-and-brand .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-dropper);
+}
+
+.services-experience-page #sl-scent-and-brand .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-megaphone);
+}
+
+.services-experience-page #sl-scent-and-brand .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-waves);
+}
+
+.services-experience-page #sl-scent-in-action .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-perfume);
+}
+
+.services-experience-page #sl-scent-in-action .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-flask);
+}
+
+.services-experience-page #sl-scent-in-action .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-megaphone);
+}
+
+.services-experience-page #sl-scent-in-action .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-scent);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-leaf);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-bottle);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-pump);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-tooth);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(5) {
+  --sl-icon: var(--sl-i-scent);
+}
+
+.services-experience-page #sl-product-sensory .sl-card:nth-child(6) {
+  --sl-icon: var(--sl-i-snowflake);
+}
+
+.services-experience-page #sl-space-and-experience .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-bag);
+}
+
+.services-experience-page #sl-space-and-experience .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-cloche);
+}
+
+.services-experience-page #sl-space-and-experience .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-users);
+}
+
+.services-experience-page #sl-space-and-experience .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-cube);
+}
+
+.services-experience-page #sl-space-and-experience .sl-card:nth-child(5) {
+  --sl-icon: var(--sl-i-star);
+}
+
+.services-experience-page #sl-brand-touchpoints .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-cube);
+}
+
+.services-experience-page #sl-brand-touchpoints .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-openbox);
+}
+
+.services-experience-page #sl-brand-touchpoints .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-megaphone);
+}
+
+.services-experience-page #sl-brand-touchpoints .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-user);
+}
+
+.services-experience-page #sl-brand-touchpoints .sl-card:nth-child(5) {
+  --sl-icon: var(--sl-i-link);
+}
+
+.services-experience-page #sl-whole-experience .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-scent);
+}
+
+.services-experience-page #sl-whole-experience .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-tongue);
+}
+
+.services-experience-page #sl-whole-experience .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-armchair);
+}
+
+.services-experience-page #sl-whole-experience .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-touch);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-scent);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-tongue);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-armchair);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-touch);
+}
+
+.services-experience-page #sl-retail .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-waves);
+}
+
+.services-experience-page #sl-retail .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-search);
+}
+
+.services-experience-page #sl-retail .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-heart);
+}
+
+.services-experience-page #sl-retail .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-return);
+}
+
+.services-experience-page #sl-hospitality .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-cloche);
+}
+
+.services-experience-page #sl-hospitality .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-lounge);
+}
+
+.services-experience-page #sl-hospitality .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-candle);
+}
+
+.services-experience-page #sl-hospitality .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-heart);
+}
+
+.services-experience-page #sl-workplace .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-crosshair);
+}
+
+.services-experience-page #sl-workplace .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-leaf);
+}
+
+.services-experience-page #sl-workplace .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-users);
+}
+
+.services-experience-page #sl-workplace .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-shield);
+}
+
+.services-experience-page #sl-showroom .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-compass);
+}
+
+.services-experience-page #sl-showroom .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-monitor);
+}
+
+.services-experience-page #sl-showroom .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-heart);
+}
+
+.services-experience-page #sl-showroom .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-bookmark);
+}
+
+.services-experience-page #sl-packaging .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-gift);
+}
+
+.services-experience-page #sl-packaging .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-hand);
+}
+
+.services-experience-page #sl-packaging .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-openbox);
+}
+
+.services-experience-page #sl-packaging .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-heart);
+}
+
+.services-experience-page #sl-consumer-journey .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-eye);
+}
+
+.services-experience-page #sl-consumer-journey .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-door);
+}
+
+.services-experience-page #sl-consumer-journey .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-touch);
+}
+
+.services-experience-page #sl-consumer-journey .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-bag);
+}
+
+.services-experience-page #sl-consumer-journey .sl-card:nth-child(5) {
+  --sl-icon: var(--sl-i-return);
+}
+
+.services-experience-page #sl-online-offline .sl-card:nth-child(1) {
+  --sl-icon: var(--sl-i-corners);
+}
+
+.services-experience-page #sl-online-offline .sl-card:nth-child(2) {
+  --sl-icon: var(--sl-i-lamp);
+}
+
+.services-experience-page #sl-online-offline .sl-card:nth-child(3) {
+  --sl-icon: var(--sl-i-chat);
+}
+
+.services-experience-page #sl-online-offline .sl-card:nth-child(4) {
+  --sl-icon: var(--sl-i-shield);
+}
+
+.services-experience-page .sl-outcomes li:nth-child(1) {
+  --sl-icon: var(--sl-i-cloud);
+}
+
+.services-experience-page .sl-outcomes li:nth-child(2) {
+  --sl-icon: var(--sl-i-brain);
+}
+
+.services-experience-page .sl-outcomes li:nth-child(3) {
+  --sl-icon: var(--sl-i-connection);
+}
+
+.services-experience-page .sl-outcomes li:nth-child(4) {
+  --sl-icon: var(--sl-i-heart);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(1) .sl-offers li:nth-child(1) {
+  --sl-icon: var(--sl-i-perfume);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(1) .sl-offers li:nth-child(2) {
+  --sl-icon: var(--sl-i-flask);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(1) .sl-offers li:nth-child(3) {
+  --sl-icon: var(--sl-i-megaphone);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(1) .sl-offers li:nth-child(4) {
+  --sl-icon: var(--sl-i-waves);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(1) {
+  --sl-icon: var(--sl-i-leaf);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(2) {
+  --sl-icon: var(--sl-i-bottle);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(3) {
+  --sl-icon: var(--sl-i-flask);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(4) {
+  --sl-icon: var(--sl-i-tooth);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(5) {
+  --sl-icon: var(--sl-i-texture);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(2) .sl-offers li:nth-child(6) {
+  --sl-icon: var(--sl-i-snowflake);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) .sl-offers li:nth-child(1) {
+  --sl-icon: var(--sl-i-bag);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) .sl-offers li:nth-child(2) {
+  --sl-icon: var(--sl-i-cloche);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) .sl-offers li:nth-child(3) {
+  --sl-icon: var(--sl-i-users);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) .sl-offers li:nth-child(4) {
+  --sl-icon: var(--sl-i-frame);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(3) .sl-offers li:nth-child(5) {
+  --sl-icon: var(--sl-i-star);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) .sl-offers li:nth-child(1) {
+  --sl-icon: var(--sl-i-cube);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) .sl-offers li:nth-child(2) {
+  --sl-icon: var(--sl-i-openbox);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) .sl-offers li:nth-child(3) {
+  --sl-icon: var(--sl-i-megaphone);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) .sl-offers li:nth-child(4) {
+  --sl-icon: var(--sl-i-journey);
+}
+
+.services-experience-page #sl-bringing-it-to-life .sl-card:nth-child(4) .sl-offers li:nth-child(5) {
+  --sl-icon: var(--sl-i-link);
+}
+
+@media (max-width: 599px) {
+  html body.services-experience-page main#main .sl-card h3 {
+    min-height: 0;
+  }
+}
+
+/* Preserve complete words on small screens without changing desktop headings. */
+@media (max-width: 599px) {
+  html body.services-experience-page main#main h1,
+  html body.services-experience-page main#main h2 {
+    font-size: clamp(26px, 7.5vw, 40px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
+
+.services-experience-page .sl-copy {
+  min-width: 0;
+}
+
+html body.services-experience-page main#main .sl-page-label {
+  margin: 0 0 18px;
+  color: var(--sp-soft) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+
+.services-experience-page .sl-support {
+  margin-top: 40px;
+}
+
+.services-experience-page .sl-cards {
+  display: grid;
+  grid-template-columns: repeat(var(--sl-columns, 4), minmax(0, 1fr));
+  gap: 22px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.services-experience-page .sl-card {
+  position: relative;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--sp-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.services-experience-page .sl-card > .sp-icon {
+  margin: 0 auto 18px;
+}
+
+html body.services-experience-page main#main .sl-card h3 {
+  margin: 0 0 12px;
+  color: var(--sp-ink) !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  overflow-wrap: anywhere;
+}
+
+html body.services-experience-page main#main .sl-card p {
+  margin: 0;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+.services-experience-page .sl-card .sl-card-media {
+  width: calc(100% + 48px);
+  margin: -24px -24px 22px;
+  border-radius: 17px 17px 0 0;
+}
+
+.services-experience-page .sl-offers {
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+  color: var(--sp-soft);
+  text-align: left;
+}
+
+.services-experience-page .sl-offers li {
+  padding: 9px 0;
+  border-top: 1px solid var(--sp-line);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.services-experience-page .sl-flow > li:not(:last-child)::after {
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  right: -20px;
+  content: "\2192";
+  color: var(--sp-blue);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.services-experience-page .sl-outcomes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  padding: 28px 0 0;
+  margin: 32px 0 0;
+  border-top: 1px solid var(--sp-line);
+  list-style: none;
+}
+
+.services-experience-page .sl-outcomes li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: var(--sp-ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.services-experience-page .sl-outcomes li:not(:last-child)::after {
+  position: absolute;
+  top: 14px;
+  right: -23px;
+  content: "\2192";
+  color: var(--sp-blue);
+  font-size: 23px;
+  font-weight: 400;
+}
+
+html body.services-experience-page main#main .sl-note {
+  margin: 32px 0 0;
+  padding: 24px;
+  border: 1px solid var(--sp-line);
+  border-radius: 16px;
+  color: var(--sp-blue) !important;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .services-experience-page .sl-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-experience-page .sl-flow > li:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-experience-page .sp-split > .sp-art {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 599px) {
+  .services-experience-page .sl-support {
+    margin-top: 28px;
+  }
+
+  .services-experience-page .sl-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .services-experience-page .sl-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .services-experience-page .sl-card .sl-card-media {
+    width: calc(100% + 40px);
+    margin: -20px -20px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .services-experience-page .sl-outcomes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  .services-experience-page .sl-outcomes li:not(:last-child)::after {
+    display: none;
+  }
+
+  html body.services-experience-page main#main .sl-note {
+    padding: 20px;
+    font-size: 18px !important;
+  }
+}

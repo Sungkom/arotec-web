@@ -1,0 +1,59 @@
+/* Supplied background for the Applied Solutions opening section only. */
+html body.ss-page main#main#main #sensory-strategies.ss-feeling-background {
+  box-sizing:border-box;
+  min-height:clamp(620px,36.7578125vw,941px);
+  background-color:#fffbf4;
+  background-image:linear-gradient(90deg,rgba(255,251,244,.97) 0%,rgba(255,251,244,.94) 22%,rgba(255,251,244,.68) 44%,rgba(255,251,244,0) 68%),url("../images/sensory-strategies/starts-with-a-feeling-background-sep08.png");
+  background-size:cover;
+  background-position:right center;
+  background-repeat:no-repeat;
+}
+html body.ss-page main#main#main #sensory-strategies.ss-feeling-background > .sp-container.sp-split {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:center;
+}
+html body.ss-page main#main#main #sensory-strategies.ss-feeling-background > .sp-container.sp-split > div {
+  min-width:0;
+}
+@media(max-width:991px) {
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background {
+    min-height:0;
+    background-image:linear-gradient(90deg,rgba(255,251,244,.97),rgba(255,251,244,.86)),url("../images/sensory-strategies/starts-with-a-feeling-background-sep08.png");
+    background-position:75% center;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background > .sp-container.sp-split {
+    grid-template-columns:minmax(0,1fr);
+  }
+}
+/* Fit the opening content below the measured header on desktop. */
+@media(min-width:992px) {
+  html body.ss-page main#main#main.ss-feeling-main {
+    margin-top:0!important;
+    padding-top:var(--detail-header-space,112px)!important;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background {
+    display:flex;
+    align-items:center;
+    min-height:calc(100svh - var(--detail-header-space,112px));
+    padding-block:clamp(20px,3vh,40px)!important;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background > .sp-container.sp-split > div {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:clamp(10px,1.5vh,18px);
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background :is(.sp-eyebrow,.ss-kicker,h1,.sp-lead,.ss-opening,.ss-more) {
+    margin-block:0!important;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background .ss-opening {
+    display:grid;
+    gap:4px;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background .ss-opening li {
+    margin-block:0!important;
+  }
+  html body.ss-page main#main#main #sensory-strategies.ss-feeling-background .ss-more {
+    flex-shrink:0;
+  }
+}

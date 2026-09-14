@@ -1,0 +1,117 @@
+.value-experience-page .sv-copy {
+  min-width: 0;
+}
+
+.value-experience-page .sv-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 32px 0 0;
+  list-style: none;
+}
+
+.value-experience-page .sv-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--sp-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.value-experience-page .sv-card .sp-icon {
+  margin-bottom: 16px;
+}
+
+html body.value-experience-page main#main .sv-card h3 {
+  margin: 0 0 10px;
+  color: var(--sp-ink) !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  overflow-wrap: anywhere;
+}
+
+html body.value-experience-page main#main .sv-card p {
+  margin: 0;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+.value-experience-page .sv-number {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--sp-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.value-experience-page .sv-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 24px 0 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--sp-line);
+  list-style: none;
+}
+
+.value-experience-page .sv-path li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--sp-ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.value-experience-page .sv-path li:not(:last-child)::after {
+  position: absolute;
+  top: 13px;
+  right: -21px;
+  content: "\2192";
+  color: var(--sp-blue);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .value-experience-page .sp-split > .sp-art {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 599px) {
+  .value-experience-page .sv-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .value-experience-page .sv-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .value-experience-page .sv-path {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .value-experience-page .sv-path li:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -31px;
+    left: 50%;
+    content: "\2193";
+    transform: translateX(-50%);
+  }
+}

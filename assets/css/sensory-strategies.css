@@ -1,0 +1,89 @@
+/* Sensory Strategies shares the existing detail-page layout and brand typography. */
+html body.ss-page main#main .ss-more {
+  display: inline-flex; flex-direction: row; align-items: center; justify-content: center;
+  width: max-content; max-width: 100%; min-width: 154px; min-height: 42px;
+  padding: 10px 24px; margin: 20px 0 8px;
+  border: 1px solid #321273; border-radius: 999px;
+  background: #321273; color: #fff !important; -webkit-text-fill-color: #fff !important;
+  box-shadow: none; font-family: "DM Sans", sans-serif; font-style: normal;
+  font-size: 16px; line-height: 1.25; font-weight: 700; letter-spacing: .06em;
+  text-align: center; text-transform: uppercase; text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+html body.ss-page main#main .ss-more:hover,
+html body.ss-page main#main .ss-more:focus-visible {
+  background: #0b63c7; border-color: #0b63c7; transform: translateY(-1px);
+}
+html body.ss-page main#main .ss-more:focus-visible { outline: 3px solid rgba(17, 118, 206, .22); outline-offset: 3px; }
+@media (max-width: 559px) {
+  html body.ss-page main#main .ss-more { min-width: 142px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.ss-page main#main .ss-more { transition: none; }
+  html body.ss-page main#main .ss-more:hover,
+  html body.ss-page main#main .ss-more:focus-visible { transform: none; }
+}
+html body.ss-page main#main h1,
+html body.ss-page main#main h2 { font-weight: 900 !important; }
+html body.ss-page main#main h1,
+html body.ss-page main#main h2 { font-size: 60px !important; line-height: 60px !important; letter-spacing: -1.2px !important; overflow-wrap: anywhere; }
+html body.ss-page main#main .ss-kicker { font-size: 13px !important; text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 20px; }
+.ss-page .sp-split { grid-template-columns: 1.1fr .9fr; }
+.ss-page .ss-reverse { grid-template-columns: .9fr 1.1fr; }
+.ss-page .sp-split > .sp-art { max-width: 500px; justify-self: center; }
+.ss-opening { margin: 32px 0 0; padding: 24px 0 0; border-top: 1px solid var(--sp-line); list-style: none; color: var(--sp-soft); }
+.ss-opening li { padding-block: 5px; font-size: 18px; line-height: 1.6; }
+.ss-senses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; list-style: none; padding: 0; margin: 32px 0 0; }
+.ss-senses li { text-align: center; }
+.ss-senses li > span:last-child { display: block; margin-top: 12px; font-size: 14px; font-weight: 500; }
+.ss-tiles { display: grid; gap: 0; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--sp-line); }
+.ss-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ss-six { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 32px; }
+.ss-tiles article { padding-inline: 24px; border-left: 1px solid var(--sp-line); }
+.ss-tiles article:first-child, .ss-six article:nth-child(4) { border-left: 0; padding-left: 0; }
+.ss-tiles article:last-child { padding-right: 0; }
+.ss-tiles .sp-icon { margin-bottom: 20px; }
+html body.ss-page main#main .ss-tiles h3 { text-transform: uppercase; font-size: 18px !important; }
+html body.ss-page main#main .ss-tiles p { font-size: 16px !important; margin-bottom: 0; }
+.ss-coherent { display: flex; align-items: center; justify-content: center; gap: 18px; border-top: 1px solid var(--sp-line); padding-top: 24px; margin-top: 28px; color: var(--sp-blue); font-size: 20px; font-weight: 500; }
+.ss-value-chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 28px; margin: 40px 0 0; border: 1px solid var(--sp-line); border-radius: 20px; }
+.ss-value-chain li { display: flex; align-items: center; gap: 14px; }
+.ss-value-chain li > span:last-child { font-size: 14px; line-height: 1.5; font-weight: 500; text-transform: uppercase; }
+.ss-process { list-style: none; margin: 32px 0 0; padding: 0; }
+.ss-process li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 20px; padding-block: 14px; border-top: 1px solid var(--sp-line); }
+.ss-process .sp-number { margin: 0 0 4px; }
+html body.ss-page main#main .ss-process h3 { font-size: 18px !important; margin: 0 0 6px !important; text-transform: uppercase; }
+html body.ss-page main#main .ss-process p { font-size: 16px !important; margin: 0; }
+.ss-services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-top: 48px; }
+.ss-services article { border: 1px solid var(--sp-line); border-radius: 20px; overflow: hidden; background: #fff; }
+.ss-services article > .sp-art { border-radius: 0; }
+.ss-service-copy { padding: 24px; }
+.ss-service-copy .sp-icon { margin-bottom: 20px; }
+html body.ss-page main#main .ss-service-copy h3 { font-size: 22px !important; }
+html body.ss-page main#main .ss-service-copy p { font-size: 15px !important; min-height: 96px; }
+.ss-service-copy ul { list-style: none; padding: 0; margin: 0; }
+.ss-service-copy li { border-top: 1px solid var(--sp-line); padding-block: 10px; font-size: 14px; line-height: 1.5; color: var(--sp-soft); }
+@media (max-width: 1199px) {
+  .ss-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ss-value-chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body.ss-page main#main .ss-service-copy p { min-height: 0; }
+}
+@media (max-width: 991px) {
+  .ss-page .sp-split, .ss-page .ss-reverse { grid-template-columns: 1fr; }
+  .ss-reverse > .sp-art { order: 2; }
+  .ss-page .sp-split > .sp-art { max-width: 480px; }
+  .ss-four, .ss-six { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 0; }
+  .ss-tiles article:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .ss-six article:nth-child(4) { border-left: 1px solid var(--sp-line); padding-left: 24px; }
+}
+@media (max-width: 599px) {
+  .ss-opening li { font-size: 16px; }
+  .ss-services { grid-template-columns: 1fr; margin-top: 36px; }
+  .ss-tiles { margin-top: 36px; }
+  .ss-tiles article { padding-inline: 16px; }
+  .ss-six article:nth-child(4) { padding-left: 16px; }
+  .ss-value-chain { padding: 20px; gap: 24px 16px; }
+  .ss-value-chain li { flex-direction: column; text-align: center; }
+  .ss-value-chain li > span:last-child { font-size: 12px; }
+  .ss-coherent { gap: 12px; font-size: 18px; }
+}

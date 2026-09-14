@@ -1,0 +1,35 @@
+/* Brand experience uses the shared 60px / 900 headings and home shell. */
+.be-copy { min-width: 0; }
+.be-cards { display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: 24px; margin-top: 40px; }
+.be-cards article { padding: 26px; border: 1px solid var(--sp-line); border-radius: 18px; }
+.be-cards .sp-icon { margin-bottom: 20px; }
+html body.brand-experience-page main#main .be-cards h3 { font-size: 18px !important; text-transform: uppercase; overflow-wrap: anywhere; }
+html body.brand-experience-page main#main .be-cards p { font-size: 16px !important; margin-bottom: 0; }
+.be-path { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 20px; list-style: none; padding: 28px 0 0; margin: 32px 0 0; border-top: 1px solid var(--sp-line); }
+.be-path li { flex: 1 1 110px; min-width: 0; text-align: center; }
+.be-path li > span:last-child { display: block; margin-top: 14px; font-size: 13px; line-height: 1.5; font-weight: 500; text-transform: uppercase; color: var(--sp-soft); }
+.be-copy .be-path li { flex-basis: 90px; }
+.be-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+.be-comparison article { border: 1px solid var(--sp-line); border-radius: 18px; padding: 24px; }
+html body.brand-experience-page main#main .be-comparison h3 { font-size: 18px !important; }
+.be-comparison ul { list-style: none; padding: 0; margin: 0; }
+.be-comparison li { padding: 14px 0; border-top: 1px solid var(--sp-line); font-size: 16px; line-height: 1.5; }
+.be-comparison .be-intentional { background: var(--sp-ink); color: #fff; border-color: var(--sp-ink); }
+html body.brand-experience-page main#main .be-intentional h3 { color: #fff; }
+.be-intentional li { border-color: rgba(255, 255, 255, .2); }
+@media (max-width: 1199px) {
+  .be-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .be-comparison { grid-template-columns: 1fr; }
+}
+@media (max-width: 991px) {
+  .brand-experience-page .sp-split > .sp-art { max-width: 540px; }
+  .be-comparison { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 599px) {
+  .be-cards, .be-comparison { grid-template-columns: 1fr; gap: 20px; }
+  .be-cards article { padding: 24px; }
+  .be-path { gap: 24px 16px; }
+  .be-path li { flex-basis: 90px; }
+  .be-path li > span:last-child { font-size: 12px; }
+}
+
