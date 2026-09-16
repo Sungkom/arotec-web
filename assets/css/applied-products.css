@@ -1,0 +1,172 @@
+/* Scoped to Applied Products; the main menu and footer retain the home styles. */
+@font-face {
+  font-family:"DM Sans";
+  src:url("../fonts/DMSans-Light.woff2") format("woff2");
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+}
+
+html body.ap-products-page main#main.ap-main {
+  --ap-ink:#eff5f4; --ap-muted:#c2cbcc; --ap-accent:#8cd2cb;
+  --ap-surface:#0c171f; --ap-line:rgba(140,210,203,.4);
+  margin:0!important; max-width:none!important;
+  padding:var(--ap-header-height,104px) 0 0!important;
+  background:#060c11!important; color:var(--ap-ink); font-family:"DM Sans",sans-serif;
+}
+html body.ap-products-page #main.ap-main * { box-sizing:border-box; }
+html body.ap-products-page #main.ap-main a { color:inherit; text-decoration:none; }
+html body.ap-products-page #main.ap-main :is(a,summary):focus-visible { outline:2px solid var(--ap-accent); outline-offset:6px; }
+html body.ap-products-page #main.ap-main .ap-nav { position:relative; z-index:30; background:var(--ap-surface); }
+html body.ap-products-page #main.ap-main .ap-nav-inner {
+  display:flex; justify-content:flex-end; align-items:stretch; gap:clamp(32px,4.8vw,122px);
+  min-height:62px; max-width:1800px; margin-inline:auto; padding-inline:24px 14%;
+}
+html body.ap-products-page #main.ap-main .ap-menu { position:relative; margin:0; border:0; }
+html body.ap-products-page #main.ap-main .ap-menu summary {
+  display:flex; align-items:center; gap:12px; min-height:62px; padding:12px 0;
+  cursor:pointer; list-style:none; white-space:nowrap; color:var(--ap-ink);
+  font-size:clamp(16px,1.16vw,26px); font-weight:600;
+}
+html body.ap-products-page #main.ap-main .ap-menu summary::-webkit-details-marker { display:none; }
+html body.ap-products-page #main.ap-main .ap-menu summary i { font-size:14px; color:var(--ap-accent); transition:transform .2s; }
+html body.ap-products-page #main.ap-main .ap-menu[open] summary i { transform:rotate(180deg); }
+html body.ap-products-page #main.ap-main .ap-menu-items {
+  position:absolute; top:100%; right:0; min-width:290px; width:max-content;
+  max-width:min(420px,calc(100vw - 32px)); padding:12px; background:#102029;
+  border:1px solid var(--ap-line); box-shadow:0 18px 48px rgba(0,0,0,.4);
+}
+html body.ap-products-page #main.ap-main .ap-menu-items a { display:block; padding:13px 16px; font-size:16px; line-height:1.5; overflow-wrap:anywhere; border-radius:2px; }
+html body.ap-products-page #main.ap-main .ap-menu-items a:hover,
+html body.ap-products-page #main.ap-main .ap-menu-items a[aria-current] { color:var(--ap-accent); background:rgba(140,210,203,.08); }
+html body.ap-products-page #main.ap-main .ap-stage {
+  --ap-title-size:clamp(20px,1.53cqw,44px);
+  --ap-byline-size:clamp(9px,.65cqw,18px);
+  --ap-tagline-size:clamp(9px,.62cqw,17px);
+  container-type:inline-size; position:relative; isolation:isolate;
+  aspect-ratio:2560 / 1004; min-height:480px; background:#060c11;
+  margin:0; padding:0; scroll-margin-top:100px;
+}
+/* Restore the original single-scene composition: the restrained artwork
+   lettering sits in the empty left region, clear of products and hotspots. */
+html body.ap-products-page #main.ap-main .ap-product-scene {
+  container-type:inline-size; position:absolute; inset:0; z-index:0;
+  isolation:isolate; background:#060c11;
+}
+html body.ap-products-page #main.ap-main .ap-scene { position:absolute; inset:0; z-index:-1; }
+html body.ap-products-page #main.ap-main .ap-scene img { display:block; width:100%; max-width:none; height:100%; object-fit:cover; object-position:center; }
+html body.ap-products-page #main.ap-main .ap-intro {
+  position:absolute; z-index:3; left:21.5%; top:10%; width:22%;
+  margin:0; padding:0; background:transparent; mix-blend-mode:screen;
+}
+/* Screen compositing removes the logo asset's uniform black field without a rectangular backing. */
+html body.ap-products-page #main.ap-main .ap-brand { position:relative; width:7cqw; min-width:95px; aspect-ratio:800 / 740; overflow:hidden; mix-blend-mode:screen; }
+html body.ap-products-page #main.ap-main .ap-brand > img { position:absolute; display:block; width:156.75%; max-width:none!important; height:auto!important; left:-28.75%; top:-29.054%; }
+html body.ap-products-page #main.ap-main .ap-byline { margin:1.2cqw 0 0; font-size:clamp(9px,.65cqw,18px); line-height:1.6; letter-spacing:.44em; text-transform:uppercase; color:var(--ap-muted); }
+html body.ap-products-page #main.ap-main .ap-rule { display:block; width:2.65cqw; height:1px; background:#9baea7; margin-block:1.1cqw; }
+html body.ap-products-page #main.ap-main h1.ap-hero-title {
+  margin:0!important; padding:0!important; color:var(--ap-ink)!important;
+  font-family:"DM Sans",sans-serif!important; font-weight:300!important;
+  font-size:clamp(20px,1.53cqw,44px)!important; line-height:1.36!important;
+  letter-spacing:.23em!important; text-transform:uppercase!important;
+}
+html body.ap-products-page #main.ap-main .ap-tagline { margin:.85cqw 0 0; color:#e2e6e5; font-size:clamp(9px,.62cqw,17px); font-weight:500; letter-spacing:.25em; line-height:1.7; text-transform:uppercase; }
+html body.ap-products-page #main.ap-main .ap-product-link {
+  position:absolute; z-index:2; display:flex; flex-direction:column; align-items:flex-start;
+  gap:.3cqw; min-width:96px; padding:8px; border-radius:4px; text-transform:uppercase; letter-spacing:.16em;
+}
+html body.ap-products-page #main.ap-main .ap-product-link--vaguspa { left:44%; top:33%; }
+html body.ap-products-page #main.ap-main .ap-product-link--vaguscent-bulb { left:65%; top:8%; }
+html body.ap-products-page #main.ap-main .ap-product-link--vaguskin { left:75.2%; top:50%; }
+html body.ap-products-page #main.ap-main .ap-product-brand { font-size:clamp(10px,.64cqw,18px); }
+html body.ap-products-page #main.ap-main .ap-product-name { font-size:clamp(11px,.73cqw,20px); line-height:1.5; }
+html body.ap-products-page #main.ap-main .ap-explore {
+  display:flex; align-items:center; gap:18px; padding-block:8px 5px; margin-top:5px;
+  color:var(--ap-accent); font-size:clamp(10px,.6cqw,16px); font-weight:600; border-block:1px solid var(--ap-line);
+}
+html body.ap-products-page #main.ap-main .ap-explore i { font-size:17px; transition:transform .2s; }
+html body.ap-products-page #main.ap-main .ap-product-link:hover .ap-explore i { transform:translateX(4px); }
+html body.ap-products-page #main.ap-main .ap-bespoke {
+  position:absolute; left:19.8%; bottom:12%; width:18.5%; min-height:11cqw;
+  display:grid; grid-template-columns:1fr auto; align-content:center; gap:.5cqw; padding:1cqw 2.3cqw;
+  border:1px solid var(--ap-accent); border-radius:1cqw;
+  background:rgba(11,27,33,.68); backdrop-filter:blur(12px);
+}
+html body.ap-products-page #main.ap-main .ap-fingerprint { grid-column:1 / -1; font-size:5cqw; color:#72c8c3; font-weight:400; }
+html body.ap-products-page #main.ap-main .ap-bespoke > span { font-size:clamp(14px,1.05cqw,29px); font-weight:300; line-height:1.4; letter-spacing:.22em; text-transform:uppercase; }
+html body.ap-products-page #main.ap-main .ap-bespoke-arrow { align-self:center; font-size:28px; }
+html body.ap-products-page #main.ap-main .ap-bespoke:hover { background:rgba(22,52,60,.8); }
+html body.ap-products-page #main.ap-main .ap-panel { display:none; margin:0; background:#0d1c24; border-top:1px solid var(--ap-line); scroll-margin-top:110px; }
+html body.ap-products-page #main.ap-main .ap-panel:target { display:block; }
+html body.ap-products-page #main.ap-main .ap-panel-inner { max-width:1180px; margin-inline:auto; padding:60px 28px; }
+html body.ap-products-page #main.ap-main .ap-kicker { color:var(--ap-accent); font-size:13px; letter-spacing:.15em; text-transform:uppercase; margin:0 0 18px; }
+html body.ap-products-page #main.ap-main .ap-panel h2 { margin:0 0 32px!important; color:var(--ap-ink)!important; font-family:"DM Sans",sans-serif!important; font-size:clamp(28px,3vw,50px)!important; line-height:1.2!important; font-weight:400!important; overflow-wrap:anywhere; }
+html body.ap-products-page #main.ap-main .ap-enquire { display:inline-flex; gap:22px; align-items:center; border:1px solid var(--ap-accent); padding:13px 20px; }
+html body.ap-products-page #main.ap-main .ap-back { display:inline-flex; margin:18px 0 0 26px; gap:12px; font-size:14px; color:var(--ap-muted); }
+@keyframes ap-arrive { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:1100px) {
+  html body.ap-products-page #main.ap-main .ap-nav-inner { justify-content:center; gap:40px; padding-inline:20px; }
+  html body.ap-products-page #main.ap-main .ap-stage { --ap-title-size:clamp(23px,3.8vw,40px); --ap-byline-size:10px; --ap-tagline-size:10px; display:flex; flex-direction:column; aspect-ratio:auto; min-height:0; }
+  html body.ap-products-page #main.ap-main .ap-product-scene { position:relative; inset:auto; display:flex; flex-direction:column; aspect-ratio:auto; min-height:0; }
+  html body.ap-products-page #main.ap-main .ap-intro { position:relative; inset:auto; width:100%; padding:36px 6% 30px; order:0; }
+  html body.ap-products-page #main.ap-main .ap-brand { width:124px; }
+  html body.ap-products-page #main.ap-main .ap-byline { margin-top:22px; font-size:10px; }
+  html body.ap-products-page #main.ap-main .ap-rule { width:46px; margin-block:22px; }
+  html body.ap-products-page #main.ap-main h1.ap-hero-title { font-size:clamp(23px,3.8vw,40px)!important; letter-spacing:.2em!important; }
+  html body.ap-products-page #main.ap-main .ap-tagline { margin-top:16px; font-size:10px; }
+  html body.ap-products-page #main.ap-main .ap-scene { position:relative; inset:auto; z-index:0; order:1; aspect-ratio:1.7; overflow:hidden; }
+  html body.ap-products-page #main.ap-main .ap-scene img { position:absolute; inset:0; object-position:77% center; }
+  html body.ap-products-page #main.ap-main .ap-product-links { order:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); padding:22px 4%; }
+  html body.ap-products-page #main.ap-main .ap-product-link { position:relative; inset:auto; padding:8px 12px; min-width:0; gap:7px; }
+  html body.ap-products-page #main.ap-main .ap-product-link + .ap-product-link { border-left:1px solid var(--ap-line); }
+  html body.ap-products-page #main.ap-main .ap-product-brand { font-size:10px; }
+  html body.ap-products-page #main.ap-main .ap-product-name { font-size:12px; min-height:36px; letter-spacing:.1em; }
+  html body.ap-products-page #main.ap-main .ap-explore { font-size:10px; gap:10px; }
+  html body.ap-products-page #main.ap-main .ap-bespoke { position:relative; inset:auto; order:3; width:auto; margin:6px 6% 32px; padding:22px 26px; min-height:0; grid-template-columns:auto 1fr auto; gap:24px; border-radius:12px; }
+  html body.ap-products-page #main.ap-main .ap-fingerprint { grid-column:auto; align-self:center; font-size:64px; }
+  html body.ap-products-page #main.ap-main .ap-bespoke > span { font-size:18px; }
+}
+@media(max-width:600px) {
+  html body.ap-products-page #main.ap-main .ap-nav-inner { justify-content:space-between; gap:18px; }
+  html body.ap-products-page #main.ap-main .ap-menu summary { font-size:15px; gap:7px; }
+  html body.ap-products-page #main.ap-main .ap-menu:first-child .ap-menu-items { left:-4px; right:auto; }
+  html body.ap-products-page #main.ap-main .ap-menu:last-child .ap-menu-items { right:-4px; }
+  html body.ap-products-page #main.ap-main .ap-menu-items { min-width:265px; max-width:calc(100vw - 32px); }
+  html body.ap-products-page #main.ap-main .ap-menu-items a { font-size:14px; }
+  html body.ap-products-page #main.ap-main .ap-scene { aspect-ratio:1.4; }
+  html body.ap-products-page #main.ap-main .ap-product-link { padding-inline:8px; }
+  html body.ap-products-page #main.ap-main .ap-product-name { font-size:11px; }
+  html body.ap-products-page #main.ap-main .ap-back { display:flex; margin-left:0; margin-top:26px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html body.ap-products-page #main.ap-main .ap-intro { animation:none; }
+  html body.ap-products-page #main.ap-main :is(.ap-menu summary i,.ap-explore i) { transition:none; }
+}
+
+/* Page-specific artwork exception, restored at the user's request.
+   This is not the shared editorial display/lead scale used by the panels.
+   Keep these in the authoritative layer so global H1 locks cannot enlarge
+   the lettering into the pictured products or the Bespoke Services card. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.ap-products-page #main.ap-main h1.ap-hero-title {
+    font-family:"DM Sans",sans-serif!important;
+    font-style:normal!important;
+    font-weight:300!important;
+    font-size:var(--ap-title-size)!important;
+    line-height:1.36!important;
+    letter-spacing:.23em!important;
+    text-transform:uppercase!important;
+    overflow-wrap:normal!important;
+    white-space:normal!important;
+  }
+
+  html body.ap-products-page #main.ap-main .ap-tagline {
+    font-family:"DM Sans",sans-serif!important;
+    font-style:normal!important;
+    font-weight:500!important;
+    font-size:var(--ap-tagline-size)!important;
+    line-height:1.7!important;
+    letter-spacing:.25em!important;
+    text-transform:uppercase!important;
+  }
+}
