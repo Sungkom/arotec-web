@@ -1,0 +1,145 @@
+/* Create Flavors inherits the home navigation, footer and DM Sans typography. */
+html body.cf-page main#main.cf-main {
+  --cf-ink: #09264d;
+  --cf-soft: #264a73;
+  --cf-blue: #1277d5;
+  --cf-line: rgba(32, 122, 202, .2);
+  padding-top: var(--detail-header-space, 134px) !important;
+  color: var(--cf-ink);
+  background: #f8fbff;
+  font-family: "DM Sans", sans-serif;
+}
+.cf-main *, .cf-main *::before, .cf-main *::after { box-sizing: border-box; }
+.cf-container { width: calc(100% - 120px); max-width: 1320px; margin-inline: auto; }
+.cf-section { padding: 88px 0; }
+.cf-hero { padding-top: 64px; }
+.cf-section-tint { background: #eff7ff; }
+.cf-split { display: grid; align-items: center; gap: 64px; }
+.cf-split > * { min-width: 0; }
+.cf-hero-grid { grid-template-columns: 1.2fr .8fr; }
+.cf-science-grid { grid-template-columns: .95fr 1.05fr; gap: 40px; }
+.cf-finale-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+html body.cf-page main#main h1 {
+  font-size: 72px !important; line-height: 1.08 !important;
+  font-weight: 700 !important; letter-spacing: -1.44px !important;
+  text-transform: uppercase; margin: 0 0 28px !important; color: var(--cf-ink);
+}
+html body.cf-page main#main h2 {
+  font-size: 48px !important; line-height: 1.14 !important;
+  font-weight: 700 !important; letter-spacing: -.96px !important;
+  text-transform: uppercase; margin: 0 0 24px !important; color: var(--cf-ink);
+}
+html body.cf-page main#main h3 {
+  font-size: 20px !important; line-height: 1.3 !important;
+  font-weight: 700 !important; letter-spacing: -.2px !important;
+  margin: 0 0 12px !important; color: var(--cf-ink);
+}
+html body.cf-page main#main p {
+  font-size: 18px !important; line-height: 1.6 !important;
+  font-weight: 400 !important; color: var(--cf-soft); margin: 0 0 18px;
+}
+html body.cf-page main#main .cf-eyebrow {
+  color: var(--cf-blue); font-size: 14px !important; font-weight: 700 !important;
+  line-height: 1.5 !important; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px;
+}
+html body.cf-page main#main .cf-lead {
+  font-size: 24px !important; line-height: 1.4 !important;
+  font-weight: 500 !important; margin-bottom: 28px;
+}
+.cf-art { position: relative; width: 100%; aspect-ratio: var(--image-ratio); overflow: hidden; border-radius: 24px; }
+html body.cf-page main#main .cf-art img {
+  position: absolute; width: var(--image-width); max-width: none !important;
+  height: auto; display: block; left: var(--image-left); top: var(--image-top);
+}
+.cf-icon {
+  width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--cf-blue); border: 1px solid var(--cf-line); border-radius: 50%;
+}
+.cf-icon i { font-size: 26px; line-height: 1; }
+.cf-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 64px; }
+.cf-pillars article { padding: 4px 32px; border-left: 1px solid var(--cf-line); }
+.cf-pillars article:first-child { padding-left: 0; border-left: 0; }
+.cf-pillars article:last-child { padding-right: 0; }
+.cf-pillars .cf-icon { margin-bottom: 22px; }
+html body.cf-page main#main .cf-pillars h3 { text-transform: uppercase; }
+html body.cf-page main#main .cf-pillars p { margin-bottom: 0; }
+.cf-journey, .cf-outcomes, .cf-steps { list-style: none; padding: 0; }
+.cf-journey { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 24px; margin: 64px 0 0; }
+.cf-journey li { text-align: center; position: relative; }
+.cf-journey li + li::before { content: ""; position: absolute; top: 27px; left: -26px; width: 28px; border-top: 1px solid var(--cf-line); }
+.cf-journey span:not(.cf-icon) { display: block; font-size: 14px; font-weight: 500; line-height: 1.45; margin-top: 16px; text-transform: uppercase; }
+html body.cf-page main#main .cf-statement {
+  text-align: center; font-size: 28px !important; line-height: 1.4 !important;
+  margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--cf-line);
+}
+.cf-statement span, html body.cf-page main#main .cf-finale h2 span { color: var(--cf-blue); }
+.cf-section-intro { max-width: 960px; margin-bottom: 48px; }
+.cf-process-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+.cf-steps { margin: 0; }
+.cf-steps li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 24px; position: relative; padding-bottom: 26px; }
+.cf-steps li:last-child { padding-bottom: 0; }
+.cf-step-marker { position: relative; }
+.cf-steps li:not(:last-child) .cf-step-marker::after { content: ""; position: absolute; top: 62px; bottom: 8px; left: 26px; border-left: 1px solid var(--cf-line); }
+.cf-step-number { display: block; color: var(--cf-blue); font-size: 12px; letter-spacing: 1.5px; margin-bottom: 5px; }
+html body.cf-page main#main .cf-steps h3 { text-transform: uppercase; margin-bottom: 8px !important; }
+html body.cf-page main#main .cf-steps p { margin: 0; font-size: 16px !important; line-height: 1.55 !important; }
+.cf-process-art { margin: 0; }
+.cf-process-art figcaption { color: var(--cf-blue); font-size: 20px; text-align: center; margin-top: 24px; }
+.cf-science-pillars { margin-top: 48px; }
+html body.cf-page main#main .cf-transition { margin: 48px 0 0; padding: 24px 0; border-block: 1px solid var(--cf-line); text-align: center; }
+.cf-wellbeing { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 40px; }
+html body.cf-page main#main .cf-wellbeing h3 { font-size: 36px !important; line-height: 1.2 !important; }
+html body.cf-page main#main .cf-wellbeing p { margin-bottom: 0; }
+.cf-outcomes { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; margin: 64px 0 0; }
+.cf-outcomes li { padding: 0 16px; border-left: 1px solid var(--cf-line); text-align: center; }
+.cf-outcomes li:first-child { border-left: 0; padding-left: 0; }
+.cf-outcomes li:last-child { padding-right: 0; }
+.cf-outcomes .cf-icon { margin-bottom: 20px; }
+html body.cf-page main#main .cf-outcomes h3 { font-size: 15px !important; line-height: 1.35 !important; text-transform: uppercase; min-height: 41px; }
+html body.cf-page main#main .cf-outcomes p { font-size: 14px !important; line-height: 1.65 !important; margin: 0; }
+@media (max-width: 1199px) {
+  .cf-container { width: calc(100% - 80px); }
+  .cf-split { gap: 36px; }
+  html body.cf-page main#main h1 { font-size: 56px !important; }
+  html body.cf-page main#main h2 { font-size: 40px !important; }
+  .cf-outcomes { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 0; }
+  .cf-outcomes li:nth-child(5) { border-left: 0; }
+  .cf-outcomes li:first-child, .cf-outcomes li:last-child { padding-inline: 16px; }
+}
+@media (max-width: 991px) {
+  .cf-container { width: calc(100% - 48px); }
+  .cf-section { padding: 64px 0; }
+  .cf-hero { padding-top: 48px; }
+  .cf-split { grid-template-columns: 1fr; }
+  .cf-hero-grid .cf-art { max-width: 520px; margin-inline: auto; }
+  .cf-process-art { width: min(100%, 620px); margin-inline: auto; }
+  .cf-finale-grid .cf-art { max-width: 620px; margin-inline: auto; }
+  .cf-pillars article { padding-inline: 22px; }
+  .cf-journey { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
+  .cf-journey li:nth-child(5)::before { display: none; }
+  .cf-wellbeing { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 599px) {
+  .cf-container { width: calc(100% - 40px); }
+  .cf-section { padding: 48px 0; }
+  .cf-hero { padding-top: 36px; }
+  html body.cf-page main#main h1 { font-size: 40px !important; line-height: 1.15 !important; letter-spacing: -.8px !important; }
+  html body.cf-page main#main h2 { font-size: 32px !important; line-height: 1.18 !important; letter-spacing: -.6px !important; }
+  html body.cf-page main#main .cf-lead { font-size: 20px !important; }
+  html body.cf-page main#main p { font-size: 16px !important; }
+  .cf-art { border-radius: 16px; }
+  .cf-pillars { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
+  .cf-pillars article, .cf-pillars article:first-child, .cf-pillars article:last-child { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--cf-line); }
+  .cf-pillars .cf-icon { margin-bottom: 16px; }
+  .cf-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 40px; }
+  .cf-journey li::before { display: none; }
+  .cf-journey li:last-child { grid-column: 1 / -1; }
+  .cf-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 40px; }
+  .cf-outcomes li:nth-child(odd) { border-left: 0; }
+  .cf-outcomes li:last-child { grid-column: 1 / -1; max-width: 280px; margin-inline: auto; border-left: 0; }
+  .cf-steps li { gap: 16px; }
+  html body.cf-page main#main .cf-steps h3 { font-size: 18px !important; }
+  html body.cf-page main#main .cf-statement { font-size: 22px !important; margin-top: 36px; }
+  html body.cf-page main#main .cf-wellbeing h3 { font-size: 30px !important; }
+}
+
