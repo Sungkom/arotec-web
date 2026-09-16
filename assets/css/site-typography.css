@@ -1054,6 +1054,7 @@ button[class*="button"] {
 }
 
 .site-header nav a,
+.site-header nav button.nav-link,
 .site-header .menu a,
 .main-menu a,
 .main-nav a,

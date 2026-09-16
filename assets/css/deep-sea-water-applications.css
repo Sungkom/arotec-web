@@ -1,0 +1,324 @@
+/* Deep Sea Water detail chapters. All editorial text stays in HTML. */
+/* Fill the available page width without changing the artwork crop geometry. */
+html body.dsw-page.dswa-page main#main {
+  box-sizing:border-box;
+  width:100%!important;
+  max-width:none!important;
+  margin-top:0!important;
+  margin-inline:0!important;
+  padding-top:var(--dswa-header-height,128px)!important;
+  padding-inline:clamp(12px,2vw,32px)!important;
+}
+html body.dsw-page.dswa-page main#main > .dsw-story {
+  box-sizing:border-box;
+  width:100%!important;
+  max-width:none!important;
+  margin-top:0!important;
+  margin-inline:0!important;
+}
+html body.dsw-page.dswa-page main#main > .dsw-story > .dsw-chapter {
+  box-sizing:border-box;
+  width:100%;
+  max-width:none;
+  min-width:0;
+  scroll-margin-top:var(--dswa-header-height,128px);
+}
+.dswa-page .dsw-chapter{container-type:inline-size;color:#102b60}
+.dswa-art{position:absolute;inset:0;margin:0;overflow:hidden;pointer-events:none}
+.dswa-art img{position:absolute;left:0;top:0;width:100%!important;max-width:none!important;height:auto!important;margin:0}
+.dswa-cosmetics-hero{position:relative;aspect-ratio:941/879;background:#eaf4fb;overflow:hidden}
+.dswa-cosmetics-heading{position:absolute;z-index:1;left:4%;right:32%;top:9.8%}
+@layer arotec-display-headings{
+  html body.dsw-page.dswa-page #main#main .dswa-cosmetics-heading h1{font:700 clamp(34px,7.25cqw,82px)/1.06 var(--site-font)!important;letter-spacing:-1px!important;color:#0d285a!important;text-transform:uppercase;margin:0!important}
+  html body.dsw-page.dswa-page #main#main .dswa-wellness-heading h2{font:700 clamp(34px,6.9cqw,78px)/1.1 var(--site-font)!important;letter-spacing:-1px!important;color:#0d285a!important;text-transform:uppercase;margin:0!important}
+  html body.dsw-page.dswa-page #main#main .dswa-rule-title{font:700 clamp(17px,2.3cqw,26px)/1.25 var(--site-font)!important;letter-spacing:0!important;text-transform:uppercase;color:#20458b!important;margin:0 0 18px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-brand-benefits>h2{position:relative;font:600 clamp(15px,2cqw,22px)/1.2 var(--site-font)!important;text-transform:uppercase;letter-spacing:0!important;color:#fff!important;margin:0 0 15px!important}
+}
+html body.dsw-page.dswa-page #main#main .dswa-cosmetics-subtitle{position:absolute;z-index:1;left:4%;top:27.6%;width:63%;font:500 clamp(16px,2.6cqw,29px)/1.3 var(--site-font)!important;color:#17428f;margin:0}
+html body.dsw-page.dswa-page #main#main .dswa-cosmetics-intro{position:absolute;z-index:1;left:4%;top:33.2%;width:56%;font:400 clamp(13px,1.9cqw,21px)/1.7 var(--site-font)!important;color:#122032;margin:0}
+.dswa-map-labels{position:absolute;z-index:1;left:70%;top:3%;width:27%;height:31.5%;border:1px solid #fff;border-radius:10px;overflow:hidden;color:#133c80;font:400 clamp(10px,1.5cqw,17px)/1.25 var(--site-font)}
+.dswa-map-labels span{position:absolute}
+.dswa-mobile-map{display:none}
+.dswa-map-japan{left:74%;top:44%;font-weight:600;text-transform:uppercase}
+.dswa-map-shikoku{left:45%;top:69%}
+.dswa-map-kochi{left:33%;top:82%;font-weight:600}
+.dswa-map-muroto{left:33%;top:90%}
+.dswa-skincare-features{position:absolute;z-index:1;left:3.8%;top:49.7%;width:32%;padding:0;list-style:none;margin:0;display:grid;gap:0}
+.dswa-skincare-features li{display:flex;align-items:center;gap:1.8cqw;min-height:8.9cqw}
+.dswa-skincare-features i,.dswa-wellness-copy>i{display:grid;place-items:center;flex-shrink:0;border:1px solid #224b9e;border-radius:50%;width:6.3cqw;height:6.3cqw;font-size:4.1cqw;color:#1e4592}
+html body.dsw-page.dswa-page #main#main .dswa-skincare-features li span{display:flex;align-items:center;align-self:stretch;flex:1;border-bottom:1px solid #c8d6e2;font:400 clamp(12px,1.85cqw,21px)/1.3 var(--site-font);color:#16212c}
+.dswa-skincare-features li:last-child span{border-bottom:0}
+.dswa-product-applications{padding:16px 3.8% 18px;background:#fff}
+.dswa-rule-title{display:flex;align-items:center;gap:15px}
+.dswa-rule-title:after{content:"";height:1px;flex:1;background:#a7c1e7}
+.dswa-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 4.6%}
+.dswa-product-grid>figure{margin:0;min-width:0;text-align:center}
+.dswa-source-photo{position:relative;aspect-ratio:var(--crop-w)/var(--crop-h);overflow:hidden;margin:0}
+.dswa-source-photo img{position:absolute;top:0;left:calc(var(--crop-x) / var(--crop-w) * -100%);width:calc(941 / var(--crop-w) * 100%)!important;max-width:none!important;height:auto!important;transform:translateY(calc(var(--crop-y) / 1672 * -100%));margin:0}
+.dswa-product-grid .dswa-source-photo{border-radius:10px}
+.dswa-product-grid figcaption{padding-top:9px;font:400 clamp(13px,1.85cqw,21px)/1.3 var(--site-font);color:#222}
+.dswa-research{margin:0 3.8% 14px;padding:13px 4.5% 10px;border:1px solid #d2e1f4;border-radius:12px;box-shadow:0 5px 12px #153d7110;background:#fff;text-align:center}
+.dswa-research .dswa-rule-title{justify-content:center}
+.dswa-research .dswa-rule-title:before{content:"";height:1px;flex:1;background:#a7c1e7}
+.dswa-research ul,.dswa-brand-benefits ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:0;list-style:none;margin:0}
+.dswa-research li{padding:0 6%;border-right:1px solid #d7e4f2}
+.dswa-research li:last-child,.dswa-brand-benefits li:last-child{border-right:0}
+.dswa-research li>i{display:block;font-size:5cqw;line-height:1;color:#123782;margin-bottom:14px}
+html body.dsw-page.dswa-page #main#main .dswa-research h3{font:600 clamp(11px,1.5cqw,17px)/1.2 var(--site-font)!important;letter-spacing:0!important;color:#0e2d6d!important;margin:0 0 8px!important;min-height:2.4em}
+html body.dsw-page.dswa-page #main#main .dswa-research li p{font:400 clamp(10px,1.4cqw,16px)/1.4 var(--site-font)!important;margin:0;color:#27313b}
+html body.dsw-page.dswa-page #main#main .dswa-research-note{font:400 clamp(10px,1.4cqw,15px)/1.4 var(--site-font)!important;margin:18px 0 0;padding-top:9px;border-top:1px solid #d2e1f4;color:#626b78}
+.dswa-wellness-scene{position:relative;aspect-ratio:941/1446;background:#eaf3fa;overflow:hidden}
+.dswa-wellness-heading{position:absolute;z-index:1;left:4%;right:15%;top:6.2%}
+html body.dsw-page.dswa-page #main#main .dswa-wellness-intro{position:absolute;z-index:1;left:4%;top:17%;width:54%;font:400 clamp(13px,2cqw,23px)/1.65 var(--site-font)!important;color:#123065;margin:0}
+.dswa-wellness-rows{position:absolute;inset:0}
+.dswa-wellness-row{position:absolute;left:4.2%;top:var(--row-top);width:50%;padding:0;margin:0}
+.dswa-wellness-copy{display:flex;align-items:flex-start;gap:3.6cqw}
+.dswa-wellness-copy>i{width:7.3cqw;height:7.7cqw;font-size:4.8cqw}
+.dswa-wellness-copy>div{flex:1;padding-top:1.2cqw;min-width:0}
+html body.dsw-page.dswa-page #main#main .dswa-wellness-row h3{font:600 clamp(17px,2.55cqw,29px)/1.15 var(--site-font)!important;letter-spacing:-.35px!important;color:#0b3072!important;margin:0 0 12px!important}
+.dswa-wellness-row ul{padding-left:16px;margin:0}
+html body.dsw-page.dswa-page #main#main .dswa-wellness-row li{font:400 clamp(12px,1.8cqw,20px)/1.48 var(--site-font)!important;color:#16356b;padding:0;margin:0}
+html body.dsw-page.dswa-page #main#main .dswa-ingredients h3{margin-bottom:5px!important}
+html body.dsw-page.dswa-page #main#main .dswa-ingredients li{font-size:clamp(12px,1.7cqw,19px)!important;line-height:1.3!important}
+.dswa-wellness-mobile-hero,.dswa-wellness-mobile-photo{display:none}
+.dswa-brand-benefits{position:relative;background:#09244d;color:white;padding:15px 4.7% 22px}
+.dswa-brands-art img{transform:translateY(-86.483254%)}
+.dswa-brand-benefits ul{position:relative;gap:0}
+.dswa-brand-benefits li{text-align:center;padding:0 11%;border-right:1px solid #7a99c880}
+.dswa-brand-benefits li>i{display:block;font-size:6cqw;line-height:1;margin:0 auto 11px;color:#fff}
+html body.dsw-page.dswa-page #main#main .dswa-brand-benefits h3{font:600 clamp(11px,1.5cqw,17px)/1.35 var(--site-font)!important;text-transform:uppercase;letter-spacing:0!important;min-height:2.7em;color:#fff!important;margin:0 0 5px!important}
+html body.dsw-page.dswa-page #main#main .dswa-brand-benefits li p{font:400 clamp(10px,1.4cqw,16px)/1.4 var(--site-font)!important;color:#fff;margin:0}
+/* Taller shared headings need flowing text on tablets as well as phones. */
+@media(max-width:1100px){
+  .dswa-cosmetics-hero{display:flex;flex-direction:column;aspect-ratio:auto;overflow:visible}
+  .dswa-cosmetics-heading{position:relative;inset:auto;padding:28px 22px 0;order:1}
+  @layer arotec-display-headings{
+    html body.dsw-page.dswa-page #main#main .dswa-cosmetics-heading h1,
+    html body.dsw-page.dswa-page #main#main .dswa-wellness-heading h2{font-size:clamp(31px,6.8vw,48px)!important;line-height:1.1!important;letter-spacing:-.5px!important}
+    html body.dsw-page.dswa-page #main#main .dswa-rule-title{font-size:21px!important;line-height:1.25!important}
+    html body.dsw-page.dswa-page #main#main .dswa-brand-benefits>h2{font-size:21px!important}
+  }
+  html body.dsw-page.dswa-page #main#main .dswa-cosmetics-subtitle{position:relative;inset:auto;width:auto;order:2;padding:18px 22px 0;font-size:20px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-cosmetics-intro{position:relative;inset:auto;width:auto;order:3;padding:18px 22px 24px;font-size:15px!important;line-height:1.6!important}
+  .dswa-cosmetics-art{position:relative;inset:auto;order:4;width:100%;aspect-ratio:2560/1200}
+  .dswa-cosmetics-art img{width:100%!important;height:100%!important;left:0;top:0;transform:none;object-fit:cover;object-position:70% 25%}
+  .dswa-map-labels{position:relative;inset:auto;display:block;order:5;width:256px;height:280px;margin:20px auto 0;font-size:15px}
+  .dswa-mobile-map{display:block;width:100%;height:100%}
+  .dswa-skincare-features{position:relative;inset:auto;width:auto;order:6;padding:18px 22px;margin:0;gap:0}
+  .dswa-skincare-features li{min-height:74px;gap:18px}
+  .dswa-skincare-features i{width:50px;height:50px;font-size:32px}
+  html body.dsw-page.dswa-page #main#main .dswa-skincare-features li span{font-size:16px}
+  .dswa-product-applications{padding:26px 22px}
+  .dswa-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+  .dswa-product-grid figcaption{font-size:15px}
+  .dswa-research{margin:0 18px 24px;padding:20px 16px}
+  .dswa-research .dswa-rule-title:before,.dswa-research .dswa-rule-title:after{display:none}
+  .dswa-research ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+  .dswa-research li{padding:0 7px;border:0}
+  .dswa-research li:last-child{grid-column:1/-1;max-width:190px;justify-self:center}
+  .dswa-research li>i{font-size:44px;margin-bottom:12px}
+  html body.dsw-page.dswa-page #main#main .dswa-research h3{font-size:15px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-research li p{font-size:14px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-research-note{font-size:12px!important}
+  .dswa-wellness-scene{aspect-ratio:auto;display:flex;flex-direction:column}
+  .dswa-wellness-art{display:none}
+  .dswa-wellness-heading{position:relative;inset:auto;padding:28px 22px 0;order:1}
+  html body.dsw-page.dswa-page #main#main .dswa-wellness-intro{position:relative;inset:auto;width:auto;order:2;padding:20px 22px 24px;font-size:16px!important;line-height:1.6!important}
+  .dswa-wellness-mobile-hero{display:block;order:3}
+  .dswa-wellness-rows{position:relative;inset:auto;order:4}
+  .dswa-wellness-row{position:relative;inset:auto;width:auto;display:flex;flex-direction:column;border-bottom:1px solid #cbddeb}
+  .dswa-wellness-copy{padding:26px 22px;gap:18px;order:2}
+  .dswa-wellness-copy>i{width:52px;height:54px;font-size:34px}
+  .dswa-wellness-copy>div{padding-top:5px}
+  html body.dsw-page.dswa-page #main#main .dswa-wellness-row h3{font-size:23px!important;line-height:1.2!important;margin-bottom:12px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-wellness-row li{font-size:15px!important;line-height:1.6!important}
+  .dswa-wellness-mobile-photo{display:block;order:1;width:100%}
+  .dswa-brand-benefits{padding:26px 22px}
+  .dswa-brand-benefits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
+  .dswa-brand-benefits li{padding:0 3px;border:0}
+  .dswa-brand-benefits li:last-child{grid-column:1/-1;max-width:200px;justify-self:center}
+  .dswa-brand-benefits li>i{font-size:53px;margin-bottom:14px}
+  html body.dsw-page.dswa-page #main#main .dswa-brand-benefits h3{font-size:15px!important}
+  html body.dsw-page.dswa-page #main#main .dswa-brand-benefits li p{font-size:14px!important}
+  .dswa-brands-art{display:none}
+}
+
+/* Match the shared .sp-icon frame (54px) and glyph (26px) sizing. */
+html body.dsw-page.dswa-page {
+  --dswa-icon-size:54px;
+  --dswa-icon-glyph-size:26px;
+}
+html body.dsw-page.dswa-page main#main :is(.dswa-skincare-features i,.dswa-wellness-copy>i,.dswa-research li>i,.dswa-brand-benefits li>i) {
+  box-sizing:border-box;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  width:var(--dswa-icon-size)!important;
+  height:var(--dswa-icon-size)!important;
+  min-width:var(--dswa-icon-size);
+  font-size:var(--dswa-icon-glyph-size)!important;
+  line-height:1!important;
+}
+html body.dsw-page.dswa-page main#main :is(.dswa-research li>i,.dswa-brand-benefits li>i) {
+  margin-inline:auto;
+}
+/* Full-width photography behind editable text in a viewport-sized introduction. */
+@media(min-width:1101px) {
+  html body.dsw-page.dswa-page main#main {
+    padding-inline:0!important;
+  }
+  html body.dsw-page.dswa-page main#main > .dsw-story,
+  html body.dsw-page.dswa-page main#main > .dsw-story > .dsw-chapter {
+    width:100%!important;
+    max-width:none!important;
+    margin-inline:0!important;
+    padding-inline:0!important;
+    border-inline:0!important;
+    border-radius:0!important;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-hero {
+    --dswa-map-size:clamp(200px,15vw,240px);
+    box-sizing:border-box;
+    isolation:isolate;
+    display:grid;
+    grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+    grid-template-rows:repeat(4,auto);
+    align-content:center;
+    gap:clamp(10px,1.5vh,18px) 28px;
+    aspect-ratio:auto;
+    min-height:calc(100vh - var(--dswa-header-height,128px));
+    min-height:calc(100svh - var(--dswa-header-height,128px));
+    padding:clamp(20px,2.5vw,40px);
+    background:#edf6fc;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-art {
+    inset:0;
+    z-index:0;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-art img {
+    width:100%!important;
+    height:100%!important;
+    left:0;
+    top:0;
+    transform:none;
+    object-fit:cover;
+    object-position:70% 25%;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-art::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(237,246,252,.97) 0%,rgba(237,246,252,.91) 28%,rgba(237,246,252,.7) 43%,rgba(237,246,252,0) 65%);
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-heading {
+    position:relative;
+    inset:auto;
+    z-index:2;
+    grid-column:1;
+    grid-row:1;
+    padding:0;
+  }
+  @layer arotec-display-headings {
+    html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-heading h1 {
+      font-size:clamp(36px,min(4vw,7.5vh),64px)!important;
+      line-height:1.08!important;
+    }
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics :is(.dswa-cosmetics-subtitle,.dswa-cosmetics-intro) {
+    position:relative;
+    inset:auto;
+    z-index:2;
+    grid-column:1;
+    width:auto;
+    max-width:620px;
+    padding:0;
+    margin:0;
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-subtitle {
+    grid-row:2;
+    font-size:clamp(18px,1.5vw,23px)!important;
+    line-height:1.4!important;
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-intro {
+    grid-row:3;
+    align-self:start;
+    width:auto;
+    font-size:clamp(16px,1.2vw,19px)!important;
+    line-height:1.6!important;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-map-labels {
+    position:absolute;
+    inset:auto;
+    top:clamp(16px,2vw,28px);
+    right:clamp(16px,2vw,28px);
+    width:var(--dswa-map-size);
+    height:auto;
+    margin:0;
+    aspect-ratio:256/280;
+    z-index:2;
+    background:#edf6fc;
+    font-size:clamp(12px,.9vw,14px);
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-map-labels > span {
+    font-size:inherit!important;
+    line-height:1.2!important;
+    letter-spacing:normal!important;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-map-kochi {
+    top:80%;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-mobile-map {
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-skincare-features {
+    --dswa-icon-size:44px;
+    --dswa-icon-glyph-size:24px;
+    position:relative;
+    inset:auto;
+    z-index:3;
+    grid-column:1;
+    grid-row:4;
+    align-self:start;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px 16px;
+    width:100%;
+    margin:0;
+    padding:12px 0 0;
+    border-top:1px solid #c8d6e2;
+    background:transparent;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-skincare-features li {
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    min-height:0;
+  }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-skincare-features li:last-child {
+    grid-column:1 / -1;
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-skincare-features li span {
+    display:block;
+    align-self:center;
+    border:0;
+    font-size:clamp(13px,.9vw,16px);
+    line-height:1.35;
+  }
+}
+@media(min-width:1101px) and (max-height:760px) {
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-cosmetics-hero { --dswa-map-size:clamp(168px,22vh,196px); padding:20px 28px; gap:10px 28px; }
+  @layer arotec-display-headings {
+    html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-heading h1 { font-size:clamp(34px,min(3.6vw,7vh),48px)!important; }
+  }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-subtitle { font-size:18px!important; line-height:1.35!important; }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-cosmetics-intro { font-size:15px!important; line-height:1.5!important; }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-skincare-features { --dswa-icon-size:36px; --dswa-icon-glyph-size:21px; padding-top:10px; gap:10px 12px; }
+  html body.dsw-page.dswa-page #main #cosmetics .dswa-skincare-features li { gap:8px; }
+  html body.dsw-page.dswa-page #main#main #cosmetics .dswa-skincare-features li span { font-size:13px; }
+}
+@media(max-width:760px) {
+  html body.dsw-page.dswa-page main#main {
+    padding-top:var(--dswa-header-height,80px)!important;
+  }
+}

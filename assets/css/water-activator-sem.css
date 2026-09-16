@@ -1,0 +1,441 @@
+/* SEM reference layout. Keep these rules separate from the AQUAVORTEX hero. */
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) {
+  --sem-ink: #0b2254;
+  --sem-blue: #0756b8;
+  color: var(--sem-ink);
+  background: #edf6ff;
+}
+html body.wat-page main#main#main #aquavortex-sem {
+  padding-block: clamp(32px, 4vw, 64px) 28px;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  column-gap: clamp(24px, 4vw, 64px);
+  row-gap: 30px;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-heading {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  min-width: 0;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-strapline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 0;
+  color: var(--sem-blue);
+  font-size: clamp(16px, 1.55vw, 22px) !important;
+  font-weight: 500;
+  line-height: 1.45 !important;
+  text-align: center;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-strapline::before,
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-strapline::after {
+  content: "";
+  flex: 1 0 22px;
+  border-top: 1px solid #69a5dd;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-hero > .wa-copy {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  max-width: 550px;
+}
+html body.wat-page main#main#main #aquavortex-sem .wa-copy > p {
+  margin: 20px 0 0;
+  color: var(--sem-ink);
+  font-size: clamp(16px, 1.35vw, 19px) !important;
+  line-height: 1.7 !important;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-photo img {
+  position: static;
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  inset: auto;
+  object-fit: contain;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-unit {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  justify-self: center;
+  width: min(100%, 320px);
+  mix-blend-mode: multiply;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 0 12px;
+  color: var(--sem-ink);
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+}
+html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights li + li {
+  border-left: 1px solid #c3d6e7;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  color: var(--sem-blue);
+  border: 0;
+  background: transparent;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon i {
+  font-size: 48px;
+  line-height: 1;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon--vortex {
+  color: #177bcc;
+  border: 3px solid #badbf2;
+  border-radius: 50%;
+  background: #e8f5ff;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon--vortex i {
+  font-size: 42px;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon--ceramic {
+  border: 1px solid var(--sem-blue);
+  border-radius: 50%;
+}
+html body.wat-page main#main#main :is(#aquavortex-sem, #sem-structure) .wat-sem-icon--ceramic i {
+  font-size: 38px;
+}
+html body.wat-page main#main#main #sem-structure {
+  padding-block: 0;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-structure {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 44px);
+  margin: 0;
+  padding: clamp(24px, 3vw, 44px);
+  border: 0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: none;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-cutaway {
+  width: 42%;
+  max-width: 250px;
+  margin-inline: auto;
+}
+html body.wat-page main#main#main #sem-structure .wat-flow-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 29%;
+  z-index: 2;
+  color: var(--sem-ink);
+  font-size: clamp(11px, 1vw, 14px);
+  line-height: 1.4;
+  text-align: center;
+}
+html body.wat-page main#main#main #sem-structure .wat-flow-label--raw {
+  left: 0;
+  top: 10%;
+}
+html body.wat-page main#main#main #sem-structure .wat-flow-label--activated {
+  right: 0;
+  top: 7%;
+}
+html body.wat-page main#main#main #sem-structure .wat-flow-label i {
+  font-size: clamp(38px, 4.5vw, 64px);
+  line-height: .9;
+  color: #218bfa;
+}
+html body.wat-page main#main#main #sem-structure .wat-flow-label--raw i {
+  color: #4cbbb8;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout {
+  position: absolute;
+  width: 28%;
+  z-index: 2;
+  text-align: center;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout--ceramic {
+  left: 0;
+  top: 39%;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout--spiral {
+  right: 0;
+  top: 53%;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout-card {
+  padding: 12px 9px;
+  border: 1px solid #14265b;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 5px 12px rgba(10, 33, 75, .12);
+  font-size: clamp(10px, .95vw, 13px);
+  line-height: 1.5;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout-card ul {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+html body.wat-page main#main#main #sem-structure .wat-callout-card li i {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-detail-crop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: var(--crop-ratio);
+  margin: 12px 0 0;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-detail-crop img {
+  position: absolute;
+  display: block;
+  width: var(--crop-width) !important;
+  max-width: none !important;
+  height: var(--crop-height) !important;
+  left: var(--crop-left);
+  top: var(--crop-top);
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  margin: 18px 0 0;
+  padding: 0 0 0 22px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--sem-ink);
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.6;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-structure > .wa-copy > p {
+  margin: 16px 0 0;
+  color: var(--sem-ink);
+  font-size: clamp(15px, 1.25vw, 18px) !important;
+  line-height: 1.65 !important;
+}
+html body.wat-page main#main#main #sem-structure .wat-ceramic-balls {
+  width: min(74%, 240px);
+  margin: 14px 0 0 auto;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 0;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-benefits .wa-feature {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 12px 16px;
+  padding: 24px 18px;
+  border: 0;
+  border-radius: 20px;
+  background: #fff;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-benefits .wat-sem-icon {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-benefits h3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+html body.wat-page main#main#main #sem-structure .wat-sem-benefits p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  color: var(--sem-ink);
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+html body.wat-page main#main#main #sem-structure .wat-bottom-actions {
+  margin-top: 30px;
+}
+html body.wat-page main#main#main #sem-structure::after {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 1054 / 70;
+  margin-top: 28px;
+  background: url("../images/partners/water-activator/sem-reference-20260908.png") center bottom / 100% auto no-repeat;
+}
+@layer arotec-display-headings.spec {
+  html body.wat-page main#main#main #sem-title,
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-living,
+  html body.wat-page main#main#main #sem-structure-title,
+  html body.wat-page main#main#main #sem-structure .wat-callout h4 {
+    color: #081846 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: -.025em !important;
+  }
+  html body.wat-page main#main#main #sem-title {
+    margin: 0 !important;
+    font-size: clamp(40px, 4.5vw, 72px) !important;
+    line-height: 1.08 !important;
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-living {
+    margin: 0 0 18px !important;
+    font-size: clamp(34px, 3.4vw, 52px) !important;
+    line-height: 1.14 !important;
+  }
+  html body.wat-page main#main#main #sem-structure-title {
+    margin: 0 0 20px !important;
+    font-size: clamp(28px, 2.6vw, 38px) !important;
+    line-height: 1.18 !important;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-callout h4 {
+    margin: 0 0 10px !important;
+    font-size: clamp(16px, 1.4vw, 22px) !important;
+    line-height: 1.2 !important;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-callout--spiral h4 {
+    font-size: clamp(12px, 1.05vw, 16px) !important;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-benefits h3 {
+    margin: 0 !important;
+    color: #0756b8 !important;
+    font-size: clamp(16px, 1.15vw, 19px) !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+  }
+}
+@media (max-width: 1100px) {
+  html body.wat-page main#main#main #sem-structure .wat-sem-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 28px;
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-hero > .wa-copy {
+    max-width: none;
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-unit {
+    grid-column: 1;
+    grid-row: 3;
+    width: min(65%, 280px);
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights {
+    grid-row: 4;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-structure {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+}
+@media (max-width: 600px) {
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+  html body.wat-page main#main#main #aquavortex-sem .wat-sem-highlights li:nth-child(odd) {
+    border-left: 0;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-structure {
+    padding: 22px 18px;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-diagram {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px 12px;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-flow-label,
+  html body.wat-page main#main#main #sem-structure .wat-callout {
+    position: static;
+    width: 100%;
+    font-size: 12px;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-flow-label {
+    grid-row: 1;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-cutaway {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: min(78%, 217px);
+  }
+  html body.wat-page main#main#main #sem-structure .wat-callout {
+    grid-row: 3;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-callout-card {
+    font-size: 12px;
+  }
+  html body.wat-page main#main#main #sem-structure .wat-sem-benefits {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @layer arotec-display-headings.spec {
+    html body.wat-page main#main#main #sem-title {
+      font-size: clamp(30px, 8vw, 44px) !important;
+    }
+    html body.wat-page main#main#main #aquavortex-sem .wat-sem-living {
+      font-size: 34px !important;
+    }
+    html body.wat-page main#main#main #sem-structure-title {
+      font-size: 28px !important;
+    }
+  }
+}
