@@ -1,0 +1,78 @@
+/* Updated leadership copy, with portraits and signature at 70% scale. */
+html body.wwa-page main#main#main #founder-vision.lrf-background-section {
+  --lrf-refined-image: url("../images/leadership-responsibility-and-future/founder-vision-background-sep08.jpg");
+  --lrf-refined-position: right top;
+  --lrf-refined-size: contain;
+  --lrf-refined-color: #130f0b;
+  --lrf-refined-art-height: 66.671875vw;
+}
+
+html body.wwa-page main#main#main #scientific-foundation.lrf-background-section {
+  --lrf-refined-image: url("../images/leadership-responsibility-and-future/scientific-foundation-background.jpg");
+  --lrf-refined-color: #09223a;
+  --lrf-refined-art-height: 36.7578125vw;
+}
+
+html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--lrf-refined-color) !important;
+  background-image: none !important;
+}
+
+html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(90deg, var(--lrf-refined-color), transparent 28%), var(--lrf-refined-image);
+  background-size: var(--lrf-refined-size, cover);
+  background-position: var(--lrf-refined-position, right center);
+  background-repeat: no-repeat;
+  transform: scale(0.7);
+  transform-origin: right center;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 5%, #000 95%, transparent);
+  pointer-events: none;
+}
+
+html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section::before {
+  z-index: 1;
+}
+
+html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section > .wwa-grid {
+  position: relative;
+  z-index: 2;
+}
+
+html body.wwa-page main#main#main #scientific-foundation .lrf-signature {
+  width: 196px !important;
+  max-width: 45.5% !important;
+}
+
+html body.wwa-page main#main#main #scientific-foundation .lrf-credentials {
+  margin: 20px 0 0 !important;
+  padding: 12px 0;
+  border-block: 1px solid rgba(148, 182, 238, 0.65);
+  color: var(--sfc-blue, #b4d4ff) !important;
+  font-size: clamp(14px, 1.15vw, 18px) !important;
+  line-height: 1.65 !important;
+}
+
+html body.wwa-page main#main#main #scientific-foundation .lrf-credentials span {
+  margin-inline: 0.35em;
+}
+
+@media (max-width: 1100px) {
+  html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section::after {
+    inset: 0 0 auto;
+    height: var(--lrf-refined-art-height);
+    background-size: 100% auto;
+    background-position: right top;
+    transform-origin: right top;
+  }
+
+  html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section > .wwa-grid {
+    padding-top: calc(var(--lrf-refined-art-height) * 0.7 + 24px) !important;
+  }
+}

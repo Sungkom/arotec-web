@@ -1,0 +1,302 @@
+/* Supplied panoramic backgrounds, with live text kept separate from the artwork. */
+html body.lrf-page main#main#main .lrf-background-section {
+  --sfc-ink:#fff;
+  --sfc-ink-soft:#edf2f7;
+  --sfc-blue:#a7c8ff;
+  --sfc-line:rgba(190,210,240,.3);
+  --lrf-accent:#a7c8ff;
+  --lrf-text:#edf2f7;
+  --lrf-line:rgba(190,210,240,.3);
+  position:relative;
+  isolation:isolate;
+  background-color:var(--lrf-scene-color);
+  background-image:var(--lrf-scene-image);
+  background-size:cover;
+  background-position:right center;
+  background-repeat:no-repeat;
+}
+html body.lrf-page main#main#main #founder-vision.lrf-background-section {
+  --lrf-scene-color:#130f0b;
+  --lrf-art-height:40vw;
+  --lrf-scene-image:url("../images/leadership-responsibility-and-future/founder-vision-background.png");
+}
+html body.lrf-page main#main#main #scientific-foundation.lrf-background-section {
+  --lrf-scene-color:#09223a;
+  --lrf-art-height:36.7578125vw;
+  --lrf-scene-image:url("../images/leadership-responsibility-and-future/scientific-foundation-background.jpg");
+}
+html body.lrf-page main#main#main .lrf-background-section::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.38),rgba(0,0,0,.12) 48%,transparent 68%);
+}
+html body.lrf-page main#main#main .lrf-background-section > .wwa-grid {
+  position:relative;
+  z-index:1;
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  align-content:center;
+  align-items:start;
+  gap:28px;
+  width:100%;
+  max-width:none;
+  min-height:max(720px,var(--lrf-art-height));
+  margin-inline:0;
+  padding:clamp(48px,4vw,84px) clamp(24px,5vw,128px);
+}
+html body.lrf-page main#main#main .lrf-background-section .wwa-copy,
+html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities {
+  grid-column:1 / -1;
+  grid-row:auto;
+  justify-self:start;
+  width:52%;
+  max-width:680px;
+}
+html body.lrf-page main#main#main .lrf-background-section :is(h1,h2) {
+  color:#fff!important;
+}
+html body.lrf-page main#main#main .lrf-background-section :is(.wwa-eyebrow,.wwa-lead) {
+  color:#a7c8ff!important;
+}
+html body.lrf-page main#main#main .lrf-background-section .wwa-body {
+  color:#edf2f7!important;
+}
+html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  padding-top:24px;
+  border-top:1px solid var(--lrf-line);
+}
+html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities li {
+  grid-column:auto;
+  flex-direction:row;
+  gap:10px;
+  padding:0 12px;
+  text-align:left;
+}
+html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities li + li {
+  border-left:1px solid var(--lrf-line);
+}
+html body.lrf-page main#main#main .lrf-background-section .lrf-icon {
+  background:rgba(255,255,255,.06);
+}
+@media(max-width:1100px) {
+  html body.lrf-page main#main#main .lrf-background-section {
+    background-size:100% auto;
+    background-position:center top;
+  }
+  html body.lrf-page main#main#main .lrf-background-section::before {
+    bottom:auto;
+    height:var(--lrf-art-height);
+    background:linear-gradient(180deg,transparent 65%,var(--lrf-scene-color));
+  }
+  html body.lrf-page main#main#main .lrf-background-section > .wwa-grid {
+    min-height:0;
+    padding:calc(var(--lrf-art-height) + 24px) clamp(20px,4vw,48px) 48px;
+    gap:24px;
+  }
+  html body.lrf-page main#main#main .lrf-background-section .wwa-copy,
+  html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities {
+    width:100%;
+    max-width:none;
+  }
+}
+@media(max-width:599px) {
+  html body.lrf-page main#main#main .lrf-background-section .lrf-capabilities li {
+    flex-direction:column;
+    padding:8px 6px;
+    text-align:center;
+  }
+}
+
+/* Original signature, placed between the research copy and credentials. */
+html body.lrf-page main#main#main #scientific-foundation .lrf-signature {
+  display:block;
+  width:280px;
+  max-width:65%;
+  margin:20px 10% 0 auto!important;
+  line-height:0;
+}
+html body.lrf-page main#main#main #scientific-foundation .lrf-signature svg {
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+}
+
+.lrf-page {
+  --lrf-accent: #2564a3;
+  --lrf-text: #243d5a;
+  --lrf-line: rgba(37, 100, 163, 0.2);
+}
+
+.lrf-page .wwa-copy,
+.lrf-page .wwa-visual {
+  min-width: 0;
+}
+
+.lrf-page .wwa-copy h1,
+.lrf-page .wwa-copy h2 {
+  overflow-wrap: anywhere;
+}
+
+.lrf-page .wwa-body + .wwa-body {
+  margin-top: 20px;
+}
+
+.lrf-page .lrf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  padding: 18px 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--lrf-line);
+  border-bottom: 1px solid var(--lrf-line);
+  list-style: none;
+}
+
+.lrf-page .lrf-tags li {
+  display: flex;
+  align-items: baseline;
+  color: var(--lrf-accent);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.lrf-page .lrf-tags li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  flex: 0 0 4px;
+  width: 4px;
+  height: 4px;
+  margin: 0 14px;
+  border-radius: 50%;
+  background: currentColor;
+  align-self: center;
+}
+
+.lrf-page .lrf-capabilities {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--lrf-columns, 4), minmax(0, 1fr));
+  padding: 28px 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lrf-page .lrf-capabilities li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 8px 24px;
+  color: var(--lrf-text);
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lrf-page .lrf-capabilities li + li {
+  border-left: 1px solid var(--lrf-line);
+}
+
+.lrf-page .lrf-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--lrf-line);
+  border-radius: 50%;
+  color: var(--lrf-accent);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.lrf-page .lrf-icon::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: currentColor;
+  -webkit-mask-image: var(--lrf-icon-image);
+  mask-image: var(--lrf-icon-image);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.lrf-page .lrf-icon--person {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%227%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M4%2022v-3a8%208%200%200%201%2016%200v3z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--flask {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%202h6M10%202v7L3%2020a1.3%201.3%200%200%200%201%202h16a1.3%201.3%200%200%200%201-2L14%209V2M7%2014h10%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2217%22%20r%3D%22.7%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--brain {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%205c0-2-2-3-3.5-2S6%205%206%206C3%206%202%208%203%2010c-2%202-1%205%201%206-1%203%202%205%204%204%202%202%204%201%204-1V5zM12%205c0-2%202-3%203.5-2S18%205%2018%206c3%200%204%202%203%204%202%202%201%205-1%206%201%203-2%205-4%204-2%202-4%201-4-1M6%206c0%202%201%203%203%203M18%206c0%202-1%203-3%203M4%2016c3%200%204-2%203-4M20%2016c-3%200-4-2-3-4M8%2020v-3M16%2020v-3%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--network {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%222.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%224%22%20cy%3D%226%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%223%22%20cy%3D%2217%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2221.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2221%22%20cy%3D%2217%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%226%22%20r%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M12%204v5M5.2%207l4.4%203.2M4.3%2016.2l5-2.8M12%2015v5M14.7%2013.4l5%202.8M14.4%2010.2%2018.8%207%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--globe {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2212%22%20rx%3D%224%22%20ry%3D%229%22%2F%3E%3Cpath%20d%3D%22M3%2012h18M5%206.5h14M5%2017.5h14%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--handshake {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m2%208%203-4%204%202%203-1%204%201%203-2%203%204-3%207-3%204-3%202-6-4-3-2zM9%206l-3%205%202%201%204-4%207%207M12%2015l4%204M9%2017l4%204M2%208l4%203M18%2011l4-3%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.lrf-page .lrf-icon--people {
+  --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%227%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M2%2022v-3a7%207%200%200%201%2014%200v3zM16%203a4%204%200%200%201%200%208M18%2014a6%206%200%200%201%204%205v3h-3%22%2F%3E%3C%2Fsvg%3E");
+}
+
+@media (max-width: 991px) {
+  .lrf-page .lrf-capabilities li {
+    padding-inline: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lrf-page .lrf-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+    padding-top: 8px;
+  }
+
+  .lrf-page .lrf-capabilities li:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .lrf-page .lrf-capabilities li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 599px) {
+  .lrf-page .lrf-tags li {
+    font-size: 14px;
+  }
+
+  .lrf-page .lrf-tags li:not(:last-child)::after {
+    margin-inline: 10px;
+  }
+
+  .lrf-page .lrf-capabilities li {
+    padding-inline: 12px;
+    font-size: 15px;
+  }
+}

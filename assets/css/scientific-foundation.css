@@ -1,0 +1,197 @@
+/* Scoped additions to the shared culture and Who We Are page layout. */
+html body.sfnd-page main#main {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-top: var(--sfnd-header-offset, 0px) !important;
+  padding-inline: 0 !important;
+}
+html body.sfnd-page main#main #science-at-our-core {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: clamp(24px, 4vh, 64px) 0;
+  background: #edf5fc url("../images/scientific-foundation/science-at-our-core-background-20260908.png") 70% 35% / cover no-repeat;
+}
+html body.sfnd-page main#main #science-at-our-core::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(244, 249, 255, .97) 0%, rgba(244, 249, 255, .91) 28%, rgba(244, 249, 255, .7) 43%, rgba(244, 249, 255, 0) 66%);
+}
+html body.sfnd-page main#main #science-at-our-core > .sfnd-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: clamp(24px, 4vw, 80px);
+}
+html body.sfnd-page main#main #science-at-our-core .wwa-copy {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 50%);
+  min-width: 0;
+}
+@media (min-width: 992px) {
+  html body.sfnd-page main#main #science-at-our-core {
+    min-height: calc(100vh - var(--sfnd-header-height, 134px));
+    min-height: calc(100svh - var(--sfnd-header-height, 134px));
+  }
+}
+@media (max-width: 991px) {
+  html body.sfnd-page main#main #science-at-our-core {
+    --sfnd-hero-image-height: clamp(240px, 45vw, 420px);
+    min-height: 0;
+    padding: 40px 0 calc(var(--sfnd-hero-image-height) + 32px);
+    background-color: #f4f9ff;
+    background-size: auto var(--sfnd-hero-image-height);
+    background-position: 80% bottom;
+  }
+  html body.sfnd-page main#main #science-at-our-core::before {
+    background: linear-gradient(to bottom, #f4f9ff 0%, #f4f9ff calc(100% - var(--sfnd-hero-image-height)), rgba(244, 249, 255, 0) calc(100% - var(--sfnd-hero-image-height) + 40px));
+  }
+  html body.sfnd-page main#main #science-at-our-core .wwa-copy { width: 100%; }
+}
+html body.sfnd-page main#main .wwa-body + .wwa-body {
+  margin-top: 20px;
+}
+html body.sfnd-page main#main .sfnd-closing {
+  margin: 30px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--sfc-line);
+  color: var(--sfc-blue) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+.sfnd-page .sfnd-disciplines {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--sfnd-columns), minmax(0, 1fr));
+  gap: 0;
+  padding: 24px 0;
+  margin: 8px 0 0;
+  border-top: 1px solid var(--sfc-line);
+  border-bottom: 1px solid var(--sfc-line);
+  list-style: none;
+}
+html body.sfnd-page main#main .sfnd-disciplines li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 6px 20px;
+  color: var(--sfc-ink-soft);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  text-align: center;
+}
+.sfnd-page .sfnd-disciplines li + li {
+  border-left: 1px solid var(--sfc-line);
+}
+.sfnd-page .sfnd-annotations {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.sfnd-page .sfnd-annotations > div {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--sfc-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .78);
+}
+html body.sfnd-page main#main .sfnd-annotations dt {
+  margin: 0 0 12px;
+  color: var(--sfc-blue);
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+html body.sfnd-page main#main .sfnd-annotations dd {
+  margin: 0;
+  color: var(--sfc-ink-soft);
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+@media (max-width: 991px) {
+  .sfnd-page .sfnd-disciplines {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 18px;
+  }
+  .sfnd-page .sfnd-disciplines li:nth-child(odd) {
+    border-left: 0;
+  }
+  .sfnd-page .sfnd-annotations {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+@media (max-width: 599px) {
+  html body.sfnd-page main#main .sfnd-closing {
+    font-size: 16px !important;
+  }
+  html body.sfnd-page main#main .sfnd-disciplines li {
+    padding-inline: 12px;
+    font-size: 14px !important;
+  }
+  .sfnd-page .sfnd-annotations > div {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+
+/* Sensory Science: supplied full-width silver and gold sensory illustration. */
+html body.sfnd-page main#main#main #sensory-science {
+  background-color: #eef1f5;
+  background-image:
+    linear-gradient(90deg, rgba(244, 248, 252, .82) 0%, rgba(244, 248, 252, .72) 35%, rgba(244, 248, 252, .2) 52%, rgba(244, 248, 252, 0) 68%),
+    url("../images/scientific-foundation/sensory-science-background-20260911.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html body.sfnd-page main#main#main #sensory-science > .wwa-grid {
+  box-sizing: border-box;
+  min-height: max(720px, 36.7578125vw);
+}
+html body.sfnd-page main#main#main #sensory-science .sfnd-sensory-visual-space {
+  grid-column: 7 / 13;
+  min-width: 0;
+  min-height: 430px;
+}
+@media (max-width: 991px) {
+  html body.sfnd-page main#main#main #sensory-science {
+    --sfnd-sensory-art-height: clamp(280px, 55vw, 480px);
+    background-image:
+      linear-gradient(to bottom, #eef1f5 0%, #eef1f5 calc(100% - var(--sfnd-sensory-art-height)), rgba(238, 241, 245, 0) calc(100% - var(--sfnd-sensory-art-height) + 40px)),
+      url("../images/scientific-foundation/sensory-science-background-20260911.png");
+    background-size: 100% 100%, auto var(--sfnd-sensory-art-height);
+    background-position: center, 78% bottom;
+  }
+  html body.sfnd-page main#main#main #sensory-science > .wwa-grid {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  html body.sfnd-page main#main#main #sensory-science .sfnd-sensory-visual-space {
+    grid-column: 1;
+    min-height: var(--sfnd-sensory-art-height);
+  }
+}

@@ -1,0 +1,306 @@
+html body.gcp-page main#main {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-top: var(--gcp-header-offset, 0px) !important;
+  padding-inline: 0 !important;
+}
+
+html body.gcp-page main#main #global-perspective {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: clamp(24px, 4vh, 64px) 0;
+  background: #edf5fc url("../images/global-capability-and-people/global-perspective-background-20260908.png") 70% 35% / cover no-repeat;
+}
+
+html body.gcp-page main#main #global-perspective::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(244, 249, 255, .96) 0%, rgba(244, 249, 255, .88) 28%, rgba(244, 249, 255, .56) 45%, rgba(244, 249, 255, 0) 65%);
+}
+
+html body.gcp-page main#main #global-perspective > .gcp-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: clamp(24px, 4vw, 80px);
+}
+
+html body.gcp-page main#main #global-perspective .wwa-copy {
+  position: relative;
+  z-index: 2;
+  width: min(700px, 54%);
+  min-width: 0;
+}
+
+@media (min-width: 992px) {
+  html body.gcp-page main#main #global-perspective {
+    min-height: calc(100vh - var(--gcp-header-height, 134px));
+    min-height: calc(100svh - var(--gcp-header-height, 134px));
+  }
+
+  @layer arotec-display-headings {
+    html body.gcp-page main#main#main #global-perspective-title {
+      font-size: clamp(36px, min(4.3vw, 7.5vh), 64px) !important;
+      line-height: 1.1 !important;
+      margin: 0 !important;
+    }
+  }
+
+  html body.gcp-page main#main #global-perspective .wwa-lead {
+    margin: 18px 0 0;
+    font-size: clamp(18px, 1.5vw, 24px) !important;
+    line-height: 1.45 !important;
+  }
+
+  html body.gcp-page main#main #global-perspective .wwa-body {
+    margin: 18px 0 0;
+    font-size: clamp(16px, 1.1vw, 20px) !important;
+    line-height: 1.6 !important;
+  }
+
+  html body.gcp-page main#main #global-perspective .gcp-tags {
+    margin-top: 22px;
+    padding-block: 14px;
+  }
+}
+
+@media (min-width: 992px) and (max-height: 760px) {
+  html body.gcp-page main#main #global-perspective {
+    padding-block: 20px;
+  }
+
+  html body.gcp-page main#main #global-perspective .wwa-body {
+    margin-top: 12px;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  html body.gcp-page main#main #global-perspective .gcp-tags {
+    margin-top: 16px;
+    padding-block: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  html body.gcp-page main#main #global-perspective {
+    --gcp-hero-image-height: clamp(240px, 48vw, 480px);
+    min-height: 0;
+    padding: 40px 0 calc(var(--gcp-hero-image-height) + 32px);
+    background-color: #f4f9ff;
+    background-size: auto var(--gcp-hero-image-height);
+    background-position: 85% bottom;
+  }
+
+  html body.gcp-page main#main #global-perspective::before {
+    background: linear-gradient(to bottom, #f4f9ff 0%, #f4f9ff calc(100% - var(--gcp-hero-image-height)), rgba(244, 249, 255, 0) calc(100% - var(--gcp-hero-image-height) + 40px));
+  }
+
+  html body.gcp-page main#main #global-perspective .wwa-copy {
+    width: 100%;
+  }
+}
+
+.gcp-page {
+  --gcp-accent: #2564a3;
+  --gcp-text: #243d5a;
+  --gcp-line: rgba(37, 100, 163, 0.2);
+}
+
+.gcp-page .wwa-copy,
+.gcp-page .wwa-visual {
+  min-width: 0;
+}
+
+.gcp-page .wwa-copy h1,
+.gcp-page .wwa-copy h2 {
+  overflow-wrap: anywhere;
+}
+
+.gcp-page .wwa-body + .wwa-body {
+  margin-top: 20px;
+}
+
+.gcp-page .gcp-tags,
+.gcp-page .gcp-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  padding: 18px 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--gcp-line);
+  border-bottom: 1px solid var(--gcp-line);
+  list-style: none;
+}
+
+.gcp-page .gcp-tags li,
+.gcp-page .gcp-facts li {
+  display: flex;
+  align-items: baseline;
+  color: var(--gcp-accent);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.gcp-page .gcp-tags li:not(:last-child)::after,
+.gcp-page .gcp-facts li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  flex: 0 0 4px;
+  width: 4px;
+  height: 4px;
+  margin: 0 14px;
+  border-radius: 50%;
+  background: currentColor;
+  align-self: center;
+}
+
+.gcp-page .gcp-capabilities {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--gcp-columns, 4), minmax(0, 1fr));
+  padding: 28px 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gcp-page .gcp-capabilities li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 8px 24px;
+  color: var(--gcp-text);
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.gcp-page .gcp-capabilities li + li {
+  border-left: 1px solid var(--gcp-line);
+}
+
+.gcp-page .gcp-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--gcp-line);
+  border-radius: 50%;
+  color: var(--gcp-accent);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.gcp-page .gcp-icon::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: currentColor;
+  -webkit-mask-image: var(--gcp-icon-image);
+  mask-image: var(--gcp-icon-image);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.gcp-page .gcp-icon--globe {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2212%22%20rx%3D%224%22%20ry%3D%229%22%2F%3E%3Cpath%20d%3D%22M3%2012h18M5%206.5h14M5%2017.5h14%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--people {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%227%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M6.5%2021v-3a5.5%205.5%200%200%201%2011%200v3zM4.5%2021H2v-4a4%204%200%200%201%204-4M19.5%2021H22v-4a4%204%200%200%200-4-4M5.5%204.5a3%203%200%201%200%200%206M18.5%204.5a3%203%200%201%201%200%206%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--handshake {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m2%208%203-4%204%202%203-1%204%201%203-2%203%204-3%207-3%204-3%202-6-4-3-2zM9%206l-3%205%202%201%204-4%207%207M12%2015l4%204M9%2017l4%204M2%208l4%203M18%2011l4-3%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--box {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%202%209%205v10l-9%205-9-5V7zM3%207l9%205%209-5M12%2012v10M7.5%204.5l9%205V14%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--shield {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202c3%202.5%206%203.5%209%204v6c0%205-4%208-9%2010-5-2-9-5-9-10V6c3-.5%206-1.5%209-4zM7.5%2012l3%203%206-6%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--scales {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203v18M7%2021h10M3%207l9-3%209%203M5%207%201.5%2015h7zM19%207l-3.5%208h7zM1.5%2015c0%203%207%203%207%200M15.5%2015c0%203%207%203%207%200%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--document {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%2022H4V2h11l5%205v5M15%202v6h5M7%207h4M7%2011h7M7%2015h3%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2218%22%20r%3D%225%22%2F%3E%3Cpath%20d%3D%22m14.5%2018%201.5%201.5%203-3%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-icon--leaf {
+  --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20.5%202.5c1%207.5-.5%2013-5%2016-4%202.5-9%20.5-10.5-3.5S6%207%2010%206c4-1%207-1.5%2010.5-3.5zM3%2022%2017%208M8%2017v-5M12%2013h5%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.gcp-page .gcp-facts {
+  grid-column: 1 / -1;
+  justify-content: center;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .gcp-page .gcp-capabilities li {
+    padding-inline: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gcp-page .gcp-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+    padding-top: 8px;
+  }
+
+  .gcp-page .gcp-capabilities li:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .gcp-page .gcp-capabilities li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 599px) {
+  .gcp-page .gcp-tags li,
+  .gcp-page .gcp-facts li {
+    font-size: 14px;
+  }
+
+  .gcp-page .gcp-tags li:not(:last-child)::after,
+  .gcp-page .gcp-facts li:not(:last-child)::after {
+    margin-inline: 10px;
+  }
+
+  .gcp-page .gcp-capabilities li {
+    padding-inline: 12px;
+    font-size: 15px;
+  }
+}
