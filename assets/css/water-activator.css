@@ -1,0 +1,928 @@
+/* Shared partner-page structure; all narrative and specifications remain HTML. */
+html body.wa-page {
+  --wa-ink: #173f58;
+  --wa-blue: #096cc0;
+  --wa-line: #cee3ef;
+  --wa-paper: #f2faff;
+}
+html body.wa-page main#main#main.wa-main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding-top: var(--detail-header-space, 112px) !important;
+  padding-inline: 0 !important;
+  color: var(--wa-ink);
+}
+html body.wa-page main#main#main .sp-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 72px);
+}
+html body.wa-page main#main#main .sp-section {
+  padding-block: clamp(48px, 6vw, 88px);
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 20px);
+}
+html body.wa-page main#main#main :is(.wa-intro, .sp-tint) {
+  background: linear-gradient(135deg, #fff 6%, #f3fbff 55%, #e8f7fd);
+}
+html body.wa-page main#main#main .sp-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+}
+html body.wa-page main#main#main .wa-copy { min-width: 0; }
+html body.wa-page main#main#main .wa-copy > p:not(.sp-eyebrow):not(.sp-lead) {
+  font-size: 18px;
+  line-height: 1.65;
+}
+html body.wa-page main#main#main .wa-copy :is(h1, h2, h3) {
+  margin-block: 14px 22px;
+}
+html body.wa-page main#main#main #water-activator {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-block: 0 !important;
+  padding-inline: 0 !important;
+}
+html body.wa-page main#main#main .wa-intro-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+html body.wa-page main#main#main .wa-hero-grid {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-block: clamp(24px, 4vh, 64px);
+  background: #edf7fc url("../images/partners/water-activator/restore-water-background-20260908.png") 70% center / cover no-repeat;
+}
+html body.wa-page main#main#main .wa-hero-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(244, 250, 255, .78) 0%, rgba(244, 250, 255, .55) 35%, rgba(244, 250, 255, 0) 62%);
+}
+html body.wa-page main#main#main .wa-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: none;
+  padding-inline: clamp(24px, 4vw, 80px);
+}
+html body.wa-page main#main#main .wa-hero-inner > .wa-copy {
+  position: relative;
+  z-index: 2;
+  width: min(720px, 55%);
+  max-width: none;
+}
+@media (min-width: 992px) {
+  html body.wa-page main#main#main .wa-hero-grid {
+    min-height: calc(100vh - var(--detail-header-space, 112px));
+    min-height: calc(100svh - var(--detail-header-space, 112px));
+  }
+  @layer arotec-display-headings.spec {
+    html body.wa-page main#main#main #water-activator-title {
+      font-size: clamp(36px, min(4.3vw, 7.5vh), 64px) !important;
+      line-height: 1.1 !important;
+      letter-spacing: -1px !important;
+      margin-block: 14px 20px !important;
+    }
+  }
+  html body.wa-page main#main#main .wa-hero-inner .sp-lead {
+    margin-block: 0 18px;
+    font-size: clamp(18px, 1.5vw, 24px) !important;
+    line-height: 1.45 !important;
+  }
+  html body.wa-page main#main#main .wa-hero-inner .wa-copy > p:not(.sp-eyebrow):not(.sp-lead) {
+    margin: 0;
+    font-size: clamp(16px, 1.1vw, 20px) !important;
+    line-height: 1.6 !important;
+  }
+  html body.wa-page main#main#main .wa-hero-inner .ss-more {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) and (max-height: 760px) {
+  html body.wa-page main#main#main .wa-hero-grid {
+    padding-block: 20px;
+  }
+  html body.wa-page main#main#main .wa-hero-inner .wa-copy > p:not(.sp-eyebrow):not(.sp-lead) {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+  html body.wa-page main#main#main .wa-hero-inner .ss-more {
+    margin-top: 18px;
+  }
+}
+html body.wa-page main#main#main .wa-art {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: var(--wa-aspect);
+  margin: 0;
+  border-radius: 22px;
+  background: #fff;
+}
+html body.wa-page main#main#main .wa-art img {
+  display: block;
+  position: absolute;
+  width: var(--wa-image-width) !important;
+  max-width: none !important;
+  height: var(--wa-image-height) !important;
+  left: var(--wa-image-left);
+  top: var(--wa-image-top);
+}
+html body.wa-page main#main#main .wa-building-art { max-width: 380px; justify-self: center; }
+html body.wa-page main#main#main .wa-technology {
+  --wa-technology-image-height: max(240px, 32.65625vw);
+  display: grid;
+  grid-template-rows: 1fr 1.25fr;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  padding-top: clamp(48px, 6vw, 88px);
+  padding-bottom: 0;
+  background: #f4faff url("../images/partners/water-activator/nature-motion-background-20260910.png") center / cover no-repeat;
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+html body.wa-page main#main#main .wa-technology::after {
+  content: "";
+  display: block;
+  pointer-events: none;
+}
+html body.wa-page main#main#main .wa-section-head { max-width: 1000px; margin-bottom: 38px; }
+html body.wa-page main#main#main .wa-section-intro { margin-bottom: 48px; }
+html body.wa-page main#main#main #facilities { padding-top: 0; }
+html body.wa-page main#main#main .wa-facilities-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: clamp(460px, 42vw, 650px);
+  padding-block: clamp(40px, 5vw, 72px);
+  background: #f4faff url("../images/partners/water-activator/daily-facilities-background-20260910.png") center / cover no-repeat;
+}
+html body.wa-page main#main#main .wa-facilities-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(244, 250, 255, .92), rgba(244, 250, 255, .7) 38%, rgba(244, 250, 255, 0) 65%);
+}
+html body.wa-page main#main#main .wa-facilities-hero > .sp-container {
+  position: relative;
+  z-index: 1;
+}
+html body.wa-page main#main#main .wa-facilities-hero .wa-copy {
+  width: min(700px, 56%);
+}
+html body.wa-page main#main#main .wa-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+html body.wa-page main#main#main .wa-feature {
+  padding: 8px 28px 8px 0;
+  border-right: 1px solid var(--wa-line);
+}
+html body.wa-page main#main#main .wa-feature:last-child { border-right: 0; }
+html body.wa-page main#main#main .wa-feature h3 { margin-block: 16px 10px; }
+html body.wa-page main#main#main .wa-cutaway { max-width: 1120px; margin-inline: auto; }
+html body.wa-page main#main#main .wa-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  color: var(--wa-blue);
+  border: 1px solid var(--wa-line);
+  border-radius: 50%;
+}
+html body.wa-page main#main#main .wa-icon i { font-size: 26px; line-height: 1; }
+html body.wa-page main#main#main .wa-panel {
+  padding: clamp(24px, 3vw, 44px);
+  margin-top: 28px;
+  border: 1px solid var(--wa-line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(29, 87, 120, 0.045);
+}
+html body.wa-page main#main#main .wa-facility,
+html body.wa-page main#main#main .wa-rust {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+html body.wa-page main#main#main .wa-sublead {
+  color: var(--wa-blue);
+  font-size: 20px;
+  line-height: 1.5;
+}
+html body.wa-page main#main#main .wa-checklist {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+html body.wa-page main#main#main .wa-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+html body.wa-page main#main#main .wa-checklist li > i {
+  flex: 0 0 22px;
+  margin-top: 3px;
+  color: var(--wa-blue);
+  font-size: 22px;
+}
+html body.wa-page main#main#main .wa-system {
+  min-width: 0;
+  padding: 24px;
+  border-radius: 20px;
+  background: #f3faff;
+  text-align: center;
+}
+html body.wa-page main#main#main .wa-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 26px 0;
+}
+html body.wa-page main#main#main :is(.wa-facility--baths, .wa-facility--building) { align-items: start; }
+html body.wa-page main#main#main .wa-facility-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 1.5vw, 22px);
+}
+html body.wa-page main#main#main .wa-facility-heading h3 { margin: 0; }
+html body.wa-page main#main#main .wa-facility-heading .wa-icon {
+  width: clamp(54px, 5.5vw, 76px);
+  height: clamp(54px, 5.5vw, 76px);
+  background: #edf7ff;
+}
+html body.wa-page main#main#main .wa-facility-heading .wa-icon i { font-size: clamp(26px, 2.5vw, 36px); }
+html body.wa-page main#main#main :is(.wa-bath-system, .wa-building-system) {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+html body.wa-page main#main#main :is(.wa-bath-system, .wa-building-system) > .sp-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 8px 0 34px;
+  color: var(--wa-blue);
+}
+html body.wa-page main#main#main :is(.wa-bath-system, .wa-building-system) > .sp-eyebrow::before,
+html body.wa-page main#main#main :is(.wa-bath-system, .wa-building-system) > .sp-eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #acc7db;
+}
+html body.wa-page main#main#main .wa-building-diagram {
+  --wa-building-flow: #70c6ed;
+  --wa-building-junction: 78%;
+  position: relative;
+  isolation: isolate;
+  height: clamp(300px, 24vw, 380px);
+  margin: 0;
+}
+html body.wa-page main#main#main .wa-building-diagram::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 20%;
+  bottom: 0;
+  border-top: 3px solid #446c89;
+}
+html body.wa-page main#main#main .wa-building-outlets {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  box-sizing: border-box;
+  width: 44%;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #285875;
+  background: #fff;
+  list-style: none;
+}
+html body.wa-page main#main#main .wa-building-outlets li {
+  display: grid;
+  grid-template-columns: clamp(24px, 3vw, 40px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(5px, .9vw, 12px);
+  min-width: 0;
+  margin: 0;
+  padding: 12px clamp(5px, .9vw, 12px);
+  border-bottom: 1px solid #285875;
+  text-align: left;
+}
+html body.wa-page main#main#main .wa-building-outlets li:last-child { border-bottom: 0; }
+html body.wa-page main#main#main .wa-building-outlets i {
+  color: #285f81;
+  font-size: clamp(26px, 3vw, 44px);
+}
+html body.wa-page main#main#main .wa-building-outlets span {
+  font-size: clamp(9px, .85vw, 13px);
+  font-weight: 600;
+  line-height: 1.3;
+}
+html body.wa-page main#main#main .wa-building-branches { position: absolute; inset: 0; }
+html body.wa-page main#main#main .wa-building-branch {
+  position: absolute;
+  left: 44%;
+  right: 43%;
+  height: 4px;
+  transform: translateY(-50%);
+  background: var(--wa-building-flow);
+}
+html body.wa-page main#main#main .wa-building-branch:nth-child(1) { top: 12.5%; }
+html body.wa-page main#main#main .wa-building-branch:nth-child(2) { top: 37.5%; }
+html body.wa-page main#main#main .wa-building-branch:nth-child(3) { top: 62.5%; }
+html body.wa-page main#main#main .wa-building-branch:nth-child(4) { top: 87.5%; }
+html body.wa-page main#main#main .wa-building-branch > i {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+  color: var(--wa-building-flow);
+  font-size: 18px;
+}
+html body.wa-page main#main#main .wa-building-rail {
+  position: absolute;
+  top: 12.5%;
+  bottom: 12.5%;
+  left: 57%;
+  border-left: 4px solid var(--wa-building-flow);
+}
+html body.wa-page main#main#main .wa-building-supply {
+  position: absolute;
+  top: var(--wa-building-junction);
+  left: 57%;
+  right: 0;
+  height: 4px;
+  transform: translateY(-50%);
+  background: var(--wa-building-flow);
+}
+html body.wa-page main#main#main .wa-building-supply > i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--wa-building-flow);
+  font-size: 18px;
+}
+html body.wa-page main#main#main .wa-building-supply > .ph-caret-right { left: 10%; }
+html body.wa-page main#main#main .wa-building-supply > .ph-caret-left { right: -2px; }
+html body.wa-page main#main#main .wa-building-stem {
+  position: absolute;
+  top: var(--wa-building-junction);
+  bottom: 0;
+  left: 76%;
+  border-left: 4px solid var(--wa-building-flow);
+}
+html body.wa-page main#main#main .wa-building-unit {
+  position: absolute;
+  top: var(--wa-building-junction);
+  left: 65%;
+  right: 13%;
+  z-index: 2;
+  transform: translateY(-36%);
+}
+html body.wa-page main#main#main .wa-building-unit img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+html body.wa-page main#main#main .wa-building-brand {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  display: grid;
+  gap: 3px;
+  width: max-content;
+  max-width: 170%;
+  transform: translateX(-50%);
+  color: var(--wa-blue);
+  line-height: 1.25;
+}
+html body.wa-page main#main#main .wa-building-brand strong { font-size: clamp(10px, 1.05vw, 17px); }
+html body.wa-page main#main#main .wa-building-brand span { font-size: clamp(9px, .85vw, 13px); }
+html body.wa-page main#main#main .wa-building-meter {
+  position: absolute;
+  top: var(--wa-building-junction);
+  left: 87%;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
+  color: #285875;
+}
+html body.wa-page main#main#main .wa-building-meter > i {
+  border-radius: 50%;
+  background: #fff;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1;
+}
+html body.wa-page main#main#main .wa-building-meter > span {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  font-size: clamp(9px, .8vw, 12px);
+  font-weight: 600;
+  line-height: 1.3;
+}
+html body.wa-page main#main#main .wa-bath-diagram {
+  --wa-flow-color: #70c6ed;
+  --wa-flow-y: 62%;
+  position: relative;
+  isolation: isolate;
+  height: clamp(150px, 15vw, 210px);
+  margin-bottom: 68px;
+}
+html body.wa-page main#main#main .wa-bath-facility {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 34%;
+  padding: clamp(10px, 1.5vw, 18px) 8px;
+  border: 3px solid #173f58;
+  border-radius: 12px;
+  background: #fff;
+}
+html body.wa-page main#main#main .wa-bath-facility strong { font-size: clamp(10px, .9vw, 13px); }
+html body.wa-page main#main#main .wa-bath-facility > i {
+  margin-block: auto;
+  color: #285f81;
+  font-size: clamp(42px, 5.6vw, 88px);
+}
+html body.wa-page main#main#main .wa-bath-transfer,
+html body.wa-page main#main#main .wa-bath-outlet {
+  position: absolute;
+  top: var(--wa-flow-y);
+  left: 34%;
+  right: 40%;
+  height: 6px;
+  transform: translateY(-50%);
+  background: var(--wa-flow-color);
+}
+html body.wa-page main#main#main .wa-bath-transfer > span {
+  position: absolute;
+  bottom: 20px;
+  left: 6px;
+  right: 0;
+  font-size: clamp(10px, .85vw, 13px);
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+html body.wa-page main#main#main .wa-bath-transfer > i,
+html body.wa-page main#main#main .wa-bath-outlet > i {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+  color: var(--wa-flow-color);
+  font-size: 20px;
+}
+html body.wa-page main#main#main .wa-bath-outlet { left: 95%; right: 0; }
+html body.wa-page main#main#main .wa-bath-unit {
+  position: absolute;
+  top: var(--wa-flow-y);
+  left: 60%;
+  right: 5%;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+html body.wa-page main#main#main .wa-bath-unit img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+html body.wa-page main#main#main .wa-bath-brand {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 3px;
+  color: var(--wa-blue);
+  line-height: 1.25;
+}
+html body.wa-page main#main#main .wa-bath-brand strong { font-size: clamp(11px, 1.15vw, 18px); }
+html body.wa-page main#main#main .wa-bath-brand span { font-size: clamp(10px, .9vw, 14px); }
+html body.wa-page main#main#main .wa-bath-return {
+  position: absolute;
+  top: var(--wa-flow-y);
+  left: 17%;
+  right: 22.5%;
+  bottom: -48px;
+  border-right: 6px solid var(--wa-flow-color);
+  border-bottom: 6px solid var(--wa-flow-color);
+  border-radius: 0 0 9px 9px;
+}
+html body.wa-page main#main#main .wa-bath-return::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 48px;
+  border-left: 6px solid var(--wa-flow-color);
+  border-radius: 0 0 0 6px;
+}
+html body.wa-page main#main#main .wa-bath-return > i {
+  position: absolute;
+  left: -7px;
+  bottom: 40px;
+  color: var(--wa-flow-color);
+  font-size: 20px;
+}
+html body.wa-page main#main#main .wa-bath-system .wa-system-result {
+  margin: 0;
+  font-size: clamp(12px, 1vw, 15px);
+  letter-spacing: .025em;
+}
+html body.wa-page main#main#main .wa-flow li:not(.wa-flow-arrow) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+html body.wa-page main#main#main :is(.wa-flow-arrow, .wa-comparison > i) { color: var(--wa-blue); font-size: 28px; }
+html body.wa-page main#main#main .wa-system-result { color: var(--wa-blue); font-weight: 700; }
+html body.wa-page main#main#main .wa-system-product { max-width: 310px; margin: 26px auto; }
+html body.wa-page main#main#main .wa-outlets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+html body.wa-page main#main#main .wa-outlets li { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+html body.wa-page main#main#main .wa-outlets i { color: var(--wa-blue); font-size: 26px; }
+html body.wa-page main#main#main .wa-industry-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+html body.wa-page main#main#main .wa-industry-card {
+  grid-column: span 2;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--wa-line);
+  border-radius: 22px;
+  background: #fff;
+}
+html body.wa-page main#main#main .wa-industry-card:nth-child(n+4) { grid-column: span 3; }
+html body.wa-page main#main#main .wa-industry-card > .wa-art { border-radius: 0; }
+html body.wa-page main#main#main .wa-card-copy { padding: 26px; }
+html body.wa-page main#main#main .wa-card-copy h3 { margin-block: 16px 12px; }
+html body.wa-page main#main#main .wa-comparison {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+html body.wa-page main#main#main .wa-image-label {
+  width: max-content;
+  padding: 5px 18px;
+  margin: 0 auto 12px;
+  border-radius: 6px;
+  background: var(--wa-blue);
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+html body.wa-page main#main#main .wa-comparison-caption { margin-top: 20px; text-align: center; }
+html body.wa-page main#main#main .wa-product-grid {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.6fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+  margin-top: 24px;
+}
+html body.wa-page main#main#main .wa-product-images { display: grid; gap: 36px; align-content: center; min-width: 0; }
+html body.wa-page main#main#main .wa-product-caption { margin: 12px 0 0; text-align: center; color: var(--wa-blue); font-size: 16px; }
+html body.wa-page main#main#main .wa-sem-art { max-width: 170px; margin-inline: auto; }
+html body.wa-page main#main#main .wa-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--wa-line);
+  border-radius: 12px;
+}
+html body.wa-page main#main#main table { width: 100%; min-width: 580px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+html body.wa-page main#main#main caption { padding: 14px 16px; color: var(--wa-ink); font-weight: 700; text-align: left; background: #f1f8fd; }
+html body.wa-page main#main#main :is(th, td) { padding: 13px 12px; border-bottom: 1px solid var(--wa-line); text-align: center; }
+html body.wa-page main#main#main thead th { background: #075aaf; color: #fff; font-weight: 600; }
+html body.wa-page main#main#main tbody th { font-weight: 600; white-space: nowrap; }
+html body.wa-page main#main#main tbody tr:nth-child(even) { background: #f5faff; }
+html body.wa-page main#main#main tbody tr:last-child > * { border-bottom: 0; }
+html body.wa-page main#main#main .wa-ceramic-note { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+html body.wa-page main#main#main .wa-ceramic-note .wa-art { width: 70px; flex-shrink: 0; border-radius: 50%; }
+html body.wa-page main#main#main .wa-ceramic-note p { margin: 0; color: var(--wa-blue); }
+html body.wa-page main#main#main .wa-usage { display: flex; align-items: flex-start; gap: 24px; padding: 32px; margin-top: 28px; border: 1px solid var(--wa-line); border-radius: 22px; background: #e6f4fc; }
+html body.wa-page main#main#main .wa-usage h3 { margin-top: 0; }
+html body.wa-page main#main#main .wa-principal-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 26px; margin-bottom: 36px; }
+html body.wa-page main#main#main .wa-principal-logo { width: 236px; max-width: 100%; border-radius: 0; }
+html body.wa-page main#main#main .wa-principal-heading .sp-eyebrow { margin: 0; }
+html body.wa-page main#main#main .wa-principal-topics { margin-top: 44px; }
+html body.wa-page main#main#main .wa-principal-topic { padding-block: 34px; border-top: 1px solid var(--wa-line); grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+html body.wa-page main#main#main .wa-official-link { gap: 12px; }
+html body.wa-page main#main#main :is(a, .wa-table-wrap):focus-visible { outline: 3px solid #0772ba; outline-offset: 5px; }
+/* Product lineup: supplied product images remain separate from editable specifications. */
+html body.wa-page main#main#main .wa-lineup-heading {
+  position: relative;
+  box-sizing: border-box;
+  max-width: none;
+  min-height: clamp(170px, 18vw, 240px);
+  padding-right: clamp(220px, 27vw, 380px);
+}
+html body.wa-page main#main#main .wa-lineup-globe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(210px, 25vw, 360px);
+  border-radius: 0;
+  background: transparent;
+  pointer-events: none;
+}
+html body.wa-page main#main#main .wa-lineup-standard {
+  background: rgba(255, 255, 255, .8);
+  box-shadow: none;
+}
+html body.wa-page main#main#main .wa-lineup-brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.5vw, 22px);
+  min-width: 0;
+}
+html body.wa-page main#main#main .wa-lineup-brand > div { min-width: 0; }
+html body.wa-page main#main#main .wa-lineup-brand .wa-icon {
+  width: 64px;
+  height: 64px;
+  color: #fff;
+  background: #096cc0;
+}
+html body.wa-page main#main#main .wa-lineup-brand .wa-icon i { font-size: 36px; }
+html body.wa-page main#main#main .wa-lineup-brand .wa-sublead {
+  margin: 6px 0 0;
+  font-size: clamp(18px, 1.7vw, 24px);
+}
+html body.wa-page main#main#main .wa-lineup-standard-grid {
+  grid-template-columns: minmax(220px, .9fr) minmax(0, 1.45fr);
+}
+html body.wa-page main#main#main .wa-lineup-image {
+  display: block;
+  min-width: 0;
+  margin: 0;
+}
+html body.wa-page main#main#main .wa-lineup-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+html body.wa-page main#main#main .wa-lineup-image figcaption {
+  margin-top: 12px;
+  color: var(--wa-ink);
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+}
+html body.wa-page main#main#main .wa-lineup-wave {
+  margin-block: clamp(22px, 3vw, 42px);
+  border-radius: 0;
+  background: transparent;
+  pointer-events: none;
+}
+html body.wa-page main#main#main .wa-lineup-sem {
+  display: grid;
+  grid-template-columns: minmax(140px, .58fr) minmax(0, 1.8fr) minmax(150px, .6fr);
+  align-items: end;
+  gap: clamp(20px, 2vw, 32px);
+}
+html body.wa-page main#main#main .wa-lineup-sem-image {
+  width: 100%;
+  max-width: 180px;
+  justify-self: center;
+}
+html body.wa-page main#main#main .wa-lineup-sem-content { min-width: 0; }
+html body.wa-page main#main#main .wa-lineup-sem-content > .wa-table-wrap { margin-top: 24px; }
+html body.wa-page main#main#main .wa-lineup-sem table { min-width: 460px; }
+html body.wa-page main#main#main .wa-lineup-ceramic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  box-sizing: border-box;
+  width: min(100%, 205px);
+  min-width: 0;
+  aspect-ratio: 1;
+  gap: 8px;
+  padding: 16px;
+  border: 3px double #4590cb;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .85);
+  text-align: center;
+}
+html body.wa-page main#main#main .wa-lineup-ceramic > .wa-art {
+  width: 74px;
+  max-width: 100%;
+  border-radius: 0;
+  background: transparent;
+}
+html body.wa-page main#main#main .wa-lineup-ceramic p {
+  margin: 0;
+  color: var(--wa-blue);
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.4;
+}
+html body.wa-page main#main#main .wa-lineup-usage {
+  align-items: center;
+  margin-top: 34px;
+}
+html body.wa-page main#main#main .wa-lineup-usage-heading {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 18px;
+  padding-right: 28px;
+  border-right: 1px solid #9cc6e2;
+}
+html body.wa-page main#main#main .wa-lineup-usage-heading h3 { margin: 0; }
+html body.wa-page main#main#main .wa-lineup-usage-heading .wa-icon {
+  width: 64px;
+  height: 64px;
+  color: #fff;
+  background: #096cc0;
+}
+html body.wa-page main#main#main .wa-lineup-usage-heading .wa-icon i { font-size: 34px; }
+html body.wa-page main#main#main .wa-lineup-usage > .wa-checklist { margin: 0; }
+html body.wa-page main#main#main .wa-lineup-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@layer arotec-display-headings.spec {
+  html body.wa-page main#main#main .wa-lineup-brand h3 {
+    margin: 0 !important;
+    font-size: clamp(27px, 2.8vw, 42px) !important;
+    line-height: 1.15 !important;
+  }
+}
+@media (max-width: 1100px) {
+  html body.wa-page main#main#main .wa-lineup-sem {
+    grid-template-columns: minmax(110px, .55fr) minmax(0, 1.5fr);
+  }
+  html body.wa-page main#main#main .wa-lineup-ceramic {
+    grid-column: 1 / -1;
+    width: 190px;
+  }
+}
+@media (max-width: 700px) {
+  html body.wa-page main#main#main .wa-lineup-heading {
+    min-height: 0;
+    padding-right: 0;
+  }
+  html body.wa-page main#main#main .wa-lineup-globe { display: none; }
+  html body.wa-page main#main#main .wa-lineup-sem { grid-template-columns: minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-lineup-sem-image { max-width: 143px; }
+  html body.wa-page main#main#main .wa-lineup-brand .wa-icon { width: 48px; height: 48px; }
+  html body.wa-page main#main#main .wa-lineup-brand .wa-icon i { font-size: 28px; }
+  html body.wa-page main#main#main .wa-lineup-usage { align-items: stretch; }
+  html body.wa-page main#main#main .wa-lineup-usage-heading {
+    padding: 0 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #9cc6e2;
+  }
+}
+@layer arotec-display-headings.spec {
+  html body.wa-page main#main#main h3 {
+    font-size: clamp(22px, 1.8vw, 28px) !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.5px !important;
+  }
+}
+@media (max-width: 1100px) {
+  html body.wa-page main#main#main .wa-industry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body.wa-page main#main#main .wa-industry-card,
+  html body.wa-page main#main#main .wa-industry-card:nth-child(n+4) { grid-column: auto; }
+  html body.wa-page main#main#main .wa-industry-card:last-child { grid-column: 1 / -1; }
+  html body.wa-page main#main#main .wa-product-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-product-images:not(.wa-sem-product) { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
+}
+@media (max-width: 991px) {
+  html body.wa-page main#main#main :is(.sp-split, .wa-facility, .wa-rust) { grid-template-columns: minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-facilities-hero {
+    --wa-facilities-image-height: clamp(240px, 44vw, 420px);
+    min-height: 0;
+    padding: 40px 0 calc(var(--wa-facilities-image-height) + 32px);
+    background-size: auto var(--wa-facilities-image-height);
+    background-position: center bottom;
+  }
+  html body.wa-page main#main#main .wa-facilities-hero::before {
+    background: linear-gradient(to bottom, #f4faff 0%, #f4faff calc(100% - var(--wa-facilities-image-height)), rgba(244, 250, 255, 0) calc(100% - var(--wa-facilities-image-height) + 32px));
+  }
+  html body.wa-page main#main#main .wa-facilities-hero .wa-copy { width: 100%; }
+  html body.wa-page main#main#main .wa-technology {
+    display: block;
+    padding-bottom: calc(var(--wa-technology-image-height) * .62);
+    background-size: auto var(--wa-technology-image-height);
+    background-position: center bottom;
+  }
+  html body.wa-page main#main#main .wa-technology::after { display: none; }
+  html body.wa-page main#main#main .wa-hero-grid {
+    --wa-hero-image-height: clamp(240px, 44vw, 460px);
+    min-height: 0;
+    padding: 40px 0 calc(var(--wa-hero-image-height) + 32px);
+    background-color: #f4faff;
+    background-size: auto var(--wa-hero-image-height);
+    background-position: 85% bottom;
+  }
+  html body.wa-page main#main#main .wa-hero-grid::before {
+    background: linear-gradient(to bottom, #f4faff 0%, #f4faff calc(100% - var(--wa-hero-image-height)), rgba(244, 250, 255, 0) calc(100% - var(--wa-hero-image-height) + 32px));
+  }
+  html body.wa-page main#main#main .wa-hero-inner > .wa-copy {
+    width: 100%;
+  }
+  html body.wa-page main#main#main .wa-building-art { max-width: 300px; }
+  html body.wa-page main#main#main .wa-principal-topic > .wa-art { max-width: 560px; }
+}
+@media (max-width: 700px) {
+  html body.wa-page main#main#main :is(.wa-feature-grid, .wa-industry-grid) { grid-template-columns: minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-industry-card:last-child { grid-column: auto; }
+  html body.wa-page main#main#main .wa-feature { border-right: 0; border-bottom: 1px solid var(--wa-line); padding: 0 0 24px; }
+  html body.wa-page main#main#main .wa-feature:last-child { border-bottom: 0; }
+  html body.wa-page main#main#main .wa-panel { padding: 22px 18px; }
+  html body.wa-page main#main#main .wa-system { padding: 20px 14px; }
+  html body.wa-page main#main#main .wa-flow { gap: 8px; }
+  html body.wa-page main#main#main .wa-usage { flex-direction: column; padding: 24px; }
+  html body.wa-page main#main#main .wa-product-images:not(.wa-sem-product) { grid-template-columns: minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-comparison { gap: 8px; grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); }
+  html body.wa-page main#main#main .wa-comparison > i { font-size: 22px; }
+  @layer arotec-display-headings.spec {
+    html body.wa-page main#main#main :is(h1, h2) {
+      font-size: clamp(36px, 9vw, 48px) !important;
+      line-height: 1.15 !important;
+      letter-spacing: -1px !important;
+    }
+  }
+}
