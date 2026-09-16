@@ -1,0 +1,2486 @@
+.pl-page{background:#fff;color:#132e49}.pl-main{padding-top:var(--detail-header-space,160px)}.pl-container{width:min(1248px,calc(100% - 64px));margin-inline:auto}.pl-hero{background:#eef5f7;padding:65px 0 70px}.pl-split{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}.pl-copy{min-width:0}.pl-main h1,.pl-main h2{color:#092941;line-height:1.08;letter-spacing:-.04em;margin:18px 0 24px}.pl-main h1{font-size:clamp(44px,5.2vw,76px)}.pl-main h2{font-size:clamp(34px,3.6vw,54px)}.pl-main h3{font-size:22px;line-height:1.25;margin:14px 0}.pl-main p,.pl-main li,.pl-main dd,.pl-main dt{font-size:17px;line-height:1.7}.pl-main p{margin:0 0 20px}.pl-main .pl-eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#476b77}.pl-main .pl-lead{font-size:25px;line-height:1.45;color:#426471}.pl-art{position:relative;overflow:hidden;margin:0;width:100%;background:#edf4f7;border-radius:3px}.pl-art img{position:absolute;height:auto;display:block}.pl-link{display:inline-flex;gap:30px;align-items:center;background:#173e4c;color:white;padding:15px 24px;text-decoration:none;margin-top:12px;border-radius:3px}.pl-link:hover{background:#295a6b}.pl-index{border-bottom:1px solid #dbe6e8;background:#fff}.pl-index .pl-container{display:flex;flex-wrap:wrap;gap:10px 27px;padding-block:23px}.pl-index a{color:#234653;text-decoration:none;font-size:14px;padding:4px 0;border-bottom:1px solid transparent}.pl-index a:hover{border-color:currentColor}.pl-main a:focus-visible{outline:3px solid #34809b;outline-offset:5px}.pl-section{padding:90px 0;scroll-margin-top:180px}.pl-section:nth-of-type(even){background:#f4f8f8}.pl-section .pl-split{margin-bottom:50px}.pl-section:nth-of-type(odd) .pl-split .pl-art{order:-1}.pl-section .pl-art{max-height:530px}.pl-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:40px}.pl-cards article{border-top:1px solid #b9cfd5;padding:23px 0 8px}.pl-number{font-size:13px;color:#537d86;letter-spacing:.1em}.pl-cards p{color:#526775}.pl-subtitle{display:block;font-weight:400;color:#567685;font-size:.7em;margin-top:12px}.pl-facts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:35px;border-top:1px solid #c9d9de;padding-top:25px}.pl-facts h3{font-size:19px}.pl-facts dl{margin:0}.pl-facts dt{font-weight:600}.pl-facts dd{margin:0 0 12px;color:#526775}.pl-details{display:grid;grid-template-columns:1.3fr 1fr;gap:65px;align-items:start}.pl-steps{list-style:none;counter-reset:step;padding:0;margin:0}.pl-steps li{counter-increment:step;padding:0 0 23px 61px;position:relative;border-bottom:1px solid #d5e2e6;margin-bottom:23px}.pl-steps li:before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:0;color:#648d99;font-size:26px}.pl-steps h3{margin:0 0 8px}.pl-steps p{margin:0}.pl-panel{background:#e8f1f3;padding:32px;border-radius:4px}.pl-panel h3:first-child{margin-top:0}.pl-panel ul{padding-left:22px}.pl-main .pl-note{border-left:2px solid #83a8b5;padding-left:20px;color:#4c6573;font-size:15px;margin-top:30px}.pl-flow{display:flex;align-items:center;justify-content:space-between;gap:18px;border-block:1px solid #bfd1d7;padding:30px 0;margin:42px 0;font-size:15px}.pl-flow span{color:#70949e}.pl-main .pl-closing{font-size:clamp(28px,3.4vw,47px);line-height:1.3;text-align:center;color:#173e4c;letter-spacing:-.03em;margin:55px 0 0}@media(max-width:850px){.pl-split{gap:30px}.pl-cards{grid-template-columns:repeat(2,1fr)}.pl-facts{grid-template-columns:1fr 1fr}.pl-details{gap:30px}.pl-flow{flex-wrap:wrap}.pl-main .pl-lead{font-size:21px}}@media(max-width:600px){.pl-container{width:calc(100% - 36px)}.pl-main{padding-top:var(--detail-header-space,100px)}.pl-hero,.pl-section{padding:42px 0}.pl-split,.pl-details,.pl-facts,.pl-cards{grid-template-columns:1fr}.pl-split{gap:28px}.pl-section:nth-of-type(odd) .pl-split .pl-art{order:initial}.pl-art{max-height:420px}.pl-section .pl-art{max-height:420px}.pl-cards{gap:9px;margin-top:27px}.pl-main h3{font-size:21px}.pl-panel{padding:24px}.pl-index .pl-container{gap:9px 19px;padding-block:16px}.pl-flow{display:block;line-height:1.7}.pl-flow span{display:block;transform:rotate(90deg);width:20px;margin:8px 0}.pl-section{scroll-margin-top:120px}}
+
+/* Research in Action: supplied background and six independent research images. */
+html body.pl-page main#main#main .pl-research-hero {
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  min-height: clamp(560px, 48vw, 760px);
+  padding-block: clamp(48px, 5vw, 80px);
+  background: #eef6ff url("../images/piper-longum/research-background-20260910.png") 40% center / cover no-repeat;
+}
+html body.pl-page main#main#main .pl-research-copy {
+  width: 50%;
+  max-width: 650px;
+  color: #0a1945;
+}
+html body.pl-page main#main#main .pl-research-copy .pl-eyebrow { color: #365681; }
+html body.pl-page main#main#main .pl-research-copy .pl-lead {
+  margin: 22px 0 0;
+  color: #2b5080;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.3;
+}
+html body.pl-page main#main#main .pl-research-rule {
+  width: 64px;
+  height: 2px;
+  margin-block: 24px;
+  background: #101d4c;
+}
+html body.pl-page main#main#main .pl-research-copy > p:last-of-type {
+  max-width: 610px;
+  margin: 0;
+  color: #0a1945;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+html body.pl-page main#main#main .pl-research-copy .pl-link { margin-top: 24px; }
+html body.pl-page main#main#main .pl-research-framework {
+  padding: clamp(36px, 4vw, 64px) 0 0;
+  background: #e8f4ff;
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-research-heading {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 30px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+html body.pl-page main#main#main .pl-research-heading::before,
+html body.pl-page main#main#main .pl-research-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #233e6a;
+}
+html body.pl-page main#main#main .pl-research-heading h2 { flex: 0 1 auto; }
+html body.pl-page main#main#main .pl-research-heading h2 span { text-transform: uppercase; }
+html body.pl-page main#main#main .pl-research-heading h2 em { white-space: nowrap; }
+html body.pl-page main#main#main .pl-research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+html body.pl-page main#main#main .pl-research-grid article {
+  display: grid;
+  grid-template-columns: clamp(96px, 12vw, 160px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  min-width: 0;
+  padding: clamp(28px, 3vw, 42px) clamp(20px, 2.5vw, 36px) clamp(28px, 3vw, 42px) 0;
+  border-bottom: 1px solid #8baac8;
+}
+html body.pl-page main#main#main .pl-research-grid article:nth-child(even) {
+  padding-right: 0;
+  padding-left: clamp(20px, 2.5vw, 36px);
+  border-left: 1px solid #8baac8;
+}
+html body.pl-page main#main#main .pl-research-grid article:nth-last-child(-n+2) { border-bottom: 0; }
+html body.pl-page main#main#main .pl-research-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+html body.pl-page main#main#main .pl-research-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+html body.pl-page main#main#main .pl-research-item-copy { min-width: 0; }
+html body.pl-page main#main#main .pl-research-item-copy .pl-number {
+  display: block;
+  margin-bottom: 10px;
+  color: #0a1945;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+html body.pl-page main#main#main .pl-research-item-copy p {
+  margin: 0;
+  color: #2b5080;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-research-footer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 941 / 192;
+  margin: 0;
+  overflow: hidden;
+}
+html body.pl-page main#main#main .pl-research-footer img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  left: 0;
+  top: -770.833333%;
+}
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-research-hero #pl-title {
+    margin: 0 !important;
+    color: #070d3d !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(44px, 5.2vw, 76px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.035em !important;
+  }
+  html body.pl-page main#main#main .pl-research-heading h2 {
+    margin: 0 !important;
+    color: #0a1945 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(21px, 2vw, 30px) !important;
+    line-height: 1.4 !important;
+    letter-spacing: .055em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-research-item-copy h3 {
+    margin: 0 0 8px !important;
+    color: #0a1945 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(20px, 1.9vw, 26px) !important;
+    line-height: 1.3 !important;
+    letter-spacing: -.03em !important;
+  }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-research-hero {
+    --pl-research-visual-height: clamp(260px, 48vw, 420px);
+    position: relative;
+    isolation: isolate;
+    min-height: 0;
+    padding: 44px 0 calc(var(--pl-research-visual-height) + 32px);
+    background-size: auto var(--pl-research-visual-height);
+    background-position: 70% bottom;
+  }
+  html body.pl-page main#main#main .pl-research-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, #eef6ff 0%, #eef6ff calc(100% - var(--pl-research-visual-height)), rgba(238, 246, 255, 0) calc(100% - var(--pl-research-visual-height) + 32px));
+  }
+  html body.pl-page main#main#main .pl-research-hero > .pl-container { position: relative; z-index: 1; }
+  html body.pl-page main#main#main .pl-research-copy { width: 100%; max-width: none; }
+}
+@media (max-width: 700px) {
+  html body.pl-page main#main#main .pl-research-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.pl-page main#main#main .pl-research-grid article,
+  html body.pl-page main#main#main .pl-research-grid article:nth-child(even) {
+    grid-template-columns: clamp(86px, 25vw, 116px) minmax(0, 1fr);
+    gap: 18px;
+    padding: 26px 0;
+    border-left: 0;
+  }
+  html body.pl-page main#main#main .pl-research-grid article:nth-last-child(-n+2) { border-bottom: 1px solid #8baac8; }
+  html body.pl-page main#main#main .pl-research-grid article:last-child { border-bottom: 0; }
+  html body.pl-page main#main#main .pl-research-heading { gap: 12px; }
+}
+
+
+/* Botanical profile: supplied photography, editable copy, and responsive image layout. */
+html body.pl-page main#main#main .pl-botanical {
+  --pl-botanical-ink: #0a1734;
+  --pl-botanical-blue: #38577c;
+  --pl-botanical-line: #a9bed0;
+  padding: 0;
+  color: var(--pl-botanical-ink);
+  background: #f6fbff;
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-botanical *,
+html body.pl-page main#main#main .pl-botanical *::before,
+html body.pl-page main#main#main .pl-botanical *::after { box-sizing: border-box; }
+html body.pl-page main#main#main .pl-botanical p,
+html body.pl-page main#main#main .pl-botanical dt,
+html body.pl-page main#main#main .pl-botanical dd {
+  color: var(--pl-botanical-blue);
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-botanical-hero {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(24px, 3vw, 42px);
+  background: #f6fbff;
+}
+html body.pl-page main#main#main .pl-botanical-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+html body.pl-page main#main#main .pl-botanical-meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 34px);
+  color: var(--pl-botanical-blue);
+  font-size: clamp(9px, .85vw, 12px);
+  font-weight: 600;
+  letter-spacing: .24em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-page-number {
+  flex: 0 0 auto;
+  padding-right: clamp(20px, 2.6vw, 36px);
+  border-right: 1px solid #677f9b;
+  color: var(--pl-botanical-ink);
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+html body.pl-page main#main#main .pl-botanical-meta-rule {
+  flex: 1;
+  min-width: 24px;
+  height: 1px;
+  background: #4f6d8e;
+}
+html body.pl-page main#main#main .pl-botanical-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(30px, 4vw, 60px);
+  align-items: start;
+  padding-block: clamp(62px, 7vw, 100px) 32px;
+}
+html body.pl-page main#main#main .pl-botanical-copy { min-width: 0; }
+html body.pl-page main#main#main .pl-botanical-copy .pl-botanical-eyebrow {
+  margin: 0 0 16px;
+  color: #4a688b;
+  font-size: clamp(11px, 1.1vw, 15px);
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-copy .pl-botanical-lead {
+  margin: 22px 0 0;
+  color: #2d7582;
+  font-size: clamp(19px, 2vw, 28px);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-rule {
+  width: 54px;
+  height: 2px;
+  margin: 18px 0;
+  background: #5b8994;
+}
+html body.pl-page main#main#main .pl-botanical-copy > p:not([class]) { margin: 0 0 14px; }
+html body.pl-page main#main#main .pl-botanical-copy > p:last-child { margin-bottom: 0; }
+html body.pl-page main#main#main .pl-botanical-rail {
+  justify-self: end;
+  width: 154px;
+  margin: 26px 0 0;
+  padding: 0 0 0 22px;
+  border-left: 1px solid rgba(255, 255, 255, .8);
+  list-style: none;
+  color: #fff;
+  background: rgba(25, 63, 46, .35);
+  text-shadow: 0 1px 4px rgba(10, 35, 20, .25);
+}
+html body.pl-page main#main#main .pl-botanical-rail li {
+  position: relative;
+  margin: 0;
+  padding: 14px 8px 14px 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-rail li + li { border-top: 1px solid rgba(255, 255, 255, .45); }
+html body.pl-page main#main#main .pl-botanical-rail li::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -26px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+}
+html body.pl-page main#main#main .pl-botanical-benefits-wrap { padding-block: 12px 26px; }
+html body.pl-page main#main#main .pl-botanical-benefits {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 0;
+  margin-block: 0;
+  list-style: none;
+}
+html body.pl-page main#main#main .pl-botanical-benefits li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  padding: 0 12px;
+  color: var(--pl-botanical-blue);
+  font-size: clamp(11px, 1vw, 14px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .07em;
+  text-align: center;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-benefits li + li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 20px;
+  left: 0;
+  width: 1px;
+  background: var(--pl-botanical-line);
+}
+html body.pl-page main#main#main .pl-botanical-benefit-icon {
+  display: grid;
+  place-items: center;
+  width: clamp(62px, 6vw, 80px);
+  aspect-ratio: 1;
+  border: 1px solid #7890a7;
+  border-radius: 50%;
+  color: #2c5777;
+  background: rgba(255, 255, 255, .78);
+}
+html body.pl-page main#main#main .pl-botanical-benefit-icon i { font-size: clamp(36px, 3.7vw, 48px); }
+html body.pl-page main#main#main .pl-botanical-details {
+  padding-block: clamp(28px, 3vw, 44px);
+  background: #eaf3fa;
+}
+html body.pl-page main#main#main .pl-botanical-details-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.18fr);
+  gap: clamp(26px, 3vw, 42px);
+}
+html body.pl-page main#main#main .pl-botanical-identity {
+  display: grid;
+  align-content: start;
+  gap: 30px;
+  min-width: 0;
+  padding-right: clamp(24px, 2.5vw, 36px);
+  border-right: 1px solid var(--pl-botanical-line);
+}
+html body.pl-page main#main#main .pl-botanical-facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 16px;
+  row-gap: 12px;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-botanical-facts dt {
+  margin: 0;
+  color: var(--pl-botanical-ink);
+  font-weight: 500;
+}
+html body.pl-page main#main#main .pl-botanical-facts dd { margin: 0; }
+html body.pl-page main#main#main .pl-botanical-facts dd em { font-style: normal; }
+html body.pl-page main#main#main .pl-botanical-identity .pl-botanical-inci { margin: 0 0 18px; }
+html body.pl-page main#main#main .pl-botanical-plant-details { min-width: 0; }
+html body.pl-page main#main#main .pl-botanical-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+html body.pl-page main#main#main .pl-botanical-photos figure { margin: 0; min-width: 0; }
+html body.pl-page main#main#main .pl-botanical-photos img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 157 / 164;
+  height: auto;
+  object-fit: cover;
+}
+html body.pl-page main#main#main .pl-botanical-photos figcaption {
+  padding-top: 8px;
+  color: var(--pl-botanical-blue);
+  font-size: clamp(11px, 1.05vw, 14px);
+  line-height: 1.4;
+  text-align: center;
+}
+html body.pl-page main#main#main .pl-botanical-origin { margin-top: 28px; }
+html body.pl-page main#main#main .pl-botanical-origin p { margin: 0; }
+html body.pl-page main#main#main .pl-botanical-highlights {
+  padding: clamp(26px, 3vw, 42px) 0 0;
+  background: #f6fbff;
+}
+html body.pl-page main#main#main .pl-botanical-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 30px);
+  padding-top: 8px;
+}
+html body.pl-page main#main#main .pl-botanical-highlight-grid article { min-width: 0; text-align: center; }
+html body.pl-page main#main#main .pl-botanical-highlight-grid img {
+  display: block;
+  width: clamp(110px, 14vw, 175px);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto 14px;
+  border: 1px solid #a9c1d3;
+  border-radius: 50%;
+  padding: 3px;
+  background: #fff;
+  object-fit: cover;
+}
+html body.pl-page main#main#main .pl-botanical-highlight-grid p { margin: 0; font-size: clamp(14px, 1.2vw, 17px); }
+html body.pl-page main#main#main .pl-botanical-landscape {
+  min-height: clamp(250px, 29vw, 400px);
+  margin-top: -4px;
+  padding-top: clamp(38px, 5vw, 70px);
+  background: #f6fbff url("../images/piper-longum/botanical-landscape-20260910.png") center bottom / cover no-repeat;
+}
+html body.pl-page main#main#main .pl-botanical-closing {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+html body.pl-page main#main#main .pl-botanical-closing .pl-botanical-heritage {
+  margin: 0;
+  color: #456387;
+  font-size: clamp(15px, 1.5vw, 21px);
+  line-height: 1.65;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-heritage::before {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin-bottom: 14px;
+  background: #466183;
+}
+html body.pl-page main#main#main .pl-botanical-closing .pl-botanical-future {
+  margin: 8px 0 0;
+  padding: 16px 20px;
+  color: #fff;
+  background: rgba(30, 60, 43, .4);
+  font-size: clamp(12px, 1.15vw, 16px);
+  line-height: 1.8;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-botanical-future::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin-top: 18px;
+  background: #fff;
+}
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-botanical #botanical-title {
+    margin: 0 !important;
+    color: #091227 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(44px, 6.4vw, 82px) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.045em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-botanical #botanical-title .pl-botanical-common {
+    display: block !important;
+    margin-top: 5px !important;
+    color: #152035 !important;
+    font-family: inherit !important;
+    font-size: .85em !important;
+    font-weight: 300 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -.035em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-section-label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin: 0 0 18px !important;
+    color: #315578 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(13px, 1.2vw, 17px) !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    letter-spacing: .16em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-section-label::after {
+    content: "";
+    flex: 1;
+    min-width: 24px;
+    height: 1px;
+    background: var(--pl-botanical-line);
+  }
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-identity .pl-botanical-section-label {
+    display: block !important;
+    padding-bottom: 9px !important;
+    margin-bottom: 14px !important;
+    border-bottom: 1px solid var(--pl-botanical-line);
+  }
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-identity .pl-botanical-section-label::after { display: none; }
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-highlight-grid h4 {
+    margin: 0 0 10px !important;
+    color: #10213e !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(13px, 1.15vw, 16px) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: .07em !important;
+    text-transform: uppercase !important;
+  }
+}
+@media (max-width: 1050px) {
+  html body.pl-page main#main#main .pl-botanical-meta { gap: 16px; letter-spacing: .15em; }
+  html body.pl-page main#main#main .pl-botanical-rail { width: 135px; }
+  html body.pl-page main#main#main .pl-botanical-details-grid { gap: 24px; }
+  html body.pl-page main#main#main .pl-botanical-identity { padding-right: 24px; }
+  html body.pl-page main#main#main .pl-botanical-facts { column-gap: 12px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-botanical-hero { display: flex; flex-direction: column; }
+  html body.pl-page main#main#main .pl-botanical-hero > .pl-container { order: 0; }
+  html body.pl-page main#main#main .pl-botanical-backdrop {
+    position: static;
+    order: 1;
+    z-index: auto;
+    height: clamp(300px, 64vw, 480px);
+    margin-top: 8px;
+    object-fit: cover;
+    object-position: right center;
+  }
+  html body.pl-page main#main#main .pl-botanical-intro { grid-template-columns: minmax(0, 1fr); padding-block: 44px 16px; }
+  html body.pl-page main#main#main .pl-botanical-rail { display: none; }
+  html body.pl-page main#main#main .pl-botanical-meta-rule,
+  html body.pl-page main#main#main .pl-botanical-motto { display: none; }
+  html body.pl-page main#main#main .pl-botanical-meta { font-size: 11px; }
+  html body.pl-page main#main#main .pl-botanical-benefits-wrap { order: 2; padding-block: 20px 28px; background: #f6fbff; }
+  html body.pl-page main#main#main .pl-botanical-details-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  html body.pl-page main#main#main .pl-botanical-identity {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding: 0 0 28px;
+    border-right: 0;
+    border-bottom: 1px solid var(--pl-botanical-line);
+  }
+  html body.pl-page main#main#main .pl-botanical-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+  html body.pl-page main#main#main .pl-botanical-highlight-grid img { width: 150px; }
+  html body.pl-page main#main#main .pl-botanical-landscape { margin-top: 0; min-height: 300px; }
+}
+@media (max-width: 520px) {
+  html body.pl-page main#main#main .pl-botanical-copy .pl-botanical-eyebrow { font-size: 10px; letter-spacing: .18em; }
+  html body.pl-page main#main#main .pl-botanical-copy .pl-botanical-lead { font-size: 17px; letter-spacing: .11em; }
+  html body.pl-page main#main#main .pl-botanical-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 0; }
+  html body.pl-page main#main#main .pl-botanical-benefits li:nth-child(odd)::before { display: none; }
+  html body.pl-page main#main#main .pl-botanical-benefits li:last-child { grid-column: 1 / -1; }
+  html body.pl-page main#main#main .pl-botanical-identity { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  html body.pl-page main#main#main .pl-botanical-photos { gap: 8px; }
+  html body.pl-page main#main#main .pl-botanical-highlight-grid { gap: 28px 14px; }
+  html body.pl-page main#main#main .pl-botanical-highlight-grid img { width: 125px; }
+  html body.pl-page main#main#main .pl-botanical-highlight-grid p br { display: none; }
+  html body.pl-page main#main#main .pl-botanical-landscape { min-height: 380px; padding-top: 34px; background-position: 60% bottom; }
+  html body.pl-page main#main#main .pl-botanical-closing { flex-direction: column; gap: 34px; }
+  html body.pl-page main#main#main .pl-botanical-closing .pl-botanical-heritage { font-size: 13px; letter-spacing: .12em; }
+  html body.pl-page main#main#main .pl-botanical-closing .pl-botanical-future { align-self: flex-end; margin: 0; font-size: 11px; }
+}
+
+
+/* Molecular profile: supplied photographs/icons and original reference structure diagrams. */
+html body.pl-page main#main#main .pl-molecular {
+  --pl-molecular-ink: #102d64;
+  --pl-molecular-copy: #3e5788;
+  --pl-molecular-line: #c6d8eb;
+  padding: 0;
+  background: #f5f9fd;
+  color: var(--pl-molecular-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-molecular *,
+html body.pl-page main#main#main .pl-molecular *::before,
+html body.pl-page main#main#main .pl-molecular *::after { box-sizing: border-box; }
+html body.pl-page main#main#main .pl-molecular-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(630px, 66.6vw, 880px);
+  padding: clamp(24px, 3vw, 42px) 0 clamp(58px, 6vw, 86px);
+  background: #f5f9fd;
+}
+html body.pl-page main#main#main .pl-molecular-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+html body.pl-page main#main#main .pl-molecular-meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 34px);
+  color: #2d5083;
+  font-size: clamp(9px, .85vw, 12px);
+  font-weight: 600;
+  letter-spacing: .24em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-molecular-page-number {
+  flex: 0 0 auto;
+  padding-right: clamp(20px, 2.6vw, 36px);
+  border-right: 1px solid #46658e;
+  color: var(--pl-molecular-ink);
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+html body.pl-page main#main#main .pl-molecular-meta-rule {
+  flex: 1;
+  min-width: 24px;
+  height: 1px;
+  background: #7a9cc3;
+}
+html body.pl-page main#main#main .pl-molecular-copy {
+  width: 51%;
+  max-width: 665px;
+  margin-top: clamp(76px, 9vw, 128px);
+}
+html body.pl-page main#main#main .pl-molecular-copy .pl-molecular-lead {
+  margin: 26px 0 30px;
+  color: #4d80b9;
+  font-size: clamp(18px, 2.15vw, 28px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-molecular-copy > p:last-child {
+  max-width: 570px;
+  margin: 0;
+  color: var(--pl-molecular-copy);
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.6;
+}
+html body.pl-page main#main#main .pl-molecular-content { padding-bottom: clamp(44px, 5vw, 72px); }
+html body.pl-page main#main#main .pl-molecular-compound {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 2.3vw, 34px);
+  padding-block: clamp(20px, 2.2vw, 30px);
+}
+html body.pl-page main#main#main .pl-molecular-compound + .pl-molecular-compound {
+  border-top: 1px solid var(--pl-molecular-line);
+}
+html body.pl-page main#main#main .pl-molecular-compound-summary {
+  display: grid;
+  grid-template-columns: clamp(108px, 15vw, 190px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 26px);
+  min-width: 0;
+}
+html body.pl-page main#main#main .pl-molecular-compound-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+html body.pl-page main#main#main .pl-molecular-compound-copy {
+  min-width: 0;
+  min-height: 152px;
+  padding: 5px 0 5px clamp(16px, 2vw, 28px);
+  border-left: 1px solid #91acd1;
+}
+html body.pl-page main#main#main .pl-molecular-compound-heading {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(10px, 1vw, 14px);
+  margin-bottom: 16px;
+}
+html body.pl-page main#main#main .pl-molecular-number {
+  flex: 0 0 auto;
+  color: #5989be;
+  font-size: clamp(16px, 1.7vw, 23px);
+  line-height: 1.2;
+}
+html body.pl-page main#main#main .pl-molecular-compound-copy ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+html body.pl-page main#main#main .pl-molecular-compound-copy li {
+  margin: 0 0 4px;
+  padding: 0;
+  color: var(--pl-molecular-copy);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-molecular-compound-copy li:last-child { margin-bottom: 0; }
+html body.pl-page main#main#main .pl-molecular-compound-copy li::marker { color: #0c285e; }
+/* Cropping only the original diagram panels preserves chemical drawings and their labels. */
+html body.pl-page main#main#main .pl-molecular-crop {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+html body.pl-page main#main#main .pl-molecular-crop img {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: none;
+}
+html body.pl-page main#main#main .pl-molecular-structure { border-radius: 7px; }
+html body.pl-page main#main#main .pl-molecular-relevance { margin-top: 22px; }
+html body.pl-page main#main#main .pl-molecular-relevance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 28px;
+}
+html body.pl-page main#main#main .pl-molecular-relevance-grid article {
+  position: relative;
+  min-width: 0;
+  padding: 0 clamp(16px, 2vw, 28px);
+  text-align: center;
+}
+html body.pl-page main#main#main .pl-molecular-relevance-grid article + article::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: #9eb9d7;
+}
+html body.pl-page main#main#main .pl-molecular-relevance .pl-molecular-relevance-icon {
+  width: clamp(82px, 9vw, 114px);
+  margin: 0 auto 16px;
+  border-radius: 50%;
+}
+html body.pl-page main#main#main .pl-molecular-relevance-grid p {
+  margin: 0;
+  color: var(--pl-molecular-copy);
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.45;
+}
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-molecular #molecules-title {
+    margin: 0 !important;
+    color: var(--pl-molecular-ink) !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(42px, 6.5vw, 88px) !important;
+    font-weight: 700 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.04em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-molecular .pl-molecular-compound-heading h3 {
+    min-width: 0;
+    margin: 0 !important;
+    color: #0d2860 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(17px, 1.5vw, 22px) !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: .045em !important;
+    text-transform: uppercase !important;
+    overflow-wrap: anywhere;
+  }
+  html body.pl-page main#main#main .pl-molecular #pl-molecular-relevance-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 22px !important;
+    margin: 0 !important;
+    color: #123268 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(15px, 1.4vw, 20px) !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    letter-spacing: .2em !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-molecular #pl-molecular-relevance-title::before,
+  html body.pl-page main#main#main .pl-molecular #pl-molecular-relevance-title::after {
+    content: "";
+    flex: 1;
+    min-width: 20px;
+    height: 1px;
+    background: #9ab9dd;
+  }
+  html body.pl-page main#main#main .pl-molecular .pl-molecular-relevance-grid h4 {
+    margin: 0 0 8px !important;
+    color: #0d2860 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(13px, 1.1vw, 16px) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .04em !important;
+    text-transform: uppercase !important;
+  }
+}
+@media (max-width: 1050px) {
+  html body.pl-page main#main#main .pl-molecular-meta { gap: 16px; letter-spacing: .15em; }
+  html body.pl-page main#main#main .pl-molecular-compound-summary { grid-template-columns: 120px minmax(0, 1fr); gap: 14px; }
+  html body.pl-page main#main#main .pl-molecular-compound-copy { padding-left: 16px; }
+  html body.pl-page main#main#main .pl-molecular-compound-heading { gap: 8px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-molecular-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 28px 0 0;
+  }
+  html body.pl-page main#main#main .pl-molecular-hero > .pl-container { order: 0; padding-bottom: 28px; }
+  html body.pl-page main#main#main .pl-molecular-backdrop {
+    position: static;
+    z-index: auto;
+    order: 1;
+    height: clamp(280px, 60vw, 480px);
+    object-position: right center;
+  }
+  html body.pl-page main#main#main .pl-molecular-meta-rule,
+  html body.pl-page main#main#main .pl-molecular-motto { display: none; }
+  html body.pl-page main#main#main .pl-molecular-meta { font-size: 11px; }
+  html body.pl-page main#main#main .pl-molecular-copy { width: 100%; max-width: none; margin-top: 46px; }
+  html body.pl-page main#main#main .pl-molecular-copy > p:last-child { max-width: none; }
+  html body.pl-page main#main#main .pl-molecular-compound { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-block: 30px; }
+  html body.pl-page main#main#main .pl-molecular-compound-summary { grid-template-columns: 138px minmax(0, 1fr); gap: 24px; }
+  html body.pl-page main#main#main .pl-molecular-compound-copy { min-height: 138px; padding-left: 24px; }
+  html body.pl-page main#main#main .pl-molecular-structure { width: min(100%, 620px); justify-self: center; }
+  html body.pl-page main#main#main .pl-molecular-relevance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 0; }
+  html body.pl-page main#main#main .pl-molecular-relevance-grid article:nth-child(odd)::before { display: none; }
+}
+@media (max-width: 520px) {
+  html body.pl-page main#main#main .pl-molecular-meta { font-size: 10px; letter-spacing: .12em; }
+  html body.pl-page main#main#main .pl-molecular-copy .pl-molecular-lead { font-size: 16px; letter-spacing: .13em; margin-block: 22px; }
+  html body.pl-page main#main#main .pl-molecular-copy .pl-molecular-lead br { display: none; }
+  html body.pl-page main#main#main .pl-molecular-compound-summary { grid-template-columns: 86px minmax(0, 1fr); gap: 12px; align-items: start; }
+  html body.pl-page main#main#main .pl-molecular-compound-icon { margin-top: 4px; }
+  html body.pl-page main#main#main .pl-molecular-compound-copy { min-height: 0; padding-left: 14px; }
+  html body.pl-page main#main#main .pl-molecular-compound-heading { flex-wrap: wrap; gap: 6px 9px; margin-bottom: 12px; }
+  html body.pl-page main#main#main .pl-molecular-compound-copy li { font-size: 14px; }
+  html body.pl-page main#main#main .pl-molecular-relevance-grid article { padding-inline: 12px; }
+  html body.pl-page main#main#main .pl-molecular-relevance-grid p br { display: none; }
+  @layer arotec-display-headings.spec {
+    html body.pl-page main#main#main .pl-molecular #molecules-title { font-size: clamp(36px, 9.5vw, 48px) !important; }
+    html body.pl-page main#main#main .pl-molecular #pl-molecular-relevance-title { font-size: 13px !important; letter-spacing: .12em !important; gap: 12px !important; }
+    html body.pl-page main#main#main .pl-molecular .pl-molecular-compound-heading h3 { font-size: 16px !important; letter-spacing: .01em !important; }
+  }
+}
+
+
+/* Standalone generated relevance icons replace the cropped poster excerpts. */
+html body.pl-page main#main#main .pl-molecular .pl-molecular-relevance img.pl-molecular-relevance-icon {
+  position: static;
+  display: block;
+  width: clamp(82px, 9vw, 114px);
+  height: clamp(82px, 9vw, 114px);
+  max-width: 100%;
+  margin: 0 auto 16px;
+  padding: 0;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Keep the pepper and leaf visible when the supplied wide botanical banner is cropped on mobile. */
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-botanical .pl-botanical-backdrop {
+    object-position: 60% center;
+  }
+}
+
+
+/* Align content icon sizing with the Water Activator feature icons. */
+html body.pl-page main#main#main.pl-main {
+  --pl-feature-icon-size: 64px;
+  --pl-feature-icon-glyph-size: 36px;
+}
+html body.pl-page main#main#main.pl-main .pl-research-grid article,
+html body.pl-page main#main#main.pl-main .pl-molecular-compound-summary {
+  grid-template-columns: var(--pl-feature-icon-size) minmax(0, 1fr);
+}
+html body.pl-page main#main#main.pl-main .pl-research-photo,
+html body.pl-page main#main#main.pl-main .pl-botanical-benefit-icon,
+html body.pl-page main#main#main.pl-main .pl-botanical-highlight-grid img,
+html body.pl-page main#main#main.pl-main .pl-molecular-compound-icon,
+html body.pl-page main#main#main.pl-main .pl-molecular .pl-molecular-relevance img.pl-molecular-relevance-icon {
+  width: var(--pl-feature-icon-size);
+  height: var(--pl-feature-icon-size);
+  max-width: 100%;
+  flex-shrink: 0;
+}
+html body.pl-page main#main#main.pl-main .pl-botanical-benefit-icon i {
+  font-size: var(--pl-feature-icon-glyph-size);
+}
+@media (max-width: 700px) {
+  html body.pl-page main#main#main.pl-main {
+    --pl-feature-icon-size: 48px;
+    --pl-feature-icon-glyph-size: 28px;
+  }
+}
+
+
+/* Oral intake: supplied banner, six illustrated steps, and the research panel. */
+html body.pl-page main#main#main .pl-oral {
+  --pl-oral-ink: #0b2456;
+  --pl-oral-copy: #285a83;
+  --pl-oral-line: #aec5d5;
+  padding: 0;
+  background: #f3f9fd;
+  color: var(--pl-oral-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-oral *,
+html body.pl-page main#main#main .pl-oral *::before,
+html body.pl-page main#main#main .pl-oral *::after { box-sizing: border-box; }
+html body.pl-page main#main#main .pl-oral-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(660px, 56vw, 850px);
+  padding: clamp(24px, 3vw, 42px) 0 clamp(54px, 5vw, 76px);
+}
+html body.pl-page main#main#main .pl-oral-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 52% center;
+}
+html body.pl-page main#main#main .pl-oral-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(245, 249, 253, .74) 0%, rgba(245, 249, 253, .5) 35%, rgba(245, 249, 253, 0) 62%);
+}
+html body.pl-page main#main#main .pl-oral-hero > .pl-container { position: relative; z-index: 1; }
+html body.pl-page main#main#main .pl-oral-meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 34px);
+  color: #285477;
+  font-size: clamp(9px, .85vw, 12px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-oral-page-number {
+  flex: 0 0 auto;
+  padding-right: clamp(16px, 2vw, 28px);
+  color: #080e3c;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+html body.pl-page main#main#main .pl-oral-meta-rule { flex: 1; min-width: 24px; height: 1px; background: #829fae; }
+html body.pl-page main#main#main .pl-oral-copy {
+  width: 49%;
+  max-width: 650px;
+  margin-top: clamp(70px, 8vw, 112px);
+}
+html body.pl-page main#main#main .pl-oral-copy .pl-oral-lead {
+  margin: 22px 0;
+  color: #15547a;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-oral-copy > p:last-of-type {
+  max-width: 550px;
+  margin: 0;
+  color: #132b56;
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.5;
+}
+html body.pl-page main#main#main .pl-oral-molecule-note {
+  width: fit-content;
+  margin: 30px 0 0 auto;
+  padding-left: 16px;
+  border-left: 1px solid #62849b;
+  color: #255e83;
+  font-size: 14px;
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-oral-molecule-note strong { display: block; margin-bottom: 4px; font-weight: 600; text-transform: uppercase; }
+html body.pl-page main#main#main .pl-oral-content { padding: 30px 0 34px; }
+html body.pl-page main#main#main .pl-oral-pathway-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr);
+  align-items: start;
+  gap: clamp(30px, 4vw, 58px);
+}
+html body.pl-page main#main#main .pl-oral-pathway { min-width: 0; }
+html body.pl-page main#main#main .pl-oral-steps { list-style: none; margin: 0; padding: 0; }
+html body.pl-page main#main#main .pl-oral-steps > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  min-height: 124px;
+  padding: 20px 0;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-oral-steps > li::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--pl-feature-icon-size, 64px) + 20px);
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--pl-oral-line);
+}
+html body.pl-page main#main#main .pl-oral .pl-oral-icon {
+  display: block;
+  width: var(--pl-feature-icon-size, 64px);
+  height: var(--pl-feature-icon-size, 64px);
+  max-width: 100%;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+html body.pl-page main#main#main .pl-oral-step-number {
+  position: relative;
+  align-self: stretch;
+  padding-top: 4px;
+  color: #105786;
+  font-size: clamp(30px, 2.8vw, 42px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.04em;
+  text-align: center;
+}
+html body.pl-page main#main#main .pl-oral-step-number::after {
+  content: "";
+  position: absolute;
+  top: 52px;
+  bottom: -20px;
+  left: 50%;
+  border-left: 2px dotted #436788;
+}
+html body.pl-page main#main#main .pl-oral-steps > li:last-child .pl-oral-step-number::after { display: none; }
+html body.pl-page main#main#main .pl-oral-step-copy { min-width: 0; }
+html body.pl-page main#main#main .pl-oral-step-copy p,
+html body.pl-page main#main#main .pl-oral-chemosensory p {
+  margin: 0;
+  color: var(--pl-oral-copy);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.4;
+}
+html body.pl-page main#main#main .pl-oral-chemosensory {
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding-top: 22px;
+}
+html body.pl-page main#main#main .pl-oral-research {
+  align-self: end;
+  min-width: 0;
+  padding: clamp(24px, 2.8vw, 38px);
+  border: 1px solid #8daabe;
+  border-radius: 24px;
+  background: #edf6fc;
+}
+html body.pl-page main#main#main .pl-oral-botanical {
+  display: block;
+  width: min(100%, 270px);
+  height: auto;
+  margin: 0 auto 24px;
+  object-fit: contain;
+}
+html body.pl-page main#main#main .pl-oral-research-rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 18px 0;
+  background: #152b58;
+}
+html body.pl-page main#main#main .pl-oral-research > p {
+  margin: 0;
+  color: #245783;
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.5;
+}
+html body.pl-page main#main#main .pl-oral-formula {
+  position: relative;
+  width: 100%;
+  aspect-ratio: auto;
+  margin: 20px 0 0;
+  overflow: hidden;
+}
+/* Display the standalone piperine structure at its natural proportions. */
+html body.pl-page main#main#main .pl-oral-formula img {
+  position: static;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  margin: 0;
+  object-fit: contain;
+}
+html body.pl-page main#main#main .pl-oral-takeaways {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+html body.pl-page main#main#main .pl-oral-takeaway {
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #b8cfdd;
+  border-radius: 10px;
+  background: #eff7fd;
+}
+html body.pl-page main#main#main .pl-oral-takeaway--traditional { border-color: #b7c0c2; background: #eff2f1; }
+html body.pl-page main#main#main .pl-oral-takeaway p { margin: 0; color: #345d80; font-size: 15px; line-height: 1.4; }
+html body.pl-page main#main#main .pl-oral-takeaway--traditional p { color: #475657; }
+html body.pl-page main#main#main .pl-oral-footer-line {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 34px;
+  color: #396c8f;
+  font-size: clamp(9px, .85vw, 12px);
+  line-height: 1.5;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-oral-footer-rule { flex: 1; min-width: 32px; height: 1px; background: #7297af; }
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-oral #oral-title {
+    margin: 0 !important;
+    color: #060d3b !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(44px, 6.7vw, 90px) !important;
+    font-weight: 700 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.04em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-oral .pl-oral-step-copy h3,
+  html body.pl-page main#main#main .pl-oral .pl-oral-chemosensory h3 {
+    margin: 0 0 6px !important;
+    color: #0b2456 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(16px, 1.35vw, 20px) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: -.015em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-oral #pl-oral-research-title {
+    margin: 0 !important;
+    color: #091645 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(25px, 2.6vw, 38px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.035em !important;
+    text-transform: uppercase !important;
+    overflow-wrap: anywhere;
+  }
+  html body.pl-page main#main#main .pl-oral .pl-oral-takeaway h4 {
+    margin: 0 0 7px !important;
+    color: #16496e !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(13px, 1.05vw, 15px) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .06em !important;
+    text-transform: uppercase !important;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 1050px) {
+  html body.pl-page main#main#main .pl-oral-meta { gap: 16px; letter-spacing: .15em; }
+  html body.pl-page main#main#main .pl-oral-pathway-grid { gap: 26px; }
+  html body.pl-page main#main#main .pl-oral-steps > li { grid-template-columns: var(--pl-feature-icon-size, 64px) 40px minmax(0, 1fr); gap: 14px; }
+  html body.pl-page main#main#main .pl-oral-steps > li::after { left: calc(var(--pl-feature-icon-size, 64px) + 14px); }
+  html body.pl-page main#main#main .pl-oral-takeaways { gap: 14px; }
+  html body.pl-page main#main#main .pl-oral-takeaway { gap: 12px; padding: 14px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-oral-hero { display: flex; flex-direction: column; min-height: 0; padding: 26px 0 0; }
+  html body.pl-page main#main#main .pl-oral-hero::before { display: none; }
+  html body.pl-page main#main#main .pl-oral-hero > .pl-container { order: 0; padding-bottom: 28px; }
+  html body.pl-page main#main#main .pl-oral-backdrop { position: static; z-index: auto; order: 1; height: clamp(280px, 54vw, 440px); object-position: 62% center; }
+  html body.pl-page main#main#main .pl-oral-meta-rule,
+  html body.pl-page main#main#main .pl-oral-motto { display: none; }
+  html body.pl-page main#main#main .pl-oral-meta { font-size: 11px; }
+  html body.pl-page main#main#main .pl-oral-copy { width: 100%; max-width: none; margin-top: 42px; }
+  html body.pl-page main#main#main .pl-oral-copy > p:last-of-type { max-width: none; }
+  html body.pl-page main#main#main .pl-oral-molecule-note { margin-left: 0; }
+  html body.pl-page main#main#main .pl-oral-pathway-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  html body.pl-page main#main#main .pl-oral-research { width: 100%; max-width: 620px; justify-self: center; }
+  html body.pl-page main#main#main .pl-oral-formula { max-width: 380px; margin-inline: auto; }
+  html body.pl-page main#main#main .pl-oral-footer-line { gap: 18px; letter-spacing: .1em; }
+}
+@media (max-width: 700px) {
+  html body.pl-page main#main#main .pl-oral-takeaways { grid-template-columns: minmax(0, 1fr); }
+  html body.pl-page main#main#main .pl-oral-takeaway { gap: 20px; padding: 18px; }
+  html body.pl-page main#main#main .pl-oral-takeaway p br,
+  html body.pl-page main#main#main .pl-oral-takeaway h4 br { display: none; }
+  html body.pl-page main#main#main .pl-oral-footer-line { flex-direction: column; align-items: flex-start; gap: 10px; }
+  html body.pl-page main#main#main .pl-oral-footer-rule { display: none; }
+}
+@media (max-width: 520px) {
+  html body.pl-page main#main#main .pl-oral-meta { font-size: 10px; letter-spacing: .13em; }
+  html body.pl-page main#main#main .pl-oral-copy .pl-oral-lead { font-size: 16px; letter-spacing: .11em; }
+  html body.pl-page main#main#main .pl-oral-copy .pl-oral-lead br { display: none; }
+  html body.pl-page main#main#main .pl-oral-steps > li { grid-template-columns: var(--pl-feature-icon-size, 48px) 32px minmax(0, 1fr); gap: 10px; min-height: 116px; }
+  html body.pl-page main#main#main .pl-oral-steps > li::after { left: calc(var(--pl-feature-icon-size, 48px) + 10px); }
+  html body.pl-page main#main#main .pl-oral-step-number { font-size: 28px; }
+  html body.pl-page main#main#main .pl-oral-step-copy p { font-size: 14px; }
+  html body.pl-page main#main#main .pl-oral-step-copy p br { display: none; }
+  html body.pl-page main#main#main .pl-oral-chemosensory { gap: 18px; }
+  html body.pl-page main#main#main .pl-oral-botanical { max-width: 220px; }
+  @layer arotec-display-headings.spec {
+    html body.pl-page main#main#main .pl-oral #oral-title { font-size: clamp(40px, 10.2vw, 52px) !important; }
+    html body.pl-page main#main#main .pl-oral .pl-oral-step-copy h3 { font-size: 15px !important; }
+  }
+}
+
+/* Full-bleed oral background with lower artwork and a clear text area. */
+html body.pl-page main#main#main.pl-main .pl-oral-hero {
+  --pl-oral-image-drop: clamp(100px, 10vw, 180px);
+  display: block;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(760px, 60vw, 960px);
+  padding-bottom: clamp(140px, 13vw, 200px);
+  background: #f3f9fd;
+}
+html body.pl-page main#main#main.pl-main .pl-oral-hero::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(243, 249, 253, .98) 0%, rgba(243, 249, 253, .94) 43%, rgba(243, 249, 253, .3) 57%, rgba(243, 249, 253, 0) 72%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+}
+html body.pl-page main#main#main.pl-main .pl-oral-hero > .pl-container {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+html body.pl-page main#main#main.pl-main .pl-oral-backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: calc(100% + var(--pl-oral-image-drop));
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  object-position: 52% top;
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main.pl-main .pl-oral-hero {
+    --pl-oral-visual-height: clamp(300px, 58vw, 460px);
+    min-height: 0;
+    padding: 26px 0 calc(var(--pl-oral-visual-height) + 32px);
+  }
+  html body.pl-page main#main#main.pl-main .pl-oral-backdrop {
+    inset: auto 0 0;
+    height: var(--pl-oral-visual-height);
+    object-position: 62% center;
+  }
+  html body.pl-page main#main#main.pl-main .pl-oral-hero::before {
+    background: linear-gradient(to bottom, #f3f9fd 0%, #f3f9fd calc(100% - var(--pl-oral-visual-height)), rgba(243, 249, 253, 0) calc(100% - var(--pl-oral-visual-height) + 52px));
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* Through Inhalation: supplied full-bleed banner and five independent pathway icons. */
+html body.pl-page main#main#main .pl-inhale {
+  --pl-inhale-ink: #0a1645;
+  --pl-inhale-copy: #3b5c87;
+  --pl-inhale-line: #b5cce4;
+  padding: 0;
+  background: #f1f7fd;
+  color: var(--pl-inhale-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-inhale *,
+html body.pl-page main#main#main .pl-inhale *::before,
+html body.pl-page main#main#main .pl-inhale *::after { box-sizing: border-box; }
+html body.pl-page main#main#main .pl-inhale-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(700px, 58vw, 900px);
+  padding: clamp(88px, 10vw, 150px) 0 clamp(150px, 15vw, 230px);
+  background: #f1f7fd;
+}
+html body.pl-page main#main#main .pl-inhale-backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: calc(100% + clamp(70px, 7vw, 130px));
+  max-width: none;
+  object-fit: cover;
+  object-position: 52% top;
+}
+html body.pl-page main#main#main .pl-inhale-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(241, 247, 253, .98) 0%, rgba(241, 247, 253, .94) 41%, rgba(241, 247, 253, .32) 56%, rgba(241, 247, 253, 0) 71%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 67%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 67%, transparent 100%);
+}
+html body.pl-page main#main#main .pl-inhale-hero > .pl-container { position: relative; z-index: 1; }
+html body.pl-page main#main#main .pl-inhale-copy { width: 49%; max-width: 650px; }
+html body.pl-page main#main#main .pl-inhale-copy .pl-inhale-lead {
+  margin: 24px 0;
+  color: #426899;
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-inhale-copy > p:last-child {
+  max-width: 560px;
+  margin: 0;
+  color: var(--pl-inhale-copy);
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.55;
+}
+html body.pl-page main#main#main .pl-inhale-content { position: relative; padding: 24px 0 36px; }
+html body.pl-page main#main#main .pl-inhale-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr);
+  align-items: start;
+  gap: clamp(30px, 4vw, 58px);
+}
+html body.pl-page main#main#main .pl-inhale-steps {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+html body.pl-page main#main#main .pl-inhale-steps::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  bottom: 24px;
+  left: calc(var(--pl-feature-icon-size, 64px) + 16px);
+  width: 1px;
+  background: #8aaace;
+}
+html body.pl-page main#main#main .pl-inhale-steps > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) 48px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 32px;
+  min-height: 142px;
+  padding: 24px 0 28px;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-inhale-steps > li::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: calc(var(--pl-feature-icon-size, 64px) + 12px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #517faf;
+}
+html body.pl-page main#main#main .pl-inhale-steps > li::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--pl-feature-icon-size, 64px) + 32px);
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--pl-inhale-line);
+}
+html body.pl-page main#main#main .pl-inhale-steps > li:last-child::after { display: none; }
+html body.pl-page main#main#main .pl-inhale .pl-inhale-icon {
+  display: block;
+  width: var(--pl-feature-icon-size, 64px);
+  height: var(--pl-feature-icon-size, 64px);
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: contain;
+}
+html body.pl-page main#main#main .pl-inhale-step-number {
+  color: #101749;
+  font-size: clamp(30px, 2.9vw, 43px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+html body.pl-page main#main#main .pl-inhale-step-copy { min-width: 0; }
+html body.pl-page main#main#main .pl-inhale-step-copy p {
+  margin: 0;
+  color: var(--pl-inhale-copy);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-inhale-sidebar {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+  margin-top: -120px;
+}
+html body.pl-page main#main#main .pl-inhale-compounds {
+  padding: clamp(24px, 2.5vw, 34px);
+  border: 1px solid #799bc5;
+  border-radius: 12px;
+  background: rgba(233, 245, 255, .95);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .45);
+}
+html body.pl-page main#main#main .pl-inhale-compound-group { padding-top: 24px; }
+html body.pl-page main#main#main .pl-inhale-compound-group + .pl-inhale-compound-group {
+  margin-top: 22px;
+  border-top: 1px solid var(--pl-inhale-line);
+}
+html body.pl-page main#main#main .pl-inhale-compound-list { list-style: none; margin: 0; padding: 0; }
+html body.pl-page main#main#main .pl-inhale-compound-list li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0 0;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-inhale-compound-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #8cb4d9;
+  border-radius: 50%;
+  background: #d5eafa;
+  color: #113e6c;
+  font-size: 24px;
+  line-height: 1;
+}
+html body.pl-page main#main#main .pl-inhale-compound-list p {
+  min-width: 0;
+  margin: 0;
+  color: #234e7d;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+html body.pl-page main#main#main .pl-inhale-exploratory {
+  padding: clamp(24px, 2.5vw, 34px);
+  border: 1px solid #91b3d3;
+  border-radius: 10px;
+  background: #edf6fd;
+}
+html body.pl-page main#main#main .pl-inhale-exploratory-icon {
+  display: grid;
+  place-items: center;
+  width: var(--pl-feature-icon-size, 64px);
+  height: var(--pl-feature-icon-size, 64px);
+  margin-bottom: 16px;
+  border: 1px solid #173e69;
+  border-radius: 50%;
+  background: #d9f0f9;
+  color: #123f70;
+}
+html body.pl-page main#main#main .pl-inhale-exploratory-icon i {
+  font-size: var(--pl-feature-icon-glyph-size, 36px);
+  line-height: 1;
+}
+html body.pl-page main#main#main .pl-inhale-exploratory p {
+  margin: 0;
+  color: var(--pl-inhale-copy);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.5;
+}
+html body.pl-page main#main#main .pl-inhale-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 42px 0 0;
+  color: #3c6291;
+  font-size: clamp(10px, .95vw, 13px);
+  line-height: 1.5;
+  letter-spacing: .11em;
+  text-align: center;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-inhale-footer-note::before,
+html body.pl-page main#main#main .pl-inhale-footer-note::after {
+  content: "";
+  flex: 1;
+  min-width: 28px;
+  height: 1px;
+  background: #89aaca;
+}
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-inhale #inhalation-title {
+    margin: 0 !important;
+    color: #070e3b !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(44px, 6.7vw, 90px) !important;
+    font-weight: 700 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.04em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-inhale .pl-inhale-step-copy h3 {
+    margin: 0 0 8px !important;
+    color: #0d1a45 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(18px, 1.65vw, 25px) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -.03em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-inhale .pl-inhale-compounds > h3 {
+    margin: 0 !important;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #8cabcd;
+    color: #123265 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(17px, 1.55vw, 22px) !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .08em !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-inhale .pl-inhale-compound-group h4,
+  html body.pl-page main#main#main .pl-inhale .pl-inhale-exploratory h3 {
+    margin: 0 0 8px !important;
+    color: #204c7d !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(14px, 1.25vw, 18px) !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+    letter-spacing: .085em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-inhale .pl-inhale-compound-group h4 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a8c4de;
+  }
+}
+@media (max-width: 1050px) {
+  html body.pl-page main#main#main .pl-inhale-layout { gap: 28px; }
+  html body.pl-page main#main#main .pl-inhale-steps > li {
+    grid-template-columns: var(--pl-feature-icon-size, 64px) 38px minmax(0, 1fr);
+    column-gap: 24px;
+  }
+  html body.pl-page main#main#main .pl-inhale-steps::before { left: calc(var(--pl-feature-icon-size, 64px) + 12px); }
+  html body.pl-page main#main#main .pl-inhale-steps > li::before { left: calc(var(--pl-feature-icon-size, 64px) + 8px); }
+  html body.pl-page main#main#main .pl-inhale-steps > li::after { left: calc(var(--pl-feature-icon-size, 64px) + 24px); }
+  html body.pl-page main#main#main .pl-inhale-compound-list li { gap: 12px; }
+  html body.pl-page main#main#main .pl-inhale-compounds,
+  html body.pl-page main#main#main .pl-inhale-exploratory { padding: 22px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-inhale-hero {
+    --pl-inhale-visual-height: clamp(300px, 58vw, 460px);
+    min-height: 0;
+    padding: 44px 0 calc(var(--pl-inhale-visual-height) + 32px);
+  }
+  html body.pl-page main#main#main .pl-inhale-copy { width: 100%; max-width: none; }
+  html body.pl-page main#main#main .pl-inhale-copy > p:last-child { max-width: none; }
+  html body.pl-page main#main#main .pl-inhale-backdrop {
+    inset: auto 0 0;
+    height: var(--pl-inhale-visual-height);
+    object-position: 62% center;
+  }
+  html body.pl-page main#main#main .pl-inhale-hero::before {
+    background: linear-gradient(to bottom, #f1f7fd 0%, #f1f7fd calc(100% - var(--pl-inhale-visual-height)), rgba(241, 247, 253, 0) calc(100% - var(--pl-inhale-visual-height) + 48px));
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  html body.pl-page main#main#main .pl-inhale-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  html body.pl-page main#main#main .pl-inhale-sidebar { margin-top: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  html body.pl-page main#main#main .pl-inhale-compounds { box-shadow: none; }
+  html body.pl-page main#main#main .pl-inhale-step-copy p br { display: none; }
+}
+@media (max-width: 600px) {
+  html body.pl-page main#main#main .pl-inhale-sidebar { grid-template-columns: minmax(0, 1fr); }
+  html body.pl-page main#main#main .pl-inhale-copy .pl-inhale-lead { font-size: 17px; letter-spacing: .12em; }
+  html body.pl-page main#main#main .pl-inhale-copy .pl-inhale-lead br { display: none; }
+  html body.pl-page main#main#main .pl-inhale-steps > li {
+    grid-template-columns: var(--pl-feature-icon-size, 48px) 34px minmax(0, 1fr);
+    column-gap: 18px;
+    min-height: 138px;
+  }
+  html body.pl-page main#main#main .pl-inhale-steps::before { left: calc(var(--pl-feature-icon-size, 48px) + 9px); }
+  html body.pl-page main#main#main .pl-inhale-steps > li::before { left: calc(var(--pl-feature-icon-size, 48px) + 5px); }
+  html body.pl-page main#main#main .pl-inhale-steps > li::after { left: calc(var(--pl-feature-icon-size, 48px) + 18px); }
+  html body.pl-page main#main#main .pl-inhale-step-number { font-size: 29px; }
+  html body.pl-page main#main#main .pl-inhale-step-copy p { font-size: 14px; }
+  html body.pl-page main#main#main .pl-inhale-footer-note { gap: 12px; letter-spacing: .07em; }
+  html body.pl-page main#main#main .pl-inhale-footer-note br { display: none; }
+  @layer arotec-display-headings.spec {
+    html body.pl-page main#main#main .pl-inhale #inhalation-title { font-size: clamp(40px, 10vw, 56px) !important; }
+    html body.pl-page main#main#main .pl-inhale .pl-inhale-step-copy h3 { font-size: 17px !important; }
+  }
+}
+
+/* Through the Skin: supplied full-width banner, skin diagram and research icons. */
+html body.pl-page main#main#main .pl-skin {
+  --pl-skin-ink: #0d2055;
+  --pl-skin-copy: #2c5180;
+  --pl-skin-line: #a9c5de;
+  --pl-skin-marker-size: 48px;
+  padding: 0;
+  background: #f2f8fd;
+  color: var(--pl-skin-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-skin *,
+html body.pl-page main#main#main .pl-skin *::before,
+html body.pl-page main#main#main .pl-skin *::after { box-sizing: border-box; }
+html body.pl-page main#main#main .pl-skin-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(620px, 50vw, 800px);
+  padding: clamp(88px, 9vw, 128px) 0 clamp(180px, 18vw, 250px);
+}
+html body.pl-page main#main#main .pl-skin-backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: calc(100% + clamp(50px, 5vw, 90px));
+  max-width: none;
+  object-fit: cover;
+  object-position: 52% top;
+}
+html body.pl-page main#main#main .pl-skin-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(242, 248, 253, .98) 0%, rgba(242, 248, 253, .95) 42%, rgba(242, 248, 253, .3) 57%, rgba(242, 248, 253, 0) 72%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+}
+html body.pl-page main#main#main .pl-skin-hero > .pl-container { position: relative; z-index: 1; }
+html body.pl-page main#main#main .pl-skin-copy { width: 53%; max-width: 700px; }
+html body.pl-page main#main#main .pl-skin-copy .pl-skin-lead {
+  margin: 26px 0 24px;
+  color: #173b71;
+  font-size: clamp(19px, 2vw, 27px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-skin-copy > p:last-child {
+  max-width: 555px;
+  margin: 0;
+  color: #173867;
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.55;
+}
+html body.pl-page main#main#main .pl-skin-content { position: relative; padding: 20px 0 34px; }
+html body.pl-page main#main#main .pl-skin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, .95fr);
+  align-items: stretch;
+  gap: clamp(28px, 3vw, 42px);
+}
+html body.pl-page main#main#main .pl-skin-journey { min-width: 0; }
+html body.pl-page main#main#main .pl-skin-journey-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, .9fr);
+  gap: 22px;
+  align-items: stretch;
+}
+html body.pl-page main#main#main .pl-skin-steps {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  min-width: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-skin-steps > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--pl-skin-marker-size) minmax(0, 1fr);
+  align-content: start;
+  align-items: start;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px 0;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-skin-steps > li::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -22px;
+  width: 22px;
+  height: 1px;
+  background: #324e8b;
+}
+html body.pl-page main#main#main .pl-skin-steps > li::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 37px;
+  right: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #132d66;
+}
+html body.pl-page main#main#main .pl-skin-step-number {
+  display: grid;
+  place-items: center;
+  width: var(--pl-skin-marker-size);
+  height: var(--pl-skin-marker-size);
+  border: 1px solid #609ab7;
+  border-radius: 50%;
+  background: #ceeff7;
+  color: #0c315e;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+html body.pl-page main#main#main .pl-skin-step--02 .pl-skin-step-number { border-color: #9d91ac; background: #ffe3d1; }
+html body.pl-page main#main#main .pl-skin-step--03 .pl-skin-step-number { border-color: #60a5b2; background: #d0f2f2; }
+html body.pl-page main#main#main .pl-skin-step--04 .pl-skin-step-number { border-color: #8496ce; background: #dfe7ff; }
+html body.pl-page main#main#main .pl-skin-step--05 .pl-skin-step-number { border-color: #a38cba; background: #efdef4; }
+html body.pl-page main#main#main .pl-skin-steps p {
+  margin: 0;
+  color: var(--pl-skin-copy);
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-skin-diagram {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  min-height: clamp(560px, 57vw, 760px);
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-skin-diagram img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+html body.pl-page main#main#main .pl-skin-research-cards {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 14px;
+  min-width: 0;
+  margin-top: -138px;
+}
+html body.pl-page main#main#main .pl-skin-research-cards article {
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #a0bedc;
+  border-radius: 12px;
+  background: rgba(226, 239, 253, .94);
+}
+html body.pl-page main#main#main .pl-skin .pl-skin-icon {
+  display: block;
+  width: var(--pl-feature-icon-size, 64px);
+  height: var(--pl-feature-icon-size, 64px);
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: contain;
+}
+html body.pl-page main#main#main .pl-skin-research-cards p {
+  margin: 0;
+  color: var(--pl-skin-copy);
+  font-size: clamp(14px, 1.1vw, 17px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-skin-evidence {
+  display: grid;
+  grid-template-columns: var(--pl-feature-icon-size, 64px) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 190px;
+  margin-top: 32px;
+  padding: 28px 34% 28px 28px;
+  border: 1px solid #8fafcf;
+  border-radius: 14px;
+  background: #e8f3fc url("../images/piper-longum/skin-evidence-background-20260911-v2.png") center / cover no-repeat;
+}
+html body.pl-page main#main#main .pl-skin-evidence p {
+  margin: 0;
+  color: #254e7d;
+  font-size: clamp(15px, 1.3vw, 19px);
+  line-height: 1.45;
+}
+html body.pl-page main#main#main .pl-skin-footer-line {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 32px;
+  color: #2d5683;
+  font-size: clamp(9px, .85vw, 12px);
+  line-height: 1.5;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-skin-footer-rule { flex: 1; min-width: 28px; height: 1px; background: #7896bc; }
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-skin #skin-title {
+    margin: 0 !important;
+    color: #091443 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(42px, 5.2vw, 78px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.04em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-skin #pl-skin-journey-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin: 0 0 18px !important;
+    color: #173266 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(13px, 1.15vw, 17px) !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    letter-spacing: .12em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-skin #pl-skin-journey-title::after {
+    content: "";
+    flex: 1;
+    min-width: 24px;
+    height: 1px;
+    background: #516e9d;
+  }
+  html body.pl-page main#main#main .pl-skin .pl-skin-steps h4 {
+    margin: 0 0 7px !important;
+    color: #172e62 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(14px, 1.2vw, 18px) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: .015em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-skin .pl-skin-research-cards h3 {
+    margin: 0 0 8px !important;
+    color: #172e62 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(14px, 1.15vw, 18px) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: .035em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-skin #pl-skin-evidence-title {
+    margin: 0 0 10px !important;
+    color: #173668 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(17px, 1.5vw, 22px) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .14em !important;
+    text-transform: uppercase !important;
+  }
+}
+@media (max-width: 1100px) {
+  html body.pl-page main#main#main .pl-skin-layout { gap: 26px; }
+  html body.pl-page main#main#main .pl-skin-research-cards article { gap: 14px; padding: 18px; }
+  html body.pl-page main#main#main .pl-skin-steps > li { gap: 12px; }
+}
+@media (max-width: 1000px) {
+  html body.pl-page main#main#main .pl-skin-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  html body.pl-page main#main#main .pl-skin-research-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    margin-top: 0;
+  }
+  html body.pl-page main#main#main .pl-skin-research-cards article:last-child { grid-column: 1 / -1; }
+  html body.pl-page main#main#main .pl-skin-diagram { min-height: 640px; }
+  html body.pl-page main#main#main .pl-skin-evidence { gap: 18px; padding-left: 22px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-skin-hero {
+    --pl-skin-visual-height: clamp(280px, 55vw, 430px);
+    min-height: 0;
+    padding: 44px 0 calc(var(--pl-skin-visual-height) + 32px);
+  }
+  html body.pl-page main#main#main .pl-skin-copy { width: 100%; max-width: none; }
+  html body.pl-page main#main#main .pl-skin-copy > p:last-child { max-width: none; }
+  html body.pl-page main#main#main .pl-skin-backdrop {
+    inset: auto 0 0;
+    height: var(--pl-skin-visual-height);
+    object-position: 63% center;
+  }
+  html body.pl-page main#main#main .pl-skin-hero::before {
+    background: linear-gradient(to bottom, #f2f8fd 0%, #f2f8fd calc(100% - var(--pl-skin-visual-height)), rgba(242, 248, 253, 0) calc(100% - var(--pl-skin-visual-height) + 48px));
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+@media (max-width: 650px) {
+  html body.pl-page main#main#main .pl-skin { --pl-skin-marker-size: 40px; }
+  html body.pl-page main#main#main .pl-skin-copy .pl-skin-lead { font-size: 17px; letter-spacing: .13em; }
+  html body.pl-page main#main#main .pl-skin-copy .pl-skin-lead br { display: none; }
+  html body.pl-page main#main#main .pl-skin-journey-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  html body.pl-page main#main#main .pl-skin-steps { grid-template-rows: none; }
+  html body.pl-page main#main#main .pl-skin-steps > li { padding: 16px 0; gap: 16px; }
+  html body.pl-page main#main#main .pl-skin-steps > li + li { border-top: 1px solid #c6d8e7; }
+  html body.pl-page main#main#main .pl-skin-steps > li::before,
+  html body.pl-page main#main#main .pl-skin-steps > li::after { display: none; }
+  html body.pl-page main#main#main .pl-skin-step-number { font-size: 24px; }
+  html body.pl-page main#main#main .pl-skin-diagram {
+    width: min(100%, 272px);
+    min-height: 0;
+    margin: 6px auto 0;
+    aspect-ratio: 272 / 671;
+  }
+  html body.pl-page main#main#main .pl-skin-diagram img { position: static; height: auto; }
+  html body.pl-page main#main#main .pl-skin-research-cards { grid-template-columns: minmax(0, 1fr); }
+  html body.pl-page main#main#main .pl-skin-research-cards article { gap: 18px; padding: 20px; }
+  html body.pl-page main#main#main .pl-skin-evidence {
+    min-height: 0;
+    padding: 22px 22px 155px;
+    background-size: auto 145px;
+    background-position: right bottom;
+  }
+  html body.pl-page main#main#main .pl-skin-footer-line { flex-direction: column; align-items: flex-start; gap: 10px; letter-spacing: .1em; }
+  html body.pl-page main#main#main .pl-skin-footer-rule { display: none; }
+  @layer arotec-display-headings.spec {
+    html body.pl-page main#main#main .pl-skin #skin-title { font-size: clamp(38px, 8.8vw, 52px) !important; }
+  }
+}
+
+/* Why Piper longum Matters to A&S: supplied artwork and research flow. */
+html body.pl-page main#main#main .pl-relevance {
+  --pl-relevance-ink: #0b1846;
+  --pl-relevance-copy: #234b7c;
+  --pl-relevance-line: #adc6df;
+  padding: 0;
+  color: var(--pl-relevance-ink);
+  background: #f3f8fe;
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  scroll-margin-top: calc(var(--detail-header-space, 160px) + 20px);
+}
+html body.pl-page main#main#main .pl-relevance-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: clamp(640px, 50vw, 800px);
+  padding: clamp(72px, 8vw, 120px) 0 clamp(100px, 10vw, 150px);
+}
+html body.pl-page main#main#main .pl-relevance-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 52% center;
+}
+html body.pl-page main#main#main .pl-relevance-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(243, 248, 254, .75) 0%, rgba(243, 248, 254, .55) 39%, rgba(243, 248, 254, 0) 64%);
+}
+html body.pl-page main#main#main .pl-relevance-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 100px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(243, 248, 254, 0), #f3f8fe);
+}
+html body.pl-page main#main#main .pl-relevance-hero > .pl-container { position: relative; z-index: 1; }
+html body.pl-page main#main#main .pl-relevance-copy { width: 58%; max-width: 740px; }
+html body.pl-page main#main#main .pl-relevance-copy .pl-relevance-lead {
+  max-width: 620px;
+  margin: 28px 0 22px;
+  color: #294e80;
+  font-size: clamp(18px, 1.85vw, 27px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-relevance-copy > p:last-child {
+  max-width: 490px;
+  margin: 0;
+  color: #17396b;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+html body.pl-page main#main#main .pl-relevance-content {
+  padding: 0 0 44px;
+  background: radial-gradient(ellipse at 92% 30%, rgba(212, 231, 248, .5), transparent 55%);
+}
+html body.pl-page main#main#main .pl-relevance-reasons { position: relative; isolation: isolate; }
+html body.pl-page main#main#main .pl-relevance-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html body.pl-page main#main#main .pl-relevance-grid > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px var(--pl-feature-icon-size, 64px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  min-width: 0;
+  min-height: 175px;
+  padding: 32px 32px 32px 0;
+  border-bottom: 1px solid var(--pl-relevance-line);
+}
+html body.pl-page main#main#main .pl-relevance-grid > li:nth-child(even) { padding-right: 0; padding-left: 32px; }
+html body.pl-page main#main#main .pl-relevance-grid > li:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  inset: 28px auto 28px 0;
+  width: 1px;
+  background: var(--pl-relevance-line);
+}
+html body.pl-page main#main#main .pl-relevance-grid > li:last-child {
+  grid-column: 1 / -1;
+  min-height: 220px;
+  padding-right: 36%;
+}
+html body.pl-page main#main#main .pl-relevance-number {
+  align-self: start;
+  display: block;
+  width: 34px;
+  color: #153b72;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+html body.pl-page main#main#main .pl-relevance-number::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  margin-top: 12px;
+  background: #496da2;
+}
+html body.pl-page main#main#main .pl-relevance .pl-relevance-icon {
+  display: block;
+  width: var(--pl-feature-icon-size, 64px);
+  height: var(--pl-feature-icon-size, 64px);
+  max-width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: contain;
+}
+html body.pl-page main#main#main .pl-relevance-item-copy { min-width: 0; }
+html body.pl-page main#main#main .pl-relevance-item-copy p {
+  margin: 0;
+  color: var(--pl-relevance-copy);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.5;
+}
+/* Show only the text-free portrait region of the supplied reference. */
+html body.pl-page main#main#main .pl-relevance-portrait {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  z-index: 0;
+  width: 34%;
+  max-width: 410px;
+  aspect-ratio: 309 / 207;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 25%);
+  mask-image: linear-gradient(to right, transparent, #000 25%);
+}
+html body.pl-page main#main#main .pl-relevance-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #f3f8fe, rgba(243, 248, 254, 0) 25%);
+}
+html body.pl-page main#main#main .pl-relevance-portrait img {
+  position: absolute;
+  display: block;
+  width: 304.530745%;
+  max-width: none;
+  height: auto;
+  left: -204.530745%;
+  top: -536.231884%;
+  margin: 0;
+}
+html body.pl-page main#main#main .pl-relevance-research-flow { padding-top: 28px; }
+html body.pl-page main#main#main .pl-relevance-flow-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 34px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+html body.pl-page main#main#main .pl-relevance-flow-list > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 0;
+  text-align: center;
+}
+html body.pl-page main#main#main .pl-relevance-flow-label {
+  display: block;
+  color: #15376b;
+  font-size: clamp(12px, 1.15vw, 16px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+html body.pl-page main#main#main .pl-relevance-flow-arrow {
+  position: absolute;
+  top: calc(var(--pl-feature-icon-size, 64px) / 2 - 16px);
+  right: -31px;
+  width: 28px;
+  color: #315990;
+  font-size: 28px;
+  line-height: 32px;
+}
+html body.pl-page main#main#main .pl-relevance-closing {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  min-height: 130px;
+  margin-top: 38px;
+  padding: 26px 135px;
+  border: 1px solid #98b6d7;
+  border-radius: 10px;
+  background: #e8f3fd url("../images/piper-longum/relevance-closing-background-20260911.png") center / cover no-repeat;
+}
+html body.pl-page main#main#main .pl-relevance-closing p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #123c77;
+  font-size: clamp(20px, 2vw, 29px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.025em;
+  text-align: center;
+}
+@layer arotec-display-headings.spec {
+  html body.pl-page main#main#main .pl-relevance #relevance-title {
+    margin: 0 !important;
+    color: #090f35 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(42px, 4.7vw, 70px) !important;
+    font-weight: 700 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -.04em !important;
+    text-transform: none !important;
+  }
+  html body.pl-page main#main#main .pl-relevance #relevance-title > span { display: block; }
+  html body.pl-page main#main#main .pl-relevance #relevance-title em { font-style: italic !important; white-space: nowrap; }
+  html body.pl-page main#main#main .pl-relevance .pl-relevance-item-copy h3 {
+    margin: 0 0 9px !important;
+    color: #16376c !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(17px, 1.5vw, 22px) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: .06em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-relevance #pl-relevance-flow-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 !important;
+    color: #17386c !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(16px, 1.4vw, 21px) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .1em !important;
+    text-transform: uppercase !important;
+  }
+  html body.pl-page main#main#main .pl-relevance #pl-relevance-flow-title::after {
+    content: "";
+    flex: 1;
+    max-width: 220px;
+    height: 1px;
+    background: var(--pl-relevance-line);
+  }
+}
+@media (max-width: 1000px) {
+  html body.pl-page main#main#main .pl-relevance-grid > li { grid-template-columns: 30px var(--pl-feature-icon-size, 64px) minmax(0, 1fr); gap: 16px; padding-right: 22px; }
+  html body.pl-page main#main#main .pl-relevance-grid > li:nth-child(even) { padding-left: 22px; }
+  html body.pl-page main#main#main .pl-relevance-closing { padding-inline: 110px; }
+}
+@media (max-width: 850px) {
+  html body.pl-page main#main#main .pl-relevance-hero {
+    --pl-relevance-visual-height: clamp(280px, 55vw, 440px);
+    min-height: 0;
+    padding: 44px 0 calc(var(--pl-relevance-visual-height) + 30px);
+  }
+  html body.pl-page main#main#main .pl-relevance-copy { width: 100%; max-width: none; }
+  html body.pl-page main#main#main .pl-relevance-copy > p:last-child { max-width: none; }
+  html body.pl-page main#main#main .pl-relevance-backdrop {
+    inset: auto 0 0;
+    height: var(--pl-relevance-visual-height);
+    object-position: 68% center;
+  }
+  html body.pl-page main#main#main .pl-relevance-hero::before {
+    background: linear-gradient(to bottom, #f3f8fe 0%, #f3f8fe calc(100% - var(--pl-relevance-visual-height)), rgba(243, 248, 254, 0) calc(100% - var(--pl-relevance-visual-height) + 50px));
+  }
+  html body.pl-page main#main#main .pl-relevance-hero::after { height: 65px; }
+}
+@media (max-width: 700px) {
+  html body.pl-page main#main#main .pl-relevance-copy .pl-relevance-lead { font-size: 17px; letter-spacing: .11em; }
+  html body.pl-page main#main#main .pl-relevance-copy .pl-relevance-lead br { display: none; }
+  html body.pl-page main#main#main .pl-relevance-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.pl-page main#main#main .pl-relevance-grid > li,
+  html body.pl-page main#main#main .pl-relevance-grid > li:nth-child(even),
+  html body.pl-page main#main#main .pl-relevance-grid > li:last-child {
+    grid-template-columns: 28px var(--pl-feature-icon-size, 48px) minmax(0, 1fr);
+    min-height: 0;
+    gap: 16px;
+    padding: 26px 0;
+  }
+  html body.pl-page main#main#main .pl-relevance-grid > li:nth-child(even)::before,
+  html body.pl-page main#main#main .pl-relevance-portrait { display: none; }
+  html body.pl-page main#main#main .pl-relevance-number { width: 28px; font-size: 24px; }
+  html body.pl-page main#main#main .pl-relevance-number::after { width: 24px; margin-top: 10px; }
+  html body.pl-page main#main#main .pl-relevance-flow-list { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  html body.pl-page main#main#main .pl-relevance-flow-list > li {
+    display: grid;
+    grid-template-columns: var(--pl-feature-icon-size, 48px) minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+    text-align: left;
+  }
+  html body.pl-page main#main#main .pl-relevance-flow-label { font-size: 14px; }
+  html body.pl-page main#main#main .pl-relevance-flow-label br { display: none; }
+  html body.pl-page main#main#main .pl-relevance-flow-arrow {
+    top: auto;
+    right: auto;
+    bottom: -33px;
+    left: calc(var(--pl-feature-icon-size, 48px) / 2 - 14px);
+    transform: rotate(90deg);
+  }
+  html body.pl-page main#main#main .pl-relevance-closing { min-height: 165px; padding: 24px 20px 75px; margin-top: 32px; background-size: 100% auto; background-position: center bottom; }
+  html body.pl-page main#main#main .pl-relevance-content { padding-bottom: 30px; }
+  @layer arotec-display-headings.spec {
+    html body.pl-page main#main#main .pl-relevance #relevance-title { font-size: clamp(34px, 7.8vw, 52px) !important; }
+    html body.pl-page main#main#main .pl-relevance .pl-relevance-item-copy h3 { font-size: 17px !important; letter-spacing: .025em !important; }
+  }
+}
+
+/* Molecular Profile: resolution-independent HTML/CSS chemical diagrams.
+   Bond endpoints use normalized coordinates; no raster, SVG or canvas is used. */
+html body.pl-page main#main#main .pl-molecule-panel {
+  container-type: inline-size;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 620px;
+  min-width: 0;
+  margin: 0;
+  padding: 12px 8px 10px;
+  justify-self: center;
+  color: #182e67;
+  border-radius: 7px;
+  background: linear-gradient(110deg, rgba(249, 252, 255, .8), rgba(231, 242, 252, .45));
+}
+html body.pl-page main#main#main .pl-molecule-canvas {
+  container-type: inline-size;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  color: inherit;
+}
+html body.pl-page main#main#main .pl-molecule-bond {
+  position: absolute;
+  display: block;
+  box-sizing: content-box;
+  left: var(--x);
+  top: var(--y);
+  width: var(--length);
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-top: clamp(1px, var(--pl-bond-size, .45cqw), 2.6px) solid currentColor;
+  transform: rotate(var(--angle));
+  transform-origin: left center;
+  pointer-events: none;
+}
+html body.pl-page main#main#main .pl-molecule-bond--wedge {
+  height: var(--wedge-size);
+  margin-top: calc(var(--wedge-size) / -2);
+  border: 0;
+  background: currentColor;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+html body.pl-page main#main#main .pl-molecule-bond--hashed {
+  background: repeating-linear-gradient(90deg, currentColor 0, currentColor 1px, transparent 1px, transparent 3px);
+}
+html body.pl-page main#main#main .pl-molecule-atom {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  left: var(--x);
+  top: var(--y);
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  font-size: clamp(8px, var(--pl-atom-size, 4cqw), 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+html body.pl-page main#main#main .pl-molecule-atom--start { transform: translate(0, -50%); }
+html body.pl-page main#main#main .pl-molecule-atom--end { transform: translate(-100%, -50%); }
+html body.pl-page main#main#main .pl-molecule-atom sub {
+  position: static;
+  font-size: .68em;
+  line-height: 0;
+  vertical-align: sub;
+}
+html body.pl-page main#main#main .pl-molecule-label {
+  display: block;
+  margin: 10px 0 0;
+  padding: 0;
+  color: #182e67;
+  font-family: var(--site-font, "DM Sans", sans-serif);
+  font-size: clamp(10px, 2.5cqw, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: .055em;
+  text-align: center;
+  text-transform: uppercase;
+}
+html body.pl-page main#main#main .pl-molecule-panel--volatiles,
+html body.pl-page main#main#main .pl-molecule-panel--other {
+  display: grid;
+  align-items: stretch;
+  gap: 0;
+  padding-inline: 0;
+}
+html body.pl-page main#main#main .pl-molecule-panel--volatiles { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.45fr); }
+html body.pl-page main#main#main .pl-molecule-panel--other { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+html body.pl-page main#main#main .pl-molecule-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding-inline: 9px;
+}
+html body.pl-page main#main#main .pl-molecule-unit + .pl-molecule-unit { border-left: 1px dashed #acc9e3; }
+html body.pl-page main#main#main .pl-molecule-panel--volatiles .pl-molecule-label { font-size: clamp(9px, 2.15cqw, 14px); letter-spacing: .01em; }
+@media (max-width: 600px) {
+  html body.pl-page main#main#main .pl-molecule-panel { padding-block: 10px; }
+  html body.pl-page main#main#main .pl-molecule-unit { padding-inline: 5px; }
+  html body.pl-page main#main#main .pl-molecule-label { margin-top: 8px; }
+}
