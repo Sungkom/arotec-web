@@ -1,0 +1,135 @@
+/* A&S Approach: supplied artwork and icons, with independent editable text. */
+html body.brs-page main#main#main #approach.brs-asr {
+ --asr-ink: #0a2047;
+ --asr-teal: #17616e;
+ --asr-line: #b8c8d8;
+ --asr-paper: #f0f4f7;
+ --asr-left: max(24px, var(--arotec-content-left, 0px));
+ --asr-right: max(24px, var(--arotec-content-right, 0px));
+ position: relative;
+ isolation: isolate;
+ display: block;
+ width: 100% !important;
+ max-width: none !important;
+ height: auto !important;
+ min-height: 0 !important;
+ margin: 0 !important;
+ padding: 0 !important;
+ overflow: hidden;
+ color: var(--asr-ink);
+ background: linear-gradient(135deg, #f5f8fb, var(--asr-paper)) !important;
+ font-family: var(--site-font, "DM Sans", sans-serif) !important;
+ scroll-margin-top: calc(var(--detail-header-space, 112px) + 20px);
+}
+html body.brs-page main#main#main #approach.brs-asr, html body.brs-page main#main#main #approach.brs-asr *, html body.brs-page main#main#main #approach.brs-asr *::before, html body.brs-page main#main#main #approach.brs-asr *::after { box-sizing: border-box; }
+html body.brs-page main#main#main #approach.brs-asr :is(figure, ul, p) { margin: 0; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-sheet { width: 100%; max-width: none; margin: 0; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-hero {
+ position: relative;
+ isolation: isolate;
+ display: grid;
+ align-items: center;
+ min-height: clamp(650px, 46.875vw, 940px);
+ padding-block: clamp(48px, 4.5vw, 100px);
+}
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-art { position: absolute; z-index: -1; inset: 0; overflow: hidden; margin: 0 !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-art img { display: block; width: 100% !important; max-width: none !important; height: 100% !important; object-fit: cover; object-position: center; border-radius: 0 !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--asr-paper), transparent 18%); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-copy, html body.brs-page main#main#main #approach.brs-asr .brs-asr-body {
+ position: relative;
+ width: calc(100% - var(--asr-left) - var(--asr-right));
+ max-width: none;
+ margin-inline: var(--asr-left) var(--asr-right);
+}
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-copy { z-index: 1; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-lead {
+ width: min(60%, 760px);
+ margin: 24px 0 20px !important;
+ color: var(--asr-teal) !important;
+ font-size: clamp(18px, 1.7vw, 28px) !important;
+ font-weight: 400 !important;
+ line-height: 1.45 !important;
+ letter-spacing: .13em !important;
+ text-transform: uppercase;
+}
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-lead::after { content: ""; display: block; width: 58px; height: 1px; margin-top: 20px; background: #28486f; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-description { width: min(43%, 520px); color: var(--asr-ink) !important; font-size: clamp(18px, 1.25vw, 22px) !important; line-height: 1.5 !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-body { padding: 8px 0 clamp(36px, 4vw, 70px); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule { display: flex; align-items: center; gap: clamp(16px, 2vw, 32px); margin: 0 10px 24px; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule::before, html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule::after { content: ""; flex: 1; min-width: 24px; height: 1px; background: #637b9b; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-comparison { display: grid; grid-template-columns: minmax(0, 1.07fr) clamp(64px, 8vw, 140px) minmax(0, 1fr); align-items: stretch; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions { min-width: 0; padding: 18px clamp(24px, 2.6vw, 48px) 12px; border: 1px solid #c6d3e1; border-radius: 16px; background: linear-gradient(145deg, #ffffff70, #f3f6f980); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions h4 { position: relative; display: grid; align-content: center; min-height: 82px; padding-bottom: 20px; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions h4::after { content: ""; position: absolute; bottom: 7px; left: 50%; width: 52px; height: 1px; background: #37577d; transform: translateX(-50%); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions ul { padding: 0; margin: 0; list-style: none; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions li { display: grid; grid-template-columns: clamp(68px, 6vw, 96px) minmax(0, 1fr); gap: clamp(18px, 2.3vw, 42px); align-items: center; min-height: clamp(104px, 8.5vw, 144px); padding-block: 12px; border-bottom: 1px solid var(--asr-line); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions li:last-child { border-bottom: 0; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-question-image { display: block; width: 100% !important; max-width: 96px !important; height: auto !important; aspect-ratio: 1; object-fit: contain; border-radius: 50%; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions p { margin: 0 !important; color: var(--asr-ink) !important; font-size: clamp(18px, 1.45vw, 25px) !important; line-height: 1.4 !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow { position: relative; display: grid; place-items: center; overflow: hidden; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow::before { content: ""; position: absolute; inset: 1% -42%; border-radius: 50%; background: radial-gradient(circle, #86accb 1px, transparent 1.5px) 0 0 / 11px 13px; transform: perspective(190px) rotateY(35deg); mask-image: radial-gradient(ellipse, transparent 17%, #000 53%, transparent 74%); opacity: .75; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span { position: relative; width: 62%; height: 1.5px; background: var(--asr-ink); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span::after { content: ""; position: absolute; right: 0; top: 50%; width: 18px; height: 18px; border-top: 1.5px solid var(--asr-ink); border-right: 1.5px solid var(--asr-ink); transform: translateY(-50%) rotate(45deg); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule--pillars { margin-top: 34px; margin-bottom: 34px; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars article { min-width: 0; padding: 8px clamp(12px, 1.4vw, 26px) 10px; border-right: 1px solid var(--asr-line); text-align: center; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars article:last-child { border-right: 0; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillar-visual { position: relative; width: clamp(118px, 11vw, 180px); margin: 0 auto 22px; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillar-image { display: block; width: 100% !important; max-width: none !important; height: auto !important; aspect-ratio: 1; object-fit: contain; border-radius: 50%; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-number { position: absolute; z-index: 1; top: -8px; left: -22px; display: grid; place-items: center; width: clamp(38px, 3.5vw, 52px); height: clamp(38px, 3.5vw, 52px); border: 1px solid #8ca3bf; border-radius: 50%; background: #f6f9fc; color: var(--asr-ink); font-size: clamp(20px, 1.9vw, 27px); line-height: 1; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars h4 { position: relative; min-height: 72px; padding-bottom: 18px; margin-bottom: 16px !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars h4::after { content: ""; position: absolute; bottom: 4px; left: 50%; width: 36px; height: 1px; background: #37577d; transform: translateX(-50%); }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars p { margin: 0 !important; color: var(--asr-ink) !important; font-size: clamp(17px, 1.3vw, 22px) !important; line-height: 1.45 !important; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-closing { display: grid; grid-template-columns: auto minmax(30px, 1fr) auto; gap: 24px; align-items: center; margin: 44px 8px 0; color: #365479; font-size: clamp(9px, .8vw, 12px); line-height: 1.6; letter-spacing: .16em; text-transform: uppercase; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-closing > span:nth-child(2) { height: 1px; background: #8399b5; }
+@layer arotec-display-headings.spec {
+ html body.brs-page main#main#main #approach.brs-asr h2#approach-title { display: flex !important; flex-direction: column !important; width: 62% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; color: #071b3e !important; font-size: clamp(44px, 4.5vw, 86px) !important; font-weight: 700 !important; line-height: 1.08 !important; letter-spacing: -.04em !important; text-transform: none !important; text-align: left !important; }
+ html body.brs-page main#main#main #approach.brs-asr h2#approach-title > .brs-asr-title-line { display: block !important; margin: 0 !important; font: inherit !important; letter-spacing: inherit !important; text-transform: none !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule h3 { flex: 0 1 auto; margin: 0 !important; color: var(--asr-ink) !important; font-size: clamp(17px, 1.65vw, 25px) !important; line-height: 1.4 !important; font-weight: 500 !important; letter-spacing: .14em !important; text-transform: uppercase !important; text-align: center !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions h4 { margin: 0 !important; color: var(--asr-ink) !important; font-size: clamp(18px, 1.6vw, 25px) !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: .07em !important; text-transform: uppercase !important; text-align: center !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions--response h4 { color: var(--asr-teal) !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars h4 { margin-top: 0 !important; color: var(--asr-ink) !important; font-size: clamp(16px, 1.35vw, 22px) !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: .07em !important; text-transform: uppercase !important; text-align: center !important; }
+}
+@media (min-width: 1024px) {
+ html body.brs-page main#main#main #approach.brs-asr h2#approach-title > .brs-asr-title-line { white-space: nowrap; }
+}
+@media (max-width: 900px) {
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-hero { display: flex; flex-direction: column; min-height: 0; padding: 0; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-copy { order: 0; padding: 42px 0 20px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-art { position: relative; order: 1; z-index: 0; inset: auto; width: 100%; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-art img { height: auto !important; object-fit: contain; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-lead { width: 100%; font-size: 20px !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-description { width: 100%; max-width: 600px; font-size: 18px !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-body { padding-top: 24px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions { padding-inline: 18px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions li { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions p { font-size: 17px !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-comparison { grid-template-columns: minmax(0, 1fr) 58px minmax(0, 1fr); }
+ @layer arotec-display-headings.spec {
+  html body.brs-page main#main#main #approach.brs-asr h2#approach-title { width: 100% !important; font-size: clamp(36px, 6.6vw, 62px) !important; }
+  html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions h4 { font-size: 17px !important; }
+ }
+}
+@media (max-width: 700px) {
+ html body.brs-page main#main#main #approach.brs-asr { --asr-left: 20px; --asr-right: 20px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule { gap: 12px; margin-inline: 0; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule::before, html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule::after { min-width: 16px; flex: 0 0 16px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule h3 { flex: 1; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-comparison { grid-template-columns: minmax(0, 1fr); }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions { padding: 16px 20px 8px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions li { grid-template-columns: 72px minmax(0, 1fr); gap: 20px; min-height: 100px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-questions p { font-size: 18px !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow { height: 64px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow::before { display: none; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span { width: 34px; transform: rotate(90deg); }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-rule--pillars { margin-top: 32px; margin-bottom: 32px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 0; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars article { padding-inline: 12px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars article:nth-child(even) { border-right: 0; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillar-visual { width: 112px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-number { width: 34px; height: 34px; left: -14px; font-size: 19px; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars p { font-size: 16px !important; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-pillars p br { display: none; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-closing { grid-template-columns: 1fr; gap: 12px; margin: 32px 0 0; font-size: 9px; text-align: center; }
+ html body.brs-page main#main#main #approach.brs-asr .brs-asr-closing > span:nth-child(2) { width: 65%; margin-inline: auto; }
+}

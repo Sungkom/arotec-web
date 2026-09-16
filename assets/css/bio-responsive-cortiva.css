@@ -1,0 +1,142 @@
+/* Cortiva: live HTML copy and source artwork, scaled to the 1536 × 1024 reference. */
+html body.cortiva-page { background:#edf9fd; }
+html body.cortiva-page main#main#main.cortiva-main {--cortiva-gutter-left:max(24px,var(--arotec-content-left,0px));--cortiva-gutter-right:max(24px,var(--arotec-content-right,0px));display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:var(--detail-header-space,0px) 0 0!important;color:#101b50;font-family:var(--site-font,"DM Sans",sans-serif)!important;}
+html body.cortiva-page main#main#main *,html body.cortiva-page main#main#main *::before,html body.cortiva-page main#main#main *::after {box-sizing:border-box;}
+html body.cortiva-page main#main#main :is(h1,h2,h3,h4,p,figure,ul,ol) {margin:0!important;padding:0;letter-spacing:normal!important;text-transform:none!important;}
+html body.cortiva-page main#main#main :is(h1,h2,h3,h4,p,li) {font-family:var(--site-font,"DM Sans",sans-serif)!important;}
+html body.cortiva-page main#main#main :is(ul,ol) {list-style:none;}
+html body.cortiva-page main#main#main sup {font-size:.45em;line-height:0;vertical-align:super;}
+/* The shared gutters frame foreground content; chapter backgrounds stay full width. */
+html body.cortiva-page main#main#main .cortiva-chapter {container:cortiva-frame / inline-size;width:100%!important;max-width:none!important;margin:0 auto!important;padding:0 var(--cortiva-gutter-right) 0 var(--cortiva-gutter-left)!important;background:#eaf8fd url('../images/bio-responsive-cortiva/background-texture.png') center/cover;scroll-margin-top:var(--detail-header-space,100px);}
+/* Exclude the reference artwork's own 27px/30px margins from the content frame. */
+html body.cortiva-page main#main#main .cortiva-board {--u:calc(100cqw / 1479);position:relative;width:calc(1536 * var(--u));min-height:calc(1024 * var(--u));margin-left:calc(-27 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-sidebar {position:absolute;left:calc(27 * var(--u));top:calc(23 * var(--u));width:calc(388 * var(--u));height:calc(979 * var(--u));padding:calc(32 * var(--u)) calc(35 * var(--u));border-radius:calc(29 * var(--u));overflow:hidden;background:#003445 url('../images/bio-responsive-cortiva/sidebar-texture.png') center/cover;color:#f7fafc;}
+html body.cortiva-page main#main#main .ct-kicker {display:flex;align-items:center;gap:calc(20 * var(--u));font-size:calc(19 * var(--u))!important;line-height:1.2!important;letter-spacing:.22em!important;text-transform:uppercase!important;color:#f4f7fa;white-space:nowrap;}
+html body.cortiva-page main#main#main .ct-kicker span {flex:1;border-top:1px solid #42b6c9;}
+html body.cortiva-page main#main#main #cortiva-title {--arotec-display-size:calc(54 * var(--u));--arotec-display-line-height:1.05;--arotec-display-letter-spacing:-.035em;font-size:calc(54 * var(--u))!important;line-height:1.05!important;letter-spacing:-.035em!important;font-weight:700!important;color:white!important;white-space:nowrap!important;overflow-wrap:normal!important;margin-top:calc(48 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-accent {display:block;width:calc(96 * var(--u));height:calc(5 * var(--u));border-radius:5px;background:#8ee6ed;margin:calc(19 * var(--u)) 0 calc(18 * var(--u));}
+html body.cortiva-page main#main#main .ct-sidebar h2 {font-size:calc(36 * var(--u))!important;line-height:.99!important;font-weight:700!important;color:#f7fafc!important;letter-spacing:-.025em!important;}
+html body.cortiva-page main#main#main .ct-sidebar .ct-subtitle {font-size:calc(28 * var(--u))!important;line-height:1.04!important;color:#b0e9f1;margin-top:calc(18 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-accent--second {width:calc(111 * var(--u));margin-top:calc(20 * var(--u));margin-bottom:calc(15 * var(--u));}
+html body.cortiva-page main#main#main .ct-sidebar .ct-description {font-size:calc(19 * var(--u))!important;line-height:1.21!important;font-weight:400!important;color:#e1eaf0;}
+html body.cortiva-page main#main#main .ct-pathway {margin-top:calc(27 * var(--u));}
+html body.cortiva-page main#main#main .ct-pathway > p {font-size:calc(14 * var(--u))!important;line-height:1.2!important;font-weight:700!important;letter-spacing:.25em!important;text-transform:uppercase!important;color:#fff;}
+html body.cortiva-page main#main#main .ct-pathway ol {margin-top:calc(13 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-pathway li {display:flex;gap:calc(18 * var(--u));position:relative;min-height:calc(100 * var(--u));padding-left:calc(7 * var(--u));}
+html body.cortiva-page main#main#main .ct-pathway li::before {content:"";position:absolute;left:calc(26 * var(--u));top:calc(30 * var(--u));height:calc(70 * var(--u));border-left:1px solid #e2f6ff;}
+html body.cortiva-page main#main#main .ct-pathway .ct-step {display:grid;place-items:center;flex:0 0 calc(38 * var(--u));height:calc(38 * var(--u));border-radius:50%;background:#9beef6;color:#00435a;font-size:calc(25 * var(--u));font-weight:700;}
+html body.cortiva-page main#main#main .ct-pathway h3 {font-size:calc(21 * var(--u))!important;line-height:1.2!important;color:#fff!important;font-weight:700!important;}
+html body.cortiva-page main#main#main .ct-pathway li p {margin-top:calc(5 * var(--u))!important;font-size:calc(17 * var(--u))!important;line-height:1.4!important;color:#c4dfe9;}
+html body.cortiva-page main#main#main .ct-science {position:absolute;bottom:calc(31 * var(--u));left:calc(33 * var(--u));right:calc(28 * var(--u));padding:calc(19 * var(--u)) calc(28 * var(--u));border-radius:calc(21 * var(--u));background:#056681a6;}
+html body.cortiva-page main#main#main .ct-science p {font-size:calc(12 * var(--u))!important;line-height:1.2!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:.22em!important;color:#fff;}
+html body.cortiva-page main#main#main .ct-science strong {display:flex;align-items:center;gap:calc(13 * var(--u));margin-top:calc(7 * var(--u));font-size:calc(27 * var(--u));line-height:1.2;font-weight:700;white-space:nowrap;}
+html body.cortiva-page main#main#main .ct-content {position:absolute;left:calc(447 * var(--u));top:calc(23 * var(--u));width:calc(1059 * var(--u));}
+html body.cortiva-page main#main#main .ct-block-label {display:flex;align-items:center;gap:calc(13 * var(--u));height:calc(32 * var(--u));padding:0 calc(11 * var(--u));color:#086a72;font-size:calc(15 * var(--u));font-weight:700;line-height:1.2;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;}
+html body.cortiva-page main#main#main .ct-block-label span {flex:1;border-top:1px solid #7eaeb8;}
+html body.cortiva-page main#main#main .ct-scroll {border-radius:calc(22 * var(--u));}
+html body.cortiva-page main#main#main .ct-scroll:focus-visible {outline:3px solid #168d9a;outline-offset:3px;}
+html body.cortiva-page main#main#main .ct-panel {position:relative;overflow:hidden;background:#ffffffeb;border-radius:calc(22 * var(--u));box-shadow:0 3px 13px #2797b320;width:calc(1059 * var(--u));}
+html body.cortiva-page main#main#main .ct-panel h2 {position:absolute;top:calc(11 * var(--u));left:calc(41 * var(--u));font-size:calc(32 * var(--u))!important;font-weight:700!important;line-height:1.2!important;text-transform:uppercase!important;color:#0d1750!important;letter-spacing:-.015em!important;}
+html body.cortiva-page main#main#main .ct-epidermal-panel {height:calc(424 * var(--u));}
+html body.cortiva-page main#main#main .ct-stressors {position:absolute;top:calc(52 * var(--u));left:calc(151 * var(--u));right:calc(110 * var(--u));display:flex;justify-content:space-between;}
+html body.cortiva-page main#main#main .ct-stressors li {display:flex;flex-direction:column;align-items:center;width:calc(106 * var(--u));color:#111949;font-size:calc(17 * var(--u));font-weight:700;line-height:1.2;}
+html body.cortiva-page main#main#main .ct-stressors img {width:calc(90 * var(--u));height:calc(86 * var(--u));object-fit:contain;mix-blend-mode:multiply;}
+html body.cortiva-page main#main#main .ct-stressor-join {position:absolute;top:calc(160 * var(--u));left:calc(204 * var(--u));right:calc(170 * var(--u));height:calc(14 * var(--u));border:solid #172047;border-width:0 1px 1px;border-radius:0 0 6px 6px;}
+html body.cortiva-page main#main#main .ct-stressor-join i {position:absolute;top:0;left:48%;font-size:calc(42 * var(--u));}
+html body.cortiva-page main#main#main .ct-epidermis {position:absolute;left:calc(18 * var(--u));right:calc(23 * var(--u));bottom:calc(16 * var(--u));height:calc(215 * var(--u));border-radius:calc(12 * var(--u));background:#f2f3f4;overflow:hidden;}
+html body.cortiva-page main#main#main .ct-epidermis h3 {position:absolute;z-index:1;top:calc(15 * var(--u));left:calc(13 * var(--u));font-size:calc(25 * var(--u))!important;line-height:1.15!important;color:#0d1750!important;text-transform:uppercase!important;}
+html body.cortiva-page main#main#main .ct-panel h3 small {display:block;font-size:.72em;text-transform:none;}
+html body.cortiva-page main#main#main .ct-skin-texture {position:absolute;inset:0 0 0 calc(164 * var(--u));background:#ffdce0 url('../images/bio-responsive-cortiva/epidermis-texture.png') center/auto 100%;}
+html body.cortiva-page main#main#main .ct-node {display:flex;align-items:center;justify-content:center;gap:calc(9 * var(--u));height:calc(38 * var(--u));border:1px solid #a3bbc1;border-radius:calc(7 * var(--u));background:#e5f1f2db;color:#12254b;font-size:calc(19 * var(--u));line-height:1.1;white-space:nowrap;}
+html body.cortiva-page main#main#main .ct-node i {font-size:calc(26 * var(--u));color:#07174b;font-weight:bold;}
+html body.cortiva-page main#main#main .ct-pomc {position:absolute;top:calc(8 * var(--u));left:calc(446 * var(--u));width:calc(155 * var(--u));}
+html body.cortiva-page main#main#main .ct-pomc-arrow {position:absolute;left:calc(514 * var(--u));top:calc(48 * var(--u));font-size:calc(27 * var(--u));color:#182647;}
+html body.cortiva-page main#main#main .ct-leaf {position:absolute;top:calc(49 * var(--u));left:calc(194 * var(--u));display:flex;flex-direction:column;align-items:center;color:#035139;font-size:calc(27 * var(--u));line-height:1.1;}
+html body.cortiva-page main#main#main .ct-leaf img {width:calc(81 * var(--u));height:calc(76 * var(--u));object-fit:contain;mix-blend-mode:multiply;}
+html body.cortiva-page main#main#main .ct-inhibit {position:absolute;top:calc(68 * var(--u));left:calc(297 * var(--u));width:calc(151 * var(--u));text-align:center;color:#fff;font-size:calc(15 * var(--u));text-transform:uppercase;}
+html body.cortiva-page main#main#main .ct-inhibit span {display:inline-block;padding:calc(4 * var(--u)) calc(12 * var(--u));border-radius:calc(8 * var(--u));background:#ef2638;}
+html body.cortiva-page main#main#main .ct-inhibit div {height:calc(7 * var(--u));margin-top:calc(8 * var(--u));background:#f42d3f;position:relative;}
+html body.cortiva-page main#main#main .ct-inhibit div::after {content:"";position:absolute;right:0;top:calc(-17 * var(--u));height:calc(42 * var(--u));border-right:calc(7 * var(--u)) solid #f42d3f;}
+html body.cortiva-page main#main#main .ct-ach {position:absolute;top:calc(77 * var(--u));left:calc(461 * var(--u));width:calc(262 * var(--u));height:calc(63 * var(--u));border-color:#f06e73;background:#ffe8e4de;color:#1b1720;font-size:calc(21 * var(--u));font-weight:700;}
+html body.cortiva-page main#main#main .ct-ach i {color:#ec263f;}
+html body.cortiva-page main#main#main .ct-leaf-caption {position:absolute;bottom:calc(5 * var(--u));left:calc(181 * var(--u));width:calc(218 * var(--u));padding:calc(8 * var(--u))!important;border:1px solid #618e84;border-radius:calc(8 * var(--u));background:#ffffffc9;font-size:calc(17 * var(--u))!important;line-height:1.1!important;text-align:center;color:#192832;}
+html body.cortiva-page main#main#main .ct-between {position:relative;height:calc(10 * var(--u));margin-left:49%;border-left:2px solid #165877;}
+html body.cortiva-page main#main#main .ct-between::after {content:"";position:absolute;left:-6px;bottom:0;width:10px;height:10px;border-radius:50%;background:#086879;}
+html body.cortiva-page main#main#main .ct-block-label--second {height:calc(33 * var(--u));}
+html body.cortiva-page main#main#main .ct-dermal-panel {height:calc(470 * var(--u));}
+html body.cortiva-page main#main#main .ct-dermal-panel h2 {font-size:calc(30 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-dermis-label {position:absolute;left:calc(28 * var(--u));top:calc(60 * var(--u));}
+html body.cortiva-page main#main#main .ct-dermis-label h3 {margin-left:calc(15 * var(--u))!important;color:#0d1750!important;text-transform:uppercase!important;font-size:calc(25 * var(--u))!important;line-height:1.15!important;}
+html body.cortiva-page main#main#main .ct-dermis-label img {margin-top:calc(12 * var(--u));width:calc(147 * var(--u));height:calc(77 * var(--u));object-fit:contain;mix-blend-mode:multiply;}
+html body.cortiva-page main#main#main .ct-cortisol {position:absolute;top:calc(52 * var(--u));left:calc(465 * var(--u));width:calc(154 * var(--u));}
+html body.cortiva-page main#main#main .ct-cortisol-arrow {position:absolute;left:calc(531 * var(--u));top:calc(88 * var(--u));font-size:calc(21 * var(--u));color:#295d78;}
+html body.cortiva-page main#main#main .ct-receptor {position:absolute;top:calc(102 * var(--u));left:calc(401 * var(--u));width:calc(316 * var(--u));}
+html body.cortiva-page main#main#main .ct-branch-join {position:absolute;top:calc(145 * var(--u));left:calc(301 * var(--u));width:calc(521 * var(--u));border-top:1px solid #172047;}
+html body.cortiva-page main#main#main .ct-branch-join::before {content:"";position:absolute;bottom:0;left:47%;height:calc(7 * var(--u));border-left:1px solid #172047;}
+html body.cortiva-page main#main#main .ct-branches {position:absolute;top:calc(145 * var(--u));left:calc(183 * var(--u));right:calc(112 * var(--u));display:grid;grid-template-columns:repeat(3,1fr);gap:calc(50 * var(--u));}
+html body.cortiva-page main#main#main .ct-branch {display:flex;flex-direction:column;align-items:center;}
+html body.cortiva-page main#main#main .ct-branch .ct-node {width:100%;}
+html body.cortiva-page main#main#main .ct-branch .ct-node:first-of-type {width:80%;}
+html body.cortiva-page main#main#main .ct-branch-arrow {font-size:calc(18 * var(--u));height:calc(18 * var(--u));}
+html body.cortiva-page main#main#main .ct-outcome-join {position:absolute;top:calc(258 * var(--u));left:calc(293 * var(--u));right:calc(234 * var(--u));height:calc(11 * var(--u));border:solid #172047;border-width:0 1px 1px;}
+html body.cortiva-page main#main#main .ct-outcome-join::before {content:"";position:absolute;left:48%;height:100%;border-left:1px solid #172047;}
+html body.cortiva-page main#main#main .ct-outcomes {position:absolute;top:calc(288 * var(--u));left:calc(229 * var(--u));right:calc(152 * var(--u));display:flex;justify-content:space-between;gap:calc(65 * var(--u));}
+html body.cortiva-page main#main#main .ct-outcome {position:relative;display:flex;align-items:center;justify-content:center;gap:calc(14 * var(--u));flex:1;height:calc(60 * var(--u));border:1px solid #e5a84d;border-radius:calc(8 * var(--u));background:#ffedcf;}
+html body.cortiva-page main#main#main .ct-outcome img {width:calc(45 * var(--u));height:calc(43 * var(--u));mix-blend-mode:multiply;}
+html body.cortiva-page main#main#main .ct-outcome p {font-size:calc(18 * var(--u))!important;line-height:1.1!important;color:#172440;white-space:nowrap;}
+html body.cortiva-page main#main#main .ct-outcome > i {font-size:calc(25 * var(--u));}
+html body.cortiva-page main#main#main .ct-outcome .ph-sparkle {color:#ebbe44;font-size:calc(20 * var(--u));}
+html body.cortiva-page main#main#main .ct-outcome .ct-outcome-arrow {position:absolute;bottom:100%;left:calc(50% - 12 * var(--u));font-size:calc(24 * var(--u));}
+html body.cortiva-page main#main#main .ct-visible-benefits {position:absolute;left:calc(14 * var(--u));right:calc(14 * var(--u));bottom:calc(12 * var(--u));height:calc(100 * var(--u));padding:calc(7 * var(--u)) calc(19 * var(--u));border-radius:calc(15 * var(--u));background:#064f45 url('../images/bio-responsive-cortiva/sidebar-texture.png') center/cover;color:white;}
+html body.cortiva-page main#main#main .ct-visible-benefits h3 {font-size:calc(24 * var(--u))!important;line-height:1.3!important;font-weight:700!important;text-transform:uppercase!important;color:white!important;text-align:center;}
+html body.cortiva-page main#main#main .ct-visible-benefits ul {display:grid;grid-template-columns:repeat(4,1fr);gap:calc(16 * var(--u));margin-top:calc(7 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-visible-benefits li {display:flex;align-items:flex-start;gap:calc(9 * var(--u));color:white;font-size:calc(17 * var(--u));line-height:1.3;}
+html body.cortiva-page main#main#main .ct-visible-benefits li + li {border-left:1px solid #27777b;padding-left:calc(14 * var(--u));}
+html body.cortiva-page main#main#main .ct-visible-benefits i {font-size:calc(27 * var(--u));}
+html body.cortiva-page main#main#main .ct-return {padding:28px var(--cortiva-gutter-right) 28px var(--cortiva-gutter-left);border-top:1px solid #cbe2e9;background:#eef8fb;}
+html body.cortiva-page main#main#main .ct-return a {display:inline-flex;align-items:center;gap:12px;font-size:16px;font-weight:700;color:#176373;}
+html body.cortiva-page main#main#main .ct-return a:hover {text-decoration:underline;text-underline-offset:4px;}
+/* Keep the reference's three subtitle lines in the site's wider DM Sans face. */
+html body.cortiva-page main#main#main .ct-sidebar {padding-right:calc(20 * var(--u));background-position:center bottom;background-size:100% auto;background-repeat:no-repeat;}
+html body.cortiva-page main#main#main .ct-sidebar .ct-subtitle {font-size:calc(27 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-leaf-caption {font-size:calc(15.5 * var(--u))!important;}
+html body.cortiva-page main#main#main .ct-visible-benefits {background:#085147;}
+html body.cortiva-page main#main#main .ct-stressors li {font-size:calc(17 * var(--u))!important;line-height:1.2!important;font-weight:700!important;}
+html body.cortiva-page main#main#main .ct-visible-benefits li {font-size:calc(17 * var(--u))!important;line-height:1.3!important;}
+html body.cortiva-page main#main#main .ct-mobile-hint {display:none;}
+html body.cortiva-page main#main#main :is(.ct-sidebar,.cortiva-benefits-rail) {isolation:isolate;background-image:none;}
+html body.cortiva-page main#main#main :is(.ct-sidebar,.cortiva-benefits-rail)::before {content:"";position:absolute;z-index:-1;inset:auto 0 0;width:100%;aspect-ratio:431/171;background:url('../images/bio-responsive-cortiva/sidebar-texture.png') center/100% 100% no-repeat;mask-image:linear-gradient(transparent,#000 40%);pointer-events:none;}
+@container cortiva-frame (max-width:1100px) {
+ html body.cortiva-page main#main#main .cortiva-mechanism .cortiva-board {--u:1px;width:100%;min-height:0;margin-inline:0!important;padding:24px 0;}
+ html body.cortiva-page main#main#main .ct-sidebar {position:relative;inset:auto;width:100%;height:auto;min-height:0;padding:32px;}
+ html body.cortiva-page main#main#main #cortiva-title {--arotec-display-size:48px;margin-top:28px!important;font-size:48px!important;}
+ html body.cortiva-page main#main#main .ct-sidebar h2 br,html body.cortiva-page main#main#main .ct-subtitle br {display:none;}
+ html body.cortiva-page main#main#main .ct-sidebar .ct-subtitle {font-size:25px!important;line-height:1.2!important;}
+ html body.cortiva-page main#main#main .ct-sidebar .ct-description {max-width:660px;font-size:18px!important;line-height:1.55!important;}
+ html body.cortiva-page main#main#main .ct-pathway ol {display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+ html body.cortiva-page main#main#main .ct-science {position:static;display:inline-block;width:auto;margin-top:22px;}
+ html body.cortiva-page main#main#main .ct-content {position:static;width:100%;margin-top:24px;}
+ html body.cortiva-page main#main#main .ct-block-label {font-size:13px;white-space:normal;letter-spacing:.15em;min-height:48px;height:auto;padding:10px 0;}
+ html body.cortiva-page main#main#main .ct-scroll {overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;}
+ html body.cortiva-page main#main#main .ct-panel {--u:calc(100cqw / 1059);}
+ html body.cortiva-page main#main#main .ct-between {height:18px;}
+}
+@container cortiva-frame (max-width:760px) {
+ html body.cortiva-page main#main#main .ct-mobile-hint {display:flex;align-items:center;gap:8px;color:#246f7a;font-size:13px!important;line-height:1.5!important;margin-bottom:8px!important;}
+ html body.cortiva-page main#main#main .cortiva-mechanism .cortiva-board {padding:16px 0;}
+ html body.cortiva-page main#main#main .ct-sidebar {padding:28px 24px;border-radius:24px;}
+ html body.cortiva-page main#main#main #cortiva-title {--arotec-display-size:clamp(32px,9vw,48px);font-size:clamp(32px,9vw,48px)!important;}
+ html body.cortiva-page main#main#main .ct-sidebar h2 {font-size:30px!important;line-height:1.08!important;}
+ html body.cortiva-page main#main#main .ct-sidebar .ct-subtitle {font-size:23px!important;}
+ html body.cortiva-page main#main#main .ct-kicker {font-size:15px!important;}
+ html body.cortiva-page main#main#main .ct-pathway ol {grid-template-columns:1fr;gap:12px;}
+ html body.cortiva-page main#main#main .ct-pathway li {min-height:88px;}
+ html body.cortiva-page main#main#main .ct-science {padding:18px;width:100%;}
+ html body.cortiva-page main#main#main .ct-science strong {font-size:24px;gap:8px;}
+ html body.cortiva-page main#main#main .ct-panel {--u:.76px;}
+ html body.cortiva-page main#main#main .ct-scroll {border:1px solid #c8e1eb;}
+ html body.cortiva-page main#main#main .ct-block-label {font-size:12px;line-height:1.6;}
+}
+@media(max-width:700px) {
+ html body.cortiva-page main#main#main.cortiva-main {--cortiva-gutter-left:20px;--cortiva-gutter-right:20px;}
+}

@@ -1,0 +1,443 @@
+/* Bio-Responsive Scents: source-aligned content, artwork and responsive layout. */
+html body.brs-page {
+ --brs-ink:#123c59;
+ --brs-muted:#425e70;
+ --brs-teal:#276c70;
+ --brs-line:#d1e1e7;
+ --brs-paper:#f7fbfd;
+ --brs-tint:#edf7fb;
+ --brs-green:#064a33;
+ --brs-title-size:clamp(36px,4.3vw,60px);
+ background:var(--brs-paper);
+}
+html body.brs-page main#main#main.brs-main {
+ display:block!important;
+ width:100%!important;
+ max-width:none!important;
+ height:auto!important;
+ min-height:0!important;
+ margin:0!important;
+ padding:0!important;
+ overflow:visible!important;
+ color:var(--brs-ink);
+ font-family:var(--site-font,"DM Sans",sans-serif)!important;
+}
+html body.brs-page main#main#main *,
+html body.brs-page main#main#main *::before,
+html body.brs-page main#main#main *::after {box-sizing:border-box;}
+html body.brs-page main#main#main :is(section,article,figure,div) {min-width:0;}
+html body.brs-page main#main#main :is(h1,h2,h3,h4,p,figure,ul,ol) {margin:0;}
+html body.brs-page main#main#main :is(h1,h2,h3,h4) {
+ color:var(--brs-ink)!important;
+ font-family:var(--site-font,"DM Sans",sans-serif)!important;
+ font-style:normal!important;
+ letter-spacing:-.035em!important;
+ text-wrap:pretty;
+ word-break:normal!important;
+ overflow-wrap:normal!important;
+}
+html body.brs-page main#main#main h1#brs-title {
+ font-size:var(--brs-title-size)!important;
+ font-weight:900!important;
+ line-height:1.06!important;
+ text-transform:uppercase!important;
+ max-width:100%!important;
+ margin:0 0 26px!important;
+}
+html body.brs-page main#main#main h2 {
+ font-size:clamp(29px,3.25vw,46px)!important;
+ font-weight:700!important;
+ line-height:1.14!important;
+ text-transform:none!important;
+ margin:0 0 22px!important;
+}
+html body.brs-page main#main#main h3 {font-size:24px!important;font-weight:700!important;line-height:1.25!important;text-transform:none!important;}
+html body.brs-page main#main#main h4 {font-size:18px!important;font-weight:700!important;line-height:1.35!important;text-transform:none!important;}
+html body.brs-page main#main#main p {font-size:17px!important;line-height:1.7!important;color:var(--brs-muted);font-weight:400!important;letter-spacing:0!important;}
+html body.brs-page main#main#main sup {font-size:.34em;vertical-align:super;line-height:0;letter-spacing:0;}
+html body.brs-page main#main#main sub {font-size:.75em;line-height:0;}
+html body.brs-page main#main#main a {color:var(--brs-teal);text-decoration:none;}
+html body.brs-page main#main#main a:focus-visible {outline:3px solid #29869b;outline-offset:5px;border-radius:4px;}
+html body.brs-page main#main#main .brs-v3-shell {width:calc(100% - 96px);max-width:1280px;margin:0 auto;padding:0;}
+html body.brs-page main#main#main .brs-v3-section {
+ display:block;position:relative;height:auto!important;min-height:0!important;
+ padding:84px 0!important;overflow:visible;scroll-margin-top:132px;
+ background:var(--brs-paper);content-visibility:visible!important;
+}
+html body.brs-page main#main#main .brs-v3-tint,
+html body.brs-page main#main#main .brs-v3-product:nth-of-type(odd),
+html body.brs-page main#main#main .brs-v3-introduction {background:var(--brs-tint);}
+html body.brs-page main#main#main .brs-v3-introduction {padding-top:28px!important;padding-bottom:0!important;}
+html body.brs-page main#main#main .brs-v3-breadcrumb {display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;line-height:1.5;margin-bottom:40px;}
+html body.brs-page main#main#main .brs-v3-hero-grid {display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:80px;align-items:center;padding-bottom:58px;}
+html body.brs-page main#main#main .brs-v3-hero-copy {max-width:660px;}
+html body.brs-page main#main#main .brs-v3-kicker {font-size:12px!important;line-height:1.6!important;font-weight:700!important;letter-spacing:.13em!important;text-transform:uppercase;color:var(--brs-teal);margin-bottom:20px;}
+html body.brs-page main#main#main .brs-v3-lead {font-size:22px!important;line-height:1.45!important;font-weight:700!important;color:var(--brs-teal);margin-bottom:26px;}
+html body.brs-page main#main#main .brs-v3-manifesto {font-weight:700!important;color:var(--brs-teal);margin-top:24px;}
+html body.brs-page main#main#main .brs-v3-hero-figure {max-width:380px;justify-self:end;}
+html body.brs-page main#main#main figcaption {font-size:12px;line-height:1.5;color:var(--brs-muted);margin-top:12px;}
+html body.brs-page main#main#main .brs-v3-section-nav {display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 24px;border-top:1px solid var(--brs-line);padding:24px 0;font-size:13px;font-weight:700;}
+html body.brs-page main#main#main .brs-v3-section-nav a {padding:5px 0;}
+html body.brs-page main#main#main .brs-v3-section-nav a:hover {text-decoration:underline;text-underline-offset:5px;}
+html body.brs-page main#main#main .brs-v3-section-head {max-width:920px;margin-bottom:48px;}
+html body.brs-page main#main#main .brs-v3-routes {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px;}
+html body.brs-page main#main#main .brs-v3-route {text-align:center;}
+html body.brs-page main#main#main .brs-v3-route h3 {font-size:20px!important;margin-bottom:14px;text-transform:uppercase!important;letter-spacing:.07em!important;}
+html body.brs-page main#main#main .brs-v3-number {color:var(--brs-teal);font-size:14px!important;font-weight:500!important;}
+html body.brs-page main#main#main .brs-v3-route-figure {width:100%;max-width:276px;margin:12px auto 24px;}
+html body.brs-page main#main#main .brs-v3-key-paths {font-size:14px!important;line-height:1.7!important;margin-top:22px;}
+html body.brs-page main#main#main .brs-v3-key-paths strong {color:var(--brs-teal);}
+html body.brs-page main#main#main .brs-v3-framework {margin-top:58px;border-top:1px solid var(--brs-line);padding-top:32px;}
+html body.brs-page main#main#main .brs-v3-framework ol {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:42px;list-style:none;padding:32px 0;}
+html body.brs-page main#main#main .brs-v3-framework li {position:relative;text-align:center;padding:0 18px;}
+html body.brs-page main#main#main .brs-v3-framework-icon {width:66px;margin:0 auto 18px;}
+html body.brs-page main#main#main .brs-v3-framework h4 {font-size:15px!important;text-transform:uppercase!important;letter-spacing:.07em!important;margin-bottom:10px;}
+html body.brs-page main#main#main .brs-v3-framework p {font-size:14px!important;line-height:1.6!important;}
+html body.brs-page main#main#main .brs-v3-flow-arrow {position:absolute;right:-34px;top:24px;font-size:25px;color:var(--brs-teal);}
+html body.brs-page main#main#main .brs-v3-evidence {font-weight:700!important;text-align:right;color:var(--brs-teal);}
+html body.brs-page main#main#main .brs-v3-approach-grid {display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:center;}
+html body.brs-page main#main#main .brs-v3-approach-figure {max-width:410px;}
+html body.brs-page main#main#main .brs-v3-comparison {margin-top:56px;padding:32px;background:#fff;border:1px solid var(--brs-line);border-radius:18px;}
+html body.brs-page main#main#main .brs-v3-comparison>h3 {text-align:center;margin-bottom:30px;}
+html body.brs-page main#main#main .brs-v3-question-heads,
+html body.brs-page main#main#main .brs-v3-question-row {display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);gap:20px;align-items:center;}
+html body.brs-page main#main#main .brs-v3-question-heads {padding-bottom:20px;}
+html body.brs-page main#main#main .brs-v3-question-heads h4 {font-size:16px!important;text-transform:uppercase!important;letter-spacing:.06em!important;text-align:center;}
+html body.brs-page main#main#main .brs-v3-question-row {border-top:1px solid var(--brs-line);padding:18px 0;}
+html body.brs-page main#main#main .brs-v3-question-row>div {display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;align-items:center;}
+html body.brs-page main#main#main .brs-v3-question-row>i {font-size:24px;justify-self:center;color:var(--brs-teal);}
+html body.brs-page main#main#main .brs-v3-question-icon {width:64px;}
+html body.brs-page main#main#main .brs-v3-mobile-label {display:none;}
+html body.brs-page main#main#main .brs-v3-pillars {margin-top:46px;}
+html body.brs-page main#main#main .brs-v3-pillars>h3 {text-align:center;margin-bottom:30px;}
+html body.brs-page main#main#main .brs-v3-pillar-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;}
+html body.brs-page main#main#main .brs-v3-pillar-grid article {padding:0 18px;text-align:center;border-right:1px solid var(--brs-line);}
+html body.brs-page main#main#main .brs-v3-pillar-grid article:last-child {border:0;}
+html body.brs-page main#main#main .brs-v3-pillar-art {position:relative;max-width:152px;margin:0 auto 20px;}
+html body.brs-page main#main#main .brs-v3-pillar-art>.brs-v3-number {position:absolute;left:-14px;top:0;}
+html body.brs-page main#main#main .brs-v3-pillar-grid h4 {margin-bottom:10px;}
+html body.brs-page main#main#main .brs-v3-pillar-grid p {font-size:15px!important;line-height:1.6!important;}
+html body.brs-page main#main#main .brs-v3-portfolio {display:grid;grid-template-columns:1.1fr repeat(3,minmax(0,1fr));gap:18px;}
+html body.brs-page main#main#main .brs-v3-card {display:grid;grid-template-columns:minmax(0,1fr) 82px;overflow:hidden;border:1px solid #d9e5dc;border-radius:14px;background:#fff;min-height:236px;}
+html body.brs-page main#main#main .brs-v3-card-copy {display:flex;flex-direction:column;align-items:flex-start;padding:24px 0 24px 20px;}
+html body.brs-page main#main#main .brs-v3-card h3 {font-size:clamp(21px,1.9vw,28px)!important;color:#173d2b!important;letter-spacing:-.04em!important;position:relative;}
+html body.brs-page main#main#main .brs-v3-card-category {font-size:14px!important;line-height:1.5!important;margin:8px 0 15px;color:#254d3d;}
+html body.brs-page main#main#main .brs-v3-card-slogan {font-size:10px!important;line-height:1.8!important;text-transform:uppercase;letter-spacing:.1em!important;font-weight:700!important;margin-bottom:22px;max-width:140px;}
+html body.brs-page main#main#main .brs-v3-card a {display:inline-flex;align-items:center;gap:8px;margin-top:auto;font-size:10px;line-height:1.5;font-weight:700;color:#173d2b;padding:8px 0;}
+html body.brs-page main#main#main .brs-v3-card a:hover {text-decoration:underline;text-underline-offset:4px;}
+html body.brs-page main#main#main .brs-v3-card-art {align-self:end;width:100%;border-radius:0;}
+html body.brs-page main#main#main .brs-v3-featured {grid-row:span 2;grid-template-columns:1fr;background:#ecf3e8;}
+html body.brs-page main#main#main .brs-v3-featured .brs-v3-card-copy {padding:28px;}
+html body.brs-page main#main#main .brs-v3-featured h3 {font-size:34px!important;}
+html body.brs-page main#main#main .brs-v3-featured .brs-v3-card-art {width:100%;max-width:245px;justify-self:end;}
+html body.brs-page main#main#main .brs-v3-product-grid {display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:52px;align-items:start;}
+html body.brs-page main#main#main .brs-v3-product-copy {padding-top:18px;}
+html body.brs-page main#main#main .brs-v3-product-copy h2 {font-size:clamp(32px,3.6vw,49px)!important;}
+html body.brs-page main#main#main .brs-v3-benefit {font-size:25px!important;font-weight:700!important;line-height:1.4!important;color:var(--brs-ink);margin-bottom:14px;}
+html body.brs-page main#main#main .brs-v3-sublead {font-size:21px!important;line-height:1.4!important;color:var(--brs-teal);margin-bottom:22px;}
+html body.brs-page main#main#main .brs-v3-benefit+p:not(.brs-v3-sublead) {margin-top:22px;}
+html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-grid {grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);}
+html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-copy {order:2;}
+html body.brs-page main#main#main .brs-v3-reverse .brs-v3-panel {order:1;}
+html body.brs-page main#main#main .brs-v3-profile {border-top:1px solid var(--brs-line);margin-top:30px;padding-top:28px;}
+html body.brs-page main#main#main .brs-v3-profile>.brs-v3-kicker {margin-bottom:10px;}
+html body.brs-page main#main#main .brs-v3-supports {display:grid;gap:16px;list-style:none;padding:24px 0 0;}
+html body.brs-page main#main#main .brs-v3-supports li {display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start;font-size:16px;line-height:1.6;color:var(--brs-muted);}
+html body.brs-page main#main#main .brs-v3-check {width:24px;margin-top:2px;border-radius:0;}
+html body.brs-page main#main#main .brs-v3-supports li div>span {display:block;font-size:14px;line-height:1.6;margin-top:4px;}
+html body.brs-page main#main#main .brs-v3-support-figure {margin-top:28px;background:#fff;padding:12px;border:1px solid var(--brs-line);border-radius:12px;}
+html body.brs-page main#main#main .brs-v3-panel {background:#fff;border:1px solid var(--brs-line);border-radius:20px;padding:28px;}
+html body.brs-page main#main#main .brs-v3-panel>.brs-v3-kicker {margin-bottom:10px;}
+html body.brs-page main#main#main .brs-v3-panel>h3 {font-size:22px!important;}
+html body.brs-page main#main#main .brs-v3-panel-intro {font-size:13px!important;line-height:1.6!important;margin-top:12px;}
+html body.brs-page main#main#main .brs-v3-ingredients {list-style:none;padding:0;margin-top:24px;}
+html body.brs-page main#main#main .brs-v3-ingredients>li {display:grid;grid-template-columns:70px minmax(0,1fr) 154px;gap:16px;align-items:center;padding:24px 0;border-top:1px solid var(--brs-line);}
+html body.brs-page main#main#main .brs-v3-ingredient-photo {width:70px;border-radius:8px;}
+html body.brs-page main#main#main .brs-v3-ingredient-copy h4 {font-size:17px!important;line-height:1.4!important;letter-spacing:-.02em!important;}
+html body.brs-page main#main#main .brs-v3-aroma {font-size:13px!important;line-height:1.6!important;color:var(--brs-teal);margin-top:8px;}
+html body.brs-page main#main#main .brs-v3-ingredient-note {font-size:12px!important;line-height:1.6!important;margin-top:8px;}
+html body.brs-page main#main#main .brs-v3-formula {font-size:16px!important;line-height:1.4!important;margin-top:10px;color:var(--brs-ink);}
+html body.brs-page main#main#main .brs-v3-chemistry {width:100%;max-width:240px;align-self:center;}
+html body.brs-page main#main#main .brs-v3-chemistry .brs-crop {border-radius:0;background:#fff;}
+html body.brs-page main#main#main .brs-v3-actions {display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-top:30px;}
+html body.brs-page main#main#main a.brs-v3-button {
+ display:inline-flex;align-items:center;justify-content:center;gap:14px;max-width:100%;
+ min-height:46px;border:1px solid #351575;border-radius:999px;
+ padding:13px 24px;background:#351575;color:#fff!important;
+ font-size:13px!important;line-height:1.4!important;font-weight:700!important;
+ letter-spacing:.02em;white-space:normal;transition:background .2s,color .2s,transform .2s;
+}
+html body.brs-page main#main#main a.brs-v3-button:hover {background:#fff;color:#351575!important;transform:translateY(-2px);}
+html body.brs-page main#main#main .brs-v3-button i {font-size:18px;flex:none;color:inherit;}
+html body.brs-page main#main#main .brs-v3-back {display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:500;}
+html body.brs-page main#main#main .brs-v3-source {display:inline-flex;align-items:center;gap:10px;font-size:12px;line-height:1.6;}
+html body.brs-page main#main#main .brs-v3-source:hover {text-decoration:underline;text-underline-offset:3px;}
+html body.brs-page main#main#main .brs-v3-panel>.brs-v3-source {border-top:1px solid var(--brs-line);padding-top:20px;width:100%;}
+html body.brs-page main#main#main .brs-v3-source-row {margin-top:30px;text-align:right;}
+html body.brs-page main#main#main .brs-v3-footnote {font-size:11px!important;line-height:1.7!important;margin-top:22px;max-width:700px;color:#597080;}
+html body.brs-page main#main#main .brs-v3-contact {background:#e5f0ee;text-align:center;}
+html body.brs-page main#main#main .brs-v3-contact .brs-v3-button {margin-top:28px;}
+html body.brs-page main#main#main .brs-v3-contact .brs-v3-footnote {margin:28px auto 0;}
+html body.brs-page main#main#main .brs-crop {position:relative;display:block;width:100%;min-width:0;aspect-ratio:var(--crop-ratio);overflow:hidden;border-radius:12px;background:#f5f8fa;isolation:isolate;}
+html body.brs-page main#main#main .brs-crop>img {
+ position:absolute!important;display:block!important;width:var(--crop-width)!important;
+ max-width:none!important;height:auto!important;max-height:none!important;
+ left:var(--crop-left)!important;top:var(--crop-top)!important;
+ margin:0!important;padding:0!important;object-fit:initial!important;transform:none!important;
+ opacity:1!important;filter:none!important;border-radius:0!important;
+}
+html body.brs-page main#main#main :is(.brs-v3-route-figure,.brs-v3-framework,.brs-v3-question-row,.brs-v3-pillar-art) .brs-crop {border-radius:0;}
+html body.brs-page main#main#main .brs-v3-card-art {border-radius:0;}
+html body.brs-page main#main#main .brs-v3-check {width:24px;border-radius:0;}
+html body.brs-page main#main#main .brs-v3-framework-icon {width:66px;}
+html body.brs-page main#main#main .brs-v3-question-icon {width:64px;}
+html body.brs-page main#main#main .brs-v3-ingredient-photo {width:70px;}
+html body.brs-page main#main#main .brs-v3-sr {position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+@media (max-width:1150px) {
+ html body.brs-page main#main#main .brs-v3-shell {width:calc(100% - 64px);}
+ html body.brs-page main#main#main .brs-v3-hero-grid {gap:44px;}
+ html body.brs-page main#main#main .brs-v3-portfolio {grid-template-columns:repeat(3,minmax(0,1fr));}
+ html body.brs-page main#main#main .brs-v3-featured {grid-column:1 / -1;grid-row:auto;grid-template-columns:minmax(0,1fr) 190px;min-height:0;}
+ html body.brs-page main#main#main .brs-v3-featured .brs-v3-card-art {max-width:145px;}
+ html body.brs-page main#main#main .brs-v3-product-grid,
+ html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-grid {gap:30px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);}
+ html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-grid {grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);}
+ html body.brs-page main#main#main .brs-v3-panel {padding:22px;}
+ html body.brs-page main#main#main .brs-v3-ingredients>li {grid-template-columns:64px minmax(0,1fr);gap:12px 16px;}
+ html body.brs-page main#main#main .brs-v3-ingredient-photo {width:64px;}
+ html body.brs-page main#main#main .brs-v3-chemistry {grid-column:2;max-width:230px;}
+ html body.brs-page main#main#main .brs-v3-approach-grid {gap:40px;}
+ html body.brs-page main#main#main .brs-v3-routes {gap:30px;}
+}
+@media (max-width:850px) {
+ html body.brs-page main#main#main .brs-v3-shell {width:calc(100% - 48px);}
+ html body.brs-page main#main#main .brs-v3-section {padding:60px 0!important;scroll-margin-top:96px;}
+ html body.brs-page main#main#main .brs-v3-introduction {padding-top:26px!important;padding-bottom:0!important;}
+ html body.brs-page main#main#main .brs-v3-hero-grid,
+ html body.brs-page main#main#main .brs-v3-approach-grid {grid-template-columns:1fr;gap:32px;}
+ html body.brs-page main#main#main .brs-v3-hero-figure {justify-self:center;max-width:360px;width:100%;}
+ html body.brs-page main#main#main .brs-v3-approach-figure {max-width:350px;width:100%;justify-self:center;order:2;}
+ html body.brs-page main#main#main .brs-v3-hero-copy {max-width:none;}
+ html body.brs-page main#main#main .brs-v3-portfolio {grid-template-columns:repeat(2,minmax(0,1fr));}
+ html body.brs-page main#main#main .brs-v3-product-grid,
+ html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-grid {grid-template-columns:1fr;gap:32px;}
+ html body.brs-page main#main#main .brs-v3-reverse .brs-v3-product-copy,
+ html body.brs-page main#main#main .brs-v3-reverse .brs-v3-panel {order:initial;}
+ html body.brs-page main#main#main .brs-v3-product-copy {padding:0;}
+ html body.brs-page main#main#main .brs-v3-ingredients>li {grid-template-columns:74px minmax(0,1fr) 190px;}
+ html body.brs-page main#main#main .brs-v3-ingredient-photo {width:74px;}
+ html body.brs-page main#main#main .brs-v3-chemistry {grid-column:auto;}
+ html body.brs-page main#main#main .brs-v3-routes {grid-template-columns:1fr;gap:38px;}
+ html body.brs-page main#main#main .brs-v3-route {max-width:420px;margin:auto;}
+ html body.brs-page main#main#main .brs-v3-framework ol {grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;}
+ html body.brs-page main#main#main .brs-v3-flow-arrow {display:none;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid article:nth-child(even) {border-right:0;}
+ html body.brs-page main#main#main .brs-v3-comparison {padding:24px;}
+ html body.brs-page main#main#main .brs-v3-question-heads,
+ html body.brs-page main#main#main .brs-v3-question-row {gap:12px;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);}
+ html body.brs-page main#main#main .brs-v3-question-row>div {grid-template-columns:44px minmax(0,1fr);gap:12px;}
+ html body.brs-page main#main#main .brs-v3-question-icon {width:44px;}
+}
+@media (max-width:620px) {
+ html body.brs-page {--brs-title-size:clamp(26px,7.5vw,42px);}
+ html body.brs-page main#main#main .brs-v3-shell {width:calc(100% - 40px);}
+ html body.brs-page main#main#main .brs-v3-section {padding:48px 0!important;}
+ html body.brs-page main#main#main .brs-v3-introduction {padding:24px 0 0!important;}
+ html body.brs-page main#main#main .brs-v3-breadcrumb {margin-bottom:28px;font-size:10px;}
+ html body.brs-page main#main#main .brs-v3-kicker {font-size:10px!important;margin-bottom:18px;}
+ html body.brs-page main#main#main h2 {font-size:28px!important;line-height:1.2!important;}
+ html body.brs-page main#main#main h3 {font-size:21px!important;}
+ html body.brs-page main#main#main p {font-size:15px!important;line-height:1.7!important;}
+ html body.brs-page main#main#main .brs-v3-lead {font-size:20px!important;}
+ html body.brs-page main#main#main .brs-v3-section-head {margin-bottom:32px;}
+ html body.brs-page main#main#main .brs-v3-section-nav {gap:12px 20px;justify-content:flex-start;font-size:12px;}
+ html body.brs-page main#main#main .brs-v3-hero-grid {padding-bottom:34px;}
+ html body.brs-page main#main#main .brs-v3-route-figure {max-width:260px;}
+ html body.brs-page main#main#main .brs-v3-framework li {padding:0;}
+ html body.brs-page main#main#main .brs-v3-framework p {font-size:13px!important;}
+ html body.brs-page main#main#main .brs-v3-evidence {text-align:left;}
+ html body.brs-page main#main#main .brs-v3-comparison {padding:20px;}
+ html body.brs-page main#main#main .brs-v3-question-heads {display:none;}
+ html body.brs-page main#main#main .brs-v3-question-row {grid-template-columns:1fr;gap:14px;padding:20px 0;}
+ html body.brs-page main#main#main .brs-v3-question-row>div {grid-template-columns:48px minmax(0,1fr);gap:12px;}
+ html body.brs-page main#main#main .brs-v3-question-icon {width:48px;}
+ html body.brs-page main#main#main .brs-v3-question-row>i {transform:rotate(90deg);justify-self:start;margin-left:14px;}
+ html body.brs-page main#main#main .brs-v3-mobile-label {display:block;font-size:10px;font-weight:700;color:var(--brs-teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid {gap:28px 12px;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid article {padding:0 6px;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid h4 {font-size:15px!important;}
+ html body.brs-page main#main#main .brs-v3-pillar-grid p {font-size:13px!important;}
+ html body.brs-page main#main#main .brs-v3-pillar-art {max-width:122px;}
+ html body.brs-page main#main#main .brs-v3-pillar-art>.brs-v3-number {left:-5px;top:-10px;font-size:11px!important;}
+ html body.brs-page main#main#main .brs-v3-portfolio {grid-template-columns:1fr;gap:16px;}
+ html body.brs-page main#main#main .brs-v3-card,
+ html body.brs-page main#main#main .brs-v3-featured {grid-column:auto;grid-template-columns:minmax(0,1fr) 104px;min-height:226px;}
+ html body.brs-page main#main#main .brs-v3-card-copy,
+ html body.brs-page main#main#main .brs-v3-featured .brs-v3-card-copy {padding:26px 8px 26px 22px;}
+ html body.brs-page main#main#main .brs-v3-card h3,
+ html body.brs-page main#main#main .brs-v3-featured h3 {font-size:28px!important;}
+ html body.brs-page main#main#main .brs-v3-card-category {font-size:14px!important;}
+ html body.brs-page main#main#main .brs-v3-card-slogan {font-size:10px!important;}
+ html body.brs-page main#main#main .brs-v3-card-art {align-self:center;}
+ html body.brs-page main#main#main .brs-v3-product-copy h2 {font-size:33px!important;}
+ html body.brs-page main#main#main .brs-v3-benefit {font-size:22px!important;}
+ html body.brs-page main#main#main .brs-v3-sublead {font-size:19px!important;}
+ html body.brs-page main#main#main .brs-v3-supports li {font-size:15px;gap:10px;}
+ html body.brs-page main#main#main .brs-v3-panel {padding:20px 18px;border-radius:16px;}
+ html body.brs-page main#main#main .brs-v3-panel>h3 {font-size:21px!important;}
+ html body.brs-page main#main#main .brs-v3-panel-intro {font-size:12px!important;}
+ html body.brs-page main#main#main .brs-v3-ingredients>li {grid-template-columns:62px minmax(0,1fr);gap:14px;padding:22px 0;}
+ html body.brs-page main#main#main .brs-v3-ingredient-photo {width:62px;align-self:start;}
+ html body.brs-page main#main#main .brs-v3-ingredient-copy h4 {font-size:16px!important;overflow-wrap:anywhere!important;}
+ html body.brs-page main#main#main .brs-v3-chemistry {grid-column:2;max-width:240px;}
+ html body.brs-page main#main#main .brs-v3-aroma {font-size:12px!important;}
+ html body.brs-page main#main#main .brs-v3-ingredient-note {font-size:12px!important;}
+ html body.brs-page main#main#main .brs-v3-formula {font-size:16px!important;}
+ html body.brs-page main#main#main .brs-v3-actions {gap:18px;margin-top:28px;}
+ html body.brs-page main#main#main .brs-v3-footnote {font-size:11px!important;}
+}
+@media (prefers-reduced-motion:reduce) {
+ html body.brs-page main#main#main * {animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+
+/* v4: shared CSS icons, enlarged reference images and non-overlapping layouts. */
+html body.brs-page{--brs-icon-size:56px;--brs-icon-glyph:24px;--brs-reference-green:#064b32;}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-shell{max-width:1440px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-icon{display:inline-grid;place-items:center;position:relative;flex:none;width:var(--brs-icon-size);height:var(--brs-icon-size);min-width:var(--brs-icon-size);aspect-ratio:1;border:1px solid #66a9e4;border-radius:50%;background:#f7fbff;color:#1480cb;line-height:1;vertical-align:middle;overflow:visible}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-icon>.ph{display:block;font-size:var(--brs-icon-glyph);line-height:1;color:inherit}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-check{width:24px;height:24px;min-width:24px;margin-top:2px;border:0;background:#064b32;color:white}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-check>.ph{font-size:17px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-framework-icon{display:grid;margin:0 auto 18px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-question-icon{display:grid;margin:0}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-question-row>div{grid-template-columns:var(--brs-icon-size) minmax(0,1fr)}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-pillar-art{width:var(--brs-icon-size);max-width:none;margin:14px auto 22px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-pillar-art>.brs-v3-number{top:-14px;left:-24px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-grid{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:48px;align-items:center}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-figure{width:100%;max-width:620px;justify-self:end}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-science-art{border-radius:0;background:transparent;clip-path:polygon(36% 0,100% 0,100% 100%,0 100%,0 35%,36% 26%)}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-science-art--research{clip-path:polygon(39% 0,100% 0,100% 100%,0 100%,0 35%,39% 34%)}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-molecule-figure{width:100%;max-width:594px;margin-top:28px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-molecule-figure>.brs-crop{border-radius:0}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-grid>div{order:1}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-figure{order:2;width:100%;max-width:570px;justify-self:end}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-route-figure{max-width:330px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-portfolio{grid-template-columns:1.1fr repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card{display:flex;flex-direction:column;min-height:0;background:#f9fcf7;overflow:hidden}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card .brs-v3-card-copy{flex:1;padding:26px 24px 22px;min-height:206px;position:static}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card h3{font-size:29px!important;line-height:1.2!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured h3{font-size:38px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card-category{font-size:16px!important;line-height:1.45!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card-slogan{max-width:none;font-size:10px!important;margin-bottom:16px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card a{border:1px solid #214834;border-radius:999px;padding:9px 14px;font-size:10px;line-height:1.4;gap:10px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card a:hover{background:#e4eee1;text-decoration:none}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card .brs-v3-card-art{width:100%;max-width:none;align-self:stretch;border-radius:0;flex:none}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured{grid-row:span 2;grid-column:auto;background:#e9f1e3}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product{background-color:#ecf6f8;background-image:linear-gradient(#84b6c414 1px,transparent 1px),linear-gradient(90deg,#84b6c414 1px,transparent 1px);background-size:48px 48px;padding:64px 0!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product .brs-v3-product-grid{display:grid;grid-template-columns:minmax(260px,.28fr) minmax(0,.72fr);grid-template-areas:"intro ingredients" "intro support";gap:28px;align-items:stretch}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy{grid-area:intro;order:initial;display:flex;flex-direction:column;gap:0;padding:34px 28px;border-radius:22px;background:linear-gradient(155deg,#06223c 12%,#053847 65%,#005345)}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy h2{font-size:clamp(28px,2.6vw,42px)!important;line-height:1.18!important;color:white!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>p{color:#dcecf0!important;font-size:16px!important;line-height:1.7!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-kicker{font-size:10px!important;color:#8bd1d2!important;letter-spacing:.13em!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-benefit{font-size:25px!important;font-weight:700!important;line-height:1.4!important;color:white!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-sublead{font-size:22px!important;line-height:1.4!important;color:#77dfdf!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-actions{margin-top:auto;padding-top:34px;gap:18px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy .brs-v3-button{background:#effafa;color:#053a46!important;border-color:#effafa}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy .brs-v3-button:hover{background:#90dfd9;color:#06223c!important;border-color:#90dfd9}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy .brs-v3-back{color:#c7e8e9}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps{margin:32px 0;padding:28px 0 0;border-top:1px solid #8ad4cf55}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps>.brs-v3-kicker{font-size:10px!important;color:#9adee0!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps ol{display:grid;gap:22px;list-style:none;padding:0}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;align-items:start;color:white}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps li>span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#7edbd5;color:#073243;font-size:17px;font-weight:700}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps strong{font-size:16px;line-height:1.5}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps p{font-size:13px!important;line-height:1.6!important;color:#c8e3e9;margin-top:5px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-panel{grid-area:ingredients;order:initial;padding:26px;background:white;border-color:#cfdee0;border-radius:22px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head{background:#064b32;border-radius:16px 16px 4px 4px;padding:26px 24px;text-align:center;margin-bottom:18px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head>.brs-v4-system-name{color:white!important;font-size:clamp(34px,3.7vw,54px)!important;line-height:1.14!important;font-weight:700!important;letter-spacing:-.04em!important;margin-bottom:12px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head>.brs-v3-panel-intro{margin:0;color:white!important;font-size:15px!important;line-height:1.5!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-panel>h3{padding:11px 18px;border-radius:999px;background:#0a5038;color:white!important;font-size:17px!important;line-height:1.35!important;text-align:center;letter-spacing:.02em!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredients{margin-top:16px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredients>li{display:grid;grid-template-columns:140px minmax(0,1fr) 220px;grid-template-areas:"photo copy chemistry";gap:18px 22px;align-items:center;padding:26px 0;min-height:180px;border-top:1px dashed #b8cfd3}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredient-photo{grid-area:photo;width:140px;max-width:100%;border-radius:10px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredient-copy{grid-area:copy}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredient-copy h4{font-size:21px!important;line-height:1.35!important;color:#114c35!important;overflow-wrap:anywhere!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-aroma{font-size:16px!important;line-height:1.5!important;color:#264c44;margin-top:10px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredient-note{font-size:14px!important;line-height:1.55!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-chemistry{grid-area:chemistry;width:220px;max-width:100%;justify-self:center}
+html body.brs-page main#main#main.brs-v4-reference #meraxyl .brs-v3-ingredients>li{grid-template-columns:180px minmax(0,1fr) 240px;min-height:240px}
+html body.brs-page main#main#main.brs-v4-reference #meraxyl .brs-v3-ingredient-photo{width:180px}
+html body.brs-page main#main#main.brs-v4-reference #meraxyl .brs-v3-chemistry{width:240px}
+html body.brs-page main#main#main.brs-v4-reference #chromgen .brs-v3-ingredients>li{grid-template-columns:112px minmax(0,1fr) 310px}
+html body.brs-page main#main#main.brs-v4-reference #chromgen .brs-v3-ingredient-photo{width:112px}
+html body.brs-page main#main#main.brs-v4-reference #chromgen .brs-v3-chemistry{width:310px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile{grid-area:support;display:block;margin:0;padding:28px;background:white;border:1px solid #cfdee0;border-radius:20px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile>h3{font-size:30px!important;line-height:1.25!important;color:#064b32!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 30px;padding-top:24px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports li{grid-template-columns:24px minmax(0,1fr);font-size:16px;gap:12px;line-height:1.6}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile:has(.brs-v3-support-figure){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:0 26px;align-items:start}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile:has(.brs-v3-support-figure)>.brs-v3-kicker,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile:has(.brs-v3-support-figure)>h3{grid-column:1 / -1}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile:has(.brs-v3-support-figure)>.brs-v3-supports{grid-template-columns:1fr}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-support-figure{margin:24px 0 0;padding:0;border:0;border-radius:0;align-self:center;width:100%}
+@media(max-width:1250px){
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product .brs-v3-product-grid{grid-template-columns:minmax(240px,.3fr) minmax(0,.7fr);gap:22px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy{padding:28px 22px}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-ingredients>li{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);grid-template-areas:"copy copy" "photo chemistry";min-height:0;padding:24px 0}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-ingredient-photo{width:170px;justify-self:center}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-chemistry{width:260px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile{padding:24px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile:has(.brs-v3-support-figure){grid-template-columns:1fr}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-portfolio{grid-template-columns:repeat(3,minmax(0,1fr))}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured{grid-column:1 / -1;grid-row:auto;display:grid;grid-template-columns:minmax(0,1fr) 240px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured .brs-v3-card-copy{padding:30px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured .brs-v3-card-art{width:240px}
+}
+@media(max-width:900px){
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product .brs-v3-product-grid{grid-template-columns:1fr;grid-template-areas:"intro" "ingredients" "support";gap:22px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy{padding:30px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-grid,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-grid{grid-template-columns:1fr;gap:28px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-figure,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-figure{max-width:560px;justify-self:center}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-copy{max-width:none}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-molecule-figure{max-width:560px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){html body.brs-page{--brs-icon-size:46px;--brs-icon-glyph:22px;}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-hero-figure,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-approach-figure{max-width:none;width:100%}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-route-figure{max-width:320px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-portfolio{grid-template-columns:1fr}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card,
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured{display:flex;grid-column:auto;grid-row:auto;flex-direction:column}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card .brs-v3-card-copy{min-height:0;padding:26px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-featured .brs-v3-card-art{width:100%;max-width:none}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card h3{font-size:30px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-card a{margin-top:8px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product{padding:42px 0!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy{padding:28px 22px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy h2{font-size:32px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-benefit{font-size:23px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-product-copy>.brs-v3-sublead{font-size:20px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-steps ol{grid-template-columns:1fr}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-panel{padding:18px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head{padding:24px 16px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head>.brs-v4-system-name{font-size:38px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v4-system-head>.brs-v3-panel-intro{font-size:13px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-panel>h3{font-size:14px!important;padding:10px 12px}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-ingredients>li{grid-template-columns:1fr;grid-template-areas:"copy" "photo" "chemistry";gap:18px;padding:25px 0}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-ingredient-photo{width:210px;max-width:100%;justify-self:center}
+html body.brs-page main#main#main.brs-v4-reference :is(.brs-v3-product,#meraxyl,#chromgen) .brs-v3-chemistry{width:280px;max-width:100%;justify-self:center}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-ingredient-copy h4{font-size:22px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-aroma{font-size:15px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile{padding:24px 20px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-profile>h3{font-size:27px!important}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports{grid-template-columns:1fr;gap:18px}
+html body.brs-page main#main#main.brs-v4-reference .brs-v3-supports li{font-size:15px}
+}

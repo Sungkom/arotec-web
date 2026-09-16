@@ -1,0 +1,493 @@
+/* Reference 1.1: full supplied artwork, editable copy and CSS library icons.
+   Desktop coordinates use the 941px reference canvas; mobile uses normal flow. */
+/* Use the shared website font for page copy; preserve icon-font glyphs. */
+html body.brs-page main#main#main.brs-main,
+html body.brs-page main#main#main.brs-main :is(h1,h2,h3,h4,h5,h6,p,a,button,label,input,textarea,select,legend,li,dt,dd,strong,b,em,small,figcaption,th,td,blockquote),
+html body.brs-page main#main#main.brs-main span:not(.ph):not(.ph-duotone):not([class*="icon"]):not([class^="ph-"]):not([class*=" ph-"]) {
+ font-family:var(--site-font)!important;
+}
+html body.brs-page main#main#main .brs-v5-reference {
+ --brs-v5-paper:#fff;
+ --brs-v5-navy:#071e34;
+ --brs-v5-copy:#203c61;
+ --brs-v5-teal:#24666a;
+ --brs-v5-line:#a8b8c7;
+ display:block; position:relative; width:100%; height:auto!important;
+ min-height:0!important; margin:0!important; padding:0!important;
+ background:var(--brs-v5-paper); overflow:visible!important;
+ scroll-margin-top:calc(var(--detail-header-space,112px) + 16px);
+}
+html body.brs-page main#main#main .brs-v5-introduction {
+ padding-top:calc(var(--detail-header-space,112px) + 18px)!important;
+}
+html body.brs-page main#main#main .brs-v5-breadcrumb,
+html body.brs-page main#main#main .brs-v5-afterword {
+ width:calc(100% - 96px); max-width:1144px; margin-inline:auto;
+}
+html body.brs-page main#main#main .brs-v5-breadcrumb {
+ display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+ margin-bottom:20px; font-size:12px; line-height:1.5;
+}
+html body.brs-page main#main#main .brs-v5-sheet {
+ position:relative; width:100%; max-width:1280px; margin-inline:auto;
+ container-type:inline-size;
+}
+html body.brs-page main#main#main .brs-v5-hero {
+ position:relative; isolation:isolate; width:100%; aspect-ratio:941 / 982;
+ overflow:hidden; background:var(--brs-v5-paper);
+}
+html body.brs-page main#main#main .brs-v5-hero-art {
+ position:absolute; z-index:0; top:8.2cqw; left:0; width:100%; margin:0;
+}
+html body.brs-page main#main#main .brs-v5-hero-art img {
+ display:block!important; position:static!important;
+ width:100%!important; height:auto!important; max-width:100%!important;
+ object-fit:contain!important; transform:none!important;
+ clip-path:none!important; border-radius:0!important;
+}
+html body.brs-page main#main#main .brs-v5-part {
+ position:absolute; z-index:2; top:2.5cqw; left:4.5%; right:5.1%;
+ display:flex; align-items:center; gap:1.25cqw; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v5-part-badge {
+ display:grid; place-items:center; width:7cqw; height:6.35cqw; flex:none;
+ padding:.55cqw 0; border-radius:.6cqw; background:var(--brs-v5-navy); color:#fff;
+}
+html body.brs-page main#main#main .brs-v5-part-badge small {font-size:1.25cqw; line-height:1; letter-spacing:.17em;}
+html body.brs-page main#main#main .brs-v5-part-badge b {font-size:3.4cqw; font-weight:500; line-height:1;}
+html body.brs-page main#main#main .brs-v5-part-code {
+ font-size:2.55cqw; line-height:1; border:1px solid var(--brs-v5-copy);
+ border-left:0; border-radius:0 .3cqw .3cqw 0; padding:1.1cqw 1.6cqw;
+ margin-left:-1.25cqw; white-space:nowrap;
+}
+html body.brs-page main#main#main .brs-v5-rule {display:block; height:1px; background:var(--brs-v5-line); flex:1; min-width:16px;}
+html body.brs-page main#main#main .brs-v5-part .brs-v5-rule {margin-inline:.15cqw .7cqw; background:#52687d;}
+html body.brs-page main#main#main .brs-v5-part-label {font-size:1.58cqw; letter-spacing:.2em; white-space:nowrap;}
+html body.brs-page main#main#main .brs-v5-hero-copy {position:relative; z-index:2;}
+html body.brs-page main#main#main .brs-v5-hero-copy>p,
+html body.brs-page main#main#main .brs-v5-molecule-note,
+html body.brs-page main#main#main .brs-v5-hero-copy>h1 {
+ position:absolute; left:5.3%; margin:0!important;
+}
+html body.brs-page main#main#main .brs-v5-kicker {
+ top:11.2cqw; font-size:1.59cqw!important; line-height:1.3!important;
+ letter-spacing:.28em!important; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main #introduction h1#brs-title {
+ top:15.7cqw; width:58%; max-width:none!important;
+  
+  
+ color:var(--brs-v5-navy)!important; 
+ text-wrap:nowrap!important; 
+}
+/* Match the shared typography layer rather than changing typography site-wide. */
+@layer arotec-display-headings.spec {
+}
+html body.brs-page main#main#main .brs-v5-lead {
+ top:34.8cqw; width:46%;
+ font-size:2.55cqw!important; line-height:1.3!important;
+ font-weight:400!important; letter-spacing:.1em!important;
+ color:var(--brs-v5-teal);
+}
+html body.brs-page main#main#main .brs-v5-lead::after,
+html body.brs-page main#main#main .brs-v5-description::after {
+ content:""; display:block; width:5.5cqw; height:1px;
+ background:var(--brs-v5-copy); margin-top:1.9cqw;
+}
+html body.brs-page main#main#main .brs-v5-description {
+ top:45.5cqw; width:34%; font-size:1.65cqw!important;
+ line-height:1.43!important; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v5-description::after {margin-top:3cqw;}
+html body.brs-page main#main#main .brs-v5-manifesto {
+ top:67.5cqw; font-size:1.55cqw!important; line-height:1.5!important;
+ letter-spacing:.14em!important; color:var(--brs-v5-teal);
+}
+html body.brs-page main#main#main .brs-v5-molecule-note {
+ top:78cqw; width:25.4%; border:1px solid #adbfca; border-radius:.8cqw;
+ padding:1.25cqw; color:var(--brs-v5-teal); background:rgba(255,255,255,.86);
+}
+html body.brs-page main#main#main .brs-v5-molecule-note strong {
+ display:block; font-size:1.25cqw; font-weight:600; line-height:1.4; letter-spacing:.05em;
+}
+html body.brs-page main#main#main .brs-v5-molecule-note p {
+ margin-top:.4cqw!important; font-size:1.32cqw!important; line-height:1.45!important; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v5-sensory {
+ position:absolute; z-index:2; left:79.4%; top:45.8cqw;
+ list-style:none; padding:0 0 0 1.8cqw; margin:0; width:18%;
+ color:#f4f8ff; font-size:1.24cqw; line-height:1.55; letter-spacing:.12em;
+}
+html body.brs-page main#main#main .brs-v5-sensory li {
+ position:relative; min-height:7cqw; padding-top:.15cqw; border-left:1px solid #c6d3dd;
+ margin-left:-1.8cqw; padding-left:1.8cqw;
+}
+html body.brs-page main#main#main .brs-v5-sensory li:last-child {border-left-color:transparent;}
+html body.brs-page main#main#main .brs-v5-sensory li::before {
+ content:""; position:absolute; left:-.36cqw; top:.6cqw;
+ width:.6cqw; height:.6cqw; border:1px solid #dce7ed; border-radius:50%; background:#3b5262;
+}
+html body.brs-page main#main#main .brs-v5-molecular-labels {
+ position:absolute; z-index:2; left:45.9%; top:81.1cqw; width:24%;
+ list-style:none; padding:0; margin:0; color:var(--brs-v5-copy);
+ font-size:1.15cqw; line-height:1.4; font-weight:500;
+}
+html body.brs-page main#main#main .brs-v5-molecular-labels li {position:relative; margin-bottom:2.05cqw;}
+html body.brs-page main#main#main .brs-v5-molecular-labels li::before {
+ content:""; position:absolute; top:.7cqw; right:calc(100% + .6cqw);
+ width:4.8cqw; height:1px; background:#94a7ba;
+}
+html body.brs-page main#main#main .brs-v5-molecular-labels li:nth-child(2)::before {width:11.5cqw; transform:rotate(-24deg); transform-origin:right center;}
+html body.brs-page main#main#main .brs-v5-molecular-labels li:nth-child(3)::before {width:8.5cqw; transform:rotate(-29deg); transform-origin:right center;}
+html body.brs-page main#main#main .brs-v5-molecular-labels li:nth-child(4)::before {width:8cqw; transform:rotate(-24deg); transform-origin:right center;}
+html body.brs-page main#main#main .brs-v5-exposure-inner {padding:2.5cqw 4.1cqw 1.5cqw;}
+html body.brs-page main#main#main .brs-v5-routes-heading {display:flex; align-items:center; gap:1.4cqw; padding-inline:1.2cqw; margin-bottom:1.65cqw;}
+html body.brs-page main#main#main #exposure-routes h2#routes-title {
+ font-size:1.9cqw!important; line-height:1.3!important; letter-spacing:.13em!important;
+ font-weight:600!important; margin:0!important; text-transform:uppercase!important; white-space:nowrap;
+ color:var(--brs-v5-navy)!important;
+}
+html body.brs-page main#main#main .brs-v5-routes-heading>p {
+ font-size:1.24cqw!important; line-height:1.4!important; letter-spacing:.08em!important;
+ white-space:nowrap; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v5-routes {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3.2cqw;}
+html body.brs-page main#main#main .brs-v5-route {display:flex; flex-direction:column; align-items:center; text-align:center;}
+html body.brs-page main#main#main .brs-v5-number {
+ font-size:1.65cqw!important; line-height:1.4!important; letter-spacing:.08em!important;
+ color:var(--brs-v5-teal); margin-bottom:.3cqw!important;
+}
+html body.brs-page main#main#main .brs-v5-route figure {width:26.6cqw; height:27.3cqw; margin:0 auto 1.45cqw;}
+html body.brs-page main#main#main .brs-v5-route figure img {
+ display:block!important; position:static!important; width:100%!important; height:100%!important;
+ max-width:100%!important; object-fit:contain!important; object-position:center top!important;
+ transform:none!important; clip-path:none!important; border-radius:0!important;
+}
+html body.brs-page main#main#main .brs-v5-route h3 {
+ font-size:1.85cqw!important; line-height:1.3!important; letter-spacing:.09em!important;
+ font-weight:500!important; color:var(--brs-v5-teal)!important;
+ text-transform:uppercase!important; margin:0 0 .9cqw!important;
+}
+html body.brs-page main#main#main .brs-v5-route-description {
+ width:24.5cqw; font-size:1.4cqw!important; line-height:1.42!important;
+ color:var(--brs-v5-copy); flex:1;
+}
+html body.brs-page main#main#main .brs-v5-key-paths {
+ display:flex; justify-content:center; gap:.6cqw;
+ margin-top:2cqw!important; font-size:1.24cqw!important; line-height:1.45!important; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v5-key-paths strong {font-size:1.17cqw; font-weight:400; color:var(--brs-v5-teal); white-space:nowrap;}
+html body.brs-page main#main#main .brs-v5-framework {border-top:1px solid #b8c5d0; margin-top:2.5cqw; padding-top:1.6cqw;}
+html body.brs-page main#main#main .brs-v5-framework>h3 {
+ font-size:1.35cqw!important; line-height:1.4!important; letter-spacing:.11em!important;
+ font-weight:600!important; color:var(--brs-v5-navy)!important;
+ margin:0 0 1cqw!important; text-transform:uppercase!important;
+}
+html body.brs-page main#main#main .brs-v5-framework-row {display:grid; grid-template-columns:minmax(0,2.65fr) minmax(0,1fr); gap:3cqw; align-items:start;}
+html body.brs-page main#main#main .brs-v5-framework ol {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:3cqw; list-style:none; padding:0; margin:0;}
+html body.brs-page main#main#main .brs-v5-framework li {position:relative; text-align:center;}
+html body.brs-page main#main#main .brs-v5-framework-icon {margin:0 auto .5cqw; width:56px; height:56px; border:0; background:transparent; color:#365979;}
+html body.brs-page main#main#main .brs-v5-framework-icon i {font-size:30px;}
+html body.brs-page main#main#main .brs-v5-framework h4 {
+ font-size:1.12cqw!important; line-height:1.4!important; letter-spacing:.1em!important; font-weight:500!important;
+ color:var(--brs-v5-copy)!important; margin:0 0 .4cqw!important;
+}
+html body.brs-page main#main#main .brs-v5-framework li p {font-size:1.1cqw!important; line-height:1.4!important; color:var(--brs-v5-copy);}
+html body.brs-page main#main#main .brs-v5-flow-arrow {position:absolute; right:-2.7cqw; top:16px; font-size:25px; color:#4e6e89;}
+html body.brs-page main#main#main .brs-v5-evidence {display:flex; gap:1.3cqw; align-items:center; padding:1.4cqw 1cqw; border:1px solid #adbfca; border-radius:.9cqw;}
+html body.brs-page main#main#main .brs-v5-evidence .brs-v5-framework-icon {flex:none; margin:0;}
+html body.brs-page main#main#main .brs-v5-evidence p {font-size:1.18cqw!important; line-height:1.85!important; letter-spacing:.08em!important; color:#476587;}
+html body.brs-page main#main#main .brs-v5-closing {display:flex; align-items:center; gap:1.6cqw; margin-top:2.4cqw;}
+html body.brs-page main#main#main .brs-v5-closing p {font-size:.99cqw!important; line-height:1.4!important; letter-spacing:.15em!important; color:#476587; white-space:nowrap;}
+html body.brs-page main#main#main .brs-v5-reference-actions {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:30px 0;}
+@media (max-width:700px) {
+ html body.brs-page main#main#main .brs-v5-breadcrumb,
+ html body.brs-page main#main#main .brs-v5-afterword {width:calc(100% - 40px);}
+ html body.brs-page main#main#main .brs-v5-hero {aspect-ratio:auto; overflow:visible;}
+ html body.brs-page main#main#main .brs-v5-part {position:relative; top:auto; left:auto; right:auto; margin:8px 20px 26px; gap:10px;}
+ html body.brs-page main#main#main .brs-v5-part-badge {width:46px; height:46px; border-radius:5px;}
+ html body.brs-page main#main#main .brs-v5-part-badge small {font-size:9px;}
+ html body.brs-page main#main#main .brs-v5-part-badge b {font-size:25px;}
+ html body.brs-page main#main#main .brs-v5-part-code {font-size:17px; padding:10px; margin-left:-10px;}
+ html body.brs-page main#main#main .brs-v5-part-label {font-size:9px; letter-spacing:.1em; white-space:normal; max-width:130px;}
+ html body.brs-page main#main#main .brs-v5-hero-copy {padding:0 20px;}
+ html body.brs-page main#main#main .brs-v5-hero-copy>p,
+ html body.brs-page main#main#main .brs-v5-hero-copy>h1,
+ html body.brs-page main#main#main .brs-v5-molecule-note {position:static; width:auto; max-width:none; margin:0 0 22px!important;}
+ html body.brs-page main#main#main .brs-v5-kicker {font-size:10px!important; line-height:1.6!important; letter-spacing:.16em!important;}
+ html body.brs-page main#main#main #introduction h1#brs-title {  width:100%;}
+ html body.brs-page main#main#main .brs-v5-lead {font-size:17px!important; line-height:1.5!important; letter-spacing:.07em!important;}
+ html body.brs-page main#main#main .brs-v5-description {font-size:16px!important; line-height:1.65!important;}
+ html body.brs-page main#main#main .brs-v5-description::after,
+ html body.brs-page main#main#main .brs-v5-lead::after {width:48px; margin-top:20px;}
+ html body.brs-page main#main#main .brs-v5-manifesto {font-size:13px!important; line-height:1.65!important;}
+ html body.brs-page main#main#main .brs-v5-molecule-note {padding:14px; border-radius:8px; max-width:330px;}
+ html body.brs-page main#main#main .brs-v5-molecule-note strong {font-size:12px;}
+ html body.brs-page main#main#main .brs-v5-molecule-note p {font-size:13px!important;}
+ html body.brs-page main#main#main .brs-v5-hero-art {position:relative; top:auto; left:auto; width:100%;}
+ html body.brs-page main#main#main .brs-v5-sensory {position:static; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; width:auto; padding:18px 20px; background:#173349; font-size:11px;}
+ html body.brs-page main#main#main .brs-v5-sensory li {min-height:0; margin:0; padding:0 0 0 12px; border-left:1px solid #c6d3dd!important;}
+ html body.brs-page main#main#main .brs-v5-sensory li::before {display:none;}
+ html body.brs-page main#main#main .brs-v5-molecular-labels {position:static; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; width:auto; padding:20px; font-size:10px;}
+ html body.brs-page main#main#main .brs-v5-molecular-labels li {margin:0;}
+ html body.brs-page main#main#main .brs-v5-molecular-labels li::before {display:none;}
+ html body.brs-page main#main#main .brs-v5-exposure-inner {padding:28px 20px;}
+ html body.brs-page main#main#main .brs-v5-routes-heading {display:block; padding:0; margin-bottom:26px;}
+ html body.brs-page main#main#main #exposure-routes h2#routes-title {font-size:20px!important; white-space:normal; letter-spacing:.07em!important;}
+ html body.brs-page main#main#main .brs-v5-routes-heading .brs-v5-rule {margin:14px 0;}
+ html body.brs-page main#main#main .brs-v5-routes-heading>p {font-size:11px!important; white-space:normal;}
+ html body.brs-page main#main#main .brs-v5-routes {grid-template-columns:1fr; gap:36px;}
+ html body.brs-page main#main#main .brs-v5-number {font-size:15px!important; margin-bottom:6px!important;}
+ html body.brs-page main#main#main .brs-v5-route figure {width:min(100%,280px); height:290px; margin-bottom:18px;}
+ html body.brs-page main#main#main .brs-v5-route h3 {font-size:19px!important; margin-bottom:12px!important;}
+ html body.brs-page main#main#main .brs-v5-route-description {width:100%; max-width:310px; font-size:15px!important; line-height:1.6!important;}
+ html body.brs-page main#main#main .brs-v5-key-paths {font-size:12px!important; gap:8px; margin-top:16px!important;}
+ html body.brs-page main#main#main .brs-v5-key-paths strong {font-size:12px;}
+ html body.brs-page main#main#main .brs-v5-framework {margin-top:30px; padding-top:22px;}
+ html body.brs-page main#main#main .brs-v5-framework>h3 {font-size:14px!important; margin-bottom:18px!important;}
+ html body.brs-page main#main#main .brs-v5-framework-row {grid-template-columns:1fr; gap:22px;}
+ html body.brs-page main#main#main .brs-v5-framework ol {grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 28px;}
+ html body.brs-page main#main#main .brs-v5-framework-icon {width:46px; height:46px; margin-bottom:8px;}
+ html body.brs-page main#main#main .brs-v5-framework-icon i {font-size:24px;}
+ html body.brs-page main#main#main .brs-v5-framework h4 {font-size:11px!important; margin-bottom:6px!important;}
+ html body.brs-page main#main#main .brs-v5-framework li p {font-size:11px!important;}
+ html body.brs-page main#main#main .brs-v5-flow-arrow {right:-23px; top:12px; font-size:21px;}
+ html body.brs-page main#main#main .brs-v5-framework li:nth-child(2) .brs-v5-flow-arrow {display:none;}
+ html body.brs-page main#main#main .brs-v5-evidence {justify-content:center; gap:18px; padding:18px; border-radius:8px;}
+ html body.brs-page main#main#main .brs-v5-evidence p {font-size:12px!important;}
+ html body.brs-page main#main#main .brs-v5-closing {flex-direction:column; gap:12px; margin-top:24px;}
+ html body.brs-page main#main#main .brs-v5-closing p {font-size:9px!important; white-space:normal; text-align:center;}
+ html body.brs-page main#main#main .brs-v5-closing .brs-v5-rule {flex:none; width:64px;}
+ @layer arotec-display-headings.spec {
+ }
+}
+
+/* Restore the reference composition, fading both image edges into the white page.
+   Small screens retain the complete image below the editable copy. */
+/* Remove the empty desktop band left by the deleted PART header. */
+@media (min-width:701px) {
+ html body.brs-page main#main#main #introduction .brs-v5-sensory {
+  --brs-sensory-stroke:max(1px,.1cqw);
+ }
+ html body.brs-page main#main#main #introduction .brs-v5-sensory li {
+  border-left:0!important;
+ }
+ html body.brs-page main#main#main #introduction .brs-v5-sensory li::before {
+  box-sizing:border-box;
+  left:0!important;
+  top:1.45cqw!important;
+  width:.75cqw!important;
+  height:.75cqw!important;
+  border:var(--brs-sensory-stroke) solid #dce7ed!important;
+  transform:translateX(-50%)!important;
+  z-index:1;
+ }
+ html body.brs-page main#main#main #introduction .brs-v5-sensory li:not(:last-child)::after {
+  content:"";
+  position:absolute;
+  left:0;
+  top:1.825cqw;
+  width:var(--brs-sensory-stroke);
+  height:100%;
+  background:#c6d3dd;
+  transform:translateX(-50%);
+  pointer-events:none;
+ }
+ html body.brs-page main#main#main #introduction .brs-v5-sensory li:not(:last-child) {
+  background-image:linear-gradient(#c6d3dd,#c6d3dd);
+  background-repeat:no-repeat;
+  background-size:calc(100% - 1.8cqw) var(--brs-sensory-stroke);
+  background-position:right calc(100% - 1cqw);
+ }
+}
+@media (min-width:701px) {
+ html body.brs-page main#main#main #introduction .brs-v8-reference-hero {
+  aspect-ratio:auto!important;
+  height:94.357067cqw!important;
+ }
+ html body.brs-page main#main#main #introduction .brs-v8-reference-hero :is(.brs-v5-hero-copy > *, .brs-v5-hero-art, .brs-v5-sensory, .brs-v5-molecular-labels) {
+  translate:0 -10cqw!important;
+ }
+}
+/* Increase the spacing after the introduction content by twenty percent. */
+html body.brs-page main#main#main #exposure-routes .brs-v5-exposure-inner {
+ padding-bottom:1.2cqw!important;
+}
+@media (max-width:700px) {
+ html body.brs-page main#main#main #exposure-routes .brs-v5-exposure-inner {
+  padding-bottom:33.6px!important;
+ }
+}
+html body.brs-page main#main#main .brs-v5-hero.brs-v8-reference-hero .brs-v5-hero-art::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ z-index:1;
+ pointer-events:none;
+ background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 18%,rgba(255,255,255,0) 82%,#fff 100%);
+}
+@media (min-width:701px) {
+ html body.brs-page main#main#main .brs-v5-hero.brs-v8-reference-hero .brs-v5-hero-art img {
+  object-fit:cover!important;
+  object-position:center!important;
+ }
+}
+html body.brs-page main#main#main.brs-v4-reference .brs-v5-reference .brs-v5-sensory li,
+html body.brs-page main#main#main.brs-v4-reference .brs-v5-reference .brs-v5-molecular-labels li {
+ font-family:var(--site-font)!important;
+ font-size:inherit!important; line-height:inherit!important;
+ font-weight:400!important; letter-spacing:inherit!important;
+}
+html body.brs-page main#main#main.brs-v4-reference .brs-v5-framework .brs-v5-framework-icon {
+ box-sizing:border-box; width:56px; height:56px;
+ border:0; border-radius:0; background:transparent; color:#365979;
+}
+html body.brs-page main#main#main.brs-v4-reference .brs-v5-framework .brs-v5-framework-icon i {
+ font-size:40px!important; line-height:1!important;
+}
+@media (min-width:701px) {
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-hero-art {
+  position:absolute; top:10cqw; left:0; width:100%;
+  height:94.367694cqw; overflow:hidden; margin:0;
+ }
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-hero-art img {
+  position:static!important; left:auto!important; top:auto!important;
+  width:100%!important; max-width:100%!important;
+  height:100%!important; max-height:100%!important;
+  object-fit:contain!important; object-position:center!important;
+ }
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-description {
+  width:38%; font-size:1.65cqw!important; line-height:1.43!important;
+ }
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-description::after {
+  margin-top:3cqw;
+ }
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-sensory li::before {top:1.45cqw;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels {top:81.5cqw;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels li {margin-bottom:0;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels li:nth-child(1) {margin-bottom:3.4cqw;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels li:nth-child(2) {margin-bottom:2.1cqw;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels li:nth-child(3) {margin-bottom:2.5cqw;}
+ html body.brs-page main#main#main .brs-v8-reference-hero .brs-v5-molecular-labels li:nth-child(2)::before {width:12.6cqw;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-routes-heading {margin-bottom:.8cqw;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-routes {padding-right:2.4cqw;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-route figure {
+  width:26.6cqw; height:26.57cqw; margin-bottom:1.05cqw;
+ }
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-route figure img {
+  height:auto!important; max-height:100%!important; margin:0 auto;
+ }
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-route:nth-child(1) figure img {width:25.398512cqw!important;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-route:nth-child(2) figure img {width:25.717321cqw!important;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-route:nth-child(3) figure img {width:25.823592cqw!important;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-key-paths {margin-top:1.2cqw!important;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-framework {margin-top:1.7cqw;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-framework>h3 {margin-bottom:.5cqw!important;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-closing {margin-top:1.8cqw;}
+ html body.brs-page main#main#main .brs-v5-exposure .brs-v5-exposure-inner {padding-bottom:1cqw;}
+}
+@media (max-width:700px) {
+ html body.brs-page main#main#main .brs-v8-desktop-break {display:none;}
+ html body.brs-page main#main#main.brs-v4-reference .brs-v5-framework .brs-v5-framework-icon {width:46px; height:46px;}
+ html body.brs-page main#main#main.brs-v4-reference .brs-v5-framework .brs-v5-framework-icon i {font-size:32px!important;}
+}
+
+/* Full-width panorama, with editable copy outside the image. */
+html body.brs-page main#main#main .brs-v9-full-width>.brs-v5-sheet {max-width:none;}
+html body.brs-page main#main#main .brs-v9-wide-hero {
+ display:grid;
+ grid-template-columns:minmax(32px,1fr) minmax(0,1144px) minmax(32px,1fr);
+ aspect-ratio:auto; overflow:visible;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-part {
+ grid-column:2; position:static; top:auto; left:auto; right:auto;
+ margin:24px 0 32px; container-type:inline-size;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-hero-copy {
+ grid-column:2; container-type:inline-size; padding:0 0 32px;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-hero-art {
+ grid-column:1 / -1; position:static; top:auto; left:auto;
+ width:100%; height:auto; margin:0; overflow:visible;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-hero-art img {
+ position:static!important; top:auto!important; left:auto!important;
+ width:100%!important; max-width:100%!important; height:auto!important;
+ max-height:none!important; object-fit:contain!important; clip-path:none!important;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v8-desktop-break {display:none;}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-sensory,
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecular-labels {
+ grid-column:2; position:static; display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px;
+ width:100%; padding:24px 0; margin:0;
+ background:#fff; color:var(--brs-v5-copy);
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-sensory {
+ font-size:12px; line-height:1.6; border-bottom:1px solid var(--brs-v5-line);
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecular-labels {font-size:11px; line-height:1.5;}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-sensory li {
+ min-height:0; margin:0; padding:0 0 0 14px; border-left:1px solid #c6d3dd;
+}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecular-labels li {margin:0;}
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-sensory li::before,
+html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecular-labels li::before {display:none;}
+@media (min-width:701px) {
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-hero-copy {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-areas:"kicker kicker" "title title" "lead description" "manifesto note";
+  align-items:start; gap:28px 48px;
+ }
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-hero-copy>p,
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecule-note,
+ html body.brs-page main#main#main #introduction .brs-v9-wide-hero h1#brs-title {
+  position:static; top:auto; left:auto; width:100%; margin:0!important;
+ }
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-kicker {grid-area:kicker;}
+ html body.brs-page main#main#main .brs-v9-wide-hero #brs-title {grid-area:title;}
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-lead {grid-area:lead;}
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-description {grid-area:description;}
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-manifesto {grid-area:manifesto;}
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecule-note {grid-area:note; max-width:400px;}
+}
+@media (max-width:700px) {
+ html body.brs-page main#main#main .brs-v9-wide-hero {
+  grid-template-columns:20px minmax(0,1fr) 20px;
+ }
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-sensory,
+ html body.brs-page main#main#main .brs-v9-wide-hero .brs-v5-molecular-labels {
+  grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; padding:20px 0;
+ }
+}
+
+/* Wider white edge fades, preserving the current hero composition. */
+html body.brs-page main#main#main #introduction .brs-v8-reference-hero .brs-v5-hero-art::after {
+ background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 8%,rgba(255,255,255,.58) 20%,rgba(255,255,255,0) 34%,rgba(255,255,255,0) 72%,rgba(255,255,255,.62) 88%,#fff 100%)!important;
+}
+
+/* Start the introduction directly below the responsive fixed header. */
+html body.brs-page main#main#main #introduction.brs-v5-introduction {
+ padding-top:var(--detail-header-space,112px)!important;
+}
+
+/* Tablet copy follows its actual line heights; the reference artwork and
+   molecular annotation coordinates stay unchanged. */
+@media (min-width:701px) and (max-width:991px) {
+ html body.brs-page main#main#main #introduction.brs-v5-introduction .brs-v8-reference-hero {
+  height:auto!important;
+  min-height:94.357067cqw!important;
+ }
+ html body.brs-page main#main#main #introduction.brs-v5-introduction .brs-v8-reference-hero .brs-v5-hero-copy {
+  padding-block:1.2cqw 4cqw;
+ }
+ html body.brs-page main#main#main #introduction.brs-v5-introduction .brs-v8-reference-hero .brs-v5-hero-copy > * {
+  position:relative;
+  top:auto!important;
+  translate:none!important;
+  margin:0 0 18px!important;
+ }
+ html body.brs-page main#main#main #introduction.brs-v5-introduction .brs-v8-reference-hero :is(.brs-v5-kicker,.brs-v5-manifesto) {
+  width:89.4%;
+ }
+}

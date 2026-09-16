@@ -1,0 +1,152 @@
+/* Trevion reference layout. Scoped to preserve the other ingredient systems. */
+html body.brs-page main#main#main #trevion{margin:0!important;padding:0!important;min-height:0!important;background:#fff!important;color:#123c31;font-family:var(--site-font)!important;scroll-margin-top:100px}
+html body.brs-page main#main#main #trevion,html body.brs-page main#main#main #trevion *{box-sizing:border-box}
+html body.brs-page main#main#main #trevion :is(p,h2,h3,h4,h5,ol,ul,figure){margin:0;padding:0}
+html body.brs-page main#main#main #trevion :is(p,h2,h3,h4,h5,li,strong){font-family:var(--site-font)!important;text-transform:none;letter-spacing:normal}
+html body.brs-page main#main#main #trevion sup{font-size:.5em;line-height:0;position:relative;vertical-align:super;top:0;letter-spacing:0}
+html body.brs-page main#main#main #trevion .brs-t20-sheet{position:relative;max-width:1440px;margin:0 auto;container-type:inline-size;background:radial-gradient(ellipse at 92% 8%,#ddefeb9c,transparent 25%),linear-gradient(120deg,#f7fbfb,#eaf5f4)}
+html body.brs-page main#main#main #trevion .brs-t20-sheet::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#9ebfc013 1px,transparent 1px),linear-gradient(90deg,#9ebfc013 1px,transparent 1px);background-size:78px 78px}
+html body.brs-page main#main#main #trevion .brs-t20-layout{position:relative;display:grid;grid-template-columns:minmax(0,28fr) minmax(0,65fr);gap:1.95cqw;padding:2.6cqw;align-items:stretch}
+html body.brs-page main#main#main #trevion .brs-t20-rail{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-width:0;min-height:135.5cqw;padding:2.7cqw 2.5cqw 5.8cqw;border-radius:2.4cqw;background:linear-gradient(110deg,#001c33 6%,#003446 59%,#005b4f);box-shadow:0 10px 22px #0e57551c}
+html body.brs-page main#main#main #trevion .brs-t20-rail::before{content:"";position:absolute;z-index:-1;inset:0;background:repeating-linear-gradient(104deg,transparent 0 7%,#031e2a24 7% 15%);pointer-events:none}
+html body.brs-page main#main#main #trevion .brs-t20-rail::after{content:"";position:absolute;z-index:-1;width:56cqw;height:56cqw;border:1px solid #8be1d118;border-radius:50%;left:-15cqw;bottom:-30cqw;box-shadow:0 -12cqw 0 -1px #00474d,0 -12cqw 0 0 #8be1d112;pointer-events:none}
+html body.brs-page main#main#main #trevion .brs-t20-kicker{display:flex;align-items:center;gap:1.2cqw;font-size:clamp(10px,1.1cqw,16px)!important;font-weight:700!important;line-height:1.5!important;letter-spacing:.23em!important;color:#8bcfc4!important;white-space:nowrap}
+html body.brs-page main#main#main #trevion .brs-t20-kicker span{height:1px;background:#7bada8;flex:1;opacity:.7}
+html body.brs-page main#main#main #trevion #trevion-title{margin:4.3cqw 0 0!important;color:#fff!important;font-size:clamp(28px,3.1cqw,46px)!important;line-height:1.15!important;font-weight:700!important;letter-spacing:-.025em!important;white-space:nowrap}
+html body.brs-page main#main#main #trevion .brs-t20-benefit{margin-top:2.65cqw;font-size:clamp(24px,2.6cqw,38px)!important;line-height:1.25!important;font-weight:400!important;color:#fff!important}
+html body.brs-page main#main#main #trevion .brs-t20-accent{display:block;width:8.1cqw;height:4px;margin-top:2.6cqw;border-radius:99px;background:#8ed8c7}
+html body.brs-page main#main#main #trevion .brs-t20-description{margin-top:2.4cqw;font-size:clamp(16px,1.4cqw,21px)!important;line-height:1.58!important;font-weight:400!important;color:#c1dae0!important}
+html body.brs-page main#main#main #trevion .brs-t20-flow{margin-top:5.5cqw}
+html body.brs-page main#main#main #trevion .brs-t20-flow-title{font-size:clamp(10px,.95cqw,14px)!important;line-height:1.5!important;font-weight:700!important;letter-spacing:.16em!important;color:#77cbbb!important}
+html body.brs-page main#main#main #trevion .brs-t20-flow ol{position:relative;list-style:none;margin-top:2.8cqw;display:grid;gap:4cqw}
+html body.brs-page main#main#main #trevion .brs-t20-flow ol::before{content:"";position:absolute;left:16px;top:16px;bottom:0;width:1px;background:#89d4c5}
+html body.brs-page main#main#main #trevion .brs-t20-flow li{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr);gap:1.25cqw;list-style:none}
+html body.brs-page main#main#main #trevion .brs-t20-step{position:relative;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#80cfbf;color:#002e3c;font-size:16px;font-weight:700;line-height:1}
+html body.brs-page main#main#main #trevion .brs-t20-flow strong{font-size:clamp(17px,1.55cqw,23px)!important;line-height:1.3!important;color:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-flow li p{margin-top:5px;max-width:17cqw;font-size:clamp(13px,1.12cqw,17px)!important;line-height:1.55!important;color:#b1d1d8!important}
+html body.brs-page main#main#main #trevion .brs-t20-proprietary{margin-top:7cqw;padding:1.6cqw;border-radius:1.4cqw;background:#10765e}
+html body.brs-page main#main#main #trevion .brs-t20-proprietary p{font-size:clamp(9px,.88cqw,13px)!important;font-weight:700!important;line-height:1.4!important;letter-spacing:.12em!important;color:#bce7da!important}
+html body.brs-page main#main#main #trevion .brs-t20-proprietary strong{display:flex;align-items:center;justify-content:space-between;gap:.5cqw;margin-top:.8cqw;font-size:clamp(16px,1.75cqw,26px)!important;line-height:1.2!important;font-weight:700!important;white-space:nowrap;color:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-arrow{position:relative;display:inline-block;flex:none;width:24px;height:16px;color:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-arrow::before{content:"";position:absolute;left:0;right:1px;top:7px;height:1px;background:currentColor}
+html body.brs-page main#main#main #trevion .brs-t20-arrow::after{content:"";position:absolute;right:1px;top:3px;width:9px;height:9px;border-top:1px solid;border-right:1px solid;transform:rotate(45deg)}
+html body.brs-page main#main#main #trevion .brs-t20-signature{padding-top:5cqw;margin-top:auto;font-size:clamp(9px,.85cqw,12px)!important;line-height:1.6!important;font-weight:500!important;letter-spacing:.12em!important;color:#71a7b0!important}
+html body.brs-page main#main#main #trevion .brs-t20-content{min-width:0;padding-top:2.65cqw}
+html body.brs-page main#main#main #trevion .brs-t20-label{display:flex;align-items:center;gap:1cqw;margin:0 1.3cqw 1.4cqw}
+html body.brs-page main#main#main #trevion .brs-t20-label h3{flex:none;max-width:100%;font-size:clamp(10px,1.05cqw,16px)!important;line-height:1.4!important;font-weight:700!important;letter-spacing:.19em!important;color:#397c73!important}
+html body.brs-page main#main#main #trevion .brs-t20-label span{flex:1;height:1px;background:#8ebcb5}
+html body.brs-page main#main#main #trevion .brs-t20-system-frame,html body.brs-page main#main#main #trevion .brs-t20-support-frame{border:1px solid #cbdedd;border-radius:2cqw;background:#fff;box-shadow:0 10px 20px #275e5b18}
+html body.brs-page main#main#main #trevion .brs-t20-system-frame{padding:2.2cqw 3.15cqw 3.35cqw}
+html body.brs-page main#main#main #trevion .brs-t20-system-card{overflow:hidden;border:1px solid #45664d;border-radius:1.8cqw;box-shadow:0 1px 3px #34564125;background:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-system-head{display:flex;flex-direction:column;justify-content:center;min-height:12.7cqw;padding:1cqw;text-align:center;background:radial-gradient(ellipse at 50% 20%,#0c502d,#003d15 75%);color:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-system-head .brs-t20-brand{font-size:60px!important;line-height:1.1!important;font-weight:800!important;letter-spacing:-1.5px!important;color:#fff!important}
+html body.brs-page main#main#main #trevion .brs-t20-system-head>p:not(.brs-t20-brand){margin-top:.5cqw;font-size:clamp(17px,1.85cqw,27px)!important;line-height:1.2!important;font-weight:400!important;color:#fff!important}
+html body.brs-page main#main#main #trevion .brs-t20-system-caption{width:78%;margin:.9cqw auto .3cqw;padding:.45cqw .7cqw;border-radius:100px;background:#064c24;text-align:center;color:#fff!important;font-size:clamp(13px,1.5cqw,23px)!important;line-height:1.25!important;font-weight:700!important;letter-spacing:0!important}
+html body.brs-page main#main#main #trevion .brs-t20-ingredients{list-style:none;padding:0 1.45cqw 1.2cqw}
+html body.brs-page main#main#main #trevion .brs-t20-ingredients>li{display:grid;grid-template-columns:25% minmax(0,1fr) 36%;gap:1cqw;align-items:center;min-height:9.1cqw;padding:0;list-style:none}
+html body.brs-page main#main#main #trevion .brs-t20-ingredients>li+li{border-top:1px solid #d4d8d2}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy{position:relative;z-index:1;min-width:0}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy h5{color:#174a25!important;font-size:clamp(18px,2.3cqw,34px)!important;line-height:1.2!important;font-weight:700!important;letter-spacing:-.025em!important;overflow-wrap:normal!important}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient--warm h5{color:#ab5024!important}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy p{margin-top:.35cqw;white-space:nowrap;font-size:clamp(14px,1.65cqw,25px)!important;line-height:1.35!important;font-weight:400!important;color:#171f19!important}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy p span{padding:0 .15em}
+html body.brs-page main#main#main #trevion .brs-t20-crop{position:relative;display:block;width:100%;aspect-ratio:var(--t20-ratio);overflow:hidden;isolation:isolate;background:#fff}
+html body.brs-page main#main#main #trevion .brs-t20-crop img{position:absolute!important;left:var(--t20-left)!important;top:var(--t20-top)!important;width:var(--t20-width)!important;max-width:none!important;height:auto!important;margin:0!important;border:0;border-radius:0;object-fit:fill;display:block}
+html body.brs-page main#main#main #trevion .brs-t20-photo{max-width:13.5cqw;justify-self:center}
+html body.brs-page main#main#main #trevion .brs-t20-chemistry{max-width:18cqw;justify-self:center}
+html body.brs-page main#main#main #trevion .brs-t20-ingredient--oil .brs-t20-chemistry{max-width:13.1cqw}
+html body.brs-page main#main#main #trevion .brs-t20-connector{position:relative;height:4.5cqw;width:2px;margin:0 auto 1.7cqw;background:#268b77}
+html body.brs-page main#main#main #trevion .brs-t20-connector::before,html body.brs-page main#main#main #trevion .brs-t20-connector::after{content:"";position:absolute;left:50%;transform:translateX(-50%);border-radius:50%;background:#218570}
+html body.brs-page main#main#main #trevion .brs-t20-connector::before{width:14px;height:14px;top:38%}
+html body.brs-page main#main#main #trevion .brs-t20-connector::after{width:8px;height:8px;bottom:0}
+html body.brs-page main#main#main #trevion .brs-t20-support-frame{display:grid;place-items:center;min-height:45.75cqw;padding:2.35cqw 2.6cqw}
+html body.brs-page main#main#main #trevion .brs-t20-support-card{position:relative;isolation:isolate;overflow:hidden;width:66%;min-height:40.6cqw;padding:3.4cqw 2.75cqw 2cqw;border:1px solid #44644d;border-radius:1.4cqw;background:#fff;box-shadow:-2.4cqw 1.2cqw 0 -1.2cqw #5474651c,0 0 3px #3c574954}
+html body.brs-page main#main#main #trevion .brs-t20-support-card h4{position:relative;z-index:1;white-space:nowrap;text-align:center;font-size:clamp(22px,2.55cqw,38px)!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.025em!important;color:#16451d!important}
+html body.brs-page main#main#main #trevion .brs-t20-supports{position:relative;z-index:1;list-style:none;margin-top:1cqw}
+html body.brs-page main#main#main #trevion .brs-t20-supports li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:1.3cqw;align-items:center;min-height:6.35cqw;padding:.8cqw 0;list-style:none;font-size:clamp(16px,1.55cqw,23px)!important;line-height:1.4!important;color:#171f19}
+html body.brs-page main#main#main #trevion .brs-t20-supports li+li{border-top:1px solid #92a696}
+html body.brs-page main#main#main #trevion .brs-t20-check{position:relative;display:block;width:24px;height:24px;flex:none;border-radius:50%;background:#065020}
+html body.brs-page main#main#main #trevion .brs-t20-check::after{content:"";position:absolute;left:8px;top:4px;width:7px;height:13px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(40deg)}
+html body.brs-page main#main#main #trevion .brs-t20-leaves{position:absolute;z-index:0;bottom:0;right:0;width:14cqw;height:9cqw;opacity:.12;pointer-events:none}
+html body.brs-page main#main#main #trevion .brs-t20-leaves::before{content:"";position:absolute;bottom:0;right:2cqw;width:1px;height:9cqw;background:#649165;transform:rotate(28deg);transform-origin:bottom}
+html body.brs-page main#main#main #trevion .brs-t20-leaves i{position:absolute;width:5.4cqw;height:2.6cqw;border-radius:100% 0 100% 0;background:linear-gradient(40deg,#467d48,#c2d5ab);bottom:1.8cqw;right:2.3cqw;transform:rotate(14deg)}
+html body.brs-page main#main#main #trevion .brs-t20-leaves i:nth-child(2){bottom:4.2cqw;right:1.1cqw;transform:rotate(-72deg)}
+html body.brs-page main#main#main #trevion .brs-t20-leaves i:nth-child(3){bottom:.1cqw;right:5cqw;transform:rotate(36deg)}
+html body.brs-page main#main#main #trevion .brs-t20-footnote{margin-top:2.3cqw;font-size:clamp(10px,.85cqw,13px)!important;line-height:1.75!important;font-weight:400!important;color:#6c858d!important}
+@media(max-width:1100px) and (min-width:901px){
+ html body.brs-page main#main#main #trevion .brs-t20-label h3{font-size:10px!important;letter-spacing:.1em!important}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy h5{font-size:20px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy p{font-size:14px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-support-card{width:80%}
+ html body.brs-page main#main#main #trevion .brs-t20-system-head .brs-t20-brand{font-size:48px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary{padding:1.3cqw}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary strong{font-size:15px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-arrow{width:18px}
+}
+@media(max-width:900px){
+ html body.brs-page main#main#main #trevion .brs-t20-layout{grid-template-columns:1fr;gap:28px;padding:24px}
+ html body.brs-page main#main#main #trevion .brs-t20-rail{min-height:0;padding:30px;border-radius:22px}
+ html body.brs-page main#main#main #trevion .brs-t20-kicker{font-size:12px!important}
+ html body.brs-page main#main#main #trevion #trevion-title{font-size:38px!important;margin:30px 0 0!important}
+ html body.brs-page main#main#main #trevion .brs-t20-benefit{max-width:590px;margin-top:24px;font-size:28px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-accent{width:100px;margin-top:24px}
+ html body.brs-page main#main#main #trevion .brs-t20-description{max-width:590px;font-size:18px!important;margin-top:24px}
+ html body.brs-page main#main#main #trevion .brs-t20-flow{margin-top:36px}
+ html body.brs-page main#main#main #trevion .brs-t20-flow-title{font-size:12px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-flow ol{margin-top:24px;gap:26px}
+ html body.brs-page main#main#main #trevion .brs-t20-flow li{gap:16px}
+ html body.brs-page main#main#main #trevion .brs-t20-flow li p{max-width:none;font-size:15px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary{max-width:320px;margin-top:32px;padding:20px;border-radius:16px}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary p{font-size:11px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary strong{font-size:23px!important;margin-top:12px}
+ html body.brs-page main#main#main #trevion .brs-t20-signature{padding-top:36px;font-size:10px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-content{padding-top:0}
+ html body.brs-page main#main#main #trevion .brs-t20-label{margin:0 4px 16px;gap:12px}
+ html body.brs-page main#main#main #trevion .brs-t20-label h3{font-size:12px!important;letter-spacing:.14em!important;flex:0 1 auto}
+ html body.brs-page main#main#main #trevion .brs-t20-system-frame{padding:24px;border-radius:22px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-card{border-radius:18px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-head{padding:24px 16px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-head>p:not(.brs-t20-brand){font-size:19px!important;margin-top:10px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-caption{font-size:15px!important;width:90%;padding:8px 12px;margin:12px auto 4px}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredients{padding:0 14px 12px}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredients>li{min-height:120px;grid-template-columns:24% minmax(0,1fr) 30%;gap:12px}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy h5{font-size:22px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy p{font-size:17px!important}
+ html body.brs-page main#main#main #trevion :is(.brs-t20-photo,.brs-t20-chemistry){max-width:100%}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient--oil .brs-t20-chemistry{max-width:100%}
+ html body.brs-page main#main#main #trevion .brs-t20-connector{height:48px;margin-bottom:24px}
+ html body.brs-page main#main#main #trevion .brs-t20-support-frame{padding:30px;border-radius:22px;min-height:0}
+ html body.brs-page main#main#main #trevion .brs-t20-support-card{width:85%;min-height:0;padding:32px 26px 22px;border-radius:18px}
+ html body.brs-page main#main#main #trevion .brs-t20-support-card h4{font-size:30px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-supports{margin-top:16px}
+ html body.brs-page main#main#main #trevion .brs-t20-supports li{min-height:76px;padding:16px 0;font-size:18px!important;gap:16px}
+ html body.brs-page main#main#main #trevion .brs-t20-footnote{margin-top:24px;font-size:11px!important}
+}
+@media(max-width:600px){
+ html body.brs-page main#main#main #trevion .brs-t20-layout{padding:16px;gap:24px}
+ html body.brs-page main#main#main #trevion .brs-t20-rail{padding:26px 22px}
+ html body.brs-page main#main#main #trevion #trevion-title{font-size:32px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-benefit{font-size:25px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-description{font-size:16px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary{max-width:none}
+ html body.brs-page main#main#main #trevion .brs-t20-proprietary strong{font-size:21px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-label h3{font-size:10px!important;letter-spacing:.12em!important}
+ html body.brs-page main#main#main #trevion .brs-t20-label span{min-width:12px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-frame{padding:12px;border-radius:18px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-card{border-radius:14px}
+ html body.brs-page main#main#main #trevion .brs-t20-system-head .brs-t20-brand{font-size:44px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-system-head>p:not(.brs-t20-brand){font-size:16px!important;line-height:1.35!important}
+ html body.brs-page main#main#main #trevion .brs-t20-system-caption{font-size:12px!important;width:92%;padding:8px 10px}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredients{padding:0 12px 8px}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredients>li{grid-template-columns:1fr 1.15fr;grid-template-areas:"copy copy" "photo chemistry";gap:12px 16px;padding:20px 0;min-height:0}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy{grid-area:copy;text-align:center}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy h5{font-size:23px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-ingredient-copy p{font-size:17px!important;margin-top:5px}
+ html body.brs-page main#main#main #trevion .brs-t20-photo{grid-area:photo}
+ html body.brs-page main#main#main #trevion .brs-t20-chemistry{grid-area:chemistry}
+ html body.brs-page main#main#main #trevion .brs-t20-support-frame{padding:20px 14px}
+ html body.brs-page main#main#main #trevion .brs-t20-support-card{width:100%;padding:26px 16px 16px;border-radius:14px}
+ html body.brs-page main#main#main #trevion .brs-t20-support-card h4{font-size:26px!important}
+ html body.brs-page main#main#main #trevion .brs-t20-supports li{font-size:16px!important;gap:12px;min-height:72px}
+ html body.brs-page main#main#main #trevion .brs-t20-footnote br{display:none}
+}

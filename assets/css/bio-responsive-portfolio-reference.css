@@ -1,0 +1,151 @@
+/* Reference portfolio: original botanical artwork with independent HTML text. */
+html body.brs-page main#main#main #ingredient-systems.brs-p18 {
+ --p18-green:#063b21; --p18-ink:#07110e; --p18-rule:#dbe4dd;
+ position:relative; display:block; width:100%; height:auto!important; min-height:0!important;
+ margin:0!important; padding:0!important; background:#fff!important; color:var(--p18-ink);
+ font-family:var(--site-font)!important; scroll-margin-top:calc(var(--detail-header-space,112px) + 20px);
+}
+html body.brs-page main#main#main #ingredient-systems,
+html body.brs-page main#main#main #ingredient-systems * {box-sizing:border-box;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-sheet {
+ position:relative; width:100%; max-width:1672px; margin-inline:auto; padding-bottom:5.5cqw; container-type:inline-size;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-heading {
+ position:relative; padding:2.2cqw 3.7cqw 1.1cqw;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-kicker {
+ display:flex; align-items:center; flex-wrap:wrap; gap:.85cqw; width:90%;
+ margin:0 0 1.35cqw!important; color:var(--p18-green)!important;
+ font-size:clamp(10px,.7cqw,12px)!important; font-weight:700!important;
+ line-height:1.6!important; letter-spacing:.28em!important;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-kicker::after {
+ content:""; width:5.8cqw; min-width:40px; height:1px; margin-left:.65cqw; background:#1b4d3c;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-chapter {
+ position:absolute; top:1.05cqw; right:1.5cqw; color:var(--p18-green); font-size:48px; font-weight:800; line-height:1;
+}
+html body.brs-page main#main#main #ingredient-systems h2#systems-title {
+ margin:0!important; color:#05090c!important; text-align:left; text-transform:uppercase!important;
+}
+html body.brs-page main#main#main #ingredient-systems h2#systems-title > span {display:block;}
+html body.brs-page main#main#main #ingredient-systems h2#systems-title > span:first-child {color:var(--p18-green);}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-subtitle {
+ margin:.3cqw 0 1cqw!important; color:#17201e!important;
+ font-size:clamp(18px,1.6cqw,27px)!important; font-weight:400!important; line-height:1.35!important;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-mission {
+ position:relative; margin:0!important; padding-left:3.5cqw; color:#1c4a3c!important;
+ font-size:clamp(10px,.73cqw,13px)!important; line-height:1.65!important; font-weight:500!important; letter-spacing:.2em!important;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-mission::before {
+ content:""; position:absolute; left:0; top:50%; width:1.9cqw; min-width:22px; height:1px; background:#345e52;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-grid {
+ display:grid; grid-template-columns:minmax(0,492fr) minmax(0,352fr) minmax(0,363fr) minmax(0,365fr);
+ grid-template-rows:minmax(240px,15.25cqw) minmax(240px,14.84cqw);
+ gap:1.05cqw; margin:0 1.45cqw;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card {
+ position:relative; isolation:isolate; min-width:0; overflow:hidden;
+ border:1px solid var(--p18-rule); border-radius:10px;
+ background:linear-gradient(120deg,#fff 0%,#f7faf6 60%,#eaf1e6 100%);
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured {
+ grid-row:1 / span 2; background:radial-gradient(ellipse at 22% 18%,#d4dfc9,#e2ead9 55%,#c7d8bb);
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card-copy {
+ position:relative; z-index:2; display:flex; flex-direction:column; align-items:flex-start;
+ width:100%; height:100%; padding:3.5cqw 1.55cqw max(12px,.7cqw);
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card h3 {
+ flex:none; max-width:100%; margin:0!important; color:#060c0b!important;
+ font-size:clamp(26px,2.52cqw,43px)!important; line-height:1.08!important; font-weight:800!important;
+ letter-spacing:-.045em!important; text-transform:none!important; overflow-wrap:normal;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card h3 sup {
+ position:relative; top:-.55em; margin-left:.08em; font-size:.4em!important; line-height:0!important; vertical-align:baseline;
+ font-weight:700!important; letter-spacing:0!important;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-category {
+ flex:none; max-width:100%; margin:.18cqw 0 0!important; color:#0e1b17!important;
+ font-size:clamp(14px,1.17cqw,20px)!important; line-height:1.3!important; font-weight:400!important;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-slogan {
+ flex:none; margin:.9cqw 0 8px!important; color:#284c42!important;
+ font-size:clamp(9px,.62cqw,11px)!important; line-height:1.45!important;
+ font-weight:700!important; letter-spacing:.16em!important; text-transform:uppercase!important;
+}
+html body.brs-page main#main#main #ingredient-systems a.brs-p18-details {
+ display:inline-flex; flex:none; align-items:center; justify-content:center; gap:10px;
+ min-height:36px; width:max-content; max-width:100%; margin-top:auto; padding:8px 17px;
+ border:1px solid #173e32; border-radius:999px; background:rgba(255,255,255,.72); color:#123c2f!important;
+ font-size:clamp(10px,.72cqw,12px)!important; line-height:1.2!important; font-weight:700!important;
+ letter-spacing:.09em!important; text-decoration:none!important; white-space:nowrap;
+}
+html body.brs-page main#main#main #ingredient-systems a.brs-p18-details:hover {background:#123c2f; color:#fff!important;}
+html body.brs-page main#main#main #ingredient-systems a.brs-p18-details:focus-visible {outline:3px solid #14725a; outline-offset:4px;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-arrow {position:relative; flex:none; width:18px; height:14px;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-arrow::before {content:""; position:absolute; top:50%; left:0; width:17px; height:1px; background:currentColor;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-arrow::after {content:""; position:absolute; top:50%; right:1px; width:7px; height:7px; border-top:1px solid currentColor; border-right:1px solid currentColor; transform:translateY(-50%) rotate(45deg);}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-art {
+ position:absolute; z-index:0; top:0; right:0; height:100%; width:auto; max-width:none;
+ aspect-ratio:var(--p18-art-ratio); overflow:hidden; pointer-events:none;
+ clip-path:none; mask-image:var(--p18-soft-mask); mask-mode:alpha;
+ mask-size:100% 100%; mask-position:center; mask-repeat:no-repeat;
+}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-art img {
+ position:absolute!important; display:block; left:var(--p18-image-left)!important; top:var(--p18-image-top)!important;
+ width:var(--p18-image-width)!important; height:var(--p18-image-height)!important;
+ max-width:none!important; max-height:none!important; border:0!important; border-radius:0!important;
+ margin:0!important; object-fit:fill; transform:none!important;
+}
+/* Feather the alpha mask inward; keep the original botanical image sharp. */
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--olfactiva {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22750%2C0%201000%2C0%201000%2C1000%20330%2C1000%20480%2C870%20480%2C740%20400%2C640%20450%2C480%20640%2C410%20750%2C300%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22750%2C0%201000%2C0%201000%2C1000%20330%2C1000%20480%2C870%20480%2C740%20400%2C640%20450%2C480%20640%2C410%20750%2C300%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--trevion {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22680%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C600%20680%2C540%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22680%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C600%20680%2C540%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--meraxyl {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22580%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C590%20580%2C490%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22580%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C590%20580%2C490%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--cortiva {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22590%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C580%20590%2C450%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22590%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C580%20590%2C450%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--melacor {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22620%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C640%20620%2C550%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22620%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C640%20620%2C550%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--morphagen {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22730%2C0%201000%2C0%201000%2C1000%20600%2C1000%20600%2C640%20730%2C550%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22730%2C0%201000%2C0%201000%2C1000%20600%2C1000%20600%2C640%20730%2C550%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--chromgen {--p18-soft-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22safe%22%3E%3Cpolygon%20points%3D%22720%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C640%20720%2C500%22%2F%3E%3C%2FclipPath%3E%3Cfilter%20id%3D%22feather%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeMorphology%20operator%3D%22erode%22%20radius%3D%2250%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2222%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23safe)%22%3E%3Cpolygon%20points%3D%22720%2C0%201000%2C0%201000%2C1000%20500%2C1000%20500%2C640%20720%2C500%22%20fill%3D%22white%22%20filter%3D%22url(%23feather)%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-card-copy {padding:5.8cqw 2.2cqw 4.1cqw;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured h3 {font-size:clamp(44px,4cqw,67px)!important; line-height:1.04!important;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-category {margin-top:.6cqw!important; font-size:clamp(20px,1.75cqw,30px)!important;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-slogan {margin-top:1.8cqw!important; font-size:clamp(12px,.85cqw,15px)!important; line-height:1.65!important; font-weight:500!important; letter-spacing:.25em!important;}
+html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured a.brs-p18-details {min-height:46px; padding:11px 22px; font-size:13px!important;}
+@media (max-width:1100px) {
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-heading {padding:32px 28px 24px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-kicker {margin-bottom:20px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-chapter {top:26px; right:26px; font-size:40px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-subtitle {margin:8px 0 18px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-mission {padding-left:38px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-grid {grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:none; grid-auto-rows:auto; gap:18px; margin:0 24px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card {height:260px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card-copy {padding:36px 24px 18px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card h3 {font-size:32px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-category {font-size:17px!important; margin-top:4px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-slogan {font-size:10px!important; margin-top:16px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured {grid-column:1 / -1; grid-row:auto; height:360px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-card-copy {padding:46px 34px 34px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured h3 {font-size:56px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-category {font-size:24px!important; margin-top:8px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-slogan {font-size:12px!important; margin-top:18px!important;}
+}
+@media (max-width:600px) {
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-heading {padding:28px 20px 22px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-kicker {width:calc(100% - 45px); gap:6px; font-size:9px!important; letter-spacing:.16em!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-kicker::after {display:none;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-chapter {top:28px; right:20px; font-size:32px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-grid {grid-template-columns:minmax(0,1fr); gap:16px; margin:0 16px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card {height:280px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card-copy {padding:40px 26px 18px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card h3 {font-size:36px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-category {font-size:18px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-slogan {font-size:11px!important; margin-top:14px!important;}
+ html body.brs-page main#main#main #ingredient-systems a.brs-p18-details {min-height:44px; font-size:11px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured {height:440px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-card-copy {padding:52px 26px 40px;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured h3 {font-size:50px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-category {font-size:22px!important;}
+ html body.brs-page main#main#main #ingredient-systems .brs-p18-card--featured .brs-p18-slogan {font-size:14px!important; margin-top:26px!important;}
+}

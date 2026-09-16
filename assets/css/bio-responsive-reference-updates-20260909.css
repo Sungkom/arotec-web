@@ -1,0 +1,197 @@
+/* Scoped September 2026 reference content. Shared page sections remain unchanged. */
+html body.brs-page main#main#main .brs-reference-update {
+  padding: clamp(40px, 5vw, 80px) 5.3%;
+  color: #101a3f;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(166, 209, 232, .25), transparent 48%),
+    linear-gradient(145deg, #fff 0%, #f4fafc 58%, #edf7fc 100%);
+}
+html body.brs-page main#main#main .brs-reference-container {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+}
+html body.brs-page main#main#main .brs-reference-intro { max-width: 1240px; }
+html body.brs-page main#main#main .brs-reference-lead {
+  margin: 28px 0 16px;
+  font-size: clamp(17px, 1.65vw, 25px);
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+html body.brs-page main#main#main .brs-reference-description {
+  max-width: 1080px;
+  margin: 0;
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.65;
+  color: #3d4b63;
+}
+html body.brs-page main#main#main .brs-reference-rule {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 42px 0 24px;
+  text-align: center;
+}
+html body.brs-page main#main#main .brs-reference-rule::before,
+html body.brs-page main#main#main .brs-reference-rule::after {
+  content: "";
+  flex: 1 1 60px;
+  height: 1px;
+  background: #adc1d0;
+}
+html body.brs-page main#main#main .brs-reference-scope {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html body.brs-page main#main#main .brs-reference-scope > li {
+  position: relative;
+  padding: 12px 18px 0;
+  text-align: center;
+  min-width: 0;
+}
+html body.brs-page main#main#main .brs-reference-scope > li + li {
+  border-left: 1px solid #cad8e2;
+}
+html body.brs-page main#main#main .brs-reference-number {
+  color: #486a83;
+  font-size: 14px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+html body.brs-page main#main#main .brs-reference-scope .brs-reference-number {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+html body.brs-page main#main#main .brs-reference-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 14px;
+  border: 1px solid #243a5c;
+  border-radius: 50%;
+  color: #172b50;
+}
+html body.brs-page main#main#main .brs-reference-icon i {
+  font-size: 26px !important;
+  line-height: 1 !important;
+}
+html body.brs-page main#main#main .brs-reference-scope p {
+  margin: 0;
+  font-size: clamp(15px, 1.3vw, 20px);
+  line-height: 1.4;
+}
+html body.brs-page main#main#main .brs-reference-candidates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html body.brs-page main#main#main .brs-reference-candidate {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(10px, 1.3vw, 20px);
+  min-width: 0;
+  padding: 26px 16px 16px;
+  border: 1px solid #dfebf2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 16px rgba(27, 75, 107, .035);
+}
+html body.brs-page main#main#main .brs-reference-candidate > .brs-reference-number {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+html body.brs-page main#main#main .brs-reference-candidate-copy { min-width: 0; }
+html body.brs-page main#main#main .brs-reference-candidate-copy p {
+  margin: 8px 0 0;
+  color: #52748a;
+  font-size: clamp(14px, 1.15vw, 18px);
+  line-height: 1.4;
+}
+html body.brs-page main#main#main .brs-ref-crop {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: var(--brs-ref-ratio);
+  overflow: hidden;
+  isolation: isolate;
+  margin: 0;
+}
+html body.brs-page main#main#main .brs-ref-crop > img {
+  position: absolute !important;
+  display: block;
+  width: var(--brs-ref-width) !important;
+  height: var(--brs-ref-height) !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  left: var(--brs-ref-left) !important;
+  top: var(--brs-ref-top) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  object-fit: fill !important;
+}
+html body.brs-page main#main#main .brs-ref-photo { border-radius: 7px; }
+html body.brs-page main#main#main #chromgen .brs-ref-lotus-crop {
+  max-width: 154px;
+  margin-inline: auto;
+}
+@layer arotec-display-headings.spec {
+  html body.brs-page main#main#main #bioactive-compounds h2 {
+    margin: 0 !important;
+    font-size: clamp(32px, 4vw, 60px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -.035em !important;
+  }
+  html body.brs-page main#main#main #bioactive-compounds .brs-reference-rule h3 {
+    margin: 0 !important;
+    font-size: clamp(16px, 1.55vw, 23px) !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+    letter-spacing: .055em !important;
+  }
+  html body.brs-page main#main#main #bioactive-compounds .brs-reference-candidate h4 {
+    margin: 0 !important;
+    font-size: clamp(17px, 1.75vw, 27px) !important;
+    line-height: 1.25 !important;
+    font-weight: 500 !important;
+    letter-spacing: -.035em !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+@media (max-width: 760px) {
+  html body.brs-page main#main#main .brs-reference-scope {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+  html body.brs-page main#main#main .brs-reference-scope > li + li { border-left: 0; }
+  html body.brs-page main#main#main .brs-reference-scope > li:last-child {
+    grid-column: 1 / -1;
+  }
+  html body.brs-page main#main#main .brs-reference-candidates {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-auto-flow: row;
+    gap: 12px;
+  }
+  html body.brs-page main#main#main .brs-reference-rule { gap: 10px; }
+  html body.brs-page main#main#main .brs-reference-rule::before,
+  html body.brs-page main#main#main .brs-reference-rule::after { flex-basis: 12px; }
+  html body.brs-page main#main#main .brs-reference-candidate { padding-inline: 12px; }
+  html body.brs-page main#main#main #bioactive-compounds h2 br { display: none; }
+}

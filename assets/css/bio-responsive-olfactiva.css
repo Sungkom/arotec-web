@@ -1,0 +1,588 @@
+/* Olfactiva detail: native text and layout, source illustrations and chemical artwork. */
+html body.olf-page { --olf-ink: #0c1c39; --olf-copy: #344f6b; --olf-line: #bfd4df; --olf-paper: #f4f9fd; background: var(--olf-paper); }
+html body.olf-page main#main#main.olf-main.brs-main { --olf-gutter-left: max(24px, var(--arotec-content-left, 0px)); --olf-gutter-right: max(24px, var(--arotec-content-right, 0px)); width: 100% !important; max-width: none !important; margin: 0 !important; padding: var(--detail-header-space, 0px) 0 0 !important; color: var(--olf-ink); font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.olf-page main#main#main *, html body.olf-page main#main#main *::before, html body.olf-page main#main#main *::after { box-sizing: border-box; }
+html body.olf-page main#main#main :is(section, article, figure) { min-width: 0; }
+html body.olf-page main#main#main :is(figure, p, ul, ol) { margin: 0; }
+html body.olf-page main#main#main :is(ul, ol) { padding: 0; list-style: none; }
+html body.olf-page main#main#main p, html body.olf-page main#main#main li { color: var(--olf-copy); font-size: 17px !important; font-weight: 400; line-height: 1.5 !important; }
+html body.olf-page main#main#main sup { font-size: .52em; vertical-align: super; line-height: 0; }
+html body.olf-page main#main#main > :is(.olf-catalog, .olf-chapter) { width: 100% !important; max-width: none !important; margin-inline: 0 !important; padding-inline: 0 !important; }
+html body.olf-page main#main#main .olf-container { position: relative; width: calc(100% - var(--olf-gutter-left) - var(--olf-gutter-right)) !important; max-width: none !important; margin-inline: var(--olf-gutter-left) var(--olf-gutter-right) !important; padding-inline: 0 !important; }
+html body.olf-page main#main#main .olf-rule { display: block; flex: 1 1 auto; min-width: 24px; height: 1px; background: #7d97ac; }
+html body.olf-page main#main#main .olf-kicker { display: flex; align-items: center; gap: 24px; color: var(--olf-ink); font-size: clamp(15px, 1.5vw, 24px); font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+html body.olf-page main#main#main .olf-catalog { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(42px, 4.4vw, 72px) 50px; background: radial-gradient(ellipse at 100% 13%, #deedf480, transparent 28%), radial-gradient(ellipse at 0 77%, #e1f0f77d, transparent 32%), linear-gradient(120deg, #fff, #f0f7fb); }
+html body.olf-page main#main#main .olf-catalog::before { content: ""; position: absolute; z-index: -1; top: 32px; right: -90px; width: 400px; height: 230px; border: 1px solid #c7e3ef; border-radius: 50%; box-shadow: 0 18px 0 -1px #f6fbfd, 0 19px 0 #d8eaf2, 0 37px 0 -1px #f6fbfd, 0 38px 0 #deedf4; transform: rotate(27deg); opacity: .65; }
+html body.olf-page main#main#main .olf-catalog .olf-kicker { width: 68%; margin-bottom: 38px; }
+html body.olf-page main#main#main .olf-catalog-header { position: relative; }
+html body.olf-page main#main#main .olf-catalog-header h1 > span { display: block; }
+html body.olf-page main#main#main .olf-catalog-header h1 > span + span { margin-top: 16px; }
+html body.olf-page main#main#main .olf-catalog-header .olf-title-middle { font-size: .73em; letter-spacing: -.025em; }
+html body.olf-page main#main#main .olf-catalog-intro { position: relative; margin-top: 34px; padding-top: 29px; color: var(--olf-ink); font-size: clamp(19px, 1.85vw, 29px) !important; line-height: 1.35 !important; text-align: center; }
+html body.olf-page main#main#main .olf-catalog-intro::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: linear-gradient(to right, #40506a 43%, transparent 43%, transparent 57%, #40506a 57%); }
+html body.olf-page main#main#main .olf-catalog-banner { margin-block: 36px 48px !important; padding: 22px; border-radius: 19px; background: linear-gradient(100deg, #081731, #25364e); text-align: center; }
+html body.olf-page main#main#main .olf-ingredients { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: clamp(32px, 4.7vw, 74px) 5%; }
+html body.olf-page main#main#main .olf-ingredient { display: grid; grid-template-columns: minmax(0, .25fr) minmax(0, .32fr) minmax(0, .43fr); align-items: center; gap: 16px; min-width: 0; }
+html body.olf-page main#main#main .olf-ingredient-copy { min-width: 0; }
+html body.olf-page main#main#main .olf-ingredient-copy p { margin-top: 8px; font-size: clamp(15px, 1.4vw, 22px) !important; line-height: 1.3 !important; }
+html body.olf-page main#main#main .olf-crop { position: relative; display: block; width: 100%; aspect-ratio: var(--crop-ratio); margin: 0; overflow: hidden; }
+html body.olf-page main#main#main .olf-crop > img { position: absolute; top: var(--crop-top); left: var(--crop-left); display: block; width: var(--crop-width); height: auto !important; max-width: none !important; margin: 0; }
+html body.olf-page main#main#main .olf-ingredient-formula { mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-catalog-end { height: 48px; margin-top: 55px; border-bottom: 1px solid #c6deeb; }
+html body.olf-page main#main#main .olf-chapter { padding-block: 40px; overflow: hidden; scroll-margin-top: calc(var(--detail-header-space, 100px) + 20px); background-color: #eef7fa; background-image: radial-gradient(ellipse at 93% 12%, #cfe8f07d, transparent 36%), linear-gradient(90deg, #d7e7f233 1px, transparent 1px), linear-gradient(#d7e7f233 1px, transparent 1px); background-size: auto, 44px 44px, 44px 44px; }
+html body.olf-page main#main#main .olf-chapter + .olf-chapter { border-top: 1px solid #dce9f0; }
+html body.olf-page main#main#main .olf-chapter-layout { display: grid; grid-template-columns: minmax(250px, .3fr) minmax(0, .7fr); gap: clamp(24px, 2.1vw, 40px); align-items: stretch; }
+html body.olf-page main#main#main .olf-sidebar { position: relative; isolation: isolate; display: flex; flex-direction: column; min-width: 0; overflow: hidden; padding: clamp(25px, 2.5vw, 44px); border-radius: 34px; color: #fff; background: repeating-linear-gradient(106deg, transparent 0 92px, #00193624 92px 180px), linear-gradient(112deg, #041932, #003d52 75%, #095867); box-shadow: 0 10px 24px #14475c10; }
+html body.olf-page main#main#main .olf-sidebar::before { content: ""; position: absolute; z-index: -1; top: 38px; right: 10px; width: 134px; height: 134px; border: 2px solid #b3e5ef14; border-radius: 50%; }
+html body.olf-page main#main#main .olf-sidebar::after { content: ""; position: absolute; z-index: -1; bottom: -120px; left: -140px; width: 680px; height: 430px; border: 2px solid #b3e5ef14; border-radius: 50%; transform: rotate(24deg); }
+html body.olf-page main#main#main .olf-sidebar .olf-kicker { gap: 14px; color: #a4d8e2; font-size: clamp(12px, 1.05vw, 17px); letter-spacing: .23em; white-space: nowrap; }
+html body.olf-page main#main#main .olf-sidebar .olf-rule { min-width: 20px; background: #8fc1cc; }
+html body.olf-page main#main#main .olf-sidebar h2 { margin-top: 64px !important; }
+html body.olf-page main#main#main .olf-sidebar-brand { display: block; margin-bottom: 37px; font-size: clamp(25px, 2.5vw, 42px); font-weight: 700; line-height: 1.2; letter-spacing: -.03em; }
+html body.olf-page main#main#main .olf-sidebar-title { display: block; font-size: clamp(25px, 2.1vw, 37px); font-weight: 400; line-height: 1.38; letter-spacing: -.025em; }
+html body.olf-page main#main#main .olf-accent-rule { width: 126px; height: 5px; margin-block: 35px; border-radius: 9px; background: #92d9df; }
+html body.olf-page main#main#main .olf-sidebar .olf-sidebar-description { color: #d8e9f0; font-size: clamp(16px, 1.13vw, 19px) !important; line-height: 1.75 !important; }
+html body.olf-page main#main#main .olf-pathway { margin-top: 65px; }
+html body.olf-page main#main#main .olf-sidebar .olf-pathway-label { margin-bottom: 36px; color: #95d4df; font-size: 13px !important; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+html body.olf-page main#main#main .olf-pathway ol { position: relative; }
+html body.olf-page main#main#main .olf-pathway ol::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 13px; width: 1px; background: #8cced8; }
+html body.olf-page main#main#main .olf-pathway li { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 17px; padding-bottom: 54px; }
+html body.olf-page main#main#main .olf-pathway li:last-child { padding-bottom: 12px; }
+html body.olf-page main#main#main .olf-step-number { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #91d7df; color: #00384d; font-size: 15px; font-weight: 700; }
+html body.olf-page main#main#main .olf-sidebar .olf-pathway li p { margin-top: 10px; color: #bad6e2; font-size: 15px !important; line-height: 1.6 !important; }
+html body.olf-page main#main#main .olf-science-callout { margin-block: 70px 80px; padding: 23px; border-radius: 22px; background: #237e92a6; }
+html body.olf-page main#main#main .olf-sidebar .olf-science-callout p { margin-bottom: 10px; color: #b9e1e8; font-size: 11px !important; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+html body.olf-page main#main#main .olf-science-callout strong { display: block; color: white; font-size: clamp(21px, 1.65vw, 29px); font-weight: 700; line-height: 1.35; }
+html body.olf-page main#main#main .olf-sidebar .olf-sidebar-footer { margin-top: auto; color: #8fb4c3; font-size: 10px !important; letter-spacing: .18em; text-transform: uppercase; }
+html body.olf-page main#main#main .olf-chapter-content { min-width: 0; padding-top: 34px; }
+html body.olf-page main#main#main .olf-block-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 25px; padding-inline: 16px; }
+html body.olf-page main#main#main .olf-block-heading .olf-rule { min-width: 30px; background: #a8c7d5; }
+html body.olf-page main#main#main .olf-panel { position: relative; min-width: 0; padding: clamp(16px, 1.8vw, 30px); border: 1px solid #c5d6e2; border-radius: 29px; background: #ffffffed; box-shadow: 0 10px 19px #12466010; }
+html body.olf-page main#main#main .olf-interface-grid { display: grid; grid-template-columns: minmax(0, .43fr) minmax(0, .57fr); gap: 23px; align-items: stretch; }
+html body.olf-page main#main#main .olf-profile { padding: 14px; border: 1px solid #d0dce7; border-radius: 21px; background: linear-gradient(130deg, #fff, #f7fbfe); }
+html body.olf-page main#main#main .olf-profile-heading { padding: 13px 8px; border-radius: 12px 12px 0 0; background: #1c385b; }
+html body.olf-page main#main#main .olf-profile-brand { display: grid; grid-template-columns: 31% minmax(0, 1fr); gap: 10px; align-items: center; padding-block: 24px; }
+html body.olf-page main#main#main .olf-brand-icon { mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-profile-brand .olf-brand-name { color: #0a1d3b; font-size: clamp(22px, 2.1vw, 35px) !important; font-weight: 700; line-height: 1.25 !important; letter-spacing: -.045em; }
+html body.olf-page main#main#main .olf-profile-brand p:not(.olf-brand-name) { margin-top: 8px; color: #152f52; font-size: clamp(14px, 1.1vw, 19px) !important; font-weight: 600; line-height: 1.3 !important; }
+html body.olf-page main#main#main .olf-profile .olf-profile-pill { padding: 12px 8px; border-radius: 10px; background: #1c385b; color: #fff; font-size: clamp(12px, 1.1vw, 18px) !important; font-weight: 600; text-align: center; text-transform: uppercase; }
+html body.olf-page main#main#main .olf-profile h5 { margin-top: 20px !important; padding-top: 18px; border-top: 1px dotted #aabacb; }
+html body.olf-page main#main#main .olf-checks { display: grid; gap: 16px; margin-top: 20px; }
+html body.olf-page main#main#main .olf-checks li { position: relative; padding-left: 27px; color: #223a59; font-size: clamp(14px, 1.15vw, 18px) !important; line-height: 1.4 !important; }
+html body.olf-page main#main#main .olf-checks li::before { content: ""; position: absolute; left: 0; top: 1px; width: 19px; height: 19px; border-radius: 50%; background: #153458; }
+html body.olf-page main#main#main .olf-checks li::after { content: ""; position: absolute; top: 5px; left: 5px; width: 9px; height: 5px; border-left: 2px solid white; border-bottom: 2px solid white; transform: rotate(-45deg); }
+html body.olf-page main#main#main .olf-anatomy { display: flex; align-items: center; padding: 12px; border: 1px solid #d1dfe7; border-radius: 22px; background: #f6fbff; overflow: hidden; }
+html body.olf-page main#main#main .olf-connector { position: relative; width: 2px; height: 66px; margin: 0 auto 22px; background: #2a8298; }
+html body.olf-page main#main#main .olf-connector::before { content: ""; position: absolute; top: 24px; left: -7px; width: 16px; height: 16px; border-radius: 50%; background: #2a8298; }
+html body.olf-page main#main#main .olf-connector::after { content: ""; position: absolute; bottom: 0; left: -4px; width: 10px; height: 10px; border-radius: 50%; background: #2a8298; }
+html body.olf-page main#main#main .olf-inline-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 16px; }
+html body.olf-page main#main#main .olf-activation > p { color: #314862; font-size: clamp(17px, 1.45vw, 23px) !important; line-height: 1.45 !important; }
+html body.olf-page main#main#main .olf-properties { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 26px; }
+html body.olf-page main#main#main .olf-properties li { min-width: 0; padding-inline: 10px; text-align: center; }
+html body.olf-page main#main#main .olf-properties li + li { border-left: 1px solid #d1dfe8; }
+html body.olf-page main#main#main .olf-property-icon { width: 60px; margin: 0 auto 12px; mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-properties p { font-size: 14px !important; line-height: 1.35 !important; }
+html body.olf-page main#main#main .olf-network-grid { display: grid; grid-template-columns: minmax(0, .37fr) minmax(0, .63fr); gap: 23px; align-items: stretch; }
+html body.olf-page main#main#main .olf-anatomy--network { padding: 12px; }
+html body.olf-page main#main#main .olf-pathway-diagram { padding: 16px; border: 1px solid #d4e1e9; border-radius: 22px; background: #f6fbff; }
+html body.olf-page main#main#main .olf-pathway-top { display: grid; grid-template-columns: minmax(0, 1fr) 21%; gap: 12px; align-items: center; }
+html body.olf-page main#main#main .olf-neural-steps { display: grid; gap: 21px; }
+html body.olf-page main#main#main .olf-neural-steps > li { position: relative; display: grid; grid-template-columns: 32% minmax(0, 1fr); align-items: center; gap: 10px; padding: 8px; border: 1px solid #aebfd1; border-radius: 7px; background: #ffffffd9; }
+html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after { content: ""; position: absolute; bottom: -19px; left: calc(50% - 4px); width: 8px; height: 16px; background: #284a6e; clip-path: polygon(42% 0, 58% 0, 58% 60%, 100% 60%, 50% 100%, 0 60%, 42% 60%); }
+html body.olf-page main#main#main .olf-neural-icon { mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-neural-steps p { margin-top: 3px; font-size: 12px !important; line-height: 1.3 !important; }
+html body.olf-page main#main#main .olf-ensheathing { padding-left: 10px; border-left: 1px dotted #617b92; font-size: 11px !important; line-height: 1.4 !important; }
+html body.olf-page main#main#main .olf-brain-network { margin-top: 22px; overflow: hidden; border: 1px solid #b8cbdc; border-radius: 8px; background: #fff; }
+html body.olf-page main#main#main .olf-brain-network > h4 { padding: 12px 8px; background: #1d3c61; }
+html body.olf-page main#main#main .olf-brain-visual { display: grid; grid-template-columns: minmax(0, 1fr) 35%; gap: 8px; align-items: center; padding: 10px 8px; }
+html body.olf-page main#main#main .olf-brain-legend { display: grid; gap: 12px; }
+html body.olf-page main#main#main .olf-brain-legend li { display: flex; align-items: center; gap: 7px; font-size: 11px !important; line-height: 1.25 !important; }
+html body.olf-page main#main#main .olf-brain-legend li > span { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--region-color); }
+html body.olf-page main#main#main .olf-reciprocal { padding: 3px 8px 12px; font-size: 12px !important; text-align: center; }
+html body.olf-page main#main#main .olf-reciprocal > span:first-child { color: #663799; font-size: 24px; }
+html body.olf-page main#main#main .olf-regions-panel { padding-top: 35px; }
+html body.olf-page main#main#main .olf-region-branch { position: absolute; top: 18px; left: 12%; right: 12%; height: 16px; border-top: 1px solid #44617b; }
+html body.olf-page main#main#main .olf-region-branch::before { content: ""; position: absolute; bottom: 100%; left: 50%; height: 18px; border-left: 1px solid #44617b; }
+html body.olf-page main#main#main .olf-regions { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; }
+html body.olf-page main#main#main .olf-region { position: relative; padding-bottom: 14px; border: 1px solid color-mix(in srgb, var(--region-color) 35%, white); border-radius: 11px; background: linear-gradient(#fff, #f9fcff); }
+html body.olf-page main#main#main .olf-region::before { content: ""; position: absolute; left: calc(50% - 3px); top: -18px; width: 6px; height: 17px; background: #46637b; clip-path: polygon(40% 0, 60% 0, 60% 64%, 100% 64%, 50% 100%, 0 64%, 40% 64%); }
+html body.olf-page main#main#main .olf-region h4 { display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 10px 5px; border-radius: 9px 9px 0 0; background: var(--region-color); }
+html body.olf-page main#main#main .olf-region-icon { width: 83%; margin: 13px auto; mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-region p { margin: 0 10px; padding-top: 12px; border-top: 1px solid color-mix(in srgb, var(--region-color) 40%, white); font-size: 13px !important; line-height: 1.45 !important; }
+html body.olf-page main#main#main .olf-chapter--responses .olf-sidebar { background: linear-gradient(112deg, #061d3b, #005e69); }
+html body.olf-page main#main#main .olf-signaling-panel { padding: 12px; border-radius: 24px; background: #f7fcfe; box-shadow: none; }
+html body.olf-page main#main#main .olf-signaling-banner { margin: -12px 18px 20px !important; padding: 15px 18px; border-radius: 28px; background: linear-gradient(100deg, #10315d, #129b9d); }
+html body.olf-page main#main#main .olf-signaling-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+html body.olf-page main#main#main .olf-signal-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal-color) 36%, white); border-radius: 13px; background: #fcfeff; }
+html body.olf-page main#main#main .olf-signal-card h5 { display: flex; flex-direction: column; justify-content: center; min-height: 68px; padding: 12px 8px; background: var(--signal-color); }
+html body.olf-page main#main#main .olf-signal-body { display: grid; grid-template-columns: minmax(0, .43fr) minmax(0, .57fr); gap: 12px; flex: 1; align-items: center; padding: 16px 12px; }
+html body.olf-page main#main#main .olf-signal-art { mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-signal-body ul { display: grid; gap: 11px; }
+html body.olf-page main#main#main .olf-signal-body li { position: relative; padding-left: 14px; color: #30445f; font-size: clamp(13px, 1vw, 17px) !important; line-height: 1.35 !important; }
+html body.olf-page main#main#main .olf-signal-body li::before { content: ""; position: absolute; top: .45em; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--signal-color); }
+html body.olf-page main#main#main .olf-signal-note { margin: 0 14px; padding: 12px 2px; border-top: 1px dotted #89a8c3; color: #365b86; font-size: 13px !important; line-height: 1.35 !important; text-align: center; }
+html body.olf-page main#main#main .olf-outcomes-panel { padding: 12px; background: #f7fcfe; box-shadow: none; }
+html body.olf-page main#main#main .olf-outcome-group { overflow: hidden; border: 1px solid #b9aacd; border-radius: 13px; background: #fbf9ff; }
+html body.olf-page main#main#main .olf-outcome-group > h4 { padding: 12px 10px; background: #655085; }
+html body.olf-page main#main#main .olf-outcome-group--wellbeing { margin-top: 9px; border-color: #a8c7cb; background: #f9fdfd; }
+html body.olf-page main#main#main .olf-outcome-group--wellbeing > h4 { background: #417b7b; }
+html body.olf-page main#main#main .olf-outcomes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 0; padding: 19px 10px; }
+html body.olf-page main#main#main .olf-outcomes > li { min-width: 0; padding-inline: 9px; text-align: center; }
+html body.olf-page main#main#main .olf-outcomes > li:not(:nth-child(5n + 1)) { border-left: 1px dotted #acbad0; }
+html body.olf-page main#main#main .olf-outcome-icon { width: 60px; max-width: 90%; margin: 0 auto 11px; mix-blend-mode: multiply; }
+html body.olf-page main#main#main .olf-outcomes p { font-size: 14px !important; line-height: 1.3 !important; }
+html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcome-icon { width: 58px; }
+html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcomes p { font-size: 12px !important; }
+@layer arotec-display-headings.spec {
+  html body.olf-page main#main#main :is(h1,h2,h3,h4,h5) { margin: 0 !important; color: var(--olf-ink) !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-style: normal !important; font-weight: 500 !important; font-size: inherit !important; line-height: 1.25 !important; letter-spacing: -.02em !important; text-transform: none !important; text-wrap: initial !important; overflow-wrap: normal !important; word-break: normal !important; }
+  html body.olf-page main#main#main .olf-catalog-header h1 { font-size: clamp(37px, 4.35vw, 68px) !important; font-weight: 400 !important; line-height: 1.15 !important; letter-spacing: -.025em !important; }
+  html body.olf-page main#main#main .olf-catalog-banner { margin-block: 36px 48px !important; color: #fff !important; font-size: clamp(21px, 2.3vw, 34px) !important; font-weight: 700 !important; letter-spacing: .03em !important; text-transform: uppercase !important; }
+  html body.olf-page main#main#main .olf-ingredient h3 { font-size: clamp(16px, 1.55vw, 25px) !important; font-weight: 700 !important; line-height: 1.25 !important; overflow-wrap: anywhere !important; }
+  html body.olf-page main#main#main .olf-sidebar h2 { margin-top: 64px !important; color: #fff !important; }
+  html body.olf-page main#main#main .olf-sidebar .olf-pathway h3 { color: #fff !important; font-size: clamp(17px, 1.35vw, 23px) !important; font-weight: 700 !important; line-height: 1.3 !important; }
+  html body.olf-page main#main#main .olf-block-heading h3 { color: #365f77 !important; font-size: clamp(12px, 1vw, 17px) !important; font-weight: 700 !important; letter-spacing: .17em !important; line-height: 1.6 !important; text-transform: uppercase !important; }
+  html body.olf-page main#main#main .olf-profile-heading, html body.olf-page main#main#main .olf-brain-network > h4 { color: white !important; font-size: clamp(13px, 1.25vw, 20px) !important; font-weight: 600 !important; text-align: center !important; text-transform: uppercase !important; }
+  html body.olf-page main#main#main .olf-profile h5 { margin-top: 20px !important; color: #213b5d !important; font-size: clamp(16px, 1.4vw, 23px) !important; font-weight: 700 !important; }
+  html body.olf-page main#main#main .olf-inline-heading h4 { font-size: clamp(21px, 1.85vw, 31px) !important; font-weight: 700 !important; text-transform: uppercase !important; }
+  html body.olf-page main#main#main .olf-neural-steps h4 { font-size: clamp(12px, .95vw, 16px) !important; font-weight: 600 !important; letter-spacing: -.025em !important; }
+  html body.olf-page main#main#main .olf-region h4 { color: white !important; font-size: clamp(10px, .8vw, 14px) !important; font-weight: 600 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; text-transform: uppercase !important; text-align: center !important; overflow-wrap: anywhere !important; }
+  html body.olf-page main#main#main .olf-signaling-banner { margin: -12px 18px 20px !important; color: white !important; font-size: clamp(15px, 1.45vw, 23px) !important; font-weight: 700 !important; letter-spacing: .025em !important; text-transform: uppercase !important; text-align: center !important; }
+  html body.olf-page main#main#main .olf-signal-card h5 { color: #fff !important; font-size: clamp(13px, 1.1vw, 19px) !important; font-weight: 700 !important; line-height: 1.2 !important; text-transform: uppercase !important; text-align: center !important; letter-spacing: .01em !important; }
+  html body.olf-page main#main#main .olf-outcome-group > h4 { color: white !important; font-size: clamp(14px, 1.25vw, 21px) !important; font-weight: 700 !important; text-transform: uppercase !important; text-align: center !important; letter-spacing: .01em !important; }
+}
+@media (max-width: 1199px) {
+  html body.olf-page main#main#main .olf-chapter-layout { grid-template-columns: minmax(240px, .29fr) minmax(0, .71fr); gap: 22px; }
+  html body.olf-page main#main#main .olf-sidebar { padding: 25px; }
+  html body.olf-page main#main#main .olf-sidebar .olf-kicker { font-size: 12px; letter-spacing: .16em; gap: 10px; }
+  html body.olf-page main#main#main .olf-sidebar-brand { font-size: 27px; }
+  html body.olf-page main#main#main .olf-sidebar-title { font-size: 27px; }
+  html body.olf-page main#main#main .olf-science-callout { padding: 19px; margin-top: 50px; }
+  html body.olf-page main#main#main .olf-interface-grid, html body.olf-page main#main#main .olf-network-grid { gap: 14px; }
+  html body.olf-page main#main#main .olf-profile { padding: 10px; }
+  html body.olf-page main#main#main .olf-pathway-diagram { padding: 10px; }
+  html body.olf-page main#main#main .olf-profile-brand { grid-template-columns: 28% minmax(0, 1fr); gap: 7px; }
+  html body.olf-page main#main#main .olf-profile-brand .olf-brand-name { font-size: 24px !important; }
+  html body.olf-page main#main#main .olf-signal-body { gap: 8px; padding: 13px 9px; }
+}
+@media (max-width: 1000px) {
+  html body.olf-page main#main#main .olf-chapter-layout { grid-template-columns: minmax(0, 1fr); }
+  html body.olf-page main#main#main .olf-sidebar { padding: 32px; }
+  html body.olf-page main#main#main .olf-sidebar .olf-kicker { max-width: 460px; }
+  html body.olf-page main#main#main .olf-sidebar h2 { margin-top: 28px !important; }
+  html body.olf-page main#main#main .olf-sidebar-brand { margin-bottom: 18px; font-size: 34px; }
+  html body.olf-page main#main#main .olf-sidebar-title { font-size: 32px; }
+  html body.olf-page main#main#main .olf-sidebar-title br { display: none; }
+  html body.olf-page main#main#main .olf-sidebar-description { max-width: 660px; }
+  html body.olf-page main#main#main .olf-accent-rule { margin-block: 24px; }
+  html body.olf-page main#main#main .olf-pathway { margin-top: 32px; }
+  html body.olf-page main#main#main .olf-pathway ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+  html body.olf-page main#main#main .olf-pathway ol::before { display: none; }
+  html body.olf-page main#main#main .olf-pathway li { padding-bottom: 0; }
+  html body.olf-page main#main#main .olf-pathway-label { margin-bottom: 22px; }
+  html body.olf-page main#main#main .olf-science-callout { margin-block: 32px; max-width: 410px; }
+  html body.olf-page main#main#main .olf-chapter-content { padding-top: 8px; }
+  html body.olf-page main#main#main .olf-ingredients { gap: 38px 25px; }
+  html body.olf-page main#main#main .olf-ingredient { gap: 10px; grid-template-columns: minmax(0,.25fr) minmax(0,.35fr) minmax(0,.4fr); }
+  html body.olf-page main#main#main .olf-ingredient-copy p { font-size: 15px !important; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main .olf-sidebar h2 { margin-top: 28px !important; }
+    html body.olf-page main#main#main .olf-block-heading h3 { font-size: 13px !important; }
+    html body.olf-page main#main#main .olf-profile-heading, html body.olf-page main#main#main .olf-brain-network > h4 { font-size: 17px !important; }
+    html body.olf-page main#main#main .olf-neural-steps h4 { font-size: 14px !important; }
+    html body.olf-page main#main#main .olf-signal-card h5 { font-size: 16px !important; }
+    html body.olf-page main#main#main .olf-region h4 { font-size: 11px !important; }
+  }
+}
+@media (max-width: 700px) {
+  html body.olf-page main#main#main.olf-main.brs-main { --olf-gutter-left: 20px; --olf-gutter-right: 20px; }
+  html body.olf-page main#main#main .olf-catalog { padding-block: 32px 24px; }
+  html body.olf-page main#main#main .olf-catalog .olf-kicker { width: 100%; gap: 16px; margin-bottom: 30px; font-size: 14px; }
+  html body.olf-page main#main#main .olf-catalog-header h1 > span + span { margin-top: 18px; }
+  html body.olf-page main#main#main .olf-catalog-header .olf-title-middle { font-size: .74em; }
+  html body.olf-page main#main#main .olf-catalog-intro { margin-top: 26px; padding-top: 25px; font-size: 18px !important; }
+  html body.olf-page main#main#main .olf-desktop-break { display: none; }
+  html body.olf-page main#main#main .olf-catalog-banner { padding: 18px 14px; border-radius: 14px; }
+  html body.olf-page main#main#main .olf-ingredients { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; gap: 32px; }
+  html body.olf-page main#main#main .olf-ingredient { grid-template-columns: minmax(68px,.25fr) minmax(0,.34fr) minmax(0,.41fr); gap: 12px; }
+  html body.olf-page main#main#main .olf-ingredient-copy p { font-size: 16px !important; }
+  html body.olf-page main#main#main .olf-catalog-end { margin-top: 25px; height: 25px; }
+  html body.olf-page main#main#main .olf-chapter { padding-block: 25px; }
+  html body.olf-page main#main#main .olf-sidebar { border-radius: 24px; padding: 28px 24px; }
+  html body.olf-page main#main#main .olf-sidebar-brand { font-size: 32px; }
+  html body.olf-page main#main#main .olf-sidebar-title { font-size: 29px; }
+  html body.olf-page main#main#main .olf-pathway ol { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  html body.olf-page main#main#main .olf-pathway li { padding-bottom: 0; }
+  html body.olf-page main#main#main .olf-pathway ol::before { display: block; bottom: 25px; }
+  html body.olf-page main#main#main .olf-science-callout { margin-block: 32px; }
+  html body.olf-page main#main#main .olf-block-heading { padding-inline: 3px; margin-bottom: 18px; }
+  html body.olf-page main#main#main .olf-block-heading .olf-rule { min-width: 18px; }
+  html body.olf-page main#main#main .olf-panel { padding: 17px; border-radius: 21px; }
+  html body.olf-page main#main#main .olf-interface-grid, html body.olf-page main#main#main .olf-network-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  html body.olf-page main#main#main .olf-profile { padding: 16px; }
+  html body.olf-page main#main#main .olf-profile-brand { grid-template-columns: 90px minmax(0, 1fr); gap: 20px; max-width: 360px; margin-inline: auto; }
+  html body.olf-page main#main#main .olf-profile-brand .olf-brand-name { font-size: 34px !important; }
+  html body.olf-page main#main#main .olf-profile-brand p:not(.olf-brand-name) { font-size: 18px !important; }
+  html body.olf-page main#main#main .olf-profile .olf-profile-pill { font-size: 17px !important; }
+  html body.olf-page main#main#main .olf-checks li { font-size: 16px !important; }
+  html body.olf-page main#main#main .olf-anatomy--network { width: min(100%, 350px); margin-inline: auto; }
+  html body.olf-page main#main#main .olf-activation > p { font-size: 17px !important; }
+  html body.olf-page main#main#main .olf-properties { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 0; }
+  html body.olf-page main#main#main .olf-properties li:nth-child(odd) { border-left: 0; }
+  html body.olf-page main#main#main .olf-properties p { font-size: 14px !important; }
+  html body.olf-page main#main#main .olf-pathway-diagram { padding: 13px; }
+  html body.olf-page main#main#main .olf-pathway-top { grid-template-columns: minmax(0, 1fr); }
+  html body.olf-page main#main#main .olf-ensheathing { padding: 9px 12px; font-size: 12px !important; }
+  html body.olf-page main#main#main .olf-ensheathing br + br { display: none; }
+  html body.olf-page main#main#main .olf-brain-legend { gap: 13px; }
+  html body.olf-page main#main#main .olf-brain-legend li { font-size: 11px !important; }
+  html body.olf-page main#main#main .olf-regions { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  html body.olf-page main#main#main .olf-region { display: grid; grid-template-columns: 90px minmax(0, 1fr); align-items: center; padding: 0 12px 12px; }
+  html body.olf-page main#main#main .olf-region h4 { grid-column: 1 / -1; min-height: 0; margin-inline: -12px !important; padding: 12px; }
+  html body.olf-page main#main#main .olf-region-icon { width: 78px; margin: 13px 0 0; }
+  html body.olf-page main#main#main .olf-region p { margin: 10px 0 0 12px; padding: 0 0 0 12px; border-top: 0; border-left: 1px solid #d0dce6; font-size: 15px !important; }
+  html body.olf-page main#main#main .olf-region::before, html body.olf-page main#main#main .olf-region-branch { display: none; }
+  html body.olf-page main#main#main .olf-signaling-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.olf-page main#main#main .olf-signaling-panel { padding: 12px; }
+  html body.olf-page main#main#main .olf-signaling-banner { margin: 0 0 16px !important; padding: 15px 12px; }
+  html body.olf-page main#main#main .olf-signal-body { padding: 18px 12px; gap: 16px; }
+  html body.olf-page main#main#main .olf-signal-body li { font-size: 16px !important; }
+  html body.olf-page main#main#main .olf-signal-note { font-size: 14px !important; }
+  html body.olf-page main#main#main .olf-outcomes-panel { padding: 10px; }
+  html body.olf-page main#main#main .olf-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 0; }
+  html body.olf-page main#main#main .olf-outcomes > li { border-left: 0 !important; }
+  html body.olf-page main#main#main .olf-outcomes > li:nth-child(even) { border-left: 1px dotted #acbad0 !important; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcomes p { font-size: 13px !important; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main .olf-catalog-header h1 { font-size: clamp(32px, 7.5vw, 50px) !important; line-height: 1.15 !important; }
+    html body.olf-page main#main#main .olf-catalog-banner { margin-block: 30px !important; font-size: 20px !important; }
+    html body.olf-page main#main#main .olf-ingredient h3 { font-size: clamp(16px, 4.2vw, 23px) !important; }
+    html body.olf-page main#main#main .olf-sidebar .olf-pathway h3 { font-size: 20px !important; }
+    html body.olf-page main#main#main .olf-block-heading h3 { font-size: 12px !important; letter-spacing: .1em !important; }
+    html body.olf-page main#main#main .olf-profile h5 { font-size: 21px !important; }
+    html body.olf-page main#main#main .olf-inline-heading h4 { font-size: 22px !important; }
+    html body.olf-page main#main#main .olf-region h4 { font-size: 16px !important; }
+    html body.olf-page main#main#main .olf-signaling-banner { margin: 0 0 16px !important; font-size: 16px !important; }
+    html body.olf-page main#main#main .olf-signal-card h5 { font-size: 17px !important; }
+    html body.olf-page main#main#main .olf-outcome-group > h4 { font-size: 16px !important; }
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html body.olf-page main#main#main .olf-catalog-header { animation: olf-intro-reveal .65s ease-out both; }
+  @keyframes olf-intro-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+/* Desktop page frames are full-width; only foreground content has gutters. */
+@media (min-width: 1024px) {
+  html body.olf-page {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    overflow-x: clip;
+    background: #eef7fa;
+  }
+  html body.olf-page #site-shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    border-inline: 0 !important;
+    overflow: visible !important;
+    background: #eef7fa;
+  }
+  html body.olf-page main#main#main.olf-main.brs-main {
+    --olf-gutter-left: clamp(24px, 2vw, 40px);
+    --olf-gutter-right: clamp(24px, 2vw, 40px);
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    border-inline: 0 !important;
+    overflow: visible !important;
+    background: #eef7fa;
+  }
+  html body.olf-page main#main#main > :is(.olf-catalog, .olf-chapter) {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+  html body.olf-page main#main#main > :is(.olf-catalog, .olf-chapter) > .olf-container {
+    width: calc(100% - var(--olf-gutter-left) - var(--olf-gutter-right)) !important;
+    max-width: none !important;
+    margin-inline: var(--olf-gutter-left) var(--olf-gutter-right) !important;
+    padding-inline: 0 !important;
+  }
+}
+
+/* Desktop content scale: larger diagrams and readable supporting information. */
+@media (min-width: 1024px) {
+  html body.olf-page main#main#main .olf-chapter-layout {
+    grid-template-columns: clamp(250px, 20vw, 380px) minmax(0, 1fr);
+    gap: clamp(22px, 1.8vw, 32px);
+  }
+  html body.olf-page main#main#main .olf-sidebar { padding: clamp(24px, 1.8vw, 34px); }
+  html body.olf-page main#main#main .olf-sidebar-brand { font-size: clamp(27px, 2.1vw, 40px); }
+  html body.olf-page main#main#main .olf-sidebar-title { font-size: clamp(27px, 2.1vw, 38px); }
+  html body.olf-page main#main#main .olf-sidebar .olf-sidebar-description { font-size: clamp(17px, 1.05vw, 20px) !important; line-height: 1.7 !important; }
+  html body.olf-page main#main#main .olf-sidebar .olf-pathway li p { font-size: clamp(15px, .95vw, 18px) !important; }
+  html body.olf-page main#main#main .olf-chapter-content { padding-top: 26px; }
+  html body.olf-page main#main#main .olf-panel { padding: clamp(16px, 1.3vw, 24px); }
+  html body.olf-page main#main#main .olf-block-heading { padding-inline: 4px; margin-bottom: 23px; }
+  html body.olf-page main#main#main .olf-ingredients { column-gap: 3%; row-gap: clamp(36px, 3.5vw, 64px); }
+  html body.olf-page main#main#main .olf-ingredient-copy p { font-size: clamp(18px, 1.3vw, 24px) !important; line-height: 1.35 !important; }
+  html body.olf-page main#main#main .olf-interface-grid, html body.olf-page main#main#main .olf-network-grid { gap: clamp(16px, 1.4vw, 24px); }
+  html body.olf-page main#main#main .olf-profile { padding: clamp(12px, 1vw, 18px); }
+  html body.olf-page main#main#main .olf-profile-brand { grid-template-columns: clamp(64px, 4.7vw, 90px) minmax(0, 1fr); gap: 12px; }
+  html body.olf-page main#main#main .olf-profile-brand p:not(.olf-brand-name) { font-size: clamp(16px, 1.1vw, 20px) !important; }
+  html body.olf-page main#main#main .olf-checks { gap: 18px; }
+  html body.olf-page main#main#main .olf-checks li { font-size: clamp(16px, 1.1vw, 20px) !important; line-height: 1.45 !important; }
+  html body.olf-page main#main#main .olf-anatomy, html body.olf-page main#main#main .olf-anatomy--network { padding: 8px; }
+  html body.olf-page main#main#main .olf-activation > p { font-size: clamp(18px, 1.3vw, 24px) !important; }
+  html body.olf-page main#main#main .olf-property-icon { width: clamp(64px, 4.7vw, 90px); margin-bottom: 15px; }
+  html body.olf-page main#main#main .olf-properties p { font-size: clamp(16px, 1vw, 19px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-pathway-diagram { padding: clamp(10px, 1vw, 18px); }
+  html body.olf-page main#main#main .olf-neural-steps { gap: 24px; }
+  html body.olf-page main#main#main .olf-neural-steps > li { padding: clamp(9px, .8vw, 15px); }
+  html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after { bottom: -22px; height: 19px; }
+  html body.olf-page main#main#main .olf-neural-steps p { font-size: clamp(14px, .95vw, 17px) !important; line-height: 1.35 !important; }
+  html body.olf-page main#main#main .olf-ensheathing { font-size: clamp(12px, .8vw, 15px) !important; }
+  html body.olf-page main#main#main .olf-brain-visual { gap: 12px; padding: 16px 10px; }
+  html body.olf-page main#main#main .olf-brain-legend { gap: 16px; }
+  html body.olf-page main#main#main .olf-brain-legend li { font-size: clamp(13px, .9vw, 17px) !important; line-height: 1.3 !important; }
+  html body.olf-page main#main#main .olf-brain-legend li > span { flex-basis: 13px; width: 13px; height: 13px; }
+  html body.olf-page main#main#main .olf-reciprocal { font-size: clamp(14px, .95vw, 18px) !important; }
+  html body.olf-page main#main#main .olf-regions-panel { padding-top: 35px; }
+  html body.olf-page main#main#main .olf-region h4 { min-height: 60px; }
+  html body.olf-page main#main#main .olf-region-icon { width: 88%; margin-block: 16px; }
+  html body.olf-page main#main#main .olf-region p { font-size: clamp(15px, 1vw, 19px) !important; line-height: 1.5 !important; }
+  html body.olf-page main#main#main .olf-signaling-panel { padding: 12px; }
+  html body.olf-page main#main#main .olf-signaling-grid { gap: 16px; }
+  html body.olf-page main#main#main .olf-signal-body { gap: clamp(10px, 1vw, 18px); padding: clamp(14px, 1vw, 20px) 12px; }
+  html body.olf-page main#main#main .olf-signal-body ul { gap: 13px; }
+  html body.olf-page main#main#main .olf-signal-body li { font-size: clamp(16px, 1.05vw, 20px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-signal-note { padding-block: 15px; font-size: clamp(14px, 1vw, 18px) !important; }
+  html body.olf-page main#main#main .olf-outcomes-panel { padding: 12px; }
+  html body.olf-page main#main#main .olf-outcomes { padding-block: 24px; row-gap: 24px; }
+  html body.olf-page main#main#main .olf-outcome-icon { width: clamp(68px, 4.8vw, 92px); margin-bottom: 16px; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcome-icon { width: clamp(64px, 4.4vw, 84px); }
+  html body.olf-page main#main#main .olf-outcomes p { font-size: clamp(16px, 1.05vw, 20px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcomes p { font-size: clamp(15px, 1vw, 18px) !important; line-height: 1.35 !important; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main .olf-ingredient h3 { font-size: clamp(20px, 1.6vw, 28px) !important; }
+    html body.olf-page main#main#main .olf-ingredient:nth-child(4) h3 { font-size: clamp(17px, 1.35vw, 23px) !important; }
+    html body.olf-page main#main#main .olf-block-heading h3 { font-size: clamp(14px, 1vw, 18px) !important; letter-spacing: .12em !important; }
+    html body.olf-page main#main#main .olf-profile-heading, html body.olf-page main#main#main .olf-brain-network > h4 { font-size: clamp(16px, 1.2vw, 22px) !important; }
+    html body.olf-page main#main#main .olf-profile h5 { font-size: clamp(19px, 1.4vw, 25px) !important; }
+    html body.olf-page main#main#main .olf-neural-steps h4 { font-size: clamp(15px, 1.05vw, 19px) !important; line-height: 1.3 !important; }
+    html body.olf-page main#main#main .olf-region h4 { font-size: clamp(12px, .9vw, 17px) !important; }
+    html body.olf-page main#main#main .olf-signal-card h5 { font-size: clamp(16px, 1.15vw, 22px) !important; line-height: 1.25 !important; }
+    html body.olf-page main#main#main .olf-outcome-group > h4 { font-size: clamp(17px, 1.25vw, 23px) !important; }
+  }
+}
+
+/* A&S Research & Development: fluid editorial layout from the supplied reference. */
+html body.olf-page main#main#main #aroma-ingredients.olf-catalog { padding-block: 0; background: #f3fafc; }
+html body.olf-page main#main#main #aroma-ingredients.olf-catalog::before { display: none; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-sheet {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  margin-inline: auto;
+  padding: 46px 58px 116px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #ffffff, #f0f7fb);
+}
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-membrane { position: absolute; z-index: -1; top: 0; right: 0; width: 30.185%; mask-image: linear-gradient(to bottom, #000 70%, transparent); }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-ornament { position: absolute; z-index: -1; bottom: 0; left: 0; width: 100%; }
+html body.olf-page main#main#main #aroma-ingredients .olf-kicker { width: 64%; margin-bottom: 38px; gap: 25px; font-size: clamp(16px, 2.49cqw, 24px); letter-spacing: .24em; line-height: 1.2; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 > span { display: block; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 > span + span { margin-top: 16px; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header .olf-title-middle { font-size: .73em; letter-spacing: -.025em; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-intro { margin-top: 34px; padding-top: 22px; color: #0c1c39; font-size: clamp(17px, 2.7cqw, 26px) !important; line-height: 1.35 !important; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { padding: 19px 15px; border-radius: 18px; }
+html body.olf-page main#main#main #aroma-ingredients .olf-ingredients { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, minmax(0, calc(178 * 100cqw / 964))); grid-auto-flow: column; column-gap: calc(60 * 100cqw / 964); row-gap: calc(65 * 100cqw / 964); }
+html body.olf-page main#main#main #aroma-ingredients .olf-ingredient { grid-template-columns: minmax(0, 120fr) minmax(0, 144fr) minmax(0, 152fr); gap: calc(18 * 100cqw / 964); height: 100%; }
+html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-photo { align-self: center; }
+html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-copy p { margin-top: 8px; font-size: clamp(14px, 2.08cqw, 20px) !important; line-height: 1.3 !important; }
+html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-formula { width: calc(var(--formula-design-width) * 100cqw / 964); max-width: none !important; justify-self: center; }
+html body.olf-page main#main#main #aroma-ingredients .olf-catalog-end { height: 0; margin-top: 55px; border: 0; }
+@layer arotec-display-headings.spec {
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 { font-size: clamp(34px, 6.02cqw, 58px) !important; font-weight: 400 !important; line-height: 1.1 !important; letter-spacing: -.025em !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { margin-block: 34px 46px !important; font-size: clamp(20px, 3.32cqw, 32px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: .025em !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient h3 { font-size: clamp(15px, 2.28cqw, 22px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.015em !important; overflow-wrap: normal !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient:nth-child(4) h3 { font-size: clamp(13px, 1.87cqw, 18px) !important; }
+}
+@media (min-width: 701px) {
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient h3 { white-space: nowrap; }
+}
+@media (min-width: 701px) {
+  html body.olf-page main#main#main #aroma-ingredients.olf-catalog { background: linear-gradient(120deg, #ffffff, #f0f7fb); }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-sheet { padding: 4.259259% 5.370370% 10.740741%; background: transparent; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-kicker { margin-bottom: 3.941909cqw; gap: 2.593361cqw; font-size: clamp(16px, 2.49cqw, 54px); }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 > span + span { margin-top: 1.659751cqw; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-intro { margin-top: 3.526971cqw; padding-top: 2.282158cqw; font-size: clamp(17px, 2.7cqw, 60px) !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { margin-inline: -2.074689cqw !important; padding: 1.970954cqw 1.556017cqw; border-radius: 1.867220cqw; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-copy { align-self: start; padding-top: 4.460581cqw; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-copy p { margin-top: .829876cqw; font-size: clamp(14px, 2.08cqw, 46px) !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-end { margin-top: 5.705394cqw; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 { font-size: clamp(34px, 6.02cqw, 136px) !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { margin-block: 3.526971cqw 4.771784cqw !important; font-size: clamp(20px, 3.32cqw, 74px) !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-ingredient h3 { font-size: clamp(15px, 2.28cqw, 52px) !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-ingredient:nth-child(4) h3 { font-size: clamp(13px, 1.87cqw, 42px) !important; }
+  }
+}
+@media (max-width: 1199px) and (min-width: 701px) {
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-sheet { padding-inline: 40px; padding-top: 38px; }
+}
+@media (max-width: 700px) {
+  html body.olf-page main#main#main #aroma-ingredients.olf-catalog { padding-block: 26px; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-sheet { width: 100%; padding: 18px 0 50px; background: transparent; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-kicker { width: 100%; margin-bottom: 28px; font-size: 14px; gap: 16px; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-membrane { width: 45%; opacity: .65; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-ornament { opacity: .6; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 > span + span { margin-top: 14px; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-intro { margin-top: 25px; padding-top: 22px; font-size: 17px !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { padding: 17px 12px; border-radius: 13px; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredients { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; gap: 28px; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient { grid-template-columns: minmax(62px, .25fr) minmax(0, .35fr) minmax(0, .4fr); gap: 10px; height: auto; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-formula { width: 100%; max-width: 100% !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-ingredient-copy p { font-size: 15px !important; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-end { margin-top: 28px; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main #aroma-ingredients .olf-catalog-header h1 { font-size: clamp(30px, 7.1vw, 46px) !important; line-height: 1.13 !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { margin-block: 28px !important; font-size: 19px !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-ingredient h3 { font-size: clamp(16px, 4.1vw, 22px) !important; overflow-wrap: anywhere !important; }
+    html body.olf-page main#main#main #aroma-ingredients .olf-ingredient:nth-child(4) h3 { font-size: clamp(15px, 3.7vw, 20px) !important; }
+  }
+}
+
+/* Latest four-panel reference: retain native copy and original scientific artwork. */
+html body.olf-page main#main#main .olf-source-note { margin-top: 22px; padding-inline: 2px; color: #6a7d88; font-size: 12px !important; font-style: italic; line-height: 1.5 !important; }
+html body.olf-page main#main#main .olf-flow-down { display: block; width: 12px; height: 19px; margin: 9px auto 0; background: #233f62; clip-path: polygon(43% 0, 57% 0, 57% 60%, 100% 60%, 50% 100%, 0 60%, 43% 60%); }
+html body.olf-page main#main#main .olf-flow-down + .olf-brain-network { margin-top: 0; }
+html body.olf-page main#main#main .olf-profile-brand .olf-brand-name { font-weight: 700 !important; }
+html body.olf-page main#main#main .olf-profile-brand p:not(.olf-brand-name), html body.olf-page main#main#main .olf-profile .olf-profile-pill { font-weight: 600 !important; }
+html body.olf-page main#main#main .olf-sidebar :is(.olf-pathway-label, .olf-science-callout p) { font-weight: 700 !important; letter-spacing: .16em !important; }
+html body.olf-page main#main#main .olf-sidebar .olf-sidebar-footer { letter-spacing: .18em !important; }
+@media (min-width: 1024px) {
+  html body.olf-page main#main#main .olf-chapter-layout { container-type: inline-size; grid-template-columns: clamp(260px, 27%, 430px) minmax(0, 1fr); column-gap: clamp(24px, 2vw, 40px); }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-sheet { padding-inline: 0; }
+  html body.olf-page main#main#main #aroma-ingredients .olf-catalog-banner { margin-inline: 0 !important; }
+  html body.olf-page main#main#main .olf-sidebar { padding: clamp(24px, 2.61cqw, 42px); border-radius: clamp(26px, 2.34cqw, 36px); }
+  html body.olf-page main#main#main .olf-sidebar .olf-kicker { font-size: clamp(12px, 1.17cqw, 18px); letter-spacing: .23em; }
+  html body.olf-page main#main#main .olf-sidebar-brand { margin-bottom: clamp(30px, 2.61cqw, 42px); font-size: clamp(27px, 2.885cqw, 44px); line-height: 1.2; }
+  html body.olf-page main#main#main .olf-sidebar-title { font-size: clamp(26px, 2.473cqw, 38px); line-height: 1.3; }
+  html body.olf-page main#main#main .olf-accent-rule { width: clamp(98px, 8.65cqw, 134px); margin-block: clamp(28px, 2.82cqw, 43px); }
+  html body.olf-page main#main#main .olf-sidebar .olf-sidebar-description { font-size: clamp(16px, 1.236cqw, 20px) !important; line-height: 1.7 !important; }
+  html body.olf-page main#main#main .olf-pathway { margin-top: clamp(44px, 5.15cqw, 78px); }
+  html body.olf-page main#main#main .olf-sidebar .olf-pathway-label { margin-bottom: clamp(28px, 2.61cqw, 40px); font-size: clamp(12px, 1.03cqw, 16px) !important; }
+  html body.olf-page main#main#main .olf-pathway li { gap: 19px; padding-bottom: clamp(42px, 4.39cqw, 68px); }
+  html body.olf-page main#main#main .olf-pathway li:last-child { padding-bottom: 10px; }
+  html body.olf-page main#main#main .olf-sidebar .olf-pathway li p { font-size: clamp(14px, 1.1cqw, 17px) !important; line-height: 1.55 !important; }
+  html body.olf-page main#main#main .olf-science-callout { margin-block: clamp(45px, 5.49cqw, 84px) 80px; padding: clamp(20px, 1.785cqw, 28px); border-radius: 21px; }
+  html body.olf-page main#main#main .olf-science-callout strong { font-size: clamp(21px, 1.925cqw, 30px); }
+  html body.olf-page main#main#main .olf-chapter-content { padding-top: clamp(28px, 2.75cqw, 42px); }
+  html body.olf-page main#main#main .olf-block-heading { padding-inline: clamp(6px, 1.37cqw, 20px); margin-bottom: clamp(20px, 1.65cqw, 26px); gap: 10px; }
+  html body.olf-page main#main#main .olf-panel { padding: clamp(18px, 2.06cqw, 31px); border-radius: clamp(22px, 2.06cqw, 31px); }
+  html body.olf-page main#main#main .olf-interface-grid { grid-template-columns: minmax(0, 390fr) minmax(0, 520fr); gap: clamp(16px, 1.72cqw, 27px); }
+  html body.olf-page main#main#main .olf-profile { padding: clamp(11px, 1.03cqw, 16px); }
+  html body.olf-page main#main#main .olf-profile-heading { padding-block: clamp(12px, 1.03cqw, 16px); }
+  html body.olf-page main#main#main .olf-profile-brand { grid-template-columns: minmax(0, 33fr) minmax(0, 67fr); gap: 12px; padding-block: clamp(21px, 2.06cqw, 32px); }
+  html body.olf-page main#main#main .olf-profile-brand .olf-brand-name { font-size: clamp(25px, 2.55cqw, 40px) !important; line-height: 1.15 !important; }
+  html body.olf-page main#main#main .olf-profile-brand p:not(.olf-brand-name) { font-size: clamp(16px, 1.37cqw, 22px) !important; line-height: 1.25 !important; }
+  html body.olf-page main#main#main .olf-profile .olf-profile-pill { font-size: clamp(14px, 1.23cqw, 20px) !important; line-height: 1.25 !important; }
+  html body.olf-page main#main#main .olf-checks { gap: clamp(15px, 1.23cqw, 20px); }
+  html body.olf-page main#main#main .olf-checks li { font-size: clamp(15px, 1.23cqw, 20px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-anatomy { padding: clamp(8px, .82cqw, 13px); }
+  html body.olf-page main#main#main .olf-activation > p { font-size: clamp(18px, 1.58cqw, 25px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-properties { width: 100%; margin: 24px auto 0; max-width: none; }
+  html body.olf-page main#main#main .olf-property-icon { width: clamp(56px, 4.4cqw, 68px); }
+  html body.olf-page main#main#main .olf-properties p { font-size: clamp(13px, 1.03cqw, 16px) !important; }
+  html body.olf-page main#main#main .olf-network-grid { grid-template-columns: minmax(0, 330fr) minmax(0, 578fr); gap: clamp(18px, 1.79cqw, 28px); }
+  html body.olf-page main#main#main .olf-pathway-diagram { padding: clamp(12px, 1.23cqw, 20px); }
+  html body.olf-page main#main#main .olf-neural-steps { gap: 21px; }
+  html body.olf-page main#main#main .olf-neural-steps > li { padding: clamp(8px, .69cqw, 11px); }
+  html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after { bottom: -19px; height: 16px; }
+  html body.olf-page main#main#main .olf-neural-steps p { font-size: clamp(12px, .96cqw, 15px) !important; }
+  html body.olf-page main#main#main .olf-ensheathing { font-size: clamp(11px, .83cqw, 13px) !important; }
+  html body.olf-page main#main#main .olf-brain-visual { grid-template-columns: minmax(0, 260fr) minmax(0, 128fr); gap: 12px; padding: 13px 9px; }
+  html body.olf-page main#main#main .olf-brain-legend li { font-size: clamp(11px, .9cqw, 14px) !important; }
+  html body.olf-page main#main#main .olf-brain-legend li > span { width: 14px; height: 14px; flex-basis: 14px; }
+  html body.olf-page main#main#main .olf-reciprocal { font-size: clamp(12px, 1.03cqw, 16px) !important; }
+  html body.olf-page main#main#main .olf-regions-panel { padding-top: 44px; }
+  html body.olf-page main#main#main .olf-regions { width: 100%; max-width: none; margin-inline: auto; gap: clamp(7px, .7vw, 12px); }
+  html body.olf-page main#main#main .olf-region-branch { top: 25px; left: 12%; right: 12%; }
+  html body.olf-page main#main#main .olf-region h4 { min-height: clamp(44px, 3.16cqw, 50px); }
+  html body.olf-page main#main#main .olf-region-icon { width: 85%; margin-block: 14px; }
+  html body.olf-page main#main#main .olf-region p { margin-inline: 10px; font-size: clamp(13px, .96cqw, 16px) !important; line-height: 1.4 !important; }
+  html body.olf-page main#main#main .olf-signaling-panel { padding: 12px; border-radius: 24px; }
+  html body.olf-page main#main#main .olf-signaling-grid { gap: 12px; }
+  html body.olf-page main#main#main .olf-signal-card h5 { min-height: 65px; }
+  html body.olf-page main#main#main .olf-signal-body { grid-template-columns: minmax(0, 43fr) minmax(0, 57fr); gap: 12px; padding: clamp(14px, 1.1cqw, 18px) 12px; }
+  html body.olf-page main#main#main .olf-signal-body li { font-size: clamp(15px, 1.3cqw, 21px) !important; line-height: 1.3 !important; }
+  html body.olf-page main#main#main .olf-signal-note { padding-block: 12px; font-size: clamp(14px, 1.23cqw, 19px) !important; line-height: 1.3 !important; }
+  html body.olf-page main#main#main .olf-outcomes-panel { padding: 11px; }
+  html body.olf-page main#main#main .olf-outcomes { padding-block: 18px; row-gap: 20px; }
+  html body.olf-page main#main#main .olf-outcome-icon { width: clamp(57px, 5.15cqw, 82px); }
+  html body.olf-page main#main#main .olf-outcomes p { font-size: clamp(14px, 1.23cqw, 20px) !important; line-height: 1.3 !important; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcome-icon { width: clamp(50px, 4.4cqw, 70px); margin-bottom: 8px; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcomes { padding-block: 15px; row-gap: 17px; }
+  html body.olf-page main#main#main .olf-outcome-group--wellbeing .olf-outcomes p { font-size: clamp(12px, .96cqw, 15px) !important; line-height: 1.25 !important; }
+  @layer arotec-display-headings.spec {
+    html body.olf-page main#main#main .olf-sidebar h2 { margin-top: clamp(48px, 4.74cqw, 72px) !important; }
+    html body.olf-page main#main#main .olf-sidebar .olf-pathway h3 { font-size: clamp(18px, 1.51cqw, 24px) !important; }
+    html body.olf-page main#main#main .olf-block-heading h3 { font-size: clamp(12px, 1.03cqw, 17px) !important; letter-spacing: .17em !important; line-height: 1.5 !important; }
+    html body.olf-page main#main#main .olf-profile-heading, html body.olf-page main#main#main .olf-brain-network > h4 { font-size: clamp(15px, 1.37cqw, 22px) !important; }
+    html body.olf-page main#main#main .olf-profile h5 { font-size: clamp(18px, 1.51cqw, 24px) !important; }
+    html body.olf-page main#main#main .olf-inline-heading h4 { font-size: clamp(23px, 2.06cqw, 32px) !important; }
+    html body.olf-page main#main#main .olf-neural-steps h4 { font-size: clamp(13px, 1.1cqw, 18px) !important; line-height: 1.25 !important; }
+    html body.olf-page main#main#main .olf-region h4 { font-size: clamp(11px, .9cqw, 14px) !important; }
+    html body.olf-page main#main#main .olf-signaling-banner { font-size: clamp(17px, 1.37cqw, 23px) !important; }
+    html body.olf-page main#main#main .olf-signal-card h5 { font-size: clamp(15px, 1.37cqw, 22px) !important; line-height: 1.2 !important; }
+    html body.olf-page main#main#main .olf-outcome-group > h4 { font-size: clamp(17px, 1.44cqw, 23px) !important; }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1359px) {
+  html body.olf-page main#main#main .olf-properties, html body.olf-page main#main#main .olf-regions { max-width: 100%; }
+  html body.olf-page main#main#main .olf-region-branch { left: 12%; right: 12%; }
+  html body.olf-page main#main#main .olf-profile-brand { grid-template-columns: minmax(0, 28fr) minmax(0, 72fr); gap: 8px; }
+}
+
+/* Keep the reference title as three independent, correctly cased lines. */
+@layer arotec-display-headings.spec {
+  html body.olf-page main#main#main #aroma-ingredients #olfactiva-title {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: clamp(12px, 1.659751cqw, 32px);
+    text-align: left !important;
+    text-transform: none !important;
+  }
+  html body.olf-page main#main#main #aroma-ingredients #olfactiva-title > .olf-title-line {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font: inherit !important;
+    color: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: none !important;
+  }
+  html body.olf-page main#main#main #aroma-ingredients #olfactiva-title > .olf-title-middle {
+    font-size: .73em !important;
+    line-height: 1.1 !important;
+  }
+}
+@media (min-width: 1024px) {
+  html body.olf-page main#main#main #aroma-ingredients #olfactiva-title > .olf-title-line {
+    white-space: nowrap !important;
+  }
+}
+@media (max-width: 1023px) {
+  html body.olf-page main#main#main #aroma-ingredients #olfactiva-title > .olf-title-line {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+}

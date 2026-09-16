@@ -1,0 +1,169 @@
+/* Morphagen: live HTML copy and exact source illustrations. */
+html body.morph-page { --morph-navy:#002a47; --morph-cyan:#03d9e8; --morph-green:#005338; background:#e1f8fd; }
+html body.morph-page main#main#main.morph-main.brs-main { padding:var(--detail-header-space,0px) 0 0!important; font-family:var(--site-font,"DM Sans",sans-serif)!important; }
+html body.morph-page main#main#main .morph-chapter { width:100%; padding:24px max(24px,var(--arotec-content-right,0px)) 24px max(24px,var(--arotec-content-left,0px)); background-color:#dcf8fd; background-image:linear-gradient(#9fddeb44 1px,transparent 1px),linear-gradient(90deg,#9fddeb44 1px,transparent 1px); background-size:108px 108px; }
+html body.morph-page main#main#main .morph-signaling-frame { display:grid; grid-template-columns:26.2% minmax(0,1fr); gap:2.3%; width:100%; max-width:1672px; margin-inline:auto; container-type:inline-size; }
+html body.morph-page main#main#main .morph-benefits-backdrop { background-color:#dcf8fd; background-image:linear-gradient(#9fddeb44 1px,transparent 1px),linear-gradient(90deg,#9fddeb44 1px,transparent 1px); background-size:108px 108px; }
+html body.morph-page main#main#main .morph-rail { display:flex; flex-direction:column; align-items:stretch; min-width:0; padding:2cqw 2.12cqw 1.35cqw; border-radius:1.4cqw; color:#fff; background:#002b49; box-shadow:0 4px 12px #07688620; }
+html body.morph-page main#main#main .morph-eyebrow { display:flex; align-items:center; gap:.8cqw; font-size:1.1cqw; letter-spacing:.2em; white-space:nowrap; }
+html body.morph-page main#main#main .morph-eyebrow>span:last-child { flex:1; height:2px; background:var(--morph-cyan); }
+html body.morph-page main#main#main .morph-accent { width:6.5cqw; height:.5cqw; border-radius:9px; margin:1.55cqw 0; background:var(--morph-cyan); }
+html body.morph-page main#main#main .morph-accent--second { width:7.6cqw; margin:1.3cqw 0 1.45cqw; }
+html body.morph-page main#main#main .morph-rail p { color:#f4fbff; }
+html body.morph-page main#main#main .morph-rail .morph-rail-subtitle { font-size:1.88cqw!important; line-height:1.15!important; color:var(--morph-cyan); font-weight:500!important; margin-top:.9cqw; letter-spacing:-.035em!important; }
+html body.morph-page main#main#main .morph-rail .morph-rail-description { font-size:1.36cqw!important; line-height:1.25!important; }
+html body.morph-page main#main#main .morph-steps { margin-top:1.75cqw; }
+html body.morph-page main#main#main .morph-steps .morph-steps-label { font-size:1.1cqw!important; letter-spacing:.19em!important; margin-bottom:.7cqw; }
+html body.morph-page main#main#main .morph-steps ol { padding:0; list-style:none; }
+html body.morph-page main#main#main .morph-steps li { position:relative; display:grid; grid-template-columns:3cqw minmax(0,1fr); gap:1.2cqw; padding-bottom:1.5cqw; font-size:1.52cqw!important; line-height:1.2; }
+html body.morph-page main#main#main .morph-steps li::before { content:""; position:absolute; left:1.45cqw; top:2.6cqw; bottom:0; border-left:1px solid #d1eff5; }
+html body.morph-page main#main#main .morph-step-number { display:grid; place-items:center; width:2.9cqw; height:2.9cqw; border-radius:50%; color:#002b49; background:#63e5ec; font-size:1.8cqw; font-weight:800; }
+html body.morph-page main#main#main .morph-steps strong { display:block; margin:.35cqw 0; white-space:nowrap; font-size:inherit!important; line-height:1.2!important; }
+html body.morph-page main#main#main .morph-steps li p { font-size:1.33cqw!important; line-height:1.35!important; }
+html body.morph-page main#main#main .morph-rail-callout { margin-top:auto; padding:1.15cqw 1.6cqw; border-radius:1.1cqw; background:#00496d; }
+html body.morph-page main#main#main .morph-rail-callout>span { display:block; font-size:.9cqw; letter-spacing:.16em; margin-bottom:.5cqw; }
+html body.morph-page main#main#main .morph-rail-callout strong { display:flex; align-items:center; justify-content:space-between; font-size:1.9cqw; line-height:1.2; white-space:nowrap; }
+html body.morph-page main#main#main .morph-rail .morph-rail-footer { font-size:.93cqw!important; line-height:1.4!important; letter-spacing:.14em!important; margin-top:1.2cqw; white-space:nowrap; }
+html body.morph-page main#main#main .morph-section-label { display:flex; align-items:center; gap:.8cqw; color:#070957; font-size:1.06cqw; line-height:1.35; letter-spacing:.13em; font-weight:700; padding:0 .2cqw; margin:-.1cqw 0 .6cqw; }
+html body.morph-page main#main#main .morph-rule { flex:1; min-width:10px; height:1px; background:#30b9c4; }
+html body.morph-page main#main#main .morph-panel { padding:.45cqw 1.35cqw .5cqw; background:#ffffffef; border-radius:1.1cqw; box-shadow:0 3px 10px #31c2e21a; }
+html body.morph-page main#main#main .morph-exposome { position:relative; border:1px solid #003e2b; border-radius:.55cqw; margin-top:1.3cqw; padding:.5cqw 1.2cqw .95cqw; }
+html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors) { list-style:none; padding:0; display:grid; text-align:center; }
+html body.morph-page main#main#main .morph-factor-list { grid-template-columns:repeat(7,minmax(0,1fr)); margin-top:.3cqw; }
+html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors)>li { display:flex; align-items:center; flex-direction:column; position:relative; color:#0a1239; font-size:1.18cqw!important; line-height:1.15!important; }
+html body.morph-page main#main#main .morph-factor-list>li+li::before { content:""; position:absolute; left:0; top:.8cqw; bottom:.3cqw; border-left:1px solid #a8b6c6; }
+html body.morph-page main#main#main .morph-factor-list .morph-factor-icon { width:4.8cqw; height:5.2cqw; aspect-ratio:auto; }
+html body.morph-page main#main#main .morph-factor-list>li:last-child .morph-factor-icon { width:2.6cqw; }
+html body.morph-page main#main#main .morph-crop { position:relative; display:block; aspect-ratio:var(--ratio); overflow:hidden; flex-shrink:0; }
+html body.morph-page main#main#main .morph-crop>img { position:absolute; width:var(--image-width)!important; max-width:none!important; height:auto!important; left:var(--image-left); top:var(--image-top); margin:0; }
+html body.morph-page main#main#main .morph-factor-icon { mix-blend-mode:multiply; }
+html body.morph-page main#main#main .morph-secondary-factors { width:75%; margin:.75cqw auto 0; padding-top:.45cqw; border-top:2px dotted #bfceda; grid-template-columns:repeat(3,minmax(0,1fr)); }
+html body.morph-page main#main#main .morph-secondary-factors>li+li { border-left:1px solid #a8b6c6; }
+html body.morph-page main#main#main .morph-secondary-factors .morph-factor-icon { width:4.8cqw; height:4.2cqw; aspect-ratio:auto; }
+html body.morph-page main#main#main .morph-stress-convergence { width:28.2cqw; margin:-1.2cqw auto 0; position:relative; }
+html body.morph-page main#main#main .morph-stress-convergence .morph-crop { mix-blend-mode:multiply; }
+html body.morph-page main#main#main .morph-ros { display:flex; align-items:center; justify-content:center; gap:1.2cqw; border:1px solid #111; border-radius:.6cqw; width:14.5cqw; margin:0 auto; padding:.2cqw .7cqw; color:#080808; }
+html body.morph-page main#main#main .morph-ros .morph-crop { width:4.8cqw; mix-blend-mode:multiply; }
+html body.morph-page main#main#main .morph-ros strong { font-size:2.75cqw; line-height:1; }
+html body.morph-page main#main#main .morph-inhibits { display:flex; align-items:center; justify-content:center; color:#e00000; gap:.2cqw; font-size:1.1cqw; line-height:1; font-weight:700; margin-left:4cqw; }
+html body.morph-page main#main#main .morph-inhibits .morph-crop { width:1.9cqw; }
+html body.morph-page main#main#main .morph-hair-follicle { color:#080808; text-align:center; margin-top:-.3cqw; font-size:1.22cqw!important; line-height:1.2!important; font-weight:700!important; }
+html body.morph-page main#main#main .morph-section-label--second { margin:1.2cqw 0 .6cqw; }
+html body.morph-page main#main#main .morph-diagram-scroll { overflow-x:auto; border:1px solid #23304f; border-radius:.85cqw; margin-top:.45cqw; }
+html body.morph-page main#main#main .morph-diagram-scroll:focus-visible { outline:3px solid #1695a9; outline-offset:3px; }
+html body.morph-page main#main#main .morph-pathway-canvas { position:relative; width:100%; aspect-ratio:1010/337; container-type:inline-size; color:#111; }
+html body.morph-page main#main#main .morph-diagram-item { position:absolute; display:flex; align-items:center; justify-content:center; font-size:1.65cqw; line-height:1.1; }
+html body.morph-page main#main#main .morph-node { border:1px solid #5b897e; background:#f7fcfa; border-radius:.7cqw; text-align:center; font-weight:700; flex-wrap:wrap; align-content:center; }
+html body.morph-page main#main#main .morph-node--brand { border-color:#df2839; background:#fff; color:#080b57; font-size:3.4cqw; letter-spacing:-.04em; }
+html body.morph-page main#main#main .morph-node--epidermis { background:#efebfc; border-color:#555d97; color:#0b135d; }
+html body.morph-page main#main#main .morph-node--sensory { background:#f3fcff; border-color:#6b92aa; color:#0b135d; }
+html body.morph-page main#main#main .morph-node--shh { background:#fff6f3; border-color:#ef2e34; }
+html body.morph-page main#main#main .morph-node--cycle { background:#d6f7e1; color:#063f22; }
+html body.morph-page main#main#main .morph-up { color:#00573a; font-size:1.1em; font-weight:900; }
+html body.morph-page main#main#main .morph-up--red { color:red; }
+html body.morph-page main#main#main .morph-node--plant { display:grid; grid-template-columns:24% 76%; font-size:1.23cqw; }
+html body.morph-page main#main#main .morph-plant { width:100%; mix-blend-mode:multiply; }
+html body.morph-page main#main#main .morph-connector .morph-crop { width:100%; mix-blend-mode:multiply; }
+html body.morph-page main#main#main .morph-inhibition-line { border-left:3px solid red; }
+html body.morph-page main#main#main .morph-inhibition-line::after { content:""; position:absolute; left:0; right:0; top:50%; border-top:2px solid red; }
+html body.morph-page main#main#main .morph-ligand-line { border-left:1px dashed red; border-bottom:1px dashed red; border-bottom-left-radius:10px; }
+html body.morph-page main#main#main .morph-relation { color:#e00000; font-size:1.45cqw; font-weight:500; }
+html body.morph-page main#main#main .morph-outcome { display:flex; align-items:center; gap:1.3cqw; background:#004a32; color:#fff; padding:.2cqw 1.8cqw .2cqw 8cqw; border-radius:.9cqw; margin-top:.35cqw; }
+html body.morph-page main#main#main .morph-outcome-icon { width:8.1cqw; }
+html body.morph-page main#main#main .morph-outcome>div { border-left:1px solid #e5f6e2; padding-left:2cqw; }
+html body.morph-page main#main#main .morph-outcome p { color:#fff; font-size:1.18cqw!important; line-height:1.25!important; margin-top:.3cqw; }
+html body.morph-page main#main#main .morph-scroll-hint { display:none; }
+html body.morph-page main#main#main .morph-visually-hidden { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip-path:inset(50%); white-space:nowrap!important; border:0; }
+/* Preserve each source crop's aspect ratio so labels remain outside the bitmap. */
+html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors)>li { display:grid; grid-template-rows:5.05cqw auto; align-items:center; justify-items:center; }
+html body.morph-page main#main#main .morph-secondary-factors>li { grid-template-rows:3.9cqw auto; }
+html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors) .morph-factor-icon { height:auto!important; aspect-ratio:var(--ratio)!important; }
+html body.morph-page main#main#main .morph-back { padding:28px 24px; text-align:center; background:#f4fafc; }
+html body.morph-page main#main#main .morph-back a { display:inline-flex; align-items:center; gap:10px; font-size:15px; color:#165d6f; }
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.morph-page main#main#main .morph-rail h1 { color:#fff!important; font-size:2.75cqw!important; line-height:1.05!important; font-weight:800!important; letter-spacing:-.04em!important; margin:3.35cqw 0 0!important; white-space:nowrap!important; overflow-wrap:normal!important; text-transform:none!important; }
+  html body.morph-page main#main#main .morph-rail h2 { color:#fff!important; font-size:2.7cqw!important; line-height:1.04!important; font-weight:800!important; letter-spacing:-.04em!important; margin:0!important; }
+  html body.morph-page main#main#main .morph-panel>h2 { color:#080951!important; font-size:1.97cqw!important; font-weight:800!important; line-height:1.15!important; letter-spacing:-.035em!important; margin:0!important; text-transform:none!important; }
+  html body.morph-page main#main#main .morph-exposome h3 { position:absolute; top:-.9cqw; left:50%; transform:translateX(-50%); background:#005139; color:#fff!important; padding:.12cqw 2cqw; border-radius:1cqw; white-space:nowrap; font-size:1.36cqw!important; line-height:1.1!important; letter-spacing:.06em!important; margin:0!important; }
+  html body.morph-page main#main#main .morph-outcome h3 { color:#fff!important; font-size:1.35cqw!important; line-height:1.15!important; letter-spacing:-.02em!important; font-weight:700!important; margin:0!important; }
+}
+@media(max-width:1300px) {
+  html body.morph-page main#main#main .morph-factor-list>li { grid-template-rows:7.4cqw auto; }
+  html body.morph-page main#main#main .morph-secondary-factors>li { grid-template-rows:6.4cqw auto; }
+  html body.morph-page main#main#main .morph-signaling-frame { display:block; }
+  html body.morph-page main#main#main .morph-rail { padding:30px; border-radius:20px; margin-bottom:25px; }
+  html body.morph-page main#main#main .morph-eyebrow { font-size:14px; max-width:320px; }
+  html body.morph-page main#main#main .morph-accent { width:90px; height:5px; margin:20px 0; }
+  html body.morph-page main#main#main .morph-rail .morph-rail-subtitle { font-size:25px!important; margin-top:16px; }
+  html body.morph-page main#main#main .morph-rail .morph-rail-description { font-size:17px!important; line-height:1.5!important; max-width:620px; }
+  html body.morph-page main#main#main .morph-steps { margin-top:25px; }
+  html body.morph-page main#main#main .morph-steps .morph-steps-label { font-size:13px!important; margin-bottom:16px; }
+  html body.morph-page main#main#main .morph-steps ol { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  html body.morph-page main#main#main .morph-steps li { grid-template-columns:36px 1fr; gap:14px; font-size:18px!important; }
+  html body.morph-page main#main#main .morph-steps li::before { display:none; }
+  html body.morph-page main#main#main .morph-step-number { width:36px; height:36px; font-size:22px; }
+  html body.morph-page main#main#main .morph-steps li p { font-size:16px!important; }
+  html body.morph-page main#main#main .morph-rail-callout { margin-top:25px; padding:18px 24px; max-width:340px; border-radius:14px; }
+  html body.morph-page main#main#main .morph-rail-callout>span { font-size:12px; }
+  html body.morph-page main#main#main .morph-rail-callout strong { font-size:27px; }
+  html body.morph-page main#main#main .morph-rail .morph-rail-footer { font-size:12px!important; margin-top:25px; }
+  html body.morph-page main#main#main .morph-section-label { font-size:12px; margin-bottom:12px; }
+  html body.morph-page main#main#main .morph-section-label--second { margin-top:24px; }
+  html body.morph-page main#main#main .morph-panel { padding:14px; border-radius:15px; }
+  html body.morph-page main#main#main .morph-exposome { margin-top:22px; }
+  html body.morph-page main#main#main .morph-factor-list .morph-factor-icon { width:6.7cqw; height:7.2cqw; }
+  html body.morph-page main#main#main .morph-factor-list>li:last-child .morph-factor-icon { width:3.7cqw; }
+  html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors)>li { font-size:1.7cqw!important; }
+  html body.morph-page main#main#main .morph-secondary-factors .morph-factor-icon { width:6.7cqw; height:5.8cqw; }
+  html body.morph-page main#main#main .morph-ros { width:20cqw; }
+  html body.morph-page main#main#main .morph-ros strong { font-size:4cqw; }
+  html body.morph-page main#main#main .morph-ros .morph-crop { width:6.5cqw; }
+  html body.morph-page main#main#main .morph-inhibits { font-size:14px; }
+  html body.morph-page main#main#main .morph-hair-follicle { font-size:16px!important; }
+  html body.morph-page main#main#main .morph-outcome { padding:8px 18px; gap:16px; }
+  html body.morph-page main#main#main .morph-outcome-icon { width:12cqw; }
+  html body.morph-page main#main#main .morph-outcome p { font-size:14px!important; }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.morph-page main#main#main .morph-rail h1 { font-size:38px!important; margin-top:35px!important; }
+    html body.morph-page main#main#main .morph-rail h2 { font-size:36px!important; }
+    html body.morph-page main#main#main .morph-panel>h2 { font-size:2.75cqw!important; }
+    html body.morph-page main#main#main .morph-exposome h3 { font-size:17px!important; top:-12px; }
+    html body.morph-page main#main#main .morph-outcome h3 { font-size:17px!important; }
+  }
+}
+@media(max-width:600px) {
+  html body.morph-page main#main#main .morph-factor-list>li { grid-template-rows:51px auto; }
+  html body.morph-page main#main#main .morph-secondary-factors>li { grid-template-rows:48px auto; }
+  html body.morph-page main#main#main .morph-chapter { padding:20px 16px; }
+  html body.morph-page main#main#main .morph-rail { padding:26px 22px; }
+  html body.morph-page main#main#main .morph-rail-callout { padding:18px 16px; }
+  html body.morph-page main#main#main .morph-rail-callout strong { font-size:clamp(20px,6.6vw,26px); }
+  html body.morph-page main#main#main .morph-rail .morph-rail-footer { font-size:clamp(9px,2.65vw,12px)!important; }
+  html body.morph-page main#main#main .morph-steps ol { grid-template-columns:1fr; }
+  html body.morph-page main#main#main .morph-steps strong { white-space:normal; }
+  html body.morph-page main#main#main .morph-section-label { font-size:10px; letter-spacing:.08em; }
+  html body.morph-page main#main#main .morph-factor-list { grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 0; margin-top:12px; }
+  html body.morph-page main#main#main .morph-factor-list>li:nth-child(5)::before { display:none; }
+  html body.morph-page main#main#main .morph-factor-list .morph-factor-icon { width:45px; height:49px; }
+  html body.morph-page main#main#main .morph-factor-list>li:last-child .morph-factor-icon { width:28px; }
+  html body.morph-page main#main#main :is(.morph-factor-list,.morph-secondary-factors)>li { font-size:11px!important; }
+  html body.morph-page main#main#main .morph-secondary-factors { width:100%; margin-top:16px; padding-top:12px; padding-bottom:8px; }
+  html body.morph-page main#main#main .morph-secondary-factors .morph-factor-icon { width:48px; height:42px; }
+  html body.morph-page main#main#main .morph-stress-convergence { width:70%; margin-top:-3px; }
+  html body.morph-page main#main#main .morph-ros { width:140px; padding:4px 12px; gap:12px; border-radius:8px; }
+  html body.morph-page main#main#main .morph-ros strong { font-size:29px; }
+  html body.morph-page main#main#main .morph-ros .morph-crop { width:50px; }
+  html body.morph-page main#main#main .morph-inhibits .morph-crop { width:24px; }
+  html body.morph-page main#main#main .morph-scroll-hint { display:block; font-size:12px!important; line-height:1.4!important; margin:10px 0; }
+  html body.morph-page main#main#main .morph-pathway-canvas { min-width:760px; }
+  html body.morph-page main#main#main .morph-outcome { padding:14px 10px; gap:10px; margin-top:12px; border-radius:10px; }
+  html body.morph-page main#main#main .morph-outcome-icon { width:65px; }
+  html body.morph-page main#main#main .morph-outcome>div { padding-left:12px; }
+  html body.morph-page main#main#main .morph-outcome p { font-size:13px!important; }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.morph-page main#main#main .morph-rail h1 { font-size:clamp(25px,7.7vw,30px)!important; }
+    html body.morph-page main#main#main .morph-rail h2 { font-size:31px!important; }
+    html body.morph-page main#main#main .morph-panel>h2 { font-size:20px!important; }
+    html body.morph-page main#main#main .morph-outcome h3 { font-size:14px!important; }
+  }
+}

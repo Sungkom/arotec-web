@@ -1,0 +1,671 @@
+/* The A&S Approach: native editorial content, original reference artwork,
+   shared index navigation/footer, website typography and foreground gutters. */
+html body.asr-page {
+  --asr-ink: #0c193e;
+  --asr-blue: #304e76;
+  --asr-copy: #536783;
+  --asr-muted: #7792a5;
+  --asr-line: #bdcad9;
+  --asr-paper: #f4f9fd;
+  background: var(--asr-paper);
+}
+html body.asr-page main#main#main.asr-main.brs-main { width: 100%; max-width: none; margin: 0; padding: var(--detail-header-space, 0px) 0 0 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; color: var(--asr-ink); }
+html body.asr-page main#main#main *, html body.asr-page main#main#main *::before, html body.asr-page main#main#main *::after { box-sizing: border-box; }
+html body.asr-page main#main#main .asr-sheet { position: relative; isolation: isolate; container-type: inline-size; overflow: hidden; padding: 0 0 16px; background: var(--asr-paper); scroll-margin-top: calc(var(--detail-header-space, 100px) + 20px); }
+html body.asr-page main#main#main .asr-sheet + .asr-sheet { border-top: 1px solid #e0eaf3; }
+html body.asr-page main#main#main .asr-container { position: relative; z-index: 1; width: calc(100% - max(24px, var(--arotec-content-left, 0px)) - max(24px, var(--arotec-content-right, 0px))); max-width: none; margin-left: max(24px, var(--arotec-content-left, 0px)); margin-right: max(24px, var(--arotec-content-right, 0px)); }
+html body.asr-page main#main#main .asr-sheet p { margin: 0; color: var(--asr-copy); font-size: 17px !important; font-weight: 400 !important; line-height: 1.5 !important; }
+html body.asr-page main#main#main .asr-sheet :is(ul, ol) { list-style: none; margin: 0; padding: 0; }
+html body.asr-page main#main#main .asr-rule { display: block; flex: 1; min-width: 24px; height: 1px; background: #879bb3; }
+html body.asr-page main#main#main .asr-masthead { display: flex; align-items: center; gap: 24px; min-height: 92px; padding-block: 24px; color: #29476c; }
+html body.asr-page main#main#main .asr-masthead > span:not(.asr-part-number, .asr-rule) { font-size: clamp(10px, .85vw, 13px); font-weight: 500; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
+html body.asr-page main#main#main .asr-masthead > span:last-child { text-align: right; }
+html body.asr-page main#main#main .asr-part-number { padding-right: 28px; border-right: 1px solid #9babc0; color: #0a1435; font-size: 44px; font-weight: 400; line-height: 1; letter-spacing: -.05em; }
+html body.asr-page main#main#main .asr-hero { position: relative; isolation: isolate; overflow: hidden; padding-bottom: 42px; }
+html body.asr-page main#main#main .asr-hero .asr-chapter { display: table; margin: 12px 0 34px; padding-bottom: 9px; border-bottom: 1px solid #263655; color: #435774; font-size: 19px !important; line-height: 1.2 !important; }
+html body.asr-page main#main#main .asr-hero-copy { position: relative; max-width: 1200px; }
+html body.asr-page main#main#main .asr-hero .asr-lead { margin-top: 28px; color: #30486c; font-size: clamp(23px, 2.35vw, 34px) !important; line-height: 1.3 !important; letter-spacing: -.035em !important; }
+html body.asr-page main#main#main .asr-hero .asr-intro { max-width: 840px; margin-top: 24px; font-size: clamp(17px, 1.4vw, 21px) !important; line-height: 1.5 !important; }
+html body.asr-page main#main#main .asr-hero-art { position: absolute; z-index: 0; right: 0; pointer-events: none; mask-image: linear-gradient(to right, transparent, #000 25%); }
+html body.asr-page main#main#main .asr-hero--focus { min-height: clamp(535px, 43cqw, 670px); }
+html body.asr-page main#main#main .asr-hero--focus .asr-hero-art { bottom: 0; width: clamp(330px, 42vw, 520px); }
+html body.asr-page main#main#main .asr-hero--focus .asr-hero-copy { width: 66%; padding-top: 18px; }
+html body.asr-page main#main#main .asr-hero--focus .asr-intro { max-width: 560px; }
+html body.asr-page main#main#main .asr-crop { position: relative; display: block; width: 100%; aspect-ratio: var(--crop-ratio); overflow: hidden; margin: 0; }
+html body.asr-page main#main#main .asr-crop > img { position: absolute; display: block; top: var(--crop-top); left: var(--crop-left); width: var(--crop-width); max-width: none !important; height: auto !important; margin: 0; }
+html body.asr-page main#main#main .asr-number { display: table; margin-bottom: 16px; padding-bottom: 6px; color: #0f1a3e; font-size: clamp(27px, 2.9cqw, 38px); font-weight: 400; line-height: 1; }
+html body.asr-page main#main#main .asr-number::after { content: ""; display: block; width: 31px; height: 1px; margin-top: 8px; background: #637596; }
+html body.asr-page main#main#main .asr-small-number { color: #526d86; font-size: 16px; line-height: 1; }
+html body.asr-page main#main#main .asr-icon { flex: 0 0 auto; width: 64px; border-radius: 50%; }
+html body.asr-page main#main#main .asr-icon-flow { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 18px; }
+html body.asr-page main#main#main .asr-icon-flow--small { gap: 7px; }
+html body.asr-page main#main#main .asr-icon-flow--small .asr-icon { width: 49px; }
+html body.asr-page main#main#main .asr-arrow { color: #60718f; font-size: 24px; line-height: 1; }
+html body.asr-page main#main#main .asr-focus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; padding: 1px; background: var(--asr-line); }
+html body.asr-page main#main#main .asr-focus-card { position: relative; isolation: isolate; display: flex; flex-direction: column; min-width: 0; min-height: 350px; overflow: hidden; padding: 26px; background: #f4f9fd; }
+html body.asr-page main#main#main .asr-focus-copy { position: relative; z-index: 1; width: 67%; }
+html body.asr-page main#main#main .asr-focus-card .asr-card-lead { margin-top: 7px; color: #4a6284; font-size: clamp(16px, 1.35vw, 20px) !important; line-height: 1.4 !important; }
+html body.asr-page main#main#main .asr-focus-card .asr-card-detail { margin-top: 18px; font-size: 15px !important; line-height: 1.45 !important; }
+html body.asr-page main#main#main .asr-focus-art { position: absolute; z-index: 0; top: 25px; right: 10px; width: 36%; max-width: 230px; mask-image: linear-gradient(to right, transparent, #000 20%); }
+html body.asr-page main#main#main .asr-section-heading { display: flex; align-items: center; gap: 20px; margin: 28px 0 20px; }
+html body.asr-page main#main#main .asr-section-heading--center { justify-content: center; }
+html body.asr-page main#main#main .asr-flow { display: grid; gap: 26px; }
+html body.asr-page main#main#main .asr-flow--research { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+html body.asr-page main#main#main .asr-flow > li { min-width: 0; text-align: center; }
+html body.asr-page main#main#main .asr-flow-visual { position: relative; display: flex; justify-content: center; margin-bottom: 14px; }
+html body.asr-page main#main#main .asr-flow-visual .asr-icon { width: 74px; }
+html body.asr-page main#main#main .asr-flow-visual > .asr-arrow { position: absolute; top: 24px; right: -25px; font-size: 32px; }
+html body.asr-page main#main#main .asr-closing { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 52px 18px; }
+html body.asr-page main#main#main .asr-closing p { color: #3d597c; font-size: clamp(10px, .9vw, 13px) !important; line-height: 1.5 !important; letter-spacing: .1em !important; text-transform: uppercase; }
+html body.asr-page main#main#main .asr-closing p:last-child { text-align: right; }
+html body.asr-page main#main#main .asr-hero--compounds { min-height: 570px; padding-bottom: 18px; }
+html body.asr-page main#main#main .asr-hero--compounds .asr-hero-art { top: 24px; width: clamp(230px, 30vw, 430px); opacity: .75; }
+html body.asr-page main#main#main .asr-hero--compounds .asr-hero-copy { width: 93%; padding-top: 18px; }
+html body.asr-page main#main#main .asr-hero--compounds .asr-lead--uppercase { margin-top: 40px; font-size: clamp(18px, 1.75vw, 26px) !important; letter-spacing: .12em !important; text-transform: uppercase; }
+html body.asr-page main#main#main .asr-scope { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+html body.asr-page main#main#main .asr-sheet .asr-scope { margin-block: 20px 34px; }
+html body.asr-page main#main#main .asr-scope > li { position: relative; min-width: 0; padding: 4px 15px; text-align: center; }
+html body.asr-page main#main#main .asr-scope > li + li { border-left: 1px solid #c3cdda; }
+html body.asr-page main#main#main .asr-scope .asr-small-number { position: absolute; top: 0; left: 10px; }
+html body.asr-page main#main#main .asr-scope .asr-icon { width: 76px; margin: 0 auto 12px; }
+html body.asr-page main#main#main .asr-compounds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: 14px 18px; }
+html body.asr-page main#main#main .asr-compound { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr) minmax(0, 1.12fr); gap: 12px; align-items: center; min-width: 0; padding: 27px 14px 12px; border: 1px solid #eaf0f6; border-radius: 8px; background: rgba(255, 255, 255, .88); box-shadow: 0 1px 7px rgba(54, 85, 119, .045); }
+html body.asr-page main#main#main .asr-compound > .asr-small-number { position: absolute; top: 9px; left: 14px; }
+html body.asr-page main#main#main .asr-compound-photo { border-radius: 6px; }
+html body.asr-page main#main#main .asr-compound-copy { min-width: 0; }
+html body.asr-page main#main#main .asr-compound-copy p { margin-top: 8px; color: var(--asr-muted); font-size: 16px !important; line-height: 1.35 !important; }
+html body.asr-page main#main#main .asr-compound-structure { display: flex; align-items: center; align-self: stretch; padding-left: 10px; border-left: 1px solid #e7edf2; }
+html body.asr-page main#main#main .asr-compound-structure .asr-crop { max-height: none; }
+html body.asr-page main#main#main .asr-sheet--compounds { padding-bottom: 150px; }
+html body.asr-page main#main#main .asr-ornament { position: absolute; bottom: 0; left: 0; width: 240px; opacity: .6; }
+html body.asr-page main#main#main .asr-hero--domains { padding-bottom: 30px; }
+html body.asr-page main#main#main .asr-hero--domains .asr-chapter { margin-bottom: 24px; }
+html body.asr-page main#main#main .asr-hero--domains .asr-hero-art { top: 66px; width: 38%; max-width: 550px; opacity: .7; }
+html body.asr-page main#main#main .asr-hero--domains .asr-hero-copy { width: 85%; }
+html body.asr-page main#main#main .asr-hero--domains .asr-lead { margin-top: 12px; font-size: clamp(27px, 3.1vw, 44px) !important; }
+html body.asr-page main#main#main .asr-hero--domains .asr-intro { margin-top: 8px; max-width: 920px; }
+html body.asr-page main#main#main .asr-domain-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+html body.asr-page main#main#main .asr-domain-card { min-width: 0; padding: 16px; border: 1px solid #bac9d8; border-radius: 15px; background: rgba(255, 255, 255, .32); }
+html body.asr-page main#main#main .asr-domain-heading { display: grid; grid-template-columns: 32px 84px minmax(0, 1fr); gap: 14px; align-items: center; min-height: 110px; padding-bottom: 14px; }
+html body.asr-page main#main#main .asr-domain-heading > .asr-number { align-self: start; margin: 6px 0 0; font-size: 28px; }
+html body.asr-page main#main#main .asr-domain-heading > .asr-icon { width: 84px; }
+html body.asr-page main#main#main .asr-domain-heading p { margin-top: 8px; color: #344e75; font-size: clamp(15px, 1.25vw, 19px) !important; line-height: 1.35 !important; }
+html body.asr-page main#main#main .asr-domain-photo { border-radius: 11px; }
+html body.asr-page main#main#main .asr-sheet .asr-domain-list { margin: 20px 0 0; padding-top: 12px; border-top: 1px solid #8293a9; color: #253b61; font-size: 13px !important; letter-spacing: .12em !important; text-align: center; text-transform: uppercase; }
+html body.asr-page main#main#main .asr-sheet .asr-domain-summary { margin-top: 24px; color: var(--asr-ink); font-size: clamp(23px, 2.5vw, 34px) !important; line-height: 1.35 !important; text-align: center; }
+html body.asr-page main#main#main .asr-hero--applications { min-height: 590px; padding-bottom: 26px; }
+html body.asr-page main#main#main .asr-hero--applications .asr-hero-art { top: 88px; width: 42%; max-width: 620px; opacity: .62; }
+html body.asr-page main#main#main .asr-hero--applications .asr-hero-copy { width: 92%; }
+html body.asr-page main#main#main .asr-hero--applications .asr-lead { margin-top: 44px; font-size: clamp(22px, 2.25vw, 32px) !important; }
+html body.asr-page main#main#main .asr-hero--applications .asr-intro { max-width: 760px; }
+html body.asr-page main#main#main .asr-applications { display: grid; gap: 14px; }
+html body.asr-page main#main#main .asr-application { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 20px; min-height: 335px; padding: 28px; border: 1px solid #b7ccdf; background: rgba(236, 244, 252, .7); }
+html body.asr-page main#main#main .asr-application .asr-number { margin-bottom: 16px; font-weight: 500; }
+html body.asr-page main#main#main .asr-application-copy > p { margin-top: 10px; font-size: clamp(16px, 1.3vw, 20px) !important; line-height: 1.4 !important; }
+html body.asr-page main#main#main .asr-application .asr-icon-flow { margin-top: 24px; gap: 20px; padding-top: 0; }
+html body.asr-page main#main#main .asr-application .asr-icon { width: 76px; }
+html body.asr-page main#main#main .asr-application-art { min-width: 0; mix-blend-mode: multiply; }
+html body.asr-page main#main#main .asr-application--scent .asr-application-art { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 49%, 11% 49%, 11% 22%, 0 22%); }
+html body.asr-page main#main#main .asr-flow--applications { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+html body.asr-page main#main#main .asr-section-heading--application { margin-top: 20px; }
+@layer arotec-display-headings.spec {
+  html body.asr-page main#main#main .asr-sheet :is(h1, h2, h3, h4) { margin: 0 !important; color: var(--asr-ink) !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-style: normal !important; font-weight: 500 !important; line-height: 1.2 !important; letter-spacing: -.04em !important; text-transform: none !important; text-wrap: initial !important; overflow-wrap: normal !important; word-break: normal !important; }
+  html body.asr-page main#main#main .asr-hero .asr-title { font-size: clamp(42px, 4.5vw, 74px) !important; font-weight: 700 !important; line-height: 1.04 !important; letter-spacing: -.055em !important; }
+  html body.asr-page main#main#main .asr-hero--compounds .asr-title, html body.asr-page main#main#main .asr-hero--applications .asr-title { font-size: clamp(36px, 3.7vw, 62px) !important; }
+  html body.asr-page main#main#main .asr-focus-card h2 { font-size: clamp(22px, 1.9vw, 28px) !important; line-height: 1.2 !important; }
+  html body.asr-page main#main#main .asr-section-heading :is(h2,h3) { font-size: clamp(18px, 1.85vw, 26px) !important; letter-spacing: .005em !important; line-height: 1.3 !important; }
+  html body.asr-page main#main#main .asr-section-heading--center h3, html body.asr-page main#main#main .asr-section-heading--application h3 { text-transform: uppercase !important; letter-spacing: .055em !important; font-size: clamp(15px, 1.6vw, 23px) !important; text-align: center !important; }
+  html body.asr-page main#main#main .asr-flow--research h3 { font-size: clamp(11px, 1vw, 15px) !important; line-height: 1.4 !important; letter-spacing: .025em !important; text-transform: uppercase !important; }
+  html body.asr-page main#main#main .asr-scope h4 { font-size: clamp(16px, 1.5vw, 23px) !important; line-height: 1.15 !important; letter-spacing: -.025em !important; }
+  html body.asr-page main#main#main .asr-compound h4 { font-size: clamp(16px, 1.6vw, 25px) !important; line-height: 1.25 !important; overflow-wrap: anywhere !important; }
+  html body.asr-page main#main#main .asr-compound h4 em { font-style: italic; }
+  html body.asr-page main#main#main .asr-domain-heading h3 { font-size: clamp(19px, 1.65vw, 26px) !important; line-height: 1.2 !important; }
+  html body.asr-page main#main#main .asr-application h3 { font-size: clamp(23px, 2.2vw, 32px) !important; line-height: 1.2 !important; }
+  html body.asr-page main#main#main .asr-flow--applications h4 { font-size: clamp(16px, 1.7vw, 24px) !important; line-height: 1.3 !important; }
+}
+@media (max-width: 1199px) {
+  html body.asr-page main#main#main .asr-focus-card { padding: 22px; }
+  html body.asr-page main#main#main .asr-masthead { gap: 18px; }
+  html body.asr-page main#main#main .asr-domain-heading { grid-template-columns: 28px 70px minmax(0, 1fr); gap: 12px; }
+  html body.asr-page main#main#main .asr-domain-heading > .asr-icon { width: 70px; }
+}
+@media (max-width: 1000px) {
+  html body.asr-page main#main#main .asr-compounds { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; }
+  html body.asr-page main#main#main .asr-compound { grid-template-columns: 130px minmax(0, 1fr) 150px; padding: 28px 18px 14px; }
+  html body.asr-page main#main#main .asr-compound-copy p { font-size: 18px !important; }
+  html body.asr-page main#main#main .asr-flow--research { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+  html body.asr-page main#main#main .asr-flow--research li:nth-child(3n) .asr-arrow { display: none; }
+  html body.asr-page main#main#main .asr-application { padding: 22px; }
+  html body.asr-page main#main#main .asr-application .asr-icon { width: 64px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main .asr-compound h4 { font-size: 25px !important; }
+  }
+}
+@media (max-width: 800px) {
+  html body.asr-page main#main#main .asr-focus-grid, html body.asr-page main#main#main .asr-domain-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.asr-page main#main#main .asr-focus-card { min-height: 320px; padding: 26px; }
+  html body.asr-page main#main#main .asr-focus-copy { width: 67%; }
+  html body.asr-page main#main#main .asr-focus-art { max-width: 180px; }
+  html body.asr-page main#main#main .asr-scope { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 0; }
+  html body.asr-page main#main#main .asr-scope > li:nth-child(3n + 1) { border-left: 0; }
+  html body.asr-page main#main#main .asr-application { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  html body.asr-page main#main#main .asr-application-art { width: min(100%, 560px); justify-self: end; }
+  html body.asr-page main#main#main .asr-application .asr-icon-flow { margin-top: 20px; }
+  html body.asr-page main#main#main .asr-domain-heading { grid-template-columns: 32px 84px minmax(0, 1fr); gap: 16px; }
+  html body.asr-page main#main#main .asr-domain-heading > .asr-icon { width: 84px; }
+}
+@media (max-width: 700px) {
+  html body.asr-page main#main#main .asr-container { width: calc(100% - 40px); margin-inline: 20px; }
+  html body.asr-page main#main#main .asr-masthead { min-height: 0; flex-wrap: wrap; gap: 12px; padding-block: 24px 16px; }
+  html body.asr-page main#main#main .asr-part-number { font-size: 36px; padding-right: 15px; }
+  html body.asr-page main#main#main .asr-masthead > span:not(.asr-part-number, .asr-rule) { font-size: 9px; letter-spacing: .12em; }
+  html body.asr-page main#main#main .asr-masthead > span:nth-child(2) { max-width: calc(100% - 72px); }
+  html body.asr-page main#main#main .asr-masthead > span:last-child { flex: 1 0 100%; text-align: left; }
+  html body.asr-page main#main#main .asr-masthead .asr-rule { display: none; }
+  html body.asr-page main#main#main .asr-hero { min-height: 0; padding-bottom: 34px; }
+  html body.asr-page main#main#main .asr-hero .asr-chapter { margin: 6px 0 26px; font-size: 16px !important; }
+  html body.asr-page main#main#main .asr-hero .asr-hero-copy { width: 100%; padding-top: 0; }
+  html body.asr-page main#main#main .asr-hero .asr-lead { margin-top: 20px; font-size: 24px !important; }
+  html body.asr-page main#main#main .asr-hero .asr-intro { margin-top: 18px; font-size: 17px !important; }
+  html body.asr-page main#main#main .asr-hero--focus { padding-bottom: 325px; }
+  html body.asr-page main#main#main .asr-hero--focus .asr-hero-art { width: 260px; bottom: -4px; right: -6px; }
+  html body.asr-page main#main#main .asr-hero--compounds .asr-hero-art, html body.asr-page main#main#main .asr-hero--applications .asr-hero-art { width: 65%; top: 100px; opacity: .2; }
+  html body.asr-page main#main#main .asr-hero--domains .asr-hero-art { width: 62%; top: 126px; opacity: .2; }
+  html body.asr-page main#main#main .asr-hero--compounds .asr-lead--uppercase { font-size: 17px !important; letter-spacing: .1em !important; }
+  html body.asr-page main#main#main .asr-wide-break { display: none; }
+  html body.asr-page main#main#main .asr-closing { flex-wrap: wrap; gap: 14px; padding-block: 36px 20px; }
+  html body.asr-page main#main#main .asr-closing .asr-rule { flex: 1 0 100%; order: 1; }
+  html body.asr-page main#main#main .asr-closing p { font-size: 9px !important; }
+  html body.asr-page main#main#main .asr-closing p:last-child { order: 2; text-align: left; }
+  html body.asr-page main#main#main .asr-section-heading { gap: 12px; }
+  html body.asr-page main#main#main .asr-section-heading--center .asr-rule { min-width: 12px; }
+  html body.asr-page main#main#main .asr-compound { grid-template-columns: 96px minmax(0, 1fr) 110px; gap: 10px; padding: 27px 12px 12px; }
+  html body.asr-page main#main#main .asr-compound-copy p { font-size: 14px !important; }
+  html body.asr-page main#main#main .asr-compound-structure { padding-left: 8px; }
+  html body.asr-page main#main#main .asr-domain-list { letter-spacing: .06em !important; }
+  html body.asr-page main#main#main .asr-flow--applications { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+  html body.asr-page main#main#main .asr-flow--applications .asr-arrow { display: none; }
+  html body.asr-page main#main#main .asr-sheet--compounds { padding-bottom: 115px; }
+  html body.asr-page main#main#main .asr-ornament { width: 175px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main .asr-hero .asr-title { font-size: clamp(36px, 8.4vw, 56px) !important; line-height: 1.06 !important; }
+    html body.asr-page main#main#main .asr-hero--compounds .asr-title, html body.asr-page main#main#main .asr-hero--applications .asr-title { font-size: clamp(32px, 7.3vw, 48px) !important; }
+    html body.asr-page main#main#main .asr-hero--compounds .asr-title br, html body.asr-page main#main#main .asr-hero--applications .asr-title br { display: none; }
+    html body.asr-page main#main#main .asr-section-heading :is(h2,h3) { font-size: 18px !important; }
+    html body.asr-page main#main#main .asr-section-heading--center h3, html body.asr-page main#main#main .asr-section-heading--application h3 { font-size: 15px !important; }
+    html body.asr-page main#main#main .asr-compound h4 { font-size: 20px !important; }
+    html body.asr-page main#main#main .asr-domain-heading h3 { font-size: 23px !important; }
+    html body.asr-page main#main#main .asr-flow--research h3 { font-size: 12px !important; }
+    html body.asr-page main#main#main .asr-flow--applications h4 { font-size: 19px !important; }
+  }
+}
+@media (max-width: 480px) {
+  html body.asr-page main#main#main .asr-focus-card { min-height: 0; padding: 22px; }
+  html body.asr-page main#main#main .asr-focus-copy { width: 100%; }
+  html body.asr-page main#main#main .asr-focus-art { position: relative; top: auto; right: auto; width: 150px; margin: 12px 0 0; align-self: flex-end; }
+  html body.asr-page main#main#main .asr-focus-card .asr-icon-flow { justify-content: flex-start; padding-top: 12px; }
+  html body.asr-page main#main#main .asr-icon-flow .asr-icon { width: 56px; }
+  html body.asr-page main#main#main .asr-icon-flow--small .asr-icon { width: 42px; }
+  html body.asr-page main#main#main .asr-icon-flow { gap: 7px; }
+  html body.asr-page main#main#main .asr-flow--research { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body.asr-page main#main#main .asr-flow--research .asr-arrow { display: none; }
+  html body.asr-page main#main#main .asr-scope { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body.asr-page main#main#main .asr-scope > li { border-left: 0 !important; }
+  html body.asr-page main#main#main .asr-scope > li:nth-child(even) { border-left: 1px solid #c3cdda !important; }
+  html body.asr-page main#main#main .asr-compound { grid-template-columns: 78px minmax(0, 1fr); gap: 12px; }
+  html body.asr-page main#main#main .asr-compound-structure { grid-column: 1 / -1; justify-content: center; border-left: 0; border-top: 1px solid #e7edf2; padding: 12px 0 0; }
+  html body.asr-page main#main#main .asr-compound-structure .asr-crop { width: 135px; }
+  html body.asr-page main#main#main .asr-domain-card { padding: 12px; }
+  html body.asr-page main#main#main .asr-domain-heading { grid-template-columns: 26px 58px minmax(0, 1fr); gap: 9px; }
+  html body.asr-page main#main#main .asr-domain-heading > .asr-icon { width: 58px; }
+  html body.asr-page main#main#main .asr-domain-heading > .asr-number { font-size: 24px; }
+  html body.asr-page main#main#main .asr-domain-heading p { font-size: 14px !important; }
+  html body.asr-page main#main#main .asr-application { padding: 20px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main .asr-domain-heading h3 { font-size: 19px !important; }
+    html body.asr-page main#main#main .asr-focus-card h2 { font-size: 25px !important; }
+  }
+}
+
+/* Research Focus: supplied clean artwork; all standalone icons/arrows are CSS. */
+html body.asr-page main#main#main #research-focus .asr-hero--focus { min-height: clamp(580px, 45cqw, 780px); padding-bottom: 0; }
+html body.asr-page main#main#main #research-focus .asr-hero-art { inset: 0; width: 100%; height: 100%; max-width: none; mask-image: none; }
+html body.asr-page main#main#main #research-focus .asr-focus-hero-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% top; }
+html body.asr-page main#main#main #research-focus .asr-hero-copy { width: 58%; max-width: 780px; padding-block: 18px 44px; }
+html body.asr-page main#main#main #research-focus .asr-lead { font-size: clamp(23px, 2vw, 32px) !important; line-height: 1.35 !important; }
+html body.asr-page main#main#main #research-focus .asr-intro { max-width: 540px; font-size: clamp(17px, 1.25vw, 20px) !important; }
+html body.asr-page main#main#main #research-focus .asr-focus-card { aspect-ratio: 1.44; min-height: 340px; padding: clamp(22px, 2cqw, 30px); }
+html body.asr-page main#main#main #research-focus .asr-focus-card-background { position: absolute; z-index: 0; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: right center; pointer-events: none; }
+html body.asr-page main#main#main #research-focus .asr-focus-copy { width: 65%; }
+html body.asr-page main#main#main #research-focus .asr-icon-flow { align-items: center; gap: 9px; padding-top: 20px; }
+html body.asr-page main#main#main #research-focus .asr-icon-flow--small { gap: 7px; }
+html body.asr-page main#main#main #research-focus .asr-css-icon {
+  --asr-icon-size: clamp(48px, 4cqw, 64px);
+  --asr-icon-ink: #192951;
+  --asr-icon-paper: #f7fbff;
+  --asr-icon-stroke: 1.5px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 var(--asr-icon-size);
+  width: var(--asr-icon-size);
+  height: var(--asr-icon-size);
+  border: 1px solid #919dab;
+  border-radius: 50%;
+  color: var(--asr-icon-ink);
+  background: rgba(247, 251, 255, .82);
+}
+html body.asr-page main#main#main #research-focus .asr-icon-flow--small .asr-css-icon { --asr-icon-size: clamp(40px, 3.4cqw, 52px); }
+html body.asr-page main#main#main #research-focus .asr-ci-canvas { position: relative; display: block; width: 70%; height: 70%; }
+html body.asr-page main#main#main #research-focus .asr-ci-shape {
+  position: absolute;
+  display: block;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: var(--h);
+  transform: rotate(var(--angle, 0deg));
+}
+html body.asr-page main#main#main #research-focus .asr-ci-line { height: 0; border-top: var(--asr-icon-stroke) solid currentColor; transform-origin: 0 50%; }
+html body.asr-page main#main#main #research-focus .asr-ci-ring { border: var(--asr-icon-stroke) solid currentColor; border-radius: 50%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #research-focus :is(.asr-ci-leaf-blade, .asr-ci-petal) { border: var(--asr-icon-stroke) solid currentColor; border-radius: 76% 0 76% 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-lip-lower { border: var(--asr-icon-stroke) solid currentColor; border-top: 0; border-radius: 0 0 65% 65%; }
+html body.asr-page main#main#main #research-focus .asr-ci-lip-upper { border-top: var(--asr-icon-stroke) solid currentColor; border-radius: 60% 60% 0 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-nose-left { border-right: var(--asr-icon-stroke) solid currentColor; border-bottom: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 75% 45%; }
+html body.asr-page main#main#main #research-focus .asr-ci-nose-right { border-left: var(--asr-icon-stroke) solid currentColor; border-bottom: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 45% 75%; }
+html body.asr-page main#main#main #research-focus .asr-ci-nostril { border: var(--asr-icon-stroke) solid currentColor; border-top: 0; border-radius: 0 0 60% 60%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #research-focus .asr-ci-wave { border-bottom: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 60% 60%; }
+html body.asr-page main#main#main #research-focus .asr-ci-brain-left { border: var(--asr-icon-stroke) solid currentColor; border-right: 0; border-radius: 65% 35% 30% 50%; }
+html body.asr-page main#main#main #research-focus .asr-ci-brain-right { border: var(--asr-icon-stroke) solid currentColor; border-left: 0; border-radius: 35% 65% 50% 30%; }
+html body.asr-page main#main#main #research-focus .asr-ci-fold { border: var(--asr-icon-stroke) solid currentColor; border-left: 0; border-bottom: 0; border-radius: 55%; }
+html body.asr-page main#main#main #research-focus .asr-ci-shield { background: currentColor; clip-path: polygon(50% 0, 75% 12%, 97% 16%, 91% 55%, 76% 80%, 50% 100%, 24% 80%, 9% 55%, 3% 16%, 25% 12%); }
+html body.asr-page main#main#main #research-focus .asr-ci-shield::after { content: ""; position: absolute; inset: 2px; background: var(--asr-icon-paper); clip-path: inherit; }
+html body.asr-page main#main#main #research-focus .asr-ci-tooth { border: var(--asr-icon-stroke) solid currentColor; border-radius: 2px; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #research-focus :is(.asr-ci-heart-left, .asr-ci-heart-right) { border: var(--asr-icon-stroke) solid currentColor; border-bottom: 0; border-radius: 65% 65% 0 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-heart-left { border-right: 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-heart-right { border-left: 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-bar { border: var(--asr-icon-stroke) solid currentColor; }
+html body.asr-page main#main#main #research-focus .asr-ci-lotus-base { border-bottom: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 60% 60%; }
+html body.asr-page main#main#main #research-focus .asr-ci-glass { background: currentColor; clip-path: polygon(5% 0, 95% 0, 80% 100%, 20% 100%); }
+html body.asr-page main#main#main #research-focus .asr-ci-glass::after { content: ""; position: absolute; inset: 2px; background: var(--asr-icon-paper); clip-path: inherit; }
+html body.asr-page main#main#main #research-focus :is(.asr-ci-bottle-neck, .asr-ci-bottle-cap, .asr-ci-bottle-body, .asr-ci-bottle-label) { border: var(--asr-icon-stroke) solid currentColor; border-radius: 2px; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #research-focus .asr-ci-bottle-body { border-radius: 24% 24% 12% 12%; }
+html body.asr-page main#main#main #research-focus .asr-ci-jar-body { border: var(--asr-icon-stroke) solid currentColor; border-radius: 12% 12% 18% 18%; }
+html body.asr-page main#main#main #research-focus .asr-ci-jar-rim { border: var(--asr-icon-stroke) solid currentColor; border-radius: 50%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #research-focus .asr-ci-cream { border: var(--asr-icon-stroke) solid currentColor; border-top: 0; border-left: 0; border-radius: 0 0 70% 50%; }
+html body.asr-page main#main#main #research-focus .asr-ci-capsule { border: var(--asr-icon-stroke) solid currentColor; border-radius: 99px; }
+html body.asr-page main#main#main #research-focus .asr-ci-capsule::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; border-top: var(--asr-icon-stroke) solid currentColor; }
+html body.asr-page main#main#main #research-focus .asr-ci-body-torso { border: var(--asr-icon-stroke) solid currentColor; border-bottom: 0; border-radius: 45% 45% 0 0; }
+html body.asr-page main#main#main #research-focus .asr-ci-organ { border-radius: 60% 60% 20% 20%; background: #8b9eb8; }
+html body.asr-page main#main#main #research-focus .asr-css-arrow { position: relative; display: block; flex: 0 0 20px; width: 20px; height: 16px; color: #617391; }
+html body.asr-page main#main#main #research-focus .asr-css-arrow::before { content: ""; position: absolute; top: 50%; left: 0; width: 100%; border-top: 1px solid currentColor; }
+html body.asr-page main#main#main #research-focus .asr-css-arrow::after { content: ""; position: absolute; top: calc(50% - 3px); right: 0; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+html body.asr-page main#main#main #research-focus .asr-flow-visual .asr-css-icon { --asr-icon-size: 74px; }
+html body.asr-page main#main#main #research-focus .asr-flow-visual > .asr-css-arrow { position: absolute; top: calc(50% - 8px); right: -25px; width: 30px; }
+@layer arotec-display-headings.spec {
+  html body.asr-page main#main#main #research-focus .asr-hero--focus .asr-title { font-size: clamp(42px, 4.2vw, 72px) !important; line-height: 1.05 !important; }
+}
+@media (min-width: 701px) {
+  html body.asr-page main#main#main #research-focus .asr-hero--focus > .asr-container { display: flex; flex-direction: column; min-height: inherit; }
+  html body.asr-page main#main#main #research-focus .asr-masthead { flex-shrink: 0; }
+  html body.asr-page main#main#main #research-focus .asr-hero .asr-chapter { align-self: flex-start; width: max-content; margin: 8px 0 12px; }
+  html body.asr-page main#main#main #research-focus .asr-hero-copy { margin-block: auto; }
+}
+@media (max-width: 1000px) {
+  html body.asr-page main#main#main #research-focus .asr-flow--research li:nth-child(3n) .asr-css-arrow { display: none; }
+}
+@media (max-width: 700px) {
+  html body.asr-page main#main#main #research-focus .asr-hero--focus { --asr-focus-mobile-art-height: clamp(270px, 65vw, 410px); min-height: 0; padding-bottom: calc(var(--asr-focus-mobile-art-height) + 24px); }
+  html body.asr-page main#main#main #research-focus .asr-hero-art { inset: auto 0 0; width: 100%; height: var(--asr-focus-mobile-art-height); mask-image: linear-gradient(to bottom, transparent, #000 18%); }
+  html body.asr-page main#main#main #research-focus .asr-focus-hero-image { object-position: 74% center; }
+  html body.asr-page main#main#main #research-focus .asr-hero-copy { width: 100%; padding-block: 0 20px; }
+  html body.asr-page main#main#main #research-focus .asr-lead { font-size: 24px !important; }
+  html body.asr-page main#main#main #research-focus .asr-intro { font-size: 17px !important; }
+  html body.asr-page main#main#main #research-focus .asr-focus-card { min-height: 340px; padding: 24px; }
+  html body.asr-page main#main#main #research-focus .asr-css-icon { --asr-icon-size: 54px; }
+  html body.asr-page main#main#main #research-focus .asr-icon-flow--small .asr-css-icon { --asr-icon-size: 44px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #research-focus .asr-hero--focus .asr-title { font-size: clamp(36px, 8.4vw, 56px) !important; }
+  }
+}
+@media (max-width: 480px) {
+  html body.asr-page main#main#main #research-focus .asr-focus-card { aspect-ratio: auto; min-height: 0; padding: 22px 22px 26px; }
+  html body.asr-page main#main#main #research-focus .asr-focus-copy { order: 1; width: 100%; }
+  html body.asr-page main#main#main #research-focus .asr-focus-card-background { position: relative; order: 2; inset: auto; align-self: center; flex: 0 0 auto; width: calc(100% + 44px); height: auto; margin-top: 12px; object-fit: contain; }
+  html body.asr-page main#main#main #research-focus .asr-icon-flow { order: 3; margin-top: 0; padding-top: 16px; gap: 7px; }
+  html body.asr-page main#main#main #research-focus .asr-css-icon { --asr-icon-size: 54px; }
+  html body.asr-page main#main#main #research-focus .asr-icon-flow--small .asr-css-icon { --asr-icon-size: 40px; }
+  html body.asr-page main#main#main #research-focus .asr-flow--research .asr-css-arrow { display: none; }
+}
+
+/* Bioactive compounds: supplied wide laboratory background and five CSS icons. */
+html body.asr-page main#main#main #bioactive-compounds .asr-hero--compounds { min-height: clamp(580px, 45cqw, 760px); padding-bottom: 0; }
+html body.asr-page main#main#main #bioactive-compounds .asr-hero-art { inset: 0; width: 100%; height: 100%; max-width: none; opacity: 1; mask-image: none; }
+html body.asr-page main#main#main #bioactive-compounds .asr-compounds-hero-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% top; }
+html body.asr-page main#main#main #bioactive-compounds .asr-hero-copy { width: 92%; max-width: 1180px; padding-block: 18px 38px; }
+html body.asr-page main#main#main #bioactive-compounds .asr-hero .asr-lead--uppercase { margin-top: 32px; max-width: 1000px; font-size: clamp(18px, 1.7vw, 25px) !important; line-height: 1.4 !important; letter-spacing: .11em !important; }
+html body.asr-page main#main#main #bioactive-compounds .asr-hero .asr-intro { max-width: 880px; font-size: clamp(17px, 1.3vw, 20px) !important; }
+html body.asr-page main#main#main #bioactive-compounds .asr-scope { margin-block: 24px 38px; }
+html body.asr-page main#main#main #bioactive-compounds .asr-scope > li { padding-block: 6px; }
+html body.asr-page main#main#main #bioactive-compounds .asr-scope .asr-small-number { top: 0; left: 12px; }
+html body.asr-page main#main#main #bioactive-compounds .asr-css-icon {
+  --asr-icon-size: 78px;
+  --asr-icon-stroke: 1.5px;
+  --asr-icon-paper: #f7fbff;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--asr-icon-size);
+  height: var(--asr-icon-size);
+  margin: 0 auto 14px;
+  border: 1px solid #233250;
+  border-radius: 50%;
+  color: #182440;
+  background: rgba(250, 253, 255, .78);
+}
+html body.asr-page main#main#main #bioactive-compounds .asr-ci-canvas { position: relative; display: block; width: 68%; height: 68%; }
+html body.asr-page main#main#main #bioactive-compounds .asr-ci-shape { position: absolute; display: block; left: var(--x); top: var(--y); width: var(--w); height: var(--h); transform: rotate(var(--angle, 0deg)); }
+html body.asr-page main#main#main #bioactive-compounds .asr-ci-line { height: 0; border-top: var(--asr-icon-stroke) solid currentColor; transform-origin: 0 50%; }
+html body.asr-page main#main#main #bioactive-compounds .asr-ci-ring { border: var(--asr-icon-stroke) solid currentColor; border-radius: 50%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #bioactive-compounds :is(.asr-ci-botanical-leaf, .asr-ci-petal) { border: var(--asr-icon-stroke) solid currentColor; border-radius: 75% 0 75% 0; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #bioactive-compounds .asr-compound { gap: 12px; background: rgba(255, 255, 255, .94); }
+html body.asr-page main#main#main #bioactive-compounds .asr-compound-copy p { font-size: clamp(14px, 1.12vw, 18px) !important; }
+@layer arotec-display-headings.spec {
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero--compounds .asr-title { font-size: clamp(38px, 3.55vw, 60px) !important; line-height: 1.08 !important; letter-spacing: -.05em !important; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-compound h4 { font-size: clamp(16px, 1.35vw, 23px) !important; line-height: 1.25 !important; }
+}
+@media (min-width: 701px) {
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero--compounds > .asr-container { display: flex; flex-direction: column; min-height: inherit; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-masthead { flex-shrink: 0; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero .asr-chapter { align-self: flex-start; width: max-content; margin: 8px 0 12px; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero-copy { margin-block: auto; }
+}
+@media (min-width: 801px) {
+  html body.asr-page main#main#main #bioactive-compounds .asr-compounds { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: 14px 18px; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-compound { grid-template-columns: minmax(0, .94fr) minmax(0, 1.15fr) minmax(0, 1fr); padding: 27px 14px 12px; }
+}
+@media (max-width: 800px) {
+  html body.asr-page main#main#main #bioactive-compounds .asr-compounds { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; }
+}
+@media (max-width: 700px) {
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero--compounds { --asr-compounds-mobile-art-height: clamp(230px, 57vw, 330px); min-height: 0; padding-bottom: calc(var(--asr-compounds-mobile-art-height) + 20px); }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero-art { inset: auto 0 0; width: 100%; height: var(--asr-compounds-mobile-art-height); opacity: 1; mask-image: linear-gradient(to bottom, transparent, #000 18%); }
+  html body.asr-page main#main#main #bioactive-compounds .asr-compounds-hero-image { object-position: 80% center; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero-copy { width: 100%; padding-block: 0 20px; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero .asr-lead--uppercase { margin-top: 20px; font-size: 17px !important; letter-spacing: .1em !important; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-hero .asr-intro { font-size: 17px !important; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-css-icon { --asr-icon-size: 70px; }
+  html body.asr-page main#main#main #bioactive-compounds .asr-scope { margin-block: 22px 30px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #bioactive-compounds .asr-hero--compounds .asr-title { font-size: clamp(32px, 7.3vw, 48px) !important; line-height: 1.08 !important; }
+    html body.asr-page main#main#main #bioactive-compounds .asr-compound h4 { font-size: 20px !important; }
+  }
+}
+
+/* Biological responses: clean supplied hero, native content and six CSS icons. */
+html body.asr-page main#main#main #biological-responses { background-color: var(--asr-paper); background-image: linear-gradient(rgba(157, 177, 198, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(157, 177, 198, .035) 1px, transparent 1px); background-size: 22px 22px; }
+html body.asr-page main#main#main #biological-responses .asr-hero--domains { min-height: clamp(500px, 40cqw, 680px); padding-bottom: 0; }
+html body.asr-page main#main#main #biological-responses .asr-hero-art { inset: 0; width: 100%; height: 100%; max-width: none; opacity: 1; mask-image: none; }
+html body.asr-page main#main#main #biological-responses .asr-domain-hero-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 65% top; }
+html body.asr-page main#main#main #biological-responses .asr-hero-copy { width: 82%; max-width: 1050px; padding-block: 18px 32px; }
+html body.asr-page main#main#main #biological-responses .asr-lead { margin-top: 12px; color: var(--asr-ink); font-size: clamp(26px, 2.9vw, 44px) !important; line-height: 1.25 !important; }
+html body.asr-page main#main#main #biological-responses .asr-intro { max-width: 910px; margin-top: 12px; color: #243757; font-size: clamp(17px, 1.5vw, 22px) !important; line-height: 1.45 !important; }
+html body.asr-page main#main#main #biological-responses .asr-domain-grid { gap: 16px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-card { display: flex; flex-direction: column; min-width: 0; padding: clamp(12px, 1.1cqw, 19px); border: 1px solid #b8c6d5; border-radius: 15px; background: rgba(250, 253, 255, .64); }
+html body.asr-page main#main#main #biological-responses .asr-domain-heading { --domain-icon-size: clamp(68px, 6cqw, 100px); grid-template-columns: 32px var(--domain-icon-size) minmax(0, 1fr); gap: clamp(10px, 1.15cqw, 20px); align-items: start; min-height: 120px; padding-bottom: 16px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-heading > div { min-width: 0; padding-top: 6px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-heading > .asr-number { margin: 7px 0 0; padding-bottom: 0; font-size: clamp(27px, 2.4cqw, 36px); }
+html body.asr-page main#main#main #biological-responses .asr-domain-heading > .asr-number::after { width: 28px; margin-top: 9px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-heading p { margin-top: 7px; color: #344e75; font-size: clamp(15px, 1.3vw, 20px) !important; line-height: 1.35 !important; }
+html body.asr-page main#main#main #biological-responses .asr-domain-photo { margin-top: auto; border-radius: 11px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-list { margin: 18px 2.5% 0; padding-top: 12px; border-color: #8390a5; font-size: clamp(11px, .9vw, 14px) !important; line-height: 1.7 !important; letter-spacing: .12em !important; }
+html body.asr-page main#main#main #biological-responses .asr-domain-summary { margin-top: 23px; font-size: clamp(24px, 2.25vw, 36px) !important; line-height: 1.3 !important; }
+html body.asr-page main#main#main #biological-responses .asr-closing { padding-top: 42px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-icon {
+  --asr-di-paper: #f8fbfe;
+  --asr-di-stroke: 1.8px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: var(--domain-icon-size);
+  height: var(--domain-icon-size);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  color: #101c40;
+  background: var(--asr-di-paper);
+}
+html body.asr-page main#main#main #biological-responses .asr-di-canvas { position: relative; display: block; width: 72%; height: 72%; }
+html body.asr-page main#main#main #biological-responses .asr-di-shape { position: absolute; display: block; left: var(--x); top: var(--y); width: var(--w); height: var(--h); transform: rotate(var(--angle, 0deg)); }
+html body.asr-page main#main#main #biological-responses .asr-di-line { height: 0; border-top: var(--asr-di-stroke) solid currentColor; transform-origin: 0 50%; }
+html body.asr-page main#main#main #biological-responses .asr-di-ring { border: 1px solid currentColor; border-radius: 50%; background: var(--asr-di-paper); }
+html body.asr-page main#main#main #biological-responses .asr-di-shield { background: currentColor; clip-path: polygon(50% 0, 64% 9%, 79% 14%, 95% 13%, 95% 43%, 90% 61%, 79% 76%, 65% 89%, 50% 100%, 35% 89%, 21% 76%, 10% 61%, 5% 43%, 5% 13%, 21% 14%, 36% 9%); }
+html body.asr-page main#main#main #biological-responses .asr-di-shield::before { content: ""; position: absolute; inset: var(--asr-di-stroke); background: var(--asr-di-paper); clip-path: inherit; }
+html body.asr-page main#main#main #biological-responses .asr-di-shield-detail { border-right: var(--asr-di-stroke) solid currentColor; border-bottom: var(--asr-di-stroke) solid currentColor; border-radius: 0 0 100% 0; }
+html body.asr-page main#main#main #biological-responses .asr-di-shield-mark { background: currentColor; clip-path: polygon(0 0, 100% 0, 50% 100%); }
+html body.asr-page main#main#main #biological-responses :is(.asr-di-mitochondrion, .asr-di-mitochondrion-inner) { border: var(--asr-di-stroke) solid currentColor; border-radius: 48%; }
+html body.asr-page main#main#main #biological-responses .asr-di-crista { border: var(--asr-di-stroke) solid currentColor; border-left: 0; border-radius: 0 60% 60% 0; }
+html body.asr-page main#main#main #biological-responses .asr-di-brain-outline { border: var(--asr-di-stroke) solid currentColor; border-radius: 48% 53% 34% 30% / 65% 66% 33% 35%; background: var(--asr-di-paper); }
+html body.asr-page main#main#main #biological-responses .asr-di-brain-stem { border: var(--asr-di-stroke) solid currentColor; border-top: 0; border-radius: 0 0 35% 35%; }
+html body.asr-page main#main#main #biological-responses .asr-di-cerebellum { border: var(--asr-di-stroke) solid currentColor; border-radius: 50%; }
+html body.asr-page main#main#main #biological-responses .asr-di-brain-fold { border: var(--asr-di-stroke) solid currentColor; border-bottom-color: transparent; border-radius: 45% 60% 40% 65%; }
+html body.asr-page main#main#main #biological-responses :is(.asr-di-terminal, .asr-di-pituitary) { background: currentColor; clip-path: polygon(32% 0, 68% 0, 68% 32%, 71% 43%, 82% 52%, 93% 65%, 98% 78%, 96% 87%, 88% 95%, 73% 100%, 27% 100%, 12% 95%, 4% 87%, 2% 78%, 7% 65%, 18% 52%, 29% 43%, 32% 32%); }
+html body.asr-page main#main#main #biological-responses :is(.asr-di-terminal, .asr-di-pituitary)::before { content: ""; position: absolute; inset: var(--asr-di-stroke); background: var(--asr-di-paper); clip-path: inherit; }
+html body.asr-page main#main#main #biological-responses .asr-di-terminal::after { content: ""; position: absolute; top: -1px; left: 38%; width: 24%; height: 5px; background: var(--asr-di-paper); }
+html body.asr-page main#main#main #biological-responses .asr-di-receptor { border: var(--asr-di-stroke) solid currentColor; border-bottom: 0; border-radius: 42% 42% 0 0; }
+html body.asr-page main#main#main #biological-responses .asr-di-droplet { border: var(--asr-di-stroke) solid currentColor; border-radius: 0 62% 62% 62%; }
+html body.asr-page main#main#main #biological-responses .asr-di-skin-box { border: var(--asr-di-stroke) solid currentColor; }
+html body.asr-page main#main#main #biological-responses .asr-di-thyroid-left { border: var(--asr-di-stroke) solid currentColor; border-radius: 65% 28% 30% 60%; background: var(--asr-di-paper); }
+html body.asr-page main#main#main #biological-responses .asr-di-thyroid-right { border: var(--asr-di-stroke) solid currentColor; border-radius: 28% 65% 60% 30%; background: var(--asr-di-paper); }
+
+@layer arotec-display-headings.spec {
+  html body.asr-page main#main#main #biological-responses .asr-hero--domains .asr-title { font-size: clamp(42px, 4.7vw, 76px) !important; line-height: 1.04 !important; letter-spacing: -.055em !important; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading h3 { font-size: clamp(19px, 1.6vw, 27px) !important; line-height: 1.18 !important; letter-spacing: -.04em !important; }
+}
+@media (min-width: 701px) {
+  html body.asr-page main#main#main #biological-responses .asr-hero > .asr-container { display: flex; flex-direction: column; min-height: inherit; }
+  html body.asr-page main#main#main #biological-responses .asr-hero .asr-chapter { align-self: flex-start; margin-bottom: 12px; }
+  html body.asr-page main#main#main #biological-responses .asr-hero-copy { margin-block: auto; }
+}
+@media (min-width: 801px) and (max-width: 1250px) {
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading { --domain-icon-size: 68px; grid-template-columns: 27px var(--domain-icon-size) minmax(0, 1fr); gap: 10px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading p { font-size: 15px !important; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading p br { display: none; }
+}
+@media (max-width: 800px) {
+  html body.asr-page main#main#main #biological-responses .asr-domain-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading { --domain-icon-size: 84px; gap: 15px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading p { font-size: 17px !important; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #biological-responses .asr-domain-heading h3 { font-size: 24px !important; }
+  }
+}
+@media (max-width: 700px) {
+  html body.asr-page main#main#main #biological-responses .asr-hero--domains { min-height: 0; padding-bottom: clamp(225px, 52vw, 340px); }
+  html body.asr-page main#main#main #biological-responses .asr-hero-art { top: auto; bottom: 0; height: clamp(225px, 52vw, 340px); mask-image: linear-gradient(to bottom, transparent, #000 18%); }
+  html body.asr-page main#main#main #biological-responses .asr-domain-hero-image { object-position: right center; }
+  html body.asr-page main#main#main #biological-responses .asr-hero-copy { width: 100%; padding-block: 0 16px; }
+  html body.asr-page main#main#main #biological-responses .asr-hero .asr-lead { margin-top: 17px; font-size: clamp(25px, 5.4vw, 34px) !important; }
+  html body.asr-page main#main#main #biological-responses .asr-hero .asr-intro { margin-top: 14px; font-size: 17px !important; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-list { margin-inline: 0; font-size: 11px !important; letter-spacing: .065em !important; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-summary { font-size: clamp(23px, 5vw, 30px) !important; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #biological-responses .asr-hero--domains .asr-title { font-size: clamp(34px, 8.1vw, 53px) !important; line-height: 1.06 !important; }
+    html body.asr-page main#main#main #biological-responses .asr-hero--domains .asr-title br { display: none; }
+  }
+}
+@media (max-width: 480px) {
+  html body.asr-page main#main#main #biological-responses .asr-domain-card { padding: 12px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading { --domain-icon-size: 62px; grid-template-columns: 25px var(--domain-icon-size) minmax(0, 1fr); gap: 9px; min-height: 112px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading > .asr-number { font-size: 25px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading > .asr-number::after { width: 23px; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading p { font-size: 14px !important; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-heading p br { display: none; }
+  html body.asr-page main#main#main #biological-responses .asr-domain-icon { --asr-di-stroke: 1.5px; border-width: 1.5px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #biological-responses .asr-domain-heading h3 { font-size: 18px !important; line-height: 1.2 !important; }
+  }
+}
+
+/* Ingredient applications: four supplied images, editable labels and CSS icons. */
+html body.asr-page main#main#main #ingredient-applications .asr-hero--applications { min-height: clamp(580px, 45cqw, 800px); padding-bottom: 0; }
+html body.asr-page main#main#main #ingredient-applications .asr-hero-art { inset: 0; width: 100%; height: 100%; max-width: none; opacity: 1; mask-image: none; }
+html body.asr-page main#main#main #ingredient-applications .asr-applications-hero-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 64% top; }
+html body.asr-page main#main#main #ingredient-applications .asr-hero-copy { width: 92%; max-width: 1160px; padding-block: 22px 34px; }
+html body.asr-page main#main#main #ingredient-applications .asr-lead { margin-top: clamp(30px, 4cqw, 64px); max-width: 1050px; color: var(--asr-ink); font-size: clamp(23px, 2.1vw, 34px) !important; line-height: 1.3 !important; }
+html body.asr-page main#main#main #ingredient-applications .asr-intro { max-width: 730px; margin-top: 26px; font-size: clamp(17px, 1.4vw, 22px) !important; line-height: 1.4 !important; }
+html body.asr-page main#main#main #ingredient-applications .asr-applications { gap: 15px; }
+html body.asr-page main#main#main #ingredient-applications .asr-application { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr); align-items: stretch; gap: 0; min-height: clamp(350px, 28cqw, 520px); padding: 0; overflow: hidden; border: 1px solid #b7cbdc; border-radius: 0; background: linear-gradient(120deg, #f8fcff, #edf4fa); }
+html body.asr-page main#main#main #ingredient-applications .asr-application-copy { position: relative; z-index: 1; grid-area: 1 / 1; align-self: stretch; display: flex; flex-direction: column; width: 55%; min-width: 0; padding: clamp(20px, 2cqw, 34px); }
+html body.asr-page main#main#main #ingredient-applications .asr-application--skin .asr-application-copy { width: 61%; }
+html body.asr-page main#main#main #ingredient-applications .asr-application--scent .asr-application-copy { width: 47%; }
+html body.asr-page main#main#main #ingredient-applications .asr-application .asr-number { margin-bottom: 13px; padding-bottom: 0; font-size: clamp(36px, 3.7cqw, 54px); font-weight: 500; }
+html body.asr-page main#main#main #ingredient-applications .asr-application .asr-number::after { width: 35px; margin-top: 9px; }
+html body.asr-page main#main#main #ingredient-applications .asr-application-copy > p { max-width: 640px; margin-top: 10px; color: #35496c; font-size: clamp(16px, 1.3vw, 20px) !important; line-height: 1.4 !important; }
+html body.asr-page main#main#main #ingredient-applications .asr-application .asr-icon-flow { margin-top: auto; gap: clamp(16px, 2cqw, 30px); padding-top: 28px; }
+html body.asr-page main#main#main #ingredient-applications .asr-application-art { position: relative; z-index: 0; grid-area: 1 / 1; align-self: end; justify-self: stretch; width: 100%; max-width: none; min-width: 0; aspect-ratio: var(--application-art-ratio); overflow: hidden; clip-path: none; mix-blend-mode: normal; }
+html body.asr-page main#main#main #ingredient-applications .asr-application-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+html body.asr-page main#main#main #ingredient-applications .asr-diagram-labels { position: absolute; inset: 0; color: #172747; font-family: var(--site-font, "DM Sans", sans-serif); font-size: clamp(10px, 1vw, 15px); font-weight: 400; line-height: 1.2; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label { position: absolute; left: 90%; display: flex; align-items: center; width: 9%; min-height: 11%; padding-left: 3px; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label::before { content: ""; position: absolute; top: 0; bottom: 0; left: -11px; width: 6px; border-right: 1px solid currentColor; border-block: 1px solid currentColor; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label--epidermis { top: 17%; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label--dermis { top: 34%; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label--sensory { top: 51%; min-height: 16%; }
+html body.asr-page main#main#main #ingredient-applications .asr-skin-label--receptors { top: 72%; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-label { position: absolute; display: block; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-label--neural { left: 82%; top: 13.5%; width: 17%; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-label--olfactory { left: 47%; top: 27%; width: 19%; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-label--aroma { left: 37%; top: 66%; width: 19%; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-leader { position: absolute; display: block; transform-origin: 0 50%; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-leader--neural { left: 77.8%; top: 18%; width: 3.5%; height: 19%; border-left: 1px solid currentColor; border-top: 1px solid currentColor; }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-leader--olfactory { left: 62%; top: 34%; width: 10.3%; border-top: 1px solid currentColor; transform: rotate(24deg); }
+html body.asr-page main#main#main #ingredient-applications .asr-scent-leader--aroma { left: 50%; top: 65%; width: 11%; border-top: 1px solid currentColor; transform: rotate(-18deg); }
+html body.asr-page main#main#main #ingredient-applications .asr-section-heading--application { margin-block: 22px 18px; }
+html body.asr-page main#main#main #ingredient-applications .asr-flow--applications { gap: 28px; }
+html body.asr-page main#main#main #ingredient-applications .asr-flow-visual { align-items: center; margin-bottom: 12px; }
+html body.asr-page main#main#main #ingredient-applications .asr-closing { padding-top: 32px; }
+html body.asr-page main#main#main #ingredient-applications .asr-application-icon {
+  --asr-icon-size: clamp(66px, 6.4cqw, 94px);
+  --asr-icon-paper: #f6faff;
+  --asr-icon-stroke: 1.8px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 var(--asr-icon-size);
+  width: var(--asr-icon-size);
+  height: var(--asr-icon-size);
+  border: 1.7px solid currentColor;
+  border-radius: 50%;
+  color: #121f43;
+  background: rgba(248, 252, 255, .72);
+}
+html body.asr-page main#main#main #ingredient-applications .asr-flow-visual .asr-application-icon { --asr-icon-size: clamp(64px, 5.6cqw, 82px); }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-canvas { position: relative; display: block; width: 70%; height: 70%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-shape { position: absolute; display: block; left: var(--x); top: var(--y); width: var(--w); height: var(--h); transform: rotate(var(--angle, 0deg)); }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-line { height: 0; border-top: var(--asr-icon-stroke) solid currentColor; transform-origin: 0 50%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-ring { border: var(--asr-icon-stroke) solid currentColor; border-radius: 50%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-leaf-blade { border: var(--asr-icon-stroke) solid currentColor; border-radius: 76% 0 76% 0; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-capsule { border: var(--asr-icon-stroke) solid currentColor; border-radius: 100px; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-capsule::after { content: ""; position: absolute; left: 0; top: 50%; width: 100%; border-top: var(--asr-icon-stroke) solid currentColor; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-bar { border: var(--asr-icon-stroke) solid currentColor; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-droplet { border: var(--asr-icon-stroke) solid currentColor; border-radius: 0 60% 60% 60%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-drop-shine { border-right: var(--asr-icon-stroke) solid currentColor; border-bottom: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 100% 0; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-profile { background: currentColor; clip-path: polygon(35% 0, 60% 0, 77% 7%, 88% 18%, 92% 31%, 88% 42%, 83% 48%, 89% 59%, 77% 62%, 75% 72%, 64% 74%, 64% 99%, 32% 99%, 29% 83%, 20% 73%, 10% 65%, 7% 53%, 1% 45%, 7% 36%, 8% 23%, 18% 9%); }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-profile::before { content: ""; position: absolute; inset: var(--asr-icon-stroke); background: var(--asr-icon-paper); clip-path: inherit; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-mind { border: var(--asr-icon-stroke) solid currentColor; border-radius: 48% 45% 55% 40%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-fold { border: var(--asr-icon-stroke) solid currentColor; border-bottom-color: transparent; border-radius: 45% 60% 40% 65%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-sound { border: var(--asr-icon-stroke) solid transparent; border-right-color: currentColor; border-radius: 50%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-bulb { border: var(--asr-icon-stroke) solid currentColor; border-radius: 50% 50% 35% 35%; }
+html body.asr-page main#main#main #ingredient-applications .asr-ci-bulb-base { border: var(--asr-icon-stroke) solid currentColor; border-radius: 0 0 30% 30%; background: var(--asr-icon-paper); }
+html body.asr-page main#main#main #ingredient-applications .asr-css-arrow { position: relative; display: inline-block; width: 40px; height: 16px; color: #1a2b50; }
+html body.asr-page main#main#main #ingredient-applications .asr-css-arrow::before { content: ""; position: absolute; top: 7px; left: 0; right: 1px; border-top: 1.5px solid currentColor; }
+html body.asr-page main#main#main #ingredient-applications .asr-css-arrow::after { content: ""; position: absolute; top: 2px; right: 1px; width: 11px; height: 11px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; transform: rotate(45deg); }
+html body.asr-page main#main#main #ingredient-applications .asr-flow-visual > .asr-css-arrow { position: absolute; top: calc(50% - 8px); right: -34px; }
+@layer arotec-display-headings.spec {
+  html body.asr-page main#main#main #ingredient-applications .asr-hero--applications .asr-title { font-size: clamp(38px, 4.1vw, 70px) !important; line-height: 1.06 !important; letter-spacing: -.055em !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application h3 { font-size: clamp(24px, 2.1vw, 34px) !important; line-height: 1.18 !important; letter-spacing: -.04em !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-section-heading--application h3 { font-size: clamp(16px, 1.35vw, 21px) !important; text-align: left !important; letter-spacing: .08em !important; font-weight: 700 !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-flow--applications h4 { font-size: clamp(17px, 1.55vw, 24px) !important; line-height: 1.3 !important; }
+}
+@media (min-width: 701px) {
+  html body.asr-page main#main#main #ingredient-applications .asr-hero > .asr-container { display: flex; flex-direction: column; min-height: inherit; }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero .asr-chapter { align-self: flex-start; margin-bottom: 16px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero-copy { margin-block: auto; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  html body.asr-page main#main#main #ingredient-applications .asr-application { min-height: 330px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-copy { padding: 22px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application .asr-number { font-size: 36px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-icon { --asr-icon-size: 66px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application .asr-icon-flow { gap: 16px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #ingredient-applications .asr-application h3 { font-size: 23px !important; }
+  }
+}
+@media (max-width: 700px) {
+  html body.asr-page main#main#main #ingredient-applications .asr-hero--applications { min-height: 0; padding-bottom: clamp(235px, 53vw, 350px); }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero-art { top: auto; bottom: 0; height: clamp(235px, 53vw, 350px); mask-image: linear-gradient(to bottom, transparent, #000 18%); }
+  html body.asr-page main#main#main #ingredient-applications .asr-applications-hero-image { object-position: right center; }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero-copy { width: 100%; padding-block: 0 20px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero .asr-lead { margin-top: 24px; font-size: 24px !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-hero .asr-intro { margin-top: 18px; font-size: 17px !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application { min-height: 0; grid-template-columns: minmax(0, 1fr); }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-copy, html body.asr-page main#main#main #ingredient-applications .asr-application--skin .asr-application-copy, html body.asr-page main#main#main #ingredient-applications .asr-application--scent .asr-application-copy { grid-area: auto; width: 100%; padding: 24px 22px 18px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application .asr-number { margin-bottom: 14px; font-size: 38px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-copy > p { font-size: 16px !important; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application .asr-icon-flow { margin-top: 0; padding-top: 23px; gap: 20px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-icon { --asr-icon-size: 64px; --asr-icon-stroke: 1.6px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-art { grid-area: auto; width: 100%; aspect-ratio: 1.72; }
+  html body.asr-page main#main#main #ingredient-applications .asr-application-image { object-position: right center; }
+  html body.asr-page main#main#main #ingredient-applications .asr-diagram-labels { left: auto; right: 0; width: auto; height: 100%; aspect-ratio: var(--application-art-ratio); font-size: clamp(10px, 2.1vw, 13px); }
+  html body.asr-page main#main#main #ingredient-applications .asr-scent-label--aroma { left: 44%; top: 71%; width: 24%; }
+  html body.asr-page main#main#main #ingredient-applications .asr-flow--applications { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-flow-visual > .asr-css-arrow { display: none; }
+  html body.asr-page main#main#main #ingredient-applications .asr-section-heading--application { gap: 12px; margin-top: 26px; }
+  html body.asr-page main#main#main #ingredient-applications .asr-section-heading--application .asr-rule { min-width: 20px; }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #ingredient-applications .asr-hero--applications .asr-title { font-size: clamp(32px, 7.5vw, 50px) !important; line-height: 1.08 !important; }
+    html body.asr-page main#main#main #ingredient-applications .asr-application h3 { font-size: clamp(25px, 5.7vw, 31px) !important; }
+    html body.asr-page main#main#main #ingredient-applications .asr-section-heading--application h3 { max-width: 82%; font-size: 15px !important; }
+    html body.asr-page main#main#main #ingredient-applications .asr-flow--applications h4 { font-size: 18px !important; }
+  }
+}
+
+/* Desktop opening: fit the available screen below the shared main menu. */
+@media (min-width: 1024px) {
+  html body.asr-page main#main#main #research-focus .asr-hero--focus {
+    min-height: min(840px, calc(100svh - var(--detail-header-space, 100px)));
+    padding-block: 0;
+  }
+  html body.asr-page main#main#main #research-focus .asr-hero--focus > .asr-container {
+    min-height: inherit;
+    justify-content: center;
+  }
+  html body.asr-page main#main#main #research-focus .asr-hero-copy {
+    width: 56%;
+    max-width: 780px;
+    margin-block: 0;
+    padding-block: clamp(28px, 5svh, 58px);
+  }
+  html body.asr-page main#main#main #research-focus .asr-focus-hero-image { object-position: 62% center; }
+  html body.asr-page main#main#main #research-focus .asr-hero .asr-lead {
+    max-width: none;
+    margin-top: clamp(16px, 2.6svh, 26px);
+    font-size: clamp(20px, min(1.85vw, 3svh), 30px) !important;
+    line-height: 1.3 !important;
+    white-space: nowrap;
+  }
+  html body.asr-page main#main#main #research-focus .asr-hero .asr-intro {
+    max-width: 510px;
+    margin-top: clamp(15px, 2.3svh, 22px);
+    font-size: clamp(16px, 1.12vw, 20px) !important;
+    line-height: 1.5 !important;
+  }
+  @layer arotec-display-headings.spec {
+    html body.asr-page main#main#main #research-focus .asr-hero--focus .asr-title {
+      font-size: clamp(40px, min(4vw, 7svh), 68px) !important;
+      line-height: 1.06 !important;
+      letter-spacing: -.05em !important;
+      white-space: nowrap !important;
+    }
+  }
+}

@@ -1,0 +1,318 @@
+/* Trevion reference 4.2 / 4.3. All labels are native text; artwork is isolated. */
+html body.tv-page { --tv-ink: #266d66; --tv-copy: #54727e; --tv-line: #bed7d9; background: #eef7f6; }
+html body.tv-page main#main#main.tv-main { padding: var(--detail-header-space, 0px) 0 0 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.tv-page main#main#main :is(p,li,figcaption) { font-size: inherit !important; line-height: inherit !important; }
+html body.tv-page main#main#main :is(ul,ol) { list-style: none; padding: 0; }
+html body.tv-page main#main#main sup { font-size: .55em !important; vertical-align: super; line-height: 0 !important; }
+html body.tv-page main#main#main .tv-chapter { container-type: inline-size; width: 100%; max-width: 1536px; margin: 0 auto; background: #eef7f6 url('../images/bio-responsive-trevion/page-texture.png') center / 100% 100%; scroll-margin-top: 130px; }
+html body.tv-page main#main#main .tv-layout { display: grid; grid-template-columns: minmax(0, 430fr) minmax(0, 996fr); gap: 1.953125cqw; padding: 2.604167cqw; }
+html body.tv-page main#main#main .tv-sidebar { position: relative; display: flex; flex-direction: column; min-height: 85.9375cqw; padding: 2.473958cqw; overflow: hidden; border-radius: 2.213542cqw; background: repeating-linear-gradient(113deg, transparent 0 5.85cqw, #00193624 5.85cqw 10.8cqw), linear-gradient(115deg, #001d32, #003e49 70%, #00574d); box-shadow: 0 10px 22px #0b515216; color: white; }
+html body.tv-page main#main#main .tv-sidebar::before { content: ''; position: absolute; pointer-events: none; top: 2.4cqw; right: .5cqw; width: 10cqw; height: 10cqw; background: url('../images/bio-responsive-trevion/page-circle-motif.png') center / contain no-repeat; opacity: 0; }
+html body.tv-page main#main#main .tv-kicker { display: flex; align-items: center; gap: 1cqw; margin-top: .25cqw; color: #99d6c8; font-size: 1.171875cqw !important; font-weight: 700 !important; letter-spacing: .27em !important; line-height: 1.5 !important; text-transform: uppercase !important; white-space: nowrap; }
+html body.tv-page main#main#main .tv-kicker span { flex: 1; height: 1px; background: #679b97; }
+html body.tv-page main#main#main .tv-brand { display: block; margin-bottom: 2.1cqw; font-size: 3cqw !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: -.025em !important; white-space: nowrap; }
+html body.tv-page main#main#main .tv-title-copy { display: block; font-size: 2.473958cqw !important; font-weight: 400 !important; line-height: 1.21 !important; letter-spacing: -.02em !important; }
+html body.tv-page main#main#main .tv-accent { width: 8.203125cqw; height: .325521cqw; min-height: 4px; margin: 2.604167cqw 0 2.278646cqw; background: #97ded0; border-radius: 8px; }
+html body.tv-page main#main#main .tv-description { color: #d2e5eb; font-size: 1.302083cqw !important; font-weight: 400 !important; line-height: 1.56 !important; letter-spacing: -.015em !important; }
+html body.tv-page main#main#main .tv-pathway { margin-top: 4.75cqw; }
+html body.tv-page main#main#main .tv-eyebrow { color: #7dcdbc; font-size: 1.041667cqw !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: .18em !important; }
+html body.tv-page main#main#main .tv-pathway ol { margin-top: 2.3cqw; display: grid; gap: 3.7cqw; }
+html body.tv-page main#main#main .tv-pathway li { position: relative; }
+html body.tv-page main#main#main .tv-pathway li::before { content: ''; position: absolute; left: 1.43cqw; top: 12px; bottom: -3.7cqw; border-left: 2px solid #7fcbbd; }
+html body.tv-page main#main#main .tv-pathway li:last-child::before { bottom: 0; }
+html body.tv-page main#main#main .tv-pathway a { position: relative; display: flex; gap: 1.43cqw; color: #fff; border-radius: 8px; }
+html body.tv-page main#main#main .tv-pathway a:hover strong { text-decoration: underline; text-underline-offset: 5px; }
+html body.tv-page main#main#main .tv-step-number { flex: 0 0 2.21cqw; height: 2.21cqw; margin: .35cqw 0 0 .39cqw; border-radius: 50%; background: #7dcdbc; color: #034045; display: grid; place-items: center; font-size: 1.04cqw !important; font-weight: 700 !important; }
+html body.tv-page main#main#main .tv-pathway strong { display: block; font-size: 1.43cqw !important; line-height: 1.3 !important; font-weight: 700 !important; }
+html body.tv-page main#main#main .tv-pathway small { display: block; margin-top: .65cqw; color: #b7d5dc; font-size: 1.041667cqw !important; line-height: 1.5 !important; }
+html body.tv-page main#main#main .tv-sidebar-callout { padding: 1.43cqw 1.69cqw; margin-top: 4.36cqw; border-radius: 1.3cqw; background: #0d705b; }
+html body.tv-page main#main#main .tv-sidebar-callout p { color: #b6e6db; font-size: .91cqw !important; font-weight: 700 !important; letter-spacing: .12em !important; line-height: 1.45 !important; text-transform: uppercase !important; }
+html body.tv-page main#main#main .tv-sidebar-callout strong { display: block; margin-top: .65cqw; font-size: 1.82cqw !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.025em !important; white-space: nowrap; }
+html body.tv-page main#main#main .tv-signature { margin-top: auto; padding-top: 2cqw; color: #83afb7; font-size: .78125cqw !important; letter-spacing: .15em !important; text-transform: uppercase !important; line-height: 1.5 !important; }
+html body.tv-page main#main#main .tv-content { padding-top: 2.47cqw; }
+html body.tv-page main#main#main .tv-block { scroll-margin-top: 135px; }
+html body.tv-page main#main#main .tv-section-heading { display: flex; align-items: center; gap: 0; margin: 0 .52cqw 1.43cqw 1.3cqw; }
+html body.tv-page main#main#main .tv-section-heading > span { height: 1px; flex: 1; background: #94b8b5; }
+html body.tv-page main#main#main .tv-panel { border: 1px solid var(--tv-line); border-radius: 2.083333cqw; background: #fff; box-shadow: 0 10px 17px #074c5b14; }
+html body.tv-page main#main#main .tv-receptor-panel { padding: 2.278646cqw 2.148438cqw 3.515625cqw; }
+html body.tv-page main#main#main .tv-art { display: block; width: 100%; height: auto; object-fit: contain; }
+html body.tv-page main#main#main .tv-diagram-box { border: 1.5px solid currentColor; border-radius: .6cqw; box-shadow: 0 0 5px #17395117; }
+html body.tv-page main#main#main .tv-stressors { color: #a5262b; padding: .45cqw 1.1cqw .6cqw; }
+html body.tv-page main#main#main .tv-stressors ul { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); align-items: end; gap: .5cqw; }
+html body.tv-page main#main#main .tv-stressors li { text-align: center; color: #191919; font-size: 1.02cqw !important; line-height: 1.3 !important; }
+html body.tv-page main#main#main .tv-stressors .tv-art { height: 3.25cqw; width: 3.9cqw; margin: 0 auto .2cqw; }
+html body.tv-page main#main#main .tv-flow { display: flex; align-items: center; justify-content: center; height: .98cqw; font-size: 1.3cqw !important; line-height: 1 !important; color: #0b4782; }
+html body.tv-page main#main#main .tv-flow--red { color: #b71121; }
+html body.tv-page main#main#main .tv-flow--purple { color: #341275; }
+html body.tv-page main#main#main .tv-epidermis { color: #254f7d; padding: .35cqw .65cqw .45cqw; }
+html body.tv-page main#main#main .tv-inhibition-heading { text-align: center; color: #9d2829; font-size: 1.23cqw !important; font-weight: 700 !important; line-height: 1.4 !important; }
+html body.tv-page main#main#main .tv-receptor-flow { display: grid; grid-template-columns: 8% 12% 7% 38% 4% 12% 4% 10%; align-items: center; justify-content: space-between; gap: .2cqw; min-height: 7.1cqw; }
+html body.tv-page main#main#main .tv-receptor-flow > .tv-art:first-child { width: 4.1cqw; justify-self: center; }
+html body.tv-page main#main#main .tv-trevion-pill { border: 1px solid #326c45; border-radius: .4cqw; padding: .75cqw .5cqw; text-align: center; color: #27603b; font-size: 1.3cqw !important; font-weight: 700 !important; white-space: nowrap; }
+html body.tv-page main#main#main .tv-inhibition-mark { color: #b5091c; font-size: 3.3cqw !important; }
+html body.tv-page main#main#main .tv-receptors { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65cqw 2cqw; }
+html body.tv-page main#main#main .tv-receptor { position: relative; padding: .45cqw 2.1cqw .45cqw .9cqw; border: 1px solid #a74646; border-radius: .6cqw; text-align: center; color: #111; }
+html body.tv-page main#main#main .tv-receptor strong { display: block; font-size: 1.75cqw !important; font-weight: 700 !important; line-height: 1.2 !important; }
+html body.tv-page main#main#main .tv-receptor span { display: block; font-size: 1.2cqw !important; line-height: 1.4 !important; }
+html body.tv-page main#main#main .tv-receptor .tv-down { position: absolute; right: .1cqw; top: 50%; transform: translateY(-50%); color: #be0c21; }
+html body.tv-page main#main#main .tv-receptors > p { grid-column: 1 / -1; justify-self: center; padding: .1cqw 1.1cqw; color: #fff; background: #bb071b; border-radius: .2cqw; font-size: 1.1cqw !important; line-height: 1.4 !important; text-transform: uppercase !important; }
+html body.tv-page main#main#main .tv-down { font-size: 2.8cqw !important; color: #064585; }
+html body.tv-page main#main#main .tv-arrow-right { color: #616678; font-size: 2.1cqw !important; }
+html body.tv-page main#main#main .tv-restored { padding: .55cqw .3cqw; color: #161616; border: 1px solid #777786; border-radius: .6cqw; text-align: center; font-size: .95cqw !important; line-height: 1.35 !important; }
+html body.tv-page main#main#main .tv-neuroimmune { color: #225181; padding: .35cqw 2.3cqw .55cqw; }
+html body.tv-page main#main#main .tv-neuroimmune ul { display: flex; align-items: center; justify-content: space-between; }
+html body.tv-page main#main#main .tv-neuroimmune li { display: flex; align-items: center; gap: .65cqw; color: #141414; font-size: 1.02cqw !important; line-height: 1.35 !important; }
+html body.tv-page main#main#main .tv-neuroimmune img { width: 3.9cqw; height: 3.4cqw; }
+html body.tv-page main#main#main .tv-connector { height: 5.6cqw; margin: 0 auto 1.65cqw; width: 1.63cqw; background: url('../images/bio-responsive-trevion/pathway-connector.png') center / 100% 100% no-repeat; }
+html body.tv-page main#main#main .tv-barrier-panel { padding: 1.82cqw 1.56cqw 1.43cqw; }
+html body.tv-page main#main#main .tv-downstream { margin: 0 .6cqw; color: #32176d; padding: .4cqw 1.8cqw .55cqw; }
+html body.tv-page main#main#main .tv-outcomes-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2cqw; }
+html body.tv-page main#main#main .tv-outcomes-row > div { display: flex; align-items: center; justify-content: space-between; gap: 1cqw; }
+html body.tv-page main#main#main .tv-outcomes-row > div + div { border-left: 1px solid #66518a; padding-left: 2cqw; }
+html body.tv-page main#main#main .tv-outcomes-row img { width: 4.1cqw; height: 3.4cqw; }
+html body.tv-page main#main#main .tv-outcomes-row p { color: #171717; font-size: 1cqw !important; line-height: 1.4 !important; }
+html body.tv-page main#main#main .tv-stress-axis { display: grid; grid-template-columns: 17% 61% 22%; align-items: center; margin: 0 .6cqw; padding: .4cqw 2cqw; color: #32176d; }
+html body.tv-page main#main#main .tv-stress-axis > img { width: 3.9cqw; height: 3cqw; justify-self: center; }
+html body.tv-page main#main#main .tv-stress-axis p { font-size: 1.2cqw !important; color: #111; text-align: center; }
+html body.tv-page main#main#main .tv-cortisol { display: flex; align-items: center; gap: 1.3cqw; }
+html body.tv-page main#main#main .tv-cortisol img { width: 3.1cqw; }
+html body.tv-page main#main#main .tv-cortisol .tv-down { color: #341275; }
+html body.tv-page main#main#main .tv-barrier { display: grid; grid-template-columns: 22% 78%; padding: .55cqw; margin: 0 .6cqw; border-radius: .65cqw; background: #053c71; color: white; }
+html body.tv-page main#main#main .tv-barrier-cube { align-self: center; }
+html body.tv-page main#main#main .tv-barrier-detail { padding-left: .3cqw; }
+html body.tv-page main#main#main .tv-barrier-lower { display: grid; grid-template-columns: minmax(0,36fr) minmax(0,64fr); gap: .25cqw; margin-top: .45cqw; }
+html body.tv-page main#main#main .tv-barrier-lower ul { display: grid; gap: .35cqw; align-content: start; padding-top: .1cqw; }
+html body.tv-page main#main#main .tv-barrier-lower li { display: flex; gap: .4cqw; align-items: baseline; font-size: .93cqw !important; line-height: 1.3 !important; }
+html body.tv-page main#main#main .tv-barrier-lower li i { font-size: 1.1cqw !important; }
+html body.tv-page main#main#main .tv-barrier-comparison { display: grid; grid-template-columns: 44% 10% 46%; align-items: center; padding: .35cqw .3cqw; border-radius: .75cqw; background: #fff; }
+html body.tv-page main#main#main .tv-barrier-comparison figcaption { color: #275075; font-size: .73cqw !important; text-align: center; white-space: nowrap; font-weight: 600 !important; }
+html body.tv-page main#main#main .tv-barrier-comparison img { height: 5.7cqw; }
+html body.tv-page main#main#main .tv-barrier-comparison > i { color: #063b70; font-size: 2cqw !important; }
+html body.tv-page main#main#main .tv-summary-strip { margin-top: 1.1cqw; padding: .65cqw .5cqw; border-radius: 2cqw; background: #e7f3f1; color: #306f68; text-align: center; text-transform: uppercase !important; font-size: .84cqw !important; font-weight: 700 !important; letter-spacing: .12em !important; line-height: 1.5 !important; }
+html body.tv-page main#main#main .tv-footnote { margin-top: 2.6cqw; color: var(--tv-copy); font-size: .846354cqw !important; line-height: 1.8 !important; letter-spacing: -.015em !important; }
+html body.tv-page main#main#main .tv-chapter--benefits .tv-sidebar { min-height: 61.458333cqw; }
+html body.tv-page main#main#main .tv-chapter--benefits .tv-title-copy { line-height: 1.3 !important; }
+html body.tv-page main#main#main .tv-chapter--benefits .tv-accent { margin-top: 2.47cqw; }
+html body.tv-page main#main#main .tv-chapter--benefits .tv-sidebar-callout { margin-top: 4.17cqw; }
+html body.tv-page main#main#main .tv-chapter--benefits .tv-section-heading { margin-bottom: .78cqw; }
+html body.tv-page main#main#main .tv-benefits-intro { color: var(--tv-copy); font-size: 1.17cqw !important; line-height: 1.5 !important; margin-left: 1.3cqw; }
+html body.tv-page main#main#main .tv-benefit-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.76cqw 1.36cqw; margin-top: 2.54cqw; }
+html body.tv-page main#main#main .tv-benefit-card { display: flex; flex-direction: column; min-height: 20.64cqw; border: 1px solid var(--tv-line); border-radius: 1.56cqw; padding: 3.125cqw .78cqw 1.43cqw; background: #fff; box-shadow: 0 8px 15px #074c5b12; }
+html body.tv-page main#main#main .tv-benefit-content { display: grid; grid-template-columns: minmax(0,36fr) minmax(0,64fr); align-items: center; min-height: 11.72cqw; border-inline: 1px solid #98aaa0; padding: .65cqw .78cqw; }
+html body.tv-page main#main#main .tv-benefit-content img { padding-right: .4cqw; }
+html body.tv-page main#main#main .tv-benefit-content > div { padding-left: .4cqw; }
+html body.tv-page main#main#main .tv-benefit-content p { margin-top: .52cqw; color: #222; font-size: .98cqw !important; line-height: 1.5 !important; letter-spacing: -.025em !important; }
+html body.tv-page main#main#main .tv-benefit-content p br { display: none; }
+html body.tv-page main#main#main .tv-benefit-label { margin: auto .72cqw 0; padding-top: 1.56cqw; color: #39877b; font-size: .846354cqw !important; font-weight: 700 !important; letter-spacing: .11em !important; text-transform: uppercase !important; white-space: nowrap; line-height: 1.5 !important; }
+html body.tv-page main#main#main .tv-benefits-summary { margin-top: 2.54cqw; border: 1px solid #bad9d4; border-radius: 1.3cqw; padding: 1.43cqw .6cqw; background: #e6f3f0; text-align: center; color: #2d786d; font-size: 1.041667cqw !important; font-weight: 700 !important; line-height: 1.5 !important; text-transform: uppercase !important; letter-spacing: .13em !important; }
+html body.tv-page main#main#main .tv-footnote--benefits { margin-top: 1.04cqw; }
+html body.tv-page main#main#main .tv-return { padding: 26px 30px; text-align: center; background: #e7f2f0; border-top: 1px solid #c9dedb; }
+html body.tv-page main#main#main .tv-return a { display: inline-flex; gap: 10px; align-items: center; color: #1b655d; font-size: 15px !important; font-weight: 600 !important; }
+html body.tv-page main#main#main .tv-return a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* Preserve the reference hierarchy within the site's shared DM Sans system. */
+html body.tv-page main#main#main .tv-arrow-image.tv-down { width: 1.76cqw; height: 3.2cqw; object-fit: contain; flex: 0 0 auto; }
+html body.tv-page main#main#main .tv-arrow-image.tv-arrow-right { width: 2cqw; height: 1.76cqw; object-fit: contain; }
+html body.tv-page main#main#main .tv-inhibition-mark img { width: 3.65cqw; }
+html body.tv-page main#main#main .tv-receptor .tv-arrow-image { content: url('../images/bio-responsive-trevion/arrow-red-down.png'); }
+html body.tv-page main#main#main .tv-cortisol .tv-arrow-image { content: url('../images/bio-responsive-trevion/arrow-purple-down.png'); }
+@media(max-width:999px) {
+ html body.tv-page main#main#main .tv-arrow-image.tv-down { width: 21px; height: 36px; }
+ html body.tv-page main#main#main .tv-arrow-image.tv-arrow-right { width: 24px; height: 20px; }
+ html body.tv-page main#main#main .tv-inhibition-mark img { width: 42px; }
+}
+
+/* Use the same content frame as the other Bio-Responsive detail pages.
+   The backdrop spans the page; the artwork and native text scale together
+   inside the shared gutters. */
+html body.tv-page main#main#main.tv-main {
+  --tv-gutter-left: max(24px, var(--arotec-content-left, 0px));
+  --tv-gutter-right: max(24px, var(--arotec-content-right, 0px));
+}
+html body.tv-page main#main#main .tv-chapter { max-width: none; }
+html body.tv-page main#main#main .tv-layout {
+  container-type: inline-size;
+  width: calc(100% - var(--tv-gutter-left) - var(--tv-gutter-right));
+  margin-inline: var(--tv-gutter-left) var(--tv-gutter-right);
+  padding-inline: 0;
+  gap: 2.06%;
+}
+@media (max-width: 700px) {
+  html body.tv-page main#main#main.tv-main {
+    --tv-gutter-left: 20px;
+    --tv-gutter-right: 20px;
+  }
+}
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.tv-page main#main#main :is(h1,h2,h3,h4) { margin: 0 !important; font-family: var(--site-font,"DM Sans",sans-serif) !important; line-height: 1.25 !important; font-weight: 700 !important; letter-spacing: normal !important; text-transform: none !important; text-wrap: initial !important; }
+  html body.tv-page main#main#main .tv-title { margin-top: 3.97cqw !important; color: #fff !important; }
+  html body.tv-page main#main#main .tv-section-heading :is(h2,h3) { color: #296f66 !important; font-size: 1.041667cqw !important; font-weight: 700 !important; line-height: 1.6 !important; letter-spacing: .2em !important; text-transform: uppercase !important; white-space: nowrap; }
+  html body.tv-page main#main#main .tv-diagram-box :is(h3,h4) { color: inherit !important; font-size: 1.3cqw !important; font-weight: 700 !important; line-height: 1.35 !important; text-align: center; text-transform: uppercase !important; letter-spacing: -.045em !important; }
+  html body.tv-page main#main#main .tv-diagram-box :is(h3,h4) span { font-size: .78em !important; font-weight: 500 !important; }
+  html body.tv-page main#main#main .tv-epidermis :is(h3,h4) span { text-transform: none !important; }
+  html body.tv-page main#main#main .tv-barrier :is(h3,h4) { color: white !important; font-size: 1.78cqw !important; text-transform: uppercase !important; font-weight: 700 !important; letter-spacing: -.045em !important; }
+  html body.tv-page main#main#main .tv-benefit-content h4 { color: #233b28 !important; font-size: 1.2cqw !important; font-weight: 600 !important; line-height: 1.27 !important; letter-spacing: -.045em !important; }
+}
+
+@media (min-width: 1000px) {
+  html body.tv-page main#main#main .tv-stressors .tv-art { height: 2.75cqw; }
+  html body.tv-page main#main#main .tv-neuroimmune { padding-bottom: .45cqw; }
+  html body.tv-page main#main#main .tv-outcomes-row img { height: 3.05cqw; }
+  html body.tv-page main#main#main .tv-stress-axis p { line-height: 1.25 !important; }
+  html body.tv-page main#main#main .tv-barrier { grid-template-columns: 24% 76%; padding: .4cqw; }
+  html body.tv-page main#main#main .tv-barrier-cube img { height: 10.7cqw; }
+  html body.tv-page main#main#main .tv-summary-strip { padding-block: .57cqw; }
+  html body.tv-page main#main#main .tv-benefits-summary { padding-block: 1.33cqw; }
+  html body.tv-page main#main#main .tv-footnote--benefits { line-height: 1.5 !important; }
+  html body.tv-page main#main#main .tv-stressors li:nth-child(5) { display: flex; align-items: center; align-self: center; gap: .3cqw; text-align: left; }
+  html body.tv-page main#main#main .tv-stressors li:nth-child(5) img { width: 3.2cqw; flex: 0 0 auto; }
+  html body.tv-page main#main#main .tv-receptor-panel { min-height: 32.552083cqw; }
+  html body.tv-page main#main#main .tv-epidermis { min-height: 11.59cqw; }
+  html body.tv-page main#main#main .tv-stressors { min-height: 7.16cqw; }
+  html body.tv-page main#main#main .tv-neuroimmune { min-height: 5.99cqw; }
+  html body.tv-page main#main#main .tv-barrier-panel { min-height: 30.73cqw; }
+}
+@media (max-width: 999px) {
+  html body.tv-page main#main#main .tv-layout { grid-template-columns: 1fr; padding: 24px 0; gap: 26px; }
+  html body.tv-page main#main#main .tv-sidebar, html body.tv-page main#main#main .tv-chapter--benefits .tv-sidebar { min-height: 0; padding: 30px; border-radius: 26px; }
+  html body.tv-page main#main#main .tv-kicker { font-size: 14px !important; max-width: 440px; }
+  html body.tv-page main#main#main .tv-brand { font-size: 36px !important; margin-bottom: 23px; }
+  html body.tv-page main#main#main .tv-title-copy { font-size: 32px !important; }
+  html body.tv-page main#main#main .tv-title-copy br { display: none; }
+  html body.tv-page main#main#main .tv-description { font-size: 17px !important; line-height: 1.6 !important; }
+  html body.tv-page main#main#main .tv-description br { display: none; }
+  html body.tv-page main#main#main .tv-accent { width: 100px; height: 4px; margin: 25px 0; }
+  html body.tv-page main#main#main .tv-pathway { margin-top: 30px; }
+  html body.tv-page main#main#main .tv-eyebrow { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-pathway ol { grid-template-columns: 1fr 1fr; margin-top: 20px; gap: 22px; }
+  html body.tv-page main#main#main .tv-pathway li::before { display: none; }
+  html body.tv-page main#main#main .tv-pathway a { gap: 12px; }
+  html body.tv-page main#main#main .tv-step-number { flex-basis: 30px; height: 30px; font-size: 14px !important; margin: 0; }
+  html body.tv-page main#main#main .tv-pathway strong { font-size: 17px !important; }
+  html body.tv-page main#main#main .tv-pathway small { font-size: 14px !important; margin-top: 6px; }
+  html body.tv-page main#main#main .tv-sidebar-callout, html body.tv-page main#main#main .tv-chapter--benefits .tv-sidebar-callout { margin-top: 28px; padding: 20px; border-radius: 18px; max-width: 390px; }
+  html body.tv-page main#main#main .tv-sidebar-callout p { font-size: 11px !important; }
+  html body.tv-page main#main#main .tv-sidebar-callout strong { font-size: 25px !important; margin-top: 9px; }
+  html body.tv-page main#main#main .tv-signature { font-size: 10px !important; margin-top: 30px; padding-top: 0; }
+  html body.tv-page main#main#main .tv-content { padding-top: 0; container-type: inline-size; }
+  html body.tv-page main#main#main .tv-section-heading { margin: 0 0 16px; }
+  html body.tv-page main#main#main .tv-section-heading > span { min-width: 20px; }
+  html body.tv-page main#main#main .tv-receptor-panel { padding: 20px; border-radius: 22px; }
+  html body.tv-page main#main#main .tv-stressors li, html body.tv-page main#main#main .tv-neuroimmune li { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-stressors .tv-art { height: 42px; width: 42px; }
+  html body.tv-page main#main#main .tv-flow { height: 15px; font-size: 20px !important; }
+  html body.tv-page main#main#main .tv-inhibition-heading { font-size: 14px !important; }
+  html body.tv-page main#main#main .tv-receptor-flow { min-height: 105px; }
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-art:first-child { width: 90%; }
+  html body.tv-page main#main#main .tv-trevion-pill { font-size: 14px !important; }
+  html body.tv-page main#main#main .tv-receptor strong { font-size: 20px !important; }
+  html body.tv-page main#main#main .tv-receptor span { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-receptors > p { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-restored { font-size: 11px !important; }
+  html body.tv-page main#main#main .tv-down { font-size: 28px !important; }
+  html body.tv-page main#main#main .tv-neuroimmune img { width: 35px; height: 35px; }
+  html body.tv-page main#main#main .tv-connector { width: 20px; height: 65px; margin-bottom: 20px; }
+  html body.tv-page main#main#main .tv-barrier-panel { padding: 16px; border-radius: 22px; }
+  html body.tv-page main#main#main .tv-outcomes-row p { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-outcomes-row img { width: 40px; height: 40px; }
+  html body.tv-page main#main#main .tv-stress-axis p { font-size: 14px !important; }
+  html body.tv-page main#main#main .tv-stress-axis > img { width: 45px; height: 40px; }
+  html body.tv-page main#main#main .tv-cortisol img { width: 30px; }
+  html body.tv-page main#main#main .tv-barrier-lower li { font-size: 11px !important; }
+  html body.tv-page main#main#main .tv-barrier-lower li i { font-size: 13px !important; }
+  html body.tv-page main#main#main .tv-barrier-comparison figcaption { font-size: 9px !important; }
+  html body.tv-page main#main#main .tv-barrier-comparison img { height: 65px; }
+  html body.tv-page main#main#main .tv-summary-strip { font-size: 10px !important; padding: 10px; margin-top: 16px; }
+  html body.tv-page main#main#main .tv-footnote { font-size: 12px !important; margin-top: 20px; }
+  html body.tv-page main#main#main .tv-benefits-intro { font-size: 16px !important; margin: 0; }
+  html body.tv-page main#main#main .tv-benefit-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 24px; }
+  html body.tv-page main#main#main .tv-benefit-card { min-height: 260px; padding: 24px 14px 20px; border-radius: 22px; }
+  html body.tv-page main#main#main .tv-benefit-content { min-height: 170px; padding: 10px; gap: 8px; }
+  html body.tv-page main#main#main .tv-benefit-content p { font-size: 14px !important; margin-top: 9px; }
+  html body.tv-page main#main#main .tv-benefit-label { font-size: 11px !important; white-space: normal; padding-top: 20px; }
+  html body.tv-page main#main#main .tv-benefits-summary { font-size: 12px !important; padding: 20px; margin-top: 26px; border-radius: 18px; }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.tv-page main#main#main .tv-title { margin-top: 30px !important; }
+    html body.tv-page main#main#main .tv-section-heading :is(h2,h3) { font-size: 12px !important; white-space: normal; }
+    html body.tv-page main#main#main .tv-diagram-box :is(h3,h4) { font-size: 15px !important; }
+    html body.tv-page main#main#main .tv-barrier :is(h3,h4) { font-size: 20px !important; }
+    html body.tv-page main#main#main .tv-benefit-content h4 { font-size: 17px !important; }
+  }
+}
+@media (max-width: 599px) {
+  html body.tv-page main#main#main .tv-layout { padding: 16px 0; gap: 25px; }
+  html body.tv-page main#main#main .tv-sidebar { padding: 25px; }
+  html body.tv-page main#main#main .tv-brand { font-size: 30px !important; }
+  html body.tv-page main#main#main .tv-title-copy { font-size: 29px !important; }
+  html body.tv-page main#main#main .tv-pathway ol { grid-template-columns: 1fr; }
+  html body.tv-page main#main#main .tv-sidebar-callout strong { font-size: 22px !important; white-space: normal; }
+  html body.tv-page main#main#main .tv-receptor-panel { padding: 16px 12px; }
+  html body.tv-page main#main#main .tv-stressors { padding: 12px 8px; }
+  html body.tv-page main#main#main .tv-stressors ul { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px 8px; margin-top: 12px; }
+  html body.tv-page main#main#main .tv-diagram-box { border-radius: 8px; }
+  html body.tv-page main#main#main .tv-epidermis { padding: 12px 8px; }
+  html body.tv-page main#main#main .tv-inhibition-heading { margin: 8px 0 15px; font-size: 13px !important; }
+  html body.tv-page main#main#main .tv-receptor-flow { grid-template-columns: 22% 46% 20%; justify-content: center; gap: 12px 5px; }
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-art:first-child { width: 47px; justify-self: end; }
+  html body.tv-page main#main#main .tv-trevion-pill { padding: 10px; }
+  html body.tv-page main#main#main .tv-inhibition-mark { font-size: 36px !important; transform: rotate(90deg); }
+  html body.tv-page main#main#main .tv-receptors { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 10px; }
+  html body.tv-page main#main#main .tv-receptor { padding: 8px 25px 8px 5px; border-radius: 7px; }
+  html body.tv-page main#main#main .tv-receptors > p { padding: 5px 9px; }
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-arrow-right { font-size: 23px !important; }
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-arrow-right:nth-last-child(2) { display: none; }
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-art:last-child { height: 68px; }
+  html body.tv-page main#main#main .tv-restored { padding: 10px; }
+  html body.tv-page main#main#main .tv-neuroimmune { padding: 13px 10px; }
+  html body.tv-page main#main#main .tv-neuroimmune ul { display: grid; gap: 15px; margin-top: 12px; }
+  html body.tv-page main#main#main .tv-neuroimmune li { gap: 12px; font-size: 14px !important; }
+  html body.tv-page main#main#main .tv-neuroimmune li > span { flex: 1; }
+  html body.tv-page main#main#main .tv-neuroimmune img { width: 42px; height: 42px; }
+  html body.tv-page main#main#main .tv-outcomes-row { grid-template-columns: 1fr; gap: 14px; margin-top: 12px; }
+  html body.tv-page main#main#main .tv-outcomes-row > div { justify-content: initial; gap: 12px; }
+  html body.tv-page main#main#main .tv-outcomes-row > div + div { border-left: 0; border-top: 1px solid #d2c6e0; padding: 12px 0 0; }
+  html body.tv-page main#main#main .tv-outcomes-row p { flex: 1; }
+  html body.tv-page main#main#main .tv-downstream { padding: 12px; margin: 0; }
+  html body.tv-page main#main#main .tv-stress-axis { padding: 12px 8px; grid-template-columns: 15% 68% 17%; margin: 0; }
+  html body.tv-page main#main#main .tv-stress-axis > img { width: 35px; }
+  html body.tv-page main#main#main .tv-stress-axis p { font-size: 12px !important; }
+  html body.tv-page main#main#main .tv-cortisol { flex-direction: column; gap: 1px; }
+  html body.tv-page main#main#main .tv-cortisol img { width: 25px; }
+  html body.tv-page main#main#main .tv-barrier { grid-template-columns: 1fr; padding: 14px; margin: 0; border-radius: 10px; }
+  html body.tv-page main#main#main .tv-barrier-cube { width: 150px; margin: 0 auto 14px; }
+  html body.tv-page main#main#main .tv-barrier-lower { grid-template-columns: 1fr; gap: 18px; margin-top: 15px; }
+  html body.tv-page main#main#main .tv-barrier-lower ul { gap: 8px; }
+  html body.tv-page main#main#main .tv-barrier-lower li { font-size: 13px !important; gap: 7px; }
+  html body.tv-page main#main#main .tv-barrier-lower li i { font-size: 15px !important; }
+  html body.tv-page main#main#main .tv-barrier-comparison { padding: 8px 4px; border-radius: 8px; }
+  html body.tv-page main#main#main .tv-barrier-comparison figcaption { white-space: normal; min-height: 24px; }
+  html body.tv-page main#main#main .tv-barrier-comparison > i { font-size: 20px !important; }
+  html body.tv-page main#main#main .tv-summary-strip { border-radius: 14px; }
+  html body.tv-page main#main#main .tv-footnote br { display: none; }
+  html body.tv-page main#main#main .tv-benefit-grid { grid-template-columns: 1fr; gap: 18px; }
+  html body.tv-page main#main#main .tv-benefit-card { min-height: 245px; padding: 24px 18px 20px; }
+  html body.tv-page main#main#main .tv-benefit-content { grid-template-columns: minmax(0,34fr) minmax(0,66fr); min-height: 155px; }
+  html body.tv-page main#main#main .tv-benefit-content img { max-height: 125px; }
+  html body.tv-page main#main#main .tv-benefit-content p { font-size: 15px !important; }
+  html body.tv-page main#main#main .tv-benefit-label { font-size: 12px !important; }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.tv-page main#main#main .tv-section-heading :is(h2,h3) { font-size: 12px !important; letter-spacing: .14em !important; }
+    html body.tv-page main#main#main .tv-benefit-content h4 { font-size: 19px !important; }
+    html body.tv-page main#main#main .tv-stress-axis :is(h3,h4) { font-size: 14px !important; }
+    html body.tv-page main#main#main .tv-barrier :is(h3,h4) { font-size: 21px !important; }
+  }
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+ html body.tv-page main#main#main .tv-title { font-size: 3cqw !important; }
+ html body.tv-page main#main#main .tv-title .tv-brand { font-size: 3cqw !important; line-height: 1.2 !important; font-weight: 700 !important; letter-spacing: -.025em !important; white-space: nowrap !important; }
+ html body.tv-page main#main#main .tv-title .tv-title-copy { font-size: 2.473958cqw !important; line-height: 1.21 !important; font-weight: 400 !important; letter-spacing: -.02em !important; }
+ @media(max-width:999px) {
+  html body.tv-page main#main#main .tv-title .tv-brand { font-size: 36px !important; }
+  html body.tv-page main#main#main .tv-title .tv-title-copy { font-size: 32px !important; }
+ }
+ @media(max-width:599px) {
+  html body.tv-page main#main#main .tv-title .tv-brand { font-size: clamp(24px,7.6vw,30px) !important; }
+  html body.tv-page main#main#main .tv-title .tv-title-copy { font-size: 29px !important; }
+ }
+}

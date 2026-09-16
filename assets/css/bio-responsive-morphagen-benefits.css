@@ -1,0 +1,195 @@
+/* Morphagen 03 — live text and isolated source-art crops, measured against 8.3.png. */
+html body.morph-page main#main#main .morph-benefits {
+  display:block!important;position:relative;width:100%;max-width:1672px;height:auto!important;
+  margin:0 auto!important;padding:0!important;container-type:inline-size;
+  background:transparent;color:#122c4b;font-family:var(--site-font,"DM Sans",sans-serif)!important;
+  scroll-margin-top:130px;isolation:isolate;
+}
+html body.morph-page main#main#main .morph-benefits :is(div,aside,section,article,header,figure) {min-width:0;box-sizing:border-box;}
+html body.morph-page main#main#main .morph-benefits :is(p,h2,h3,h4,figure) {margin:0!important;padding:0;font-family:var(--site-font,"DM Sans",sans-serif)!important;}
+html body.morph-page main#main#main .morph-benefits-frame {
+  display:grid;grid-template-columns:25.06cqw minmax(0,1fr);gap:1.974cqw;
+  padding:1.256cqw 1.615cqw 1.555cqw;align-items:stretch;
+}
+html body.morph-page main#main#main .morph-benefits-sidebar {
+  display:flex;flex-direction:column;align-items:flex-start;position:relative;overflow:hidden;
+  min-height:53.469cqw;padding:2.093cqw 1.854cqw 1.914cqw;background:#04304e;
+  border:1px solid #075576;border-radius:1.435cqw;box-shadow:0 .12cqw .9cqw #08698026;
+}
+html body.morph-page main#main#main .morph-benefits-eyebrow {
+  display:flex;align-items:center;gap:1.555cqw;width:100%;white-space:nowrap;
+  font-size:1.196cqw;line-height:1.3;font-weight:400;letter-spacing:.16em;color:#fff;
+}
+html body.morph-page main#main#main .morph-benefits-eyebrow span {display:block;flex:1;height:2px;background:#10deed;}
+html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-brand {
+  margin-top:3.708cqw!important;font-size:2.68cqw!important;font-weight:800!important;
+  line-height:1.08!important;letter-spacing:-.045em!important;white-space:nowrap;color:#fff!important;
+}
+html body.morph-page main#main#main .morph-benefits-brand sup {font-size:.3em!important;position:relative;top:-.85em;vertical-align:baseline;line-height:0;letter-spacing:0;}
+html body.morph-page main#main#main .morph-benefits-rule {
+  display:block;flex:none;width:6.22cqw;height:.478cqw;margin-top:1.435cqw;background:#06e6ed;border-radius:999px;
+}
+html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {
+  margin-top:1.734cqw!important;font-size:2.87cqw!important;font-weight:800!important;
+  line-height:.99!important;letter-spacing:-.038em!important;color:#fff!important;text-transform:none!important;
+}
+html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-subtitle {
+  margin-top:.957cqw!important;font-size:1.72cqw!important;line-height:1.13!important;
+  font-weight:600!important;letter-spacing:-.025em!important;color:#08e2ed!important;
+}
+html body.morph-page main#main#main .morph-benefits-rule-long {width:7.296cqw;margin-top:1.316cqw;}
+html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-description {
+  margin-top:1.196cqw!important;font-size:1.3756cqw!important;line-height:1.29!important;
+  font-weight:400!important;letter-spacing:-.013em!important;color:#fff!important;
+}
+html body.morph-page main#main#main .morph-benefits-badge {
+  width:100%;margin-top:2.512cqw;padding:1.196cqw 1.734cqw 1.076cqw;
+  border:1px solid #006a8d;border-radius:1.316cqw;background:#005379;
+}
+html body.morph-page main#main#main .morph-benefits-badge p {
+  font-size:.957cqw!important;line-height:1.5!important;font-weight:500!important;
+  letter-spacing:.17em!important;color:#fff!important;
+}
+html body.morph-page main#main#main .morph-benefits-badge strong {
+  display:block;margin-top:.359cqw;font-size:1.974cqw;line-height:1.04;
+  font-weight:800;letter-spacing:-.035em;color:#fff;
+}
+html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-research {
+  margin-top:auto!important;padding-top:2.99cqw;font-size:.915cqw!important;line-height:1.3!important;
+  letter-spacing:.16em!important;font-weight:400!important;color:#fff!important;white-space:nowrap;
+}
+html body.morph-page main#main#main .morph-benefits-content {padding-top:1.974cqw;}
+html body.morph-page main#main#main .morph-benefits-header h3 {
+  display:flex;align-items:center;gap:.359cqw;white-space:nowrap;
+  font-size:1.44cqw!important;line-height:1.3!important;font-weight:800!important;
+  letter-spacing:.035em!important;color:#080957!important;text-transform:none!important;
+}
+html body.morph-page main#main#main .morph-benefits-header h3::after {content:"";height:1px;flex:1;margin-left:.718cqw;background:#0cb5cb;}
+html body.morph-page main#main#main .morph-benefits-header sup {font-size:.55em;vertical-align:super;line-height:0;align-self:flex-start;margin-left:-.359cqw;margin-top:.12cqw;}
+html body.morph-page main#main#main .morph-benefits-header p {
+  margin-top:.299cqw!important;font-size:1.3158cqw!important;line-height:1.4!important;
+  font-weight:400!important;letter-spacing:-.02em!important;color:#677e8d!important;
+}
+html body.morph-page main#main#main .morph-benefits-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.957cqw .718cqw;margin-top:1.794cqw;}
+html body.morph-page main#main#main .morph-benefit-card {
+  display:flex;flex-direction:column;min-height:18.182cqw;padding:2.452cqw .897cqw 1.495cqw;
+  background:#fff;border-radius:1.0766cqw;box-shadow:0 .08cqw .5cqw #57c0d630;
+}
+html body.morph-page main#main#main .morph-benefit-body {display:grid;grid-template-columns:8.433cqw minmax(0,1fr);gap:1.0766cqw;min-height:9.809cqw;align-items:start;}
+html body.morph-page main#main#main .morph-benefit-figure {height:9.809cqw;padding-right:.598cqw;border-right:1px solid #b6b9ba;}
+html body.morph-page main#main#main .morph-benefit-icon {
+  display:block;position:relative;overflow:hidden;isolation:isolate;width:100%;aspect-ratio:145/150;background:#fff;
+  --morph-icon-left:-335.86206897%;--morph-icon-top:-126.66666667%;
+}
+html body.morph-page main#main#main .morph-benefit-icon img {
+  position:absolute!important;display:block!important;width:1153.10344828%!important;max-width:none!important;
+  height:auto!important;max-height:none!important;left:var(--morph-icon-left)!important;top:var(--morph-icon-top)!important;
+  margin:0!important;padding:0!important;transform:none!important;object-fit:initial!important;opacity:1!important;
+  filter:none!important;border:0!important;border-radius:0!important;
+}
+html body.morph-page main#main#main .morph-benefit-icon-fuller {--morph-icon-left:-606.89655172%;}
+html body.morph-page main#main#main .morph-benefit-icon-cycle {--morph-icon-left:-879.31034483%;}
+html body.morph-page main#main#main .morph-benefit-icon-vitality {--morph-icon-top:-340%;}
+html body.morph-page main#main#main .morph-benefit-icon-scalp {--morph-icon-left:-606.89655172%;--morph-icon-top:-340%;}
+html body.morph-page main#main#main .morph-benefit-icon-thinning {--morph-icon-left:-879.31034483%;--morph-icon-top:-340%;}
+html body.morph-page main#main#main .morph-benefit-copy h4 {
+  font-size:1.28cqw!important;line-height:1.2!important;font-weight:800!important;
+  letter-spacing:-.052em!important;color:#073a2b!important;text-transform:none!important;
+}
+html body.morph-page main#main#main .morph-benefit-copy p {
+  margin-top:.598cqw!important;font-size:1.19cqw!important;line-height:1.35!important;
+  letter-spacing:-.035em!important;font-weight:400!important;color:#202d4a!important;
+}
+html body.morph-page main#main#main .morph-benefit-card .morph-benefit-label {
+  margin:auto .359cqw 0!important;padding-top:1.1364cqw;border-top:2px dotted #666f74;
+  font-size:.981cqw!important;line-height:1.5!important;font-weight:600!important;
+  letter-spacing:.15em!important;color:#066052!important;white-space:nowrap;
+}
+html body.morph-page main#main#main .morph-benefits-content .morph-benefits-summary {
+  display:flex;align-items:center;justify-content:center;gap:.7em;flex-wrap:wrap;
+  min-height:4.965cqw;margin-top:1.854cqw!important;padding:.957cqw 1.196cqw;
+  background:#e1f5f7;border:1px solid #70c5d6;border-radius:1.0766cqw;
+  font-size:1.0646cqw!important;line-height:1.4!important;letter-spacing:.135em!important;
+  font-weight:600!important;color:#00514a!important;text-align:center;
+}
+@media(min-width:1200px) {
+  html body.morph-page main#main#main .morph-benefits {width:calc(100% - var(--arotec-content-left,150px) - var(--arotec-content-right,150px));}
+}
+@layer arotec-display-headings.spec {
+  html body.morph-page main#main#main .morph-benefits :is(h2,h3,h4) {
+    margin:0!important;padding:0;font-family:var(--site-font,"DM Sans",sans-serif)!important;
+    font-style:normal!important;line-height:1.2!important;font-weight:800!important;
+    text-transform:none!important;text-wrap:initial!important;word-break:normal!important;overflow-wrap:normal!important;
+  }
+  html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {
+    margin-top:1.734cqw!important;font-size:2.87cqw!important;line-height:.99!important;letter-spacing:-.038em!important;color:#fff!important;
+  }
+  html body.morph-page main#main#main .morph-benefits-header h3 {
+    font-size:1.44cqw!important;line-height:1.3!important;letter-spacing:.035em!important;color:#080957!important;
+  }
+  html body.morph-page main#main#main .morph-benefit-copy h4 {
+    font-size:1.28cqw!important;line-height:1.2!important;letter-spacing:-.052em!important;color:#073a2b!important;
+  }
+}
+@media(max-width:1300px) {
+  html body.morph-page main#main#main .morph-benefits-frame {grid-template-columns:1fr;padding:24px;gap:26px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar {min-height:0;padding:30px;border-radius:22px;}
+  html body.morph-page main#main#main .morph-benefits-eyebrow {font-size:13px;gap:18px;max-width:360px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-brand {margin-top:28px!important;font-size:38px!important;}
+  html body.morph-page main#main#main .morph-benefits-rule {width:88px;height:6px;margin-top:20px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {font-size:42px!important;margin-top:25px!important;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-subtitle {font-size:26px!important;margin-top:16px!important;}
+  html body.morph-page main#main#main .morph-benefits-rule-long {width:106px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-description {max-width:700px;font-size:18px!important;line-height:1.5!important;margin-top:20px!important;}
+  html body.morph-page main#main#main .morph-benefits-badge {max-width:370px;margin-top:26px;padding:18px 24px;border-radius:18px;}
+  html body.morph-page main#main#main .morph-benefits-badge p {font-size:12px!important;}
+  html body.morph-page main#main#main .morph-benefits-badge strong {font-size:28px;margin-top:8px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-research {font-size:11px!important;padding-top:32px;}
+  html body.morph-page main#main#main .morph-benefits-content {padding:0;}
+  html body.morph-page main#main#main .morph-benefits-header h3 {display:block;white-space:normal;font-size:22px!important;line-height:1.35!important;}
+  html body.morph-page main#main#main .morph-benefits-header h3::after {display:none;}
+  html body.morph-page main#main#main .morph-benefits-header sup {margin:0;}
+  html body.morph-page main#main#main .morph-benefits-header p {font-size:17px!important;line-height:1.5!important;margin-top:8px!important;}
+  html body.morph-page main#main#main .morph-benefits-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px;}
+  html body.morph-page main#main#main .morph-benefit-card {min-height:280px;padding:28px 18px 24px;border-radius:18px;}
+  html body.morph-page main#main#main .morph-benefit-body {grid-template-columns:112px minmax(0,1fr);gap:16px;min-height:166px;}
+  html body.morph-page main#main#main .morph-benefit-figure {height:156px;padding-right:10px;}
+  html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:22px!important;line-height:1.2!important;}
+  html body.morph-page main#main#main .morph-benefit-copy p {font-size:17px!important;line-height:1.45!important;margin-top:10px!important;letter-spacing:-.02em!important;}
+  html body.morph-page main#main#main .morph-benefit-card .morph-benefit-label {font-size:12px!important;line-height:1.5!important;margin:22px 0 0!important;padding-top:18px;letter-spacing:.12em!important;}
+  html body.morph-page main#main#main .morph-benefits-content .morph-benefits-summary {font-size:13px!important;line-height:1.8!important;min-height:80px;padding:20px;margin-top:24px!important;border-radius:16px;}
+  @layer arotec-display-headings.spec {
+    html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {font-size:42px!important;margin-top:25px!important;}
+    html body.morph-page main#main#main .morph-benefits-header h3 {font-size:22px!important;line-height:1.35!important;}
+    html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:22px!important;line-height:1.2!important;}
+  }
+}
+@media(max-width:700px) {
+  html body.morph-page main#main#main .morph-benefits-frame {padding:18px;gap:28px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar {padding:28px 24px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-brand {font-size:clamp(25px,7.5vw,38px)!important;}
+  html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {font-size:38px!important;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-subtitle {font-size:23px!important;}
+  html body.morph-page main#main#main .morph-benefits-sidebar .morph-benefits-research {font-size:9px!important;letter-spacing:.13em!important;}
+  html body.morph-page main#main#main .morph-benefits-grid {grid-template-columns:1fr;}
+  html body.morph-page main#main#main .morph-benefit-card {padding:26px 20px 22px;min-height:0;}
+  html body.morph-page main#main#main .morph-benefit-body {grid-template-columns:112px minmax(0,1fr);min-height:155px;gap:18px;}
+  html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:22px!important;}
+  html body.morph-page main#main#main .morph-benefits-content .morph-benefits-summary {display:block;font-size:12px!important;}
+  html body.morph-page main#main#main .morph-benefits-summary span {padding:0 6px;}
+  @layer arotec-display-headings.spec {
+    html body.morph-page main#main#main .morph-benefits-sidebar h2#morph-benefits-title {font-size:38px!important;}
+    html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:22px!important;}
+  }
+}
+@media(max-width:380px) {
+  html body.morph-page main#main#main .morph-benefits-frame {padding:12px;}
+  html body.morph-page main#main#main .morph-benefits-sidebar {padding:24px 20px;}
+  html body.morph-page main#main#main .morph-benefit-card {padding:22px 16px;}
+  html body.morph-page main#main#main .morph-benefit-body {grid-template-columns:94px minmax(0,1fr);gap:14px;}
+  html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:20px!important;}
+  html body.morph-page main#main#main .morph-benefit-copy p {font-size:16px!important;}
+  @layer arotec-display-headings.spec {
+    html body.morph-page main#main#main .morph-benefit-copy h4 {font-size:20px!important;}
+  }
+}
