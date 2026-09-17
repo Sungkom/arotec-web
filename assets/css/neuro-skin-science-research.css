@@ -1,0 +1,252 @@
+/* Research panels 3–7: source artwork is separate from editable scientific copy. */
+.nss-page .nss-research-section {
+  --arotec-body-size: 20px;
+  --arotec-body-line-height: 30px;
+  --site-type-h3: 26px;
+  --site-line-h3: 34px;
+  --site-letter-h3: -.52px;
+  --site-type-h4: 22px;
+  --site-line-h4: 30px;
+  padding-block: 80px;
+  background: #f3f9fd;
+  color: #0a165c;
+  scroll-margin-top: 135px;
+}
+.nss-page .nss-feedback-section, .nss-page .nss-barrier-section { background: #fff; }
+.nss-research-section *, .nss-research-section *::before, .nss-research-section *::after { box-sizing: border-box; }
+.nss-research-section :is(figure, dl, dd) { margin: 0; }
+.nss-research-section :is(ol, ul) { margin: 0; padding: 0; list-style: none; }
+.nss-research-section img { display: block; max-width: 100%; height: auto; }
+.nss-research-section p { margin: 0; }
+.nss-research-section :is(article, aside, li, figure, header, div) { min-width: 0; }
+html body.nss-page .nss-research-section :is(h2,h3,h4):not(#dsm-type-lock) { margin: 0 0 14px !important; color: #0a165c; }
+.nss-research-heading { margin-bottom: 36px; }
+.nss-research-heading--center { text-align: center; }
+.nss-research-heading--center .lead { max-width: 1150px; margin-inline: auto; }
+.nss-research-heading .lead { max-width: 1150px; margin: 0; color: #283f86; }
+.nss-research-heading--center .lead { margin-inline: auto; }
+.nss-research-heading .nss-research-intro { max-width: 1150px; margin-top: 24px; color: #344e8c; }
+.nss-research-eyebrow { --arotec-body-size: 17px; --arotec-body-line-height: 26px; margin-bottom: 16px !important; letter-spacing: 2px; font-weight: 700; color: #536b97; }
+.nss-research-signoff { margin-top: 30px !important; text-align: center; color: #466292; font-weight: 500; }
+.nss-research-callout { display: flex; align-items: center; gap: 28px; padding: 26px 32px; margin-top: 32px; border: 1px solid #c6dce9; border-radius: 14px; background: #eaf5fc; }
+html body.nss-page .nss-research-callout h3:not(#dsm-type-lock) { flex: 0 0 220px; margin: 0 !important; }
+.nss-research-callout p { color: #344e8c; }
+.nss-step-number { display: inline-grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: #0a165c; color: #fff; font-size: 24px; line-height: 1; font-weight: 700; }
+.nss-axis-layout { display: grid; grid-template-columns: minmax(0,.65fr) minmax(0,1.6fr); gap: 36px; align-items: start; }
+.nss-axis-portrait { overflow: hidden; border-radius: 18px; background: #e5f1fb; }
+.nss-axis-portrait > img { width: 100%; }
+.nss-axis-portrait figcaption { padding: 24px; }
+.nss-axis-portrait figcaption strong, .nss-axis-portrait figcaption span { display: block; }
+.nss-axis-portrait figcaption strong { margin-bottom: 12px; font-size: 24px; line-height: 32px; }
+.nss-axis-portrait figcaption span { color: #344e8c; font-size: 18px; line-height: 26px; }
+.nss-axis-copy .nss-research-heading { text-align: center; }
+.nss-axis-signals { display: grid; grid-template-columns: 1fr .72fr 1fr; align-items: stretch; gap: 18px; }
+.nss-signal-panel { --site-type-h3: 24px; --site-line-h3: 32px; padding: 22px 18px; border: 1px solid #85b6d4; border-radius: 14px; background: #fafdff; }
+.nss-signal-panel--output { border-color: #88bfb8; }
+.nss-signal-panel h3 { display: flex; justify-content: center; align-items: center; gap: 8px; }
+.nss-signal-subtitle { --arotec-body-size: 18px; --arotec-body-line-height: 26px; text-align: center; font-weight: 700; margin-bottom: 24px !important; }
+.nss-signal-panel dl { display: grid; gap: 20px; }
+.nss-signal-panel dt { font-size: 19px; line-height: 27px; font-weight: 700; }
+.nss-signal-panel dd { margin-top: 5px; color: #344e8c; font-size: 16px; line-height: 24px; }
+.nss-axis-loop { display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 14px; }
+.nss-axis-loop strong { display: block; font-size: 20px; line-height: 28px; margin-block: 8px; }
+.nss-axis-loop img { width: 100%; object-fit: contain; }
+.nss-axis-loop figcaption { display: grid; justify-items: center; gap: 8px; font-size: 16px; line-height: 22px; font-weight: 700; }
+.nss-axis-loop .ph { font-size: 42px; color: #4399c5; }
+.nss-axis-targets { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; margin-top: 36px !important; }
+.nss-axis-targets > li { position: relative; padding: 24px; border: 1px solid #9ec4dc; border-radius: 12px; background: #fafdff; }
+.nss-axis-targets p { --arotec-body-size: 18px; --arotec-body-line-height: 28px; color: #344e8c; }
+.nss-axis-targets .ph { position: absolute; right: -26px; top: calc(50% - 15px); color: #3795d0; font-size: 26px; z-index: 1; }
+.nss-feedback-layout { display: grid; grid-template-columns: minmax(0,.6fr) minmax(0,2fr); gap: 32px; align-items: start; }
+.nss-research-perspective { border-right: 1px solid #9cb3d1; padding-right: 28px; }
+.nss-research-perspective > p { --arotec-body-size: 19px; --arotec-body-line-height: 29px; color: #344e8c; }
+.nss-perspective-list { display: grid; gap: 28px; margin-top: 28px !important; padding-top: 28px !important; border-top: 1px solid #9cb3d1; }
+.nss-perspective-list > li { display: flex; gap: 16px; }
+.nss-perspective-list .nss-step-number { width: 40px; height: 40px; flex-basis: 40px; background: #eaf3fb; color: #345f9a; font-size: 22px; }
+.nss-perspective-list p { --arotec-body-size: 17px; --arotec-body-line-height: 26px; color: #53688c; }
+.nss-stressor-banner { padding: 22px 28px; border-radius: 14px; background: #dcedf8; text-align: center; }
+.nss-stressor-banner p { --arotec-body-size: 18px; --arotec-body-line-height: 27px; color: #344e8c; }
+.nss-stressor-banner p + p { margin-top: 8px; }
+.nss-feedback-endpoints { display: grid; grid-template-columns: 1fr 30px 1fr; gap: 18px; align-items: center; margin-block: 28px; }
+.nss-feedback-endpoints article { display: grid; grid-template-columns: .72fr 1fr; align-items: center; gap: 16px; }
+.nss-feedback-endpoints img { width: 100%; max-height: 250px; object-fit: contain; }
+.nss-feedback-endpoints p { --arotec-body-size: 16px; --arotec-body-line-height: 24px; color: #344e8c; }
+.nss-feedback-endpoints p + p { margin-top: 10px; }
+.nss-feedback-endpoints > .ph { font-size: 30px; color: #3a8cae; }
+.nss-pathway-strips { display: grid; gap: 16px; }
+.nss-pathway-strip { --pathway-accent: #3479b6; --arotec-body-size: 16px; --arotec-body-line-height: 24px; padding: 20px; border-radius: 12px; background: #eaf3fb; border-left: 4px solid var(--pathway-accent); }
+.nss-pathway-strip--teal { --pathway-accent: #378c90; background: #edf7f6; }
+.nss-pathway-strip--gold { --pathway-accent: #b78b41; background: #fbf5e9; }
+.nss-pathway-strip--feedback { --pathway-accent: #ad4765; background: #fcf0f4; }
+.nss-pathway-strip h3 { --site-type-h3: 21px; --site-line-h3: 29px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.nss-pathway-strip h3 > span { color: var(--pathway-accent); margin-right: 4px; }
+.nss-pathway-strip h3 small { font-size: 16px; line-height: 24px; font-weight: 500; }
+.nss-molecular-flow { display: flex; align-items: stretch; gap: 22px; overflow-x: auto; padding-bottom: 14px !important; }
+.nss-molecular-flow:focus-visible { outline: 2px solid #315f99; outline-offset: 4px; }
+.nss-molecular-flow > li { position: relative; display: grid; place-items: center; flex: 1 0 135px; padding: 9px 8px; border: 1px solid #9bacca; border-radius: 5px; background: #fff; font-size: 16px; line-height: 23px; text-align: center; }
+.nss-molecular-flow > li:not(:last-child)::after { content: '\e06c'; font-family: 'Phosphor' !important; position: absolute; right: -21px; top: calc(50% - 12px); color: var(--pathway-accent); font-size: 20px; }
+.nss-molecular-flow .nss-flow-result { border: 2px solid var(--pathway-accent); font-weight: 700; }
+.nss-feedback-branches { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 18px; margin-top: 24px; }
+.nss-feedback-branches article { padding-top: 18px; border-top: 2px solid #89b0d4; }
+.nss-feedback-branches p { --arotec-body-size: 16px; --arotec-body-line-height: 25px; color: #344e8c; }
+.nss-feedback-branches p + p { margin-top: 10px; }
+.nss-stressor-list { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px 24px; padding: 18px 24px; margin-bottom: 28px !important; background: #e5f1fb; border-radius: 12px; color: #344e8c; }
+.nss-stressor-list strong { color: #0a165c; }
+.nss-impact-cascade { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 24px; }
+.nss-cascade-card, .nss-barrier-card { position: relative; border: 1px solid #d0e2ee; border-radius: 14px; background: #f7fbff; }
+.nss-cascade-card > img { width: 100%; aspect-ratio: 1.4; object-fit: contain; background: #edf5fb; border-radius: 13px 13px 0 0; }
+.nss-cascade-copy { padding: 24px 18px; text-align: center; }
+.nss-cascade-copy .nss-step-number { margin-bottom: 18px; }
+.nss-cascade-copy h3 { --site-type-h3: 24px; --site-line-h3: 31px; --site-letter-h3: -.48px; padding-bottom: 14px; border-bottom: 1px solid #b7c7dc; }
+.nss-cascade-copy p { --arotec-body-size: 18px; --arotec-body-line-height: 28px; color: #344e8c; }
+.nss-cascade-arrow { position: absolute; z-index: 1; top: 30%; right: -29px; width: 32px; color: #319ae0; font-size: 32px; }
+.nss-cascade-card--outcome { border: 2px solid #409de1; background: #eaf5ff; }
+.nss-research-action { margin-top: 34px; text-align: center; }
+.nss-research-action .nss-explore:hover .ph { transform: translateX(3px); }
+.nss-barrier-layout { display: grid; grid-template-columns: minmax(0,.65fr) minmax(0,2.2fr); gap: 28px; align-items: start; }
+.nss-barrier-context { padding: 28px; border: 1px solid #d0e2ee; border-radius: 14px; background: #f7fbff; }
+.nss-barrier-context > p { color: #344e8c; }
+.nss-barrier-effects { display: grid; gap: 22px; margin-top: 30px !important; }
+.nss-barrier-effects li { display: flex; align-items: center; gap: 14px; font-size: 19px; line-height: 27px; font-weight: 700; }
+.nss-barrier-effects .ph { flex: 0 0 32px; font-size: 32px; color: #315f99; }
+.nss-barrier-cascade { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.nss-barrier-card > img { width: 100%; aspect-ratio: 1.6; object-fit: contain; background: #edf5fb; border-radius: 13px 13px 0 0; }
+.nss-barrier-card .nss-cascade-arrow { top: 22%; }
+.nss-barrier-card:nth-child(3) .nss-cascade-arrow { top: auto; bottom: -29px; right: calc(50% - 16px); }
+.nss-barrier-card--core { grid-column: 3; grid-row: 2; border: 2px solid #328cbd; background: #ebf8fd; }
+.nss-barrier-card--core > img { object-fit: contain; }
+.nss-barrier-card--clinical { grid-column: 2; grid-row: 2; }
+.nss-barrier-card--cycle { grid-column: 1; grid-row: 2; }
+.nss-barrier-card--core .nss-cascade-arrow, .nss-barrier-card--clinical .nss-cascade-arrow { right: auto; left: -29px; }
+.nss-core-label { --arotec-body-size: 14px; --arotec-body-line-height: 22px; margin: 0 0 14px !important; color: #186d89 !important; font-weight: 700; }
+.nss-cycle-content { padding: 24px 22px; text-align: center; }
+.nss-cycle-content .nss-step-number { margin-bottom: 18px; }
+.nss-cycle-center { margin: 18px 0 !important; color: #344e8c; font-weight: 700; }
+.nss-cycle-flow { display: grid; gap: 18px; }
+.nss-cycle-flow li { position: relative; font-size: 17px; line-height: 25px; }
+.nss-cycle-flow li:not(:last-child)::after { content: '\e03e'; font-family: 'Phosphor' !important; display: block; height: 14px; margin-top: 4px; color: #3b80ad; }
+.nss-cycle-content > .ph { display: block; margin-top: 18px; font-size: 36px; color: #3b80ad; }
+.nss-neurocosmetics-section .nss-research-heading { max-width: 1160px; }
+.nss-page .nss-neurocosmetics-section { position: relative; isolation: isolate; background: #f3f9fd; }
+html body.nss-page .nss-neurocosmetics-section::before { content: ''; display: block !important; position: absolute; z-index: 0; top: 0; right: 0; left: auto; width: min(600px,45%); height: 300px; background: url('../images/neuro-skin-science-20260915/neurocosmetics-skin-network.webp') right top / cover no-repeat !important; mask-image: linear-gradient(to right,transparent,#000),linear-gradient(to top,transparent,#000 85%); mask-composite: intersect; pointer-events: none; }
+.nss-neurocosmetics-section > .nss-shell { position: relative; z-index: 1; }
+.nss-neurocosmetics-section .nss-research-heading { padding: 24px; margin-left: -24px; }
+html body.nss-page .nss-mechanisms-title:not(#dsm-type-lock) { --site-type-h3: 34px; --site-line-h3: 42px; margin-bottom: 28px !important; padding-bottom: 18px; border-bottom: 1px solid #89a8cc; }
+.nss-mechanisms { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; margin-bottom: 36px !important; }
+.nss-mechanisms > li { display: flex; align-items: flex-start; gap: 18px; }
+.nss-mechanisms p { color: #344e8c; }
+.nss-neurocosmetics-visual { display: grid; grid-template-columns: minmax(0,2.6fr) minmax(0,1fr); gap: 36px; align-items: center; }
+.nss-neurocosmetics-art { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,2fr); align-items: center; gap: 18px; }
+.nss-neurocosmetics-art img { width: 100%; border-radius: 12px; }
+.nss-neurocosmetics-input { display: grid; gap: 18px; }
+.nss-neurocosmetics-cell figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; font-size: 18px; line-height: 28px; color: #344e8c; }
+.nss-image-legend { --arotec-body-size: 16px; --arotec-body-line-height: 24px; display: block; flex-basis: 100%; margin-top: 18px !important; font-size: 16px; line-height: 24px; text-align: center; color: #344e8c; }
+.nss-neurocosmetics-outcomes article { display: flex; align-items: center; gap: 20px; margin-top: 24px; }
+.nss-neurocosmetics-outcomes img { flex: 0 0 100px; width: 100px; height: 100px; object-fit: contain; border-radius: 50%; }
+html body.nss-page .nss-neurocosmetics-outcomes h4:not(#dsm-type-lock) { margin: 0 !important; }
+.nss-neurocosmetics-callout { max-width: 1100px; margin-inline: auto; }
+.nss-neurocosmetics-callout > .ph { flex: 0 0 44px; font-size: 44px; color: #344e8c; }
+@media (min-width: 1600px) and (max-width: 1800px) {
+  .nss-feedback-layout { grid-template-columns: 1fr; }
+  .nss-research-perspective { border-right: 0; padding-right: 0; }
+  .nss-perspective-list { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
+  .nss-perspective-list > li { display: block; }
+  .nss-perspective-list .nss-step-number { margin-bottom: 14px; }
+}
+@media (max-width: 1599px) {
+  .nss-axis-layout { grid-template-columns: minmax(0,.5fr) minmax(0,1.6fr); gap: 28px; }
+  .nss-axis-signals { grid-template-columns: 1fr 1fr; }
+  .nss-axis-loop { grid-column: 1 / -1; grid-row: 2; flex-direction: row; align-items: center; gap: 24px; }
+  .nss-axis-loop > div { flex: 0 1 180px; }
+  .nss-axis-loop .ph { transform: rotate(90deg); }
+  .nss-feedback-layout { grid-template-columns: 1fr; }
+  .nss-research-perspective { border-right: 0; padding-right: 0; }
+  .nss-perspective-list { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
+  .nss-perspective-list > li { display: block; }
+  .nss-perspective-list .nss-step-number { margin-bottom: 14px; }
+  .nss-impact-cascade { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+  .nss-cascade-card > img { aspect-ratio: 1.25; }
+  .nss-impact-cascade > li:nth-child(3) .nss-cascade-arrow { top: auto; right: calc(50% - 16px); bottom: -30px; transform: rotate(90deg); }
+  .nss-impact-cascade > li:nth-child(4) { grid-column: 3; grid-row: 2; }
+  .nss-impact-cascade > li:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .nss-impact-cascade > li:nth-child(4) .nss-cascade-arrow { right: auto; left: -29px; transform: rotate(180deg); }
+  .nss-barrier-layout { grid-template-columns: 1fr; }
+  .nss-barrier-effects { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .nss-neurocosmetics-visual { grid-template-columns: minmax(0,2fr) minmax(0,1fr); }
+}
+@media (max-width: 1100px) {
+  .nss-axis-layout { grid-template-columns: 1fr; }
+  .nss-axis-portrait { display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: 720px; margin-inline: auto !important; }
+  .nss-axis-portrait > img { max-height: 420px; object-fit: cover; object-position: top; }
+  .nss-axis-signals { grid-template-columns: 1fr .7fr 1fr; }
+  .nss-axis-loop { grid-column: 2; grid-row: 1; flex-direction: column; }
+  .nss-axis-loop .ph { transform: none; }
+  .nss-axis-loop > div { flex-basis: auto; }
+  .nss-feedback-endpoints article { grid-template-columns: 1fr; }
+  .nss-feedback-endpoints article img { max-height: 210px; }
+  .nss-perspective-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .nss-feedback-branches { grid-template-columns: 1fr; }
+  .nss-mechanisms { gap: 24px; }
+  .nss-mechanisms > li { display: block; }
+  .nss-mechanisms .nss-step-number { margin-bottom: 16px; }
+  .nss-neurocosmetics-visual { grid-template-columns: 1fr; }
+  .nss-neurocosmetics-outcomes { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+  .nss-neurocosmetics-outcomes > h3 { grid-column: 1 / -1; }
+  .nss-neurocosmetics-outcomes article { flex-direction: column; text-align: center; margin: 0; }
+}
+@media (max-width: 800px) {
+  .nss-page .nss-research-section { padding-block: 48px; scroll-margin-top: 104px; }
+  .nss-research-heading, .nss-research-heading--center { text-align: left; }
+  .nss-research-heading { margin-bottom: 28px; }
+  .nss-axis-portrait { display: block; width: min(460px,100%); }
+  .nss-axis-portrait > img { max-height: 540px; object-fit: contain; }
+  .nss-axis-copy .nss-research-heading { text-align: left; }
+  .nss-axis-signals { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .nss-axis-loop { grid-column: 1 / -1; grid-row: 2; flex-direction: row; }
+  .nss-axis-loop > div { flex: 0 1 160px; }
+  .nss-axis-loop .ph { transform: rotate(90deg); }
+  .nss-axis-targets { grid-template-columns: 1fr; gap: 26px; }
+  .nss-axis-targets .ph { right: calc(50% - 13px); top: auto; bottom: -26px; transform: rotate(90deg); }
+  .nss-research-callout { display: block; padding: 24px; }
+  html body.nss-page .nss-research-callout h3:not(#dsm-type-lock) { margin-bottom: 12px !important; }
+  .nss-feedback-endpoints { grid-template-columns: 1fr; }
+  .nss-feedback-endpoints > .ph { justify-self: center; transform: rotate(90deg); }
+  .nss-feedback-endpoints article { grid-template-columns: minmax(0,.7fr) minmax(0,1fr); }
+  .nss-impact-cascade, .nss-barrier-cascade { grid-template-columns: 1fr; gap: 30px; }
+  .nss-impact-cascade > li:nth-child(4), .nss-impact-cascade > li:nth-child(5) { grid-column: auto; grid-row: auto; }
+  .nss-impact-cascade > li:nth-child(4) .nss-cascade-arrow { top: auto; left: auto; right: calc(50% - 16px); bottom: -30px; transform: rotate(90deg); }
+  .nss-molecular-flow { display: grid; gap: 24px; overflow: visible; padding-bottom: 0 !important; }
+  .nss-molecular-flow > li { width: 100%; }
+  .nss-molecular-flow > li:not(:last-child)::after { right: calc(50% - 10px); top: auto; bottom: -24px; transform: rotate(90deg); }
+  .nss-cascade-card > img, .nss-barrier-card > img { aspect-ratio: 1.45; object-fit: contain; background: #edf5fb; }
+  .nss-impact-cascade .nss-cascade-arrow, .nss-barrier-cascade .nss-cascade-arrow { top: auto; left: auto; right: calc(50% - 16px); bottom: -30px; transform: rotate(90deg); }
+  .nss-barrier-cascade .nss-barrier-card:nth-child(3) .nss-cascade-arrow { transform: none; }
+  .nss-barrier-cascade :is(.nss-barrier-card--core,.nss-barrier-card--clinical) .nss-cascade-arrow { transform: rotate(-90deg); }
+  .nss-barrier-card--core, .nss-barrier-card--clinical, .nss-barrier-card--cycle { grid-column: auto; grid-row: auto; }
+  .nss-barrier-effects { grid-template-columns: 1fr; }
+  .nss-barrier-context { padding: 24px; }
+  .nss-mechanisms { grid-template-columns: 1fr; gap: 28px; }
+  .nss-mechanisms > li { display: flex; }
+  .nss-page .nss-neurocosmetics-section { background-image: none; }
+  html body.nss-page .nss-neurocosmetics-section::before { display: none !important; }
+  .nss-neurocosmetics-section .nss-research-heading { margin-left: 0; padding: 0; }
+  .nss-neurocosmetics-callout > .ph { display: block; margin-bottom: 14px; }
+}
+@media (max-width: 520px) {
+  html body.nss-page .nss-mechanisms-title:not(#dsm-type-lock) { --site-type-h3: 28px; --site-line-h3: 36px; }
+  .nss-axis-signals { grid-template-columns: 1fr; }
+  .nss-axis-loop { grid-column: auto; grid-row: 2; gap: 12px; }
+  .nss-axis-loop > div { flex-basis: 100px; }
+  .nss-axis-loop figcaption { font-size: 14px; line-height: 21px; }
+  .nss-perspective-list { grid-template-columns: 1fr; }
+  .nss-feedback-endpoints article { grid-template-columns: 1fr; }
+  .nss-pathway-strip { padding: 20px 16px; }
+  .nss-molecular-flow { display: grid; gap: 24px; }
+  .nss-molecular-flow > li { width: 100%; }
+  .nss-molecular-flow > li:not(:last-child)::after { right: calc(50% - 10px); top: auto; bottom: -24px; transform: rotate(90deg); }
+  .nss-neurocosmetics-outcomes { grid-template-columns: 1fr; }
+  .nss-neurocosmetics-art { grid-template-columns: 1fr; }
+  .nss-neurocosmetics-input { grid-template-columns: 1fr 1fr; align-items: center; }
+  .nss-neurocosmetics-outcomes article { flex-direction: row; text-align: left; }
+  .nss-research-action .nss-explore { font-size: 20px; line-height: 28px; }
+}

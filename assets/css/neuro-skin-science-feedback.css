@@ -1,0 +1,240 @@
+/* Editable reference diagram. Coordinates follow the supplied 2623 × 1475 poster;
+   its containing shell retains the website's responsive foreground gutters. */
+@font-face { font-family: 'Roboto Condensed'; src: url('../fonts/roboto-condensed/RobotoCondensed-Variable.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
+html body.nss-page #neurocutaneous-feedback { padding-block: 40px; background: #fff; }
+#neurocutaneous-feedback .nss-feedback-canvas { position: relative; container-type: inline-size; aspect-ratio: 2623 / 1475; isolation: isolate; }
+html body.nss-page #neurocutaneous-feedback :is(h2,h3,h4,p,li,span,small) { color: #0c1957; font-family: 'Roboto Condensed', 'DM Sans', sans-serif !important; text-transform: none !important; }
+html body.nss-page #neurocutaneous-feedback :is(h2,h3,h4):not(#dsm-type-lock) { margin: 0 !important; letter-spacing: -.025cqw !important; }
+#neurocutaneous-feedback :is(p,ol,figure) { margin: 0; }
+#neurocutaneous-feedback .nss-fb-heading { position: absolute; inset: 2.1% 0 auto; text-align: center; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-eyebrow { display: flex; align-items: center; justify-content: center; gap: 1.7cqw; font-size: 1.02cqw !important; line-height: 1.3 !important; letter-spacing: .18cqw; font-weight: 600 !important; color: #706da4; }
+#neurocutaneous-feedback .nss-fb-eyebrow::before, #neurocutaneous-feedback .nss-fb-eyebrow::after { content: ''; width: 7.1cqw; border-top: .12cqw solid #6f8db7; }
+html body.nss-page #neurocutaneous-feedback h2 { margin-top: .56cqw !important; font-size: 3.22cqw !important; line-height: 1.12 !important; font-weight: 900 !important; letter-spacing: -.17cqw !important; white-space: nowrap; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-subtitle { margin-top: .36cqw; font-size: 1.29cqw !important; line-height: 1.32 !important; letter-spacing: -.045cqw; font-weight: 500 !important; }
+#neurocutaneous-feedback .nss-fb-perspective { position: absolute; left: 0; top: 16.7%; width: 16.45%; height: 81.6%; padding: .55cqw 1cqw 0 0; border-right: .11cqw solid #7d9fbd; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > h3 { margin-bottom: .65cqw !important; font-size: .99cqw !important; line-height: 1.2 !important; font-weight: 800 !important; letter-spacing: .065cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > p { font-size: 1.13cqw !important; line-height: 1.32 !important; font-weight: 500 !important; letter-spacing: -.05cqw; }
+#neurocutaneous-feedback .nss-fb-perspective-list { display: grid; grid-template-rows: .98fr 1.16fr 1fr .9fr; gap: 1.45cqw; margin-top: 1.05cqw; padding-top: 1.1cqw; border-top: .12cqw solid #706da4; }
+#neurocutaneous-feedback .nss-fb-perspective-list > li { display: grid; grid-template-columns: 3.7cqw 1fr; gap: .8cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list > li > span { font-size: 2.78cqw !important; line-height: .94 !important; font-weight: 800 !important; letter-spacing: -.16cqw; color: #547cb8; border-right: .1cqw solid currentColor; align-self: start; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(2) > span { color: #388c9e; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(3) > span { color: #ad375f; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(4) > span { color: #7971b7; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list h4 { font-size: .92cqw !important; line-height: 1.13 !important; font-weight: 800 !important; letter-spacing: -.025cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list p { margin-top: .24cqw; font-size: .79cqw !important; line-height: 1.23 !important; font-weight: 500 !important; letter-spacing: -.026cqw; color: #7c86ac; }
+#neurocutaneous-feedback .nss-fb-model-surface { position: absolute; left: 17.5%; top: 16.5%; width: 82.5%; height: 73.4%; background: #edf7fc; border-radius: .75cqw; z-index: -1; }
+#neurocutaneous-feedback .nss-fb-connectors { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+#neurocutaneous-feedback .nss-fb-stressors { position: absolute; z-index: 3; left: 29.4%; top: 17.1%; width: 60.7%; height: 7.3%; display: grid; grid-template-columns: 23% 55.5% 21.5%; align-items: center; padding: .45cqw 1.1cqw; border-radius: 1.2cqw; background: #daedf9; text-align: center; }
+#neurocutaneous-feedback .nss-fb-stressors > img { width: 12.45cqw; mix-blend-mode: multiply; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors h3 { font-size: 1.075cqw !important; line-height: 1.35 !important; font-weight: 800 !important; letter-spacing: .04cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors p { font-size: .98cqw !important; line-height: 1.2 !important; letter-spacing: -.035cqw; font-weight: 500 !important; color: #527aa1; }
+#neurocutaneous-feedback .nss-fb-stressors p span { margin-inline: .25cqw; color: #84b3d1; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors .nss-fb-stressor-note { padding: .3cqw 0 .3cqw 1.2cqw; border-left: .12cqw solid #688ead; text-align: left; font-size: .8cqw !important; }
+#neurocutaneous-feedback :is(.nss-fb-brain,.nss-fb-skin) { display: contents; }
+#neurocutaneous-feedback :is(.nss-fb-brain,.nss-fb-skin) > * { position: absolute; }
+#neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) { top: 26.5%; text-align: center; z-index: 3; }
+#neurocutaneous-feedback .nss-fb-brain-heading { left: 19.9%; width: 11%; }
+#neurocutaneous-feedback .nss-fb-skin-heading { left: 87.4%; width: 10%; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) h3 { font-size: 1.45cqw !important; line-height: 1.18 !important; font-weight: 800 !important; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) p { font-size: .95cqw !important; line-height: 1.13 !important; font-weight: 500 !important; letter-spacing: -.035cqw; color: #7a83ad; }
+#neurocutaneous-feedback .nss-fb-brain-art { left: 17.4%; top: 33.7%; width: 17.5%; height: 34.4%; object-fit: contain; mix-blend-mode: multiply; z-index: 1; }
+#neurocutaneous-feedback .nss-fb-skin-art { left: 86.2%; top: 33.2%; width: 13.5%; height: 36%; object-fit: contain; mix-blend-mode: multiply; z-index: 1; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-neurotransmitters { left: 28.8%; top: 33.2%; z-index: 3; font-size: .79cqw !important; line-height: 1.07 !important; font-weight: 500 !important; letter-spacing: -.03cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-label { padding: .12cqw .3cqw; border: .11cqw solid #7b89b3; border-radius: .13cqw; background: #fcfeff; text-align: center; font-size: .91cqw !important; line-height: 1.08 !important; font-weight: 500 !important; letter-spacing: -.04cqw; }
+#neurocutaneous-feedback .nss-fb-hypothalamus { left: 25.45%; top: 42.3%; z-index: 3; }
+#neurocutaneous-feedback .nss-fb-limbic { left: 27.4%; top: 55.4%; z-index: 3; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-functions,.nss-fb-skin-functions) { padding: 1.1cqw .75cqw; background: #e6f3fc; font-size: .88cqw !important; line-height: 1.32 !important; font-weight: 500 !important; letter-spacing: -.035cqw; color: #506b94; }
+#neurocutaneous-feedback .nss-fb-brain-functions { left: 18.1%; top: 73.1%; }
+#neurocutaneous-feedback .nss-fb-skin-functions { left: 90%; top: 72%; }
+#neurocutaneous-feedback .nss-fb-pathways { display: contents; }
+#neurocutaneous-feedback .nss-fb-lane { position: absolute; z-index: 3; left: 37%; width: 48%; height: 9.2%; border-radius: .7cqw; background: #daedfb; --fb-accent: #478fc5; }
+#neurocutaneous-feedback .nss-fb-lane--hpa { top: 25.6%; }
+#neurocutaneous-feedback .nss-fb-lane--sympathetic { top: 35.6%; background: #dff0f0; --fb-accent: #44a1a5; }
+#neurocutaneous-feedback .nss-fb-lane--parasympathetic { top: 45.6%; background: #f3e9dc; --fb-accent: #cf9e56; }
+#neurocutaneous-feedback .nss-fb-lane--pigmentation { top: 55.6%; }
+#neurocutaneous-feedback .nss-fb-lane--return { top: 66.8%; height: 10.3%; background: #f2e3ed; --fb-accent: #af3e64; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 { display: flex; align-items: center; gap: .7cqw; min-height: 2.25cqw; font-size: 1.02cqw !important; line-height: 1.12 !important; font-weight: 800 !important; letter-spacing: -.035cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 small { font-size: .84cqw !important; font-weight: 700 !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-number { flex: 0 0 3.05cqw; padding: .33cqw .2cqw; border-radius: .8cqw; text-align: center; background: var(--fb-accent); color: #fff; font-size: 1.6cqw !important; line-height: 1.13 !important; font-weight: 400 !important; letter-spacing: -.055cqw; }
+#neurocutaneous-feedback .nss-fb-flow { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); align-items: center; gap: 1.5cqw; margin: .16cqw .75cqw .35cqw 1.5cqw; padding: .2cqw 0; background: rgb(255 255 255 / 56%); border-radius: .3cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-flow > li { position: relative; display: grid; place-content: center; min-width: 0; min-height: 1.9cqw; padding: .12cqw .13cqw; border: .11cqw solid #8090b7; border-radius: .16cqw; background: #fff; text-align: center; font-size: .84cqw !important; line-height: 1.05 !important; font-weight: 500 !important; letter-spacing: -.042cqw; }
+#neurocutaneous-feedback .nss-fb-flow > li:not(:last-child)::after { content: ''; position: absolute; left: calc(100% + .1cqw); width: 1.5cqw; height: .96cqw; top: calc(50% - .48cqw); background: url('../images/neuro-skin-science-20260915/feedback-reference/node-arrow-blue.webp') center / 100% 100% no-repeat; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-flow > .nss-fb-result { border: .15cqw solid #945471; }
+#neurocutaneous-feedback .nss-fb-lane--hpa .nss-fb-flow { grid-template-columns: 1.36fr .78fr .9fr .82fr 1.1fr 1.55fr .95fr; }
+#neurocutaneous-feedback :is(.nss-fb-lane--sympathetic,.nss-fb-lane--parasympathetic) .nss-fb-flow { grid-template-columns: 1fr 1fr 1.4fr 1.3fr; gap: 2.8cqw; margin-right: 2.2cqw; }
+#neurocutaneous-feedback :is(.nss-fb-lane--sympathetic,.nss-fb-lane--parasympathetic) .nss-fb-flow > li::after { width: 2.8cqw; background-size: 100% 100%; }
+#neurocutaneous-feedback .nss-fb-lane--pigmentation .nss-fb-flow { grid-template-columns: 1fr 1fr 1fr 1.25fr 1fr 1.42fr; gap: 1.9cqw; }
+#neurocutaneous-feedback .nss-fb-lane--pigmentation .nss-fb-flow > li::after { width: 1.9cqw; }
+#neurocutaneous-feedback .nss-fb-lane--return .nss-fb-flow { direction: rtl; grid-template-columns: 1.2fr 1.2fr 1.25fr 1fr 1.4fr .85fr; margin: .44cqw .6cqw 0 1cqw; gap: 1.7cqw; }
+#neurocutaneous-feedback .nss-fb-lane--return .nss-fb-flow > li { direction: ltr; }
+#neurocutaneous-feedback .nss-fb-lane--return .nss-fb-flow > li::after { left: auto; right: calc(100% + .1cqw); width: 1.7cqw; background-image: url('../images/neuro-skin-science-20260915/feedback-reference/node-arrow-red.webp'); }
+#neurocutaneous-feedback .nss-fb-neuroimmune { position: absolute; z-index: 3; left: 57.65%; top: 76.65%; width: 8.85%; display: grid; justify-items: center; }
+#neurocutaneous-feedback .nss-fb-neuroimmune > .ph { visibility: hidden; height: .74cqw; }
+#neurocutaneous-feedback .nss-fb-cell-label { width: 100%; }
+#neurocutaneous-feedback .nss-fb-histamine { width: 60%; }
+#neurocutaneous-feedback .nss-fb-substance { width: 100%; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-mediators { position: absolute; z-index: 3; left: 67.15%; top: 81.2%; font-size: .98cqw !important; line-height: 1.6 !important; font-weight: 600 !important; letter-spacing: -.045cqw; }
+#neurocutaneous-feedback .nss-fb-mediators > .ph { font-size: 1.4cqw; vertical-align: -.15cqw; color: #265896; }
+#neurocutaneous-feedback .nss-fb-mobile-branch { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#neurocutaneous-feedback .nss-fb-implication { position: absolute; left: 17.5%; top: 90.7%; width: 82.5%; height: 7.65%; display: grid; grid-template-columns: 23.5% 58.5% 18%; align-items: center; border-radius: .7cqw; background: #edf6fc; }
+#neurocutaneous-feedback .nss-fb-implication-title { display: flex; align-items: center; justify-content: center; gap: .7cqw; }
+#neurocutaneous-feedback .nss-fb-implication-title img { width: 3.6cqw; mix-blend-mode: multiply; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-implication h3 { font-size: .95cqw !important; line-height: 1.25 !important; font-weight: 800 !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-implication > p { padding: .2cqw 1.2cqw; border-left: .11cqw solid #516aa0; text-align: center; font-size: .94cqw !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -.036cqw; color: #54759b; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-implication .nss-fb-signoff { font-size: .64cqw !important; line-height: 1.7 !important; font-weight: 700 !important; letter-spacing: .13cqw; color: #8a91b2; }
+#neurocutaneous-feedback .nss-fb-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* A locally served condensed face matches the source's information density. */
+html body.nss-page #neurocutaneous-feedback h2 { font-size: 3.45cqw !important; letter-spacing: -.12cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-heading h2:not(#dsm-type-lock) { margin-top: .65cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > h3:not(#dsm-type-lock) { margin-bottom: .65cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-subtitle { font-size: 1.42cqw !important; letter-spacing: -.025cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > h3 { font-size: 1.06cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > p { font-size: 1.26cqw !important; line-height: 1.2 !important; letter-spacing: -.03cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list h4 { font-size: 1.04cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list p { font-size: .9cqw !important; line-height: 1.16 !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors h3 { font-size: 1.2cqw !important; letter-spacing: .065cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors p { font-size: 1.12cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-stressors .nss-fb-stressor-note { font-size: .89cqw !important; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) p { font-size: 1.07cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-neurotransmitters { font-size: .88cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-label { font-size: 1.03cqw !important; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-functions,.nss-fb-skin-functions) { font-size: 1.04cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 { font-size: 1.13cqw !important; font-weight: 700 !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 small { font-size: .94cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-flow > li { font-size: 1.02cqw !important; letter-spacing: -.035cqw; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-mediators { font-size: 1.08cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-implication h3 { font-size: 1.08cqw !important; }
+html body.nss-page #neurocutaneous-feedback .nss-fb-implication > p { font-size: 1.06cqw !important; }
+#neurocutaneous-feedback .nss-fb-model-surface { background: #edf7fc url('../images/neuro-skin-science-20260915/feedback-reference/model-texture.webp') center / cover no-repeat; }
+html body.nss-page #neurocutaneous-feedback :is(.nss-fb-subtitle,.nss-fb-perspective > p,.nss-fb-perspective-list p,.nss-fb-stressors p,.nss-fb-label,.nss-fb-flow > li,.nss-fb-neurotransmitters,.nss-fb-brain-functions,.nss-fb-skin-functions,.nss-fb-implication > p) { font-weight: 400 !important; }
+
+/* Keep the source's ports and branching relationships attached to their nodes.
+   Values are measured in the normalized 2048px-wide reference, not viewport px. */
+@media (min-width: 1101px) {
+  #neurocutaneous-feedback .nss-fb-perspective-list { position: absolute; left: 0; right: 1cqw; top: calc(289 / 20.48 * 1cqw); display: block; margin: 0; padding: 0; }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li { position: absolute; width: 100%; top: calc(var(--step-y) / 20.48 * 1cqw); }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(1) { --step-y: 26; }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(2) { --step-y: 176; }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(3) { --step-y: 348; }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li:nth-child(4) { --step-y: 499; }
+  #neurocutaneous-feedback .nss-fb-lane { left: calc(758 / 2048 * 100%); width: calc(982 / 2048 * 100%); z-index: auto; background: none; --lane-y: 295; --lane-fill: #daedfb; }
+  #neurocutaneous-feedback .nss-fb-lane::before { content: ''; position: absolute; inset: 0; z-index: 0; border-radius: inherit; background: var(--lane-fill); }
+  #neurocutaneous-feedback .nss-fb-lane h3 { position: relative; z-index: 3; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic { --lane-y: 409; --lane-fill: #dff0f0; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic { --lane-y: 523; --lane-fill: #f3e9dc; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation { --lane-y: 638; }
+  #neurocutaneous-feedback .nss-fb-lane--return { --lane-y: 769; --lane-fill: #f2e3ed; }
+  #neurocutaneous-feedback .nss-fb-lane { top: calc(var(--lane-y) / 1152 * 100%); }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow { position: absolute; inset: 0; display: block; margin: 0; padding: 0; background: none; direction: ltr; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-flow > li { position: absolute; z-index: 3; left: calc((var(--node-x) - 758) / 20.48 * 1cqw); top: calc((var(--node-y) - var(--lane-y)) / 20.48 * 1cqw); width: calc(var(--node-w) / 20.48 * 1cqw); height: calc(var(--node-h) / 20.48 * 1cqw); min-height: 0; padding: .08cqw .1cqw; }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow > li::after { width: calc(var(--node-gap, 30) / 20.48 * 1cqw); }
+  #neurocutaneous-feedback .nss-fb-lane--hpa .nss-fb-flow > li { --node-y: 347; --node-h: 39; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(1) { --node-x: 790; --node-w: 136; --node-gap: 35; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(2) { --node-x: 961; --node-w: 77; --node-gap: 26; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(3) { --node-x: 1064; --node-w: 89; --node-gap: 32; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(4) { --node-x: 1185; --node-w: 84; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(5) { --node-x: 1299; --node-w: 111; --node-gap: 35; --node-y: 342; --node-h: 49; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(6) { --node-x: 1445; --node-w: 153; --node-gap: 26; }
+  #neurocutaneous-feedback .nss-fb-lane--hpa li:nth-child(7) { --node-x: 1624; --node-w: 96; --node-y: 346; --node-h: 43; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic .nss-fb-flow > li { --node-y: 456; --node-h: 47; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic li:nth-child(1) { --node-x: 790; --node-w: 160; --node-gap: 59; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic li:nth-child(2) { --node-x: 1009; --node-w: 145; --node-gap: 65; --node-y: 461; --node-h: 39; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic li:nth-child(3) { --node-x: 1219; --node-w: 218; --node-gap: 73; }
+  #neurocutaneous-feedback .nss-fb-lane--sympathetic li:nth-child(4) { --node-x: 1510; --node-w: 180; --node-y: 455; --node-h: 45; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic .nss-fb-flow > li { --node-y: 576; --node-h: 47; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic li:nth-child(1) { --node-x: 790; --node-w: 160; --node-gap: 61; --node-y: 574; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic li:nth-child(2) { --node-x: 1011; --node-w: 177; --node-gap: 53; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic li:nth-child(3) { --node-x: 1241; --node-w: 194; --node-gap: 50; --node-h: 45; }
+  #neurocutaneous-feedback .nss-fb-lane--parasympathetic li:nth-child(4) { --node-x: 1485; --node-w: 212; --node-y: 570; --node-h: 55; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation .nss-fb-flow > li { --node-y: 690; --node-h: 40; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(1) { --node-x: 800; --node-w: 108; --node-gap: 42; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(2) { --node-x: 950; --node-w: 107; --node-gap: 42; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(3) { --node-x: 1099; --node-w: 105; --node-gap: 67; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(4) { --node-x: 1271; --node-w: 129; --node-gap: 34; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(5) { --node-x: 1434; --node-w: 103; --node-gap: 35; }
+  #neurocutaneous-feedback .nss-fb-lane--pigmentation li:nth-child(6) { --node-x: 1572; --node-w: 151; --node-y: 680; --node-h: 54; }
+  #neurocutaneous-feedback .nss-fb-lane--return .nss-fb-flow > li { --node-y: 824; --node-h: 40; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(1) { --node-x: 1602; --node-w: 127; --node-gap: 45; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(2) { --node-x: 1425; --node-w: 132; --node-gap: 39; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(3) { --node-x: 1248; --node-w: 138; --node-gap: 43; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(4) { --node-x: 1094; --node-w: 111; --node-gap: 40; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(5) { --node-x: 907; --node-w: 147; --node-gap: 37; }
+  #neurocutaneous-feedback .nss-fb-lane--return li:nth-child(6) { --node-x: 774; --node-w: 96; }
+  #neurocutaneous-feedback .nss-fb-neuroimmune { display: contents; }
+  #neurocutaneous-feedback .nss-fb-neuroimmune > .ph { display: none; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-neuroimmune > p { position: absolute; z-index: 3; display: grid; place-content: center; }
+  #neurocutaneous-feedback .nss-fb-cell-label { left: calc(1187 / 2048 * 100%); top: calc(881 / 1152 * 100%); width: calc(175 / 20.48 * 1cqw); height: calc(50 / 20.48 * 1cqw); }
+  #neurocutaneous-feedback .nss-fb-histamine { left: calc(1230 / 2048 * 100%); top: calc(949 / 1152 * 100%); width: calc(103 / 20.48 * 1cqw); height: calc(31 / 20.48 * 1cqw); }
+  #neurocutaneous-feedback .nss-fb-substance { left: calc(1177 / 2048 * 100%); top: calc(994 / 1152 * 100%); width: calc(182 / 20.48 * 1cqw); height: calc(37 / 20.48 * 1cqw); }
+}
+
+/* Compact view keeps every pathway as readable live text in its causal order. */
+@media (max-width: 1100px) {
+  #neurocutaneous-feedback .nss-feedback-canvas { aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  #neurocutaneous-feedback :is(.nss-fb-heading,.nss-fb-perspective,.nss-fb-stressors,.nss-fb-lane,.nss-fb-neuroimmune,.nss-fb-mediators,.nss-fb-implication) { position: relative; inset: auto; width: auto; height: auto; }
+  html body.nss-page #neurocutaneous-feedback :is(.nss-fb-mediators,.nss-fb-neurotransmitters) { position: relative; inset: auto; }
+  #neurocutaneous-feedback :is(.nss-fb-heading,.nss-fb-perspective,.nss-fb-stressors,.nss-fb-pathways,.nss-fb-mobile-branch,.nss-fb-implication) { grid-column: 1 / -1; }
+  #neurocutaneous-feedback :is(.nss-fb-model-surface,.nss-fb-connectors,.nss-fb-desktop-break) { display: none; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-eyebrow { font-size: 12px !important; letter-spacing: 1.7px; gap: 14px; }
+  #neurocutaneous-feedback .nss-fb-eyebrow::before, #neurocutaneous-feedback .nss-fb-eyebrow::after { width: 35px; flex-shrink: 0; border-width: 1px; }
+  html body.nss-page #neurocutaneous-feedback h2 { margin-top: 16px !important; white-space: normal; font-size: clamp(30px,4.6vw,50px) !important; line-height: 1.08 !important; letter-spacing: -1.4px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-heading h2:not(#dsm-type-lock) { margin-top: 16px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > h3:not(#dsm-type-lock) { margin-bottom: 12px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-subtitle { margin-top: 16px; font-size: 19px !important; line-height: 1.45 !important; letter-spacing: -.4px; }
+  #neurocutaneous-feedback .nss-fb-perspective { border: 0; padding: 0; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > h3 { font-size: 17px !important; letter-spacing: 1px !important; margin-bottom: 12px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective > p { font-size: 17px !important; line-height: 1.55 !important; letter-spacing: 0; }
+  #neurocutaneous-feedback .nss-fb-perspective-list { grid-template-columns: 1fr 1fr; grid-template-rows: none; margin-top: 24px; padding-top: 24px; gap: 24px; border-width: 1px; }
+  #neurocutaneous-feedback .nss-fb-perspective-list > li { grid-template-columns: 44px 1fr; gap: 14px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list > li > span { font-size: 34px !important; letter-spacing: -1.5px; border-width: 1px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list h4 { font-size: 16px !important; line-height: 1.25 !important; letter-spacing: -.3px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-perspective-list p { margin-top: 8px; font-size: 15px !important; line-height: 1.45 !important; letter-spacing: 0; color: #626f91; }
+  #neurocutaneous-feedback .nss-fb-stressors { grid-template-columns: 1fr; justify-items: center; gap: 16px; padding: 22px; border-radius: 14px; }
+  #neurocutaneous-feedback .nss-fb-stressors > img { width: 200px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-stressors h3 { font-size: 20px !important; letter-spacing: .2px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-stressors p { margin-top: 8px; font-size: 16px !important; line-height: 1.45 !important; letter-spacing: 0; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-stressors .nss-fb-stressor-note { padding: 0; border: 0; font-size: 15px !important; text-align: center; }
+  #neurocutaneous-feedback :is(.nss-fb-brain,.nss-fb-skin) { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  #neurocutaneous-feedback :is(.nss-fb-brain,.nss-fb-skin) > * { position: relative; inset: auto; width: auto; }
+  #neurocutaneous-feedback :is(.nss-fb-brain-art,.nss-fb-skin-art) { height: 250px; max-width: 100%; object-fit: contain; }
+  html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) h3 { font-size: 24px !important; }
+  html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-heading,.nss-fb-skin-heading) p { margin-top: 6px; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-neurotransmitters { font-size: 15px !important; line-height: 1.35 !important; letter-spacing: 0; }
+  #neurocutaneous-feedback .nss-fb-neurotransmitters br::after { content: ' '; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-label { padding: 5px 9px; border-width: 1px; border-radius: 3px; font-size: 16px !important; line-height: 1.2 !important; letter-spacing: -.3px; }
+  html body.nss-page #neurocutaneous-feedback :is(.nss-fb-brain-functions,.nss-fb-skin-functions) { padding: 16px; font-size: 16px !important; line-height: 1.5 !important; letter-spacing: -.2px; }
+  #neurocutaneous-feedback .nss-fb-pathways { display: grid; gap: 20px; }
+  #neurocutaneous-feedback .nss-fb-lane { padding: 16px; border-radius: 12px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 { gap: 12px; font-size: 19px !important; line-height: 1.2 !important; letter-spacing: -.5px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 small { font-size: 15px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-number { flex-basis: 44px; padding: 8px 4px; border-radius: 10px; font-size: 27px !important; letter-spacing: -1px; }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow { display: grid; grid-template-columns: 1fr; direction: ltr; gap: 25px; margin: 20px 0 0; padding: 0; background: transparent; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-flow > li { flex: 1 0 100px; min-height: 44px; padding: 8px 5px; border-width: 1px; border-radius: 3px; font-size: 15px !important; line-height: 1.15 !important; letter-spacing: -.5px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-flow > .nss-fb-result { border-width: 2px; }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow > li::after { left: calc(50% - 13px); right: auto; top: auto; bottom: -20px; width: 26px; height: 14px; transform: rotate(90deg); background-image: url('../images/neuro-skin-science-20260915/feedback-reference/node-arrow-blue.webp'); }
+  #neurocutaneous-feedback .nss-fb-mobile-branch { position: relative; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-mobile-branch { font-size: 16px !important; line-height: 1.5 !important; }
+  #neurocutaneous-feedback .nss-fb-neuroimmune { justify-self: center; width: 210px; max-width: 100%; }
+  #neurocutaneous-feedback .nss-fb-neuroimmune > .ph { visibility: visible; height: 26px; font-size: 24px; color: #345f99; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-mediators { align-self: center; font-size: 16px !important; line-height: 1.7 !important; letter-spacing: -.4px; }
+  #neurocutaneous-feedback .nss-fb-mediators > .ph { font-size: 22px; }
+  #neurocutaneous-feedback .nss-fb-implication { grid-template-columns: 1fr; justify-items: center; gap: 20px; padding: 24px; border-radius: 12px; }
+  #neurocutaneous-feedback .nss-fb-implication-title { gap: 14px; }
+  #neurocutaneous-feedback .nss-fb-implication-title img { width: 58px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-implication h3 { font-size: 19px !important; line-height: 1.25 !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-implication > p { padding: 0; border: 0; font-size: 17px !important; line-height: 1.5 !important; letter-spacing: -.2px; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-implication .nss-fb-signoff { font-size: 12px !important; line-height: 1.7 !important; letter-spacing: 2px; }
+}
+@media (max-width: 700px) {
+  #neurocutaneous-feedback .nss-fb-perspective-list { grid-template-columns: 1fr; }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow { display: grid; grid-template-columns: 1fr; gap: 25px; }
+  #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow > li::after { left: calc(50% - 13px); top: auto; bottom: -20px; transform: rotate(90deg); }
+  #neurocutaneous-feedback .nss-fb-neuroimmune, #neurocutaneous-feedback .nss-fb-mediators { grid-column: 1 / -1; text-align: center; justify-self: center; }
+}
+@media (max-width: 450px) {
+  #neurocutaneous-feedback :is(.nss-fb-brain,.nss-fb-skin) { grid-column: 1 / -1; }
+  #neurocutaneous-feedback .nss-fb-eyebrow::before, #neurocutaneous-feedback .nss-fb-eyebrow::after { display: none; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 { align-items: flex-start; font-size: 17px !important; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 small { font-size: 14px !important; }
+}

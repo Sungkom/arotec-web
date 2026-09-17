@@ -1,0 +1,87 @@
+/* Source-based barrier sequence with a shared, neutral card treatment.
+   The existing site shell supplies desktop/tablet/mobile foreground gutters. */
+html body.nss-page #skin-barrier-disruption { padding-block: 40px; background: #f9fcff url('../images/neuro-skin-science-20260915/barrier-reference/background.webp') center / 100% 100% no-repeat; }
+#skin-barrier-disruption .nss-sb-canvas { position: relative; container-type: inline-size; aspect-ratio: 2623 / 1475; }
+html body.nss-page #skin-barrier-disruption :is(h2,h3,p,span) { font-family: 'Roboto Condensed','DM Sans',sans-serif !important; color: #08133e; text-transform: none !important; }
+html body.nss-page #skin-barrier-disruption :is(h2,h3):not(#dsm-type-lock) { margin: 0 !important; }
+#skin-barrier-disruption :is(p,ul,ol) { padding: 0; margin: 0; }
+#skin-barrier-disruption .nss-sb-heading { position: absolute; top: .45%; left: 0; right: 0; text-align: center; }
+html body.nss-page #skin-barrier-disruption h2 { font-size: 3.13cqw !important; line-height: 1.08 !important; font-weight: 800 !important; letter-spacing: -.075cqw !important; white-space: nowrap; }
+html body.nss-page #skin-barrier-disruption .nss-sb-heading > p { margin-top: .35cqw; font-size: 1.87cqw !important; line-height: 1.15 !important; font-weight: 400 !important; letter-spacing: -.035cqw; }
+#skin-barrier-disruption .nss-sb-context { position: absolute; left: calc(42 / 2048 * 100%); top: 12.5%; width: calc(440 / 2048 * 100%); height: calc(974 / 1152 * 100%); border-radius: .4cqw; box-shadow: inset 0 0 0 .1cqw #e0edf3; background: #fff; overflow: hidden; }
+#skin-barrier-disruption .nss-sb-context-texture { position: absolute; bottom: .15cqw; left: .1cqw; width: calc(100% - .2cqw); height: 9.7cqw; object-fit: fill; border-radius: 0 0 .3cqw .3cqw; mask-image: linear-gradient(to bottom,transparent,#000 32%); }
+html body.nss-page #skin-barrier-disruption .nss-sb-context h3 { position: absolute; left: .88cqw; right: .65cqw; top: 1.72cqw; font-size: 2.15cqw !important; line-height: 1.04 !important; font-weight: 750 !important; letter-spacing: -.065cqw !important; }
+html body.nss-page #skin-barrier-disruption .nss-sb-context > p { position: absolute; top: 7.4cqw; left: 1.05cqw; right: .95cqw; font-size: 1.465cqw !important; line-height: 1.2 !important; font-weight: 400 !important; letter-spacing: -.014cqw; }
+#skin-barrier-disruption .nss-sb-effects { position: absolute; left: 1.22cqw; right: .65cqw; top: 25.83cqw; display: grid; gap: .25cqw; list-style: none; }
+#skin-barrier-disruption .nss-sb-effects li { display: flex; align-items: center; gap: 1cqw; min-height: 3.6cqw; }
+#skin-barrier-disruption .nss-sb-effects img { flex: 0 0 3.7cqw; width: 3.7cqw; height: 3.6cqw; object-fit: contain; }
+html body.nss-page #skin-barrier-disruption .nss-sb-effects span { font-size: 1.46cqw !important; line-height: 1.1 !important; font-weight: 650 !important; letter-spacing: -.035cqw; white-space: nowrap; }
+#skin-barrier-disruption .nss-sb-cascade { display: contents; list-style: none; }
+#skin-barrier-disruption .nss-sb-card { --y: 144; --h: 461; --iy: 152; --ih: 251; --ncy: 412; --nd: 66; --hy: 449; --py: 502; --ay: 319; --aw: 62; --ah: 56; position: absolute; left: calc(var(--x) / 2048 * 100%); top: calc(var(--y) / 1152 * 100%); width: calc(var(--w) / 2048 * 100%); height: calc(var(--h) / 1152 * 100%); border-radius: .6cqw; background: #fff; box-shadow: inset 0 0 0 1px #d9e5ef, 0 6px 20px rgb(25 58 89 / 8%); }
+#skin-barrier-disruption .nss-sb-card:nth-child(1) { --x: 504; --w: 481; --ix: 513; --iw: 463; --ncx: 744; --ax: 961; }
+#skin-barrier-disruption .nss-sb-card:nth-child(2) { --x: 1006; --w: 477; --ix: 1015; --iw: 458; --ncx: 1245; --ax: 1464; }
+#skin-barrier-disruption .nss-sb-card:nth-child(3) { --x: 1505; --w: 502; --ix: 1517; --iw: 481; --ncx: 1756; }
+#skin-barrier-disruption .nss-sb-card:nth-child(4) { --x: 1389; --y: 622; --w: 623; --h: 495; --ix: 1403; --iy: 629; --iw: 593; --ih: 281; --ncx: 1688; --ncy: 890; --nd: 98; --hy: 958; --py: 1012; --ax: 1341; --ay: 788; --aw: 65; }
+#skin-barrier-disruption .nss-sb-card:nth-child(5) { --x: 949; --y: 622; --w: 419; --h: 495; --ix: 960; --iy: 630; --iw: 402; --ih: 275; --ncx: 1157; --ncy: 910; --hy: 944; --py: 992; --ax: 915; --ay: 788; --aw: 64; }
+#skin-barrier-disruption .nss-sb-card:nth-child(6) { --x: 504; --y: 622; --w: 430; --h: 495; --ix: 513; --iy: 630; --iw: 411; --ih: 276; --ncx: 717; --ncy: 910; --hy: 944; --py: 990; }
+#skin-barrier-disruption .nss-sb-picture { position: absolute; display: block; left: calc((var(--ix) - var(--x)) / 20.48 * 1cqw); top: calc((var(--iy) - var(--y)) / 20.48 * 1cqw); width: calc(var(--iw) / 20.48 * 1cqw); height: calc(var(--ih) / 20.48 * 1cqw); border-radius: .3cqw; overflow: hidden; }
+#skin-barrier-disruption .nss-sb-picture img { width: 100%; height: 100%; object-fit: fill; }
+#skin-barrier-disruption .nss-sb-number { position: absolute; z-index: 2; left: calc((var(--ncx) - var(--x) - var(--nd) / 2) / 20.48 * 1cqw); top: calc((var(--ncy) - var(--y) - var(--nd) / 2) / 20.48 * 1cqw); width: calc(var(--nd) / 20.48 * 1cqw); height: calc(var(--nd) / 20.48 * 1cqw); object-fit: contain; }
+#skin-barrier-disruption .nss-sb-card--core .nss-sb-number { left: calc((1641 - var(--x)) / 20.48 * 1cqw); top: calc((843 - var(--y)) / 20.48 * 1cqw); width: calc(96 / 20.48 * 1cqw); height: calc(87 / 20.48 * 1cqw); }
+html body.nss-page #skin-barrier-disruption .nss-sb-card h3 { position: absolute; top: calc((var(--hy) - var(--y)) / 20.48 * 1cqw); left: 1.6cqw; right: 1.6cqw; padding-bottom: .32cqw; border-bottom: .09cqw solid #d8deee; font-size: 1.61cqw !important; line-height: 1.15 !important; font-weight: 650 !important; letter-spacing: -.043cqw !important; text-align: center; white-space: nowrap; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card > p { position: absolute; top: calc((var(--py) - var(--y)) / 20.48 * 1cqw); left: 1.35cqw; right: 1.35cqw; font-size: 1.31cqw !important; line-height: 1.05 !important; font-weight: 400 !important; letter-spacing: -.036cqw; text-align: center; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) h3 { font-size: 1.54cqw !important; padding-bottom: .35cqw; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p { font-size: 1.255cqw !important; line-height: 1.07 !important; left: 1.4cqw; right: 1.4cqw; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(6) > p { left: .65cqw; right: .65cqw; font-size: 1.2cqw !important; line-height: 1.14 !important; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { font-size: 1.54cqw !important; left: 4cqw; right: 4cqw; padding-bottom: .35cqw; }
+html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 1.255cqw !important; line-height: 1.07 !important; left: 3.3cqw; right: 3.3cqw; }
+#skin-barrier-disruption .nss-sb-core-label { position: absolute; left: calc((1557 - var(--x)) / 20.48 * 1cqw); top: calc((927 - var(--y)) / 20.48 * 1cqw); width: calc(270 / 20.48 * 1cqw); min-height: 1.32cqw; display: grid; place-items: center; font-size: .9cqw; line-height: 1.1; font-weight: 650; letter-spacing: .02cqw; }
+#skin-barrier-disruption .nss-sb-arrow { position: absolute; z-index: 4; left: calc((var(--ax) - var(--x)) / 20.48 * 1cqw); top: calc((var(--ay) - var(--y)) / 20.48 * 1cqw); width: calc(var(--aw) / 20.48 * 1cqw); height: calc(var(--ah) / 20.48 * 1cqw); object-fit: fill; }
+#skin-barrier-disruption .nss-sb-turn { position: absolute; z-index: 4; left: calc((1961 - 1505) / 20.48 * 1cqw); top: calc((391 - 144) / 20.48 * 1cqw); width: calc(70 / 20.48 * 1cqw); height: calc(222 / 20.48 * 1cqw); }
+#skin-barrier-disruption .nss-sb-turn img { width: 100%; height: 100%; object-fit: fill; }
+
+/* Keep the semantic01→06 order and readable text on compact screens. */
+@media (max-width: 1100px) {
+  #skin-barrier-disruption .nss-sb-canvas { aspect-ratio: auto; }
+  #skin-barrier-disruption :is(.nss-sb-heading,.nss-sb-context,.nss-sb-card) { position: relative; inset: auto; width: auto; height: auto; }
+  #skin-barrier-disruption .nss-sb-heading { margin-bottom: 30px; text-align: left; }
+  html body.nss-page #skin-barrier-disruption h2 { font-size: clamp(34px,4.4vw,50px) !important; line-height: 1.08 !important; letter-spacing: -1px !important; white-space: normal; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-heading > p { margin-top: 18px; font-size: 22px !important; line-height: 1.35 !important; letter-spacing: -.3px; }
+  #skin-barrier-disruption .nss-sb-context { padding: 28px; margin-bottom: 34px; border-radius: 12px; }
+  #skin-barrier-disruption .nss-sb-context-texture { bottom: 0; left: auto; right: 0; width: 40%; height: 160px; opacity: .32; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context h3 { position: relative; inset: auto; font-size: 32px !important; line-height: 1.1 !important; letter-spacing: -.7px !important; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context > p { position: relative; inset: auto; margin-top: 20px; font-size: 22px !important; line-height: 1.4 !important; letter-spacing: -.2px; }
+  #skin-barrier-disruption .nss-sb-effects { position: relative; inset: auto; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 24px; }
+  #skin-barrier-disruption .nss-sb-effects li { flex-direction: column; text-align: center; gap: 12px; }
+  #skin-barrier-disruption .nss-sb-effects img { width: 58px; height: 58px; flex-basis: 58px; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-effects span { font-size: 21px !important; line-height: 1.2 !important; letter-spacing: -.3px; white-space: normal; }
+  #skin-barrier-disruption .nss-sb-cascade { display: grid; gap: 40px; }
+  #skin-barrier-disruption .nss-sb-card { display: flex; flex-direction: column; align-items: center; padding: 12px 12px 26px; border-radius: 12px; }
+  #skin-barrier-disruption .nss-sb-picture { position: relative; inset: auto; width: 100%; height: auto; border-radius: 8px; }
+  #skin-barrier-disruption .nss-sb-picture img { width: 100%; height: auto; object-fit: contain; }
+  #skin-barrier-disruption .nss-sb-number { position: relative; inset: auto; width: 64px; height: 64px; margin: -22px auto 12px; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(6) .nss-sb-number { margin-top: 12px; }
+  #skin-barrier-disruption .nss-sb-card--core .nss-sb-number { display: none; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card h3,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) h3,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { position: relative; inset: auto; width: calc(100% - 28px); padding-bottom: 14px; font-size: 29px !important; line-height: 1.15 !important; letter-spacing: -.6px !important; white-space: normal; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(6) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { position: relative; inset: auto; width: calc(100% - 24px); margin-top: 15px; font-size: 22px !important; line-height: 1.35 !important; letter-spacing: -.25px; }
+  #skin-barrier-disruption .nss-sb-core-label { position: relative; inset: auto; width: min(270px,100%); min-height: 25px; border-radius: 20px; font-size: 16px; letter-spacing: .2px; margin-block: 12px; }
+  #skin-barrier-disruption :is(.nss-sb-arrow,.nss-sb-turn) { left: calc(50% - 25px); top: auto; bottom: -40px; width: 50px; height: 44px; transform: rotate(90deg); }
+  #skin-barrier-disruption .nss-sb-card:nth-child(n+4) .nss-sb-arrow { transform: rotate(-90deg); }
+  #skin-barrier-disruption .nss-sb-desktop-break { display: none; }
+}
+@media (max-width: 600px) {
+  #skin-barrier-disruption .nss-sb-context { padding: 22px; }
+  #skin-barrier-disruption .nss-sb-effects { grid-template-columns: 1fr; gap: 14px; }
+  #skin-barrier-disruption .nss-sb-effects li { flex-direction: row; text-align: left; }
+  #skin-barrier-disruption .nss-sb-effects img { width: 52px; height: 52px; flex-basis: 52px; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(6) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 20px !important; }
+}

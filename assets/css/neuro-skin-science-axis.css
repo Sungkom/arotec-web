@@ -1,0 +1,102 @@
+/* Source artwork stays full bleed; editable foreground follows the website gutters. */
+html body.nss-page #brain-skin-axis { padding: 0; background: #edf6fd; }
+#brain-skin-axis .nss-axis-canvas { position: relative; width: 100%; padding-block: 40px; isolation: isolate; }
+#brain-skin-axis .nss-axis-content { position: relative; container-type: inline-size; margin-inline: var(--nss-gutter); aspect-ratio: 2623 / 1475; }
+#brain-skin-axis .nss-axis-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+#brain-skin-axis :is(h2,h3,h4,p,dt,dd,li,strong,figcaption,span) { color: #101b5a; text-transform: none !important; }
+html body.nss-page #brain-skin-axis :is(h2,h3,h4):not(#dsm-type-lock) { margin: 0 !important; }
+#brain-skin-axis .nss-axis-heading { position: absolute; left: 43.7%; top: 1.65%; width: 51.5%; text-align: center; }
+/* The source-specific serif title is intentionally local to this infographic. */
+html body.nss-page #brain-skin-axis h2 { font-family: "Times New Roman", Georgia, serif !important; font-size: 3.45cqw !important; line-height: 1.12 !important; font-weight: 700 !important; letter-spacing: -.06cqw !important; white-space: nowrap; }
+html body.nss-page #brain-skin-axis .nss-axis-subtitle { margin-top: .38cqw; font-size: 1.28cqw !important; line-height: 1.45 !important; font-weight: 500 !important; letter-spacing: .29cqw !important; }
+html body.nss-page #brain-skin-axis .nss-axis-intro { margin-top: .2cqw; font-size: 1.12cqw !important; line-height: 1.23 !important; font-weight: 500 !important; letter-spacing: -.027cqw !important; }
+#brain-skin-axis .nss-axis-motto { position: absolute; left: 0; top: 35.1%; width: 15%; }
+html body.nss-page #brain-skin-axis .nss-axis-motto p { font-size: .95cqw !important; line-height: 1.13 !important; font-weight: 600 !important; letter-spacing: .035cqw; }
+#brain-skin-axis .nss-axis-motto hr { width: 2.8cqw; margin: 1.1cqw 0; border: 0; border-top: 1px solid #597ca1; }
+html body.nss-page #brain-skin-axis .nss-axis-motto p + hr + p { font-weight: 500 !important; }
+#brain-skin-axis .nss-axis-communication { position: absolute; top: 26.5%; left: 36.25%; right: 0; height: 45.3%; display: grid; grid-template-columns: 30% 40.2% 29.8%; align-items: start; }
+#brain-skin-axis .nss-axis-panel { margin-top: .86cqw; height: 21.9cqw; border: .1cqw solid #85b6d2; border-radius: .7cqw; overflow: hidden; background: rgb(255 255 255 / 66%); }
+#brain-skin-axis .nss-axis-panel--output { border-color: #84c1c0; }
+html body.nss-page #brain-skin-axis .nss-axis-panel h3 { display: flex; align-items: center; justify-content: center; gap: .75cqw; padding: .45cqw .2cqw .34cqw; font-size: 1.43cqw !important; line-height: 1.3 !important; letter-spacing: -.03cqw !important; font-weight: 700 !important; background: rgb(195 222 245 / 51%); }
+html body.nss-page #brain-skin-axis .nss-axis-panel--output h3 { background: rgb(191 227 228 / 45%); }
+html body.nss-page #brain-skin-axis .nss-axis-panel h4 { padding-top: .4cqw; text-align: center; font-size: 1.13cqw !important; line-height: 1.4 !important; letter-spacing: -.045cqw !important; font-weight: 700 !important; }
+#brain-skin-axis .nss-axis-panel dl { display: grid; grid-template-rows: repeat(4, 1fr); height: 16.3cqw; padding: .48cqw .64cqw .3cqw; }
+#brain-skin-axis .nss-axis-panel dl > div { display: grid; grid-template-columns: 3.25cqw 1fr; align-items: center; column-gap: 1.05cqw; }
+#brain-skin-axis .nss-axis-panel dt { display: contents; }
+#brain-skin-axis .nss-axis-panel dt img { grid-column: 1; grid-row: 1 / 3; }
+#brain-skin-axis .nss-axis-panel dt span { grid-column: 2; align-self: end; }
+#brain-skin-axis .nss-axis-panel dd { grid-column: 2; align-self: start; }
+#brain-skin-axis .nss-axis-panel dl img { width: 100%; height: 3.15cqw; object-fit: contain; mix-blend-mode: multiply; }
+html body.nss-page #brain-skin-axis dt { font-size: 1.075cqw !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -.025cqw; }
+html body.nss-page #brain-skin-axis dd { margin-top: .14cqw; font-size: .87cqw !important; line-height: 1.25 !important; letter-spacing: -.027cqw; font-weight: 500 !important; white-space: nowrap; }
+#brain-skin-axis .nss-axis-feedback { position: relative; height: 100%; text-align: center; }
+#brain-skin-axis .nss-axis-feedback > * { position: absolute; }
+html body.nss-page #brain-skin-axis .nss-axis-feedback :is(strong,figcaption) { left: 0; width: 100%; font-size: 1.39cqw !important; line-height: 1.17 !important; font-weight: 700 !important; letter-spacing: -.035cqw; }
+#brain-skin-axis .nss-axis-brain-label { top: 0; }
+#brain-skin-axis .nss-axis-brain { left: 22.9%; top: 7.7%; width: 50%; mix-blend-mode: multiply; }
+#brain-skin-axis .nss-axis-feedback figcaption { top: 44.5%; }
+#brain-skin-axis .nss-axis-skin { left: 23.6%; top: 54%; width: 48%; mix-blend-mode: multiply; }
+#brain-skin-axis .nss-axis-skin-label { bottom: 0; }
+#brain-skin-axis .nss-axis-arc { width: 21.3%; height: 65.9%; object-fit: fill; top: 17.1%; }
+#brain-skin-axis .nss-axis-arc--input { left: .5%; }
+#brain-skin-axis .nss-axis-arc--output { right: 4.3%; }
+#brain-skin-axis .nss-axis-process { position: absolute; left: 16.8%; right: 0; top: 73.8%; height: 15.8%; display: grid; grid-template-columns: 28.1fr 34.9fr 34.5fr; gap: 1.05cqw; }
+#brain-skin-axis .nss-axis-process-panel { position: relative; border: .1cqw solid #9ec9dd; border-radius: .63cqw; background: rgb(250 253 255 / 94%); padding: .52cqw .32cqw .4cqw; }
+html body.nss-page #brain-skin-axis .nss-axis-process-panel h3 { text-align: center; font-size: 1.025cqw !important; line-height: 1.5 !important; letter-spacing: -.045cqw !important; font-weight: 700 !important; white-space: nowrap; }
+#brain-skin-axis .nss-axis-icons { display: grid; gap: .14cqw; margin-top: .76cqw; align-items: start; }
+#brain-skin-axis .nss-axis-icons--signals { grid-template-columns: repeat(5,minmax(0,1fr)); }
+#brain-skin-axis .nss-axis-icons--cells { grid-template-columns: repeat(6,minmax(0,1fr)); }
+#brain-skin-axis .nss-axis-icons--functions { grid-template-columns: repeat(7,minmax(0,1fr)); }
+#brain-skin-axis .nss-axis-icons li { display: grid; justify-items: center; gap: .32cqw; text-align: center; }
+#brain-skin-axis .nss-axis-icons img { width: 3.15cqw; height: 2.9cqw; object-fit: contain; mix-blend-mode: multiply; }
+html body.nss-page #brain-skin-axis .nss-axis-icons span { font-size: .66cqw !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -.025cqw; }
+#brain-skin-axis .nss-axis-process-arrow { position: absolute; right: -1.65cqw; top: 45%; font-size: 2.35cqw; color: #589edf; z-index: 1; }
+html body.nss-page #brain-skin-axis .nss-axis-signoff { position: absolute; left: 0; top: 88.2%; font-size: 1.08cqw !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: .01cqw; }
+
+/* Reflow the same text and artwork on compact screens instead of shrinking a poster. */
+@media (max-width: 1100px) {
+  #brain-skin-axis .nss-axis-canvas { padding-block: 38px 40px; }
+  #brain-skin-axis .nss-axis-content { aspect-ratio: auto; display: grid; grid-template-columns: 1fr; gap: 28px; }
+  #brain-skin-axis .nss-axis-backdrop { inset: 0 0 auto; height: auto; opacity: .43; object-fit: contain; }
+  #brain-skin-axis :is(.nss-axis-heading,.nss-axis-motto,.nss-axis-communication,.nss-axis-process,.nss-axis-signoff) { position: relative; inset: auto; width: auto; height: auto; }
+  #brain-skin-axis .nss-axis-heading { margin-left: 29%; padding: 8px 0 22px; }
+  html body.nss-page #brain-skin-axis h2 { font-size: clamp(29px,5.2vw,52px) !important; line-height: 1.08 !important; letter-spacing: -.8px !important; white-space: normal; }
+  html body.nss-page #brain-skin-axis .nss-axis-subtitle { margin-top: 12px; font-size: 14px !important; line-height: 1.5 !important; letter-spacing: 2px !important; }
+  html body.nss-page #brain-skin-axis .nss-axis-intro { margin-top: 20px; font-size: 17px !important; line-height: 1.55 !important; letter-spacing: 0 !important; }
+  #brain-skin-axis .nss-axis-desktop-break { display: none; }
+  #brain-skin-axis .nss-axis-motto { display: flex; gap: 20px; align-items: center; }
+  html body.nss-page #brain-skin-axis .nss-axis-motto p { font-size: 13px !important; line-height: 1.25 !important; letter-spacing: .4px; }
+  #brain-skin-axis .nss-axis-motto hr { margin: 0; width: 25px; }
+  #brain-skin-axis .nss-axis-communication { grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+  #brain-skin-axis .nss-axis-panel { margin: 0; height: auto; min-height: 380px; border-width: 1px; border-radius: 12px; background: rgb(255 255 255 / 90%); }
+  html body.nss-page #brain-skin-axis .nss-axis-panel h3 { font-size: 23px !important; padding: 12px; gap: 18px; letter-spacing: -.4px !important; }
+  html body.nss-page #brain-skin-axis .nss-axis-panel h4 { padding-top: 12px; font-size: 19px !important; letter-spacing: -.4px !important; }
+  #brain-skin-axis .nss-axis-panel dl { height: auto; gap: 20px; padding: 22px 16px; }
+  #brain-skin-axis .nss-axis-panel dl > div { grid-template-columns: 48px 1fr; column-gap: 16px; row-gap: 0; }
+  #brain-skin-axis .nss-axis-panel dl img { height: 48px; }
+  html body.nss-page #brain-skin-axis dt { font-size: 17px !important; line-height: 1.4 !important; letter-spacing: 0; }
+  html body.nss-page #brain-skin-axis dd { font-size: 14px !important; line-height: 1.45 !important; letter-spacing: 0; white-space: normal; margin-top: 3px; }
+  #brain-skin-axis .nss-axis-feedback { grid-column: 1 / -1; grid-row: 2; width: min(100%,450px); height: 470px; justify-self: center; }
+  html body.nss-page #brain-skin-axis .nss-axis-feedback :is(strong,figcaption) { font-size: 24px !important; letter-spacing: -.4px; }
+  #brain-skin-axis .nss-axis-process { grid-template-columns: 1fr; gap: 30px; }
+  #brain-skin-axis .nss-axis-process-panel { border-width: 1px; border-radius: 12px; padding: 20px 16px; }
+  html body.nss-page #brain-skin-axis .nss-axis-process-panel h3 { font-size: 21px !important; line-height: 1.35 !important; letter-spacing: -.4px !important; white-space: normal; }
+  #brain-skin-axis .nss-axis-icons { margin-top: 24px; gap: 20px 10px; }
+  #brain-skin-axis .nss-axis-icons li { gap: 8px; }
+  #brain-skin-axis .nss-axis-icons img { width: 62px; height: 58px; }
+  html body.nss-page #brain-skin-axis .nss-axis-icons span { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: -.25px; }
+  #brain-skin-axis .nss-axis-process-arrow { top: auto; right: calc(50% - 16px); bottom: -31px; transform: rotate(90deg); font-size: 30px; }
+  html body.nss-page #brain-skin-axis .nss-axis-signoff { font-size: 17px !important; line-height: 1.5 !important; text-align: center; }
+}
+@media (max-width: 600px) {
+  #brain-skin-axis .nss-axis-heading { margin-left: 0; padding-top: 170px; }
+  #brain-skin-axis .nss-axis-backdrop { opacity: 1; }
+  #brain-skin-axis .nss-axis-motto { justify-content: center; }
+  #brain-skin-axis .nss-axis-communication { grid-template-columns: 1fr; }
+  #brain-skin-axis .nss-axis-feedback { grid-column: auto; width: 100%; height: auto; aspect-ratio: .96; }
+  html body.nss-page #brain-skin-axis .nss-axis-feedback :is(strong,figcaption) { font-size: 18px !important; }
+  #brain-skin-axis .nss-axis-icons--signals, #brain-skin-axis .nss-axis-icons--cells, #brain-skin-axis .nss-axis-icons--functions { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 360px) {
+  #brain-skin-axis .nss-axis-icons--signals, #brain-skin-axis .nss-axis-icons--cells, #brain-skin-axis .nss-axis-icons--functions { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}

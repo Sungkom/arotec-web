@@ -1,0 +1,141 @@
+/* Source 4.1 content, inside the same flat disclosure pattern as Exposome. */
+/* Resolve the preceding section heights before scrolling to a deep link. The
+   shared offscreen placeholders otherwise move the destination after load. */
+html body.sip-page main#main#main > section {
+  content-visibility:visible !important;
+  contain-intrinsic-size:none !important;
+}
+html body.sip-page main#main#main .sip-functional-section {
+  margin:0 !important;
+  padding:0 150px !important;
+  background:#f3f9fd;
+  color:#102e57;
+}
+html body.sip-page main#main#main .sip-functional-section::before,
+html body.sip-page main#main#main .sip-functional-content section::before { display:none; }
+.sip-functional-section .sip-accordion {
+  margin:0;
+  border:0;
+  border-block:1px solid #c6dce9;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  scroll-margin-top:135px;
+}
+.sip-functional-section .sip-accordion-toggle {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  min-height:72px;
+  padding:18px 0;
+  color:#0a165c;
+  font:700 22px/1.3 var(--site-font, 'DM Sans', sans-serif);
+  list-style:none;
+  cursor:pointer;
+}
+.sip-accordion-toggle::-webkit-details-marker { display:none; }
+.sip-accordion-toggle::marker { content:''; }
+.sip-accordion-toggle > .ph { flex:none; font-size:24px; transition:transform 160ms; }
+.sip-accordion[open] > .sip-accordion-toggle > .ph { transform:rotate(180deg); }
+.sip-accordion-toggle:hover { color:#176c96; }
+.sip-accordion-toggle:focus-visible { outline:3px solid #1e70ae; outline-offset:5px; }
+html body.sip-page main#main#main .sip-functional-content {
+  padding:34px 0 48px;
+  font-family:var(--site-font, 'DM Sans', sans-serif);
+}
+html body.sip-page main#main#main .sip-functional-content p {
+  max-width:none;
+  margin:0;
+  color:#294768;
+  font:400 16px/1.6 var(--site-font, 'DM Sans', sans-serif) !important;
+  letter-spacing:normal !important;
+  text-transform:none !important;
+}
+/* Join the site's heading layer to retain natural, readable type proportions. */
+@layer arotec-display-headings.spec {
+  html body.sip-page main#main#main .sip-functional-content :is(h2,h3,h4) {
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-family:var(--site-font, 'DM Sans', sans-serif) !important;
+    font-size:var(--outcome-title-size, 20px) !important;
+    font-weight:700 !important;
+    font-style:normal !important;
+    font-stretch:normal !important;
+    line-height:1.3 !important;
+    letter-spacing:-.025em !important;
+    text-transform:none !important;
+    color:#0b2852 !important;
+    transform:none !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+  }
+}
+.sip-functional-heading { max-width:1040px; margin:0 auto 36px; text-align:center; }
+.sip-functional-heading h2 { --outcome-title-size:clamp(28px, 2.7vw, 40px); }
+html body.sip-page main#main#main .sip-functional-heading p { margin-top:18px; }
+html body.sip-page main#main#main .sip-functional-content section { margin:0; padding:0; }
+.sip-outcome-rule { display:flex; align-items:center; gap:16px; text-align:center; }
+.sip-outcome-rule::before, .sip-outcome-rule::after { content:''; height:1px; background:#a6c3d3; flex:1; min-width:16px; }
+.sip-outcome-grid { display:grid; gap:24px; margin-top:24px; }
+.sip-outcome-grid--four { grid-template-columns:repeat(4, minmax(0, 1fr)); }
+.sip-outcome-grid--three { grid-template-columns:repeat(3, minmax(0, 1fr)); }
+.sip-outcome-card { min-width:0; }
+.sip-outcome-photo { position:relative; width:100%; aspect-ratio:var(--photo-ratio); overflow:hidden; margin-bottom:16px; }
+html body.sip-page main#main#main .sip-outcome-photo img {
+  display:block;
+  position:absolute;
+  width:var(--photo-width) !important;
+  max-width:none !important;
+  height:auto !important;
+  left:var(--photo-left);
+  top:var(--photo-top);
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+.sip-outcome-card h4 { --outcome-title-size:19px; }
+html body.sip-page main#main#main .sip-outcome-card p { margin-top:9px; }
+.sip-outcome-grid--four .sip-outcome-card { text-align:center; }
+html body.sip-page main#main#main .sip-outcome-together { max-width:960px; margin:24px auto 0; text-align:center; }
+.sip-outcome-pair { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:32px; margin-top:40px; }
+.sip-outcome-pair .sip-outcome-rule { --outcome-title-size:18px; min-height:48px; }
+.sip-outcome-pair .sip-outcome-card h4 { --outcome-title-size:17px; }
+.sip-health-group { border-left:1px solid #c6dce9; padding-left:32px !important; }
+html body.sip-page main#main#main .sip-functional-content .sip-evidence { margin-top:40px; text-align:center; }
+html body.sip-page main#main#main .sip-evidence > p { margin-top:18px; }
+.sip-evidence-scale { display:flex; align-items:center; justify-content:center; gap:32px; margin:24px 0; font-size:16px; font-weight:600; line-height:1.5; }
+.sip-evidence-supported { color:#256487; }
+.sip-evidence-preliminary { color:#a65d12; }
+.sip-evidence-scale > .ph { font-size:36px; color:#6c889a; }
+.sip-evidence-caution { display:flex; align-items:center; justify-content:center; gap:16px; max-width:760px; margin:0 auto; padding:16px 20px; border:1px solid #e5c995; border-radius:6px; background:#fff8eb; text-align:left; }
+.sip-evidence-caution > .ph { flex:none; color:#a65d12; font-size:32px; }
+html body.sip-page main#main#main .sip-evidence-caution p { color:#8d5016; }
+@media (max-width:1199px) {
+  html body.sip-page main#main#main .sip-functional-section { padding-inline:40px !important; }
+  .sip-outcome-pair { grid-template-columns:1fr; }
+  .sip-health-group { border-left:0; padding-left:0 !important; }
+  .sip-outcome-pair .sip-outcome-rule { --outcome-title-size:20px; min-height:0; }
+  .sip-outcome-pair .sip-outcome-card h4 { --outcome-title-size:19px; }
+}
+@media (max-width:799px) {
+  html body.sip-page main#main#main .sip-functional-section { padding-inline:24px !important; }
+  .sip-functional-section .sip-accordion { scroll-margin-top:104px; }
+  .sip-outcome-grid--four { grid-template-columns:repeat(2, minmax(0, 1fr)); }
+  .sip-outcome-grid { gap:24px 20px; }
+  .sip-functional-heading { text-align:left; }
+  .sip-outcome-rule { --outcome-title-size:20px; gap:12px; }
+}
+@media (max-width:599px) {
+  .sip-outcome-grid--four, .sip-outcome-grid--three { grid-template-columns:1fr; }
+  .sip-outcome-grid--four .sip-outcome-card { text-align:left; }
+  .sip-outcome-rule::before { display:none; }
+  .sip-outcome-rule { text-align:left; }
+  .sip-outcome-rule::after { max-width:32px; }
+  .sip-evidence-scale { gap:16px; font-size:14px; text-align:left; }
+  .sip-evidence-scale > .ph { font-size:28px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sip-accordion-toggle > .ph { transition:none; }
+}

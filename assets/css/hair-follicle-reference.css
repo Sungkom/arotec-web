@@ -1,0 +1,181 @@
+/* Supplied Hair Follicle Biology illustrations, native copy and Exposome tokens. */
+body.hair-reference-page { --hf-ink:#091963; --hf-muted:#405f89; --hf-cyan:#42b4dc; --hf-gutter:150px; color:var(--hf-ink); background:#f9fcff; }
+html:has(> body.hair-reference-page) { scroll-padding-top:0; }
+html body.hair-reference-page #main { padding:110.6px 0 0; background:#f9fcff; }
+html body.hair-reference-page #main > section { margin:0; border:0; content-visibility:visible; contain-intrinsic-size:none; }
+html body.hair-reference-page #main > section::before { display:none; }
+.hair-reference-page #main * { box-sizing:border-box; }
+.hair-reference-page #main :is(section,[id]) { scroll-margin-top:135px; }
+.hair-reference-page #main :is(h1,h2,h3,h4) { color:var(--hf-ink); max-width:none; }
+html body.hair-reference-page #main :is(h1,h2,h3,h4) { margin:0 0 16px !important; }
+.hair-reference-page #main p { margin:0; }
+.hair-reference-page #main :is(ul,ol) { list-style:none; padding:0; margin:0; }
+.hf-shell { margin-inline:var(--hf-gutter); }
+.hf-hero { display:flex; align-items:center; min-height:calc(100svh - 110.6px); padding-block:clamp(28px,4svh,64px); background:#e6f2ff url('../images/hair-follicle-20260916/hero-background.webp') center / cover no-repeat; }
+.hf-hero-copy { width:min(650px,calc(42vw - var(--hf-gutter))); --arotec-display-size:clamp(32px,min(2.65vw,5.4svh),52px); --arotec-display-line-height:1.12; --arotec-display-letter-spacing:-.025em; --arotec-body-size:clamp(16px,min(1.16vw,2.3svh),22px); --arotec-body-line-height:1.43; }
+html body.hair-reference-page #hair-title { margin-bottom:clamp(20px,3svh,38px) !important; }
+.hf-hero-copy p { color:var(--hf-muted); }
+.hf-hero-copy p + p { margin-top:clamp(18px,2.8svh,30px) !important; }
+html body.hair-reference-page .hf-hero-copy .hf-hero-intro { font-weight:600 !important; color:#102443; }
+.hf-mobile-art { display:none; }
+.hf-section { padding-block:64px; background:#f7fbff; }
+.hf-neural,.hf-pigment { background:#fff; }
+.hf-section-grid { display:grid; grid-template-columns:minmax(260px,.85fr) minmax(0,2.15fr); gap:36px; align-items:start; }
+.hf-intro { --site-type-h2:clamp(30px,2.35vw,45px); --site-line-h2:1.13; --site-letter-h2:-.025em; --arotec-body-size:clamp(18px,1.15vw,22px); --arotec-body-line-height:1.5; min-width:0; }
+.hf-kicker { --arotec-body-size:14px; --arotec-body-line-height:1.4; text-transform:uppercase; letter-spacing:.065em; color:#1d5989; border-bottom:2px solid var(--hf-cyan); padding-bottom:16px; margin-bottom:24px !important; }
+.hf-intro > p:not(.hf-kicker) { color:var(--hf-muted); }
+.hf-intro > p + p { margin-top:22px !important; }
+.hf-research-note { border-top:2px solid #85cee4; padding-top:22px; }
+.hf-exposure-layout { display:grid; grid-template-columns:minmax(230px,1fr) minmax(0,1.1fr); gap:28px; align-items:center; min-width:0; }
+.hf-exposure-list { display:grid; gap:18px; }
+.hf-exposure-list > li { display:grid; grid-template-columns:86px minmax(0,1fr); gap:18px; align-items:center; --site-type-h3:17px; --site-line-h3:1.2; --arotec-body-size:17px; --arotec-body-line-height:1.4; }
+.hf-exposure-list img { display:block; width:86px; height:86px; border-radius:50%; object-fit:cover; }
+html body.hair-reference-page .hf-exposure-list h3 { margin-bottom:5px !important; }
+.hf-exposure-list p { color:var(--hf-muted); }
+.hf-exposure-target { text-align:center; --site-type-h3:26px; --site-line-h3:1.2; }
+.hf-exposure-target > img { display:block; width:100%; max-width:420px; aspect-ratio:1; object-fit:contain; border-radius:50%; margin:0 auto 24px; }
+.hf-signals { display:grid; grid-template-columns:1fr 1fr; gap:10px; --arotec-body-size:16px; --arotec-body-line-height:1.35; }
+.hf-signals li { padding:12px 8px; background:#e7f3fc; border-radius:8px; }
+.hf-summary-flow { grid-column:1/-1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; border-top:1px solid #b9ddec; padding-top:28px !important; }
+.hf-summary-flow li { display:flex; align-items:center; gap:16px; --arotec-body-size:18px; --arotec-body-line-height:1.3; color:var(--hf-ink); }
+.hf-summary-flow .ph { font-size:38px; color:#218ebc; flex:none; }
+.hf-summary-flow .hf-flow-arrow { font-size:30px; margin-left:auto; }
+.hf-neural-content,.hf-diagram-content { min-width:0; --site-type-h3:25px; --site-line-h3:1.2; --site-type-h4:19px; --site-line-h4:1.25; --site-letter-h3:-.015em; --site-letter-h4:-.015em; --arotec-body-size:16px; --arotec-body-line-height:1.4; }
+.hf-neural-flow { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:28px; }
+.hf-neural-flow > li { position:relative; min-width:0; text-align:center; --site-type-h3:20px; --site-line-h3:1.25; }
+html body.hair-reference-page .hf-neural-flow h3 { margin-bottom:8px !important; }
+.hf-neural-flow p { color:var(--hf-muted); min-height:45px; }
+.hf-neural-flow img { display:block; width:100%; height:270px; object-fit:contain; margin:18px auto; }
+.hf-neural-flow > li:last-child img { height:330px; margin-top:20px; }
+.hf-labels { display:grid; gap:6px; --arotec-body-size:16px; --arotec-body-line-height:1.4; color:var(--hf-muted); }
+.hf-anatomy { grid-template-columns:1fr 1fr; gap:7px 10px; --arotec-body-size:14px; }
+.hf-between { position:absolute; right:-27px; top:48%; color:#299fdb; font-size:26px; z-index:1; }
+.hf-feedback { display:flex; align-items:center; justify-content:center; gap:12px; color:#22799f; margin:26px 0 16px !important; --arotec-body-size:17px; --arotec-body-line-height:1.4; }
+.hf-feedback .ph { font-size:28px; flex:none; }
+.hf-outcomes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; border-top:1px solid #b9ddec; padding-top:24px !important; }
+.hf-outcomes li { display:grid; justify-items:center; gap:10px; text-align:center; --arotec-body-size:16px; --arotec-body-line-height:1.35; }
+.hf-outcomes .ph { font-size:42px; color:#206796; }
+.hf-cycle-grid,.hf-graying-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+.hf-cycle-grid > li,.hf-graying-grid > li,.hf-loss-grid > li,.hf-pigment-stages > li { position:relative; min-width:0; text-align:center; }
+.hf-cycle-grid h4 span { display:block; margin-top:5px; font-size:16px; font-weight:400; color:var(--hf-muted); }
+.hf-cycle-grid img { display:block; width:100%; height:250px; object-fit:contain; }
+.hf-signal-strip { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px 0; padding:14px 12px !important; border-radius:12px; background:#e2f2fc; color:var(--hf-ink); --arotec-body-size:17px; --arotec-body-line-height:1.4; }
+.hf-signal-strip li { padding-inline:18px; }
+.hf-signal-strip li + li { border-left:1px solid #66b9dc; }
+.hf-progression { border-top:1px solid #9bd7ed; margin-top:28px; padding-top:26px; }
+.hf-loss-grid { display:grid; grid-template-columns:1fr 1fr 1.3fr; gap:28px; }
+html body.hair-reference-page .hf-loss-grid h4 { background:#fff0dc; padding:12px 8px; border-radius:9px; margin-bottom:14px !important; }
+.hf-loss-grid > li > img { display:block; width:100%; height:250px; object-fit:contain; margin-bottom:14px; }
+.hf-loss-grid .hf-between { color:#ed952b; }
+.hf-density { display:flex; align-items:center; gap:14px; }
+.hf-density > img { width:86px; height:86px; object-fit:contain; border-radius:50%; flex:none; }
+.hf-density .hf-labels { text-align:left; --arotec-body-size:14px; }
+.hf-pigment-unit { display:grid; grid-template-columns:minmax(130px,.75fr) minmax(0,2.25fr); gap:22px; align-items:center; }
+.hf-pigment-follicle { margin:0; }
+.hf-pigment-follicle > img { display:block; width:100%; height:300px; object-fit:contain; }
+.hf-pigment-follicle figcaption { display:grid; gap:10px; font-size:14px; line-height:1.4; text-align:center; color:var(--hf-muted); }
+.hf-pigment-follicle small { display:block; font-size:inherit; }
+.hf-pigment-process { min-width:0; }
+.hf-pigment-stages { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px; }
+.hf-pigment-stages > li { --site-type-h4:15px; --site-line-h4:1.3; }
+.hf-pigment-stages h4 { min-height:58px; }
+.hf-pigment-stages img { display:block; width:100%; aspect-ratio:1; object-fit:contain; }
+.hf-pigment-stages .hf-between { right:-18px; top:70%; font-size:20px; }
+.hf-pigment-process .hf-signal-strip { margin-top:24px !important; --arotec-body-size:14px; gap:8px 0; }
+.hf-pigment-process .hf-signal-strip li { padding-inline:10px; }
+.hf-scroll-hint { display:none; --arotec-body-size:14px; --arotec-body-line-height:1.4; color:var(--hf-muted); }
+.hf-stressors { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; margin-block:18px 24px !important; }
+.hf-stressors li { display:flex; align-items:center; gap:10px; --arotec-body-size:15px; --arotec-body-line-height:1.35; }
+.hf-stressors .ph { font-size:30px; color:#247ba7; flex:none; }
+.hf-graying-grid img { width:100%; height:220px; object-fit:contain; display:block; }
+html body.hair-reference-page .hf-graying-grid h4 { --site-type-h4:17px; --site-line-h4:1.3; padding:10px 6px; background:#fff0dc; border-radius:9px; margin:10px 0 0 !important; }
+.hf-resilience { margin-top:22px !important; --arotec-body-size:15px; }
+.hair-reference-page #main :is(a,[tabindex]):focus-visible { outline:3px solid #2865ef; outline-offset:5px; }
+@media (max-width:1450px) {
+  .hf-section-grid { grid-template-columns:1fr; gap:32px; }
+  .hf-intro { max-width:950px; }
+  .hf-exposure-layout { grid-template-columns:1fr 1fr; gap:60px; }
+  .hf-neural-flow img { height:300px; }
+  .hf-neural-flow > li:last-child img { height:360px; }
+  .hf-cycle-grid img { height:290px; }
+}
+@media (max-width:1199px) {
+  body.hair-reference-page { --hf-gutter:40px; }
+  .hf-hero { display:block; padding:52px 0 0; min-height:0; background:#e6f2ff; }
+  .hf-hero-copy { width:min(850px,100%); --arotec-display-size:52px; --arotec-body-size:21px; }
+  .hf-mobile-art { display:block; width:100%; height:auto; margin-top:30px; }
+  .hf-section { padding-block:48px; }
+  .hf-intro { --site-type-h2:38px; --arotec-body-size:20px; }
+  .hf-exposure-layout { gap:28px; }
+  .hf-summary-flow { gap:20px; }
+  .hf-summary-flow li { gap:10px; --arotec-body-size:16px; }
+  .hf-summary-flow .ph { font-size:30px; }
+  .hf-pigment-unit { grid-template-columns:180px minmax(0,1fr); gap:20px; }
+  .hf-pigment-stages { gap:14px; }
+  .hf-stressors { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:800px) {
+  body.hair-reference-page { --hf-gutter:24px; }
+  html body.hair-reference-page #main { padding-top:80px; }
+  .hair-reference-page #main :is(section,[id]) { scroll-margin-top:100px; }
+  .hf-hero { padding-top:40px; }
+  .hf-hero-copy { --arotec-display-size:38px; --arotec-body-size:19px; --arotec-body-line-height:1.5; }
+  .hf-hero-copy h1 br { display:none; }
+  .hf-mobile-art { aspect-ratio:1.4; object-fit:cover; object-position:right; }
+  .hf-intro { --site-type-h2:32px; --arotec-body-size:19px; }
+  .hf-kicker { --arotec-body-size:13px; }
+  .hf-exposure-layout { grid-template-columns:1fr; gap:34px; }
+  .hf-exposure-list { gap:16px; }
+  .hf-exposure-list > li { grid-template-columns:80px minmax(0,1fr); }
+  .hf-exposure-list img { width:80px; height:80px; }
+  .hf-exposure-target > img { max-width:320px; }
+  .hf-summary-flow { grid-template-columns:1fr; gap:22px; }
+  .hf-summary-flow li { min-height:44px; }
+  .hf-summary-flow .hf-flow-arrow { transform:rotate(90deg); }
+  .hf-neural-flow { grid-template-columns:1fr; gap:46px; }
+  .hf-neural-flow > li { --site-type-h3:23px; }
+  .hf-neural-flow p { min-height:0; }
+  .hf-neural-flow img { height:280px; max-width:370px; }
+  .hf-neural-flow > li:last-child img { height:360px; }
+  .hf-neural-flow > li > .hf-between { right:calc(50% - 13px); top:auto; bottom:-38px; transform:rotate(90deg); }
+  .hf-anatomy { max-width:400px; margin:auto !important; }
+  .hf-outcomes { grid-template-columns:1fr 1fr; gap:24px 16px; }
+  .hf-cycle-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 24px; }
+  .hf-cycle-grid img { height:230px; }
+  .hf-cycle-grid > li:nth-child(2) > .hf-between { right:calc(50% - 13px); top:auto; bottom:-28px; transform:rotate(90deg); }
+  .hf-cycle-grid > li:nth-child(3),.hf-graying-grid > li:nth-child(3) { grid-column:2; grid-row:2; }
+  .hf-cycle-grid > li:nth-child(4),.hf-graying-grid > li:nth-child(4) { grid-column:1; grid-row:2; }
+  .hf-cycle-grid > li:nth-child(3) > .hf-between,.hf-graying-grid > li:nth-child(3) > .hf-between { right:auto; left:-25px; transform:rotate(180deg); }
+  .hf-loss-grid { grid-template-columns:1fr; gap:48px; }
+  .hf-loss-grid > li > img { height:280px; }
+  .hf-loss-grid > li > .hf-between { right:calc(50% - 13px); top:auto; bottom:-38px; transform:rotate(90deg); }
+  .hf-density { justify-content:center; }
+  .hf-pigment-unit { grid-template-columns:1fr; gap:24px; }
+  .hf-pigment-follicle > img { height:340px; }
+  .hf-pigment-follicle figcaption { grid-template-columns:1fr 1fr; }
+  .hf-pigment-stages { grid-template-columns:repeat(5,minmax(110px,1fr)); gap:22px; overflow-x:auto; padding-block:0 14px !important; }
+  .hf-pigment-stages h4 { min-height:40px; }
+  .hf-pigment-stages .hf-between { right:-23px; }
+  .hf-pigment-stages > li { --site-type-h4:16px; }
+  .hf-scroll-hint { display:block; margin-top:8px !important; }
+  .hf-graying-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 24px; }
+  .hf-graying-grid > li:nth-child(2) > .hf-between { right:calc(50% - 13px); top:auto; bottom:-30px; transform:rotate(90deg); }
+  .hf-graying-grid img { height:210px; }
+  .hf-signal-strip li { border:0 !important; padding-inline:12px; }
+  .hf-resilience { display:grid; text-align:center; }
+}
+@media (max-width:420px) {
+  .hf-hero-copy { --arotec-display-size:34px; }
+  .hf-cycle-grid,.hf-graying-grid { gap:26px 20px; }
+  .hf-cycle-grid > li { --site-type-h4:18px; }
+  .hf-cycle-grid h4 span { font-size:14px; }
+  .hf-cycle-grid img,.hf-graying-grid img { height:180px; }
+  .hf-between { right:-23px; font-size:22px; }
+  .hf-stressors { grid-template-columns:1fr; }
+}
+@media (max-width:360px) {
+  .hf-cycle-grid,.hf-graying-grid { grid-template-columns:1fr; gap:38px; }
+  .hf-cycle-grid > li,.hf-graying-grid > li { grid-column:auto !important; grid-row:auto !important; }
+  .hf-cycle-grid > li > .hf-between,.hf-graying-grid > li > .hf-between { right:calc(50% - 11px) !important; left:auto !important; top:auto !important; bottom:-31px !important; transform:rotate(90deg) !important; }
+}
+@media (prefers-reduced-motion:reduce) { html:has(> body.hair-reference-page) { scroll-behavior:auto; } }

@@ -3,179 +3,541 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore Exposome Science and the Exposome Biological Impact Index (EBII): how lifetime exposures, susceptibility, resilience, and time shape health.">
-    <meta name="theme-color" content="#020814">
-    <title>Exposome Science &amp; EBII | Arotec</title>
-    <script>if (new URLSearchParams(location.search).has("capture")) document.documentElement.classList.add("capture-mode");</script>
+    <meta name="description" content="The world around us, the biology within. Explore external and internal exposome factors, exposure dynamics, and the personal exposome.">
+    <meta name="theme-color" content="#edf4fc">
+    <title>The Exposome | Arotec Science for Life</title>
+    <link rel="canonical" href="./exposome.html">
     <link rel="icon" href="../assets/images/arotec-scientist-logo.png" type="image/png">
-    <link rel="preload" href="../assets/images/exposome-2026/hero-holographic-human.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="stylesheet" href="../assets/css/arotec-aging-shell.css?v=20260818-v1">
-  <link rel="stylesheet" href="../assets/css/exposome-neo.css?v=20260818-framework-spacing-v13">
-    <link rel="stylesheet" href="../assets/css/site-navigation.min.css?v=20260826-applied-solutions-menu-v38">
+    <link rel="preload" href="../assets/images/exposome-20260914/hero-background.webp" as="image" type="image/webp" media="(min-width: 1200px)" fetchpriority="high">
+    <link rel="stylesheet" href="../assets/vendor/phosphor-icons/regular/style.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
+    <link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715-home-footer-cleanup">
+    <link rel="stylesheet" href="../assets/css/site-navigation.min.css?v=20260910-closed-panel-shadow-v1">
+    <link rel="stylesheet" href="../assets/css/synesthetic-flavor-shell.css?v=20260904-hero-copy-layout-v12">
+    <link rel="stylesheet" href="../assets/css/exposome-reference.css?v=20260915-disclosure-style-v1">
+    <link rel="stylesheet" href="../assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5">
+    <link rel="stylesheet" href="../assets/css/site-typography.css?v=20260910-typography-complete-v5">
   </head>
-  <body class="aging-dynamics-body exposome-neo-body" data-page="insights" data-nav-active="insights" data-root="../" data-default-language="en" data-shell-only data-header-class="adi-site-header aging-main-header">
-    <a class="ex-skip-link" href="#main">Skip to content</a>
-    <div class="ex-scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
-
+  <body class="exposome-reference-page" data-page="exposome" data-nav-active="platform" data-header-variant="home" data-root="../" data-default-language="en" data-shell-only>
+    <a class="skip-link" href="#main" lang="en">Skip to content</a>
     <div id="site-shell"></div>
-
-    <main id="main">
-      <section class="ex-hero ex-section" id="overview" data-ex-section aria-labelledby="hero-title">
-        <div class="ex-hero-network" aria-hidden="true" data-parallax></div>
-        <div class="ex-shell">
-          <div class="ex-hero-main">
-            <div class="ex-hero-copy">
-              <p class="ex-eyebrow">Lifetime exposure intelligence</p>
-              <h1 id="hero-title">Exposome<br><span>Science</span></h1>
-              <p class="ex-hero-lead">Understanding how lifetime exposures shape biological impact and human health.</p>
+    <main id="main" lang="en">
+      <section class="exo-hero" id="overview" aria-labelledby="exposome-title">
+        <div class="exo-shell">
+          <header class="exo-heading">
+            <h1 id="exposome-title">The Exposome</h1>
+            <p class="lead">The World Around Us, the Biology Within</p>
+          </header>
+          <div class="exo-narrative">
+            <p>Every day, we exchange signals with the world—through the air we breathe, the scents we encounter, the food we taste, and everything that touches our skin.</p>
+            <p>Within us, our genes, metabolism, hormones, nervous system, and immune system continuously respond to these external signals. Over time, this dialogue shapes our skin, emotions, and overall well-being.</p>
+            <p class="exo-purpose">This is why we focus on the exposome:<br>to understand how everyday exposure becomes a biological response—and how each interaction can become a more positive influence on human health.</p>
+          </div>
+        </div>
+        <img class="exo-mobile-art" src="../assets/images/exposome-20260914/hero-diagram.webp" width="700" height="786" alt="Exposome diagram connecting environmental factors, lifestyle factors, and internal biology around a human profile" decoding="async">
+      </section>
+      <section class="exo-science" id="framework" aria-labelledby="exposome-science-title">
+        <div class="exo-shell">
+          <header class="exo-science-heading">
+            <h2 class="major-heading" id="exposome-science-title">Exposome Science</h2>
+            <p class="lead">Integration of External and Internal Factors and Exposure Dynamics in Determining Human Health</p>
+          </header>
+          <div class="exo-cards">
+            <article class="exo-card">
+              <img class="exo-card-image" src="../assets/images/exposome-20260914/external-city.webp" width="623" height="409" alt="Sunlit city with traffic, industrial emissions, and green spaces" loading="lazy" decoding="async">
+              <div class="exo-card-copy">
+                <h3>External Exposome</h3>
+                <p>Environmental Exposures</p>
+                <button class="exo-explore" type="button" data-explore="external-exposome" aria-label="Explore External Exposome" aria-expanded="false" aria-controls="external-exposome-content">Explore <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </article>
+            <article class="exo-card exo-card--internal">
+              <img class="exo-card-image" src="../assets/images/exposome-20260914/internal-hiker.webp" width="619" height="409" alt="Woman hiking in the mountains and carrying a water bottle" loading="lazy" decoding="async">
+              <div class="exo-card-copy">
+                <h3>Internal Exposome</h3>
+                <p>Lifestyle &amp; Individual Factors</p>
+                <button class="exo-explore" type="button" data-explore="internal-exposome" aria-label="Explore Internal Exposome" aria-expanded="false" aria-controls="internal-exposome-content">Explore <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </article>
+            <article class="exo-card exo-card--dynamics">
+              <img class="exo-card-image" src="../assets/images/exposome-20260914/exposure-dynamics-men.webp" width="623" height="409" alt="A man shown across four moments from daylight to evening" loading="lazy" decoding="async">
+              <div class="exo-card-copy">
+                <h3>Exposure Dynamics</h3>
+                <p>Exposure Over Time</p>
+                <button class="exo-explore" type="button" data-explore="exposure-dynamics" aria-label="Explore Exposure Dynamics" aria-expanded="false" aria-controls="exposure-dynamics-content">Explore <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </article>
+          </div>
+          <article class="exo-personal" id="outcomes" aria-labelledby="personal-exposome-title">
+            <h3 id="personal-exposome-title">Personal Exposome</h3>
+            <p>An individual’s unique exposure profile across space and time.</p>
+            <div class="exo-equation" role="group" aria-label="External factors combined with internal factors and exposure dynamics form the personal exposome">
+              <div class="exo-factor">
+                <img src="../assets/images/exposome-20260914/personal-external-city.webp" width="199" height="199" alt="" loading="lazy" decoding="async">
+                <strong>External</strong><span>(Environmental)</span>
+              </div>
+              <i class="ph ph-x" aria-hidden="true"></i>
+              <div class="exo-factor exo-factor--internal">
+                <img src="../assets/images/exposome-20260914/personal-internal-woman.webp" width="197" height="197" alt="" loading="lazy" decoding="async">
+                <strong>Internal</strong><span>(Individual)</span>
+              </div>
+              <i class="ph ph-x" aria-hidden="true"></i>
+              <div class="exo-factor exo-factor--dynamics">
+                <img src="../assets/images/exposome-20260914/personal-exposure-timeline.webp" width="199" height="199" alt="" loading="lazy" decoding="async">
+                <strong>Exposure Dynamics</strong><span>(Temporal)</span>
+              </div>
+              <i class="ph ph-equals" aria-hidden="true"></i>
+              <div class="exo-factor exo-factor--personal">
+                <img src="../assets/images/exposome-20260914/personal-lifecycle-men.webp" width="207" height="186" alt="" loading="lazy" decoding="async">
+                <strong>Personal Exposome</strong>
+                <button class="exo-explore" type="button" data-explore="personal-exposome" aria-label="Explore Personal Exposome" aria-expanded="false" aria-controls="personal-exposome-content">Explore <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+              </div>
             </div>
-            <figure class="ex-hero-visual">
-              <img src="../assets/images/exposome-2026/hero-holographic-human.webp" width="1254" height="1254" alt="A holographic human profile formed by a glowing biological neural network" decoding="sync" fetchpriority="high">
-            </figure>
-          </div>
-
-          <div class="ex-hero-cards" data-hero-cards></div>
-
-          <div class="ex-personal-band ex-glass-panel">
-            <img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/person-simple-circle.png?v=20260818-custom-v2" width="1024" height="1024" alt="" aria-hidden="true" decoding="async">
-            <strong>Personal Exposome</strong>
-            <span>=</span>
-            <b class="blue">External</b>
-            <span>&times;</span>
-            <b class="violet">Internal</b>
-            <span>&times;</span>
-            <b class="purple">Exposure Dynamics</b>
-            <img class="ex-bio-icon band-clock" src="../assets/images/exposome-2026/icons-custom/clock.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" decoding="async">
-          </div>
-        </div>
-      </section>
-
-      <section class="ex-flow ex-section" id="outcomes" data-ex-section aria-labelledby="outcomes-title">
-        <div class="ex-shell">
-          <h2 class="ex-section-title" id="outcomes-title">From Exposome to Health Outcomes</h2>
-          <div class="ex-flow-grid">
-            <ol class="ex-step-rail" aria-label="Health outcome pathway" data-step-rail></ol>
-            <div class="ex-flow-content">
-              <article class="ex-flow-row ex-glass-panel ex-flow-formula" data-flow-formula></article>
-              <article class="ex-flow-row ex-glass-panel ex-flow-impact" data-flow-impact></article>
-              <article class="ex-flow-row ex-glass-panel ex-aging-row">
-                <div class="ex-aging-topline">
-                  <span class="healthy"><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/person-simple-walk.png?v=20260818-custom-v2" width="512" height="512" alt="" aria-hidden="true" loading="lazy" decoding="async"> Healthy Aging</span>
-                  <span class="ex-aging-track" aria-hidden="true"><i></i></span>
-                  <span class="adaptive"><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/scales.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" loading="lazy" decoding="async"> Adaptive Zone <small>(Balance Point)</small></span>
-                  <span class="ex-aging-track reverse" aria-hidden="true"><i></i></span>
-                  <span class="accelerated">Accelerated Aging <img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/person-simple-run.png?v=20260818-custom-v2" width="512" height="512" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
-                </div>
-                <div class="ex-resilience-note"><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/shield-check.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" loading="lazy" decoding="async"> Moderated by Resilience &amp; Adaptive Capacity</div>
-              </article>
-              <article class="ex-flow-row ex-glass-panel ex-flow-outcomes" data-flow-outcomes></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="ex-framework ex-section" id="framework" data-ex-section aria-labelledby="framework-title">
-        <div class="ex-shell">
-          <h2 class="ex-section-title" id="framework-title">Biological Impact Framework of the Personal Exposome</h2>
-          <div class="ex-framework-scroll" tabindex="0" aria-label="Seven-stage biological impact framework">
-            <div class="ex-framework-list" data-framework-list></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="ex-ebii ex-section" id="ebii" data-ex-section aria-labelledby="ebii-title">
-        <div class="ex-shell">
-          <h2 class="ex-section-title" id="ebii-title">Exposome Biological Impact Index <span>(EBII)</span></h2>
-          <div class="ex-factor-grid" data-factor-grid></div>
-
-          <div class="ex-formula-panel ex-glass-panel" data-tooltip="EBII estimates biological impact by balancing exposure load, susceptibility, and time against resilience." tabindex="0">
-            <strong>EBII</strong>
-            <span>=</span>
-            <span class="ex-fraction" aria-label="Exposure Load multiplied by Susceptibility multiplied by Time, divided by Resilience plus epsilon">
-              <span>(Exposure Load &times; Susceptibility &times; Time)</span>
-              <span>(Resilience + &epsilon;)</span>
-            </span>
-          </div>
-
-          <div class="ex-ebii-insights">
-            <article class="ex-chart-panel ex-glass-panel">
-              <h3>Biological Impact Over Time</h3>
-              <div class="ex-chart-wrap">
-                <canvas data-ebii-chart role="img" aria-label="Line chart showing high, moderate, and low EBII biological impact over the life course"></canvas>
-              </div>
-              <ul class="ex-chart-legend" aria-hidden="true"><li class="high">High EBII</li><li class="medium">Moderate EBII</li><li class="low">Low EBII</li></ul>
-            </article>
-            <article class="ex-interpretation ex-glass-panel">
-              <h3>Interpretation</h3>
-              <div><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/arrow-up.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" loading="lazy" decoding="async"><p>Higher Exposure Load, Susceptibility, or Time<br><strong>&rarr; Higher EBII</strong></p></div>
-              <div><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/arrow-down.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" loading="lazy" decoding="async"><p>Higher Resilience<br><strong>&rarr; Lower EBII</strong></p></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="ex-comparison ex-section" id="comparison" data-ex-section aria-labelledby="comparison-title">
-        <div class="ex-shell">
-          <h2 class="ex-section-title" id="comparison-title">High EBII vs. Low EBII</h2>
-          <div class="ex-risk-comparison">
-            <article class="ex-risk-panel high ex-glass-panel">
-              <h3>High EBII <small>(Higher Biological Impact)</small></h3>
-              <div class="ex-gauge high" aria-label="High risk gauge">
-                <div class="ex-gauge-arc"></div><span class="ex-gauge-needle"></span><i></i>
-              </div>
-              <strong>High Risk</strong>
-            </article>
-            <div class="ex-risk-network" aria-hidden="true"><span></span><i></i><span></span></div>
-            <article class="ex-risk-panel low ex-glass-panel">
-              <h3>Low EBII <small>(Lower Biological Impact)</small></h3>
-              <div class="ex-gauge low" aria-label="Low risk gauge">
-                <div class="ex-gauge-arc"></div><span class="ex-gauge-needle"></span><i></i>
-              </div>
-              <strong>Low Risk</strong>
-            </article>
-          </div>
-
-          <article class="ex-levels ex-glass-panel">
-            <h3>Biological Impact Across Multiple Levels</h3>
-            <div data-levels></div>
           </article>
-
-          <div class="ex-driver-grid">
-            <article class="ex-driver-panel higher ex-glass-panel">
-              <h3>What Makes EBII Higher?</h3>
-              <ul data-higher-drivers></ul>
+        </div>
+      </section>
+      <section class="exo-external" aria-label="External Exposome details">
+        <div class="exo-shell">
+          <details class="exo-accordion" id="external-exposome">
+            <summary class="exo-accordion-toggle" id="external-exposome-toggle" aria-controls="external-exposome-content">
+              <span class="exo-accordion-label">External Exposome</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </summary>
+            <div class="exo-external-content" id="external-exposome-content" role="region" aria-labelledby="external-exposome-title">
+              <header class="exo-external-heading">
+                <h2 class="major-heading" id="external-exposome-title">External Exposome</h2>
+                <p class="lead">Environmental Exposures</p>
+                <p class="exo-external-intro">All non-genetic exposures originating outside the individual.</p>
+              </header>
+              <img class="exo-external-banner" src="../assets/images/exposome-20260914/external-banner.webp" width="1899" height="374" alt="Woman walking through a city surrounded by traffic and industrial emissions" loading="lazy" decoding="async">
+              <div class="exo-environments">
+                <article class="exo-environment">
+                  <img src="../assets/images/exposome-20260914/physical-environment.webp" width="600" height="229" alt="Traffic on a sunlit city street" loading="lazy" decoding="async">
+                  <div class="exo-environment-copy"><h3>Physical Environment</h3><p>Air · UV · Noise · Climate</p></div>
+                </article>
+                <article class="exo-environment">
+                  <img src="../assets/images/exposome-20260914/chemical-environment.webp" width="584" height="229" alt="Environmental worker inspecting a water sample near an industrial site" loading="lazy" decoding="async">
+                  <div class="exo-environment-copy"><h3>Chemical Environment</h3><p>Pollutants · Metals · Pesticides</p></div>
+                </article>
+                <article class="exo-environment">
+                  <img src="../assets/images/exposome-20260914/biological-environment.webp" width="600" height="229" alt="Pollen released from flowering tree catkins" loading="lazy" decoding="async">
+                  <div class="exo-environment-copy"><h3>Biological Environment</h3><p>Pathogens · Allergens · Microbiota</p></div>
+                </article>
+                <article class="exo-environment">
+                  <img src="../assets/images/exposome-20260914/built-social-environment.webp" width="614" height="205" alt="People commuting through a busy urban street" loading="lazy" decoding="async">
+                  <div class="exo-environment-copy"><h3>Built &amp; Social Environment</h3><p>Urban life · Work · Indoor environment</p></div>
+                </article>
+                <article class="exo-environment">
+                  <img src="../assets/images/exposome-20260914/other-exposures.webp" width="614" height="205" alt="Gloved hand holding a dish of microplastic particles near water" loading="lazy" decoding="async">
+                  <div class="exo-environment-copy"><h3>Other Exposures</h3><p>Microplastics · Water · Food contaminants</p></div>
+                </article>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="exo-internal" aria-label="Internal Exposome details">
+        <div class="exo-shell">
+          <details class="exo-accordion exo-accordion--internal" id="internal-exposome">
+            <summary class="exo-accordion-toggle" id="internal-exposome-toggle" aria-controls="internal-exposome-content">
+              <span class="exo-accordion-label">Internal Exposome</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </summary>
+            <div class="exo-internal-content" id="internal-exposome-content" role="region" aria-labelledby="internal-exposome-title">
+              <header class="exo-internal-heading">
+                <h2 class="major-heading" id="internal-exposome-title">Internal Exposome</h2>
+                <p class="lead">Lifestyle &amp; Individual Factors</p>
+                <p class="exo-internal-intro">Endogenous and modifiable factors within the individual.</p>
+              </header>
+          <img class="exo-internal-banner" src="../assets/images/exposome-20260914/internal-banner.webp" alt="Woman wearing a sensor consulting a clinician beside a health-monitoring screen" width="2171" height="409" loading="lazy" decoding="async">
+              <article class="exo-internal-row exo-internal-row--lifestyle" aria-labelledby="internal-lifestyle-title">
+            <img class="exo-internal-collage" src="../assets/images/exposome-20260914/internal-lifestyle-collage.webp" alt="Everyday lifestyle scenes: preparing food, running, sleeping, socializing, taking medication, and experiencing stress" width="1228" height="352" loading="lazy" decoding="async">
+                <div class="exo-internal-copy">
+                  <h3 id="internal-lifestyle-title">Lifestyle &amp; Behavioral Factors</h3>
+                  <p>Diet &amp; Nutrition · Physical Activity · Sleep · Psychological Stress<br>Smoking · Alcohol · Medications · Social Interaction</p>
+                </div>
+              </article>
+              <article class="exo-internal-row exo-internal-row--biology" aria-labelledby="internal-biology-title">
+                <div class="exo-internal-copy">
+                  <h3 id="internal-biology-title">Internal Biological State &amp; Processes</h3>
+                  <p>Innate Factors · Genetics &amp; Epigenetics · Immune Function · Inflammation<br>Oxidative Stress · Metabolism · Endocrine Status · Gut Microbiome · Neuroendocrine Function</p>
+                </div>
+            <img class="exo-internal-collage" src="../assets/images/exposome-20260914/internal-biology-collage.webp" alt="Biological research scenes: blood sample, microscopy, three generations of women, laboratory cultures, and analytical testing" width="1053" height="374" loading="lazy" decoding="async">
+              </article>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="exo-dynamics" aria-label="Exposure Dynamics details">
+        <div class="exo-shell">
+          <details class="exo-accordion exo-accordion--dynamics" id="exposure-dynamics">
+            <summary class="exo-accordion-toggle" id="exposure-dynamics-toggle" aria-controls="exposure-dynamics-content">
+              <span class="exo-accordion-label">Exposure Dynamics</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </summary>
+            <div class="exo-dynamics-content" id="exposure-dynamics-content" role="region" aria-labelledby="exposure-dynamics-title">
+              <section class="exo-dynamics-framework" aria-labelledby="exposure-dynamics-title">
+                <div class="exo-dynamics-overview">
+                  <header class="exo-dynamics-heading">
+                    <h2 class="major-heading" id="exposure-dynamics-title">Exposure<br>Dynamics</h2>
+                    <p class="lead">The Third Dimension<br>of Exposome Science</p>
+                  </header>
+                  <div class="exo-dynamics-narrative">
+                    <div class="exo-dynamics-original">
+                      <h3>An Original A&amp;S Framework</h3>
+                      <p>Temporal aspects of exposure have long been discussed. The distinctive contribution of A&amp;S founder Dr. Yen is to formalize Exposure Dynamics as an independent, core third dimension alongside External and Internal Exposome.</p>
+                    </div>
+                    <p>This dedicated framework explains and quantifies how exposures vary in intensity, persist over time, recur, occur at critical moments, interact as mixtures and accumulate across the lifespan.</p>
+                  </div>
+                </div>
+                <figure class="exo-dynamics-timeline">
+                  <img src="../assets/images/exposome-20260914/dynamics-timeline.webp" width="2356" height="425" alt="The same woman in the city across morning, daytime, evening, and night" loading="lazy" decoding="async">
+                  <figcaption>From a Single Exposure to a Lifelong Biological History</figcaption>
+                </figure>
+              </section>
+              <section class="exo-dimensions" aria-labelledby="exposure-dimensions-title">
+                <header class="exo-dimensions-heading">
+                  <h2 class="major-heading" id="exposure-dimensions-title">Exposure Dynamics</h2>
+                  <p class="lead">Six Dimensions of Exposure Over Time</p>
+                </header>
+                <div class="exo-dimensions-grid">
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-intensity.webp" width="784" height="352" alt="Woman in city streets with increasing traffic and air pollution" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Intensity</h3><p class="exo-dimension-question">How much</p><p>Dose / Concentration</p></div>
+                  </article>
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-duration.webp" width="742" height="351" alt="Construction worker at the same site from morning through daytime to night" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Duration</h3><p class="exo-dimension-question">How long</p><p>Length of time</p></div>
+                  </article>
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-frequency.webp" width="774" height="359" alt="Woman commuting, using her phone, and working at a laptop during recurring daily activities" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Frequency</h3><p class="exo-dimension-question">How often</p><p>Occurrences per unit time</p></div>
+                  </article>
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-timing.webp" width="784" height="338" alt="The same city skyline at dawn, daytime, dusk, and night" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Timing</h3><p class="exo-dimension-question">When</p><p>Time of day · Week · Season · Life stage</p></div>
+                  </article>
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-mixture.webp" width="742" height="341" alt="Woman in a smoky social setting with a drink beside a street with traffic emissions" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Mixture</h3><p class="exo-dimension-question">What combination</p><p>Co-exposures &amp; correlations</p></div>
+                  </article>
+                  <article class="exo-dimension">
+                    <img src="../assets/images/exposome-20260914/dynamics-cumulative.webp" width="784" height="338" alt="A woman shown at three ages across her lifespan" loading="lazy" decoding="async">
+                    <div class="exo-dimension-copy"><h3>Cumulative Exposure</h3><p class="exo-dimension-question">Over the lifespan</p><p>Time-weighted accumulated dose</p></div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="exo-personal-detail" aria-label="Personal Exposome details">
+        <div class="exo-shell">
+          <details class="exo-accordion exo-accordion--personal" id="personal-exposome">
+            <summary class="exo-accordion-toggle" id="personal-exposome-toggle" aria-controls="personal-exposome-content">
+              <span class="exo-accordion-label">Personal Exposome</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </summary>
+            <div class="exo-personal-content" id="personal-exposome-content" role="region" aria-labelledby="personal-health-title">
+              <section class="exo-personal-health" aria-labelledby="personal-health-title">
+                <header class="exo-personal-section-heading">
+                  <h2 class="major-heading" id="personal-health-title">Personal Exposome &amp; Human Health</h2>
+                  <p class="lead">Health effects unfold in sequence—and can reinforce the exposures that shaped them.</p>
+                </header>
+                <ol class="exo-health-flow" aria-label="Sequence from accumulated exposures to health outcomes">
+                  <li class="exo-health-step">
+                    <img src="../assets/images/exposome-20260914/personal-health-exposome.webp" width="605" height="616" alt="Woman in traffic surrounded by scenes of poor sleep, fast food, stress, and industrial pollution" loading="lazy" decoding="async">
+                    <div class="exo-health-copy"><h3>Personal Exposome</h3><p>Accumulated external, internal and temporal exposures</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-health-step">
+                    <img src="../assets/images/exposome-20260914/personal-health-response.webp" width="560" height="604" alt="Woman with irritated skin beside laboratory testing of biological responses" loading="lazy" decoding="async">
+                    <div class="exo-health-copy"><h3>Biological Response</h3><p>Inflammation · Oxidative stress · Neuroendocrine and metabolic change</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-health-step">
+                    <img src="../assets/images/exposome-20260914/personal-health-aging.webp" width="563" height="601" alt="The same woman shown at three ages along an altered aging trajectory" loading="lazy" decoding="async">
+                    <div class="exo-health-copy"><h3>Altered Aging Trajectory</h3><p>Reduced resilience · Impaired repair · Loss of homeostasis · Functional decline</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-health-step">
+                    <img src="../assets/images/exposome-20260914/personal-health-outcomes.webp" width="547" height="616" alt="An older woman receiving care from a doctor and nurse in hospital" loading="lazy" decoding="async">
+                    <div class="exo-health-copy"><h3>Health Outcomes</h3><p>Progressive effects on physical, mental and long-term wellbeing</p></div>
+                  </li>
+                </ol>
+                <aside class="exo-personal-feedback" aria-labelledby="personal-cycle-title">
+                  <h3 id="personal-cycle-title"><i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>Vicious Cycle</h3>
+                  <p>Health outcomes can alter behavior, physiology and vulnerability—feeding back to intensify the personal exposome.</p>
+                </aside>
+                <p class="exo-health-sequence"><span>Exposures Accumulate</span><i class="ph ph-arrow-right" aria-hidden="true"></i><span>Biology Responds</span><i class="ph ph-arrow-right" aria-hidden="true"></i><span>Aging Trajectory Shifts</span><i class="ph ph-arrow-right" aria-hidden="true"></i><span>Health Changes</span></p>
+              </section>
+              <section class="exo-personal-impact" aria-labelledby="personal-impact-title">
+                <header class="exo-personal-section-heading">
+                  <h2 class="major-heading" id="personal-impact-title">From Personal Exposome to Biological Impact</h2>
+                  <p class="lead">An Upstream-to-Downstream Cascade Across Biological Levels</p>
+                </header>
+                <ol class="exo-impact-flow" aria-label="Upstream-to-downstream biological cascade">
+                  <li class="exo-impact-step">
+                    <h3>Personal Exposome</h3>
+                    <img src="../assets/images/exposome-20260914/personal-impact-exposome.webp" width="456" height="490" alt="Woman in an urban environment with traffic, sleep disruption, and lifestyle exposures" loading="lazy" decoding="async">
+                    <div class="exo-impact-copy"><p>External exposures · Internal factors · Exposure dynamics</p><p>Physical · Chemical · Biological · Social · Lifestyle</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-impact-step">
+                    <h3>Exposure Routes &amp; Absorption</h3>
+                    <img src="../assets/images/exposome-20260914/personal-impact-routes.webp" width="456" height="501" alt="Exposure through breathing, drinking water, and skin contact with a surface" loading="lazy" decoding="async">
+                    <div class="exo-impact-copy"><p>Inhalation · Ingestion · Dermal &amp; mucosal uptake</p><p>Determines the biologically effective dose</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-impact-step">
+                    <h3>Core Biological Mechanisms</h3>
+                    <img src="../assets/images/exposome-20260914/personal-impact-mechanisms.webp" width="443" height="511" alt="Microscopic tissue, molecular processes, laboratory samples, and cellular analysis" loading="lazy" decoding="async">
+                    <div class="exo-impact-copy"><p>Oxidative stress · Inflammation</p><p>Endocrine, immune &amp; metabolic dysregulation</p><p>DNA damage · Epigenetic change</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-impact-step">
+                    <h3>Multilevel Biological Impact</h3>
+                    <img src="../assets/images/exposome-20260914/personal-impact-multilevel.webp" width="452" height="490" alt="Cells and tissue alongside a researcher assessing organ-system imaging" loading="lazy" decoding="async">
+                    <div class="exo-impact-copy"><p>Cellular stress &amp; damage</p><p>Tissue dysfunction · Organ-system effects</p><p>Altered aging trajectory</p></div>
+                    <i class="ph ph-arrow-right exo-flow-arrow" aria-hidden="true"></i>
+                  </li>
+                  <li class="exo-impact-step">
+                    <h3>Potential Adverse Health Outcomes</h3>
+                    <img src="../assets/images/exposome-20260914/personal-impact-outcomes.webp" width="452" height="501" alt="Older woman receiving medical care in a hospital bed" loading="lazy" decoding="async">
+                    <div class="exo-impact-copy"><p>Acute effects · Chronic conditions</p><p>Developmental &amp; reproductive impacts</p><p>Reduced physical &amp; mental wellbeing</p><p>Compromised healthy longevity</p></div>
+                  </li>
+                </ol>
+                <div class="exo-modifier-targets" role="img" aria-label="Individual modifiers influence exposure routes and absorption, core biological mechanisms, and multilevel biological impact">
+                  <i class="ph ph-arrow-up" aria-hidden="true"></i><i class="ph ph-arrow-up" aria-hidden="true"></i><i class="ph ph-arrow-up" aria-hidden="true"></i>
+                </div>
+                <aside class="exo-individual-modifiers" aria-labelledby="personal-modifiers-title">
+                  <img src="../assets/images/exposome-20260914/personal-modifiers.webp" width="634" height="143" alt="People of different ages and sexes illustrating individual differences" loading="lazy" decoding="async">
+                  <h3 id="personal-modifiers-title">Individual Modifiers</h3>
+                  <div><p>Age · Sex · Genetics · Microbiome · Baseline health · Behavior · Resilience</p><p class="exo-modifiers-mobile-scope">Influence exposure routes and absorption, core biological mechanisms, and multilevel biological impact.</p></div>
+                </aside>
+                <p class="exo-personal-impact-note">Biological impact reflects both exposure burden and individual susceptibility.</p>
+              </section>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="exo-ebii" id="ebii" aria-labelledby="ebii-title">
+        <div class="exo-shell exo-ebii-layout">
+          <div class="exo-ebii-copy">
+            <header class="exo-ebii-heading">
+              <h2 class="major-heading" id="ebii-title">Exposome Biological Impact Index (EBII)</h2>
+              <p class="lead">Toward a Quantifiable Reference for Exposome-Driven Biological Impact</p>
+            </header>
+            <div class="exo-ebii-narrative">
+              <p>A&amp;S focuses on understanding how the external exposome influences human health and biological functions. From environmental and lifestyle factors to biological responses and health status, these elements form complex and dynamic relationships. To better understand these pathways and mechanisms, A&amp;S continues to develop relevant research methods and science-based solutions.</p>
+              <p>As a first step, A&amp;S is working toward the development of the Exposome Biological Impact Index (EBII). EBII aims to integrate multiple exposure and biological response factors through scientific models and algorithms, translating them into a quantifiable reference index for assessing, understanding, and managing the dynamic biological impact of the exposome.</p>
+            </div>
+            <aside class="exo-ebii-status" aria-labelledby="ebii-status-title">
+              <h3 id="ebii-status-title">Current Development Status</h3>
+              <p>EBII is currently under development. Its dynamic estimations are based primarily on scientific models and algorithms. Its applicability and accuracy require further validation through empirical and clinical data.</p>
+            </aside>
+            <button class="exo-ebii-explore" type="button" data-explore="ebii-details" aria-label="Explore EBII" aria-expanded="false" aria-controls="ebii-details">Explore <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+          </div>
+          <div class="exo-ebii-framework" role="group" aria-label="Exposome load, susceptibility, resilience, and time contribute to EBII">
+            <article class="exo-ebii-factor exo-ebii-factor--load">
+              <header><span class="exo-ebii-letter" aria-hidden="true">E</span><h3>Exposome Load</h3></header>
+              <div class="exo-ebii-factor-body">
+                <ul><li>Environmental</li><li>Lifestyle</li><li>Chemical</li><li>Physical</li><li>Biological</li><li>Social</li></ul>
+                <img src="../assets/images/exposome-20260914/ebii-load-photo.webp" width="395" height="250" alt="Traffic and a city skyline" loading="lazy" decoding="async">
+              </div>
             </article>
-            <article class="ex-medallion" aria-label="EBII formula">
-              <span>EBII</span>
-              <span class="ex-mini-fraction"><b>(E &times; S &times; T)</b><b>(R + &epsilon;)</b></span>
+            <article class="exo-ebii-factor exo-ebii-factor--susceptibility">
+              <header><span class="exo-ebii-letter" aria-hidden="true">S</span><h3>Susceptibility</h3></header>
+              <div class="exo-ebii-factor-body">
+                <ul><li>Genetics</li><li>Epigenetics</li><li>Age</li><li>Biological factors</li><li>Health status</li><li>Comorbidities</li></ul>
+                <img src="../assets/images/exposome-20260914/ebii-susceptibility-photo.webp" width="338" height="350" alt="DNA helix beside an older person's face" loading="lazy" decoding="async">
+              </div>
             </article>
-            <article class="ex-driver-panel lower ex-glass-panel">
-              <h3>What Makes EBII Lower?</h3>
-              <ul data-lower-drivers></ul>
+            <article class="exo-ebii-factor exo-ebii-factor--resilience">
+              <header><span class="exo-ebii-letter" aria-hidden="true">R</span><h3>Resilience</h3></header>
+              <div class="exo-ebii-factor-body">
+                <ul><li>Detoxification</li><li>Immune defense</li><li>Repair capacity</li><li>Metabolic flexibility</li><li>Recovery capacity</li><li>Antioxidant defense</li></ul>
+                <img src="../assets/images/exposome-20260914/ebii-resilience-photo.webp" width="342" height="342" alt="Immune cell and mitochondrion illustration" loading="lazy" decoding="async">
+              </div>
             </article>
+            <article class="exo-ebii-factor exo-ebii-factor--time">
+              <header><span class="exo-ebii-letter" aria-hidden="true">T</span><h3>Time</h3></header>
+              <div class="exo-ebii-factor-body">
+                <ul><li>Duration</li><li>Frequency</li><li>Timing</li><li>Cumulative burden</li><li>Life course stage</li></ul>
+                <img src="../assets/images/exposome-20260914/ebii-time-photo.webp" width="410" height="374" alt="People at different stages of life" loading="lazy" decoding="async">
+              </div>
+            </article>
+            <div class="exo-ebii-convergence">
+              <i class="ph ph-arrow-down exo-ebii-mobile-arrow" aria-hidden="true"></i>
+              <i class="ph ph-arrow-down-right exo-ebii-arrow exo-ebii-arrow--e" aria-hidden="true"></i>
+              <i class="ph ph-arrow-down-left exo-ebii-arrow exo-ebii-arrow--s" aria-hidden="true"></i>
+              <div class="exo-ebii-result">
+                <img src="../assets/images/exposome-20260914/ebii-orb-text-free.webp" width="640" height="640" alt="" loading="lazy" decoding="async">
+                <div class="exo-ebii-result-copy"><h3>EBII</h3><p>Quantifiable<br>Reference Index</p></div>
+              </div>
+              <i class="ph ph-arrow-up-right exo-ebii-arrow exo-ebii-arrow--r" aria-hidden="true"></i>
+              <i class="ph ph-arrow-up-left exo-ebii-arrow exo-ebii-arrow--t" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
       </section>
-
-      <section class="ex-bridge ex-section" data-ex-section aria-labelledby="bridge-title">
-        <img src="../assets/images/exposome-2026/bridge-network.webp" width="2400" height="500" alt="Digital network suspension bridges converging toward a luminous city" loading="lazy" decoding="async">
-        <div class="ex-bridge-copy ex-shell">
-          <h2 id="bridge-title">EBII is the bridge between your<br>lifetime exposome and your biological future.</h2>
-          <p>Measure. Understand. Reduce. Adapt. Thrive.</p>
+      <section class="exo-ebii-details-section" aria-label="EBII conceptual model and biological impact details">
+        <div class="exo-shell">
+          <details class="exo-accordion exo-accordion--ebii" id="ebii-details">
+            <summary class="exo-accordion-toggle">
+              <span class="exo-accordion-label">Exposome Biological Impact Index (EBII)</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </summary>
+            <div class="exo-ebii-details-content">
+              <section class="exo-ebii-model" aria-labelledby="ebii-model-title">
+                <header class="exo-ebii-detail-heading">
+                  <h2 class="major-heading" id="ebii-model-title">The EBII Conceptual Model</h2>
+                  <p class="lead">Four Interacting Dimensions Shape Estimated Biological Impact</p>
+                </header>
+                <div class="exo-model-grid">
+                  <article class="exo-model-card exo-model-e">
+                    <img src="../assets/images/exposome-20260914/ebii-model-load.webp" width="576" height="201" alt="Traffic and industrial emissions across a city" loading="lazy" decoding="async">
+                    <div class="exo-model-card-copy">
+                      <span class="exo-model-letter" aria-hidden="true">E</span>
+                      <h3>Exposome Load</h3>
+                      <p>Physical · Chemical · Biological<br>Social · Lifestyle · Sensory</p>
+                      <p class="exo-model-direction"><strong>Higher exposure <i class="ph ph-arrow-right" aria-label="leads to"></i> Higher E</strong></p>
+                    </div>
+                  </article>
+                  <article class="exo-model-card exo-model-s">
+                    <img src="../assets/images/exposome-20260914/ebii-model-susceptibility.webp" width="576" height="204" alt="An older woman coughing beside a younger woman in an urban environment" loading="lazy" decoding="async">
+                    <div class="exo-model-card-copy">
+                      <span class="exo-model-letter" aria-hidden="true">S</span>
+                      <h3>Biological Susceptibility</h3>
+                      <p>Genetics · Epigenetics · Age<br>Baseline health · Existing conditions</p>
+                      <p class="exo-model-direction"><strong>Higher susceptibility <i class="ph ph-arrow-right" aria-label="leads to"></i> Higher S</strong></p>
+                    </div>
+                  </article>
+                  <article class="exo-model-card exo-model-r">
+                    <img src="../assets/images/exposome-20260914/ebii-model-resilience.webp" width="590" height="195" alt="Immune cells interacting with pathogens" loading="lazy" decoding="async">
+                    <div class="exo-model-card-copy">
+                      <span class="exo-model-letter" aria-hidden="true">R</span>
+                      <h3>Biological Resilience</h3>
+                      <p>Repair · Immune defense · Detoxification<br>Metabolic flexibility · Recovery capacity</p>
+                      <p class="exo-model-protective">Protective capacity</p>
+                      <p class="exo-model-direction"><strong>Higher resilience <i class="ph ph-arrow-right" aria-label="leads to"></i> Higher R</strong></p>
+                    </div>
+                  </article>
+                  <article class="exo-model-card exo-model-t">
+                    <img src="../assets/images/exposome-20260914/ebii-model-time.webp" width="595" height="204" alt="The same woman shown through changing exposure conditions over time" loading="lazy" decoding="async">
+                    <div class="exo-model-card-copy">
+                      <span class="exo-model-letter" aria-hidden="true">T</span>
+                      <h3>Time</h3>
+                      <p>Duration · Frequency · Timing<br>Cumulative burden · Life course stage</p>
+                      <p class="exo-model-direction"><strong>Longer exposure time <i class="ph ph-arrow-right" aria-label="leads to"></i> Higher T</strong></p>
+                    </div>
+                  </article>
+                </div>
+                <section class="exo-model-operation" aria-labelledby="ebii-operation-title">
+                  <h3 id="ebii-operation-title">Conceptual Operational Model</h3>
+                  <div class="exo-model-math">
+                    <math display="block" aria-label="EBII equals the product of E, S, and T divided by the sum of R and epsilon">
+                      <mrow><mi mathvariant="normal">EBII</mi><mo>=</mo><mfrac><mrow><mi class="exo-model-e" mathvariant="normal">E</mi><mo>×</mo><mi class="exo-model-s" mathvariant="normal">S</mi><mo>×</mo><mi class="exo-model-t" mathvariant="normal">T</mi></mrow><mrow><mi class="exo-model-r" mathvariant="normal">R</mi><mo>+</mo><mi>ε</mi></mrow></mfrac></mrow>
+                    </math>
+                    <dl class="exo-model-legend">
+                      <div class="exo-model-e"><dt>E</dt><dd>Exposure Load</dd></div>
+                      <div class="exo-model-s"><dt>S</dt><dd>Susceptibility</dd></div>
+                      <div class="exo-model-r"><dt>R</dt><dd>Resilience</dd></div>
+                      <div class="exo-model-t"><dt>T</dt><dd>Time</dd></div>
+                    </dl>
+                  </div>
+                  <div class="exo-model-caveat">
+                    <p>ε is a small constant included for numerical stability.</p>
+                    <p>A first-order conceptual approximation. Real-world relationships may be nonlinear, dynamic and feedback-dependent.</p>
+                  </div>
+                </section>
+              </section>
+              <section class="exo-ebii-impact" aria-labelledby="ebii-impact-title">
+                <header class="exo-ebii-detail-heading">
+                  <h2 class="major-heading" id="ebii-impact-title">From EBII to Biological Impact</h2>
+                  <p class="lead">Interpreting Estimated Impact Across Biological Levels</p>
+                </header>
+                <div class="exo-impact-comparison">
+                  <article class="exo-impact-estimate exo-impact-estimate--higher">
+                    <img src="../assets/images/exposome-20260914/ebii-impact-higher.webp" width="676" height="419" alt="A tired man having a health assessment in a clinical setting" loading="lazy" decoding="async">
+                    <div class="exo-impact-estimate-copy">
+                      <h3>Higher Estimated EBII</h3>
+                      <p>Greater Estimated Biological Impact</p>
+                      <ul>
+                        <li><span class="exo-impact-badge exo-model-e" aria-hidden="true">E</span>Higher exposure load</li>
+                        <li><span class="exo-impact-badge exo-model-s" aria-hidden="true">S</span>Higher susceptibility</li>
+                        <li><span class="exo-impact-badge exo-model-t" aria-hidden="true">T</span>Longer exposure time</li>
+                        <li><span class="exo-impact-badge exo-model-r" aria-hidden="true">R</span>Lower biological resilience</li>
+                      </ul>
+                    </div>
+                  </article>
+                  <span class="exo-impact-versus" aria-label="versus">VS.</span>
+                  <article class="exo-impact-estimate exo-impact-estimate--lower">
+                    <img src="../assets/images/exposome-20260914/ebii-impact-lower.webp" width="666" height="419" alt="A man hiking outdoors beside a lake and mountains" loading="lazy" decoding="async">
+                    <div class="exo-impact-estimate-copy">
+                      <h3>Lower Estimated EBII</h3>
+                      <p>Lower Estimated Biological Impact</p>
+                      <ul>
+                        <li><span class="exo-impact-badge exo-model-e" aria-hidden="true">E</span>Lower exposure load</li>
+                        <li><span class="exo-impact-badge exo-model-s" aria-hidden="true">S</span>Lower susceptibility</li>
+                        <li><span class="exo-impact-badge exo-model-t" aria-hidden="true">T</span>Shorter exposure time</li>
+                        <li><span class="exo-impact-badge exo-model-r" aria-hidden="true">R</span>Higher biological resilience</li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <aside class="exo-impact-note" aria-label="Interpretation limits">
+                  <p>EBII estimates relative biological impact—not a diagnosis or a fixed prediction.</p>
+                  <p>Higher E, S or T increases EBII · Higher R reduces EBII</p>
+                </aside>
+                <section class="exo-impact-levels" aria-labelledby="ebii-levels-title">
+                  <h3 id="ebii-levels-title">Biological Impact Across Levels</h3>
+                  <ol class="exo-impact-level-grid">
+                    <li class="exo-impact-level">
+                      <h4>Molecular</h4>
+                      <img src="../assets/images/exposome-20260914/ebii-level-molecular.webp" width="420" height="245" alt="Microscopic illustration of molecular interactions" loading="lazy" decoding="async">
+                      <p>DNA damage · Oxidative stress · Epigenetic change</p>
+                      <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="exo-impact-level">
+                      <h4>Cellular</h4>
+                      <img src="../assets/images/exposome-20260914/ebii-level-cellular.webp" width="420" height="245" alt="Cells viewed under magnification" loading="lazy" decoding="async">
+                      <p>Inflammation · Senescence · Impaired signaling</p>
+                      <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="exo-impact-level">
+                      <h4>Tissue &amp; Organ</h4>
+                      <img src="../assets/images/exposome-20260914/ebii-level-tissue.webp" width="422" height="245" alt="Tissue microscopy alongside a clinician reviewing organ scans" loading="lazy" decoding="async">
+                      <p>Tissue dysfunction · Multi-system effects</p>
+                      <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="exo-impact-level">
+                      <h4>Whole Body</h4>
+                      <img src="../assets/images/exposome-20260914/ebii-level-body.webp" width="422" height="245" alt="A man discussing his wellbeing with a clinician" loading="lazy" decoding="async">
+                      <p>Reduced resilience · Recovery · Adaptability</p>
+                      <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="exo-impact-level">
+                      <h4>Potential Outcomes</h4>
+                      <img src="../assets/images/exposome-20260914/ebii-level-outcomes.webp" width="422" height="245" alt="An older man speaking with a healthcare professional" loading="lazy" decoding="async">
+                      <p>Healthspan · Wellbeing · Function · Quality of life</p>
+                    </li>
+                  </ol>
+                </section>
+                <aside class="exo-impact-note exo-impact-validation" aria-label="Development status">
+                  <p>EBII is under development and requires further validation with empirical and clinical data.</p>
+                </aside>
+              </section>
+            </div>
+          </details>
         </div>
       </section>
     </main>
-
-    <footer class="exposome-footer aging-main-footer">
-      <div>
-        <a href="../index.html"><img src="../assets/images/arotec-scientist-logo.png" width="250" height="229" alt="Arotec Scientist"></a>
-        <p>Science for adaptive health, wellbeing and longevity.</p>
-        <a class="footer-contact" href="members.html">Get in touch</a>
-      </div>
-    </footer>
-
-    <button class="ex-back-top" type="button" aria-label="Back to top" data-back-top><img class="ex-bio-icon" src="../assets/images/exposome-2026/icons-custom/arrow-up.png?v=20260818-custom-v2" width="1254" height="1254" alt="" aria-hidden="true" decoding="async"></button>
-    <script src="../assets/js/site.min.js?v=20260826-applied-solutions-menu-v38" defer></script>
-    <script src="../assets/js/exposome-neo.js?v=20260818-comparison-layout-v10" defer></script>
+    <div id="site-footer-shell"></div>
+    <script src="../assets/js/site.min.js?v=20260914-zh-cn-v1" defer></script>
+    <script src="../assets/js/home-header.js?v=20260831-shared-scroll-effect-v2" defer></script>
+    <script src="../assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
+    <script src="../assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
+    <script src="../assets/js/exposome-reference.js?v=20260914-ebii-details-v1" defer></script>
   </body>
 </html>

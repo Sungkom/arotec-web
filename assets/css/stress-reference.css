@@ -1,0 +1,353 @@
+/* Supplied Stress Neurobiology artwork, editable web copy and Exposome tokens. */
+body.stress-reference-page { --sn-ink:#091963; --sn-muted:#536ba6; --sn-blue:#2865ef; --sn-gold:#dfbe76; --sn-gutter:150px; color:var(--sn-ink); background:#f9fcff; }
+html:has(> body.stress-reference-page) { scroll-padding-top:0; }
+html body.stress-reference-page #main { padding:110.6px 0 0; background:#f9fcff; }
+html body.stress-reference-page #main > section { margin:0; border:0; content-visibility:visible; contain-intrinsic-size:none; }
+html body.stress-reference-page #main > section::before { display:none; }
+.stress-reference-page #main * { box-sizing:border-box; }
+.sn-shell { margin-inline:var(--sn-gutter); }
+.stress-reference-page #main :is(section,[id]) { scroll-margin-top:135px; }
+.stress-reference-page #main :is(h1,h2,h3,h4) { color:var(--sn-ink); max-width:none; }
+.stress-reference-page #main p { margin:0; }
+.sn-hero { min-height:calc(100svh - 110.6px); padding-block:clamp(52px,5vw,96px); background:#091b2a url('../images/stress-atc-20260916/hero-background.webp') center / cover no-repeat; color:#f7fbff; }
+.sn-hero-copy { --arotec-display-size:clamp(40px,3.4vw,64px); --arotec-display-line-height:1.12; --arotec-display-letter-spacing:-.025em; width:min(790px,calc(53vw - var(--sn-gutter))); }
+html body.stress-reference-page #stress-title { color:#fff; margin-bottom:26px !important; }
+.sn-eyebrow { --arotec-body-size:15px; --arotec-body-line-height:1.4; color:var(--sn-gold); font-weight:700; letter-spacing:.14em; text-transform:uppercase; border-top:3px solid var(--sn-gold); padding-top:18px; width:fit-content; }
+.sn-narrative { --arotec-body-size:clamp(18px,1.37vw,26px); --arotec-body-line-height:1.44; margin-top:26px; }
+.sn-narrative p { color:#edf3f7; }
+.sn-narrative p + p { margin-top:20px !important; }
+.sn-mobile-art { display:none; }
+/* Fit the complete introduction beneath the shared desktop header. Keep
+   natural height as a fallback for zoomed text or unusually short windows. */
+@media (min-width:1200px) {
+  .sn-hero { display:flex; align-items:center; padding-block:clamp(20px,3.2svh,48px); }
+  .sn-hero-copy { --arotec-display-size:clamp(34px,min(3.4vw,5.6svh),64px); }
+  html body.stress-reference-page #stress-title { margin-bottom:clamp(14px,2.3svh,26px) !important; }
+  .sn-eyebrow { padding-top:clamp(10px,1.6svh,18px); }
+  .sn-narrative { --arotec-body-size:clamp(16px,min(1.37vw,2.35svh),26px); --arotec-body-line-height:1.4; margin-top:clamp(14px,2.4svh,26px); }
+  .sn-narrative p + p { margin-top:clamp(10px,1.8svh,20px) !important; }
+}
+.sn-stages { padding-block:44px; background:#f2f8fc; }
+.sn-stages-layout { display:grid; grid-template-columns:minmax(225px,.85fr) minmax(0,3fr); gap:36px; }
+.sn-stages-content { min-width:0; }
+.sn-stages-intro { --site-type-h2:clamp(34px,2.7vw,52px); --site-line-h2:1.1; --site-letter-h2:-.025em; --arotec-body-size:clamp(18px,1.18vw,22px); --arotec-body-line-height:1.45; }
+html body.stress-reference-page #stages-title { margin-bottom:24px !important; }
+.sn-section-lead { --arotec-body-size:clamp(16px,1.05vw,20px); --arotec-body-line-height:1.45; border-top:3px solid #79b9e2; padding-top:20px; color:var(--sn-muted); }
+.sn-curve-explainer { --site-type-h3:clamp(22px,1.45vw,28px); --site-line-h3:1.2; --site-letter-h3:-.02em; margin-top:42px; }
+html body.stress-reference-page #curve-explainer-title { margin-bottom:18px !important; }
+.sn-curve-explainer p { color:#405782; }
+.sn-curve-explainer p + p { margin-top:20px !important; }
+.sn-stage-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; list-style:none; padding:0; margin:0; }
+.sn-stage { --site-type-h3:clamp(18px,1.2vw,23px); --site-line-h3:1.22; --site-letter-h3:-.02em; --arotec-body-size:clamp(16px,1.05vw,20px); --arotec-body-line-height:1.4; min-width:0; overflow:hidden; border:1px solid #dae4f4; border-radius:16px; background:#fff; text-align:center; transition:transform 180ms,box-shadow 180ms; }
+.sn-stage > img { width:100%; height:auto; aspect-ratio:.94; object-fit:cover; object-position:center top; display:block; }
+.sn-stage-copy { padding:14px 10px 20px; }
+.sn-stage-number { display:block; margin-bottom:12px; color:var(--sn-ink); font-size:32px; font-weight:500; line-height:1; }
+html body.stress-reference-page #main .sn-stage h3 { margin-bottom:8px !important; }
+.sn-stage p { color:var(--sn-muted); }
+.sn-curve { margin:28px 0 0; }
+.sn-chart-scroll { overflow-x:auto; border-radius:12px; background:#f3f9fc; }
+.sn-chart-scroll img { display:block; width:100%; min-width:850px; height:auto; }
+.sn-curve figcaption { margin-top:14px; color:#405782; text-align:center; font-size:15px; line-height:1.4; letter-spacing:.035em; }
+.sn-scroll-hint { --arotec-body-size:14px; --arotec-body-line-height:1.4; display:none; padding-top:10px; color:var(--sn-muted); text-align:center; }
+.sn-transition { padding-block:52px; background:#eaf5fc; }
+.sn-transition-grid { display:grid; grid-template-columns:.95fr .7fr 1.5fr; align-items:start; gap:26px; }
+.sn-transition-copy { --site-type-h2:clamp(32px,2.5vw,48px); --site-line-h2:1.12; --site-letter-h2:-.025em; --site-type-h3:clamp(21px,1.48vw,28px); --site-line-h3:1.2; --site-letter-h3:-.02em; --arotec-body-size:clamp(18px,1.3vw,24px); --arotec-body-line-height:1.5; padding-top:30px; }
+html body.stress-reference-page #transition-title { margin-bottom:28px !important; }
+html body.stress-reference-page #main .sn-transition-copy h3 { border-top:3px solid #69b8df; padding-top:24px; margin-bottom:22px !important; }
+.sn-transition-copy p { color:#405782; }
+.sn-explore { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:50px; padding:12px 18px; margin-top:28px; border:2px solid var(--sn-blue); border-radius:12px; background:#fff; color:var(--sn-blue); font-size:18px; font-weight:700; line-height:1.3; text-decoration:none; transition:color 180ms,background-color 180ms; }
+.sn-explore:hover { color:#fff; background:var(--sn-blue); }
+.sn-explore .ph { flex:none; font-size:24px; }
+.sn-recovery-portrait { display:block; align-self:stretch; width:100%; min-height:630px; height:100%; max-height:850px; object-fit:cover; object-position:50% top; border-radius:16px; }
+.sn-pathway { --site-type-h3:20px; --site-line-h3:1.2; --site-letter-h3:-.015em; --site-type-h4:18px; --site-line-h4:1.2; --arotec-body-size:18px; --arotec-body-line-height:1.4; min-width:0; text-align:center; }
+.sn-exposure { padding:16px; border:1px solid #92b6dd; border-radius:12px; background:#f7fbff; }
+html body.stress-reference-page #main .sn-exposure h3 { margin-bottom:8px !important; }
+.sn-exposure p { color:var(--sn-muted); }
+.sn-flow-arrow { display:block; margin:10px auto; color:#3a7bc5; font-size:30px; }
+.sn-pathway-title { --arotec-body-size:17px; --arotec-body-line-height:1.35; font-weight:700; }
+html body.stress-reference-page #main .sn-decision { padding:14px 12px; margin:18px 0 20px !important; border:1px solid #a9bddf; border-radius:12px; background:#fff; }
+.sn-branches { display:grid; grid-template-columns:1fr 1.12fr; gap:22px; }
+.sn-branch { --sn-branch-color:#337d45; --sn-branch-surface:#edf7ed; }
+.sn-branch--no { --sn-branch-color:#a0323b; --sn-branch-surface:#fff1f0; }
+html body.stress-reference-page #main .sn-branch h4 { color:var(--sn-branch-color); margin-bottom:0 !important; }
+.sn-branch ol { padding:0; margin:0; list-style:none; }
+.sn-branch li > .ph { display:block; font-size:26px; line-height:1.2; color:var(--sn-branch-color); margin:5px 0; }
+.sn-branch li > span { display:flex; align-items:center; justify-content:center; min-height:64px; padding:14px 10px; border:1px solid var(--sn-branch-color); border-radius:12px; color:var(--sn-branch-color); background:var(--sn-branch-surface); font-size:17px; font-weight:700; line-height:1.3; }
+.sn-recurrence { display:flex; align-items:center; justify-content:center; gap:6px; padding:10px 4px 4px; min-height:44px; font-size:14px; line-height:1.3; color:var(--sn-branch-color); text-underline-offset:3px; }
+.sn-recurrence .ph { flex:none; font-size:20px; }
+.sn-recurrence small { display:block; margin-top:3px; font-size:12px; font-weight:400; }
+.sn-recurrence:hover { text-decoration-thickness:2px; }
+.stress-reference-page #main :is(a,[tabindex]):focus-visible { outline:3px solid #2865ef; outline-offset:5px; }
+@media (hover:hover) { .sn-stage:hover { transform:translateY(-5px); box-shadow:0 12px 28px #15235b12; } }
+@media (max-width:1450px) and (min-width:1200px) {
+  .sn-stages-layout { grid-template-columns:240px minmax(0,1fr); gap:28px; }
+  .sn-stage-grid { gap:8px; }
+  .sn-stage-copy { padding-inline:7px; }
+  .sn-transition-grid { grid-template-columns:1fr .7fr 1.5fr; gap:18px; }
+  .sn-pathway { --arotec-body-size:16px; --site-type-h3:18px; }
+  .sn-branches { gap:12px; }
+  .sn-branch li > span { font-size:16px; }
+  .sn-scroll-hint { display:block; }
+}
+@media (max-width:1199px) {
+  body.stress-reference-page { --sn-gutter:40px; }
+  .sn-hero { min-height:0; background:#091b2a; padding:56px 0 0; }
+  .sn-hero-copy { --arotec-display-size:56px; width:min(850px,100%); }
+  .sn-narrative { --arotec-body-size:22px; }
+  .sn-mobile-art { display:block; width:100%; height:auto; margin-top:30px; }
+  .sn-stages-layout { grid-template-columns:1fr; gap:30px; }
+  .sn-stages-intro { --site-type-h2:42px; --arotec-body-size:20px; display:grid; grid-template-columns:1fr 1.4fr; gap:18px 36px; }
+  .sn-stages-intro > h2 { align-self:end; }
+  .sn-section-lead { grid-column:1; }
+  .sn-curve-explainer { grid-column:2; grid-row:1 / 3; margin-top:0; }
+  .sn-stage { --site-type-h3:21px; --arotec-body-size:18px; }
+  .sn-transition-grid { grid-template-columns:1fr 1.4fr; gap:36px; }
+  .sn-transition-copy { grid-column:1 / -1; padding-top:0; --site-type-h2:42px; --arotec-body-size:22px; }
+  .sn-transition-copy p { max-width:850px; }
+  .sn-recovery-portrait { grid-column:1; min-height:0; max-height:800px; }
+}
+@media (max-width:950px) { .sn-scroll-hint { display:block; } }
+@media (max-width:800px) {
+  body.stress-reference-page { --sn-gutter:24px; }
+  html body.stress-reference-page #main { padding-top:80px; }
+  .stress-reference-page #main :is(section,[id]) { scroll-margin-top:100px; }
+  .sn-hero { padding-top:44px; }
+  .sn-hero-copy { --arotec-display-size:40px; }
+  .sn-hero-copy h1 br { display:none; }
+  .sn-narrative { --arotec-body-size:20px; --arotec-body-line-height:1.5; }
+  .sn-eyebrow { --arotec-body-size:13px; letter-spacing:.1em; }
+  .sn-mobile-art { width:100%; aspect-ratio:1.15; object-fit:cover; object-position:right center; }
+  .sn-stages,.sn-transition { padding-block:44px; }
+  .sn-stages-intro { display:block; --site-type-h2:36px; }
+  .sn-curve-explainer { margin-top:30px; }
+  .sn-stage-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .sn-stage { --site-type-h3:20px; --arotec-body-size:17px; }
+  .sn-transition-grid { grid-template-columns:1fr; gap:28px; }
+  .sn-transition-copy { --site-type-h2:36px; --arotec-body-size:20px; }
+  .sn-recovery-portrait { width:100%; height:340px; object-position:center 18%; }
+  .sn-pathway { --site-type-h3:20px; --arotec-body-size:18px; }
+}
+@media (max-width:480px) {
+  .sn-stage-grid { gap:10px; }
+  .sn-stage { --site-type-h3:18px; --arotec-body-size:16px; }
+  .sn-stage-copy { padding:14px 8px 18px; }
+  .sn-branches { gap:12px; }
+  .sn-branch li > span { padding:12px 8px; font-size:15px; }
+  .sn-recurrence { font-size:13px; flex-wrap:wrap; }
+}
+@media (max-width:380px) { .sn-stage-grid { grid-template-columns:1fr; } }
+@media (prefers-reduced-motion:reduce) {
+  html:has(> body.stress-reference-page) { scroll-behavior:auto; }
+  .sn-stage,.sn-explore { transition:none; }
+  .sn-stage:hover { transform:none; }
+}
+
+/* One flat Exposome-style disclosure reveals both transition research panels. */
+.sn-details-section { padding-block:0 54px; background:#f9fcff; }
+.sn-accordion { border-block:1px solid #c6dce9; border-radius:0; background:transparent; }
+.sn-accordion-toggle { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:72px; padding:18px 0; color:#0a165c; cursor:pointer; list-style:none; font-size:22px; font-weight:700; line-height:1.35; }
+.sn-accordion-toggle::-webkit-details-marker { display:none; }
+.sn-accordion-toggle > span { min-width:0; overflow-wrap:break-word; }
+.sn-accordion-toggle > .ph { flex:none; font-size:24px; transition:transform 160ms; }
+.sn-accordion[open] > .sn-accordion-toggle > .ph { transform:rotate(180deg); }
+.sn-accordion:not([open]) > .sn-details-content { display:none; }
+.sn-accordion-toggle:focus-visible { outline:3px solid #317bc5; outline-offset:5px; }
+.sn-details-content { padding:36px 0 44px; }
+.sn-research-panel { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,2.15fr); gap:38px; }
+.sn-research-panel + .sn-research-panel { margin-top:60px; padding-top:52px; border-top:1px solid #c6dce9; }
+.sn-research-panel > *, .sn-outcomes-grid > *, .sn-system-card > div, .sn-foundation > div, .sn-outcome-list li > div { min-width:0; }
+.sn-research-intro { --site-type-h2:clamp(30px,2.2vw,42px); --site-line-h2:1.12; --site-letter-h2:-.025em; --arotec-body-size:clamp(18px,1.15vw,22px); --arotec-body-line-height:1.5; }
+html body.stress-reference-page #main .sn-research-intro h2 { margin-bottom:20px !important; }
+.sn-research-intro > p { color:#405782; }
+.sn-research-subtitle { --arotec-body-size:clamp(22px,1.55vw,28px); --arotec-body-line-height:1.3; padding-bottom:24px; margin-bottom:24px !important; border-bottom:3px solid #6fc6e5; color:#1b327e !important; }
+.sn-research-note { border-top:3px solid #6fc6e5; padding-top:22px; margin-top:32px !important; }
+.sn-system-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; list-style:none; padding:0; margin:0; }
+.sn-system-card { --site-type-h3:20px; --site-line-h3:1.22; --site-letter-h3:-.015em; min-width:0; padding:16px; border:1px solid #d6e5f1; border-radius:16px; background:#f0f8fd; }
+.sn-system-card > img { display:block; width:100%; height:170px; object-fit:contain; margin-bottom:14px; border-radius:9px; }
+html body.stress-reference-page #main :is(.sn-system-card,.sn-foundation) h3 { display:flex; align-items:flex-start; gap:10px; margin-bottom:12px !important; }
+.sn-system-number { display:inline-flex; align-items:center; justify-content:center; flex:none; width:30px; height:30px; border-radius:50%; background:#101f67; color:#fff; font-size:19px; font-weight:700; line-height:1; }
+.sn-system-card ul, .sn-foundation ul { padding-left:20px; margin:0; color:#405782; font-size:17px; line-height:1.45; }
+.sn-system-card li + li, .sn-foundation li + li { margin-top:5px; }
+.sn-reciprocal { --arotec-body-size:16px; --arotec-body-line-height:1.3; display:flex; justify-content:center; align-items:center; gap:12px; padding:18px 0; color:#405782; font-weight:700; }
+.sn-reciprocal .ph { font-size:27px; }
+.sn-foundation { --site-type-h3:23px; --site-line-h3:1.22; --site-letter-h3:-.015em; display:grid; grid-template-columns:.85fr 1.15fr; gap:22px; align-items:center; padding:20px; border:1px solid #ecd9d7; border-radius:16px; background:#fff6f2; }
+.sn-foundation > img { display:block; width:100%; height:190px; object-fit:contain; border-radius:10px; }
+.sn-foundation .sn-system-number { background:#b64435; }
+.sn-foundation-label { --arotec-body-size:15px; --arotec-body-line-height:1.3; color:#a33e35; font-weight:700; margin-bottom:12px !important; }
+.sn-outcomes-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(130px,.55fr) minmax(0,1fr); gap:18px; }
+.sn-outcome-domain { --site-type-h3:22px; --site-line-h3:1.2; --site-letter-h3:-.02em; border:1px solid #d6e5f1; border-radius:16px; padding:18px 14px; background:#f0f8fd; }
+html body.stress-reference-page #main .sn-outcome-domain > h3 { min-height:80px; margin-bottom:14px !important; text-align:center; }
+.sn-outcome-list { list-style:none; padding:0; margin:0; }
+.sn-outcome-list > li { display:flex; align-items:center; gap:12px; min-height:100px; padding:13px 0; border-top:1px solid #d5e2ef; }
+.sn-outcome-list img { flex:none; width:64px; height:64px; object-fit:cover; border-radius:50%; border:2px solid #fff; }
+.sn-outcome-list h4 { --site-type-h4:17px; --site-line-h4:1.28; --site-letter-h4:-.01em; }
+html body.stress-reference-page #main .sn-outcome-list h4 { margin-bottom:5px !important; }
+.sn-outcome-list p { --arotec-body-size:14px; --arotec-body-line-height:1.3; color:#405782; padding-bottom:5px; }
+.sn-association { display:inline-block; border:1px solid #426399; border-radius:20px; padding:3px 9px; font-size:11px; line-height:1.1; color:#274582; text-transform:uppercase; font-weight:700; letter-spacing:.035em; }
+.sn-mechanisms { --site-type-h3:19px; --site-line-h3:1.25; --site-letter-h3:-.02em; text-align:center; padding-top:22px; }
+html body.stress-reference-page #main .sn-mechanisms h3 { margin-bottom:14px !important; }
+.sn-mechanisms ul { --arotec-body-size:17px; --arotec-body-line-height:1.3; display:grid; gap:18px; list-style:none; padding:16px 0; margin:0; }
+.sn-mechanisms li { display:grid; justify-items:center; gap:8px; font-size:17px; line-height:1.3; color:#274582; }
+.sn-mechanisms li > .ph { font-size:34px; color:#3858a0; }
+.sn-mechanism-connection { display:block; font-size:32px; color:#5a90c2; }
+.sn-feedback { --site-type-h3:22px; --site-line-h3:1.25; --site-letter-h3:-.015em; margin-top:26px; padding:24px; border:1px solid #bed7ec; border-radius:18px; background:#eef7fd; text-align:center; }
+html body.stress-reference-page #main .sn-feedback h3 { margin-bottom:18px !important; }
+.sn-feedback h3 > .ph { display:inline-block; vertical-align:middle; margin-right:8px; font-size:28px; }
+.sn-feedback ol { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px; list-style:none; padding:0; margin:0; }
+.sn-feedback li { display:flex; align-items:center; gap:12px; font-size:16px; line-height:1.35; color:#405782; }
+.sn-feedback li > .ph { flex:none; font-size:23px; color:#426caa; }
+@media (max-width:1450px) {
+  .sn-research-panel { grid-template-columns:minmax(0,.8fr) minmax(0,2.2fr); gap:28px; }
+  .sn-outcomes-panel { grid-template-columns:1fr; }
+  .sn-outcomes-panel > .sn-research-intro { display:grid; grid-template-columns:1fr 1fr; gap:16px 36px; }
+  .sn-outcomes-panel .sn-research-note { margin-top:0 !important; }
+  .sn-outcomes-panel .sn-research-subtitle { border:0; padding:0; margin-bottom:0 !important; }
+  .sn-outcome-domain > h3 { min-height:54px !important; }
+}
+@media (max-width:1199px) {
+  .sn-research-panel { grid-template-columns:1fr; }
+  .sn-research-intro { --site-type-h2:38px; --arotec-body-size:20px; }
+  .sn-research-note { margin-top:24px !important; }
+  .sn-system-card { display:grid; grid-template-columns:.8fr 1.2fr; gap:16px; align-items:center; }
+  .sn-system-card > img { margin-bottom:0; }
+}
+@media (max-width:800px) {
+  .sn-details-content { padding-top:28px; }
+  .sn-research-panel + .sn-research-panel { padding-top:36px; margin-top:40px; }
+  .sn-outcomes-panel > .sn-research-intro { display:block; }
+  .sn-research-intro { --site-type-h2:32px; --arotec-body-size:19px; }
+  .sn-outcomes-panel .sn-research-subtitle { margin-bottom:24px !important; padding-bottom:24px; border-bottom:3px solid #6fc6e5; }
+  .sn-outcomes-panel .sn-research-note { margin-top:24px !important; }
+  .sn-system-card { display:block; }
+  .sn-system-card > img { margin-bottom:16px; }
+  .sn-foundation { grid-template-columns:1fr; }
+  .sn-foundation > img { height:180px; }
+  .sn-outcomes-grid { grid-template-columns:1fr; gap:24px; }
+  .sn-outcome-domain { padding:22px; }
+  .sn-outcome-domain > h3 { min-height:0 !important; }
+  .sn-outcome-list img { width:76px; height:76px; }
+  .sn-outcome-list h4 { --site-type-h4:20px; }
+  .sn-outcome-list p { --arotec-body-size:16px; }
+  .sn-mechanisms { padding:22px; border-block:1px solid #d5e2ef; }
+  .sn-mechanisms ul { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .sn-mechanisms li:last-child { grid-column:1 / -1; }
+  .sn-feedback ol { flex-direction:column; }
+  .sn-feedback li { flex-direction:column; }
+  .sn-feedback li > .ph { transform:rotate(90deg); }
+}
+@media (max-width:580px) {
+  .sn-system-grid { grid-template-columns:minmax(0,1fr); }
+  .sn-system-card { padding:20px; }
+  .sn-system-card > img { height:200px; }
+  .sn-system-card { --site-type-h3:23px; }
+  .sn-system-card ul, .sn-foundation ul { font-size:18px; }
+  .sn-outcome-domain { padding:18px; }
+  .sn-outcome-list img { width:62px; height:62px; }
+  .sn-accordion-toggle { font-size:20px; }
+}
+@media (max-width:480px) { .sn-mechanisms ul { grid-template-columns:1fr; } }
+@media (max-width:380px) {
+  .sn-system-card { --site-type-h3:20px; }
+  html body.stress-reference-page #main :is(.sn-system-card,.sn-foundation) h3 { display:block; overflow-wrap:anywhere; }
+  .sn-system-number { display:flex; margin-bottom:9px; }
+  .sn-outcome-list img { width:52px; height:52px; }
+  .sn-outcome-list h4 { --site-type-h4:18px; overflow-wrap:anywhere; }
+}
+@media (prefers-reduced-motion:reduce) { .sn-accordion-toggle > .ph { transition:none; } }
+
+/* Source 4: a visible continuation after the transition disclosure. */
+.sn-neurodegeneration { padding-block:60px; background:#eff8fd; }
+.sn-neuro-layout { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,2.15fr); gap:38px; align-items:start; }
+.sn-neuro-layout > *, .sn-neuro-content * { min-width:0; }
+.sn-neuro-intro { --site-type-h2:clamp(30px,2.2vw,40px); padding-top:18px; }
+.sn-neuro-phases { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:0; margin:0; list-style:none; }
+.sn-neuro-phase { --site-type-h3:20px; --site-line-h3:1.22; --site-letter-h3:-.02em; --arotec-body-size:16px; --arotec-body-line-height:1.4; position:relative; display:flex; flex-direction:column; }
+html body.stress-reference-page #main .sn-neuro-phase h3 { display:flex; align-items:flex-start; gap:10px; min-height:74px; margin-bottom:10px !important; }
+.sn-neuro-number { display:inline-flex; flex:none; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:#0d206a; color:#fff; font-size:22px; font-weight:700; line-height:1; }
+.sn-neuro-phase > p { color:#405782; min-height:90px; }
+.sn-neuro-phase > img { display:block; width:100%; height:185px; object-fit:contain; margin-top:auto; }
+.sn-neuro-connector { position:absolute; right:-25px; top:62%; z-index:1; color:#4179b6; font-size:27px; }
+.sn-neuro-loop { display:flex; align-items:center; gap:12px; margin:18px 0 28px; padding:14px 18px; background:#e2eff9; border:1px solid #cbdfea; border-radius:12px; color:#365787; }
+.sn-neuro-loop > .ph { flex:none; font-size:28px; }
+.sn-neuro-loop p { --arotec-body-size:16px; --arotec-body-line-height:1.45; }
+.sn-neuro-loop p > span { padding-inline:5px; }
+.sn-neuro-path { --site-type-h3:25px; --site-line-h3:1.25; --site-letter-h3:-.02em; }
+.sn-neuro-path + .sn-neuro-path { margin-top:30px; padding-top:28px; border-top:1px solid #c9dde9; }
+html body.stress-reference-page #main .sn-neuro-row-title { display:flex; align-items:center; gap:14px; margin-bottom:20px !important; }
+.sn-cognitive-grid, .sn-neuro-contributors { display:grid; gap:22px; grid-template-columns:repeat(4,minmax(0,1fr)); list-style:none; padding:0; margin:0; }
+.sn-cognitive-grid > li, .sn-neuro-contributors > li { position:relative; text-align:center; }
+.sn-cognitive-grid img { display:block; width:100%; height:175px; object-fit:contain; }
+.sn-cognitive-grid .sn-neuro-connector { top:70px; right:-25px; }
+.sn-neuro-content h4 { --site-type-h4:17px; --site-line-h4:1.3; --site-letter-h4:-.015em; }
+html body.stress-reference-page #main .sn-neuro-content h4 { margin:12px 0 0 !important; }
+.sn-neuro-caution { --arotec-body-size:16px; --arotec-body-line-height:1.4; padding:17px 12px 0; text-align:center; color:#365787; font-weight:500; }
+.sn-neuro-endpoint { display:grid; grid-template-columns:minmax(0,4fr) 28px minmax(0,1.3fr); align-items:start; gap:12px; }
+.sn-neuro-contributors { gap:18px; }
+.sn-neuro-contributors img { display:block; width:100%; height:130px; object-fit:contain; }
+.sn-neuro-contributors .sn-neuro-connector { top:52px; right:-20px; font-size:23px; color:#163d8b; }
+.sn-neuro-endpoint-arrow { display:block; padding-top:48px; color:#b75562; font-size:28px; }
+.sn-neuro-result { margin:0; text-align:center; }
+.sn-neuro-result > img { display:block; width:100%; height:130px; object-fit:contain; }
+.sn-neuro-result p { --arotec-body-size:15px; --arotec-body-line-height:1.35; padding-top:8px; color:#405782; }
+@media (max-width:1450px) {
+  .sn-neuro-layout { grid-template-columns:1fr; gap:34px; }
+  .sn-neuro-intro { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 36px; padding-top:0; --site-type-h2:38px; }
+  .sn-neuro-intro .sn-research-subtitle { margin:0 !important; padding:0; border:0; align-self:center; }
+  .sn-neuro-intro .sn-research-note { margin:0 !important; padding-top:0; border:0; align-self:start; }
+  html body.stress-reference-page #main .sn-neuro-intro h2 { margin:0 !important; }
+  .sn-neuro-phase > p { min-height:72px; }
+  .sn-neuro-phase > img { height:215px; }
+  .sn-cognitive-grid img { height:210px; }
+  .sn-cognitive-grid .sn-neuro-connector { top:90px; }
+  .sn-neuro-contributors img, .sn-neuro-result > img { height:155px; }
+  .sn-neuro-endpoint-arrow { padding-top:60px; }
+  .sn-neuro-contributors .sn-neuro-connector { top:66px; }
+}
+@media (max-width:800px) {
+  .sn-neurodegeneration { padding-block:44px; }
+  .sn-neuro-intro { display:block; --site-type-h2:32px; }
+  html body.stress-reference-page #main .sn-neuro-intro h2 { margin-bottom:22px !important; }
+  .sn-neuro-intro .sn-research-subtitle { padding-bottom:24px; margin-bottom:24px !important; border-bottom:3px solid #6fc6e5; }
+  .sn-neuro-intro .sn-research-note { margin-top:24px !important; padding-top:22px; border-top:3px solid #6fc6e5; }
+  .sn-neuro-phases { gap:20px; }
+  .sn-neuro-phase { --site-type-h3:18px; --arotec-body-size:16px; }
+  html body.stress-reference-page #main .sn-neuro-phase h3 { display:block; min-height:106px; }
+  .sn-neuro-phase .sn-neuro-number { display:flex; margin-bottom:10px; }
+  .sn-neuro-phase > p { min-height:112px; }
+  .sn-neuro-phase > img { height:175px; }
+  .sn-neuro-endpoint { grid-template-columns:1fr; gap:18px; }
+  .sn-neuro-endpoint-arrow { padding:0; justify-self:center; transform:rotate(90deg); }
+  .sn-neuro-result { justify-self:center; max-width:300px; }
+  .sn-neuro-result > img { height:190px; }
+  .sn-neuro-contributors img { height:145px; }
+}
+@media (max-width:650px) {
+  .sn-neuro-phases { grid-template-columns:minmax(0,1fr); gap:38px; }
+  .sn-neuro-phase { --site-type-h3:23px; --arotec-body-size:18px; border:1px solid #cfdfed; border-radius:16px; padding:20px; background:#f6fbff; }
+  html body.stress-reference-page #main .sn-neuro-phase h3 { display:flex; min-height:0; }
+  .sn-neuro-phase .sn-neuro-number { margin:0; }
+  .sn-neuro-phase > p { min-height:0; margin-bottom:15px !important; }
+  .sn-neuro-phase > img { height:210px; margin:0; }
+  .sn-neuro-phase > .sn-neuro-connector { right:calc(50% - 14px); top:auto; bottom:-34px; transform:rotate(90deg); }
+  .sn-neuro-loop { align-items:flex-start; margin-top:22px; }
+  .sn-neuro-path { --site-type-h3:24px; }
+  .sn-cognitive-grid { grid-template-columns:1fr; gap:38px; }
+  .sn-cognitive-grid > li { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:18px; text-align:left; }
+  .sn-cognitive-grid img { height:180px; }
+  .sn-cognitive-grid .sn-neuro-connector { top:auto; right:calc(50% - 14px); bottom:-34px; transform:rotate(90deg); }
+  .sn-neuro-contributors { grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+  .sn-neuro-contributors > li:nth-child(2) > .sn-neuro-connector { display:none; }
+  .sn-neuro-contributors img { height:140px; }
+  .sn-neuro-content h4 { --site-type-h4:18px; }
+  .sn-neuro-caution { padding-top:24px; }
+}
+@media (max-width:380px) {
+  .sn-neuro-intro { --site-type-h2:27px; }
+  .sn-neuro-phase { --site-type-h3:20px; }
+  html body.stress-reference-page #main .sn-neuro-phase h3 { display:block; }
+  .sn-neuro-phase .sn-neuro-number { margin-bottom:10px; }
+  html body.stress-reference-page #main .sn-neuro-row-title { display:block; }
+  .sn-neuro-row-title .sn-neuro-number { display:flex; margin-bottom:10px; }
+  .sn-neuro-content h4 { --site-type-h4:16px; overflow-wrap:anywhere; }
+  .sn-neuro-contributors img { height:120px; }
+}

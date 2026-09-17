@@ -1,0 +1,395 @@
+html:has(body.np26-page) { scroll-behavior:auto!important; }
+.np26-mechanism-decoration { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.np26-corner { position:absolute; width:19%; height:auto; }
+.np26-corner--tl { left:0; top:0; width:9.5%; }.np26-corner--tr { right:0; top:0; width:9.5%; }
+.np26-corner--bl { left:0; bottom:0; }.np26-corner--br { right:0; bottom:0; }
+.np26-mechanisms-heading,.np26-mechanisms-grid { position:relative; z-index:1; }
+@media(max-width:1100px) { .np26-mechanism-decoration { display:none; } }
+@media(min-width:1101px) {
+  html body.np26-page main#main#main #mechanisms .np26-condition-feedback { font-size:.74cqw!important; }
+}
+html body.np26-page main#main :where(li,dt,dd,span,strong) {font-size:inherit!important;line-height:inherit!important;}
+/* Reference 1–4: independent artwork and selectable HTML copy.
+   Site-wide navigation, footer and DM Sans are inherited from the home shell. */
+html body.np26-page { background:#fff; --np26-ink:#071e34; --np26-copy:#203c61; --np26-line:#a8b8c7; }
+html body.np26-page main#main > .np26-section::before { content:none!important; }
+html body.np26-page main#main#main.np26-main { display:block; width:100%; max-width:none; margin:0!important; padding:var(--detail-header-space,100px) 0 0; color:var(--np26-ink); font-family:var(--site-font,"DM Sans",sans-serif)!important; background:#fff; overflow:clip; }
+html body.np26-page main#main#main.np26-main *, html body.np26-page main#main#main.np26-main *::before, html body.np26-page main#main#main.np26-main *::after { box-sizing:border-box; }
+html body.np26-page main#main#main :is(h1,h2,h3,h4,p,figure,ul,ol,dl,dd) { margin:0!important; }
+html body.np26-page main#main#main :is(h1,h2,h3,h4) { color:var(--np26-ink); font-family:inherit!important; text-transform:none!important; letter-spacing:-.035em!important; }
+html body.np26-page main#main#main :is(p,li,dt,dd) { font-family:inherit!important; }
+/* Reference 2.1: the same flat disclosure pattern used by Exposome. */
+html body.np26-page main#main#main .np26-neuromodulatory { padding:0; background:#f3f9fd; }
+html body.np26-page main#main#main .np26-disclosure-shell { max-width:1920px; margin-inline:auto; padding-inline:150px; }
+html body.np26-page main#main#main .np26-accordion { border:0; border-block:1px solid #c6dce9; border-radius:0; background:transparent; scroll-margin-top:calc(var(--detail-header-space,100px) + 24px); }
+html body.np26-page main#main#main .np26-accordion-toggle { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:72px; padding:18px 0; color:#0a165c; cursor:pointer; list-style:none; font-family:inherit!important; font-size:22px!important; font-weight:700!important; line-height:1.4!important; }
+html body.np26-page main#main#main .np26-accordion-toggle::-webkit-details-marker { display:none; }
+html body.np26-page main#main#main .np26-accordion-toggle::marker { content:""; }
+html body.np26-page main#main#main .np26-accordion-toggle:focus-visible { outline:3px solid #317bc5; outline-offset:5px; }
+html body.np26-page main#main#main .np26-accordion-toggle > span { min-width:0; overflow-wrap:break-word; }
+html body.np26-page main#main#main .np26-accordion-toggle > .ph { flex-shrink:0; font-size:24px!important; transition:transform 160ms; }
+html body.np26-page main#main#main .np26-accordion[open] > .np26-accordion-toggle > .ph { transform:rotate(180deg); }
+html body.np26-page main#main#main .np26-accordion:not([open]) > .np26-neuromodulatory-content { display:none; }
+html body.np26-page main#main#main .np26-neuromodulatory-content { container-type:inline-size; padding:36px 0 42px; }
+html body.np26-page main#main#main .np26-neuromodulatory-grid { display:grid; grid-template-columns:27fr 43fr 30fr; align-items:center; gap:24px; }
+html body.np26-page main#main#main .np26-neuromodulatory-grid > * { min-width:0; }
+html body.np26-page main#main#main .np26-neuromodulatory-copy h2 { font-size:clamp(28px,3cqw,50px)!important; line-height:1.13!important; font-weight:800!important; margin-bottom:28px!important; letter-spacing:-.045em!important; }
+html body.np26-page main#main#main .np26-neuromodulatory-copy p { font-size:clamp(15px,1.35cqw,22px)!important; line-height:1.6!important; color:var(--np26-copy); }
+html body.np26-page main#main#main .np26-neuromodulatory-figure img { display:block; width:100%; height:auto; mix-blend-mode:multiply; }
+html body.np26-page main#main#main .np26-regulatory-systems h3 { font-size:clamp(19px,1.95cqw,31px)!important; font-weight:800!important; line-height:1.25!important; margin-bottom:26px!important; }
+html body.np26-page main#main#main .np26-regulatory-systems dl { display:grid; gap:24px; }
+html body.np26-page main#main#main .np26-regulatory-system { --system-color:#2874ee; }
+html body.np26-page main#main#main .np26-regulatory-system--raphe { --system-color:#803bb0; }
+html body.np26-page main#main#main .np26-regulatory-system--vta { --system-color:#b4842a; }
+html body.np26-page main#main#main .np26-regulatory-system--bf { --system-color:#358a86; }
+html body.np26-page main#main#main .np26-regulatory-system dt { display:flex; gap:12px; align-items:baseline; font-size:clamp(17px,1.58cqw,26px)!important; line-height:1.3!important; font-weight:700!important; color:var(--np26-ink); }
+html body.np26-page main#main#main .np26-regulatory-system dt > i { color:var(--system-color); flex-shrink:0; font-size:24px!important; }
+html body.np26-page main#main#main .np26-regulatory-system dd { margin:4px 0 0 36px!important; font-size:clamp(14px,1.2cqw,20px)!important; line-height:1.5!important; color:var(--np26-copy); }
+html body.np26-page main#main#main .np26-regulatory-system dd > span { display:block; color:#4f6785; }
+html body.np26-page main#main#main .np26-projection-note { margin-top:28px!important; color:#536e88; font-size:clamp(12px,1cqw,17px)!important; line-height:1.5!important; }
+html body.np26-page main#main#main .np26-neuromodulatory-flow { display:flex; align-items:center; justify-content:space-between; gap:18px; list-style:none; padding:0; margin:32px 0 20px!important; }
+html body.np26-page main#main#main .np26-neuromodulatory-flow li { display:flex; align-items:center; gap:18px; font-size:clamp(14px,1.45cqw,24px)!important; line-height:1.4!important; font-weight:500!important; }
+html body.np26-page main#main#main .np26-neuromodulatory-flow i { flex-shrink:0; font-size:clamp(22px,2.7cqw,44px)!important; color:#263b69; }
+html body.np26-page main#main#main .np26-neuromodulatory-closing { color:#4f6785; text-align:center; font-size:clamp(14px,1.2cqw,20px)!important; line-height:1.6!important; }
+@media (max-width:1399px) {
+  html body.np26-page main#main#main .np26-disclosure-shell { padding-inline:40px; }
+}
+@media (max-width:1100px) {
+  html body.np26-page main#main#main .np26-neuromodulatory-grid { grid-template-columns:1.15fr 1fr; gap:28px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-copy { grid-column:1/-1; max-width:760px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-copy h2 { font-size:36px!important; margin-bottom:18px!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-copy p { font-size:16px!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow li { flex-direction:column; text-align:center; font-size:16px!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow i { transform:rotate(90deg); }
+}
+@media (max-width:800px) {
+  html body.np26-page main#main#main .np26-disclosure-shell { padding-inline:24px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-content { padding:24px 0 34px; }
+}
+@media (max-width:680px) {
+  html body.np26-page main#main#main .np26-accordion-toggle { font-size:19px!important; gap:16px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-grid { grid-template-columns:minmax(0,1fr); gap:24px; }
+  html body.np26-page main#main#main .np26-neuromodulatory-copy h2 { font-size:clamp(27px,7.5vw,36px)!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-figure { max-width:440px; margin-inline:auto!important; }
+  html body.np26-page main#main#main .np26-regulatory-systems h3 { font-size:23px!important; }
+  html body.np26-page main#main#main .np26-regulatory-system dt { font-size:19px!important; }
+  html body.np26-page main#main#main .np26-regulatory-system dd { font-size:15px!important; }
+  html body.np26-page main#main#main .np26-projection-note { font-size:13px!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow { grid-template-columns:minmax(0,1fr); gap:12px; margin-top:28px!important; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow li { flex-direction:column; gap:12px; text-align:center; }
+  html body.np26-page main#main#main .np26-neuromodulatory-flow i { transform:rotate(90deg); }
+  html body.np26-page main#main#main .np26-neuromodulatory-closing { font-size:14px!important; text-align:left; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html body.np26-page main#main#main .np26-accordion-toggle > .ph { transition:none; }
+}
+/* Keep section heights accurate for Explore navigation after a viewport resize. */
+html body.np26-page main#main#main .np26-section { position:relative; scroll-margin-top:110px!important; content-visibility:visible!important; contain-intrinsic-size:none!important; }
+html body.np26-page main#main#main .np26-stage { position:relative; width:100%; max-width:1920px; margin-inline:auto; aspect-ratio:3154 / 1774; container-type:inline-size; }
+html body.np26-page main#main#main .np26-art { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; }
+html body.np26-page main#main#main .np26-hero { background:#f6f4ef; }
+html body.np26-page main#main#main .np26-hero-copy { position:absolute; left:8%; top:16.4%; width:29%; }
+html body.np26-page main#main#main .np26-eyebrow { font-size:1.23cqw!important; font-weight:700!important; letter-spacing:.24em!important; line-height:1.4!important; margin-bottom:2.25cqw!important; }
+html body.np26-page main#main#main #np26-title { --arotec-display-size:3.7cqw; --arotec-display-line-height:1.18!important; --arotec-display-weight:800; --arotec-display-letter-spacing:-.045em!important; margin:0 0 2.05cqw!important; }
+@media (min-width:901px) {
+  /* Fit the opening artwork to the desktop viewport below the shared header. */
+  html body.np26-page main#main#main .np26-hero .np26-stage {
+    max-width:none;
+    aspect-ratio:auto;
+    height:calc(100svh - var(--detail-header-space,100px));
+  }
+  html body.np26-page main#main#main .np26-hero .np26-art {
+    object-fit:cover;
+    object-position:center;
+  }
+  html body.np26-page main#main#main .np26-hero-copy {
+    top:50%;
+    transform:translateY(-50%);
+  }
+  html body.np26-page main#main#main #np26-title {
+    --arotec-display-size:clamp(30px,min(3.35cqw,7.4svh),64px);
+    --arotec-display-line-height:1.12!important;
+    text-wrap:wrap!important;
+  }
+}
+html body.np26-page main#main#main .np26-hero-copy p:not(.np26-eyebrow) { font-size:1.28cqw!important; line-height:1.5!important; color:#304456; letter-spacing:-.025em!important; }
+html body.np26-page main#main#main .np26-hero-copy .np26-intro { margin-bottom:1.6cqw!important; font-size:1.38cqw!important; }
+html body.np26-page main#main#main .np26-olfactory-copy { position:absolute; left:9.6%; top:20%; width:25.6%; }
+html body.np26-page main#main#main .np26-olfactory-copy h2 { font-size:3.02cqw!important; line-height:1.13!important; font-weight:800!important; margin-bottom:1.35cqw!important; letter-spacing:-.045em!important; }
+html body.np26-page main#main#main .np26-olfactory-copy>p { font-size:1.18cqw!important; line-height:1.35!important; color:var(--np26-copy); letter-spacing:-.035em!important; }
+html body.np26-page main#main#main .np26-region { position:absolute; left:77%; width:21%; font-size:1.11cqw!important; line-height:1.3!important; color:#203c61; letter-spacing:-.03em!important; }
+html body.np26-page main#main#main .np26-region dt { font-weight:700!important; color:#143465; }
+html body.np26-page main#main#main .np26-orbitofrontal { top:20%; }html body.np26-page main#main#main .np26-piriform { top:30.2%; }html body.np26-page main#main#main .np26-amygdala { top:37.5%; }html body.np26-page main#main#main .np26-hippocampus { top:44.9%; }html body.np26-page main#main#main .np26-hypothalamus { top:53.4%; }
+html body.np26-page main#main#main .np26-anatomy-labels p { position:absolute; font-size:.84cqw!important; font-weight:700!important; line-height:1.17!important; color:#17315a; letter-spacing:-.04em!important; text-shadow:0 0 4px white,0 0 3px white; }
+html body.np26-page main#main#main .np26-bulb { left:48.4%;top:26%; }html body.np26-page main#main#main .np26-bulb span { display:block; font-weight:400!important; }html body.np26-page main#main#main .np26-tract { left:53.6%; top:33.2%; }html body.np26-page main#main#main .np26-plate { left:42.8%;top:36.6%; }html body.np26-page main#main#main .np26-epithelium { left:46.7%;top:46%; }html body.np26-page main#main#main .np26-aromatic { left:27.3%;top:51%; }html body.np26-page main#main#main .np26-entry { left:30.5%;top:58.3%; color:#c88729!important; }
+html body.np26-page main#main#main .np26-pathway-key { position:absolute; left:22.5%; right:5%; top:71.5%; display:flex; align-items:flex-start; gap:2cqw; color:#17315a; }
+html body.np26-page main#main#main .np26-pathway-flow { display:flex; align-items:center; gap:.55cqw; padding:0; list-style:none; font-size:1.02cqw!important; letter-spacing:-.045em!important; }
+html body.np26-page main#main#main .np26-pathway-flow li { display:flex; align-items:center; gap:.55cqw; white-space:nowrap; }
+html body.np26-page main#main#main .np26-pathway-flow i { font-size:1.8cqw!important; color:#62cbdc; }html body.np26-page main#main#main .np26-pathway-flow li:first-child i { color:#d49537; }
+html body.np26-page main#main#main .np26-legend { list-style:none; padding:0; font-size:.96cqw!important; white-space:nowrap; line-height:1.5!important; letter-spacing:-.045em!important; }html body.np26-page main#main#main .np26-legend li { display:flex; align-items:center; gap:.6cqw; }html body.np26-page main#main#main .np26-legend i { color:#62cbdc; font-size:1.8cqw!important; }html body.np26-page main#main#main .np26-legend li+li i { color:#d49537; }
+html body.np26-page main#main#main .np26-anatomy-note { position:absolute; right:5.5%; top:77.5%; font-size:.7cqw!important; color:#35516e; }
+html body.np26-page main#main#main .np26-explore { position:absolute; right:8%; top:83.7%; width:30%; display:grid; grid-template-columns:1fr auto; color:#17315a; text-decoration:none; border-bottom:1px solid #234573; padding-bottom:.5cqw; transition:color .2s; }
+html body.np26-page main#main#main .np26-explore span { grid-column:1/-1; font-size:.96cqw!important; letter-spacing:.2em!important; font-weight:700!important; margin-bottom:.35cqw!important; }html body.np26-page main#main#main .np26-explore strong { font-size:1.22cqw!important; font-weight:500!important; letter-spacing:-.04em!important; line-height:1.35!important; }html body.np26-page main#main#main .np26-explore i { align-self:end; font-size:2cqw!important; }html body.np26-page main#main#main .np26-explore:hover { color:#208e99; }html body.np26-page main#main#main .np26-explore:focus-visible { outline:3px solid #208e99; outline-offset:6px; }
+html body.np26-page main#main#main .np26-impacts .np26-stage { aspect-ratio:1672 / 941; }
+html body.np26-page main#main#main .np26-impacts-copy { position:absolute; left:4.3%; top:12.1%; width:30%; }
+html body.np26-page main#main#main .np26-impacts-copy h2 { font-size:3.22cqw!important; line-height:1.06!important; font-weight:800!important; letter-spacing:-.05em!important; margin-bottom:1.65cqw!important; }
+html body.np26-page main#main#main .np26-impacts-subtitle { border-top:1px solid var(--np26-line); padding-top:.9cqw; margin-bottom:2.2cqw!important; width:93%; font-size:1.82cqw!important; line-height:1.19!important; font-weight:600!important; letter-spacing:-.05em!important; }
+html body.np26-page main#main#main .np26-impacts-copy>p:not(.np26-impacts-subtitle) { font-size:1.34cqw!important; line-height:1.39!important; letter-spacing:-.035em!important; color:var(--np26-copy); }
+html body.np26-page main#main#main .np26-impacts-closing { border-top:1px solid var(--np26-line); margin-top:1.65cqw!important; padding-top:.85cqw; }
+html body.np26-page main#main#main .np26-impacts-closing h3 { font-size:1.57cqw!important; line-height:1.22!important; letter-spacing:-.05em!important; font-weight:700!important; }
+html body.np26-page main#main#main .np26-impacts-closing p { font-size:1.13cqw!important; color:#60738e; margin-top:1.15cqw!important; letter-spacing:-.025em!important; }
+html body.np26-page main#main#main .np26-systemic { position:absolute; left:37.6%; top:9.1%; width:16%; }html body.np26-page main#main#main .np26-cognitive { position:absolute; right:4.1%; top:9.1%; width:15.3%; }
+html body.np26-page main#main#main :is(.np26-systemic,html body.np26-page main#main#main .np26-cognitive)>h3 { font-size:1.63cqw!important; line-height:1.2!important; font-weight:700!important; letter-spacing:-.05em!important; padding-bottom:.48cqw; border-bottom:1px solid var(--np26-line); white-space:nowrap; }
+html body.np26-page main#main#main .np26-systemic ul,html body.np26-page main#main#main .np26-cognitive ul { list-style:none; padding:0; }
+html body.np26-page main#main#main .np26-systemic li,html body.np26-page main#main#main .np26-cognitive li { position:absolute; font-size:1.19cqw!important; line-height:1.28!important; color:#193459; letter-spacing:-.045em!important; white-space:nowrap; background:rgba(253,254,254,.85); }
+html body.np26-page main#main#main .np26-systemic li:nth-child(1) { top:5.55cqw; }html body.np26-page main#main#main .np26-systemic li:nth-child(2) { top:10.6cqw; }html body.np26-page main#main#main .np26-systemic li:nth-child(3) { top:16.45cqw; }html body.np26-page main#main#main .np26-systemic li:nth-child(4) { top:22.2cqw; }
+html body.np26-page main#main#main .np26-cognitive li { left:3.05cqw; }html body.np26-page main#main#main .np26-cognitive li:nth-child(1) { top:4.65cqw; }html body.np26-page main#main#main .np26-cognitive li:nth-child(2) { top:9.65cqw; }html body.np26-page main#main#main .np26-cognitive li:nth-child(3) { top:15.9cqw; }
+html body.np26-page main#main#main .np26-neurobiological { position:absolute; left:83.4%; top:49.5%; width:15.1%; }
+html body.np26-page main#main#main .np26-neurobiological h3 { font-size:1.2cqw!important; line-height:1.2!important; letter-spacing:-.06em!important; font-weight:700!important; padding-bottom:.45cqw; border-bottom:1px solid var(--np26-line); }
+html body.np26-page main#main#main .np26-neurobiological p { font-size:1.1cqw!important; line-height:1.4!important; color:#2b4567; margin-top:.5cqw!important; letter-spacing:-.04em!important; }
+@media (max-width:900px) {
+  html body.np26-page main#main.np26-main { padding-top:var(--detail-header-space,90px); }
+  html body.np26-page main#main#main .np26-stage { aspect-ratio:auto!important; }
+  html body.np26-page main#main#main .np26-hero .np26-stage { padding:48px 24px 0; display:flex; flex-direction:column; }
+  html body.np26-page main#main#main .np26-hero-copy { position:relative; left:auto; top:auto; width:100%; max-width:600px; order:-1; }
+  html body.np26-page main#main#main .np26-eyebrow { font-size:12px!important; margin-bottom:22px!important; }
+  html body.np26-page main#main#main #np26-title { --arotec-display-size:clamp(36px,6.4vw,58px); margin-bottom:24px!important; }
+  html body.np26-page main#main#main .np26-hero-copy p:not(.np26-eyebrow) { font-size:16px!important; line-height:1.65!important; }
+  html body.np26-page main#main#main .np26-hero-copy .np26-intro { font-size:18px!important; margin-bottom:20px!important; }
+  html body.np26-page main#main#main .np26-hero .np26-art { position:relative; inset:auto; width:calc(100% + 48px); max-width:none; margin:24px -24px 0!important; height:70vw; max-height:580px; object-fit:cover; object-position:right; }
+  html body.np26-page main#main#main .np26-olfactory .np26-stage { padding:56px 24px; display:flex; flex-direction:column; }
+  html body.np26-page main#main#main .np26-olfactory-copy { position:static; width:100%; max-width:640px; order:-2; }
+  html body.np26-page main#main#main .np26-olfactory-copy h2 { font-size:clamp(30px,5vw,44px)!important; margin-bottom:22px!important; }
+  html body.np26-page main#main#main .np26-olfactory-copy>p { font-size:16px!important; line-height:1.65!important; letter-spacing:0!important; }
+  html body.np26-page main#main#main .np26-olfactory .np26-art { position:relative; inset:auto; width:100%; height:76vw; max-height:620px; object-fit:cover; object-position:59% 0; margin:28px 0!important; order:-1; }
+  html body.np26-page main#main#main .np26-brain-regions { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  html body.np26-page main#main#main .np26-region { position:static; width:auto; font-size:15px!important; line-height:1.5!important; border-top:1px solid #cbd9e2; padding-top:10px; }
+  html body.np26-page main#main#main .np26-anatomy-labels { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0!important; }
+  html body.np26-page main#main#main .np26-anatomy-labels p { position:static; font-size:13px!important; line-height:1.5!important; text-shadow:none; }
+  html body.np26-page main#main#main .np26-pathway-key { position:static; display:block; }
+  html body.np26-page main#main#main .np26-pathway-flow { display:flex; flex-wrap:wrap; gap:8px; font-size:13px!important; letter-spacing:0!important; }
+  html body.np26-page main#main#main .np26-pathway-flow li { gap:8px; }html body.np26-page main#main#main .np26-pathway-flow i { font-size:20px!important; }
+  html body.np26-page main#main#main .np26-legend { margin-top:20px!important; font-size:12px!important; line-height:1.8!important; letter-spacing:0!important; }html body.np26-page main#main#main .np26-legend i { font-size:24px!important; }
+  html body.np26-page main#main#main .np26-anatomy-note { position:static; margin:16px 0 28px!important; font-size:11px!important; line-height:1.6!important; }
+  html body.np26-page main#main#main .np26-explore { position:static; width:100%; padding:12px 0; }html body.np26-page main#main#main .np26-explore span { font-size:11px!important; margin-bottom:8px!important; }html body.np26-page main#main#main .np26-explore strong { font-size:17px!important; }html body.np26-page main#main#main .np26-explore i { font-size:28px!important; }
+  html body.np26-page main#main#main .np26-impacts .np26-stage { padding:48px 24px; display:flex; flex-direction:column; }
+  html body.np26-page main#main#main .np26-impacts-copy { position:static; width:100%; order:-2; }
+  html body.np26-page main#main#main .np26-impacts-copy h2 { font-size:clamp(31px,5.3vw,48px)!important; margin-bottom:24px!important; }
+  html body.np26-page main#main#main .np26-impacts-subtitle { font-size:24px!important; padding-top:18px; margin-bottom:22px!important; }
+  html body.np26-page main#main#main .np26-impacts-copy>p:not(.np26-impacts-subtitle) { font-size:16px!important; line-height:1.65!important; letter-spacing:0!important; }
+  html body.np26-page main#main#main .np26-impacts-closing { padding-top:20px; margin-top:24px!important; }
+  html body.np26-page main#main#main .np26-impacts-closing h3 { font-size:21px!important; }
+  html body.np26-page main#main#main .np26-impacts-closing p { font-size:13px!important; line-height:1.5!important; margin-top:12px!important; }
+  html body.np26-page main#main#main .np26-impacts .np26-art { position:relative; inset:auto; width:100%; height:100vw; max-height:680px; object-fit:cover; object-position:70% center; margin:28px 0!important; order:-1; }
+  html body.np26-page main#main#main .np26-systemic,html body.np26-page main#main#main .np26-cognitive,html body.np26-page main#main#main .np26-neurobiological { position:static; width:100%; margin-bottom:25px!important; }
+  html body.np26-page main#main#main :is(.np26-systemic,html body.np26-page main#main#main .np26-cognitive)>h3,html body.np26-page main#main#main .np26-neurobiological h3 { font-size:21px!important; padding-bottom:10px; white-space:normal; }
+  html body.np26-page main#main#main .np26-systemic ul,html body.np26-page main#main#main .np26-cognitive ul { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px!important; }
+  html body.np26-page main#main#main .np26-systemic li,html body.np26-page main#main#main .np26-cognitive li { position:static; font-size:15px!important; white-space:normal; background:none; }
+  html body.np26-page main#main#main .np26-neurobiological p { font-size:15px!important; line-height:1.7!important; margin-top:12px!important; }
+}
+@media (prefers-reduced-motion:reduce) { .np26-main * { scroll-behavior:auto; transition:none; } }
+
+
+html body.np26-page main#main#main .np26-region dt {font-weight:700!important;}
+
+/* Neuroplasticity — editable reconstruction of supplied reference 3.png. */
+html body.np26-page main#main#main #mechanisms.np26-mechanisms {
+  --np26-mechanism-ink: #102b4b;
+  --np26-mechanism-line: #bacde0;
+  --np26-disruptive: #985358;
+  --np26-supportive: #387b82;
+  background: #fbfdff;
+  color: var(--np26-mechanism-ink);
+  overflow: hidden;
+}
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-stage {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 30px 1.7% 26px;
+  box-sizing: border-box;
+}
+html body.np26-page main#main#main #mechanisms :is(h2,h3,h4,p,figure,ol,ul) { margin: 0 !important; }
+html body.np26-page main#main#main #mechanisms :is(h2,h3,h4,p,li,figcaption) {
+  font-family: var(--site-font,"DM Sans",sans-serif) !important;
+  color: var(--np26-mechanism-ink) !important;
+  letter-spacing: -.025em !important;
+  text-transform: none !important;
+  overflow-wrap: normal;
+}
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading { text-align: center; padding: 0 10% 1.1cqw; }
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading h2 {
+  font-size: clamp(26px,2.5cqw,48px) !important;
+  font-weight: 800 !important;
+  line-height: 1.14 !important;
+  white-space: nowrap;
+}
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading p {
+  font-size: clamp(13px,1.33cqw,25px) !important;
+  line-height: 1.35 !important;
+  margin-top: .36cqw !important;
+}
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-grid { display:grid;grid-template-columns:23.5% 45% 23.5%;gap:4%;align-items:start; }
+html body.np26-page main#main#main #mechanisms .np26-conditions { position:relative;z-index:1;--np26-path-color:var(--np26-disruptive); }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive { --np26-path-color:var(--np26-supportive); }
+html body.np26-page main#main#main #mechanisms .np26-conditions > h3 {
+  min-height: 2.1cqw;
+  margin: -.7cqw -1cqw .75cqw !important;
+  text-align: center;
+  font-size: clamp(16px,1.52cqw,30px) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+html body.np26-page main#main#main #mechanisms .np26-condition-gallery {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7cqw .55cqw;
+  padding:.6cqw .5cqw .8cqw;border:1.5px solid var(--np26-mechanism-line);border-radius:.65cqw;
+}
+html body.np26-page main#main#main #mechanisms .np26-condition-gallery figure { min-width:0;text-align:center; }
+html body.np26-page main#main#main #mechanisms .np26-condition-gallery img { display:block;width:100%;height:auto;aspect-ratio:1.02;object-fit:cover;border-radius:.22cqw; }
+html body.np26-page main#main#main #mechanisms .np26-condition-gallery figcaption {
+  font-size:clamp(10px,.85cqw,17px) !important;line-height:1.28 !important;font-weight:500 !important;
+  margin-top:.32cqw !important;letter-spacing:-.045em !important;
+}
+html body.np26-page main#main#main #mechanisms .np26-condition-pathway { position:relative;min-height:15cqw;text-align:center; }
+html body.np26-page main#main#main #mechanisms .np26-condition-pathway::before { content:"";position:absolute;left:15%;right:15%;top:0;height:1.4cqw;border:solid var(--np26-path-color);border-width:0 2px 2px; }
+html body.np26-page main#main#main #mechanisms .np26-condition-down { display:block;width:max-content;margin:1.27cqw auto 0;font-size:2.2cqw;line-height:1.05;color:var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-condition-process,
+html body.np26-page main#main#main #mechanisms .np26-condition-outcome { position:relative;font-size:clamp(11px,1.04cqw,20px) !important;line-height:1.38 !important;font-weight:500 !important; }
+html body.np26-page main#main#main #mechanisms .np26-condition-process { margin:.55cqw -1cqw 0 !important; }
+html body.np26-page main#main#main #mechanisms .np26-condition-outcome { margin:4.8cqw -1.4cqw 0 !important; }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-outcome { margin-top:3.35cqw !important; }
+html body.np26-page main#main#main #mechanisms .np26-condition-feedback { position:absolute;left:102%;top:-14.1cqw;z-index:2;width:8.8cqw;text-align:left;font-size:.74cqw !important;line-height:1.5 !important;font-weight:600 !important; }
+html body.np26-page main#main#main #mechanisms .np26-condition-feedback span { display:block;white-space:nowrap; }
+html body.np26-page main#main#main #mechanisms .np26-condition-feedback i { color:var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-feedback { left:auto;right:102%;width:8.8cqw; }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector { position:absolute;display:block;pointer-events:none;border-color:var(--np26-path-color);border-style:solid;border-width:0; }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector--upstream { left:106%;right:auto;top:-10.65cqw;width:35%;height:16cqw;border-width:2px 0 0 2px; }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector--upstream::before { content:"";position:absolute;right:100%;bottom:0;width:1.6cqw;border-bottom:2px solid var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-conditions--disruptive .np26-condition-connector--upstream::after { content:"";position:absolute;right:0;top:-.65cqw;height:1.2cqw;border-right:3px solid var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector--domains { left:50%;top:7.3cqw;width:63%;height:3cqw;border-width:0 0 2px 2px; }
+html body.np26-page main#main#main #mechanisms .np26-conditions--disruptive .np26-condition-connector--domains::after { content:"";position:absolute;right:0;bottom:-.65cqw;height:1.2cqw;border-right:3px solid var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-connector--upstream { left:auto;right:106%;border-width:2px 2px 0 0; }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-connector--upstream::before { right:auto;left:100%; }
+html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-connector--domains { left:auto;right:50%;border-width:0 2px 2px 0;top:8.3cqw;height:2cqw; }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector > i { position:absolute;left:-.6cqw;font-size:1.65cqw;line-height:1;color:var(--np26-path-color); }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector--upstream > i { top:-.86cqw; }
+html body.np26-page main#main#main #mechanisms .np26-condition-connector--domains > i { bottom:-.86cqw; }
+html body.np26-page main#main#main #mechanisms .np26-mechanisms-core { position:relative;min-width:0; }
+html body.np26-page main#main#main #mechanisms .np26-signaling { position:relative;width:76%;margin:0 auto 1.8cqw;padding:.4cqw .65cqw 1.7cqw;background:#f6f9fd;border:1.5px solid var(--np26-mechanism-line);border-radius:.6cqw; }
+html body.np26-page main#main#main #mechanisms :is(.np26-signaling,.np26-domains) > h3 { display:flex;align-items:center;justify-content:center;gap:.8cqw;font-size:1.28cqw !important;line-height:1.15 !important;font-weight:800 !important;text-transform:uppercase !important; }
+html body.np26-page main#main#main #mechanisms .np26-stage-number { color:#819bbe;font-size:2.9cqw!important;font-weight:800;line-height:1!important; }
+html body.np26-page main#main#main #mechanisms .np26-molecular-sequence { display:grid;grid-template-columns:1fr 1.13fr 1.13fr 1.35fr;gap:.2cqw;list-style:none;padding:1cqw 0 0; }
+html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li { display:flex;align-items:center;gap:.3cqw;min-width:0; }
+html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li > .ph-arrow-right { color:#171e28;font-size:1.4cqw; }
+html body.np26-page main#main#main #mechanisms .np26-molecule { position:relative;display:block;flex:1;background:#244f91;border:2px solid #8bacdb;box-shadow:inset 0 0 0 2px #eaf2ff,0 2px 5px #15396426;border-radius:2cqw;padding:.58cqw .2cqw;color:#fff;font-size:1.15cqw!important;line-height:1.2!important;text-align:center;white-space:nowrap; }
+html body.np26-page main#main#main #mechanisms .np26-molecule sup { font-size:.65em;line-height:0; }
+html body.np26-page main#main#main #mechanisms .np26-phosphate { position:absolute;right:-.45cqw;top:-1.05cqw;display:grid;place-items:center;width:1.65cqw;height:1.65cqw;border:2px solid #e9b946;border-radius:50%;background:#ffdc76;color:#243e6c;font-size:1.05cqw!important;font-weight:700; }
+html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > .np26-gene { flex-direction:column;justify-content:center;gap:.1cqw;font-size:.88cqw!important;line-height:1.2!important;text-align:center;font-weight:700; }
+html body.np26-page main#main#main #mechanisms .np26-gene > span { font-size:inherit!important;line-height:inherit!important;white-space:nowrap;letter-spacing:-.035em!important; }
+html body.np26-page main#main#main #mechanisms .np26-gene > img { display:block;width:100%;height:auto;max-height:2.7cqw;object-fit:contain;mix-blend-mode:multiply; }
+html body.np26-page main#main#main #mechanisms .np26-signaling-down { display:block;text-align:center;font-size:1.45cqw;line-height:1;color:#171e28; }
+html body.np26-page main#main#main #mechanisms .np26-signaling > h4 { font-size:1.08cqw !important;line-height:1.3 !important;font-weight:700 !important;text-align:center; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factors { display:flex;justify-content:space-between;gap:.75cqw;list-style:none;padding:.4cqw 0 0; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factors > li { position:relative;flex:1;text-align:center; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor { display:block;padding:.37cqw .15cqw;color:#fff;border:1px solid #fff6;border-radius:2cqw;font-size:1.05cqw!important;line-height:1.2!important;box-shadow:0 2px 4px #112b4b20; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor--bdnf { background:#3269d6; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor--ngf { background:#7733b6; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor--gdnf { background:#75a735; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor--vegf { background:#e99137; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factor--igf { background:#50a5bb; }
+html body.np26-page main#main#main #mechanisms .np26-growth-factors .ph-arrow-down { position:absolute;top:100%;left:50%;transform:translateX(-50%);color:#3165ac;font-size:2.85cqw;line-height:1.2; }
+html body.np26-page main#main#main #mechanisms .np26-domains { border:1.5px solid var(--np26-mechanism-line);border-radius:.6cqw;padding:.4cqw .4cqw .35cqw; }
+html body.np26-page main#main#main #mechanisms .np26-domains > h3 { margin-bottom:.45cqw !important; }
+html body.np26-page main#main#main #mechanisms .np26-domain-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.3cqw; }
+html body.np26-page main#main#main #mechanisms .np26-domain { min-width:0;border:1px solid #d3e1ef;border-radius:.35cqw;overflow:hidden; }
+html body.np26-page main#main#main #mechanisms .np26-domain > h4 { display:flex;align-items:center;justify-content:center;min-height:2.1cqw;padding:.2cqw .12cqw;text-align:center;font-size:1cqw !important;line-height:1.18 !important;font-weight:700 !important;letter-spacing:-.055em !important; }
+html body.np26-page main#main#main #mechanisms .np26-domain > img { display:block;width:100%;height:auto;aspect-ratio:1.12;object-fit:cover; }
+html body.np26-page main#main#main #mechanisms .np26-domain > ul { padding:.45cqw .22cqw .35cqw 1.2cqw; }
+html body.np26-page main#main#main #mechanisms .np26-domain li { padding-left:0;font-size:.83cqw !important;line-height:1.4 !important;font-weight:400 !important;margin:0 0 .22cqw;letter-spacing:-.04em !important; }
+html body.np26-page main#main#main #mechanisms .np26-integrated-brain { position:relative;text-align:center;padding-top:1cqw; }
+html body.np26-page main#main#main #mechanisms .np26-integrated-brain > i { position:absolute;top:-.6cqw;left:50%;transform:translateX(-50%);font-size:2cqw;color:var(--np26-supportive); }
+html body.np26-page main#main#main #mechanisms .np26-integrated-brain > img { display:block;width:32%;height:auto;aspect-ratio:1.72;object-fit:contain;margin:0 auto;mix-blend-mode:multiply; }
+html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption { width:130%;margin:.15cqw -15% 0 !important;font-size:1.42cqw !important;line-height:1.35 !important;font-weight:800 !important; }
+html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption i { vertical-align:middle; }
+@media (max-width: 1100px) {
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-stage { padding:40px 24px; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading { padding:0 0 30px; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading h2 { font-size:clamp(26px,4vw,40px) !important;white-space:normal; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-heading p { font-size:16px !important;margin-top:10px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:28px; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions--disruptive { grid-column:1;grid-row:1; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions--supportive { grid-column:2;grid-row:1; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-core { grid-column:1/-1;grid-row:2; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions > h3 { min-height:52px;display:flex;align-items:center;justify-content:center;font-size:22px !important;margin:0 0 14px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-gallery { gap:12px 7px;padding:10px 8px;border-radius:10px; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-gallery figcaption { font-size:12px !important;line-height:1.3 !important;margin-top:6px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-gallery img { border-radius:4px; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-pathway { display:flex;flex-direction:column;align-items:center;min-height:0; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-pathway::before,
+  html body.np26-page main#main#main #mechanisms .np26-condition-connector { display:none; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-down { font-size:30px;margin:8px auto; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-process,
+  html body.np26-page main#main#main #mechanisms .np26-condition-outcome { font-size:14px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-process { min-height:58px;margin:0 !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-feedback,
+  html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-feedback { position:static;order:3;width:auto;font-size:13px !important;text-align:center;margin:14px 0 0 !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-outcome,
+  html body.np26-page main#main#main #mechanisms .np26-conditions--supportive .np26-condition-outcome { margin:16px 0 0 !important; }
+  html body.np26-page main#main#main #mechanisms .np26-signaling { width:85%;margin:0 auto 42px;padding:16px 18px 24px;border-radius:10px; }
+  html body.np26-page main#main#main #mechanisms :is(.np26-signaling,.np26-domains) > h3 { gap:12px;font-size:21px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-stage-number { font-size:42px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence { padding-top:24px;gap:6px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li { gap:5px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li > .ph-arrow-right { font-size:20px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecule { padding:10px 4px;border-radius:30px;font-size:18px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-phosphate { right:-5px;top:-18px;width:25px;height:25px;font-size:15px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > .np26-gene { font-size:12px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-gene > img { max-height:42px; }
+  html body.np26-page main#main#main #mechanisms .np26-signaling-down { font-size:24px;margin:5px 0; }
+  html body.np26-page main#main#main #mechanisms .np26-signaling > h4 { font-size:18px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-growth-factors { gap:10px;padding-top:10px; }
+  html body.np26-page main#main#main #mechanisms .np26-growth-factor { padding:7px 3px;border-radius:22px;font-size:17px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-growth-factors .ph-arrow-down { font-size:42px; }
+  html body.np26-page main#main#main #mechanisms .np26-domains { padding:10px;border-radius:10px; }
+  html body.np26-page main#main#main #mechanisms .np26-domains > h3 { margin-bottom:14px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-domain-grid { gap:8px; }
+  html body.np26-page main#main#main #mechanisms .np26-domain { border-radius:6px; }
+  html body.np26-page main#main#main #mechanisms .np26-domain > h4 { min-height:54px;padding:6px;font-size:15px !important;letter-spacing:-.03em !important; }
+  html body.np26-page main#main#main #mechanisms .np26-domain > ul { padding:10px 8px 6px 22px; }
+  html body.np26-page main#main#main #mechanisms .np26-domain li { font-size:13px !important;line-height:1.45 !important;margin-bottom:6px;letter-spacing:-.02em !important; }
+  html body.np26-page main#main#main #mechanisms .np26-integrated-brain { padding-top:26px; }
+  html body.np26-page main#main#main #mechanisms .np26-integrated-brain > i { top:-6px;font-size:35px; }
+  html body.np26-page main#main#main #mechanisms .np26-integrated-brain > img { width:230px;max-width:65%; }
+  html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption { width:100%;margin:5px 0 0 !important;font-size:21px !important; }
+}
+@media (max-width: 600px) {
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-stage { padding:34px 20px; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-grid { display:flex;flex-direction:column;gap:28px; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions { width:100%; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions--disruptive { order:1; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions--supportive { order:2; }
+  html body.np26-page main#main#main #mechanisms .np26-mechanisms-core { order:3;width:100%; }
+  html body.np26-page main#main#main #mechanisms .np26-conditions > h3 { min-height:0;font-size:23px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-gallery figcaption { font-size:12px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-condition-process { min-height:0; }
+  html body.np26-page main#main#main #mechanisms .np26-signaling { width:100%;padding:14px 10px 25px; }
+  html body.np26-page main#main#main #mechanisms :is(.np26-signaling,.np26-domains) > h3 { justify-content:flex-start;gap:10px;font-size:18px !important;text-align:left; }
+  html body.np26-page main#main#main #mechanisms .np26-stage-number { font-size:36px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence { gap:1px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li { gap:1px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > li > .ph-arrow-right { font-size:15px; }
+  html body.np26-page main#main#main #mechanisms .np26-molecule { padding:8px 2px;font-size:13px!important;border-width:1px;box-shadow:inset 0 0 0 1px #eaf2ff; }
+  html body.np26-page main#main#main #mechanisms .np26-phosphate { width:22px;height:22px;top:-16px;right:-3px;font-size:13px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-molecular-sequence > .np26-gene { font-size:10px!important; }
+  html body.np26-page main#main#main #mechanisms .np26-gene > img { max-height:33px; }
+  html body.np26-page main#main#main #mechanisms .np26-signaling > h4 { font-size:16px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-growth-factors { gap:5px; }
+  html body.np26-page main#main#main #mechanisms .np26-growth-factor { font-size:13px!important;padding:7px 1px; }
+  html body.np26-page main#main#main #mechanisms .np26-domain-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:10px; }
+  html body.np26-page main#main#main #mechanisms .np26-domain > h4 { min-height:48px;font-size:14px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-domain li { font-size:12px !important; }
+  html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption { font-size:19px !important; }
+}

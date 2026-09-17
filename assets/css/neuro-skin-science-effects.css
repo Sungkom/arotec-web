@@ -1,0 +1,79 @@
+/* Progressive card feedback. Resting artwork, layout and card hierarchy stay intact. */
+html body.nss-page #main {
+  --nss-card-ease: cubic-bezier(.2,.7,.2,1);
+  --nss-card-shadow: inset 0 0 0 1px rgb(89 151 196 / 58%), 0 14px 30px rgb(25 58 89 / 16%);
+}
+
+html body.nss-page #main :is(
+  .nss-axis-panel, .nss-axis-process-panel,
+  .nss-direct-card, .nss-sb-card
+) {
+  transition: translate 240ms var(--nss-card-ease), box-shadow 240ms var(--nss-card-ease), border-color 240ms ease;
+}
+
+html body.nss-page #main :is(
+  .nss-photo > img, .nss-fb-lane, .nss-sb-context,
+  .nss-nc-callout, .nss-detail > summary
+) {
+  transition: translate 240ms var(--nss-card-ease), box-shadow 240ms var(--nss-card-ease), border-color 240ms ease, background-color 180ms ease;
+}
+
+/* Keyboard feedback belongs to the real links/summary controls, not extra tab stops. */
+html body.nss-page #main .nss-step:focus-within .nss-photo > img {
+  box-shadow: 0 0 0 2px #639fcb, 0 12px 26px rgb(25 58 89 / 15%);
+}
+html body.nss-page #main .nss-detail > summary:focus-visible {
+  background-color: #edf6fc;
+}
+html body.nss-page #main .nss-fb-lane::before {
+  transition: box-shadow 240ms var(--nss-card-ease);
+}
+
+/* No hover-only motion on touchscreens; all copy is already visible without interaction. */
+@media (hover: hover) and (pointer: fine) {
+  html body.nss-page #main :is(
+    .nss-axis-panel, .nss-axis-process-panel, .nss-direct-card, .nss-sb-card
+  ):hover {
+    box-shadow: var(--nss-card-shadow);
+    border-color: #639fcb;
+  }
+  html body.nss-page #main .nss-step:hover .nss-photo > img {
+    box-shadow: 0 0 0 1px rgb(89 151 196 / 50%), 0 14px 30px rgb(25 58 89 / 18%);
+  }
+
+  /* Diagram lanes and the artwork-covering Neurocosmetics capsule stay anchored. */
+  html body.nss-page #main :is(.nss-fb-lane,.nss-sb-context,.nss-nc-callout):hover {
+    box-shadow: inset 0 0 0 1px rgb(89 151 196 / 48%), 0 8px 22px rgb(25 58 89 / 12%);
+    border-color: #639fcb;
+  }
+  html body.nss-page #main .nss-detail > summary:hover {
+    background-color: #edf6fc;
+  }
+}
+
+@media (min-width: 1101px) and (hover: hover) and (pointer: fine) {
+  html body.nss-page #main .nss-fb-lane:hover { box-shadow: none; }
+  html body.nss-page #main .nss-fb-lane:hover::before {
+    box-shadow: inset 0 0 0 1px rgb(89 151 196 / 48%), 0 8px 22px rgb(25 58 89 / 12%);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  /* Only independent photo/panel surfaces lift. Connected cards never become
+     stacking contexts, which would hide arrows behind their neighboring cards. */
+  html body.nss-page #main .nss-axis-panel:hover,
+  html body.nss-page #main .nss-step:hover .nss-photo > img {
+    translate: 0 -4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body.nss-page #main .nss-fb-lane::before { transition: none; }
+  html body.nss-page #main :is(
+    .nss-axis-panel, .nss-axis-process-panel, .nss-direct-card, .nss-sb-card,
+    .nss-photo > img, .nss-fb-lane, .nss-sb-context, .nss-nc-callout, .nss-detail > summary
+  ) {
+    transition: none;
+    translate: none;
+  }
+}

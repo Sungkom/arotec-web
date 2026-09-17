@@ -1,0 +1,122 @@
+/* Olfactory-brain pathways: supplied reference artwork, separate HTML text and natural DM Sans proportions. */
+html body.nst-page main#main#main #olfactory-brain-pathways.nor-sheet { padding: 0 !important; overflow: hidden; background: #f6f9fc; color: #103367; font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-canvas { position: relative; isolation: isolate; container-type: inline-size; padding: 32px 22px 28px; background: radial-gradient(ellipse at 90% 0, #e7f1f8, transparent 45%), linear-gradient(130deg, #fff, #f4f8fc); --nor-title-size: clamp(28px, 4.3vw, 43px); --nor-axis-title-size: 20px; --nor-subtitle-size: 23px; }
+html body.nst-page main#main#main #olfactory-brain-pathways :is(p, ul, figure) { margin: 0; }
+html body.nst-page main#main#main #olfactory-brain-pathways :is(p, li, span, strong) { font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-heading { text-align: center; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 16px auto 24px; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle::before, html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle::after { content: ""; display: block; flex: 1; max-width: 160px; min-width: 16px; height: 1px; background: linear-gradient(90deg, transparent, #5277ad); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle::after { transform: rotate(180deg); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle p { color: #102f65; font-size: var(--nor-subtitle-size) !important; line-height: 1.25 !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-tagline { display: none; color: #5980b2; font-size: 10px; line-height: 1.7; letter-spacing: .22em; text-transform: uppercase; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-portrait { position: relative; container-type: inline-size; width: min(100%, 535px); margin: 0 auto 30px; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-art-crop { position: relative; display: block; width: 100%; aspect-ratio: var(--nor-art-ratio); overflow: hidden; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-art-crop > img { position: absolute; display: block; top: var(--nor-art-top); left: var(--nor-art-left); width: var(--nor-art-width) !important; max-width: none !important; height: auto !important; margin: 0 !important; border-radius: 0; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-ingredient-label { position: absolute; top: 1.478495%; left: 8.785047%; width: 35.88785%; color: #082d67; font-size: 3cqw; line-height: 1.1; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-ingredient-label strong, html body.nst-page main#main#main #olfactory-brain-pathways .nor-olfactory-label strong { display: block; font-weight: 600; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-ingredient-label span { display: block; margin-top: .5cqw; font-size: 2.1cqw; line-height: 1.2; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-odor-label { position: absolute; top: 26.075269%; left: 18.878505%; width: 18.691589%; color: #082d67; font-size: 3.2cqw; font-weight: 600; line-height: 1.1; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-brain-label { position: absolute; top: 26.209677%; left: 70.093458%; display: grid; place-items: center; width: 14.579439%; height: 5.107527%; border-radius: 50%; background: radial-gradient(ellipse, #16649e 35%, #14467cd9 75%, #14467c00); color: #fff; font-size: 3.55cqw; font-weight: 700; line-height: 1; text-transform: uppercase; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-olfactory-label { position: absolute; top: 51.747312%; left: 7.850467%; width: 38.317757%; color: #082d67; font-size: 3.4cqw; line-height: 1.05; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-olfactory-label span { display: block; margin-top: .6cqw; font-size: 2.15cqw; line-height: 1.2; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-origin { position: absolute; top: 88.978495%; left: 7.476636%; width: 48.598131%; padding-left: 2.6cqw; border-left: 1px solid #7293bd; color: #244e85; font-size: 2.55cqw !important; line-height: 1.25 !important; letter-spacing: .07em; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-origin span { display: block; margin-top: 1cqw; font-size: 1.8cqw; line-height: 1.65; letter-spacing: .24em; text-transform: uppercase; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-connections { display: none; pointer-events: none; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-regulatory-table { display: grid; gap: 16px; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings { display: none; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-row { position: relative; padding: 22px; border: 1px solid color-mix(in srgb, var(--nor-axis-color) 18%, white); border-radius: 14px; background: linear-gradient(110deg, color-mix(in srgb, var(--nor-axis-color) 6%, white), #ffffffd9); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-label { display: grid; grid-template-columns: 46px minmax(0, 1fr) 94px; gap: 14px; align-items: center; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-number { display: grid; place-items: center; width: 46px; height: 52px; border-radius: 50%; background: #ffffffc9; color: var(--nor-axis-color); font-size: 35px; font-weight: 600; line-height: 1; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-region-brain { mix-blend-mode: multiply; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-pathway { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 20px 0; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage { position: relative; display: flex; align-items: center; gap: 10px; max-width: 100%; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage p { color: #264c81; font-size: 15px !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage:not(:last-child)::after { content: ""; flex: 0 0 14px; display: block; width: 14px; height: 9px; background: #6387b6; clip-path: polygon(0 42%, 65% 42%, 65% 0, 100% 50%, 65% 100%, 65% 58%, 0 58%); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage--branch::after { display: none !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-node small { font-size: .82em; line-height: 1.25; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon { display: block; flex: 0 0 auto; width: 46px; height: 48px; object-fit: contain; mix-blend-mode: multiply; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon-slice { position: relative; height: auto; aspect-ratio: 33 / 34; overflow: hidden; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon-slice--chart { aspect-ratio: 33 / 30; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon-slice > .nor-sliced-image { position: absolute; top: 0; left: 0; display: block; width: 100% !important; max-width: none !important; height: auto !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon-slice--chart > .nor-sliced-image { top: -123.333333%; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-result { display: grid; grid-template-columns: 51px minmax(0, 1fr); align-items: center; gap: 16px; padding: 15px 0; border-top: 1px solid #dbe6f1; border-bottom: 1px solid #dbe6f1; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-result > .nor-icon { width: 51px; height: 56px; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-result p { color: #254980; font-size: 16px !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcomes { display: grid; gap: 12px; padding: 18px 0 0; list-style: none; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome { display: grid; grid-template-columns: 34px minmax(0, 1fr); align-items: center; gap: 12px; color: #294c80; font-size: 16px !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome > .nor-icon { width: 34px; height: 36px; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome > .nor-icon-slice { height: auto; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 32px auto 0; }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer::before, html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer::after { content: ""; display: block; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #6386b8); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer::after { transform: rotate(180deg); }
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer p { color: #587fb4; font-size: 11px !important; line-height: 1.3 !important; letter-spacing: .22em; text-transform: uppercase; text-align: center; }
+@layer arotec-display-headings.spec {
+ html body.nst-page main#main#main #olfactory-brain-pathways #pathways-title { display: block !important; margin: 0 !important; color: #08234f !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nor-title-size) !important; font-weight: 700 !important; line-height: 1.12 !important; letter-spacing: -.035em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-label h3 { margin: 0 !important; color: #0d315f !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nor-axis-title-size) !important; font-weight: 600 !important; line-height: 1.15 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+}
+@media (min-width: 1024px) {
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-canvas { aspect-ratio: 1672 / 941; padding: 0; background: #f7fafc url("../images/neuro-scented-therapy/olfactory-reference/background.png") left top / 100% 100% no-repeat; --nor-title-size: 2.153110cqw; --nor-axis-title-size: 0.897129cqw; --nor-subtitle-size: 1.525120cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways :is(.nor-heading, .nor-portrait, .nor-regulatory-table, .nor-axis-label, .nor-pathway, .nor-outcomes) { display: contents; }
+ html body.nst-page main#main#main #olfactory-brain-pathways :is(.nor-portrait-art, .nor-region-brain) { display: none; }
+ html body.nst-page main#main#main #olfactory-brain-pathways #pathways-title { position: absolute; top: 2.444208%; left: 12.559809%; width: 74.880383%; text-align: center; white-space: nowrap; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle { position: absolute; top: 8.501594%; left: 22.428230%; width: 55.023923%; height: 4.463337%; gap: 1.315789cqw; margin: 0; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle::before, html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle::after { max-width: none; min-width: 0; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle p { line-height: 1.2 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-tagline { position: absolute; top: 4.569607%; left: 89.234450%; display: block; width: 9.449761%; font-size: 0.574163cqw; line-height: 1.75; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-ingredient-label { top: 14.984060%; left: 2.811005%; width: 11.483254%; font-size: 0.956938cqw; line-height: 1.1; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-ingredient-label span { margin-top: 0.179426cqw; font-size: 0.687799cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-odor-label { top: 34.431456%; left: 6.040670%; width: 5.980861%; font-size: 1.016746cqw; line-height: 1.1; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-brain-label { top: 34.537726%; left: 22.428230%; width: 4.665072%; height: 4.038257%; font-size: 1.136364cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-olfactory-label { top: 54.729012%; left: 2.511962%; width: 12.260766%; font-size: 1.076555cqw; line-height: 1.05; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-olfactory-label span { margin-top: 0.179426cqw; font-size: 0.687799cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-origin { top: 84.165781%; left: 2.392344%; width: 15.550239%; padding-left: 0.837321cqw; font-size: 0.807416cqw !important; line-height: 1.25 !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-origin span { margin-top: 0.299043cqw; font-size: 0.568182cqw; line-height: 1.65; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-connections { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings { position: absolute; top: 15.834219%; left: 0; display: block; width: 100%; color: #12376e; font-size: 0.789474cqw; font-weight: 600; line-height: 1.25; text-transform: uppercase; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings span { position: absolute; text-align: left; white-space: nowrap; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings span:nth-child(1) { left: 34.330144%; width: 11.363636%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings span:nth-child(2) { left: 52.093301%; width: 15.251196%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings span:nth-child(3) { left: 73.385167%; width: 11.064593%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-column-headings span:nth-child(4) { left: 86.602871%; width: 12.260766%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-row { position: absolute; z-index: 2; top: var(--nor-row-y); left: 0; display: block; width: 100%; height: var(--nor-row-h); margin: 0; padding: 0; border: 0; border-radius: 0; background: none; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-number { position: absolute; top: 50%; left: 31.937799%; width: 2.990431%; height: 3.229665cqw; transform: translateY(-50%); font-size: 2.153110cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-label h3 { position: absolute; top: 50%; left: 35.526316%; width: 8.672249%; transform: translateY(-50%); }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-node { position: absolute; top: var(--nor-node-y, 50%); left: var(--nor-node-x); width: var(--nor-node-w); max-width: none; min-width: 0; transform: translateY(-50%); }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage { display: block; padding: 0; border: 0; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage:not(:last-child)::after { display: none; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-node--illustrated { display: grid; grid-template-columns: var(--nor-icon-size) minmax(0, 1fr); align-items: center; gap: 0.538278cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage p { font-size: 0.777512cqw !important; line-height: 1.3 !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage--branch p { font-size: 0.777512cqw !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage--branch small { font-size: .91em; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage--metabolism p { font-size: 0.729665cqw !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-node > .nor-icon { width: var(--nor-icon-size); height: 3.708134cqw; max-width: 100%; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage--branch > .nor-icon { height: 2.272727cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-result { gap: 0.897129cqw; padding: 0; border: 0; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-result p { font-size: 0.801435cqw !important; line-height: 1.3 !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-result small { font-size: .76em; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome { display: grid; grid-template-columns: var(--nor-icon-size) minmax(0, 1fr); align-items: center; gap: 0.598086cqw; padding: 0; font-size: 0.789474cqw !important; line-height: 1.25 !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome > .nor-icon { height: 2.153110cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome > .nor-icon-slice { height: auto; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome:has(img[src$="memory-attention.png"]) > .nor-icon { height: 3.110048cqw; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer { position: absolute; top: 93.517535%; left: 17.105263%; width: 65.311005%; height: 2.550478%; gap: 1.435407cqw; margin: 0; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer p { font-size: 0.705742cqw !important; line-height: 1.3 !important; letter-spacing: .25em; white-space: nowrap; }
+}
+@media (max-width: 760px) {
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-canvas { padding: 30px 20px 24px; --nor-subtitle-size: 20px; --nor-axis-title-size: 19px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-row { padding: 20px 16px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-label { grid-template-columns: 42px minmax(0, 1fr) 78px; gap: 10px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-number { width: 42px; height: 48px; font-size: 33px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-pathway { gap: 16px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage p { font-size: 15px !important; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer { gap: 14px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-footer p { font-size: 10px !important; }
+}
+@media (max-width: 420px) {
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-canvas { padding-inline: 16px; --nor-title-size: 28px; --nor-axis-title-size: 18px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-subtitle { gap: 10px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-label { grid-template-columns: 38px minmax(0, 1fr) 65px; gap: 8px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-axis-number { width: 38px; font-size: 30px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-row { padding: 18px 13px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-icon { width: 40px; height: 44px; }
+ html body.nst-page main#main#main #olfactory-brain-pathways .nor-outcome { font-size: 15px !important; gap: 10px; }
+}

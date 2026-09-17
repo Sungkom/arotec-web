@@ -1,0 +1,70 @@
+/* Source-based five-stage exposome layout, presented as uniform website cards.
+   Source coordinates use its 2048 × 1152 normalized canvas; live text remains HTML. */
+html body.nss-page #direct-skin-impact { position: relative; isolation: isolate; padding-block: 40px; background: #f7fbff url('../images/neuro-skin-science-20260915/direct-reference/background-top.webp') center / 100% 100% no-repeat; }
+#direct-skin-impact .nss-direct-backdrop { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: fill; opacity: .85; mask-image: linear-gradient(to bottom,transparent 10%,#000 60%); pointer-events: none; }
+#direct-skin-impact .nss-direct-canvas { position: relative; z-index: 1; container-type: inline-size; aspect-ratio: 2623 / 1475; }
+html body.nss-page #direct-skin-impact :is(h2,h3,p,span,a) { color: #070e31; font-family: 'Roboto Condensed', 'DM Sans', sans-serif !important; text-transform: none !important; }
+#direct-skin-impact :is(p,ol) { margin: 0; padding: 0; }
+html body.nss-page #direct-skin-impact :is(h2,h3):not(#dsm-type-lock) { margin: 0 !important; }
+#direct-skin-impact .nss-direct-heading { position: absolute; left: calc(80 / 2048 * 100%); right: calc(65 / 2048 * 100%); top: calc(62 / 1152 * 100%); }
+html body.nss-page #direct-skin-impact h2 { font-size: 5.35cqw !important; line-height: 1.05 !important; font-weight: 900 !important; letter-spacing: -.08cqw !important; white-space: nowrap; }
+html body.nss-page #direct-skin-impact .nss-direct-heading > p { margin-top: .5cqw; font-size: 1.73cqw !important; line-height: 1.2 !important; font-weight: 400 !important; letter-spacing: -.025cqw; white-space: nowrap; }
+#direct-skin-impact .nss-direct-cards { display: contents; list-style: none; }
+#direct-skin-impact .nss-direct-card { position: absolute; left: calc(var(--card-x) / 2048 * 100%); top: calc(var(--card-y,266) / 1152 * 100%); width: calc(var(--card-w) / 2048 * 100%); height: calc(var(--card-h,779) / 1152 * 100%); border-radius: .8cqw; background: #fff; box-shadow: inset 0 0 0 1px #d9e5ef, 0 6px 20px rgb(25 58 89 / 8%); }
+#direct-skin-impact .nss-direct-card:nth-child(1) { --card-x: 35; --card-w: 389; --image-x: 45; --image-w: 372; --arrow-x: 388; --arrow-w: 111; }
+#direct-skin-impact .nss-direct-card:nth-child(2) { --card-x: 444; --card-w: 376; --image-x: 452; --image-w: 362; --arrow-x: 776; }
+#direct-skin-impact .nss-direct-card:nth-child(3) { --card-x: 839; --card-w: 366; --image-x: 847; --image-w: 350; --arrow-x: 1168; }
+#direct-skin-impact .nss-direct-card:nth-child(4) { --card-x: 1223; --card-w: 375; --image-x: 1230; --image-w: 359; --arrow-x: 1566; }
+#direct-skin-impact .nss-direct-card:nth-child(5) { --card-x: 1615; --card-w: 399; --image-x: 1627; --image-w: 374; }
+#direct-skin-impact .nss-direct-picture { position: absolute; display: block; left: calc((var(--image-x) - var(--card-x)) / 20.48 * 1cqw); top: calc((275 - var(--card-y,266)) / 20.48 * 1cqw); width: calc(var(--image-w) / 20.48 * 1cqw); height: calc(459 / 20.48 * 1cqw); border-radius: .45cqw; overflow: hidden; }
+#direct-skin-impact .nss-direct-picture img { display: block; width: 100%; height: 100%; object-fit: fill; }
+#direct-skin-impact .nss-direct-number { position: absolute; top: calc((745 - var(--card-y,266)) / 20.48 * 1cqw); left: 50%; transform: translateX(-50%); display: grid; place-items: center; width: 3.9cqw; height: 3.9cqw; border-radius: 50%; background: #e7f2fb; font-size: 1.8cqw; font-weight: 600; line-height: 1; }
+html body.nss-page #direct-skin-impact .nss-direct-card h3 { position: absolute; top: calc((831 - var(--card-y,266)) / 20.48 * 1cqw); left: .65cqw; right: .65cqw; padding-bottom: .82cqw; border-bottom: .1cqw solid #a6afc4; font-size: 1.76cqw !important; line-height: 1.14 !important; font-weight: 600 !important; letter-spacing: -.04cqw !important; text-align: center; white-space: nowrap; }
+html body.nss-page #direct-skin-impact .nss-direct-card > p { position: absolute; top: calc((911 - var(--card-y,266)) / 20.48 * 1cqw); left: .65cqw; right: .65cqw; font-size: 1.27cqw !important; line-height: 1.26 !important; font-weight: 400 !important; letter-spacing: -.027cqw; text-align: center; }
+html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p { top: calc((899 - var(--card-y,266)) / 20.48 * 1cqw); }
+#direct-skin-impact .nss-direct-chevron { position: absolute; z-index: 3; left: calc((var(--arrow-x) - var(--card-x)) / 20.48 * 1cqw); top: calc((514 - var(--card-y,266)) / 20.48 * 1cqw); width: calc(114 / 20.48 * 1cqw); height: calc(83 / 20.48 * 1cqw); object-fit: fill; }
+#direct-skin-impact .nss-direct-action { position: absolute; left: 0; right: 0; top: calc(1065 / 1152 * 100%); display: flex; justify-content: center; }
+html body.nss-page #direct-skin-impact .nss-direct-explore { display: inline-flex; align-items: center; gap: 1.2cqw; min-height: max(24px,2.5cqw); font-size: 1.75cqw !important; line-height: 1.15 !important; font-weight: 700 !important; letter-spacing: -.035cqw; text-decoration: none; }
+#direct-skin-impact .nss-direct-explore::before { content: ''; width: 7.1cqw; border-top: .13cqw solid #111837; }
+#direct-skin-impact .nss-direct-explore > span { padding-left: 1.45cqw; border-left: .22cqw solid #51b7f1; }
+#direct-skin-impact .nss-direct-explore img { width: 9.2cqw; height: 1.7cqw; object-fit: contain; transition: transform .2s ease; }
+#direct-skin-impact .nss-direct-explore:hover img { transform: translateX(.3cqw); }
+#direct-skin-impact .nss-direct-explore:focus-visible { outline: 2px solid #0e548d; outline-offset: 6px; border-radius: 2px; }
+
+/* Reflow the causal sequence without tiny type or backwards row-wrap arrows. */
+@media (max-width: 1100px) {
+  #direct-skin-impact .nss-direct-canvas { aspect-ratio: auto; }
+  #direct-skin-impact :is(.nss-direct-heading,.nss-direct-card,.nss-direct-action) { position: relative; inset: auto; width: auto; height: auto; }
+  #direct-skin-impact .nss-direct-heading { margin-bottom: 32px; }
+  html body.nss-page #direct-skin-impact h2 { font-size: clamp(34px,5.2vw,58px) !important; line-height: 1.07 !important; letter-spacing: -1.2px !important; white-space: normal; }
+  html body.nss-page #direct-skin-impact .nss-direct-heading > p { margin-top: 18px; font-size: 20px !important; line-height: 1.45 !important; letter-spacing: -.2px; white-space: normal; }
+  #direct-skin-impact .nss-direct-cards { display: grid; grid-template-columns: 1fr; gap: 44px; }
+  #direct-skin-impact .nss-direct-card { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: auto auto 1fr; gap: 14px 24px; padding: 12px; border-radius: 16px; }
+  #direct-skin-impact .nss-direct-picture { position: relative; inset: auto; width: 100%; height: 440px; grid-column: 1; grid-row: 1 / 4; border-radius: 10px; }
+  #direct-skin-impact .nss-direct-picture img { width: 100%; height: 100%; object-fit: cover; }
+  #direct-skin-impact .nss-direct-card:first-child .nss-direct-picture img { object-position: top; }
+  #direct-skin-impact .nss-direct-number { position: relative; inset: auto; transform: none; grid-column: 2; width: 64px; height: 64px; margin: 14px auto 0; font-size: 28px; }
+  html body.nss-page #direct-skin-impact .nss-direct-card h3 { position: relative; inset: auto; grid-column: 2; padding-bottom: 16px; border-width: 1px; font-size: 27px !important; line-height: 1.16 !important; letter-spacing: -.5px !important; white-space: normal; align-self: start; }
+  html body.nss-page #direct-skin-impact .nss-direct-card > p { position: relative; inset: auto; grid-column: 2; margin-bottom: 16px; font-size: 20px !important; line-height: 1.4 !important; letter-spacing: -.2px; align-self: start; }
+  html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p { top: auto; }
+  #direct-skin-impact .nss-direct-desktop-break { display: none; }
+  #direct-skin-impact .nss-direct-chevron { left: calc(50% - 29px); top: auto; bottom: -41px; width: 58px; height: 40px; transform: rotate(90deg); }
+  #direct-skin-impact .nss-direct-action { margin-top: 32px; }
+  html body.nss-page #direct-skin-impact .nss-direct-explore { min-height: 48px; gap: 16px; font-size: 25px !important; letter-spacing: -.5px; }
+  #direct-skin-impact .nss-direct-explore::before { width: 60px; border-width: 1px; }
+  #direct-skin-impact .nss-direct-explore > span { padding-left: 18px; border-width: 3px; }
+  #direct-skin-impact .nss-direct-explore img { width: 85px; height: 24px; }
+}
+@media (max-width: 700px) {
+  #direct-skin-impact .nss-direct-card { display: flex; flex-direction: column; gap: 0; padding: 10px 10px 22px; }
+  #direct-skin-impact .nss-direct-picture { width: 100%; height: auto; max-height: 470px; }
+  #direct-skin-impact .nss-direct-picture img { height: 100%; max-height: 470px; object-fit: cover; object-position: center; }
+  #direct-skin-impact .nss-direct-number { flex: 0 0 64px; margin: 16px auto 12px; }
+  html body.nss-page #direct-skin-impact .nss-direct-card h3 { width: calc(100% - 16px); align-self: center; padding-bottom: 15px; font-size: 28px !important; }
+  html body.nss-page #direct-skin-impact .nss-direct-card > p { margin: 18px 4px 0; width: calc(100% - 8px); }
+  #direct-skin-impact .nss-direct-explore::before { width: 35px; }
+  #direct-skin-impact .nss-direct-explore img { width: 65px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #direct-skin-impact .nss-direct-explore img { transition: none; }
+}

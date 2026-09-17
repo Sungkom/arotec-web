@@ -1,760 +1,819 @@
-:root {
-  --nst-bg: #020817;
-  --nst-bg-2: #061326;
-  --nst-panel: rgba(7, 22, 48, 0.74);
-  --nst-panel-strong: rgba(8, 28, 58, 0.9);
-  --nst-border: rgba(67, 170, 255, 0.45);
-  --nst-border-bright: rgba(47, 221, 255, 0.58);
-  --nst-cyan: #42d9ff;
-  --nst-blue: #278cff;
-  --nst-violet: #9b6cff;
-  --nst-magenta: #e35cca;
-  --nst-green: #4ee6ac;
-  --nst-orange: #ffad45;
-  --nst-red: #ff5d70;
-  --nst-text: #f2f8ff;
-  --nst-text-2: #aac4df;
-  --nst-muted: #738ba8;
-  --nst-radius: 22px;
-  --nst-head: "Arial Narrow", "Roboto Condensed", "DIN Condensed", "Segoe UI", sans-serif;
-  --nst-body: "Segoe UI", Inter, Arial, sans-serif;
+/* Neuro-Scented Therapy: original reference artwork, native introductory copy and dermal pathways. */
+html body.nst-page { --nst-ink: #062451; --nst-blue: #102b6d; --nst-muted: #435f92; --nst-rule: #b9cce2; --nst-paper: #f6faff; --nst-diagram-font: var(--site-font, "DM Sans", sans-serif); width: 100%; max-width: none; margin-inline: 0; background: var(--nst-paper); }
+html body.nst-page #site-shell { width: 100% !important; max-width: none !important; margin-inline: 0 !important; padding-inline: 0 !important; }
+html body.nst-page main#main#main.nst-main.sp-main { width: 100% !important; max-width: none !important; margin: 0 !important; padding: var(--detail-header-space, 0px) 0 0 !important; color: var(--nst-ink); background: var(--nst-paper); font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main, html body.nst-page main#main#main *, html body.nst-page main#main#main *::before, html body.nst-page main#main#main *::after { box-sizing: border-box; }
+html body.nst-page main#main#main > section { position: relative; width: 100% !important; max-width: none !important; margin: 0 !important; scroll-margin-top: calc(var(--detail-header-space, 100px) + 20px); }
+html body.nst-page main#main#main :is(figure, p, ul, ol, dl, dd) { margin: 0; }
+html body.nst-page main#main#main :is(section, article, aside, li, figure, div) { min-width: 0; }
+html body.nst-page main#main#main p, html body.nst-page main#main#main li { color: var(--nst-ink); font-size: 18px !important; font-weight: 400; line-height: 1.5 !important; }
+html body.nst-page main#main#main img { max-width: 100%; }
+html body.nst-page main#main#main a { color: #164e8c; }
+html body.nst-page main#main#main :is(a, summary, [tabindex]):focus-visible { outline: 3px solid #1782ba; outline-offset: 5px; }
+html body.nst-page main#main#main .nst-introduction { isolation: isolate; min-height: 56.25vw; padding-block: clamp(68px, 8.7vw, 188px) clamp(56px, 6vw, 126px); overflow: hidden; background: #eef1f2; }
+html body.nst-page main#main#main .nst-introduction-art { position: absolute; z-index: -1; inset: 0; display: block; width: 100% !important; max-width: none !important; height: 100% !important; object-fit: cover; object-position: center; border-radius: 0; }
+html body.nst-page main#main#main .nst-introduction-copy { width: 36.5%; max-width: 980px; margin-left: 10.8%; }
+html body.nst-page main#main#main .nst-introduction-copy p { margin-top: clamp(22px, 1.65vw, 36px); color: #243e61; font-family: var(--nst-diagram-font); font-size: clamp(19px, 1.42vw, 33px) !important; line-height: 1.29 !important; }
+html body.nst-page main#main#main .nst-dermal { isolation: isolate; padding: clamp(26px, 2.1vw, 46px) clamp(22px, 2vw, 46px) clamp(28px, 2.8vw, 58px); background: #f7fbff url("../images/neuro-scented-therapy/dermal-systemic-background.png") left center / cover no-repeat; font-family: var(--nst-diagram-font); }
+html body.nst-page main#main#main .nst-dermal-heading { width: 86%; margin-left: 12%; text-align: center; }
+html body.nst-page main#main#main .nst-dermal-heading .nst-section-subtitle { margin-top: 8px; color: #051653; font-family: var(--nst-diagram-font); font-size: clamp(25px, 2.15vw, 44px) !important; line-height: 1.15 !important; }
+html body.nst-page main#main#main .nst-dermal-heading .nst-section-intro { max-width: 1300px; margin: 14px auto 0; color: #425b8a; font-family: var(--nst-diagram-font); font-size: clamp(18px, 1.37vw, 28px) !important; line-height: 1.25 !important; }
+html body.nst-page main#main#main .nst-dermal-layout { display: grid; grid-template-columns: minmax(0, 29fr) minmax(0, 71fr); column-gap: 16px; margin-top: clamp(24px, 2.25vw, 48px); }
+html body.nst-page main#main#main .nst-skin-interface { position: relative; min-height: 580px; }
+html body.nst-page main#main#main .nst-ingredient-label { position: absolute; top: -74px; left: 17%; max-width: 210px; color: #081b5d; font-size: clamp(18px, 1.4vw, 29px); line-height: 1; }
+html body.nst-page main#main#main .nst-ingredient-label strong { display: block; font-weight: 600; }
+html body.nst-page main#main#main .nst-ingredient-label span { display: block; margin-top: 6px; color: #47628c; font-size: .85em; line-height: 1.2; }
+html body.nst-page main#main#main .nst-sensing-label { position: absolute; top: 13%; right: 0; width: 47%; text-align: center; }
+html body.nst-page main#main#main .nst-sensing-label p { margin-top: 8px; color: #405d8d; font-family: var(--nst-diagram-font); font-size: clamp(16px, 1.3vw, 25px) !important; line-height: 1.15 !important; }
+html body.nst-page main#main#main .nst-sensing-note { position: absolute; top: 62%; right: 0; width: 44%; color: #204586; font-family: var(--nst-diagram-font); font-size: clamp(16px, 1.22vw, 24px) !important; font-style: italic; line-height: 1.2 !important; }
+html body.nst-page main#main#main .nst-rule-heading { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; }
+html body.nst-page main#main#main .nst-rule-heading::before, html body.nst-page main#main#main .nst-rule-heading::after { content: ""; flex: 1; min-width: 24px; height: 1px; background: #5a7cac; }
+html body.nst-page main#main#main .nst-axis-list { display: grid; padding: 0; list-style: none; }
+html body.nst-page main#main#main .nst-axis-row { display: grid; grid-template-columns: minmax(0, 1.48fr) minmax(0, 1fr) clamp(62px, 5.6vw, 114px) minmax(0, .82fr); column-gap: clamp(8px, .9vw, 20px); align-items: center; min-height: clamp(126px, 8.1vw, 180px); padding: 10px 0; border-bottom: 1px solid #b7cbe075; }
+html body.nst-page main#main#main .nst-axis-row:last-child { border-bottom: 0; }
+html body.nst-page main#main#main .nst-axis-label { display: grid; grid-template-columns: clamp(64px, 5.5vw, 110px) clamp(28px, 2.5vw, 48px) minmax(0, 1fr); gap: clamp(8px, .7vw, 16px); align-items: center; }
+html body.nst-page main#main#main .nst-axis-icon, html body.nst-page main#main#main .nst-outcome-icon { display: block; width: 100% !important; max-width: none !important; height: auto !important; aspect-ratio: 1; object-fit: contain; border-radius: 50%; }
+html body.nst-page main#main#main .nst-axis-number { color: #081f62; font-size: clamp(32px, 2.8vw, 56px); font-weight: 600; line-height: 1; }
+html body.nst-page main#main#main .nst-axis-copy p { margin-top: 5px; color: #456397; font-family: var(--nst-diagram-font); font-size: clamp(17px, 1.16vw, 25px) !important; line-height: 1.2 !important; }
+html body.nst-page main#main#main .nst-route { position: relative; padding-inline: 16px; color: #173a85; font-family: var(--nst-diagram-font); font-size: clamp(17px, 1.22vw, 25px); line-height: 1.15; }
+html body.nst-page main#main#main .nst-route::before, html body.nst-page main#main#main .nst-route::after { content: ""; position: absolute; top: 50%; width: 16px; height: 10px; background: linear-gradient(90deg, #aac7e470, #507db4); clip-path: polygon(0 42%, 63% 42%, 63% 0, 100% 50%, 63% 100%, 63% 58%, 0 58%); transform: translateY(-50%); }
+html body.nst-page main#main#main .nst-route::before { left: -9px; }
+html body.nst-page main#main#main .nst-route::after { right: -10px; }
+html body.nst-page main#main#main .nst-route--single { display: grid; grid-template-columns: clamp(42px, 4vw, 82px) minmax(0, 1fr); gap: 10px; align-items: center; }
+html body.nst-page main#main#main .nst-route--single img { display: block; width: 100% !important; height: auto !important; object-fit: contain; border-radius: 50%; }
+html body.nst-page main#main#main .nst-route strong { color: #081d60; font-size: 1.12em; font-weight: 600; }
+html body.nst-page main#main#main .nst-route--single span { display: block; margin-top: 5px; }
+html body.nst-page main#main#main .nst-route--split { display: grid; gap: 6px; }
+html body.nst-page main#main#main .nst-route-step { display: grid; grid-template-columns: clamp(38px, 3.5vw, 68px) minmax(0, 1fr); gap: 8px; align-items: center; }
+html body.nst-page main#main#main .nst-route-step img { display: block; width: 100% !important; height: auto !important; object-fit: contain; border-radius: 50%; }
+html body.nst-page main#main#main .nst-route--neural { display: grid; gap: 4px; padding-inline: 10px; }
+html body.nst-page main#main#main .nst-neural-state { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 32px; aspect-ratio: 177 / 41; padding: 3px 7px 3px 32%; background-image: var(--state-image); background-position: center; background-size: 100% 100%; background-repeat: no-repeat; font-size: clamp(16px, 1.17vw, 24px); white-space: nowrap; }
+html body.nst-page main#main#main .nst-route--transport { padding-inline: 4px; }
+html body.nst-page main#main#main .nst-transport-pill { display: grid; grid-template-columns: clamp(40px, 3.6vw, 72px) minmax(0, 1fr); gap: 8px; align-items: center; padding: 10px; border: 1px solid #c6d5e8; border-radius: 34px; background: #f9fcffb3; }
+html body.nst-page main#main#main .nst-transport-pill img { display: block; width: 100% !important; height: auto !important; object-fit: contain; mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-transport-pill span, html body.nst-page main#main#main .nst-transport-pill small { display: block; font-size: .9em; }
+html body.nst-page main#main#main .nst-transport-pill small { margin-top: 5px; font-size: .8em; }
+html body.nst-page main#main#main .nst-axis-outcomes ul { padding-left: 18px; }
+html body.nst-page main#main#main .nst-axis-outcomes li { color: #183980; font-family: var(--nst-diagram-font); font-size: clamp(17px, 1.23vw, 25px) !important; line-height: 1.15 !important; }
+html body.nst-page main#main#main .nst-axis-outcomes li + li { margin-top: 3px; }
+html body.nst-page main#main#main .nst-mobile-reference { display: none; }
+html body.nst-page main#main#main .nst-science-sheet { padding: 0; border-top: 1px solid #dbe6ef; background: #f7fbff; }
+html body.nst-page main#main#main .nst-reference-figure { margin: 0; }
+html body.nst-page main#main#main .nst-diagram-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-color: #83a6c5 #e8f1f7; scrollbar-width: thin; }
+html body.nst-page main#main#main .nst-diagram-scroll > img { display: block; width: 100% !important; max-width: none !important; height: auto !important; border-radius: 0; }
+html body.nst-page main#main#main .nst-diagram-caption { display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 8px clamp(20px, 2.6vw, 54px); color: #5f7390; font-size: 13px; line-height: 1.5; }
+html body.nst-page main#main#main .nst-diagram-caption > span { display: none; }
+html body.nst-page main#main#main .nst-diagram-caption a { text-underline-offset: 4px; }
+html body.nst-page main#main#main .nst-transcript { margin: 0 clamp(20px, 2.6vw, 54px) 28px; border-top: 1px solid #d5e2ed; }
+html body.nst-page main#main#main .nst-transcript summary { width: fit-content; padding: 14px 0; color: #274c78; font-size: 14px; font-weight: 600; cursor: pointer; }
+html body.nst-page main#main#main .nst-transcript-content { padding: 12px 0 28px; }
+html body.nst-page main#main#main .nst-transcript-content p { max-width: 1160px; margin-bottom: 20px; font-size: 17px !important; line-height: 1.55 !important; }
+html body.nst-page main#main#main .nst-transcript-intro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-block: 28px; }
+html body.nst-page main#main#main .nst-transcript-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 20px 0 32px; }
+html body.nst-page main#main#main .nst-transcript-grid article, html body.nst-page main#main#main .nst-pathway-transcript article { padding: 20px; border: 1px solid #d2e1ed; border-radius: 12px; background: #ffffffa8; }
+html body.nst-page main#main#main .nst-transcript-grid ul { padding-left: 19px; }
+html body.nst-page main#main#main .nst-transcript-grid li { font-size: 16px !important; }
+html body.nst-page main#main#main .nst-disease-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 28px; }
+html body.nst-page main#main#main .nst-disease-list dt, html body.nst-page main#main#main .nst-pathway-transcript dt { color: #0e315a; font-size: 16px; font-weight: 700; line-height: 1.4; }
+html body.nst-page main#main#main .nst-disease-list dd, html body.nst-page main#main#main .nst-pathway-transcript dd { margin: 6px 0 0; color: #385879; font-size: 16px; line-height: 1.5; }
+html body.nst-page main#main#main .nst-pathway-transcript { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-block: 26px; }
+html body.nst-page main#main#main .nst-pathway-transcript dt { margin-top: 18px; }
+html body.nst-page main#main#main .nst-pathway-transcript h4 > span { color: #3d79a3; }
+html body.nst-page main#main#main .nst-transcript-closing { margin-top: 24px; color: #587695; }
+html body.nst-page main#main#main .nst-visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+@layer arotec-display-headings.spec {
+ html body.nst-page main#main#main #neuro-scent-title { display: flex !important; flex-direction: column !important; margin: 0 0 clamp(20px, 1.8vw, 40px) !important; color: #052951 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(40px, 3.52vw, 90px) !important; font-weight: 700 !important; line-height: 1.05 !important; letter-spacing: -.015em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #neuro-scent-title > span { display: block !important; font: inherit !important; letter-spacing: inherit !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-introduction-copy h2 { margin: 0 0 24px !important; color: #062750 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(25px, 2.02vw, 47px) !important; font-weight: 600 !important; line-height: 1.15 !important; letter-spacing: -.01em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #dermal-title { margin: 0 !important; color: #051649 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(34px, 3.48vw, 78px) !important; font-weight: 700 !important; line-height: 1.03 !important; letter-spacing: -.035em !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-sensing-label h3 { margin: 0 !important; color: #061959 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(24px, 1.8vw, 38px) !important; font-weight: 600 !important; line-height: 1 !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-rule-heading h3 { margin: 0 !important; color: #091e64 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(18px, 1.38vw, 28px) !important; font-weight: 500 !important; line-height: 1.2 !important; letter-spacing: .18em !important; text-transform: uppercase !important; text-align: center !important; }
+ html body.nst-page main#main#main .nst-axis-copy h4 { margin: 0 !important; color: #071a60 !important; font-family: var(--nst-diagram-font) !important; font-size: clamp(20px, 1.45vw, 31px) !important; font-weight: 600 !important; line-height: 1.08 !important; letter-spacing: -.015em !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-transcript-content h3 { margin: 0 0 16px !important; color: #13355c !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: 24px !important; font-weight: 600 !important; line-height: 1.3 !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-transcript-content h4 { margin: 0 0 14px !important; color: #14365f !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: 18px !important; font-weight: 600 !important; line-height: 1.3 !important; text-transform: none !important; }
 }
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 18px; }
-body { margin: 0; min-width: 320px; overflow-x: clip; }
-button, a { -webkit-tap-highlight-color: transparent; }
-button { font: inherit; }
-
-.nst-page {
-  color: var(--nst-text);
-  background:
-    radial-gradient(circle at 72% 7%, rgba(31, 101, 188, .22), transparent 24%),
-    radial-gradient(circle at 11% 42%, rgba(55, 35, 130, .15), transparent 22%),
-    radial-gradient(circle at 88% 70%, rgba(23, 114, 154, .11), transparent 25%),
-    linear-gradient(180deg, #010612 0%, #031024 42%, #020817 100%);
-  font-family: var(--nst-body);
-  font-size: 14px;
-  line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
+@media (min-width: 1800px) {
+ html body.nst-page main#main#main .nst-introduction-copy { width: 35.5%; }
 }
-
-.nst-page .aging-main-header,
-.nst-page .aging-main-footer {
-  font-family: var(--nst-body);
-  line-height: 1.6;
+@media (max-width: 1199px) {
+ html body.nst-page main#main#main .nst-introduction { padding-block: 70px; }
+ html body.nst-page main#main#main .nst-introduction-copy { width: 43%; margin-left: 6%; }
+ html body.nst-page main#main#main .nst-introduction-copy p { font-size: 20px !important; }
+ html body.nst-page main#main#main .nst-dermal { background-size: auto 920px; background-position: left top; }
+ html body.nst-page main#main#main .nst-dermal-heading { width: 100%; margin-left: 0; }
+ html body.nst-page main#main#main .nst-dermal-layout { grid-template-columns: minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-skin-interface { min-height: 330px; margin: 0 -22px 20px; background: url("../images/neuro-scented-therapy/dermal-systemic-background.png") left center / auto 560px no-repeat; }
+ html body.nst-page main#main#main .nst-ingredient-label { top: 18px; left: 9%; }
+ html body.nst-page main#main#main .nst-sensing-label { top: 20%; right: 10%; width: 34%; }
+ html body.nst-page main#main#main .nst-sensing-note { top: 66%; right: 10%; width: 34%; max-width: 340px; }
+ html body.nst-page main#main#main .nst-axis-row { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) 80px minmax(0, .85fr); min-height: 138px; }
+ html body.nst-page main#main#main .nst-axis-label { grid-template-columns: 72px 34px minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-axis-copy p { font-size: 18px !important; }
+ html body.nst-page main#main#main .nst-route { font-size: 20px; }
+ html body.nst-page main#main#main .nst-axis-outcomes li { font-size: 20px !important; }
+ html body.nst-page main#main#main .nst-mobile-reference { display: block; padding-top: 18px; text-align: right; font-family: var(--site-font, "DM Sans", sans-serif); font-size: 14px; }
+ html body.nst-page main#main#main .nst-transcript-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-
-.nst-page::before,
-.nst-page::after {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  content: "";
-}
-
-.nst-page::before {
-  opacity: .34;
-  background-image:
-    radial-gradient(circle, rgba(91, 190, 255, .82) 0 1px, transparent 1.8px),
-    radial-gradient(circle, rgba(157, 107, 255, .65) 0 1px, transparent 1.7px);
-  background-position: 0 0, 39px 52px;
-  background-size: 83px 83px, 117px 117px;
-  mask-image: linear-gradient(to bottom, #000 0 25%, transparent 70%);
-}
-
-.nst-page::after {
-  z-index: 30;
-  box-shadow: inset 0 0 110px 34px rgba(0, 3, 12, .76);
-}
-
-.nst-skip {
-  position: fixed;
-  left: 14px;
-  top: 10px;
-  z-index: 100;
-  padding: 10px 14px;
-  color: #00101c;
-  background: var(--nst-cyan);
-  border-radius: 8px;
-  transform: translateY(-180%);
-}
-.nst-skip:focus { transform: translateY(0); }
-
-.nst-progress {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 99;
-  height: 2px;
-  background: rgba(255,255,255,.05);
-}
-.nst-progress span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, var(--nst-violet), var(--nst-cyan));
-  box-shadow: 0 0 12px var(--nst-cyan);
-  transform: scaleX(0);
-  transform-origin: left center;
-}
-
-.nst-header {
-  position: sticky;
-  top: 10px;
-  z-index: 40;
-  display: grid;
-  grid-template-columns: minmax(235px, 1fr) auto minmax(235px, 1fr);
-  align-items: center;
-  width: min(calc(100% - 24px), 1512px);
-  min-height: 68px;
-  margin: 10px auto 0;
-  padding: 8px 14px;
-  border: 1px solid rgba(70, 164, 234, .34);
-  border-radius: 18px;
-  background: rgba(2, 8, 23, .68);
-  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 12px 30px rgba(0,0,0,.18);
-  backdrop-filter: blur(12px) saturate(130%);
-  transition: background .3s ease, box-shadow .3s ease;
-}
-
-.nst-header.is-scrolled {
-  background: rgba(2, 8, 23, .92);
-  box-shadow: inset 0 1px rgba(255,255,255,.06), 0 16px 36px rgba(0,0,0,.36), 0 0 24px rgba(30, 130, 255, .08);
-}
-
-.nst-brand {
-  display: inline-flex;
-  align-items: center;
-  justify-self: start;
-  gap: 10px;
-  color: var(--nst-text);
-  text-decoration: none;
-  font-family: var(--nst-head);
-  font-size: 20px;
-  letter-spacing: .035em;
-}
-.nst-brand img { width: 42px; height: 42px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(66,217,255,.6)); }
-
-.nst-nav { display: flex; align-items: center; justify-content: center; gap: clamp(22px, 3.2vw, 54px); }
-.nst-nav a {
-  position: relative;
-  padding: 18px 0 16px;
-  color: #d7e9fa;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: var(--nst-head);
-  font-size: 15px;
-  letter-spacing: .05em;
-}
-.nst-nav a::after {
-  position: absolute;
-  right: 0;
-  bottom: 9px;
-  left: 0;
-  height: 1px;
-  content: "";
-  background: var(--nst-cyan);
-  box-shadow: 0 0 8px var(--nst-cyan);
-  transform: scaleX(0);
-  transition: transform .25s ease;
-}
-.nst-nav a:hover,
-.nst-nav a:focus-visible,
-.nst-nav a.is-active { color: #fff; text-shadow: 0 0 11px rgba(66,217,255,.68); }
-.nst-nav a:hover::after,
-.nst-nav a:focus-visible::after,
-.nst-nav a.is-active::after { transform: scaleX(1); }
-
-.nst-explore,
-.nst-menu-button {
-  min-height: 44px;
-  color: #effaff;
-  border: 1px solid rgba(97, 211, 255, .8);
-  border-radius: 12px;
-  background: linear-gradient(110deg, rgba(77, 45, 177, .28), rgba(10, 113, 172, .22));
-  box-shadow: inset 0 0 16px rgba(87,103,255,.17), 0 0 14px rgba(39,140,255,.24);
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: var(--nst-head);
-  font-weight: 600;
-  letter-spacing: .05em;
-  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-}
-.nst-explore { justify-self: end; min-width: 214px; padding: 0 24px; }
-.nst-menu-button { display: none; }
-.nst-explore:hover,
-.nst-explore:focus-visible,
-.nst-menu-button:hover,
-.nst-menu-button:focus-visible {
-  outline: 2px solid transparent;
-  border-color: #9ff3ff;
-  background: linear-gradient(110deg, rgba(93, 57, 208, .42), rgba(8, 136, 205, .34));
-  box-shadow: inset 0 0 22px rgba(87,103,255,.22), 0 0 22px rgba(39,140,255,.42);
-}
-
-.nst-main { width: min(calc(100% - 40px), 1350px); margin: 0 auto 32px; }
-.nst-hero,
-.nst-section,
-.nst-disease-spectrum {
-  position: relative;
-  border: 1px solid rgba(66, 155, 229, .38);
-  border-radius: var(--nst-radius);
-  background: linear-gradient(145deg, rgba(8, 24, 50, .69), rgba(3, 13, 30, .8));
-  box-shadow: inset 0 1px rgba(255,255,255,.04), 0 0 26px rgba(20,109,200,.05);
-  overflow: hidden;
-}
-
-.nst-hero {
-  display: block;
-  min-height: 492px;
-  border-color: transparent;
-  background: #02030c;
-  box-shadow: none;
-}
-.nst-hero::after {
-  position: absolute;
-  inset: auto -5% 0 22%;
-  height: 1px;
-  content: "";
-  background: linear-gradient(90deg, transparent, rgba(66,217,255,.48), transparent);
-}
-.nst-hero-copy { position: relative; z-index: 3; width: 44%; min-height: 492px; padding: 34px 18px 20px 46px; }
-.nst-eyebrow {
-  margin: 0 0 11px;
-  color: var(--nst-cyan);
-  text-transform: uppercase;
-  font-family: var(--nst-head);
-  font-weight: 600;
-  letter-spacing: .15em;
-}
-.nst-hero h1 {
-  margin: 0;
-  color: #e7f4ff;
-  text-transform: uppercase;
-  font-family: "Segoe UI Light", "Segoe UI", Arial, sans-serif;
-  font-size: clamp(46px, 3.55vw, 54px);
-  font-weight: 200;
-  line-height: 1.015;
-  letter-spacing: .015em;
-  text-shadow: 0 0 22px rgba(73,138,255,.25);
-}
-.nst-hero-lede { margin: 15px 0 18px; color: #bdcfe0; font-size: 18px; font-weight: 350; line-height: 1.48; }
-.nst-hero-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: min(100%, 570px); }
-.nst-mini-card {
-  min-height: 172px;
-  padding: 13px 12px 10px;
-  border: 1px solid rgba(63,171,255,.42);
-  border-radius: 13px;
-  background: linear-gradient(155deg, rgba(9,31,63,.75), rgba(4,13,31,.8));
-  box-shadow: inset 0 1px rgba(255,255,255,.035);
-}
-.nst-mini-card h3 { margin: 0 0 4px; color: #a7dcff; font: 600 15px/1 var(--nst-head); text-transform: uppercase; }
-.nst-mini-card p { margin: 0; color: var(--nst-text-2); font-size: 12px; line-height: 1.35; }
-.nst-mini-card img { display: block; width: 100%; height: 86px; margin-top: 6px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(78,157,255,.32)); }
-
-.nst-hero-visual {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  min-width: 0;
-  pointer-events: none;
-}
-.nst-hero-visual::before {
-  position: absolute;
-  inset: 5% 2% 7% 6%;
-  content: "";
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(30,122,255,.14), transparent 64%);
-  filter: blur(12px);
-}
-.nst-hero-visual img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  object-fit: contain;
-  object-position: right center;
-  mix-blend-mode: normal;
-  filter: none;
-  animation: none;
-}
-.nst-neural-pulse { position: absolute; z-index: 2; width: 12px; height: 12px; border-radius: 50%; background: #ff7d55; box-shadow: 0 0 12px 5px rgba(255,90,67,.42); animation: nst-pulse 2.2s ease-in-out infinite; }
-.pulse-one { left: 67%; top: 27%; }
-.pulse-two { left: 80%; top: 70%; animation-delay: .8s; }
-
-.nst-section { margin-top: 12px; padding: 0 14px 14px; }
-.nst-section-olfactory { min-height: 805px; }
-.nst-section-dermal { min-height: 760px; }
-.nst-section-integration { min-height: 735px; }
-.nst-section-heading { display: flex; align-items: center; gap: 18px; min-height: 82px; padding: 10px 10px 8px; }
-.nst-section-number {
-  display: grid;
-  flex: 0 0 64px;
-  width: 64px;
-  height: 64px;
-  place-items: center;
-  border: 1px solid rgba(109,151,255,.76);
-  border-radius: 50%;
-  color: #bceeff;
-  background: radial-gradient(circle, rgba(33,132,230,.28), rgba(85,54,183,.13) 62%, transparent 64%);
-  box-shadow: 0 0 15px rgba(76,119,255,.3), inset 0 0 14px rgba(43,166,255,.12);
-  font: 700 34px/1 var(--nst-head);
-}
-.nst-section-heading h2 { margin: 0; color: #93ddff; text-transform: uppercase; font: 600 clamp(22px, 2vw, 31px)/1.08 var(--nst-head); letter-spacing: .025em; }
-.nst-section-heading p { margin: 3px 0 0; color: #b9d4ef; text-transform: uppercase; font: 500 14px/1.2 var(--nst-head); letter-spacing: .04em; }
-
-.nst-section-one-layout { display: grid; grid-template-columns: minmax(0, 1fr) 274px; gap: 16px; }
-.nst-section-one-main { min-width: 0; }
-.nst-input-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; height: 125px; }
-.nst-flow-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 86px 1fr;
-  align-items: center;
-  min-width: 0;
-  padding: 10px;
-  border: 1px solid rgba(53,144,218,.45);
-  border-radius: 12px;
-  background: rgba(6,24,50,.78);
-}
-.nst-flow-card img { width: 78px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 7px rgba(68,157,255,.38)); }
-.nst-flow-card h3 { margin: 0 0 4px; color: #d8f4ff; text-transform: uppercase; font: 600 15px/1.05 var(--nst-head); }
-.nst-flow-card p { margin: 0; color: var(--nst-text-2); font-size: 12px; }
-.nst-flow-arrow { position: absolute; z-index: 2; top: 50%; right: -27px; width: 28px; height: 16px; overflow: visible; transform: translateY(-50%); }
-.nst-flow-arrow path { fill: none; stroke: #bfecff; stroke-width: 1.8; stroke-linecap: round; }
-.nst-flow-arrow polygon { fill: #c9f3ff; }
-.nst-flow-card:last-child .nst-flow-arrow { display: none; }
-
-.nst-axis-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, 1fr); gap: 11px; height: 564px; margin-top: 10px; }
-.nst-axis-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  grid-template-rows: 42px minmax(0, 1fr);
-  align-items: stretch;
-  min-width: 0;
-  padding: 10px;
-  border: 1px solid color-mix(in srgb, var(--axis-color) 52%, transparent);
-  border-radius: 14px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--axis-color) 9%, rgba(4,15,34,.82)), rgba(3,13,29,.84));
-  box-shadow: inset 0 1px rgba(255,255,255,.035);
-  outline: none;
-  transition: border-color .22s ease, box-shadow .22s ease;
-}
-.nst-axis-card:hover,
-.nst-axis-card:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 82%, white 8%); box-shadow: inset 0 0 20px color-mix(in srgb, var(--axis-color) 9%, transparent), 0 0 16px color-mix(in srgb, var(--axis-color) 17%, transparent); }
-.nst-axis-intro { display: flex; grid-row: 1 / 3; flex-direction: column; align-items: center; justify-content: flex-start; gap: 7px; min-width: 0; }
-.nst-axis-number { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--axis-color); border-radius: 50%; color: #fff; background: color-mix(in srgb, var(--axis-color) 25%, #061326); box-shadow: 0 0 11px color-mix(in srgb, var(--axis-color) 32%, transparent); font: 700 23px/1 var(--nst-head); }
-.nst-axis-icon { width: 82px; height: 88px; object-fit: contain; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--axis-color) 35%, transparent)); transition: transform .2s ease; }
-.nst-axis-card:hover .nst-axis-icon,
-.nst-axis-card:focus-visible .nst-axis-icon { transform: scale(1.03); }
-.nst-axis-title { display: flex; grid-column: 2; grid-row: 1; align-items: center; padding: 2px 8px; color: var(--axis-color); text-transform: uppercase; font: 600 15px/1.1 var(--nst-head); letter-spacing: .015em; }
-.nst-axis-steps { display: flex; grid-column: 2; grid-row: 2; min-width: 0; align-items: center; gap: 4px; }
-.nst-step { display: grid; flex: 1 1 0; min-width: 0; min-height: 76px; place-items: center; padding: 7px 5px; border: 1px solid color-mix(in srgb, var(--axis-color) 39%, transparent); border-radius: 8px; color: #dcecff; background: rgba(5,20,43,.75); text-align: center; font-size: 12.5px; line-height: 1.3; overflow-wrap: anywhere; }
-.nst-step-link { flex: 0 0 15px; width: 15px; height: 12px; overflow: visible; }
-.nst-step-link path { fill: none; stroke: var(--axis-color); stroke-width: 1.6; stroke-dasharray: 18; animation: nst-flow 2s linear infinite; }
-.nst-step-link polygon { fill: var(--axis-color); }
-.nst-tooltip {
-  position: absolute;
-  right: 12px;
-  bottom: calc(100% - 8px);
-  z-index: 12;
-  width: min(320px, calc(100% - 24px));
-  padding: 9px 11px;
-  border: 1px solid color-mix(in srgb, var(--axis-color) 60%, transparent);
-  border-radius: 9px;
-  color: #eaf7ff;
-  background: rgba(2,10,25,.96);
-  box-shadow: 0 12px 28px rgba(0,0,0,.4);
-  font-size: 11px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(6px);
-  transition: opacity .18s ease, transform .18s ease;
-}
-.nst-axis-card:hover .nst-tooltip,
-.nst-axis-card:focus-visible .nst-tooltip,
-.nst-system-card:hover .nst-tooltip,
-.nst-system-card:focus-visible .nst-tooltip { opacity: 1; transform: translateY(0); }
-
-.nst-outcome-panel {
-  min-width: 0;
-  padding: 12px 11px;
-  border: 1px solid rgba(96,137,224,.48);
-  border-radius: 16px;
-  background: linear-gradient(160deg, rgba(7,28,58,.85), rgba(3,13,29,.82));
-  box-shadow: inset 0 1px rgba(255,255,255,.04), 0 0 20px rgba(45,96,210,.08);
-}
-.nst-outcome-panel h3 { margin: 0 0 4px; color: #8fceff; text-align: center; text-transform: uppercase; font: 600 18px/1.12 var(--nst-head); letter-spacing: .04em; }
-.nst-outcome-item { display: grid; grid-template-columns: 62px 1fr 22px; align-items: center; min-height: 80px; gap: 9px; border-bottom: 1px solid rgba(99,142,205,.22); }
-.nst-outcome-item:last-child { border-bottom: 0; }
-.nst-outcome-item img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(86,154,255,.32)); }
-.nst-outcome-item p { margin: 0; color: #dfeeff; text-transform: uppercase; font: 500 13px/1.25 var(--nst-head); }
-.nst-trend-svg { width: 18px; height: 32px; overflow: visible; }
-.nst-trend-svg path { fill: none; stroke-width: 2.2; }
-.nst-trend-svg polygon { stroke: none; }
-.nst-trend-up path { stroke: var(--nst-red); filter: drop-shadow(0 0 4px rgba(255,93,112,.55)); }
-.nst-trend-up polygon { fill: var(--nst-red); }
-.nst-trend-down path { stroke: #4ba4ff; filter: drop-shadow(0 0 4px rgba(39,140,255,.6)); }
-.nst-trend-down polygon { fill: #4ba4ff; }
-
-.nst-dermal-layout { display: grid; grid-template-columns: 500px minmax(0, 1fr) 246px; gap: 14px; min-height: 650px; }
-.nst-dermal-entry { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 9px; min-width: 0; }
-.nst-skin-figure { position: relative; min-width: 0; margin: 0; }
-.nst-skin-figure figcaption { position: absolute; z-index: 3; top: 4px; width: 100%; color: #c8adff; text-align: center; text-transform: uppercase; font: 600 16px/1 var(--nst-head); text-shadow: 0 0 9px rgba(155,108,255,.55); }
-.nst-skin-figure img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 13px rgba(36,134,255,.24)); animation: nst-scan 6.5s linear infinite; }
-.nst-dermal-entry-flow { display: flex; flex-direction: column; justify-content: center; gap: 22px; }
-.nst-entry-card { position: relative; min-height: 136px; padding: 12px 9px; border: 1px solid rgba(70,161,235,.38); border-radius: 11px; background: rgba(6,24,49,.78); }
-.nst-entry-card h3 { margin: 0 0 6px; color: #8ae6ff; text-transform: uppercase; font: 600 14px/1.12 var(--nst-head); }
-.nst-entry-card p { margin: 0; color: #c2d5e6; font-size: 11.5px; line-height: 1.4; }
-.nst-entry-card img { width: 100%; height: 55px; margin-top: 7px; object-fit: contain; }
-.nst-entry-card:not(:last-child)::after { position: absolute; left: 50%; top: calc(100% + 3px); height: 18px; border-left: 1px solid #78dfff; content: ""; }
-
-.nst-dermal-axes { display: grid; grid-template-rows: 1.04fr 1.25fr 1.42fr .92fr .8fr; gap: 8px; min-width: 0; }
-.nst-dermal-axis {
-  --axis-color: var(--nst-blue);
-  position: relative;
-  display: grid;
-  grid-template-columns: 46px 188px minmax(0,1fr);
-  align-items: center;
-  min-width: 0;
-  padding: 8px;
-  border: 1px solid color-mix(in srgb, var(--axis-color) 50%, transparent);
-  border-radius: 12px;
-  background: linear-gradient(120deg, color-mix(in srgb, var(--axis-color) 8%, rgba(5,19,41,.86)), rgba(3,14,30,.83));
-  outline: none;
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-.nst-dermal-axis:hover,
-.nst-dermal-axis:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 80%, white 7%); box-shadow: 0 0 14px color-mix(in srgb, var(--axis-color) 13%, transparent); }
-.nst-dermal-axis .nst-axis-number { width: 34px; height: 34px; font-size: 21px; }
-.nst-dermal-axis h3 { margin: 0; padding: 0 7px; color: var(--axis-color); text-transform: uppercase; font: 600 14px/1.13 var(--nst-head); }
-.nst-dermal-flow { display: flex; align-items: center; min-width: 0; gap: 4px; }
-.nst-dermal-flow .nst-step { min-height: 54px; font-size: 11.5px; }
-.nst-dermal-outcomes { display: flex; align-items: center; padding-top: 4px; padding-bottom: 4px; }
-.nst-dermal-outcomes > div { width: 100%; }
-.nst-dermal-outcomes .nst-outcome-item { min-height: 75px; }
-
-.nst-integration-top { display: grid; grid-template-columns: 226px 420px minmax(300px, 1fr) 265px; gap: 12px; height: 320px; }
-.nst-stage-card,
-.nst-head-visual,
-.nst-multisystem { border: 1px solid rgba(74,142,219,.4); border-radius: 13px; background: rgba(5,20,43,.76); }
-.nst-stage-card { position: relative; min-width: 0; padding: 12px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
-.nst-stage-card:hover,
-.nst-stage-card:focus-visible { border-color: rgba(102,198,255,.72); box-shadow: 0 0 16px rgba(52,130,255,.14); }
-.nst-stage-card h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: #b6a5ff; text-transform: uppercase; font: 600 17px/1.1 var(--nst-head); }
-.nst-stage-card h3 span,
-.nst-multisystem h3 span { display: grid; flex: 0 0 33px; width: 33px; height: 33px; place-items: center; border: 1px solid #69bfff; border-radius: 50%; color: #d9f5ff; background: rgba(29,117,198,.22); font: 700 21px/1 var(--nst-head); }
-.nst-stage-flow { position: relative; display: grid; place-items: center; min-height: 51px; margin: 11px 0; padding: 6px; border: 1px solid rgba(68,150,221,.36); border-radius: 7px; color: #dbeeff; text-align: center; font-size: 11px; }
-.nst-stage-flow:not(:last-child)::after { position: absolute; top: calc(100% + 2px); left: 50%; height: 9px; border-left: 1px solid #8adaff; content: ""; }
-.nst-head-visual { position: relative; margin: 0; overflow: hidden; }
-.nst-head-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; mix-blend-mode: screen; filter: saturate(1.1) contrast(1.04); animation: nst-breathe 5s ease-in-out infinite; }
-.nst-anatomy-label { position: absolute; z-index: 2; padding: 3px 6px; border: 1px solid rgba(106,177,244,.48); border-radius: 5px; color: #dbf2ff; background: rgba(4,17,39,.84); font: 500 10px/1.1 var(--nst-body); box-shadow: 0 0 8px rgba(39,140,255,.13); }
-.label-bulb { left: 21%; top: 39%; }
-.label-amygdala { right: 15%; top: 37%; }
-.label-hippocampus { right: 9%; top: 52%; }
-.label-hypothalamus { right: 10%; top: 68%; }
-.nst-central-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.nst-central-columns > div { padding: 10px; border: 1px solid rgba(89,138,213,.34); border-radius: 9px; }
-.nst-central-columns h4 { margin: 0 0 9px; color: #d3edff; font: 600 15px/1 var(--nst-head); }
-.nst-central-columns ul { margin: 0; padding-left: 17px; color: #bfcee0; font-size: 11px; line-height: 1.75; }
-.nst-dysregulation-stage { display: grid; grid-template-columns: 1fr 105px; gap: 4px; overflow: hidden; }
-.nst-dysregulation-stage h3 { align-items: flex-start; font-size: 15px; }
-.nst-dysregulation-stage p { margin: 4px 0 0; color: #c8b5d7; font-size: 10.5px; }
-.nst-dysregulation-stage img { align-self: end; width: 125px; height: 242px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 0 12px rgba(255,67,123,.25)); }
-
-.nst-multisystem { margin-top: 10px; padding: 8px 10px 11px; }
-.nst-multisystem > h3 { display: flex; align-items: center; justify-content: center; gap: 9px; margin: 0 0 8px; color: #b9a6ff; text-transform: uppercase; font: 600 17px/1 var(--nst-head); letter-spacing: .03em; }
-.nst-system-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
-.nst-system-card {
-  --axis-color: var(--nst-violet);
-  position: relative;
-  min-width: 0;
-  min-height: 238px;
-  padding: 11px 9px 8px;
-  border: 1px solid color-mix(in srgb, var(--axis-color) 44%, transparent);
-  border-radius: 10px;
-  background: rgba(5,21,45,.8);
-  text-align: center;
-  outline: none;
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-.nst-system-card:hover,
-.nst-system-card:focus-visible { border-color: color-mix(in srgb, var(--axis-color) 78%, white 8%); box-shadow: 0 0 14px color-mix(in srgb, var(--axis-color) 14%, transparent); }
-.nst-system-card h4 { min-height: 37px; margin: 0; color: #d6ecff; text-transform: uppercase; font: 600 14px/1.15 var(--nst-head); }
-.nst-system-card img { width: 75px; height: 70px; margin: 8px auto; object-fit: contain; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--axis-color) 28%, transparent)); transition: transform .2s ease; }
-.nst-system-card:hover img,
-.nst-system-card:focus-visible img { transform: scale(1.03); }
-.nst-system-card ul { margin: 0; padding-left: 15px; color: #bfd0e1; text-align: left; font-size: 11.5px; line-height: 1.5; }
-.nst-system-card .nst-tooltip { --axis-color: var(--nst-violet); }
-
-.nst-disease-spectrum {
-  margin-top: 12px;
-  padding: 12px 10px 14px;
-  border-color: rgba(224,79,99,.38);
-  background: linear-gradient(155deg, rgba(47,10,21,.66), rgba(13,8,23,.84));
-}
-.nst-disease-spectrum h2 { margin: 0 0 10px; color: #ff7183; text-align: center; text-transform: uppercase; font: 600 22px/1 var(--nst-head); letter-spacing: .04em; }
-.nst-disease-grid { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; }
-.nst-disease-card { min-width: 0; min-height: 226px; padding: 10px 6px 8px; border: 1px solid rgba(235,85,104,.35); border-radius: 9px; background: rgba(37,8,17,.46); text-align: center; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
-.nst-disease-card:hover,
-.nst-disease-card:focus-visible { border-color: rgba(255,104,125,.72); box-shadow: inset 0 0 16px rgba(255,57,86,.07), 0 0 12px rgba(255,57,86,.13); }
-.nst-disease-card h3 { min-height: 38px; margin: 0; color: #ff7586; text-transform: uppercase; font: 600 12px/1.12 var(--nst-head); }
-.nst-disease-card img { width: 61px; height: 62px; margin: 10px auto 7px; object-fit: contain; filter: sepia(.5) saturate(2) hue-rotate(295deg) drop-shadow(0 0 5px rgba(255,72,92,.3)); }
-.nst-disease-card p { margin: 0; color: #d9bcc3; font-size: 11px; line-height: 1.37; }
-
-.nst-pathway-dialog { width: min(640px, calc(100% - 28px)); padding: 0; border: 1px solid rgba(78,190,255,.54); border-radius: 18px; color: var(--nst-text); background: rgba(3,13,31,.96); box-shadow: 0 24px 80px rgba(0,0,0,.68), 0 0 28px rgba(52,124,255,.22); }
-.nst-pathway-dialog::backdrop { background: rgba(0,5,17,.72); backdrop-filter: blur(7px); }
-.nst-dialog-card { display: grid; gap: 10px; padding: 20px; }
-.nst-dialog-heading { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 4px; }
-.nst-dialog-heading p { margin: 0; color: var(--nst-cyan); text-transform: uppercase; font: 600 13px/1 var(--nst-head); letter-spacing: .1em; }
-.nst-dialog-heading h2 { margin: 5px 0 0; font: 600 28px/1 var(--nst-head); }
-.nst-dialog-heading button,
-.nst-dialog-card > button { min-height: 48px; border: 1px solid rgba(76,159,226,.45); border-radius: 10px; color: #e5f6ff; background: rgba(8,29,57,.8); cursor: pointer; }
-.nst-dialog-heading button { min-width: 76px; }
-.nst-dialog-card > button { display: grid; grid-template-columns: 47px 1fr; grid-template-rows: auto auto; align-items: center; padding: 10px 14px; text-align: left; }
-.nst-dialog-card > button span { grid-row: 1 / 3; color: var(--nst-cyan); font: 700 28px/1 var(--nst-head); }
-.nst-dialog-card > button b { text-transform: uppercase; font: 600 17px/1 var(--nst-head); }
-.nst-dialog-card > button small { color: var(--nst-text-2); }
-.nst-dialog-heading button:hover,
-.nst-dialog-heading button:focus-visible,
-.nst-dialog-card > button:hover,
-.nst-dialog-card > button:focus-visible { outline: 2px solid transparent; border-color: var(--nst-cyan); box-shadow: 0 0 13px rgba(66,217,255,.18); }
-
-.nst-back-top { position: fixed; right: 18px; bottom: 18px; z-index: 25; width: 48px; height: 48px; border: 1px solid rgba(75,189,255,.56); border-radius: 50%; color: #dff8ff; background: rgba(5,21,43,.88); box-shadow: 0 0 16px rgba(47,151,255,.2); cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(8px); transition: bottom .2s ease, opacity .2s ease, transform .2s ease; }
-.nst-back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.nst-back-top.is-footer-near { bottom: 128px; }
-.nst-back-top:focus-visible { outline: 2px solid var(--nst-cyan); outline-offset: 3px; }
-
-.nst-reveal {
-  opacity: 0;
-  filter: blur(4px);
-  transform: translateY(13px) scale(.985);
-  transition: opacity .72s cubic-bezier(.2,.75,.25,1), filter .72s cubic-bezier(.2,.75,.25,1), transform .72s cubic-bezier(.2,.75,.25,1);
-}
-.nst-reveal.is-visible { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
-
-/* Human Longevity visual language: glass depth, cyan glow and pointer tilt. */
-.nst-section,
-.nst-disease-spectrum,
-.nst-outcome-panel,
-.nst-multisystem {
-  border-radius: 22px;
-  box-shadow: 0 0 18px rgba(22,200,255,.2), inset 0 0 24px rgba(22,139,255,.08);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-}
-
-.nst-mini-card,
-.nst-flow-card,
-.nst-axis-card,
-.nst-entry-card,
-.nst-dermal-axis,
-.nst-stage-card,
-.nst-system-card,
-.nst-disease-card {
-  border-radius: 22px;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-}
-
-.nst-mini-card,
-.nst-flow-card,
-.nst-entry-card,
-.nst-stage-card,
-.nst-system-card {
-  background: linear-gradient(145deg, rgba(4,32,66,.75), rgba(2,14,34,.88));
-  box-shadow: 0 0 18px rgba(22,200,255,.12), inset 0 0 24px rgba(22,139,255,.06);
-}
-
-.nst-axis-card,
-.nst-dermal-axis {
-  background: linear-gradient(145deg, color-mix(in srgb, var(--axis-color) 10%, rgba(4,32,66,.78)), rgba(2,14,34,.9));
-  box-shadow: 0 0 18px color-mix(in srgb, var(--axis-color) 15%, transparent), inset 0 0 24px color-mix(in srgb, var(--axis-color) 7%, transparent);
-}
-
-.nst-disease-spectrum {
-  box-shadow: 0 0 18px rgba(229,154,182,.18), inset 0 0 26px rgba(229,154,182,.08);
-}
-
-.nst-disease-card {
-  --nst-card-accent: #e59ab6;
-  background: linear-gradient(140deg, rgba(59,22,55,.73), rgba(22,15,38,.9));
-  box-shadow: 0 0 18px rgba(229,154,182,.12), inset 0 0 26px rgba(229,154,182,.06);
-}
-
-.nst-tilt-card {
-  --rx: 0deg;
-  --ry: 0deg;
-  --nst-card-accent: var(--axis-color, var(--nst-cyan));
-  transform: perspective(800px) rotateX(var(--rx)) rotateY(var(--ry));
-  transform-style: preserve-3d;
-  transition: transform .24s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
-  will-change: transform;
-}
-
-.nst-tilt-card:hover,
-.nst-tilt-card:focus-visible,
-.nst-tilt-card:focus-within {
-  z-index: 8;
-  border-color: color-mix(in srgb, var(--nst-card-accent) 88%, white 12%);
-  background: linear-gradient(145deg, rgba(5,43,87,.83), rgba(2,18,42,.94));
-  box-shadow: 0 0 26px color-mix(in srgb, var(--nst-card-accent) 28%, transparent), inset 0 0 30px color-mix(in srgb, var(--nst-card-accent) 12%, transparent);
-}
-
-.nst-disease-card.nst-tilt-card { --nst-card-accent: #e59ab6; }
-
-.nst-disease-card.nst-tilt-card:hover,
-.nst-disease-card.nst-tilt-card:focus-visible,
-.nst-disease-card.nst-tilt-card:focus-within {
-  background: linear-gradient(140deg, rgba(71,27,65,.83), rgba(28,17,45,.94));
-}
-
-@keyframes nst-breathe { 0%, 100% { opacity: .94; filter: saturate(1.03) brightness(.98); } 50% { opacity: 1; filter: saturate(1.1) brightness(1.08); } }
-@keyframes nst-pulse { 0%, 100% { transform: scale(.8); opacity: .55; } 50% { transform: scale(1.28); opacity: 1; } }
-@keyframes nst-flow { to { stroke-dashoffset: -36; } }
-@keyframes nst-scan { 0%, 100% { filter: drop-shadow(0 0 10px rgba(36,134,255,.2)) brightness(.96); } 50% { filter: drop-shadow(0 0 18px rgba(64,196,255,.36)) brightness(1.05); } }
-
-@media (max-width: 1279px) {
-  .nst-page { font-size: 13px; }
-  .nst-header { grid-template-columns: minmax(205px,1fr) auto minmax(180px,1fr); }
-  .nst-explore { min-width: 180px; padding-inline: 15px; }
-  .nst-nav { gap: 24px; }
-  .nst-hero-copy { padding-left: 28px; }
-  .nst-section-one-layout { grid-template-columns: 1fr; }
-  .nst-section-one-main { min-height: 710px; }
-  .nst-axis-card { grid-template-columns: 82px minmax(0, 1fr); }
-  .nst-axis-icon { width: 58px; height: 68px; }
-  .nst-step { font-size: 10px; }
-  .nst-outcome-panel { display: grid; grid-template-columns: 190px 1fr; align-items: center; }
-  .nst-outcome-panel > div { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
-  .nst-outcome-item { min-height: 90px; padding: 5px; border-right: 1px solid rgba(99,142,205,.22); }
-  .nst-outcome-item:nth-child(4n) { border-right: 0; }
-  .nst-section-olfactory { min-height: auto; }
-  .nst-dermal-layout { grid-template-columns: 1fr 255px; }
-  .nst-dermal-entry { grid-column: 1 / 3; grid-template-columns: 300px 1fr; min-height: 330px; }
-  .nst-dermal-entry-flow { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-content: center; gap: 12px; }
-  .nst-entry-card { min-height: 155px; }
-  .nst-entry-card:not(:last-child)::after { display: none; }
-  .nst-dermal-outcomes { display: block; }
-  .nst-dermal-outcomes > div { display: block; }
-  .nst-dermal-outcomes .nst-outcome-item { min-height: 72px; }
-  .nst-integration-top { grid-template-columns: 1fr 1.5fr; height: auto; }
-  .nst-stage-card,
-  .nst-head-visual { min-height: 310px; }
-  .nst-system-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
-  .nst-system-card { min-height: 218px; }
-  .nst-disease-grid { grid-template-columns: repeat(6, minmax(0,1fr)); }
-  .nst-disease-card { min-height: 205px; }
-}
-
 @media (max-width: 900px) {
-  .nst-header { grid-template-columns: 1fr auto auto; }
-  .nst-menu-button { display: inline-grid; place-items: center; min-width: 70px; padding: 0 12px; }
-  .nst-explore { min-width: 152px; }
-  .nst-nav { position: absolute; top: calc(100% + 7px); right: 0; left: 0; display: none; padding: 8px; border: 1px solid rgba(68,163,229,.4); border-radius: 13px; background: rgba(2,10,25,.97); box-shadow: 0 18px 40px rgba(0,0,0,.4); }
-  .nst-nav.is-open { display: grid; grid-template-columns: repeat(4,1fr); }
-  .nst-nav a { min-height: 44px; padding: 13px 8px; text-align: center; }
-  .nst-hero { grid-template-columns: 47% 53%; min-height: 510px; }
-  .nst-hero-copy { padding-left: 14px; }
-  .nst-hero-inputs { gap: 7px; }
-  .nst-mini-card { padding-inline: 8px; }
-  .nst-mini-card h3 { font-size: 12px; }
-  .nst-axis-card { grid-template-columns: 70px minmax(0, 1fr); }
-  .nst-axis-icon { width: 48px; height: 58px; }
-  .nst-axis-title { font-size: 13px; }
-  .nst-step { font-size: 9px; }
-  .nst-outcome-panel { grid-template-columns: 150px 1fr; }
-  .nst-outcome-panel > div { grid-template-columns: repeat(2,1fr); }
-  .nst-outcome-item:nth-child(2n) { border-right: 0; }
-  .nst-outcome-item:nth-child(4n) { border-right: 0; }
+ html body.nst-page main#main#main .nst-introduction { display: flex; flex-direction: column; min-height: 0; padding: 0; background: #f6f7f5; }
+ html body.nst-page main#main#main .nst-introduction-copy { order: 0; width: auto; max-width: none; margin: 0; padding: 48px 26px 20px; }
+ html body.nst-page main#main#main .nst-introduction-art { position: relative; order: 1; z-index: 0; inset: auto; height: auto !important; object-fit: contain; }
+ html body.nst-page main#main#main .nst-introduction-copy p { max-width: 720px; font-size: 23px !important; line-height: 1.35 !important; }
+ html body.nst-page main#main#main .nst-dermal { padding: 34px 22px; background: linear-gradient(135deg, #fff, #edf6fd); }
+ html body.nst-page main#main#main .nst-dermal-heading .nst-section-subtitle { font-size: 28px !important; line-height: 1.2 !important; }
+ html body.nst-page main#main#main .nst-dermal-heading .nst-section-intro { font-size: 21px !important; line-height: 1.3 !important; }
+ html body.nst-page main#main#main .nst-rule-heading { gap: 12px; }
+ html body.nst-page main#main#main .nst-rule-heading::before, html body.nst-page main#main#main .nst-rule-heading::after { flex: 0 0 24px; }
+ html body.nst-page main#main#main .nst-axis-list { gap: 18px; }
+ html body.nst-page main#main#main .nst-axis-row { grid-template-columns: 72px minmax(0, 1fr); gap: 16px 18px; min-height: 0; padding: 20px; border: 1px solid #cbdeed; border-radius: 18px; background: #ffffffb8; }
+ html body.nst-page main#main#main .nst-axis-label { grid-column: 1 / -1; grid-template-columns: 72px 36px minmax(0, 1fr); gap: 12px; }
+ html body.nst-page main#main#main .nst-axis-number { font-size: 40px; }
+ html body.nst-page main#main#main .nst-axis-copy p { font-size: 20px !important; }
+ html body.nst-page main#main#main .nst-route { grid-column: 1 / -1; width: min(100%, 480px); margin: 9px auto; padding-block: 12px; font-size: 23px; }
+ html body.nst-page main#main#main .nst-route::before { top: -6px; left: 50%; transform: translate(-50%, -50%) rotate(90deg); }
+ html body.nst-page main#main#main .nst-route::after { top: auto; bottom: -9px; right: auto; left: 50%; transform: translate(-50%, 50%) rotate(90deg); }
+ html body.nst-page main#main#main .nst-route--single { grid-template-columns: 68px minmax(0, 1fr); justify-content: center; }
+ html body.nst-page main#main#main .nst-route-step { grid-template-columns: 52px minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-route--neural { width: min(100%, 310px); }
+ html body.nst-page main#main#main .nst-neural-state { font-size: 24px; }
+ html body.nst-page main#main#main .nst-axis-outcomes li { font-size: 22px !important; line-height: 1.2 !important; }
+ html body.nst-page main#main#main .nst-transport-pill { grid-template-columns: 58px minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-transport-pill small { font-size: .85em; }
+ html body.nst-page main#main#main .nst-diagram-scroll > img { min-width: 1250px; }
+ html body.nst-page main#main#main .nst-diagram-caption { justify-content: space-between; align-items: flex-start; flex-wrap: wrap; padding-block: 12px; }
+ html body.nst-page main#main#main .nst-diagram-caption > span { display: block; }
+ html body.nst-page main#main#main .nst-transcript-grid, html body.nst-page main#main#main .nst-disease-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main #neuro-scent-title { font-size: clamp(39px, 7vw, 62px) !important; }
+  html body.nst-page main#main#main .nst-introduction-copy h2 { font-size: clamp(27px, 4.6vw, 38px) !important; }
+  html body.nst-page main#main#main #dermal-title { font-size: clamp(34px, 5.5vw, 50px) !important; line-height: 1.05 !important; }
+  html body.nst-page main#main#main .nst-axis-copy h4 { font-size: 26px !important; }
+  html body.nst-page main#main#main .nst-rule-heading h3 { font-size: 21px !important; }
+ }
+}
+@media (max-width: 540px) {
+ html body.nst-page main#main#main .nst-introduction-copy { padding-inline: 22px; }
+ html body.nst-page main#main#main .nst-dermal { padding-inline: 18px; }
+ html body.nst-page main#main#main .nst-skin-interface { margin-inline: -18px; min-height: 370px; background-size: auto 440px; }
+ html body.nst-page main#main#main .nst-ingredient-label { top: 12px; left: 10%; max-width: 145px; font-size: 21px; }
+ html body.nst-page main#main#main .nst-sensing-label { top: 30%; right: 5%; width: 43%; }
+ html body.nst-page main#main#main .nst-sensing-note { top: 70%; right: 5%; width: 43%; font-size: 19px !important; }
+ html body.nst-page main#main#main .nst-axis-row { padding: 18px 14px; gap: 15px; }
+ html body.nst-page main#main#main .nst-axis-label { grid-template-columns: 60px 30px minmax(0, 1fr); gap: 8px; }
+ html body.nst-page main#main#main .nst-axis-number { font-size: 36px; }
+ html body.nst-page main#main#main .nst-rule-heading { gap: 9px; }
+ html body.nst-page main#main#main .nst-rule-heading::before, html body.nst-page main#main#main .nst-rule-heading::after { flex-basis: 14px; min-width: 14px; }
+ html body.nst-page main#main#main .nst-transcript-intro-grid, html body.nst-page main#main#main .nst-transcript-grid, html body.nst-page main#main#main .nst-disease-list, html body.nst-page main#main#main .nst-pathway-transcript { grid-template-columns: minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-transcript-intro-grid { gap: 10px; }
+ html body.nst-page main#main#main .nst-transcript-content p, html body.nst-page main#main#main .nst-transcript-grid li { font-size: 16px !important; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main .nst-axis-copy h4 { font-size: 24px !important; }
+ }
+}
+@media (prefers-reduced-motion: no-preference) {
+ html body.nst-page main#main#main .nst-introduction-copy { animation: nst-arrive .7s ease-out both; }
+ @keyframes nst-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 }
 
-@media (max-width: 767px) {
-  html { scroll-padding-top: 18px; }
-  .nst-page { font-size: 14px; }
-  .nst-page::after { box-shadow: inset 0 0 60px 12px rgba(0,3,12,.55); }
-  .nst-header { top: 6px; grid-template-columns: minmax(0,1fr) auto; width: calc(100% - 12px); min-height: 58px; margin-top: 6px; padding: 5px 8px; border-radius: 14px; }
-  .nst-brand { font-size: 16px; }
-  .nst-brand img { width: 36px; height: 36px; }
-  .nst-menu-button { min-width: 66px; min-height: 44px; }
-  .nst-explore { grid-column: 1 / 3; width: 100%; min-height: 40px; margin-top: 5px; }
-  .nst-nav { top: calc(100% + 6px); }
-  .nst-nav.is-open { grid-template-columns: 1fr 1fr; }
-  .nst-main { width: calc(100% - 32px); margin-top: 0; }
-  .nst-hero { display: flex; flex-direction: column; min-height: 0; }
-  .nst-hero-copy { width: 100%; min-height: 0; padding: 28px 12px 8px; }
-  .nst-hero h1 { font-size: clamp(37px, 11.3vw, 54px); line-height: 1.03; }
-  .nst-hero-lede { font-size: clamp(15px, 4.3vw, 18px); }
-  .nst-hero-inputs { grid-template-columns: 1fr; width: 100%; }
-  .nst-mini-card { display: grid; grid-template-columns: 1fr 96px; grid-template-rows: auto 1fr; min-height: 105px; }
-  .nst-mini-card img { grid-column: 2; grid-row: 1 / 3; height: 82px; margin: 0; }
-  .nst-hero-visual { position: relative; inset: auto; order: 2; width: 100%; min-height: 0; aspect-ratio: 2560 / 941; }
-  .nst-hero-visual img { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
-  .nst-neural-pulse { display: none; }
-  .nst-section { margin-top: 8px; padding: 0 8px 10px; }
-  .nst-section-heading { align-items: flex-start; min-height: 94px; gap: 10px; padding-inline: 2px; }
-  .nst-section-number { flex-basis: 49px; width: 49px; height: 49px; margin-top: 2px; font-size: 26px; }
-  .nst-section-heading h2 { font-size: 20px; }
-  .nst-section-heading p { font-size: 12px; }
-  .nst-section-one-main { min-height: 0; }
-  .nst-input-flow { grid-template-columns: 1fr; height: auto; gap: 9px; }
-  .nst-flow-card { min-height: 96px; }
-  .nst-flow-arrow { top: auto; right: 50%; bottom: -14px; width: 18px; transform: translateX(50%) rotate(90deg); }
-  .nst-axis-grid { grid-template-columns: 1fr; grid-template-rows: none; height: auto; margin-top: 12px; }
-  .nst-axis-card { grid-template-columns: 48px 1fr; grid-template-rows: auto auto; min-height: 235px; padding: 10px 8px; }
-  .nst-axis-intro { grid-row: 1 / 3; }
-  .nst-axis-title { grid-row: 1; font-size: 15px; }
-  .nst-axis-steps { grid-column: 1 / 3; align-self: end; min-height: 96px; }
-  .nst-step { min-height: 85px; font-size: 9.5px; }
-  .nst-outcome-panel { display: block; margin-top: 10px; }
-  .nst-outcome-panel h3 { margin-bottom: 8px; }
-  .nst-outcome-panel > div { display: block; }
-  .nst-outcome-item { min-height: 68px; border-right: 0; }
-  .nst-dermal-layout { display: block; }
-  .nst-dermal-entry { display: block; }
-  .nst-skin-figure { height: 350px; }
-  .nst-dermal-entry-flow { display: grid; grid-template-columns: 1fr; gap: 8px; }
-  .nst-entry-card { min-height: 104px; }
-  .nst-dermal-axes { display: grid; grid-template-rows: none; gap: 8px; margin-top: 10px; }
-  .nst-dermal-axis { grid-template-columns: 43px 1fr; grid-template-rows: auto auto; min-height: 185px; }
-  .nst-dermal-axis h3 { font-size: 14px; }
-  .nst-dermal-flow { grid-column: 1 / 3; }
-  .nst-dermal-flow .nst-step { min-height: 75px; font-size: 9px; }
-  .nst-dermal-outcomes { margin-top: 10px; }
-  .nst-integration-top { grid-template-columns: 1fr; }
-  .nst-stage-card,
-  .nst-head-visual { min-height: 300px; }
-  .nst-head-visual { order: 2; }
-  .nst-central-stage { order: 3; }
-  .nst-dysregulation-stage { order: 4; }
-  .nst-dysregulation-stage img { justify-self: end; }
-  .nst-system-grid { grid-template-columns: 1fr 1fr; }
-  .nst-system-card { min-height: 220px; }
-  .nst-disease-spectrum { margin-top: 8px; }
-  .nst-disease-spectrum h2 { font-size: 18px; line-height: 1.1; }
-  .nst-disease-grid { grid-template-columns: 1fr 1fr; }
-  .nst-disease-card { min-height: 190px; }
-  .nst-disease-card h3 { font-size: 13px; }
-  .nst-disease-card p { font-size: 10.5px; }
-  .nst-back-top.is-footer-near { bottom: 224px; }
+/* Native editorial diagrams: artwork windows never carry the visible copy. */
+html body.nst-page main#main#main { --nst-main-font: var(--site-font, "DM Sans", sans-serif); }
+html body.nst-page main#main#main :is(h1, h2, h3, h4, h5, p, li, span, strong, small, figcaption) { font-family: var(--nst-main-font) !important; }
+html body.nst-page main#main#main .nst-introduction-copy { width: 40.5%; max-width: 1080px; }
+html body.nst-page main#main#main .nst-introduction-copy p { color: #294260 !important; font-size: clamp(17px, 1.06vw, 24px) !important; line-height: 1.55 !important; }
+html body.nst-page main#main#main .nst-dermal-heading .nst-section-subtitle { font-size: clamp(21px, 1.7vw, 35px) !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main .nst-dermal-heading .nst-section-intro { font-size: clamp(15px, 1.02vw, 21px) !important; line-height: 1.5 !important; }
+html body.nst-page main#main#main .nst-axis-copy p { font-size: clamp(13px, .9vw, 19px) !important; line-height: 1.4 !important; }
+html body.nst-page main#main#main .nst-axis-outcomes li { font-size: clamp(13px, .93vw, 19px) !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main .nst-route { font-size: clamp(13px, .95vw, 20px); line-height: 1.35; }
+html body.nst-page main#main#main .nst-route strong { font-size: 1.02em; }
+html body.nst-page main#main#main .nst-neural-state { font-size: clamp(13px, .95vw, 19px); }
+html body.nst-page main#main#main .nst-ingredient-label { font-size: clamp(16px, 1.08vw, 23px); line-height: 1.2; }
+html body.nst-page main#main#main .nst-sensing-label p, html body.nst-page main#main#main .nst-sensing-note { font-size: clamp(13px, .92vw, 19px) !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main .nst-native-science { padding: clamp(30px, 2.4vw, 54px) clamp(22px, 2.1vw, 48px) 24px; overflow: hidden; color: #0b2a62; border-top: 1px solid #dce8f2; background: radial-gradient(ellipse at 3% 0%, #dfedf8a1, transparent 30%), radial-gradient(ellipse at 100% 100%, #dceefa80, transparent 42%), linear-gradient(135deg, #fcfdff, #f3f9fd); }
+html body.nst-page main#main#main .nst-native-heading { position: relative; text-align: center; }
+html body.nst-page main#main#main .nst-native-heading > p { width: min(100%, 1540px); margin: 16px auto 26px; color: #17376f !important; font-size: clamp(15px, 1.05vw, 21px) !important; line-height: 1.5 !important; }
+html body.nst-page main#main#main .nst-native-tagline { position: absolute; top: 0; right: 0; color: #6585b2; font-size: clamp(8px, .63vw, 12px); line-height: 1.7; letter-spacing: .2em; text-transform: uppercase; text-align: left; }
+html body.nst-page main#main#main .nst-art-crop { position: relative; display: block; width: 100%; aspect-ratio: var(--art-ratio); overflow: hidden; }
+html body.nst-page main#main#main .nst-art-crop > img { position: absolute; display: block; top: var(--art-top); left: var(--art-left); width: var(--art-width) !important; max-width: none !important; height: auto !important; margin: 0 !important; border-radius: 0; }
+html body.nst-page main#main#main .nst-modulation-top { display: grid; grid-template-columns: minmax(0, 18fr) minmax(0, 17fr) minmax(0, 39fr) minmax(0, 26fr); gap: clamp(15px, 1.4vw, 28px); align-items: center; }
+html body.nst-page main#main#main :is(.nst-ingredient-panel, .nst-olfactory-input, .nst-central-integration) { position: relative; border: 1px solid #b9d2ee; border-radius: 7px; background: #f9fcffbf; }
+html body.nst-page main#main#main .nst-ingredient-panel { padding: 16px 12px 10px; text-align: center; }
+html body.nst-page main#main#main .nst-ingredient-panel > p { margin-top: 6px; color: #17386b !important; font-size: clamp(13px, .95vw, 19px) !important; }
+html body.nst-page main#main#main .nst-ingredient-art { margin-top: 14px; mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-connection-arrow { position: absolute; top: 50%; right: -26px; z-index: 1; width: 26px; height: 30px; background: linear-gradient(90deg, #b6d6ff, #0b55b8); clip-path: polygon(0 32%, 58% 32%, 58% 0, 100% 50%, 58% 100%, 58% 68%, 0 68%); transform: translateY(-50%); }
+html body.nst-page main#main#main .nst-step-badge { display: inline-grid; flex: 0 0 auto; place-items: center; width: clamp(34px, 2.9vw, 58px); height: clamp(34px, 2.9vw, 58px); border-radius: 50%; color: #fff; background: linear-gradient(145deg, #125a9d, #082855); box-shadow: 0 0 0 5px #ffffff8a; font-size: clamp(20px, 1.8vw, 34px); font-weight: 700; line-height: 1; }
+html body.nst-page main#main#main .nst-olfactory-input { padding: 14px 12px 12px; }
+html body.nst-page main#main#main .nst-olfactory-input h3, html body.nst-page main#main#main .nst-central-integration > h3 { display: flex; align-items: center; gap: 12px; }
+html body.nst-page main#main#main .nst-olfactory-input ol { list-style: none; margin: 14px 0 0; padding: 16px 8px; border: 1px solid #deebf8; border-radius: 7px; text-align: center; }
+html body.nst-page main#main#main .nst-olfactory-input li { color: #102c63 !important; font-size: clamp(14px, 1.04vw, 20px) !important; font-weight: 600; line-height: 1.35 !important; }
+html body.nst-page main#main#main .nst-down-arrow { display: block; width: 12px; height: 27px; margin: 8px auto; background: #214777; clip-path: polygon(44% 0, 56% 0, 56% 73%, 100% 60%, 50% 100%, 0 60%, 44% 73%); }
+html body.nst-page main#main#main .nst-brain-overview { position: relative; width: 100%; margin: 0; }
+html body.nst-page main#main#main .nst-brain-overview-art { position: relative; width: 71%; }
+html body.nst-page main#main#main .nst-brain-overview-crop { -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20380%20259%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H380V259H0Z%20M145%2015H255V58H145Z%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20380%20259%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H380V259H0Z%20M145%2015H255V58H145Z%22%2F%3E%3C%2Fsvg%3E"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+html body.nst-page main#main#main .nst-brain-overview-label { position: absolute; left: 38%; top: 6%; display: grid; place-items: center; width: 30%; min-height: 16%; padding: 3px; border-radius: 22px; color: #0e286b; background: #fafcff; font-size: clamp(14px, 1.1vw, 23px); font-weight: 700; line-height: 1.1; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-brain-callouts { position: absolute; inset: 0 0 0 71%; padding: 0; list-style: none; }
+html body.nst-page main#main#main .nst-brain-callouts li { position: absolute; top: var(--label-top); left: 0; width: 100%; padding-left: 8px; color: #123b78 !important; font-size: clamp(11px, .9vw, 18px) !important; line-height: 1.2 !important; transform: translateY(-50%); }
+html body.nst-page main#main#main .nst-brain-callouts li::before { content: ""; position: absolute; top: 50%; right: calc(100% - 4px); width: 10px; height: 1px; background: #32598e; }
+html body.nst-page main#main#main .nst-central-integration { padding: 12px 15px; }
+html body.nst-page main#main#main .nst-central-part { display: grid; grid-template-columns: 40% minmax(0, 1fr); gap: 15px; align-items: center; padding-top: 12px; }
+html body.nst-page main#main#main .nst-central-part + .nst-central-part { margin-top: 12px; border-top: 1px dashed #b7cce1; }
+html body.nst-page main#main#main .nst-central-art { mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-central-part ul { padding-left: 18px; }
+html body.nst-page main#main#main .nst-central-part li { color: #173973 !important; font-size: clamp(12px, .92vw, 18px) !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main .nst-numbered-rule { display: flex; align-items: center; gap: 20px; margin: 30px 0 24px; }
+html body.nst-page main#main#main .nst-rule-line { flex: 1; min-width: 24px; height: 1px; background: #6d90c2; }
+html body.nst-page main#main#main .nst-numbered-rule h3 { display: flex; align-items: center; gap: 16px; }
+html body.nst-page main#main#main .nst-system-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+html body.nst-page main#main#main .nst-system-card { padding: 12px 7px 14px; border: 1px solid #c4d9f0; border-radius: 6px; background: linear-gradient(#f6fbff, #ffffffc9); }
+html body.nst-page main#main#main .nst-system-card h4 { min-height: 48px; display: grid; align-content: center; text-align: center; }
+html body.nst-page main#main#main .nst-system-image { margin-block: 10px; }
+html body.nst-page main#main#main .nst-system-card ul { padding-left: 20px; }
+html body.nst-page main#main#main .nst-system-card li { color: #133877 !important; font-size: clamp(12px, .94vw, 18px) !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main .nst-system-card li + li { margin-top: 4px; }
+html body.nst-page main#main#main .nst-dysregulation { margin-top: 26px; padding: 0 8px 10px; border: 1px solid #f0c8d1; border-radius: 7px; background: linear-gradient(120deg, #fff8fa, #fff8f9a8); }
+html body.nst-page main#main#main .nst-dysregulation-heading { margin: -15px auto 8px; text-align: center; }
+html body.nst-page main#main#main .nst-dysregulation-heading h3 { display: inline-flex; align-items: center; gap: 18px; padding-inline: 14px; background: #fff9fb; }
+html body.nst-page main#main#main .nst-dysregulation-heading .nst-step-badge { background: linear-gradient(140deg, #ef4e56, #bb071e); }
+html body.nst-page main#main#main .nst-dysregulation-heading p { margin-top: 7px; color: #405a82 !important; font-size: clamp(11px, .85vw, 16px) !important; }
+html body.nst-page main#main#main .nst-disease-grid { display: grid; grid-template-columns: repeat(17, minmax(0, 1fr)); gap: 5px; }
+html body.nst-page main#main#main .nst-disease-card { display: flex; flex-direction: column; align-items: center; padding: 7px 4px; border: 1px solid #f3dbe2; border-radius: 5px; background: #ffffff80; text-align: center; }
+html body.nst-page main#main#main .nst-disease-icon { width: 76%; max-width: 94px; margin: 8px auto; mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-disease-card p { margin-top: auto; color: #304d79 !important; font-size: clamp(9px, .63vw, 13px) !important; line-height: 1.3 !important; overflow-wrap: anywhere; }
+html body.nst-page main#main#main .nst-science-footer { display: grid; grid-template-columns: minmax(180px, 22%) minmax(0, 1fr); gap: 30px; align-items: center; margin-top: 20px; }
+html body.nst-page main#main#main .nst-science-footer > p { padding-left: 10px; border-left: 1px solid #5a87c0; color: #234a8a !important; font-size: clamp(10px, .82vw, 16px) !important; letter-spacing: .07em !important; line-height: 1.5 !important; }
+html body.nst-page main#main#main .nst-science-footer > p span { display: block; color: #6888b8; font-size: .67em; letter-spacing: .18em; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-science-footer > div, html body.nst-page main#main#main .nst-pathways-footer { display: flex; align-items: center; gap: 24px; }
+html body.nst-page main#main#main .nst-science-footer > div > span, html body.nst-page main#main#main .nst-pathways-footer > span { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #779ac8); }
+html body.nst-page main#main#main .nst-science-footer > div > span:last-child, html body.nst-page main#main#main .nst-pathways-footer > span:last-child { transform: rotate(180deg); }
+html body.nst-page main#main#main .nst-science-footer > div > p, html body.nst-page main#main#main .nst-pathways-footer > p { flex: 0 1 auto; color: #6489b9 !important; font-size: clamp(9px, .77vw, 15px) !important; letter-spacing: .2em !important; line-height: 1.4 !important; text-align: center; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-pathways-subtitle { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 14px; }
+html body.nst-page main#main#main .nst-pathways-subtitle > span { width: 10%; height: 1px; background: #6b86ac; }
+html body.nst-page main#main#main .nst-pathways-subtitle p { color: #0d2e68 !important; font-size: clamp(20px, 1.6vw, 34px) !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main .nst-pathways-layout { display: grid; grid-template-columns: minmax(0, 30fr) minmax(0, 70fr); gap: 8px; margin-top: 28px; align-items: start; }
+html body.nst-page main#main#main .nst-pathway-portrait { position: relative; margin: 0; background: #f7fbff; }
+html body.nst-page main#main#main .nst-portrait-art { -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20535%20744%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H535V744H0Z%20M36%208H246V80H36Z%20M93%20185H205V242H93Z%20M373%20193H460V231H373Z%20M30%20375H216V458H30Z%20M30%20653H307V728H30Z%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20535%20744%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H535V744H0Z%20M36%208H246V80H36Z%20M93%20185H205V242H93Z%20M373%20193H460V231H373Z%20M30%20375H216V458H30Z%20M30%20653H307V728H30Z%22%2F%3E%3C%2Fsvg%3E"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+html body.nst-page main#main#main .nst-pathway-portrait figcaption > * { position: absolute; color: #123e75; }
+html body.nst-page main#main#main .nst-portrait-ingredient { top: 1.1%; left: 6.7%; width: 39.3%; font-size: clamp(12px, 1.02vw, 23px); line-height: 1.15; }
+html body.nst-page main#main#main .nst-portrait-ingredient strong, html body.nst-page main#main#main .nst-portrait-olfactory strong { display: block; font-weight: 600; }
+html body.nst-page main#main#main .nst-portrait-ingredient span, html body.nst-page main#main#main .nst-portrait-olfactory span { display: block; margin-top: 5px; font-size: .69em; line-height: 1.3; }
+html body.nst-page main#main#main .nst-portrait-odor { top: 24.9%; left: 17.4%; width: 21%; font-size: clamp(12px, 1.04vw, 23px); font-weight: 600; line-height: 1.15; }
+html body.nst-page main#main#main .nst-portrait-brain { top: 26%; left: 69.7%; width: 16.3%; padding: 3px 0; border-radius: 10px; color: white !important; background: #104b7c; font-size: clamp(13px, 1.3vw, 28px); font-weight: 600; line-height: 1.1; text-align: center; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-portrait-olfactory { top: 50.4%; left: 5.6%; width: 34.8%; font-size: clamp(12px, 1.05vw, 24px); line-height: 1.15; }
+html body.nst-page main#main#main .nst-portrait-footer { top: 87.8%; left: 5.6%; width: 52%; padding-left: 9px; border-left: 1px solid #7194c0; font-size: clamp(10px, .84vw, 17px); letter-spacing: .05em; line-height: 1.5; }
+html body.nst-page main#main#main .nst-portrait-footer span { display: block; margin-top: 6px; color: #6489b9; font-size: .66em; letter-spacing: .18em; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-regulatory-table { min-width: 0; }
+html body.nst-page main#main#main .nst-regulatory-head, html body.nst-page main#main#main .nst-regulatory-row { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 2.1fr) minmax(0, .95fr) minmax(0, 1fr); gap: clamp(8px, .8vw, 16px); }
+html body.nst-page main#main#main .nst-regulatory-head { padding: 0 8px 16px; color: #21497c; font-size: clamp(10px, .8vw, 16px); font-weight: 600; line-height: 1.4; text-transform: uppercase; }
+html body.nst-page main#main#main .nst-regulatory-row { position: relative; align-items: center; min-height: clamp(125px, 8.8vw, 188px); margin-bottom: 12px; padding: 12px 8px; border-radius: 24px; background: linear-gradient(90deg, color-mix(in srgb, var(--axis-color) 5%, white), color-mix(in srgb, var(--axis-color) 3%, white)); }
+html body.nst-page main#main#main .nst-regulatory-axis { display: grid; grid-template-columns: clamp(30px, 2.5vw, 49px) minmax(0, 1fr); gap: 8px; align-items: center; }
+html body.nst-page main#main#main .nst-regulatory-number { color: var(--axis-color); font-size: clamp(28px, 2.55vw, 52px); line-height: 1; font-weight: 600; }
+html body.nst-page main#main#main .nst-regulatory-neural { display: grid; grid-template-columns: minmax(58px, 24%) minmax(0, 1fr); gap: 8px; align-items: center; }
+html body.nst-page main#main#main .nst-region-brain { mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-neural-stages { display: flex; align-items: center; gap: 5px; min-width: 0; }
+html body.nst-page main#main#main .nst-neural-stage { flex: 1 1 0; min-width: 0; color: #244c82; font-size: clamp(10px, .75vw, 16px); line-height: 1.4; }
+html body.nst-page main#main#main .nst-neural-stage small, html body.nst-page main#main#main .nst-autonomic-branches small { font-size: .83em; }
+html body.nst-page main#main#main .nst-path-miniature { width: min(78%, 58px); margin: 0 auto 6px; mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-path-arrow { display: block; flex: 0 0 13px; width: 13px; height: 8px; background: #5c80b4; clip-path: polygon(0 42%, 68% 42%, 68% 0, 100% 50%, 68% 100%, 68% 58%, 0 58%); }
+html body.nst-page main#main#main .nst-autonomic-branches { flex: 1.2; display: grid; gap: 10px; }
+html body.nst-page main#main#main .nst-autonomic-branches > div { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 5px; align-items: center; color: #244c82; font-size: clamp(10px, .71vw, 15px); line-height: 1.35; }
+html body.nst-page main#main#main .nst-autonomic-branches .nst-path-miniature { width: 100%; margin: 0; }
+html body.nst-page main#main#main .nst-regulatory-result { position: relative; display: grid; grid-template-columns: minmax(30px, 32%) minmax(0, 1fr); gap: 8px; align-items: center; }
+html body.nst-page main#main#main .nst-regulatory-result::before { content: ""; position: absolute; left: -15px; top: 50%; width: 12px; height: 8px; background: #94afcf; clip-path: polygon(0 42%, 67% 42%, 67% 0, 100% 50%, 67% 100%, 67% 58%, 0 58%); }
+html body.nst-page main#main#main .nst-regulatory-result-art { mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-regulatory-result p { color: #224780 !important; font-size: clamp(11px, .79vw, 17px) !important; line-height: 1.4 !important; }
+html body.nst-page main#main#main .nst-regulatory-result small { font-size: .83em; }
+html body.nst-page main#main#main .nst-regulatory-outcomes { display: grid; gap: 10px; padding: 0; list-style: none; }
+html body.nst-page main#main#main .nst-regulatory-outcomes li { display: grid; grid-template-columns: clamp(24px, 2vw, 40px) minmax(0, 1fr); gap: 7px; align-items: center; color: #24487e !important; font-size: clamp(10px, .75vw, 16px) !important; line-height: 1.4 !important; }
+html body.nst-page main#main#main .nst-path-outcome-icon { mix-blend-mode: multiply; }
+html body.nst-page main#main#main .nst-pathways-footer { width: 76%; margin: 26px auto 0; }
+@layer arotec-display-headings.spec {
+ html body.nst-page main#main#main #neuro-scent-title { font-family: var(--nst-main-font) !important; font-size: clamp(36px, 3.3vw, 78px) !important; line-height: 1.08 !important; letter-spacing: -.035em !important; }
+ html body.nst-page main#main#main .nst-introduction-copy h2 { font-family: var(--nst-main-font) !important; font-size: clamp(22px, 1.64vw, 36px) !important; line-height: 1.25 !important; }
+ html body.nst-page main#main#main #dermal-title { font-family: var(--nst-main-font) !important; font-size: clamp(30px, 2.72vw, 61px) !important; line-height: 1.12 !important; letter-spacing: -.04em !important; }
+ html body.nst-page main#main#main .nst-axis-copy h4 { font-family: var(--nst-main-font) !important; font-size: clamp(15px, 1.05vw, 24px) !important; line-height: 1.25 !important; }
+ html body.nst-page main#main#main .nst-rule-heading h3 { font-size: clamp(14px, 1.08vw, 24px) !important; letter-spacing: .14em !important; }
+ html body.nst-page main#main#main .nst-sensing-label h3 { font-size: clamp(19px, 1.38vw, 30px) !important; line-height: 1.18 !important; }
+ html body.nst-page main#main#main .nst-native-heading > h2 { width: 83%; margin: 0 auto !important; color: #082650 !important; font-family: var(--nst-main-font) !important; font-size: clamp(28px, 2.5vw, 54px) !important; font-weight: 700 !important; line-height: 1.13 !important; letter-spacing: -.04em !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-modulation .nst-native-heading > h2 { text-transform: uppercase !important; font-size: clamp(25px, 2.06vw, 45px) !important; }
+ html body.nst-page main#main#main :is(.nst-ingredient-panel, .nst-olfactory-input, .nst-central-integration) h3 { margin: 0 !important; color: #082b65 !important; font-size: clamp(13px, 1.06vw, 22px) !important; font-weight: 600 !important; line-height: 1.3 !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main .nst-central-part h4 { margin: 0 0 6px !important; color: #123572 !important; font-size: clamp(13px, 1.02vw, 20px) !important; font-weight: 600 !important; line-height: 1.2 !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-numbered-rule h3 { margin: 0 !important; color: #092c67 !important; font-size: clamp(16px, 1.37vw, 28px) !important; font-weight: 600 !important; line-height: 1.2 !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main .nst-system-card h4 { margin: 0 !important; color: #153874 !important; font-size: clamp(12px, .98vw, 20px) !important; font-weight: 600 !important; line-height: 1.3 !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-dysregulation-heading h3 { margin: 0 !important; color: #be1831 !important; font-size: clamp(16px, 1.28vw, 27px) !important; font-weight: 600 !important; line-height: 1.25 !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main .nst-disease-card h4 { margin: 0 !important; color: #b6243a !important; font-size: clamp(9px, .63vw, 13px) !important; font-weight: 500 !important; line-height: 1.3 !important; text-transform: none !important; }
+ html body.nst-page main#main#main .nst-regulatory-axis h3 { margin: 0 !important; color: #173968 !important; font-size: clamp(12px, .88vw, 20px) !important; font-weight: 600 !important; line-height: 1.25 !important; text-transform: none !important; }
 }
-
+@media (max-width: 1399px) {
+ html body.nst-page main#main#main .nst-disease-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 7px; }
+ html body.nst-page main#main#main .nst-disease-card p { font-size: 11px !important; }
+ html body.nst-page main#main#main .nst-native-tagline { display: none; }
+ html body.nst-page main#main#main .nst-system-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+ html body.nst-page main#main#main .nst-system-card li { font-size: 15px !important; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main .nst-native-heading > h2 { width: 100%; }
+  html body.nst-page main#main#main .nst-disease-card h4 { font-size: 11px !important; }
+  html body.nst-page main#main#main .nst-system-card h4 { font-size: 16px !important; }
+ }
+}
+@media (max-width: 1199px) {
+ html body.nst-page main#main#main .nst-introduction-copy { width: 43%; }
+ html body.nst-page main#main#main .nst-introduction-copy p { font-size: 17px !important; }
+ html body.nst-page main#main#main .nst-modulation-top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+ html body.nst-page main#main#main .nst-ingredient-panel { display: grid; justify-items: center; }
+ html body.nst-page main#main#main .nst-ingredient-art { width: min(100%, 300px); }
+ html body.nst-page main#main#main .nst-connection-arrow { right: -25px; }
+ html body.nst-page main#main#main .nst-olfactory-input { align-self: stretch; display: grid; align-content: center; padding: 20px; }
+ html body.nst-page main#main#main .nst-central-part li, html body.nst-page main#main#main .nst-ingredient-panel > p, html body.nst-page main#main#main .nst-olfactory-input li { font-size: 17px !important; }
+ html body.nst-page main#main#main .nst-brain-callouts li { font-size: 14px !important; }
+ html body.nst-page main#main#main .nst-brain-overview-label { font-size: 19px; }
+ html body.nst-page main#main#main .nst-pathways-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+ html body.nst-page main#main#main .nst-pathway-portrait { width: min(100%, 450px); margin-inline: auto; }
+ html body.nst-page main#main#main .nst-portrait-ingredient, html body.nst-page main#main#main .nst-portrait-odor, html body.nst-page main#main#main .nst-portrait-olfactory { font-size: 18px; }
+ html body.nst-page main#main#main .nst-portrait-brain { font-size: 21px; }
+ html body.nst-page main#main#main .nst-portrait-footer { font-size: 14px; }
+ html body.nst-page main#main#main .nst-regulatory-row { min-height: 150px; }
+ html body.nst-page main#main#main .nst-neural-stage, html body.nst-page main#main#main .nst-autonomic-branches > div { font-size: 12px; }
+ html body.nst-page main#main#main .nst-regulatory-result p, html body.nst-page main#main#main .nst-regulatory-outcomes li { font-size: 12px !important; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main :is(.nst-ingredient-panel, .nst-olfactory-input, .nst-central-integration) h3 { font-size: 19px !important; }
+  html body.nst-page main#main#main .nst-central-part h4 { font-size: 18px !important; }
+  html body.nst-page main#main#main .nst-regulatory-axis h3 { font-size: 15px !important; }
+ }
+}
+@media (max-width: 900px) {
+ html body.nst-page main#main#main .nst-introduction-copy { width: auto; max-width: none; }
+ html body.nst-page main#main#main .nst-introduction-copy p { font-size: 18px !important; line-height: 1.55 !important; }
+ html body.nst-page main#main#main .nst-dermal-heading .nst-section-subtitle { font-size: 24px !important; }
+ html body.nst-page main#main#main .nst-dermal-heading .nst-section-intro { font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-axis-copy p { font-size: 15px !important; }
+ html body.nst-page main#main#main .nst-axis-outcomes li { font-size: 17px !important; }
+ html body.nst-page main#main#main .nst-route, html body.nst-page main#main#main .nst-neural-state { font-size: 17px; }
+ html body.nst-page main#main#main .nst-sensing-label p, html body.nst-page main#main#main .nst-sensing-note { font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-ingredient-label { font-size: 18px; }
+ html body.nst-page main#main#main .nst-disease-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+ html body.nst-page main#main#main .nst-disease-card p { font-size: 12px !important; }
+ html body.nst-page main#main#main .nst-science-footer { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+ html body.nst-page main#main#main .nst-science-footer > div > p, html body.nst-page main#main#main .nst-pathways-footer > p { font-size: 10px !important; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main #neuro-scent-title { font-size: clamp(34px, 5.5vw, 58px) !important; }
+  html body.nst-page main#main#main .nst-introduction-copy h2 { font-size: clamp(23px, 3.4vw, 32px) !important; }
+  html body.nst-page main#main#main #dermal-title { font-size: clamp(29px, 4.2vw, 42px) !important; }
+  html body.nst-page main#main#main .nst-axis-copy h4 { font-size: 20px !important; }
+  html body.nst-page main#main#main .nst-rule-heading h3 { font-size: 17px !important; }
+  html body.nst-page main#main#main .nst-disease-card h4 { font-size: 12px !important; }
+ }
+}
+@media (max-width: 760px) {
+ html body.nst-page main#main#main .nst-native-science { padding: 32px 20px 24px; }
+ html body.nst-page main#main#main .nst-modulation-top { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+ html body.nst-page main#main#main .nst-ingredient-art { max-width: 300px; }
+ html body.nst-page main#main#main .nst-connection-arrow { top: auto; bottom: -29px; right: 50%; width: 24px; height: 28px; transform: translateX(50%) rotate(90deg); }
+ html body.nst-page main#main#main .nst-brain-overview { width: min(100%, 520px); margin-inline: auto; }
+ html body.nst-page main#main#main .nst-central-integration { padding: 20px; }
+ html body.nst-page main#main#main .nst-central-part { grid-template-columns: 34% minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-central-art { max-width: 150px; margin-inline: auto; }
+ html body.nst-page main#main#main .nst-system-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+ html body.nst-page main#main#main .nst-system-card { padding: 16px 10px; }
+ html body.nst-page main#main#main .nst-system-card li { font-size: 15px !important; }
+ html body.nst-page main#main#main .nst-numbered-rule { gap: 10px; }
+ html body.nst-page main#main#main .nst-numbered-rule .nst-rule-line { min-width: 12px; }
+ html body.nst-page main#main#main .nst-dysregulation { padding: 0 9px 12px; margin-top: 36px; }
+ html body.nst-page main#main#main .nst-dysregulation-heading h3 { padding-inline: 4px; gap: 12px; }
+ html body.nst-page main#main#main .nst-dysregulation-heading p { font-size: 13px !important; line-height: 1.5 !important; }
+ html body.nst-page main#main#main .nst-pathways-subtitle { gap: 12px; }
+ html body.nst-page main#main#main .nst-pathways-subtitle p { font-size: 19px !important; }
+ html body.nst-page main#main#main .nst-pathways-subtitle > span { width: 20px; flex: 0 0 20px; }
+ html body.nst-page main#main#main .nst-regulatory-head { display: none; }
+ html body.nst-page main#main#main .nst-regulatory-row { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; margin-bottom: 18px; border: 1px solid color-mix(in srgb, var(--axis-color) 18%, white); border-radius: 20px; }
+ html body.nst-page main#main#main .nst-regulatory-axis { grid-template-columns: 44px minmax(0, 1fr); gap: 13px; }
+ html body.nst-page main#main#main .nst-regulatory-number { font-size: 40px; }
+ html body.nst-page main#main#main .nst-regulatory-neural { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
+ html body.nst-page main#main#main .nst-neural-stages { flex-wrap: wrap; gap: 8px; }
+ html body.nst-page main#main#main .nst-neural-stage { flex-basis: 65px; font-size: 14px; }
+ html body.nst-page main#main#main .nst-autonomic-branches { flex-basis: 100px; }
+ html body.nst-page main#main#main .nst-autonomic-branches > div { font-size: 14px; }
+ html body.nst-page main#main#main .nst-regulatory-result { grid-template-columns: 52px minmax(0, 1fr); gap: 16px; padding-top: 17px; border-top: 1px solid #d4dfed; }
+ html body.nst-page main#main#main .nst-regulatory-result::before { display: none; }
+ html body.nst-page main#main#main .nst-regulatory-result p { font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-regulatory-outcomes { padding-top: 16px; border-top: 1px solid #d4dfed; }
+ html body.nst-page main#main#main .nst-regulatory-outcomes li { grid-template-columns: 34px minmax(0, 1fr); gap: 12px; font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-pathways-footer { width: 100%; gap: 14px; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main .nst-native-heading > h2, html body.nst-page main#main#main .nst-modulation .nst-native-heading > h2 { font-size: clamp(26px, 5vw, 38px) !important; line-height: 1.18 !important; }
+  html body.nst-page main#main#main .nst-numbered-rule h3 { gap: 12px; font-size: 18px !important; }
+  html body.nst-page main#main#main .nst-dysregulation-heading h3 { font-size: 17px !important; }
+  html body.nst-page main#main#main .nst-regulatory-axis h3 { font-size: 20px !important; }
+ }
+}
+@media (max-width: 580px) {
+ html body.nst-page main#main#main .nst-disease-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+ html body.nst-page main#main#main .nst-native-heading > p { font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-brain-callouts li { font-size: 12px !important; }
+ html body.nst-page main#main#main .nst-brain-overview-label { font-size: 16px; }
+ html body.nst-page main#main#main .nst-portrait-ingredient, html body.nst-page main#main#main .nst-portrait-odor, html body.nst-page main#main#main .nst-portrait-olfactory { font-size: 16px; }
+ html body.nst-page main#main#main .nst-portrait-brain { font-size: 19px; }
+ html body.nst-page main#main#main .nst-portrait-footer { font-size: 12px; }
+}
 @media (max-width: 420px) {
-  .nst-brand span { max-width: 105px; line-height: 1; }
-  .nst-step-link { flex-basis: 9px; width: 9px; }
-  .nst-axis-steps { gap: 2px; }
-  .nst-step { padding-inline: 2px; font-size: 8.5px; }
-  .nst-dermal-flow .nst-step { font-size: 8px; }
-  .nst-central-columns { grid-template-columns: 1fr; }
-  .nst-system-card { min-height: 232px; }
+ html body.nst-page main#main#main .nst-system-grid { grid-template-columns: minmax(0, 1fr); }
+ html body.nst-page main#main#main .nst-system-image { max-width: 340px; margin-inline: auto; }
+ html body.nst-page main#main#main .nst-system-card li { font-size: 16px !important; }
+ html body.nst-page main#main#main .nst-disease-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ html body.nst-page main#main#main .nst-regulatory-row { padding: 18px 14px; }
+ html body.nst-page main#main#main .nst-regulatory-neural { grid-template-columns: 68px minmax(0, 1fr); gap: 9px; }
+ html body.nst-page main#main#main .nst-neural-stage { font-size: 13px; }
+ html body.nst-page main#main#main .nst-brain-overview-label { font-size: 14px; }
+ html body.nst-page main#main#main .nst-portrait-ingredient, html body.nst-page main#main#main .nst-portrait-odor, html body.nst-page main#main#main .nst-portrait-olfactory { font-size: 14px; }
+ html body.nst-page main#main#main .nst-portrait-footer { font-size: 11px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .nst-reveal { opacity: 1; transform: none; }
+/* Keep the reference heading on two lines within the desktop text column. */
+@media (min-width: 901px) {
+ html body.nst-page main#main#main .nst-introduction-copy { container-type: inline-size; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main #neuro-scent-title { width: 100% !important; max-width: 100% !important; min-width: 0 !important; gap: .08em !important; font-size: clamp(28px, 3vw, 76px) !important; line-height: 1.14 !important; }
+  html body.nst-page main#main#main #neuro-scent-title > span { width: 100% !important; max-width: 100% !important; white-space: nowrap !important; overflow-wrap: normal !important; word-break: normal !important; }
+  @supports (font-size: 1cqw) {
+   html body.nst-page main#main#main #neuro-scent-title { font-size: clamp(28px, 7.4cqw, 76px) !important; }
+  }
+ }
+}
+
+/* Desktop introduction: fit the viewport below the shared site header. */
+@media (min-width: 1024px) {
+  html body.nst-page main#main#main section#neuro-scent-introduction {
+    box-sizing: border-box;
+    height: calc(100vh - var(--detail-header-space, 0px));
+    height: calc(100svh - var(--detail-header-space, 0px));
+    min-height: 0 !important;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: clamp(20px, 3svh, 44px) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer arotec-display-headings.spec {
+  @media (min-width: 1024px) {
+    html body.nst-page main#main#main section#neuro-scent-introduction h1 {
+      font-size: clamp(28px, min(2.65vw, 5.5svh), 64px) !important;
+      line-height: 1.08 !important;
+      margin-block: 0 1.4svh !important;
+    }
+    html body.nst-page main#main#main section#neuro-scent-introduction h2 {
+      font-size: clamp(17px, min(1.4vw, 2.8svh), 30px) !important;
+      line-height: 1.24 !important;
+      margin-block: 0 2.2svh !important;
+    }
+    html body.nst-page main#main#main section#neuro-scent-introduction p {
+      font-size: clamp(14px, min(1vw, 2.05svh), 22px) !important;
+      line-height: 1.45 !important;
+      margin-block: 0 2.2svh !important;
+    }
+    html body.nst-page main#main#main section#neuro-scent-introduction p:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+/* Keep the introduction copy inside the clear left side of the artwork. */
+@media (min-width: 1024px) {
+  html body.nst-page main#main#main section#neuro-scent-introduction > :has(#neuro-scent-title) {
+    box-sizing: border-box;
+    width: 34.5% !important;
+    max-width: 34.5% !important;
+    min-width: 0;
+    margin-inline: 8% 0 !important;
+    padding-inline: 0 !important;
+    align-self: flex-start;
+    flex: 0 0 auto;
+  }
+  html body.nst-page main#main#main section#neuro-scent-introduction :is(h1, h2, p) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+  html body.nst-page main#main#main section#neuro-scent-introduction h1 span {
+    white-space: normal !important;
+  }
+}
+
+/* Dermal-systemic reference layout: native font proportions and unchanged artwork geometry. */
+html body.nst-page main#main#main #dermal-systemic-regulation.ndr-sheet { padding: 0 !important; overflow: hidden; background: #f7fbff; color: #0a1e61; font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-canvas { position: relative; isolation: isolate; container-type: inline-size; width: 100%; background: linear-gradient(120deg, #fff, #f2f8fd); --ndr-title-size: clamp(28px, 4.5vw, 44px); --ndr-subtitle-size: 22px; --ndr-intro-size: 16px; --ndr-axis-title-size: 20px; --ndr-body-size: 16px; --ndr-route-title-size: 21px; --ndr-sensing-size: 24px; --ndr-rule-size: 16px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ink { display: block; width: 100%; max-width: 100%; transform: none; font: inherit !important; letter-spacing: inherit !important; color: inherit; }
+html body.nst-page main#main#main #dermal-systemic-regulation :is(p, h2, h3, h4, ol, ul) { margin: 0; }
+html body.nst-page main#main#main #dermal-systemic-regulation :is(p, li, strong, small) { font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-heading { padding: 34px 24px 24px; text-align: center; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-subtitle { margin-top: 14px; color: #0b205b; font-size: var(--ndr-subtitle-size) !important; line-height: 1.25 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-intro { margin-top: 15px; color: #466295; font-size: var(--ndr-intro-size) !important; line-height: 1.5 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-intro br { display: none; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-connections { display: none; pointer-events: none; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-skin-interface { position: relative; height: 420px; background: url("../images/neuro-scented-therapy/dermal-systemic-background.png") left center / auto 100% no-repeat; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label { position: absolute; top: 8%; left: 57%; width: 40%; color: #0c215f; font-size: 18px; line-height: 1.15; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label strong { display: block; font-weight: 600; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label p { margin-top: 5px; color: #466295; font-size: 15px !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label { position: absolute; top: 34%; left: 57%; width: 40%; text-align: left; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label p { margin-top: 7px; color: #466295; font-size: 15px !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-note { position: absolute; top: 72%; left: 57%; width: 40%; color: #284b87; font-size: 15px !important; font-style: italic; line-height: 1.35 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-note br { display: none; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading { display: grid; grid-template-columns: minmax(12px, 1fr) minmax(0, auto) minmax(12px, 1fr); align-items: center; gap: 14px; margin: 24px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading::before, html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading::after { content: ""; display: block; height: 1px; background: #6380b2; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-list { display: grid; gap: 18px; padding: 0 24px 24px; list-style: none; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-row { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 14px 18px; align-items: center; padding: 20px; border: 1px solid #cdddec; border-radius: 16px; background: #ffffffb8; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-label { display: grid; grid-column: 1 / -1; grid-template-columns: 68px 34px minmax(0, 1fr); align-items: center; gap: 12px; }
+html body.nst-page main#main#main #dermal-systemic-regulation :is(.ndr-axis-icon, .ndr-outcome-icon, .ndr-path-icon) { display: block; width: 100%; height: auto; max-width: none; object-fit: contain; border-radius: 50%; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-number { color: #091c61; font-size: 34px; font-weight: 500; line-height: 1; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy p { margin-top: 6px; color: #466295; font-size: 15px !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route { position: relative; grid-column: 1 / -1; padding-block: 14px; color: #294c88; font-size: var(--ndr-body-size); line-height: 1.2; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route strong { display: block; color: #0a1b5e; font-size: var(--ndr-route-title-size); font-weight: 600; line-height: 1.1; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route p { color: #466295; font-size: var(--ndr-body-size) !important; line-height: 1.2 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--single { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: center; gap: 16px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--single strong + p { margin-top: 5px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--split { display: grid; gap: 6px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route-step { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 14px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--neural { display: grid; justify-content: center; gap: 5px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-neural-state { display: flex; align-items: center; width: 230px; height: 47px; padding: 0 12px 0 88px; background: var(--ndr-state-art) center / 100% 100% no-repeat; color: #102570; font-size: 18px; line-height: 1; white-space: nowrap; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 12px; padding: 13px; border: 1px solid #c8d8ed; border-radius: 30px; background: #f9fcffb3; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-molecule { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill p { font-size: 16px !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill small { display: block; margin-top: 5px; color: #466295; font-size: 13px; line-height: 1.2; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results ul { margin: 0; padding: 0 0 0 1.15em; list-style: disc; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results li { padding: 0; color: #173a81; font-size: 16px !important; line-height: 1.4 !important; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results li + li { margin-top: 3px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-mobile-reference { padding: 0 24px 26px; text-align: right; font-size: 13px; }
+html body.nst-page main#main#main #dermal-systemic-regulation .ndr-mobile-reference a { text-underline-offset: 4px; }
+@layer arotec-display-headings.spec {
+ html body.nst-page main#main#main #dermal-systemic-regulation #dermal-title { display: block !important; margin: 0 !important; color: #061548 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--ndr-title-size) !important; font-weight: 900 !important; line-height: 1.08 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label h3 { margin: 0 !important; color: #0a1a5b !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--ndr-sensing-size) !important; font-weight: 600 !important; line-height: 1.05 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading h3 { margin: 0 !important; color: #0a1c61 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--ndr-rule-size) !important; font-weight: 500 !important; line-height: 1.2 !important; letter-spacing: .12em !important; text-transform: uppercase !important; text-align: center !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy h4 { margin: 0 !important; color: #081958 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--ndr-axis-title-size) !important; font-weight: 600 !important; line-height: 1.1 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+}
+@media (min-width: 1024px) {
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-canvas { aspect-ratio: 1672 / 941; background: #f7fbff url("../images/neuro-scented-therapy/dermal-systemic-background.png") left top / 100% 100% no-repeat; --ndr-title-size: 2.679426cqw; --ndr-subtitle-size: 1.464115cqw; --ndr-intro-size: 0.947368cqw; --ndr-axis-title-size: 1.057416cqw; --ndr-body-size: 0.861244cqw; --ndr-route-title-size: 1.046651cqw; --ndr-sensing-size: 1.205742cqw; --ndr-rule-size: 0.980861cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation :is(.ndr-heading, .ndr-skin-interface, .ndr-axes, .ndr-axis-label) { display: contents; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-heading { padding: 0; }
+ html body.nst-page main#main#main #dermal-systemic-regulation #dermal-title { position: absolute; top: 3.719447%; left: 16.746411%; width: 68.421053%; text-align: center; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-subtitle { position: absolute; top: 12.221041%; left: 21.830144%; width: 58.911483%; margin: 0; text-align: center; line-height: 1.597222 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-intro { position: absolute; top: 17.428268%; left: 20.514354%; width: 65.729665%; margin: 0; text-align: center; line-height: 1.666667 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-intro br { display: initial; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-connections { position: absolute; z-index: 0; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-skin-interface { height: auto; background: none; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label { top: 16.684378%; left: 7.177033%; width: 11.244019%; font-size: 0.962919cqw; line-height: 1.428571; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label p { margin-top: 0.299043cqw; font-size: 0.837321cqw !important; line-height: 1.714286 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label { top: 34.325186%; left: 19.916268%; width: 11.244019%; text-align: center; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label p { margin-top: 0.299043cqw; font-size: 0.813397cqw !important; line-height: 1.691176 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-note { top: 68.119022%; left: 20.095694%; width: 11.004785%; font-size: 0.837321cqw !important; line-height: 1.571429 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-note br { display: initial; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading { position: absolute; top: 26.461211%; left: 34.090909%; width: 49.282297%; grid-template-columns: 139fr 470fr 175fr; gap: 1.196172cqw; margin: 0; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading::before, html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading::after { height: max(1px, 0.059809cqw); }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-list { position: absolute; z-index: 1; top: 29.968119%; left: 32.296651%; width: 65.789474%; height: 66.099894%; grid-template-rows: 115fr 128fr 130fr 134fr 115fr; gap: 0; margin: 0; padding: 0; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-row { position: relative; display: block; width: 100%; min-height: 0; padding: 0; border: 0; border-bottom: 1px solid #a9bfd850; border-radius: 0; background: none; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-row:last-child { border-bottom: 0; }
+ html body.nst-page main#main#main #dermal-systemic-regulation :is(.ndr-axis-icon, .ndr-number, .ndr-axis-copy, .ndr-route, .ndr-outcome-icon, .ndr-results) { position: absolute; top: 50%; transform: translateY(-50%); }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-icon { left: 0; width: 9.090909% !important; max-height: 92%; height: auto !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-number { left: 10.181818%; width: 5.909091%; font-size: 2.200957cqw; line-height: 1.25; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy { left: 17.272727%; width: 27.272727%; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy h4 { white-space: normal; overflow-wrap: break-word; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy p { margin-top: 0.299043cqw; font-size: 0.861244cqw !important; line-height: 1.666667 !important; white-space: normal; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route { left: 46.727273%; width: 23.636364%; padding: 0; line-height: 1.666667; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--single { grid-template-columns: 32.307692% minmax(0, 1fr); gap: 0.598086cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--single strong { white-space: normal; line-height: 1.571429; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--single p { margin-top: 0.299043cqw; white-space: normal; line-height: 1.666667 !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--split { left: 48.545455%; width: 21.818182%; gap: 0; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route-step { height: 3.409091cqw; grid-template-columns: 3.588517cqw minmax(0, 1fr); gap: 0.777512cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route-step .ndr-path-icon { width: 3.588517cqw; max-height: 3.588517cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route-step p { white-space: normal; font-size: 0.837321cqw !important; line-height: 1.714286 !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--neural { left: 48%; width: 17.363636%; justify-content: start; gap: 0.239234cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-neural-state { width: 10.586124cqw; height: 2.272727cqw; padding: 0 0.358852cqw 0 4.545455cqw; font-size: 0.956938cqw; line-height: 1.25; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-neural-state--vagus { width: 11.423445cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-route--transport { left: 40%; width: 27.272727%; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill { height: 3.947368cqw; grid-template-columns: 3.648325cqw minmax(0, 1fr); gap: 0.538278cqw; padding: 0.478469cqw 0.897129cqw; border-radius: 2.033493cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill p { font-size: 0.813397cqw !important; white-space: normal; line-height: 1.764706 !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill small { margin-top: 0.239234cqw; font-size: 0.650718cqw; white-space: normal; line-height: 1.875; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-outcome-icon { left: 71.363636%; width: 9.090909% !important; max-height: 92%; height: auto !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results { left: 81.272727%; width: 18.545455%; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results ul { width: 100%; padding-left: 0.885167cqw; transform: none; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results li { font-size: 0.885167cqw !important; line-height: 1.567568 !important; white-space: normal; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results li + li { margin-top: 0.059809cqw; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-mobile-reference { display: none; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main #dermal-systemic-regulation #dermal-title { letter-spacing: -.015em !important; line-height: 1.542857 !important; }
+  html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading h3 { letter-spacing: .17em !important; white-space: nowrap !important; line-height: 1.463415 !important; }
+  html body.nst-page main#main#main #dermal-systemic-regulation .ndr-sensing-label h3 { line-height: 1.458333 !important; }
+  html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy h4 { line-height: 1.617647 !important; }
+ }
+}
+@media (max-width: 540px) {
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-canvas { --ndr-axis-title-size: 18px; --ndr-sensing-size: 21px; --ndr-rule-size: 14px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-heading { padding: 30px 20px 22px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-skin-interface { height: 380px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-ingredient-label { font-size: 17px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axes-heading { margin: 22px 18px; gap: 10px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-list { padding-inline: 18px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-row { padding: 17px 13px; gap: 14px; grid-template-columns: 62px minmax(0, 1fr); }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-label { grid-template-columns: 52px 28px minmax(0, 1fr); gap: 8px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-number { font-size: 30px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-axis-copy p { font-size: 14px !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-results li { font-size: 15px !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill { grid-template-columns: 43px minmax(0, 1fr); gap: 8px; padding: 12px; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill p { font-size: 14px !important; }
+ html body.nst-page main#main#main #dermal-systemic-regulation .ndr-transport-pill small { font-size: 12px; }
+}
+
+/* Scent-induced modulation: reference geometry, supplied illustrations, native DM Sans text. */
+html body.nst-page main#main#main #neurophysiological-modulation.nmr-sheet { padding: 50px 0 !important; overflow: hidden; background: #f6fbff; color: #0b2868; border-top: 1px solid #dce8f2; font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { position: relative; isolation: isolate; container-type: inline-size; padding: 32px 24px 22px; background: radial-gradient(ellipse at 0 12%, #dceef88a, transparent 30%), radial-gradient(ellipse at 100% 0, #e6f1f97a, transparent 35%), linear-gradient(115deg, #fff, #f6fbff); --nmr-title-size: clamp(28px, 4.3vw, 42px); --nmr-panel-size: 19px; --nmr-system-heading-size: 20px; --nmr-system-title-size: 18px; --nmr-central-title-size: 18px; --nmr-disease-title-size: 13px; --nmr-dysregulation-size: 19px; --nmr-body-size: 16px; }
+html body.nst-page main#main#main #neurophysiological-modulation :is(p, ul, ol, figure) { margin: 0; }
+html body.nst-page main#main#main #neurophysiological-modulation :is(p, li, span, strong) { font-family: var(--site-font, "DM Sans", sans-serif) !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-background-art { display: none; pointer-events: none; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading { text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p { margin: 18px auto 26px; color: #15356f; font-size: 16px !important; line-height: 1.5 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p br { display: none; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-tagline { display: none; color: #547caf; font-size: 10px; line-height: 1.7; letter-spacing: .2em; text-transform: uppercase; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 22px; }
+html body.nst-page main#main#main #neurophysiological-modulation :is(.nmr-ingredient-panel, .nmr-olfactory-input, .nmr-central-integration) { position: relative; border: 1px solid #a9cbed; border-radius: 6px; background: #f9fcffb8; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-panel { padding: 18px 12px 12px; text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-panel > p { margin-top: 6px; color: #15356f; font-size: 16px !important; line-height: 1.2 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-image { display: block; width: min(100%, 280px); height: auto; margin: 12px auto 0; object-fit: contain; mix-blend-mode: multiply; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-input-arrow { position: absolute; z-index: 2; top: 50%; left: 100%; display: block; width: 24px; height: 23px; transform: translateY(-50%); background: linear-gradient(90deg, #93b9ee, #06449e); clip-path: polygon(0 28%, 64% 28%, 64% 0, 100% 50%, 64% 100%, 64% 72%, 0 72%); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-step-badge { display: inline-grid; flex: 0 0 auto; place-items: center; width: 45px; height: 45px; border-radius: 50%; color: #fff; background: linear-gradient(145deg, #145f9e, #062768 72%); box-shadow: 0 0 0 5px #ffffffc2; font-size: 26px; font-weight: 700; line-height: 1; letter-spacing: -.04em; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input { padding: 12px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input h3, html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration > h3 { display: flex; align-items: center; gap: 14px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input ol { display: grid; justify-items: center; gap: 10px; margin: 10px 0 0; padding: 14px 8px; list-style: none; border: 1px solid #dce9f6; border-radius: 6px; text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input li { color: #103373; font-size: 17px !important; font-weight: 600 !important; line-height: 1.25 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow { position: relative; width: 1px; height: 24px; background: #174685; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow::after { content: ""; position: absolute; left: -4px; bottom: 0; width: 9px; height: 9px; border-right: 1px solid #174685; border-bottom: 1px solid #174685; transform: rotate(45deg); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-art-crop { position: relative; display: block; width: 100%; height: auto; aspect-ratio: var(--nmr-art-ratio); overflow: hidden; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-art-crop > img { position: absolute; display: block; top: var(--nmr-art-top); left: var(--nmr-art-left); width: var(--nmr-art-width) !important; max-width: none !important; height: auto !important; margin: 0 !important; border-radius: 0; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-overview { position: relative; width: 100%; margin: 0; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-art { position: relative; width: 75.510204%; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-crop { -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20370%20259%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H370V259H0Z%20M135%2015H245V58H135Z%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20370%20259%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%200H370V259H0Z%20M135%2015H245V58H135Z%22%2F%3E%3C%2Fsvg%3E"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-label { position: absolute; left: 36.486486%; top: 5.791506%; display: grid; place-items: center; width: 29.729730%; height: 16.602317%; border-radius: 24px; color: #08235e; background: #fbfcff; font-size: clamp(13px, 1.8vw, 21px); font-weight: 700; line-height: 1; text-transform: uppercase; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts { position: absolute; inset: 0; padding: 0; list-style: none; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li { position: absolute; left: 77.551020%; width: 22.448980%; padding: 0; color: #13336c; font-size: 12px !important; line-height: 1.2 !important; white-space: nowrap; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li:nth-child(1) { top: 23.552124%; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li:nth-child(2) { top: 37.451737%; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li:nth-child(3) { top: 51.351351%; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li:nth-child(4) { top: 65.637066%; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration { padding: 12px 14px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration > h3 { padding-bottom: 7px; border-bottom: 1px solid #d3e4f5; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part { display: grid; grid-template-columns: 36% minmax(0, 1fr); gap: 12px; align-items: center; padding-top: 10px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part + .nmr-central-part { margin-top: 8px; border-top: 1px dashed #b1cae9; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-image { display: block; width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part ul { padding-left: 18px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part li { color: #16376f; font-size: 15px !important; line-height: 1.3 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading { display: grid; grid-template-columns: minmax(14px, 1fr) auto minmax(14px, 1fr); align-items: center; gap: 18px; margin: 28px 0 20px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading::before, html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading::after { content: ""; display: block; height: 1px; background: #6488bd; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading h3 { display: flex; align-items: center; justify-content: center; gap: 18px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card { display: grid; grid-template-rows: 44px auto 1fr; gap: 10px; padding: 12px 9px; border: 1px solid #b9d6f2; border-radius: 5px; background: linear-gradient(#f3faffb3, #ffffffbd); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card h4 { display: grid; align-content: center; text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-image { align-self: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card ul { padding-left: 18px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card li { color: #123470; font-size: 15px !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card li + li { margin-top: 3px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation { position: relative; margin-top: 36px; padding: 0 9px 10px; border: 1px solid #edc8d2; border-radius: 6px; background: linear-gradient(110deg, #fff8fa, #fff8f9a6); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading { margin: -17px auto 12px; text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading h3 { display: inline-flex; align-items: center; justify-content: center; gap: 15px; padding-inline: 12px; background: #fff9fa; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading .nmr-step-badge { background: linear-gradient(145deg, #f25058, #c50920 75%); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading p { margin: 4px auto 0; color: #395781; font-size: 13px !important; line-height: 1.35 !important; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 7px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card { display: grid; grid-template-rows: minmax(30px, auto) 64px minmax(0, 1fr); gap: 5px; padding: 8px 5px; border: 1px solid #f0d9e0; border-radius: 5px; background: #ffffff70; text-align: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card h4 { align-self: center; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-image { display: block; justify-self: center; align-self: center; width: 80%; height: 64px; object-fit: contain; mix-blend-mode: multiply; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card p { color: #294c7c; font-size: 11px !important; line-height: 1.3 !important; overflow-wrap: break-word; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer { display: grid; grid-template-columns: minmax(185px, 23%) minmax(0, 1fr); align-items: center; gap: 26px; margin-top: 20px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-origin { padding-left: 10px; border-left: 1px solid #5d82bc; color: #17427d; font-size: 13px !important; line-height: 1.3 !important; letter-spacing: .07em; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-origin span { display: block; margin-top: 3px; color: #6990c3; font-size: 8px; letter-spacing: .18em; text-transform: uppercase; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto { display: flex; align-items: center; gap: 24px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto::before, html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #648cc3); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto::after { transform: rotate(180deg); }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto p { color: #628ac1; font-size: 10px !important; line-height: 1.3 !important; letter-spacing: .22em; text-transform: uppercase; text-align: center; }
+@layer arotec-display-headings.spec {
+ html body.nst-page main#main#main #neurophysiological-modulation #modulation-title { display: block !important; width: 100%; margin: 0 !important; color: #072766 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-title-size) !important; font-weight: 900 !important; line-height: 1.12 !important; letter-spacing: -.035em !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation :is(.nmr-ingredient-panel, .nmr-olfactory-input, .nmr-central-integration) h3 { margin: 0 !important; color: #082965 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-panel-size) !important; font-weight: 700 !important; line-height: 1.1 !important; letter-spacing: -.025em !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part h4 { margin: 0 0 4px !important; color: #082965 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-central-title-size) !important; font-weight: 600 !important; line-height: 1.15 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading h3 { margin: 0 !important; color: #082965 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-system-heading-size) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.025em !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card h4 { margin: 0 !important; color: #092d6e !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-system-title-size) !important; font-weight: 600 !important; line-height: 1.12 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading h3 { margin: 0 !important; color: #c31025 !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-dysregulation-size) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.025em !important; text-transform: uppercase !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card h4 { margin: 0 !important; color: #b71b2d !important; font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--nmr-disease-title-size) !important; font-weight: 500 !important; line-height: 1.12 !important; letter-spacing: -.025em !important; text-transform: none !important; }
+}
+@media (min-width: 1024px) {
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { aspect-ratio: 1672 / 941; padding: 0; --nmr-title-size: 2.033493cqw; --nmr-panel-size: 1.136364cqw; --nmr-system-heading-size: 1.106459cqw; --nmr-system-title-size: 0.956938cqw; --nmr-central-title-size: 1.016746cqw; --nmr-disease-title-size: 0.610048cqw; --nmr-dysregulation-size: 1.106459cqw; --nmr-body-size: 0.956938cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-background-art { position: absolute; z-index: -1; inset: 0; display: block; background: url("../images/neuro-scented-therapy/neurophysiological-modulation.png") center / 100% 100% no-repeat; -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201672%20941%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M0%200H160V135H70V386H30V890H0Z%20M1645%200H1672V941H1648V425H1605V105H1645Z%20M0%20930H1672V941H0Z%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201672%20941%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M0%200H160V135H70V386H30V890H0Z%20M1645%200H1672V941H1648V425H1605V105H1645Z%20M0%20930H1672V941H0Z%22%2F%3E%3C%2Fsvg%3E"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+ html body.nst-page main#main#main #neurophysiological-modulation :is(.nmr-heading, .nmr-top) { display: contents; }
+ html body.nst-page main#main#main #neurophysiological-modulation #modulation-title { position: absolute; top: 1.487779%; left: 12.320574%; width: 75.358852%; text-align: center; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p { position: absolute; top: 7.438895%; left: 8.672249%; width: 82.655502%; margin: 0; font-size: 1.046651cqw !important; line-height: 1.45 !important; text-align: center; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p br { display: initial; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-tagline { position: absolute; top: 2.763018%; left: 89.234450%; display: block; width: 9.569378%; font-size: 0.574163cqw; line-height: 1.75; letter-spacing: .22em; text-align: left; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-panel { position: absolute; top: 16.578108%; left: 4.485646%; width: 16.566986%; height: 22.529224%; padding: 0.717703cqw 0.657895cqw 0.478469cqw; border-radius: 0.299043cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-panel > p { margin-top: 0.299043cqw; font-size: 0.986842cqw !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-image { position: absolute; left: 3.971119%; bottom: 3.773585%; width: 91.335740%; height: auto; margin: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-input-arrow { top: 47.641509%; width: 2.691388cqw; height: 1.734450cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-step-badge { width: 2.751196cqw; height: 2.751196cqw; box-shadow: 0 0 0 0.299043cqw #ffffffc2; font-size: 1.614833cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input { position: absolute; top: 18.172157%; left: 24.102871%; width: 15.729665%; height: 18.809777%; padding: 0.358852cqw 0.717703cqw 0.598086cqw; border-radius: 0.299043cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input h3 { gap: 0.897129cqw; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input ol { position: absolute; left: 4.562738%; bottom: 5.649718%; width: 90.494297%; height: 62.146893%; grid-template-rows: 1fr 1.495215cqw 1fr; align-items: center; gap: 0; margin: 0; padding: 0.418660cqw 0.299043cqw; border-radius: 0.358852cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input li { font-size: 1.016746cqw !important; line-height: 1.2 !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow { height: 1.435407cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow::after { left: -0.239234cqw; width: 0.538278cqw; height: 0.538278cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-overview { position: absolute; top: 13.390011%; left: 40.071770%; width: 29.306220%; height: 27.523911%; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-label { border-radius: 1.435407cqw; font-size: 1.196172cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li { font-size: 0.956938cqw !important; line-height: 1.2 !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration { position: absolute; top: 16.046759%; left: 73.265550%; width: 22.308612%; height: 25.292242%; padding: 0 0.897129cqw 0.299043cqw; border-radius: 0.299043cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration > h3 { height: 2.631579cqw; gap: 0.956938cqw; padding-bottom: 0; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part { height: 5.622010cqw; grid-template-columns: 7.775120cqw minmax(0, 1fr); gap: 1.076555cqw; padding-top: 0.179426cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part + .nmr-central-part { margin-top: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-image { width: 7.476077cqw; max-height: 5.263158cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part ul { padding-left: 1.076555cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part li { font-size: 0.956938cqw !important; line-height: 1.2 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading { position: absolute; top: 41.020191%; left: 2.392344%; width: 95.215311%; height: 5.313496%; grid-template-columns: minmax(0, 1fr) 34.330144cqw minmax(0, 1fr); gap: 1.076555cqw; margin: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading h3 { gap: 1.315789cqw; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading .nmr-step-badge { width: 2.990431cqw; height: 2.990431cqw; font-size: 1.674641cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-grid { position: absolute; top: 46.121148%; left: 2.392344%; width: 95.215311%; height: 27.417641%; grid-template-columns: 216fr 218fr 230fr 226fr 216fr 234fr 216fr; gap: 0.358852cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card { min-height: 0; grid-template-rows: 2.392344cqw 6.220096cqw minmax(0, 1fr); gap: 0.478469cqw; padding: 0.478469cqw 0.418660cqw; border-radius: 0.299043cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card ul { padding-left: 1.136364cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card li { font-size: 0.861244cqw !important; line-height: 1.12 !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card li + li { margin-top: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation { position: absolute; top: 75.876727%; left: 1.555024%; width: 96.889952%; height: 18.065887%; margin: 0; padding: 0; border-radius: 0.358852cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading { position: absolute; top: -1.076555cqw; left: 26.543210%; width: 46.913580%; margin: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading h3 { gap: 1.076555cqw; padding-inline: 0.717703cqw; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading p { margin-top: -0.478469cqw; padding-left: 3.110048cqw; font-size: 0.687799cqw !important; line-height: 1.25 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-grid { position: absolute; top: 21.764706%; left: .493827%; width: 99.012346%; height: 74.705882%; grid-template-columns: repeat(17, minmax(0, 1fr)); gap: 0.299043cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card { min-height: 0; grid-template-rows: 1.674641cqw 3.588517cqw minmax(0, 1fr); gap: 0; padding: 0.239234cqw 0.239234cqw 0.299043cqw; border-radius: 0.239234cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-image { width: 82%; height: 3.588517cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card p { font-size: 0.544258cqw !important; line-height: 1.16 !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer { position: absolute; top: 94.792774%; left: 1.495215%; width: 82.356459%; height: 3.613177%; grid-template-columns: 15.191388cqw minmax(0, 1fr); gap: 1.794258cqw; margin: 0; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-origin { padding-left: 0.598086cqw; font-size: 0.801435cqw !important; line-height: 1.3 !important; white-space: nowrap; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-origin span { margin-top: 0.119617cqw; font-size: 0.490431cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto { gap: 1.435407cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto p { font-size: 0.675837cqw !important; letter-spacing: .23em; white-space: nowrap; }
+ @layer arotec-display-headings.spec {
+  html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part h4 { margin-bottom: 0.119617cqw !important; }
+ }
+}
+@media (max-width: 760px) {
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { padding: 30px 20px 22px; --nmr-panel-size: 19px; --nmr-system-heading-size: 18px; --nmr-system-title-size: 17px; --nmr-dysregulation-size: 17px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-top { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-image { max-width: 300px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-input-arrow { top: auto; bottom: -28px; left: calc(50% - 12px); transform: rotate(90deg); width: 25px; height: 24px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input { padding: 16px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input h3 { justify-content: center; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-overview { width: min(100%, 560px); margin-inline: auto; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li { font-size: 13px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration { padding: 14px 16px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part { grid-template-columns: minmax(86px, 32%) minmax(0, 1fr); gap: 18px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-image { max-width: 150px; margin-inline: auto; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-part li { font-size: 16px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading { gap: 10px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading h3 { gap: 12px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading h3 { gap: 12px; padding-inline: 5px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading p { font-size: 12px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 540px) {
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { padding-inline: 16px; --nmr-title-size: 28px; --nmr-system-title-size: 17px; --nmr-disease-title-size: 12px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p { font-size: 15px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li { font-size: 10px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card { padding: 14px 12px; grid-template-rows: 42px auto minmax(0, 1fr); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card li { font-size: 16px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-card ul { padding-left: 22px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card { padding-inline: 4px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-card p { font-size: 11px !important; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto { gap: 12px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer-motto p { font-size: 9px !important; }
+}
+@media (max-width: 380px) {
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { --nmr-panel-size: 17px; --nmr-central-title-size: 16px; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-disease-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-callouts li { font-size: 9px !important; }
+}
+
+/* Add 50px above and below the modulation title without resizing the diagram. */
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { --nmr-title-space: 50px; }
+html body.nst-page main#main#main #neurophysiological-modulation #modulation-title { padding-block: var(--nmr-title-space) !important; }
+@media (min-width: 1024px) {
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas { aspect-ratio: auto; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-canvas::before { content: ""; display: block; padding-top: calc(56.279904% + var(--nmr-title-space) + var(--nmr-title-space)); }
+ html body.nst-page main#main#main #neurophysiological-modulation #modulation-title { top: 0.837321cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-heading > p { top: calc(4.186603cqw + var(--nmr-title-space) + var(--nmr-title-space)); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-tagline { top: calc(1.555024cqw + var(--nmr-title-space)); }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-background-art { top: calc(var(--nmr-title-space) + var(--nmr-title-space)); bottom: auto; height: 56.279904cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-ingredient-panel { top: calc(9.330144cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 12.679426cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-olfactory-input { top: calc(10.227273cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 10.586124cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-brain-overview { top: calc(7.535885cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 15.490431cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-central-integration { top: calc(9.031100cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 14.234450cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-heading { top: calc(23.086124cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 2.990431cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-system-grid { top: calc(25.956938cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 15.430622cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation { top: calc(42.703349cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 10.167464cqw; }
+ html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer { top: calc(53.349282cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 2.033493cqw; }
 }

@@ -1,0 +1,431 @@
+/* Dementia research disclosure: Exposome bar behavior, responsive HTML copy.
+   Photo windows show the supplied reference art without modifying source images. */
+html body.sip-page main#main#main .sip-dementia-section {
+  margin:0 !important; padding:0 !important; background:#f3f9fd !important; border:0 !important; color:#102e57 !important;
+}
+html body.sip-page main#main#main .sip-dementia-section::before {
+  display:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-section .sip-container {
+  width:auto !important; max-width:none !important; margin:0 150px !important; padding:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-accordion {
+  margin:0 !important; padding:0 !important; border:0 !important; border-block:1px solid #c6dce9 !important; border-radius:0 !important; background:transparent !important; scroll-margin-top:135px !important;
+}
+html body.sip-page main#main#main .sip-dementia-toggle {
+  display:flex !important; align-items:center !important; justify-content:space-between !important; gap:20px !important; min-height:72px !important; padding:18px 0 !important; color:#0a165c !important; cursor:pointer !important; list-style:none !important; font-family:inherit !important; font-size:22px !important; font-weight:700 !important; line-height:1.35 !important;
+}
+html body.sip-page main#main#main .sip-dementia-toggle::-webkit-details-marker {
+  display:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-toggle:focus-visible {
+  outline:3px solid #317bc5 !important; outline-offset:5px !important;
+}
+html body.sip-page main#main#main .sip-dementia-label {
+  min-width:0 !important; overflow-wrap:break-word !important;
+}
+html body.sip-page main#main#main .sip-dementia-toggle > .ph {
+  flex-shrink:0 !important; font-size:24px !important; transition:transform 160ms !important;
+}
+html body.sip-page main#main#main .sip-dementia-accordion[open] > .sip-dementia-toggle > .ph {
+  transform:rotate(180deg) !important;
+}
+html body.sip-page main#main#main .sip-dementia-accordion:not([open]) > .sip-dementia-content {
+  display:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-content {
+  padding:12px 0 56px !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(h2,h3,h4,h5) {
+  font-family:inherit !important; font-size:20px !important; font-weight:700 !important; line-height:1.3 !important; letter-spacing:-.025em !important; text-transform:none !important; color:#0a2153 !important; margin:0 !important; padding:0 !important; max-width:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(p,li,figcaption,td,th) {
+  font-family:inherit !important; font-size:16px !important; line-height:1.6 !important; letter-spacing:normal !important; text-transform:none !important; color:#354e6c !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(p) {
+  max-width:none !important; margin:0 !important; padding:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(p + p) {
+  margin-top:12px !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(ul,ol,figure) {
+  margin:0 !important; padding:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(ul,ol) {
+  list-style:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-section :where(article,aside,figure,header) {
+  min-width:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-chapter {
+  margin:0 !important; padding:40px 0 !important; border:0 !important; background:transparent !important;
+}
+html body.sip-page main#main#main .sip-dementia-chapter + .sip-dementia-chapter {
+  border-top:1px solid #c6dce9 !important;
+}
+html body.sip-page main#main#main .sip-dementia-heading {
+  max-width:960px !important; margin:0 auto 30px !important; padding:0 !important; text-align:center !important;
+}
+html body.sip-page main#main#main .sip-dementia-heading h2 {
+  font-size:clamp(25px,2.5vw,34px) !important; line-height:1.2 !important;
+}
+html body.sip-page main#main#main .sip-dementia-heading > p {
+  margin-top:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-grid {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-card {
+  display:flex !important; flex-direction:column !important; gap:0 !important; padding:18px !important; border:1px solid #bdcfdf !important; border-radius:12px !important; background:#fff !important; box-shadow:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-card-header {
+  display:flex !important; align-items:center !important; gap:12px !important; min-height:68px !important; margin-bottom:16px !important; padding:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-number {
+  display:grid !important; place-items:center !important; flex:0 0 38px !important; width:38px !important; height:38px !important; border-radius:50% !important; background:#2e67ae !important; color:#fff !important; font-size:20px !important; font-weight:700 !important;
+}
+html body.sip-page main#main#main .sip-dementia-card--teal .sip-dementia-number {
+  background:#378894 !important;
+}
+html body.sip-page main#main#main .sip-dementia-card--amber .sip-dementia-number {
+  background:#b97532 !important;
+}
+html body.sip-page main#main#main .sip-dementia-card-body {
+  flex:1 !important; padding:20px 0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-card-body h4 {
+  font-size:19px !important; margin-bottom:10px !important;
+}
+html body.sip-page main#main#main .sip-dementia-cues {
+  display:flex !important; flex-wrap:wrap !important; justify-content:space-between !important; gap:12px !important; margin:0 0 18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-cues li {
+  display:flex !important; flex-direction:column !important; gap:6px !important; align-items:center !important; flex:1 1 70px !important; font-size:12px !important; line-height:1.4 !important; text-align:center !important;
+}
+html body.sip-page main#main#main .sip-dementia-cues .ph {
+  color:#348093 !important; font-size:26px !important;
+}
+html body.sip-page main#main#main .sip-dementia-status {
+  display:block !important; margin-top:auto !important; padding:10px 12px !important; border:1px solid #bad2ec !important; border-radius:7px !important; background:#edf5ff !important; color:#295e9f !important; font-size:11px !important; font-weight:700 !important; line-height:1.5 !important; letter-spacing:.03em !important; text-transform:uppercase !important; text-align:center !important;
+}
+html body.sip-page main#main#main .sip-dementia-status--teal {
+  border-color:#add5d9 !important; background:#eef9fa !important; color:#287984 !important;
+}
+html body.sip-page main#main#main .sip-dementia-status--amber {
+  border-color:#ecd0a6 !important; background:#fff7ea !important; color:#9e5c1e !important;
+}
+html body.sip-page main#main#main .sip-dementia-insights {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:22px !important; margin-top:24px !important; padding:24px !important; border:1px solid #bdcfdf !important; border-radius:10px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-insights > h4 {
+  grid-column:1 / -1 !important;
+}
+html body.sip-page main#main#main .sip-dementia-insights article {
+  padding-left:16px !important; border-left:2px solid #a9c9e3 !important;
+}
+html body.sip-page main#main#main .sip-dementia-insights h4 {
+  font-size:17px !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-insights p {
+  font-size:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-boundary {
+  display:grid !important; grid-template-columns:32px 160px minmax(0,1fr) !important; align-items:center !important; gap:18px !important; margin-top:20px !important; padding:20px 24px !important; border:1px solid #bdcfdf !important; border-radius:10px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-boundary > .ph {
+  flex:none !important; font-size:30px !important; color:#2967ae !important;
+}
+html body.sip-page main#main#main .sip-dementia-boundary h3 {
+  font-size:18px !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-boundary p {
+  font-size:15px !important;
+}
+html body.sip-page main#main#main .sip-dementia-bridge {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:18px !important; align-items:start !important;
+}
+html body.sip-page main#main#main .sip-dementia-step {
+  min-width:0 !important; height:100% !important; padding:18px !important; border:1px solid #bdcfdf !important; border-radius:12px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-step > header {
+  display:flex !important; align-items:center !important; gap:12px !important; margin-bottom:20px !important; min-height:68px !important;
+}
+html body.sip-page main#main#main .sip-dementia-streams {
+  display:grid !important; gap:16px !important;
+}
+html body.sip-page main#main#main .sip-dementia-stream {
+  padding:16px !important; border:1px solid #d5e1ed !important; border-radius:8px !important; background:#f7fafc !important;
+}
+html body.sip-page main#main#main .sip-dementia-stream h4 {
+  margin-bottom:10px !important; font-size:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-stream p {
+  font-size:15px !important;
+}
+html body.sip-page main#main#main .sip-dementia-stream .sip-dementia-photo {
+  margin:14px 0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-step > .sip-dementia-photo {
+  margin-top:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-step > .sip-dementia-note {
+  margin-top:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-note {
+  padding:12px !important; border-radius:6px !important; background:#f1f6fb !important; font-size:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-senses {
+  display:flex !important; flex-wrap:wrap !important; justify-content:center !important; gap:16px 10px !important; margin-top:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-senses li {
+  display:flex !important; flex-direction:column !important; align-items:center !important; flex:1 1 65px !important; gap:8px !important; font-size:12px !important; line-height:1.45 !important; text-align:center !important;
+}
+html body.sip-page main#main#main .sip-dementia-senses .ph {
+  display:grid !important; place-items:center !important; width:44px !important; height:44px !important; border:1px solid #accfdf !important; border-radius:50% !important; color:#298098 !important; font-size:24px !important; background:#f4fafc !important;
+}
+html body.sip-page main#main#main .sip-dementia-process {
+  display:grid !important; gap:28px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process > li {
+  position:relative !important; padding:16px !important; border:1px solid #c6d8e8 !important; border-radius:8px !important; background:#f8fbff !important;
+}
+html body.sip-page main#main#main .sip-dementia-process > li + li::before {
+  content:'↓' !important; position:absolute !important; left:calc(50% - 7px) !important; top:-28px !important; color:#2e67ae !important; font-size:22px !important; line-height:26px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process .ph {
+  display:inline-block !important; margin-bottom:8px !important; color:#2e67ae !important; font-size:28px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process h4 {
+  font-size:17px !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process p {
+  font-size:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis {
+  grid-column:1 / -1 !important; display:grid !important; grid-template-columns:48px minmax(0,1fr) auto !important; align-items:center !important; gap:18px !important; padding:22px 24px !important; border:1px dashed #d8983d !important; border-radius:10px !important; background:#fff8ed !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis > .ph {
+  color:#b97532 !important; font-size:38px !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis h3 {
+  color:#9e5c1e !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis p {
+  font-size:15px !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis .sip-dementia-status {
+  margin:0 !important; max-width:220px !important;
+}
+html body.sip-page main#main#main .sip-dementia-clinical {
+  display:grid !important; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) !important; gap:20px !important; align-items:start !important;
+}
+html body.sip-page main#main#main .sip-dementia-stimulation {
+  padding:16px !important; border:1px solid #bdcfdf !important; border-radius:12px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-stimulation figcaption {
+  padding-top:18px !important; text-align:center !important;
+}
+html body.sip-page main#main#main .sip-dementia-stimulation h3 {
+  margin-bottom:10px !important;
+}
+html body.sip-page main#main#main .sip-dementia-evidence {
+  min-width:0 !important; padding:22px !important; border:1px solid #bdcfdf !important; border-radius:12px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-evidence > header h3 {
+  font-size:25px !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-meta {
+  font-size:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-table-wrap {
+  margin:20px 0 14px !important; max-width:100% !important; overflow:auto !important;
+}
+html body.sip-page main#main#main .sip-dementia-table {
+  width:100% !important; border-collapse:collapse !important; table-layout:fixed !important;
+}
+html body.sip-page main#main#main .sip-dementia-table :is(th,td) {
+  padding:12px 8px !important; border:0 !important; border-bottom:1px solid #dce5ed !important; text-align:left !important; font-size:14px !important; line-height:1.5 !important; overflow-wrap:break-word !important; vertical-align:middle !important;
+}
+html body.sip-page main#main#main .sip-dementia-table thead th {
+  font-size:12px !important; font-weight:700 !important; color:#0a2153 !important; background:#f1f6fb !important;
+}
+html body.sip-page main#main#main .sip-dementia-table tbody th {
+  font-weight:500 !important;
+}
+html body.sip-page main#main#main .sip-dementia-table :is(th,td):nth-child(2) {
+  width:20% !important; text-align:center !important; font-variant-numeric:tabular-nums !important;
+}
+html body.sip-page main#main#main .sip-dementia-table :is(th,td):nth-child(3) {
+  width:39% !important; font-variant-numeric:tabular-nums !important;
+}
+html body.sip-page main#main#main .sip-dementia-results {
+  display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:20px !important; margin-top:20px !important;
+}
+html body.sip-page main#main#main .sip-dementia-result {
+  padding:24px !important; border:1px solid #a9d6d8 !important; border-radius:10px !important; background:#f0fafa !important;
+}
+html body.sip-page main#main#main .sip-dementia-result--unestablished {
+  border-color:#efd1a3 !important; background:#fff8ee !important;
+}
+html body.sip-page main#main#main .sip-dementia-result h4 {
+  display:flex !important; align-items:center !important; gap:12px !important; margin-bottom:18px !important; font-size:23px !important;
+}
+html body.sip-page main#main#main .sip-dementia-result h4 .ph {
+  font-size:28px !important; color:#378894 !important;
+}
+html body.sip-page main#main#main .sip-dementia-result--unestablished h4 .ph {
+  color:#b97532 !important;
+}
+html body.sip-page main#main#main .sip-dementia-result ul {
+  display:grid !important; gap:10px !important; margin-bottom:20px !important;
+}
+html body.sip-page main#main#main .sip-dementia-result li {
+  display:flex !important; align-items:flex-start !important; gap:10px !important;
+}
+html body.sip-page main#main#main .sip-dementia-result li .ph {
+  flex:none !important; padding-top:3px !important; color:#378894 !important; font-size:20px !important;
+}
+html body.sip-page main#main#main .sip-dementia-result--unestablished li .ph {
+  color:#7b6d55 !important;
+}
+html body.sip-page main#main#main .sip-dementia-interpretation {
+  display:block !important; margin-top:24px !important; padding:24px !important; border:1px solid #bdcfdf !important; border-radius:10px !important; background:#fff !important;
+}
+html body.sip-page main#main#main .sip-dementia-interpretation > h4 {
+  grid-column:1 / -1 !important;
+}
+html body.sip-page main#main#main .sip-dementia-interpretation h4 {
+  font-size:17px !important; margin-bottom:8px !important;
+}
+html body.sip-page main#main#main .sip-dementia-interpretation p {
+  font-size:14px !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo {
+  position:relative !important; display:block !important; width:100% !important; aspect-ratio:var(--photo-w) / var(--photo-h) !important; overflow:hidden !important; border-radius:8px !important; background:#eaf0f4 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo > img {
+  position:absolute !important; display:block !important; width:calc(1672 / var(--photo-w) * 100%) !important; max-width:none !important; height:auto !important; left:calc(var(--photo-x) / var(--photo-w) * -100%) !important; top:calc(var(--photo-y) / var(--photo-h) * -100%) !important; border:0 !important; border-radius:0 !important; margin:0 !important; padding:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--olfactory {
+  --photo-x:84 !important; --photo-y:203 !important; --photo-w:468 !important; --photo-h:262 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--reminiscence {
+  --photo-x:598 !important; --photo-y:203 !important; --photo-w:469 !important; --photo-h:237 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--music {
+  --photo-x:1112 !important; --photo-y:203 !important; --photo-w:475 !important; --photo-h:262 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--engagement {
+  --photo-x:596 !important; --photo-y:304 !important; --photo-w:404 !important; --photo-h:262 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--stimulation {
+  --photo-x:113 !important; --photo-y:112 !important; --photo-w:630 !important; --photo-h:345 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--synesthesia {
+  --photo-x:94 !important; --photo-y:369 !important; --photo-w:209 !important; --photo-h:200 !important;
+}
+html body.sip-page main#main#main .sip-dementia-photo--context {
+  --photo-x:331 !important; --photo-y:369 !important; --photo-w:213 !important; --photo-h:200 !important;
+}
+html body.sip-page main#main#main .sip-dementia-chapter::before,
+html body.sip-page main#main#main .sip-dementia-stream::before,
+html body.sip-page main#main#main .sip-dementia-evidence::before,
+html body.sip-page main#main#main .sip-dementia-result::before { display:none !important; }
+html body.sip-page main#main#main .sip-dementia-eyebrow {
+  display:block !important; margin-bottom:12px !important; font-size:11px !important; font-weight:700 !important; letter-spacing:.14em !important; text-transform:uppercase !important; color:#51738c !important;
+}
+html body.sip-page main#main#main .sip-dementia-insight-block { margin-top:28px !important; }
+html body.sip-page main#main#main .sip-dementia-insight-block > h3,
+html body.sip-page main#main#main .sip-dementia-interpretation > h3 {
+  display:flex !important; align-items:center !important; gap:12px !important;
+}
+html body.sip-page main#main#main .sip-dementia-insight-block > h3 .ph,
+html body.sip-page main#main#main .sip-dementia-interpretation > h3 .ph { color:#2e67ae !important; font-size:28px !important; }
+html body.sip-page main#main#main .sip-dementia-insights article > .ph { display:block !important; margin-bottom:10px !important; font-size:26px !important; color:#2e67ae !important; }
+html body.sip-page main#main#main .sip-dementia-interpretation > .sip-dementia-insights { margin-top:20px !important; padding:0 !important; border:0 !important; }
+html body.sip-page main#main#main .sip-dementia-bridge-note { margin-top:18px !important; padding:12px !important; border-radius:6px !important; background:#f1f6fb !important; text-align:center !important; font-size:14px !important; }
+html body.sip-page main#main#main .sip-dementia-stream .sip-dementia-photo { max-width:160px !important; margin-inline:auto !important; }
+html body.sip-page main#main#main .sip-dementia-table caption { caption-side:bottom !important; padding:12px 0 0 !important; font-size:12px !important; color:#61758a !important; text-align:left !important; }
+html body.sip-page main#main#main .sip-dementia-table-note { padding:12px !important; background:#f1f6fb !important; font-size:13px !important; border-radius:6px !important; }
+html body.sip-page main#main#main .sip-dementia-outcome-uncertain { background:#f3f4f7 !important; }
+html body.sip-page main#main#main .sip-dementia-table-wrap:focus-visible { outline:3px solid #317bc5 !important; outline-offset:4px !important; }
+@media (max-width:1199px) {
+html body.sip-page main#main#main .sip-dementia-section .sip-container {
+  margin-inline:48px !important;
+}
+html body.sip-page main#main#main .sip-dementia-grid, html body.sip-page main#main#main .sip-dementia-bridge {
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+}
+html body.sip-page main#main#main .sip-dementia-grid > :last-child, html body.sip-page main#main#main .sip-dementia-bridge > .sip-dementia-step:nth-child(3) {
+  grid-column:1 / -1 !important;
+}
+html body.sip-page main#main#main .sip-dementia-grid > :last-child .sip-dementia-photo {
+  max-width:540px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process {
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:16px !important;
+}
+html body.sip-page main#main#main .sip-dementia-process > li + li::before {
+  display:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-clinical {
+  grid-template-columns:1fr !important;
+}
+html body.sip-page main#main#main .sip-dementia-stimulation {
+  max-width:660px !important; width:100% !important; margin-inline:auto !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis {
+  grid-template-columns:40px minmax(0,1fr) !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis .sip-dementia-status {
+  grid-column:2 !important;
+}
+}
+@media (max-width:699px) {
+html body.sip-page main#main#main .sip-dementia-boundary { grid-template-columns:30px minmax(0,1fr) !important; gap:12px !important; }
+html body.sip-page main#main#main .sip-dementia-boundary > p { grid-column:2 !important; }
+html body.sip-page main#main#main .sip-dementia-section .sip-container {
+  margin-inline:24px !important;
+}
+html body.sip-page main#main#main .sip-dementia-accordion {
+  scroll-margin-top:104px !important;
+}
+html body.sip-page main#main#main .sip-dementia-toggle {
+  font-size:20px !important;
+}
+html body.sip-page main#main#main .sip-dementia-chapter {
+  padding-block:30px !important;
+}
+html body.sip-page main#main#main .sip-dementia-content {
+  padding-bottom:24px !important;
+}
+html body.sip-page main#main#main .sip-dementia-grid, html body.sip-page main#main#main .sip-dementia-bridge, html body.sip-page main#main#main .sip-dementia-results, html body.sip-page main#main#main .sip-dementia-insights, html body.sip-page main#main#main .sip-dementia-interpretation, html body.sip-page main#main#main .sip-dementia-process {
+  grid-template-columns:minmax(0,1fr) !important;
+}
+html body.sip-page main#main#main .sip-dementia-card-header, html body.sip-page main#main#main .sip-dementia-step > header {
+  min-height:0 !important;
+}
+html body.sip-page main#main#main .sip-dementia-card, html body.sip-page main#main#main .sip-dementia-step, html body.sip-page main#main#main .sip-dementia-evidence {
+  padding:16px !important;
+}
+html body.sip-page main#main#main .sip-dementia-boundary, html body.sip-page main#main#main .sip-dementia-result, html body.sip-page main#main#main .sip-dementia-insights, html body.sip-page main#main#main .sip-dementia-interpretation {
+  padding:18px !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis {
+  padding:18px !important; gap:12px !important; grid-template-columns:minmax(0,1fr) !important;
+}
+html body.sip-page main#main#main .sip-dementia-hypothesis .sip-dementia-status {
+  grid-column:1 !important; max-width:none !important;
+}
+html body.sip-page main#main#main .sip-dementia-table :is(th,td) {
+  padding:10px 4px !important; font-size:12px !important;
+}
+html body.sip-page main#main#main .sip-dementia-table thead th {
+  font-size:11px !important;
+}
+}
+@media (prefers-reduced-motion:reduce) {
+html body.sip-page main#main#main .sip-dementia-toggle > .ph {
+  transition:none !important;
+}
+}
