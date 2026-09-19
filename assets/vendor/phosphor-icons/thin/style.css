@@ -1,0 +1,67 @@
+/* Phosphor Icons web v2.1.1, MIT license (see LICENSE.txt).
+   Original font and selected, unchanged glyph mappings from:
+   https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/thin/style.css
+   Only the bundled WOFF2 source is retained. */
+@font-face {
+  font-family: "Phosphor-Thin";
+  src: url("./Phosphor-Thin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.ph-thin {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Phosphor-Thin" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ph-thin.ph-users-three:before {
+  content: "\e68e";
+}
+.ph-thin.ph-heart:before {
+  content: "\e2a8";
+}
+.ph-thin.ph-target:before {
+  content: "\e47c";
+}
+.ph-thin.ph-eye:before {
+  content: "\e220";
+}
+.ph-thin.ph-sketch-logo:before {
+  content: "\e42c";
+}
+.ph-thin.ph-atom:before {
+  content: "\e5e4";
+}
+.ph-thin.ph-graph:before {
+  content: "\eb58";
+}
+.ph-thin.ph-wind:before {
+  content: "\e5d2";
+}
+.ph-thin.ph-brain:before {
+  content: "\e74e";
+}
+.ph-thin.ph-dna:before {
+  content: "\e924";
+}

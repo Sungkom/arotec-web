@@ -1,3 +1,284 @@
+/* Our Vision: supplied full-bleed artwork, with the website's type and gutters. */
+html body.wwd-page main#main #our-vision.wwd-vision {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: max(640px, calc(100svh - 112px));
+  padding-block: 64px;
+  border: 0;
+  background: #020e16 url("../images/who-we-are-details/our-vision-eye-sep19.jpg") center / cover no-repeat;
+  /* The document already reserves space for the header when following anchors. */
+  scroll-margin-top: 0;
+}
+
+html body.wwd-page main#main #our-vision.wwd-vision::before {
+  content: none;
+}
+
+#our-vision .wwd-vision-content {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
+}
+
+#our-vision .wwd-vision-copy {
+  width: min(42%, 480px);
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwd-page main#main #our-vision #our-vision-title {
+    margin: 0 !important;
+    color: #fff !important;
+  }
+}
+
+html body.wwd-page main#main #our-vision :is(.wwd-vision-lead, .wwd-vision-description, .wwd-vision-closing) {
+  font-family: var(--site-font) !important;
+  letter-spacing: 0;
+}
+
+html body.wwd-page main#main #our-vision .wwd-vision-lead {
+  margin: 24px 0 0;
+  max-width: 510px;
+  color: #bad6e2 !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+
+#our-vision .wwd-vision-rule {
+  width: 48px;
+  height: 2px;
+  margin-top: 28px;
+  background: #75b7c8;
+}
+
+html body.wwd-page main#main #our-vision .wwd-vision-description {
+  margin: 24px 0 0;
+  color: #d1d6dc !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+html body.wwd-page main#main #our-vision .wwd-vision-closing {
+  margin: 40px 0 0;
+  color: #adc6d5 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+@media (max-width: 991px) {
+  html body.wwd-page main#main #our-vision.wwd-vision {
+    --wwd-vision-art-height: clamp(320px, 58vw, 480px);
+    display: block;
+    min-height: 0;
+    padding-block: calc(var(--wwd-vision-art-height) + 32px) 56px;
+    background-size: auto var(--wwd-vision-art-height);
+    background-position: 80% top;
+  }
+  #our-vision .wwd-vision-content {
+    width: calc(100% - 64px);
+    margin-inline: auto;
+  }
+  #our-vision .wwd-vision-copy {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 599px) {
+  html body.wwd-page main#main #our-vision.wwd-vision {
+    --wwd-vision-art-height: 310px;
+    padding-bottom: 48px;
+  }
+  #our-vision .wwd-vision-content {
+    width: calc(100% - 48px);
+  }
+  html body.wwd-page main#main #our-vision .wwd-vision-closing {
+    margin-top: 32px;
+  }
+}
+
+/* Our Values: live copy and labels over the supplied six-part ring artwork. */
+html body.wwd-page main#main #our-values.wwd-values-section {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: max(760px, calc(100svh - 112px));
+  padding-block: 48px;
+  overflow: hidden;
+  border: 0;
+  background: #020d1c;
+  scroll-margin-top: 0;
+}
+
+html body.wwd-page main#main #our-values.wwd-values-section::before {
+  content: none;
+}
+
+#our-values .wwd-values-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+}
+
+/* Keep labels in original image coordinates while the complete canvas covers
+   the section. Container units account for both wide and tall viewports. */
+#our-values .wwd-values-canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(100cqw, 213.333333cqh);
+  aspect-ratio: 32 / 15;
+  transform: translate(-50%, -50%);
+  container-type: inline-size;
+}
+
+html body.wwd-page main#main #our-values .wwd-values-canvas img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+html body.wwd-page main#main #our-values .wwd-values-label {
+  position: absolute;
+  width: 10.5%;
+  transform: translate(-50%, -50%);
+  color: #fff !important;
+  font-family: var(--site-font) !important;
+  font-size: clamp(10.5px, .9cqw, 21px) !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.025em;
+  text-align: center;
+}
+
+#our-values .wwd-values-label--science { left: 57.5%; top: 34.1%; }
+#our-values .wwd-values-label--human { left: 69.2%; top: 32.9%; }
+#our-values .wwd-values-label--innovation { left: 75.5%; top: 52.1%; }
+#our-values .wwd-values-label--collaboration { left: 70.1%; top: 70.2%; }
+#our-values .wwd-values-label--responsibility { left: 58.2%; top: 68%; }
+#our-values .wwd-values-label--growth { left: 53.2%; top: 51.2%; }
+
+#our-values .wwd-values-content {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
+}
+
+#our-values .wwd-values-copy {
+  width: min(42%, 520px);
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwd-page main#main #our-values #our-values-title {
+    margin: 0 !important;
+    color: #fff !important;
+  }
+}
+
+html body.wwd-page main#main #our-values .wwd-values-lead {
+  margin: 24px 0 0;
+  color: #c1dbe5 !important;
+  font-family: var(--site-font) !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+
+#our-values .wwd-values-rule {
+  width: 40px;
+  height: 2px;
+  margin-top: 24px;
+  background: #247fc4;
+}
+
+#our-values .wwd-values-list {
+  padding: 0;
+  margin: 16px 0 0;
+  max-width: 420px;
+  list-style: none;
+}
+
+html body.wwd-page main#main #our-values .wwd-values-list li {
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid #164875;
+  color: #edf1f7 !important;
+  font-family: var(--site-font) !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 30px !important;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+html body.wwd-page main#main #our-values .wwd-values-list li:last-child {
+  border-bottom: 0;
+}
+
+html body.wwd-page main#main #our-values .wwd-values-closing {
+  margin: 24px 0 0;
+  color: #cdd4df !important;
+  font-family: var(--site-font) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+@media (max-width: 991px) {
+  html body.wwd-page main#main #our-values.wwd-values-section {
+    display: block;
+    min-height: 0;
+    padding-block: 32px 56px;
+  }
+  #our-values .wwd-values-art {
+    position: relative;
+    inset: auto;
+    width: min(calc(100% - 64px), 620px);
+    aspect-ratio: 20 / 19;
+    margin: 0 auto 32px;
+  }
+  #our-values .wwd-values-canvas {
+    width: 284.444444cqw;
+    transform: translate(-64%, -50%);
+  }
+  #our-values .wwd-values-content {
+    width: calc(100% - 64px);
+    margin-inline: auto;
+  }
+  #our-values .wwd-values-copy {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 599px) {
+  html body.wwd-page main#main #our-values.wwd-values-section { padding-bottom: 48px; }
+  #our-values .wwd-values-art { width: calc(100% - 48px); }
+  #our-values .wwd-values-content { width: calc(100% - 48px); }
+  html body.wwd-page main#main #our-values .wwd-values-list li {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  html body.wwd-page main#main #our-values .wwd-values-label--collaboration {
+    width: 12%;
+  }
+}
+
 /* Detail-only styles; the shared Who We Are and culture layouts stay unchanged. */
 .wwd-page .wwd-pillars > li {
   gap: 12px;

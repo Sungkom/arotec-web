@@ -8,7 +8,9 @@
     <title>Global Capability &amp; People | Arotec &amp; Scientist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="preload" href="../assets/fonts/DMSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/DMSans-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/DMSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="../assets/vendor/phosphor-icons/regular/style.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
     <link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715-home-footer-cleanup">
@@ -17,11 +19,12 @@
     <link rel="stylesheet" href="../assets/css/synesthetic-flavor-cultures.css?v=20260905-comparison-site-theme-v14">
     <link rel="stylesheet" href="../assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="../assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
     <link rel="stylesheet" href="../assets/css/site-typography.css?v=20260910-typography-complete-v5"><script src="../assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
-    <link rel="stylesheet" href="../assets/css/who-we-are.css?v=20260906-more-body-v3">
+    <link rel="stylesheet" href="../assets/css/who-we-are.css?v=20260919-heading-system-v1">
     <link rel="preload" as="image" href="../assets/images/global-capability-and-people/global-perspective-background-20260908.png" fetchpriority="high">
-    <link rel="stylesheet" href="../assets/css/global-capability-and-people.css?v=20260908-global-perspective-background-v2">
+    <link rel="stylesheet" href="../assets/css/global-capability-and-people.css?v=20260919-heading-system-v1">
     <script src="../assets/js/site.min.js?v=20260914-zh-cn-v1" defer></script>
     <script src="../assets/js/home-header.js?v=20260904-hero-logo-align-v3" defer></script>
+    <link rel="stylesheet" href="../assets/css/about-headings.css?v=20260919-v1">
   </head>
   <body class="sfc-page wwa-page gcp-page" data-page="about" data-nav-active="about" data-header-variant="home" data-root="../" data-default-language="en" data-shell-only>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -31,7 +34,7 @@
         <div class="sfc-shell gcp-hero-inner">
           <div class="wwa-copy">
             <p class="wwa-eyebrow"><span>01</span> Global Capability &amp; People</p>
-            <h1 id="global-perspective-title">Global Perspective</h1>
+            <h1 id="global-perspective-title">Global <span data-preserve-case>Per&shy;spec&shy;tive</span></h1>
             <p class="wwa-lead">Seeing opportunity through a wider lens.</p>
             <p class="wwa-body">A&amp;S works across markets, cultures, and disciplines. This global perspective helps us recognize emerging opportunities, connect diverse knowledge, and build solutions that are informed by more than one local reality.</p>
             <p class="wwa-body">By staying close to international developments while understanding regional differences, we help partners think beyond immediate needs and act with broader strategic awareness.</p>
@@ -65,21 +68,20 @@
         </div>
       </section>
 
-      <section class="wwa-section" id="multidisciplinary-team" aria-labelledby="multidisciplinary-team-title">
-        <div class="sfc-shell wwa-grid">
-          <div class="wwa-copy">
-            <p class="wwa-eyebrow"><span>03</span> Global Capability &amp; People</p>
-            <h2 id="multidisciplinary-team-title">Multi&shy;disciplinary Team</h2>
-            <p class="wwa-lead">Science, service and strategy in one integrated team.</p>
-            <p class="wwa-body">A&amp;S brings together specialists across sensory science, neuroscience, biotechnology, life science, flavor and fragrance, functional ingredients, application support and strategic development.</p>
-            <p class="wwa-body">This multidisciplinary structure allows us to approach challenges from multiple angles - scientifically, commercially and humanly.</p>
-            <ul class="gcp-tags" aria-label="Multidisciplinary Team highlights">
+      <section class="wwa-section gcp-team" id="multidisciplinary-team" aria-labelledby="multidisciplinary-team-title">
+        <div class="gcp-team-art" aria-hidden="true">
+          <img src="../assets/images/global-capability-and-people/multidisciplinary-team-meeting-sep19.jpg" width="2560" height="1200" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="gcp-team-content">
+          <div class="gcp-team-copy">
+            <h2 id="multidisciplinary-team-title"><span data-preserve-case>Multi&shy;disci&shy;plinary</span> Team</h2>
+            <p class="gcp-team-lead" data-preserve-case>Science, service and strategy in one integrated team.</p>
+            <div class="gcp-team-rule" aria-hidden="true"></div>
+            <p class="gcp-team-description">A&amp;S brings together specialists across sensory science, neuroscience, biotechnology, life science, flavor and fragrance, functional ingredients, application support and strategic development. This multidisciplinary structure allows us to approach challenges from multiple angles &mdash; scientifically, commercially and humanly.</p>
+            <ul class="gcp-team-tags" aria-label="Multidisciplinary Team highlights">
               <li>Integrated expertise across disciplines</li>
             </ul>
           </div>
-          <figure class="wwa-visual" style="--wwa-ratio:987/666;--wwa-image-width:169.402229%;--wwa-image-left:-69.402229%;--wwa-image-top:-41.291291%">
-            <img src="../assets/images/global-capability-and-people/multidisciplinary-team.png" width="1672" height="941" alt="Scientific and business specialists discussing research, botanical ingredients and product samples together." loading="lazy" decoding="async">
-          </figure>
         </div>
       </section>
 
@@ -125,7 +127,7 @@
         <div class="sfc-shell wwa-grid">
           <div class="wwa-copy">
             <p class="wwa-eyebrow"><span>05</span> Global Capability &amp; People</p>
-            <h2 id="one-company-four-cities-title">One Company, Four Cities</h2>
+            <h2 id="one-company-four-cities-title">One <span data-preserve-case>Com&shy;pany,</span> Four Cities</h2>
             <p class="wwa-lead">Taipei, Bangkok, Tokyo, Los Angeles.</p>
             <p class="wwa-body">A&amp;S operates across Taipei, Bangkok, Tokyo and Los Angeles - four dynamic markets that form the foundation of our global footprint.</p>
             <p class="wwa-body">We connect regional knowledge, scientific expertise and strategic coordination to support cross-border innovation and execution for our partners worldwide.</p>
@@ -141,23 +143,23 @@
         </div>
       </section>
 
-      <section class="wwa-section wwa-section--reverse" id="people-first" aria-labelledby="people-first-title">
-        <div class="sfc-shell wwa-grid">
-          <div class="wwa-copy">
-            <p class="wwa-eyebrow"><span>06</span> Global Capability &amp; People</p>
+      <section class="wwa-section gcp-people" id="people-first" aria-labelledby="people-first-title">
+        <div class="gcp-people-art">
+          <img src="../assets/images/global-capability-and-people/people-first-doorway-sep19.jpg" width="2560" height="1200" alt="A person stepping through a sunlit doorway beside the words: Step into what's next." loading="lazy" decoding="async">
+        </div>
+        <div class="gcp-people-content">
+          <div class="gcp-people-copy">
             <h2 id="people-first-title">People First</h2>
-            <p class="wwa-lead">Human development is part of how we grow.</p>
-            <p class="wwa-body">At A&amp;S, we value people. We treat each other with respect, encourage curiosity, and collaborate across cultures and disciplines. We invest in long-term talent development through mentorship, learning, and meaningful opportunities to grow.</p>
-            <p class="wwa-body">We believe scientific progress is strengthened when people are supported to learn, contribute, and grow together.</p>
-            <ul class="gcp-tags" aria-label="People First highlights">
+            <p class="gcp-people-lead" data-preserve-case>Human development is part of how we grow.</p>
+            <div class="gcp-people-rule" aria-hidden="true"></div>
+            <p class="gcp-people-description">At A&amp;S, we value people. We treat each other with respect, encourage curiosity, and collaborate across cultures and disciplines. We invest in long-term talent development through mentorship, learning, and meaningful opportunities to grow.</p>
+            <p class="gcp-people-description">We believe scientific progress is strengthened when people are supported to learn, contribute, and grow together.</p>
+            <ul class="gcp-people-tags" aria-label="People First highlights" data-preserve-case>
               <li>Respect</li>
-              <li>Collaboration</li>
-              <li>Growth</li>
+              <li>collaboration</li>
+              <li>growth</li>
             </ul>
           </div>
-          <figure class="wwa-visual" style="--wwa-ratio:947/941;--wwa-image-width:176.557550%;--wwa-image-left:-76.557550%;--wwa-image-top:0.000000%">
-            <img src="../assets/images/global-capability-and-people/people-first.png" width="1672" height="941" alt="A diverse team sharing ideas and learning together around a table in a collaborative workplace." loading="lazy" decoding="async">
-          </figure>
         </div>
       </section>
 
@@ -165,7 +167,7 @@
         <div class="sfc-shell wwa-grid">
           <div class="wwa-copy">
             <p class="wwa-eyebrow"><span>07</span> Global Capability &amp; People</p>
-            <h2 id="trust-ethics-responsibility-title">Trust, Ethics &amp; Responsibility</h2>
+            <h2 id="trust-ethics-responsibility-title">Trust, Ethics &amp; <span data-preserve-case>Respon&shy;si&shy;bility</span></h2>
             <p class="wwa-lead">Integrity in science. Responsibility in action.</p>
             <p class="wwa-body">At A&amp;S, trust is earned through every decision we make. We uphold the highest standards of quality, compliance and ethical conduct across our global operations.</p>
             <p class="wwa-body">By acting with transparency, accountability and respect - for people, partners and the planet - we create sustainable value that lasts.</p>

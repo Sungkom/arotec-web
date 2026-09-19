@@ -1,86 +1,504 @@
-/* This page shares the culture page's shell, palette and two-column rhythm. */
-/* Building panorama is limited to the Who We Are overview hero. */
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building {
-  --sfc-ink:#fff;
-  --sfc-ink-soft:#edf4ff;
-  --sfc-blue:#b4d4ff;
-  --sfc-line:rgba(190,214,245,.3);
-  --wwa-building-art-height:36.7578125vw;
-  background-color:#03112b;
-  background-image:linear-gradient(0deg,rgba(2,10,25,.82),rgba(2,10,25,0) 45%),url("../images/who-we-are/who-we-are-building-background-sep08.png");
-  background-size:cover;
-  background-position:right center;
-  background-repeat:no-repeat;
+/* Overview artwork and typography follow the supplied September 19 reference. */
+@font-face {
+  font-family: "WWA Roboto Condensed";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
 }
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building > .wwa-grid {
-  box-sizing:border-box;
-  min-height:max(720px,var(--wwa-building-art-height));
-  align-content:center;
+
+html body.wwa-page main#main.wwa-overview-main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building h1 {
-  color:#fff!important;
+
+html body.wwa-page #who-we-are.wwa-hero--flight {
+  --wwa-flight-unit: max(.65px, .048828125vw);
+  --wwa-flight-font: "WWA Roboto Condensed", "Arial Narrow", sans-serif;
+  --wwa-flight-accent: #cfa5e9;
+  position: relative;
+  box-sizing: border-box;
+  min-height: max(625px, 46.875vw);
+  padding: 0;
+  border: 0;
+  background: #031428 url("../images/who-we-are/who-we-are-paper-plane-sep19.jpg") center / cover no-repeat;
+  scroll-margin-top: var(--wwa-header-space, 112px);
 }
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building :is(.wwa-eyebrow,.wwa-lead) {
-  color:#b4d4ff!important;
+
+html body.wwa-page #who-we-are.wwa-hero--flight::before {
+  content: none;
 }
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building :is(.wwa-body,.wwa-capability-label) {
-  color:#edf4ff!important;
+
+#who-we-are .wwa-flight-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 80%;
+  margin-left: 19.53125%;
+  padding-block: calc(241 * var(--wwa-flight-unit)) calc(144 * var(--wwa-flight-unit));
 }
-html body.wwa-page main#main#main #who-we-are.wwa-hero--building .wwa-icon {
-  color:#b4d4ff;
-  background:rgba(4,22,47,.72);
-}
-@media(max-width:991px) {
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building {
-    background-image:linear-gradient(180deg,transparent 65%,#03112b),url("../images/who-we-are/who-we-are-building-background-sep08.png");
-    background-size:100% var(--wwa-building-art-height),100% auto;
-    background-position:center top;
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building > .wwa-grid {
-    min-height:0;
-    padding-top:calc(var(--wwa-building-art-height) + 32px);
-  }
-}
-/* Keep the overview hero within the desktop viewport below the actual header. */
-@media(min-width:992px) {
-  html body.wwa-page main#main#main.wwa-overview-main {
-    margin-top:0!important;
-    padding-top:0!important;
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building {
-    box-sizing:border-box;
-    display:flex;
-    align-items:center;
-    min-height:calc(100svh - var(--wwa-header-space,112px));
-    padding-block:clamp(16px,2.5vh,32px)!important;
-    scroll-margin-top:var(--wwa-header-space,112px);
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building > .wwa-grid {
-    min-height:0;
-    padding-block:0!important;
-    gap:clamp(16px,2.5vh,28px) 32px;
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building .wwa-copy {
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:clamp(10px,1.5vh,16px);
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building :is(.wwa-eyebrow,h1,.wwa-lead,.wwa-body,.wwa-actions) {
-    margin-block:0!important;
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building .wwa-capabilities {
-    grid-template-columns:repeat(5,minmax(0,1fr));
-    margin:0!important;
-    padding:clamp(16px,2vh,24px) 0 0!important;
-  }
-  html body.wwa-page main#main#main #who-we-are.wwa-hero--building .wwa-capabilities > li {
-    gap:10px;
-    padding-inline:12px;
+
+/* Keep artwork-specific spacing and color; headings use the shared site scale. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwa-page #who-we-are #who-we-are-title {
+    margin: 0 !important;
+    color: #fff !important;
   }
 }
 
-/* MORE matches the Synesthetic Flavor offering button; links can be added later. */
+html body.wwa-page main#main #who-we-are .wwa-flight-tagline {
+  margin: calc(8 * var(--wwa-flight-unit)) 0 0;
+  color: var(--wwa-flight-accent) !important;
+  font-family: var(--wwa-flight-font) !important;
+  font-size: calc(44 * var(--wwa-flight-unit)) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.02em;
+}
+
+#who-we-are .wwa-flight-rule {
+  width: calc(76 * var(--wwa-flight-unit));
+  height: 2px;
+  margin-top: calc(30 * var(--wwa-flight-unit));
+  background: var(--wwa-flight-accent);
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-description {
+  width: calc(450 * var(--wwa-flight-unit));
+  max-width: 100%;
+  margin: calc(32 * var(--wwa-flight-unit)) 0 0;
+  color: #c4c6cd !important;
+  font-family: var(--wwa-flight-font) !important;
+  font-size: calc(24 * var(--wwa-flight-unit)) !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0;
+}
+
+#who-we-are .wwa-flight-nav {
+  width: calc(640 * var(--wwa-flight-unit));
+  margin-top: calc(90 * var(--wwa-flight-unit));
+  margin-left: calc(-30 * var(--wwa-flight-unit));
+}
+
+#who-we-are .wwa-flight-nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#who-we-are .wwa-flight-nav li {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#who-we-are .wwa-flight-nav li + li {
+  border-left: 2px solid #bc92d6;
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(9 * var(--wwa-flight-unit));
+  padding: 0 calc(6 * var(--wwa-flight-unit));
+  color: #c4c6cd !important;
+  text-align: center;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-nav i {
+  font-size: calc(57 * var(--wwa-flight-unit)) !important;
+  line-height: 1 !important;
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-nav span {
+  font-family: var(--wwa-flight-font) !important;
+  font-size: calc(20 * var(--wwa-flight-unit)) !important;
+  font-weight: 300 !important;
+  line-height: 1.35 !important;
+  white-space: nowrap;
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-current span {
+  font-weight: 700 !important;
+}
+
+html body.wwa-page main#main #who-we-are .wwa-flight-nav a:hover,
+html body.wwa-page main#main #who-we-are .wwa-flight-nav a:focus-visible {
+  color: var(--wwa-flight-accent) !important;
+}
+
+#who-we-are .wwa-flight-nav a:focus-visible {
+  outline: 2px solid var(--wwa-flight-accent);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+/* Desktop follows the site's foreground gutters and fills only the space
+   below the header. Keep the artwork full bleed and vertically center copy. */
+@media (min-width: 992px) {
+  html body.wwa-page #who-we-are.wwa-hero--flight {
+    --wwa-flight-unit: clamp(.65px, min(.048828125vw, .105svh), 1px);
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - var(--wwa-hero-offset, 112px));
+    padding-block: clamp(20px, 3.5svh, 40px);
+  }
+  #who-we-are .wwa-flight-content {
+    width: calc(640 * var(--wwa-flight-unit));
+    max-width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+    margin-left: max(40px, var(--arotec-content-left));
+    margin-right: max(40px, var(--arotec-content-right));
+    padding-block: 0;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-tagline {
+    margin-top: 16px;
+  }
+  #who-we-are .wwa-flight-rule {
+    margin-top: 24px;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-description {
+    margin-top: 24px;
+  }
+  #who-we-are .wwa-flight-nav {
+    width: 100%;
+    margin-top: clamp(24px, 5svh, 48px);
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  html body.wwa-page #who-we-are.wwa-hero--flight {
+    --wwa-flight-unit: .75px;
+    min-height: 0;
+    background-size: auto 440px;
+    background-position: 67% top;
+  }
+  html body.wwa-page #who-we-are.wwa-hero--flight::after {
+    content: "";
+    position: absolute;
+    inset: 350px 0 auto;
+    height: 90px;
+    background: linear-gradient(transparent, #031428);
+    pointer-events: none;
+  }
+  #who-we-are .wwa-flight-content {
+    width: auto;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 355px 32px 56px;
+  }
+  #who-we-are .wwa-flight-nav {
+    width: 100%;
+    margin: 46px 0 0;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-description {
+    width: 480px;
+    font-size: 20px !important;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-nav span {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 599px) {
+  html body.wwa-page #who-we-are.wwa-hero--flight {
+    --wwa-flight-unit: .5px;
+    background-size: auto 310px;
+    background-position: 69% top;
+  }
+  html body.wwa-page #who-we-are.wwa-hero--flight::after {
+    top: 220px;
+  }
+  #who-we-are .wwa-flight-content {
+    padding: 275px 24px 42px;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-tagline {
+    font-size: clamp(23px, 6.3vw, 32px) !important;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-description {
+    width: auto;
+    margin-top: 24px;
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+  }
+  #who-we-are .wwa-flight-rule {
+    width: 52px;
+    margin-top: 24px;
+  }
+  #who-we-are .wwa-flight-nav {
+    margin-top: 36px;
+  }
+  #who-we-are .wwa-flight-nav li + li {
+    border-left-width: 1px;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-nav a {
+    gap: 9px;
+    padding-inline: 3px;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-nav i {
+    font-size: 32px !important;
+  }
+  html body.wwa-page main#main #who-we-are .wwa-flight-nav span {
+    font-size: 13px !important;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #who-we-are .wwa-flight-nav a { transition: none; }
+}
+
+/* Scientific Foundation: original chart artwork with live copy and links.
+   The desktop foreground uses the same website gutters as the overview. */
+html body.wwa-page #scientific-foundation.wwa-science {
+  --wwa-science-font: "WWA Roboto Condensed", "Arial Narrow", sans-serif;
+  --wwa-science-accent: #9b89f7;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: calc(100svh - var(--wwa-hero-offset, 112px));
+  padding: 48px 0;
+  border: 0;
+  overflow: hidden;
+  background: #02142c;
+  /* html already reserves 112px for anchor navigation. */
+  scroll-margin-top: calc(var(--wwa-hero-offset, 112px) - 112px);
+}
+
+html body.wwa-page #scientific-foundation.wwa-science::before {
+  content: none;
+}
+
+#scientific-foundation .wwa-science-content {
+  display: grid;
+  grid-template-columns: clamp(420px, 30vw, 480px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(36px, 5svh, 64px) clamp(40px, 4vw, 80px);
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
+}
+
+#scientific-foundation .wwa-science-copy,
+#scientific-foundation .wwa-science-nav {
+  position: relative;
+  z-index: 1;
+}
+
+#scientific-foundation .wwa-science-copy {
+  width: clamp(420px, 30vw, 480px);
+  max-width: 100%;
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwa-page #scientific-foundation.wwa-science #scientific-foundation-title {
+    margin: 0 !important;
+    color: #fff !important;
+  }
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-lead {
+  max-width: 390px;
+  margin: 16px 0 0;
+  color: var(--wwa-science-accent) !important;
+  font-family: var(--wwa-science-font) !important;
+  font-size: clamp(22px, 1.4vw, 28px) !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0;
+}
+
+#scientific-foundation .wwa-science-rule {
+  width: 56px;
+  height: 2px;
+  margin-top: 24px;
+  background: var(--wwa-science-accent);
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-description {
+  max-width: 410px;
+  margin: 24px 0 0;
+  color: #d1d0d9 !important;
+  font-family: var(--wwa-science-font) !important;
+  font-size: clamp(18px, 1.1vw, 22px) !important;
+  font-weight: 300 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0;
+}
+
+#scientific-foundation .wwa-science-art {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin: 0;
+}
+
+#scientific-foundation .wwa-science-chart {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 995 / 560;
+  overflow: hidden;
+}
+
+#scientific-foundation .wwa-science-art figcaption {
+  display: none;
+}
+
+#scientific-foundation .wwa-science-chart:focus-visible {
+  outline: 2px solid var(--wwa-science-accent);
+  outline-offset: 6px;
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-art img {
+  position: absolute;
+  top: -46.42857%;
+  left: -109.54774%;
+  width: 257.28643%;
+  max-width: none;
+  height: auto;
+}
+
+#scientific-foundation .wwa-science-nav {
+  grid-column: 1 / -1;
+  width: min(960px, 100%);
+  margin: 0;
+}
+
+#scientific-foundation .wwa-science-nav ul {
+  display: grid;
+  grid-template-columns: .85fr 1.2fr .85fr .85fr 1.25fr 1.1fr;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#scientific-foundation .wwa-science-nav li {
+  min-width: 0;
+  margin: 0;
+  padding: 0 20px;
+}
+
+#scientific-foundation .wwa-science-nav li:first-child { padding-left: 0; }
+#scientific-foundation .wwa-science-nav li:last-child { padding-right: 0; }
+#scientific-foundation .wwa-science-nav li + li { border-left: 1px solid #786cad; }
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d1d0d9 !important;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-nav i {
+  color: var(--wwa-science-accent);
+  font-size: 48px !important;
+  line-height: 1 !important;
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-nav span {
+  font-family: var(--wwa-science-font) !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 1.25 !important;
+}
+
+html body.wwa-page main#main #scientific-foundation .wwa-science-nav a:hover,
+html body.wwa-page main#main #scientific-foundation .wwa-science-nav a:focus-visible {
+  color: var(--wwa-science-accent) !important;
+}
+
+#scientific-foundation .wwa-science-nav a:focus-visible {
+  outline: 2px solid var(--wwa-science-accent);
+  outline-offset: 6px;
+}
+
+@media (min-width: 992px) and (max-height: 750px) {
+  html body.wwa-page #scientific-foundation.wwa-science { padding-block: 32px; }
+  #scientific-foundation .wwa-science-content { row-gap: 32px; }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #scientific-foundation .wwa-science-nav li { padding-inline: 14px; }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-nav span { font-size: 16px !important; }
+}
+
+@media (max-width: 991px) {
+  html body.wwa-page #scientific-foundation.wwa-science {
+    min-height: 0;
+    padding-block: 48px;
+  }
+  #scientific-foundation .wwa-science-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    width: calc(100% - 64px);
+    margin-inline: auto;
+  }
+  #scientific-foundation .wwa-science-copy { width: 100%; }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-description { max-width: 540px; }
+  #scientific-foundation .wwa-science-art {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 0;
+  }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-art figcaption {
+    display: block;
+    margin-top: 12px;
+    color: #c5bded;
+    font-family: var(--wwa-science-font) !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-art img {
+    top: -46.42857%;
+    left: -109.54774%;
+    width: 257.28643%;
+    height: auto;
+    object-fit: initial;
+  }
+  #scientific-foundation .wwa-science-nav { margin: 0; }
+  #scientific-foundation .wwa-science-nav ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+  #scientific-foundation .wwa-science-nav li { padding-inline: 20px; }
+  #scientific-foundation .wwa-science-nav li:nth-child(3n + 1) {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  #scientific-foundation .wwa-science-content { width: calc(100% - 48px); }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-lead { font-size: 22px !important; }
+  #scientific-foundation .wwa-science-nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #scientific-foundation .wwa-science-nav li { padding: 0 16px !important; border-left: 0; }
+  #scientific-foundation .wwa-science-nav li:nth-child(odd) { padding-left: 0 !important; border-left: 0; }
+  #scientific-foundation .wwa-science-nav li:nth-child(even) { border-left: 1px solid #786cad; }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-nav i { font-size: 40px !important; }
+  html body.wwa-page main#main #scientific-foundation .wwa-science-nav span { font-size: 16px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #scientific-foundation .wwa-science-nav a { transition: none; }
+}
+
+/* MORE matches the Synesthetic Flavor offering button. */
 .wwa-page .wwa-actions {
   display: flex;
   justify-content: flex-start;
@@ -211,12 +629,6 @@ html body.wwa-page main#main h1,
 html body.wwa-page main#main h2 {
   margin: 0 0 26px;
   color: var(--sfc-ink) !important;
-  font-family: "DM Sans", sans-serif !important;
-  font-size: 60px !important;
-  font-weight: 900 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.035em !important;
-  text-transform: uppercase;
   text-wrap: balance;
   overflow-wrap: normal;
   word-break: normal;
@@ -297,10 +709,6 @@ html body.wwa-page main#main .wwa-capability-label {
   }
 }
 @media (max-width: 1199px) {
-  html body.wwa-page main#main h1,
-  html body.wwa-page main#main h2 {
-    font-size: 44px !important;
-  }
   .wwa-page .wwa-grid {
     gap: 28px;
     padding-block: 60px 48px;
@@ -347,9 +755,6 @@ html body.wwa-page main#main .wwa-capability-label {
   html body.wwa-page main#main h1,
   html body.wwa-page main#main h2 {
     margin-bottom: 20px;
-    font-size: clamp(28px, 7.4vw, 40px) !important;
-    letter-spacing: -0.025em !important;
-    line-height: 1.12 !important;
   }
   html body.wwa-page main#main .wwa-lead {
     font-size: 21px !important;

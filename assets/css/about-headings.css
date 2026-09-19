@@ -1,0 +1,40 @@
+/* The Who We Are page family shares the main site's display-heading tokens.
+   Keep this after each page's layout stylesheet; sizes follow site-typography. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwa-page main#main .wwa-section :is(h1, h2) {
+    --arotec-title-role: display;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: var(--site-font) !important;
+    font-style: normal !important;
+    font-weight: var(--arotec-display-weight) !important;
+    font-size: var(--arotec-display-size) !important;
+    line-height: var(--arotec-display-line-height) !important;
+    letter-spacing: var(--arotec-display-letter-spacing) !important;
+    text-transform: none !important;
+    white-space: normal !important;
+    text-wrap: wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal;
+    hyphens: auto;
+    transform: none;
+  }
+
+  html body.wwa-page main#main .wwa-section :is(h1, h2) :where(span, strong, b, em, a) {
+    font-family: inherit !important;
+    font-style: normal !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: none !important;
+  }
+
+  /* Keep a complete word together when it fits; use its optional breaks on
+     narrow screens instead of splitting it to balance adjacent words. */
+  html body.wwa-page main#main .wwa-section :is(h1, h2) > span[data-preserve-case] {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}

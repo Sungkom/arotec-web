@@ -10,59 +10,96 @@ html body.sfnd-page main#main {
 html body.sfnd-page main#main #science-at-our-core {
   position: relative;
   isolation: isolate;
-  display: grid;
+  display: flex;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
   max-width: none;
   margin: 0 !important;
-  padding: clamp(24px, 4vh, 64px) 0;
-  background: #edf5fc url("../images/scientific-foundation/science-at-our-core-background-20260908.png") 70% 35% / cover no-repeat;
+  min-height: calc(100svh - var(--sfnd-hero-offset, 112px));
+  padding: 48px 0;
+  border: 0;
+  background: #020e1b url("../images/scientific-foundation/science-at-our-core-laboratory-sep19.jpg") center / cover no-repeat;
+  scroll-margin-top: 0;
 }
 html body.sfnd-page main#main #science-at-our-core::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(244, 249, 255, .97) 0%, rgba(244, 249, 255, .91) 28%, rgba(244, 249, 255, .7) 43%, rgba(244, 249, 255, 0) 66%);
+  content: none;
 }
-html body.sfnd-page main#main #science-at-our-core > .sfnd-hero-inner {
+#science-at-our-core .sfnd-core-content {
   position: relative;
   z-index: 1;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding-inline: clamp(24px, 4vw, 80px);
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
 }
-html body.sfnd-page main#main #science-at-our-core .wwa-copy {
-  position: relative;
-  z-index: 2;
-  width: min(620px, 50%);
-  min-width: 0;
+#science-at-our-core .sfnd-core-copy {
+  width: min(40%, 420px);
 }
-@media (min-width: 992px) {
-  html body.sfnd-page main#main #science-at-our-core {
-    min-height: calc(100vh - var(--sfnd-header-height, 134px));
-    min-height: calc(100svh - var(--sfnd-header-height, 134px));
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.sfnd-page main#main #science-at-our-core #science-at-our-core-title {
+    max-width: 1040px;
+    margin: 0 !important;
+    color: #fff !important;
   }
 }
+
+html body.sfnd-page main#main #science-at-our-core :is(.sfnd-core-lead, .sfnd-core-description, .sfnd-core-closing) {
+  font-family: var(--site-font) !important;
+  letter-spacing: 0;
+}
+html body.sfnd-page main#main #science-at-our-core .sfnd-core-lead {
+  margin: 24px 0 0;
+  color: #c6e2e9 !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+#science-at-our-core .sfnd-core-rule {
+  width: 40px;
+  height: 2px;
+  margin-top: 28px;
+  background: #69b3c2;
+}
+html body.sfnd-page main#main #science-at-our-core .sfnd-core-description {
+  margin: 24px 0 0;
+  color: #d1d9e1 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+html body.sfnd-page main#main #science-at-our-core .sfnd-core-closing {
+  margin: 40px 0 0;
+  color: #8cc4d2 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
 @media (max-width: 991px) {
   html body.sfnd-page main#main #science-at-our-core {
-    --sfnd-hero-image-height: clamp(240px, 45vw, 420px);
+    --sfnd-hero-image-height: clamp(320px, 50vw, 460px);
+    display: block;
     min-height: 0;
-    padding: 40px 0 calc(var(--sfnd-hero-image-height) + 32px);
-    background-color: #f4f9ff;
+    padding: calc(var(--sfnd-hero-image-height) + 32px) 0 56px;
     background-size: auto var(--sfnd-hero-image-height);
-    background-position: 80% bottom;
+    background-position: 80% top;
   }
-  html body.sfnd-page main#main #science-at-our-core::before {
-    background: linear-gradient(to bottom, #f4f9ff 0%, #f4f9ff calc(100% - var(--sfnd-hero-image-height)), rgba(244, 249, 255, 0) calc(100% - var(--sfnd-hero-image-height) + 40px));
+  #science-at-our-core .sfnd-core-content {
+    width: calc(100% - 64px);
+    margin-inline: auto;
   }
-  html body.sfnd-page main#main #science-at-our-core .wwa-copy { width: 100%; }
+  #science-at-our-core .sfnd-core-copy {
+    width: 100%;
+    max-width: 620px;
+  }
 }
+@media (max-width: 599px) {
+  #science-at-our-core .sfnd-core-content { width: calc(100% - 48px); }
+  html body.sfnd-page main#main #science-at-our-core { padding-bottom: 48px; }
+}
+
 html body.sfnd-page main#main .wwa-body + .wwa-body {
   margin-top: 20px;
 }
@@ -158,40 +195,237 @@ html body.sfnd-page main#main .sfnd-annotations dd {
   }
 }
 
-/* Sensory Science: supplied full-width silver and gold sensory illustration. */
-html body.sfnd-page main#main#main #sensory-science {
-  background-color: #eef1f5;
-  background-image:
-    linear-gradient(90deg, rgba(244, 248, 252, .82) 0%, rgba(244, 248, 252, .72) 35%, rgba(244, 248, 252, .2) 52%, rgba(244, 248, 252, 0) 68%),
-    url("../images/scientific-foundation/sensory-science-background-20260911.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-html body.sfnd-page main#main#main #sensory-science > .wwa-grid {
+/* Sensory Science: supplied five-senses artwork with live, site-standard text. */
+html body.sfnd-page main#main #sensory-science {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
-  min-height: max(720px, 36.7578125vw);
+  width: 100%;
+  max-width: none;
+  min-height: calc(100svh - var(--sfnd-header-height, 112px));
+  margin: 0 !important;
+  padding: 64px 0;
+  border: 0;
+  background: #082341;
+  scroll-margin-top: 0;
 }
-html body.sfnd-page main#main#main #sensory-science .sfnd-sensory-visual-space {
-  grid-column: 7 / 13;
-  min-width: 0;
-  min-height: 430px;
+html body.sfnd-page main#main #sensory-science::before {
+  content: none;
 }
+#sensory-science .sfnd-sensory-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+#sensory-science .sfnd-sensory-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#sensory-science .sfnd-sensory-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
+}
+#sensory-science .sfnd-sensory-copy {
+  width: min(40%, 440px);
+}
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.sfnd-page main#main #sensory-science #sensory-science-title {
+    max-width: 960px;
+    margin: 0 !important;
+    color: #fff !important;
+  }
+}
+html body.sfnd-page main#main #sensory-science :is(.sfnd-sensory-lead, .sfnd-sensory-description, .sfnd-sensory-closing) {
+  font-family: var(--site-font) !important;
+  letter-spacing: 0;
+}
+html body.sfnd-page main#main #sensory-science .sfnd-sensory-lead {
+  margin: 24px 0 0;
+  color: #b4ddf1 !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+#sensory-science .sfnd-sensory-rule {
+  width: 40px;
+  height: 2px;
+  margin-top: 28px;
+  background: #b4ddf1;
+}
+html body.sfnd-page main#main #sensory-science .sfnd-sensory-description {
+  margin: 24px 0 0;
+  color: #e0e8f0 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+html body.sfnd-page main#main #sensory-science .sfnd-sensory-closing {
+  margin: 40px 0 0;
+  color: #a6dcf5 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
 @media (max-width: 991px) {
-  html body.sfnd-page main#main#main #sensory-science {
-    --sfnd-sensory-art-height: clamp(280px, 55vw, 480px);
-    background-image:
-      linear-gradient(to bottom, #eef1f5 0%, #eef1f5 calc(100% - var(--sfnd-sensory-art-height)), rgba(238, 241, 245, 0) calc(100% - var(--sfnd-sensory-art-height) + 40px)),
-      url("../images/scientific-foundation/sensory-science-background-20260911.png");
-    background-size: 100% 100%, auto var(--sfnd-sensory-art-height);
-    background-position: center, 78% bottom;
-  }
-  html body.sfnd-page main#main#main #sensory-science > .wwa-grid {
+  html body.sfnd-page main#main #sensory-science {
+    --sfnd-sensory-art-height: clamp(320px, 50vw, 460px);
+    display: block;
     min-height: 0;
-    padding-bottom: 0;
+    padding: calc(var(--sfnd-sensory-art-height) + 32px) 0 56px;
   }
-  html body.sfnd-page main#main#main #sensory-science .sfnd-sensory-visual-space {
-    grid-column: 1;
-    min-height: var(--sfnd-sensory-art-height);
+  #sensory-science .sfnd-sensory-art {
+    bottom: auto;
+    height: var(--sfnd-sensory-art-height);
   }
+  #sensory-science .sfnd-sensory-art img {
+    object-position: 80% center;
+  }
+  #sensory-science .sfnd-sensory-art::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 56px;
+    content: "";
+    background: linear-gradient(transparent, #082341);
+  }
+  #sensory-science .sfnd-sensory-content {
+    width: calc(100% - 64px);
+    margin-inline: auto;
+  }
+  #sensory-science .sfnd-sensory-copy {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+@media (max-width: 599px) {
+  #sensory-science .sfnd-sensory-content { width: calc(100% - 48px); }
+  html body.sfnd-page main#main #sensory-science { padding-bottom: 48px; }
+}
+
+/* Biotechnology & Life Science: supplied floral heart and site-standard copy. */
+html body.sfnd-page main#main #biotechnology-and-life-science {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-height: calc(100svh - var(--sfnd-header-height, 112px));
+  margin: 0 !important;
+  padding: 48px 0;
+  border: 0;
+  background: #001c2d;
+  scroll-margin-top: 0;
+}
+html body.sfnd-page main#main #biotechnology-and-life-science::before {
+  content: none;
+}
+#biotechnology-and-life-science .sfnd-biotech-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+#biotechnology-and-life-science .sfnd-biotech-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#biotechnology-and-life-science .sfnd-biotech-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: calc(100% - max(40px, var(--arotec-content-left)) - max(40px, var(--arotec-content-right)));
+  margin-left: max(40px, var(--arotec-content-left));
+  margin-right: max(40px, var(--arotec-content-right));
+}
+#biotechnology-and-life-science .sfnd-biotech-copy {
+  width: min(42%, 460px);
+}
+#biotechnology-and-life-science h2 span {
+  display: block;
+}
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.sfnd-page main#main #biotechnology-and-life-science #biotechnology-and-life-science-title {
+    max-width: 760px;
+    margin: 0 !important;
+    color: #fff !important;
+  }
+}
+html body.sfnd-page main#main #biotechnology-and-life-science :is(.sfnd-biotech-lead, .sfnd-biotech-description, .sfnd-biotech-closing) {
+  font-family: var(--site-font) !important;
+  letter-spacing: 0;
+}
+html body.sfnd-page main#main #biotechnology-and-life-science .sfnd-biotech-lead {
+  margin: 24px 0 0;
+  color: #b7dce9 !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+#biotechnology-and-life-science .sfnd-biotech-rule {
+  width: 40px;
+  height: 2px;
+  margin-top: 28px;
+  background: #438db3;
+}
+html body.sfnd-page main#main #biotechnology-and-life-science .sfnd-biotech-description {
+  margin: 24px 0 0;
+  color: #d6e0e7 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+html body.sfnd-page main#main #biotechnology-and-life-science .sfnd-biotech-closing {
+  margin: 40px 0 0;
+  color: #c1d5df !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+@media (max-width: 991px) {
+  html body.sfnd-page main#main #biotechnology-and-life-science {
+    --sfnd-biotech-art-height: clamp(320px, 50vw, 460px);
+    display: block;
+    min-height: 0;
+    padding: calc(var(--sfnd-biotech-art-height) + 32px) 0 56px;
+  }
+  #biotechnology-and-life-science .sfnd-biotech-art {
+    bottom: auto;
+    height: var(--sfnd-biotech-art-height);
+  }
+  #biotechnology-and-life-science .sfnd-biotech-art img {
+    object-position: 80% center;
+  }
+  #biotechnology-and-life-science .sfnd-biotech-art::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 40px;
+    content: "";
+    background: linear-gradient(transparent, #001c2d);
+  }
+  #biotechnology-and-life-science .sfnd-biotech-content {
+    width: calc(100% - 64px);
+    margin-inline: auto;
+  }
+  #biotechnology-and-life-science .sfnd-biotech-copy {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+@media (max-width: 599px) {
+  #biotechnology-and-life-science .sfnd-biotech-content { width: calc(100% - 48px); }
+  html body.sfnd-page main#main #biotechnology-and-life-science { padding-bottom: 48px; }
 }

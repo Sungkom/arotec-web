@@ -12,7 +12,9 @@
     <link rel="icon" href="../assets/images/arotec-scientist-logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="preload" href="../assets/fonts/DMSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/DMSans-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/DMSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="../assets/vendor/phosphor-icons/regular/style.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
     <link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715-home-footer-cleanup">
@@ -21,10 +23,11 @@
     <link rel="stylesheet" href="../assets/css/synesthetic-flavor-cultures.css?v=20260905-comparison-site-theme-v14">
     <link rel="stylesheet" href="../assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="../assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
     <link rel="stylesheet" href="../assets/css/site-typography.css?v=20260910-typography-complete-v5"><script src="../assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
-    <link rel="stylesheet" href="../assets/css/who-we-are.css?v=20260906-more-body-v3">
+    <link rel="stylesheet" href="../assets/css/who-we-are.css?v=20260919-heading-system-v1">
     <link rel="preload" as="image" href="../assets/images/who-we-are-details/what-defines-us-laboratory-20260911.png" fetchpriority="high">
-    <link rel="stylesheet" href="../assets/css/who-we-are-details.css?v=20260911-purpose-background-v3">
+    <link rel="stylesheet" href="../assets/css/who-we-are-details.css?v=20260919-heading-system-v1">
     <title>What Defines Us | Arotec &amp; Scientist</title>
+    <link rel="stylesheet" href="../assets/css/about-headings.css?v=20260919-v1">
   </head>
   <body class="sfc-page wwa-page wwd-page" data-page="about" data-nav-active="about" data-header-variant="home" data-root="../" data-default-language="en" data-shell-only>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -130,43 +133,46 @@
         </div>
       </section>
 
-      <section class="wwa-section wwa-section--reverse" id="our-vision" aria-labelledby="our-vision-title">
-        <div class="sfc-shell wwa-grid">
-          <div class="wwa-copy">
-            <p class="wwa-eyebrow"><span>04</span> Who We Are</p>
+      <section class="wwa-section wwd-vision" id="our-vision" aria-labelledby="our-vision-title">
+        <div class="wwd-vision-content">
+          <div class="wwd-vision-copy">
             <h2 id="our-vision-title">Our Vision</h2>
-            <p class="wwa-lead">To be a trusted global partner in science-driven innovation.</p>
-            <p class="wwa-body">We envision a future where science, human experience, and responsible growth work together, improving daily life while creating value for business, society, and the planet.</p>
-
-            <p class="wwd-closing">Long-term vision connects innovation with responsibility.</p>
-
+            <p class="wwd-vision-lead" data-preserve-case>To be a trusted global partner<br>in science-driven innovation.</p>
+            <div class="wwd-vision-rule" aria-hidden="true"></div>
+            <p class="wwd-vision-description">We envision a future where science, human experience, and responsible growth work together &mdash; improving daily life while creating value for business, society, and the planet.</p>
+            <p class="wwd-vision-closing">Long-term vision connects innovation with responsibility.</p>
           </div>
-          <figure class="wwa-visual" style="--wwa-ratio:912/790;--wwa-image-width:183.33333%;--wwa-image-left:-83.33333%;--wwa-image-top:-17.72152%">
-            <img src="../assets/images/who-we-are-details/our-vision.png" width="1672" height="941" alt="A river winding through a green mountain valley toward a sunlit horizon." loading="lazy" decoding="async">
-          </figure>
         </div>
       </section>
 
-      <section class="wwa-section" id="our-values" aria-labelledby="our-values-title">
-        <div class="sfc-shell wwa-grid">
-          <div class="wwa-copy">
-            <p class="wwa-eyebrow"><span>05</span> Who We Are</p>
+      <section class="wwa-section wwd-values-section" id="our-values" aria-labelledby="our-values-title">
+        <div class="wwd-values-art" aria-hidden="true">
+          <div class="wwd-values-canvas">
+            <img src="../assets/images/who-we-are-details/our-values-ring-sep19.jpg" width="2560" height="1200" alt="" loading="lazy" decoding="async">
+            <span class="wwd-values-label wwd-values-label--science">SCIENCE-BASED</span>
+            <span class="wwd-values-label wwd-values-label--human">HUMAN-CENTERED</span>
+            <span class="wwd-values-label wwd-values-label--innovation">INNOVATIVE</span>
+            <span class="wwd-values-label wwd-values-label--collaboration">COLLABORATIVE</span>
+            <span class="wwd-values-label wwd-values-label--responsibility">RESPONSIBLE</span>
+            <span class="wwd-values-label wwd-values-label--growth">GROWING TOGETHER</span>
+          </div>
+        </div>
+        <div class="wwd-values-content">
+          <div class="wwd-values-copy">
             <h2 id="our-values-title">Our Values</h2>
-            <p class="wwa-lead">Our values guide how we think, serve, and grow.</p>
-
-            <ul class="wwd-values" aria-label="Our core values">
+            <p class="wwd-values-lead" data-preserve-case>Our values guide how we think, serve, and grow.</p>
+            <div class="wwd-values-rule" aria-hidden="true"></div>
+            <ul class="wwd-values-list" aria-label="Our core values">
               <li>Science-based</li>
               <li>Human-centered</li>
               <li>Innovative</li>
               <li>Collaborative</li>
               <li>Responsible</li>
+              <li>Growing Together</li>
             </ul>
-            <p class="wwd-closing">These principles shape every decision, partnership, and direction we take.</p>
+            <p class="wwd-values-closing">These principles shape every decision, partnership, and direction we take.</p>
             <div class="wwa-actions"><a class="wwa-more" href="./who-we-are.html" aria-label="Back to Who We Are overview">BACK TO WHO WE ARE</a></div>
           </div>
-          <figure class="wwa-visual" style="--wwa-ratio:877/700;--wwa-image-width:190.64994%;--wwa-image-left:-90.64994%;--wwa-image-top:-26.42857%">
-            <img src="../assets/images/who-we-are-details/our-values.png" width="1672" height="941" alt="A falling water droplet creating concentric ripples in deep blue water." loading="lazy" decoding="async">
-          </figure>
         </div>
       </section>
     </main>
