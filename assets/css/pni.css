@@ -1,0 +1,229 @@
+/* PNI: source illustrations and live text in the shared Arotec page shell. */
+html:has(body.pni-page) { scroll-padding-top:0; scroll-behavior:auto; }
+html body.pni-page { --pni-ink:#06164b; --pni-teal:#00687a; --pni-green:#195c2c; --pni-purple:#3d207c; --pni-line:#b4c5dc; background:#fff; }
+html body.pni-page main#main.pni-main { display:block!important; width:100%!important; max-width:none!important; margin:0!important; padding:calc(var(--detail-header-space,112px) + 30px) 0 0!important; color:var(--pni-ink); background:#fff; font-family:var(--site-font,"DM Sans",sans-serif)!important; }
+html body.pni-page main#main *,html body.pni-page main#main *::before,html body.pni-page main#main *::after { box-sizing:border-box; min-width:0; }
+html body.pni-page main#main :is(h1,h2,h3,h4,p,figure,ul,ol) { margin:0!important; padding:0; }
+html body.pni-page main#main :is(h1,h2,h3,h4,p,li,span,strong,a) { font-family:var(--site-font,"DM Sans",sans-serif)!important; color:inherit; text-transform:none!important; }
+html body.pni-page main#main :is(h1,h2,h3,h4) { font-weight:700!important; letter-spacing:-.025em!important; max-width:none!important; }
+html body.pni-page main#main :is(ul,ol) { list-style:none; }
+html body.pni-page main#main p { font-size:clamp(16px,1.4cqw,21px)!important; line-height:1.5!important; font-weight:400!important; text-wrap:pretty; }
+html body.pni-page main#main img { display:block; width:100%; height:auto; object-fit:contain; max-width:100%; border-radius:0; mix-blend-mode:multiply; }
+html body.pni-page main#main .pni-sheet { width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px)); max-width:1672px; margin:0 auto 84px; padding:16px 0 0; container-type:inline-size; content-visibility:visible; contain:none; scroll-margin-top:calc(var(--detail-header-space,112px) + 24px); }
+html body.pni-page main#main .pni-sheet::before,html body.pni-page main#main .pni-sheet::after { content:none!important; }
+html body.pni-page main#main .pni-heading { display:grid; grid-template-columns:auto minmax(0,1fr); gap:30px; align-items:start; }
+html body.pni-page main#main .pni-number { display:grid; place-items:center; width:9.2cqw; max-width:138px; min-width:76px; height:8.4cqw; max-height:128px; min-height:70px; background:var(--pni-ink); color:#fff; border-radius:18px; font-size:clamp(42px,6cqw,86px); font-weight:700; line-height:1; }
+html body.pni-page main#main .pni-heading :is(h1,h2) { font-size:clamp(32px,4.05cqw,60px)!important; line-height:1.15!important; text-wrap:balance; margin:0 0 14px!important; }
+html body.pni-page main#main .pni-heading h1 { --arotec-display-size:clamp(32px,3.6cqw,54px); --arotec-display-line-height:1.16; --arotec-display-letter-spacing:-.025em; font-size:clamp(32px,3.6cqw,54px)!important; line-height:1.16!important; }
+html body.pni-page main#main .pni-heading .pni-subtitle { color:var(--pni-teal); font-size:clamp(20px,2cqw,29px)!important; line-height:1.4!important; font-weight:500!important; }
+html body.pni-page main#main .pni-divider { height:20px; margin:20px auto 16px; }
+html body.pni-page main#main .pni-intro { width:min(100%,1030px); margin:0 auto 24px!important; text-align:center; font-size:clamp(19px,1.9cqw,27px)!important; font-weight:500!important; }
+html body.pni-page main#main .pni-features { display:flex; flex-direction:column; gap:24px; }
+html body.pni-page main#main .pni-feature { display:flex; align-items:flex-start; gap:24px; }
+html body.pni-page main#main .pni-feature>img { flex:0 0 8cqw; width:8cqw; height:8.5cqw; }
+html body.pni-page main#main .pni-feature-copy { flex:1; padding-top:8px; }
+html body.pni-page main#main .pni-feature :is(h2,h3) { font-size:clamp(19px,1.85cqw,27px)!important; line-height:1.3!important; margin:0 0 8px!important; text-wrap:balance; }
+html body.pni-page main#main .pni-callout { display:flex; align-items:center; gap:30px; padding:20px 28px; margin:28px auto 0; border:1.5px solid var(--pni-ink); border-radius:18px; background:#f8fbfe; }
+html body.pni-page main#main .pni-callout>img { width:7.3cqw; height:7.3cqw; flex:0 0 7.3cqw; max-height:112px; }
+html body.pni-page main#main .pni-callout p { flex:1; font-size:clamp(19px,2cqw,29px)!important; line-height:1.5!important; }
+html body.pni-page main#main .pni-callout strong { font-weight:700; }
+html body.pni-page main#main .pni-callout .pni-callout-copy { flex:1; border-left:1px solid #729aad; padding-left:28px; }
+html body.pni-page main#main .pni-callout-emphasis { color:var(--pni-teal); font-weight:600; }
+html body.pni-page main#main .pni-overview-grid { display:grid; grid-template-columns:32% 66%; gap:2%; align-items:start; }
+html body.pni-page main#main .pni-overview .pni-features { border-right:1px solid #afbdd4; padding-right:28px!important; gap:14px; }
+html body.pni-page main#main .pni-overview .pni-feature { border-bottom:1px solid #afbdd4; padding-bottom:14px; gap:22px; }
+html body.pni-page main#main .pni-overview .pni-feature:last-child { border:0; padding-bottom:0; }
+html body.pni-page main#main .pni-overview .pni-feature>img { width:9cqw; height:9.3cqw; flex-basis:9cqw; }
+html body.pni-page main#main .pni-overview .pni-feature :is(h2,h3) { font-size:clamp(19px,1.7cqw,25px)!important; }
+html body.pni-page main#main .pni-overview-diagram { position:relative; aspect-ratio:860 / 600; }
+html body.pni-page main#main .pni-overview-visual { position:absolute; left:0; top:0; width:72%; }
+html body.pni-page main#main .pni-overview-art { width:100%; }
+html body.pni-page main#main .pni-network-center { position:absolute; left:34.5%; top:44.2%; width:30%; height:36%; display:grid; place-items:center; text-align:center; font-size:clamp(15px,1.42cqw,21px); line-height:1.3; font-weight:700; }
+html body.pni-page main#main .pni-network-node { position:absolute; text-align:center; }
+html body.pni-page main#main .pni-network-node>img { display:none; }
+html body.pni-page main#main .pni-network-node :is(h2,h3) { font-size:clamp(18px,1.65cqw,24px)!important; line-height:1.3!important; margin-bottom:8px!important; }
+html body.pni-page main#main .pni-network-node p { font-size:clamp(16px,1.2cqw,18px)!important; }
+html body.pni-page main#main .pni-network-node--brain { left:49%; top:6%; width:38%; }
+html body.pni-page main#main .pni-network-node--endocrine { left:0; top:79%; width:38%; color:var(--pni-teal); }
+html body.pni-page main#main .pni-network-node--immune { left:47%; top:79%; width:38%; color:var(--pni-green); }
+html body.pni-page main#main .pni-overview .pni-callout { padding-left:8%; }
+html body.pni-page main#main .pni-inputs-layout { display:grid; grid-template-columns:64% 30%; gap:6%; position:relative; }
+html body.pni-page main#main .pni-inputs .pni-heading { gap:24px; }
+html body.pni-page main#main .pni-inputs .pni-heading h2 { font-size:clamp(33px,4cqw,58px)!important; }
+html body.pni-page main#main .pni-inputs .pni-heading .pni-subtitle { font-size:clamp(19px,1.7cqw,25px)!important; }
+html body.pni-page main#main .pni-inputs .pni-heading-copy { border-bottom:2px solid #18a0b2; padding-bottom:20px; }
+html body.pni-page main#main .pni-input-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; padding:20px 24px!important; margin-top:30px!important; border:1.5px solid #aebbd0; border-radius:20px; }
+html body.pni-page main#main .pni-input-grid .pni-feature { padding:20px 12px; gap:20px; border-bottom:1px solid #c0c9db; }
+html body.pni-page main#main .pni-input-grid .pni-feature:nth-child(2n) { border-left:1px solid #c0c9db; padding-left:22px; }
+html body.pni-page main#main .pni-input-grid .pni-feature:nth-last-child(-n+2) { border-bottom:0; }
+html body.pni-page main#main .pni-input-grid .pni-feature>img { flex-basis:8.2cqw; width:8.2cqw; height:9cqw; }
+html body.pni-page main#main .pni-input-grid .pni-feature :is(h2,h3) { font-size:clamp(19px,1.7cqw,25px)!important; }
+html body.pni-page main#main .pni-input-grid .pni-feature p { font-size:clamp(16px,1.35cqw,20px)!important; }
+html body.pni-page main#main .pni-inputs .pni-callout { border-color:#8caedf; padding:18px 24px; gap:22px; }
+html body.pni-page main#main .pni-inputs .pni-callout p { font-size:clamp(18px,1.7cqw,25px)!important; font-weight:600!important; }
+html body.pni-page main#main .pni-response-path { position:relative; text-align:center; padding-top:9cqw; }
+html body.pni-page main#main .pni-response-path h3 { font-size:clamp(23px,2.2cqw,32px)!important; line-height:1.3!important; margin-bottom:14px!important; }
+html body.pni-page main#main .pni-response-path p { max-width:330px; margin:14px auto 0!important; font-size:clamp(18px,1.6cqw,23px)!important; }
+html body.pni-page main#main .pni-response-brain { height:12cqw; max-height:195px; }
+html body.pni-page main#main .pni-response-immune { height:17cqw; max-height:265px; }
+html body.pni-page main#main .pni-response-down { height:8.5cqw; max-height:125px; margin:20px auto; }
+html body.pni-page main#main .pni-response-arrow { position:absolute; left:-5cqw; top:46%; width:5cqw; height:8cqw; }
+html body.pni-page main#main .pni-integration .pni-heading h2 { font-size:clamp(28px,3.1cqw,46px)!important; }
+html body.pni-page main#main .pni-triptych { display:grid; grid-template-columns:28% 42% 28%; gap:1%; align-items:center; margin-top:36px; }
+html body.pni-page main#main .pni-triptych .pni-features { gap:22px; align-self:stretch; justify-content:space-between; }
+html body.pni-page main#main .pni-triptych .pni-feature { gap:20px; }
+html body.pni-page main#main .pni-triptych .pni-feature :is(h2,h3) { font-size:clamp(19px,1.7cqw,25px)!important; }
+html body.pni-page main#main .pni-triptych-art img { height:49cqw; }
+html body.pni-page main#main .pni-integration .pni-callout { width:65%; border-color:var(--pni-teal); }
+html body.pni-page main#main .pni-integration .pni-callout p { font-size:clamp(19px,1.75cqw,26px)!important; font-weight:600!important; }
+html body.pni-page main#main .pni-radial { position:relative; aspect-ratio:1380 / 675; margin:18px auto 30px; }
+html body.pni-page main#main .pni-radial-art { position:absolute; left:17%; top:0; width:66%; height:96%; }
+html body.pni-page main#main .pni-radial-art img { height:100%; }
+html body.pni-page main#main .pni-radial-points { display:contents; }
+html body.pni-page main#main .pni-radial-point { position:absolute; width:20%; }
+html body.pni-page main#main .pni-radial-point>img { display:none; }
+html body.pni-page main#main .pni-radial-point h3 { font-size:clamp(20px,2cqw,29px)!important; line-height:1.3!important; margin-bottom:8px!important; text-wrap:balance; }
+html body.pni-page main#main .pni-radial-point p { font-size:clamp(17px,1.5cqw,22px)!important; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(1) { left:0; top:0; text-align:right; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(2) { left:0; top:39%; width:15%; text-align:right; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(3) { left:3%; top:72%; width:17%; text-align:right; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(4) { left:80%; top:0; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(5) { left:85%; top:39%; width:15%; }
+html body.pni-page main#main .pni-immune .pni-radial-point:nth-child(6) { left:80%; top:72%; }
+html body.pni-page main#main .pni-immune .pni-callout { width:88%; background:#f5faf9; border-color:var(--pni-teal); }
+html body.pni-page main#main .pni-immune .pni-callout p { font-size:clamp(20px,2.2cqw,32px)!important; }
+html body.pni-page main#main .pni-immune .pni-callout>img:last-child { border-left:1px solid #498596; padding-left:24px; box-sizing:content-box; }
+html body.pni-page main#main .pni-feedback .pni-heading h2 { font-size:clamp(31px,3.5cqw,52px)!important; }
+html body.pni-page main#main .pni-feedback .pni-radial { width:88%; aspect-ratio:1200 / 735; margin-top:26px; margin-bottom:40px; }
+html body.pni-page main#main .pni-feedback .pni-radial-art { left:16%; width:65%; height:97%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point h3 { font-size:clamp(20px,1.85cqw,27px)!important; }
+html body.pni-page main#main .pni-feedback .pni-radial-point p { font-size:clamp(17px,1.4cqw,21px)!important; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(1) { left:57%; top:3%; width:25%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(2) { left:84%; top:25%; width:16%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(3) { left:82%; top:64%; width:18%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(4) { left:57%; top:83%; width:24%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(5) { left:0; top:64%; width:17%; }
+html body.pni-page main#main .pni-feedback .pni-radial-point:nth-child(6) { left:0; top:23%; width:17%; }
+html body.pni-page main#main .pni-feedback .pni-callout { width:80%; padding-left:10%; }
+html body.pni-page main#main .pni-cycle .pni-heading h2 { font-size:clamp(34px,4.3cqw,64px)!important; }
+html body.pni-page main#main .pni-cycle-stages { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:34px; margin-top:48px!important; }
+html body.pni-page main#main .pni-cycle-stage { position:relative; --pni-accent:#322078; border:1px solid var(--pni-accent); border-radius:18px; padding:36px 20px 22px; text-align:center; display:flex; flex-direction:column; }
+html body.pni-page main#main .pni-cycle-stage:nth-child(2) { --pni-accent:#087398; }
+html body.pni-page main#main .pni-cycle-stage:nth-child(3) { --pni-accent:var(--pni-green); }
+html body.pni-page main#main .pni-cycle-stage:nth-child(4) { --pni-accent:var(--pni-purple); }
+html body.pni-page main#main .pni-cycle-stage:nth-child(5) { --pni-accent:var(--pni-ink); }
+html body.pni-page main#main .pni-step-number { position:absolute; left:50%; top:0; transform:translate(-50%,-40%); border:3px solid white; border-radius:12px; background:var(--pni-accent); color:#fff; font-size:34px; line-height:1; font-weight:700; padding:8px 14px; }
+html body.pni-page main#main .pni-cycle-icon { height:12cqw; max-height:190px; margin-bottom:18px; }
+html body.pni-page main#main .pni-cycle-stage h3 { min-height:94px; color:var(--pni-accent); font-size:clamp(18px,1.65cqw,24px)!important; line-height:1.3!important; margin-bottom:14px!important; text-wrap:balance; }
+html body.pni-page main#main .pni-cycle-stage>p { font-size:clamp(16px,1.16cqw,18px)!important; line-height:1.5!important; flex:1; }
+html body.pni-page main#main .pni-cycle-stage ul { border-top:1.5px solid var(--pni-accent); margin-top:20px!important; padding-top:14px!important; text-align:left; }
+html body.pni-page main#main .pni-cycle-stage li { font-size:clamp(16px,1.13cqw,17px); line-height:1.55; padding-left:15px; position:relative; margin-bottom:4px; }
+html body.pni-page main#main .pni-cycle-stage li::before { content:""; position:absolute; left:0; top:.65em; width:6px; height:6px; border-radius:50%; background:var(--pni-accent); }
+html body.pni-page main#main .pni-cycle-stage>.pni-flow-arrow { position:absolute; left:calc(100% + 1px); top:24%; width:33px; height:35px; }
+html body.pni-page main#main .pni-principles { position:relative; margin-top:40px; padding:32px 20px 24px; border:1px solid #474590; border-radius:18px; }
+html body.pni-page main#main .pni-principles>h3 { width:max-content; max-width:90%!important; margin:-48px auto 20px!important; padding:0 16px; background:#fff; text-align:center; font-size:clamp(23px,2.4cqw,34px)!important; line-height:1.25!important; }
+html body.pni-page main#main .pni-principle-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); text-align:center; }
+html body.pni-page main#main .pni-principle-grid li { padding:0 24px; border-right:1px solid #9eaad2; }
+html body.pni-page main#main .pni-principle-grid li:last-child { border:0; }
+html body.pni-page main#main .pni-principle-grid img { height:7cqw; max-height:115px; margin:0 auto 12px; }
+html body.pni-page main#main .pni-principle-grid h4 { font-size:clamp(18px,1.55cqw,23px)!important; line-height:1.35!important; min-height:64px; margin-bottom:12px!important; text-wrap:balance; }
+html body.pni-page main#main .pni-principle-grid li:nth-child(2) h4 { color:var(--pni-teal); }
+html body.pni-page main#main .pni-principle-grid li:nth-child(3) h4 { color:var(--pni-green); }
+html body.pni-page main#main .pni-principle-grid li:nth-child(4) h4 { color:var(--pni-purple); }
+html body.pni-page main#main .pni-principle-grid p { font-size:clamp(16px,1.15cqw,18px)!important; }
+html body.pni-page main#main .pni-footnote { display:flex; justify-content:center; align-items:center; gap:12px; background:#eaf0fa; border-radius:10px; margin-top:18px; padding:12px 20px; text-align:center; }
+html body.pni-page main#main .pni-footnote p { font-size:clamp(16px,1.5cqw,22px)!important; }
+html body.pni-page main#main .pni-footnote i { font-size:24px; }
+html body.pni-page main#main .pni-return { width:calc(100% - 300px); margin:0 auto 70px; }
+html body.pni-page main#main .pni-return a { color:var(--pni-teal); font-size:16px; text-decoration:none; border-bottom:1px solid #8babbe; }
+html body.pni-page main#main a:focus-visible { outline:3px solid var(--pni-teal); outline-offset:6px; }
+@media(max-width:1600px) {
+ html body.pni-page main#main .pni-radial,html body.pni-page main#main .pni-feedback .pni-radial { width:100%; aspect-ratio:auto; margin-bottom:30px; }
+ html body.pni-page main#main .pni-radial-art,html body.pni-page main#main .pni-feedback .pni-radial-art { position:static; width:min(80%,740px); height:auto; margin:0 auto 30px!important; }
+ html body.pni-page main#main .pni-radial-points { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+ html body.pni-page main#main .pni-radial .pni-radial-point { position:static; width:auto!important; display:flex; gap:18px; text-align:left!important; }
+ html body.pni-page main#main .pni-radial-point>div { flex:1; }
+ html body.pni-page main#main .pni-radial-point>img { display:block; width:78px; height:82px; flex:0 0 78px; }
+ html body.pni-page main#main .pni-cycle-stages { grid-template-columns:repeat(3,minmax(0,1fr)); gap:42px 28px; }
+ html body.pni-page main#main .pni-cycle-stage>.pni-flow-arrow { display:none; }
+ html body.pni-page main#main .pni-cycle-stage h3 { min-height:72px; }
+ html body.pni-page main#main .pni-principle-grid li { padding:0 15px; }
+}
+@media(max-width:1340px) {
+ html body.pni-page main#main .pni-sheet { margin-bottom:64px; }
+ html body.pni-page main#main .pni-heading { gap:24px; }
+ html body.pni-page main#main .pni-overview-grid { grid-template-columns:1fr; gap:32px; }
+ html body.pni-page main#main .pni-overview .pni-features { display:grid; grid-template-columns:1fr 1fr; border:0; padding:0!important; gap:26px; }
+ html body.pni-page main#main .pni-overview .pni-feature { border:0; }
+ html body.pni-page main#main .pni-overview .pni-feature>img { width:85px; height:90px; flex-basis:85px; }
+ html body.pni-page main#main .pni-overview-diagram { width:min(100%,920px); margin:auto; }
+ html body.pni-page main#main .pni-inputs-layout { grid-template-columns:1fr; }
+ html body.pni-page main#main .pni-inputs .pni-heading h2 { max-width:840px!important; }
+ html body.pni-page main#main .pni-input-grid .pni-feature>img { width:100px; height:110px; flex-basis:100px; }
+ html body.pni-page main#main .pni-response-path { padding-top:32px; display:grid; grid-template-columns:1fr 1fr; gap:50px; }
+ html body.pni-page main#main .pni-response-brain,html body.pni-page main#main .pni-response-immune { height:200px; }
+ html body.pni-page main#main .pni-response-down,html body.pni-page main#main .pni-response-arrow { display:none; }
+ html body.pni-page main#main .pni-triptych { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.pni-page main#main .pni-triptych-art { grid-column:1 / -1; grid-row:1; width:min(72%,620px); margin:0 auto 16px!important; }
+ html body.pni-page main#main .pni-triptych-art img { height:auto; }
+ html body.pni-page main#main .pni-triptych .pni-features { justify-content:flex-start; gap:28px; }
+ html body.pni-page main#main .pni-feature>img { width:72px; height:78px; flex-basis:72px; }
+ html body.pni-page main#main .pni-callout,html body.pni-page main#main .pni-integration .pni-callout,html body.pni-page main#main .pni-immune .pni-callout,html body.pni-page main#main .pni-feedback .pni-callout { width:100%; padding:20px 24px; }
+ html body.pni-page main#main .pni-principle-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 0; }
+ html body.pni-page main#main .pni-principle-grid li:nth-child(3) { border:0; }
+ html body.pni-page main#main .pni-principle-grid img { height:90px; }
+}
+@media(max-width:1199px) {
+ html body.pni-page main#main .pni-sheet,html body.pni-page main#main .pni-return { width:calc(100% - 48px); }
+}
+@media(max-width:1000px) {
+ html body.pni-page main#main .pni-cycle-stages { grid-template-columns:1fr 1fr; }
+ html body.pni-page main#main .pni-cycle-icon { height:160px; }
+}
+@media(max-width:760px) {
+ html body.pni-page main#main.pni-main { padding-top:calc(var(--detail-header-space,80px) + 22px)!important; }
+ html body.pni-page main#main .pni-sheet { padding-top:12px; margin-bottom:54px; }
+ html body.pni-page main#main .pni-heading { grid-template-columns:1fr; gap:18px; }
+ html body.pni-page main#main .pni-number { width:62px; min-width:0; height:58px; min-height:0; border-radius:12px; font-size:36px; }
+ html body.pni-page main#main .pni-heading :is(h1,h2),html body.pni-page main#main .pni-inputs .pni-heading h2,html body.pni-page main#main .pni-integration .pni-heading h2,html body.pni-page main#main .pni-feedback .pni-heading h2,html body.pni-page main#main .pni-cycle .pni-heading h2 { --arotec-display-size:30px; font-size:30px!important; line-height:1.2!important; overflow-wrap:break-word; }
+ html body.pni-page main#main .pni-heading .pni-subtitle { font-size:20px!important; line-height:1.5!important; }
+ html body.pni-page main#main .pni-intro { font-size:18px!important; text-align:left; }
+ html body.pni-page main#main .pni-overview .pni-features,html body.pni-page main#main .pni-input-grid,html body.pni-page main#main .pni-triptych,html body.pni-page main#main .pni-radial-points,html body.pni-page main#main .pni-cycle-stages,html body.pni-page main#main .pni-response-path { grid-template-columns:1fr; }
+ html body.pni-page main#main .pni-feature { gap:16px; }
+ html body.pni-page main#main .pni-feature>img,html body.pni-page main#main .pni-overview .pni-feature>img { width:66px; height:72px; flex-basis:66px; }
+ html body.pni-page main#main .pni-feature-copy { padding-top:0; }
+ html body.pni-page main#main .pni-feature :is(h2,h3),html body.pni-page main#main .pni-overview .pni-feature :is(h2,h3) { font-size:20px!important; }
+ html body.pni-page main#main .pni-overview-diagram { aspect-ratio:auto; }
+ html body.pni-page main#main .pni-overview-visual { position:relative; width:100%; margin:0 auto!important; }
+ html body.pni-page main#main .pni-network-center { font-size:13px; }
+ html body.pni-page main#main .pni-network-nodes { display:grid; gap:22px; margin-top:26px; }
+ html body.pni-page main#main .pni-network-node { position:static; width:auto; display:flex; gap:16px; text-align:left; }
+ html body.pni-page main#main .pni-network-node>img { display:block; width:68px; height:72px; flex:0 0 68px; }
+ html body.pni-page main#main .pni-network-node :is(h2,h3) { font-size:18px!important; }
+ html body.pni-page main#main .pni-callout { gap:16px; align-items:flex-start; }
+ html body.pni-page main#main .pni-callout>img { width:48px; height:54px; flex-basis:48px; }
+ html body.pni-page main#main .pni-callout p,html body.pni-page main#main .pni-integration .pni-callout p,html body.pni-page main#main .pni-immune .pni-callout p,html body.pni-page main#main .pni-inputs .pni-callout p { font-size:17px!important; }
+ html body.pni-page main#main .pni-callout .pni-callout-copy { border:0; padding:0; }
+ html body.pni-page main#main .pni-input-grid { padding:10px 18px!important; }
+ html body.pni-page main#main .pni-input-grid .pni-feature,html body.pni-page main#main .pni-input-grid .pni-feature:nth-child(2n) { padding:20px 0; border-left:0; border-bottom:1px solid #c0c9db; gap:16px; }
+ html body.pni-page main#main .pni-input-grid .pni-feature:last-child { border-bottom:0; }
+ html body.pni-page main#main .pni-input-grid .pni-feature>img { width:68px; height:78px; flex-basis:68px; }
+ html body.pni-page main#main .pni-response-path { gap:36px; }
+ html body.pni-page main#main .pni-response-path h3 { font-size:25px!important; }
+ html body.pni-page main#main .pni-response-path p { font-size:18px!important; }
+ html body.pni-page main#main .pni-triptych-art { width:100%; }
+ html body.pni-page main#main .pni-radial-art,html body.pni-page main#main .pni-feedback .pni-radial-art { width:100%; }
+ html body.pni-page main#main .pni-radial-point>img { width:64px; height:70px; flex-basis:64px; }
+ html body.pni-page main#main .pni-radial-point h3,html body.pni-page main#main .pni-feedback .pni-radial-point h3 { font-size:20px!important; }
+ html body.pni-page main#main .pni-radial-point p,html body.pni-page main#main .pni-feedback .pni-radial-point p { font-size:16px!important; }
+ html body.pni-page main#main .pni-immune .pni-callout>img:last-child { display:none; }
+ html body.pni-page main#main .pni-cycle-stage { padding:38px 22px 22px; }
+ html body.pni-page main#main .pni-cycle-icon { height:180px; }
+ html body.pni-page main#main .pni-cycle-stage h3 { min-height:0; font-size:22px!important; }
+ html body.pni-page main#main .pni-principles { padding:32px 16px 24px; }
+ html body.pni-page main#main .pni-principles>h3 { font-size:20px!important; padding:0 12px; }
+ html body.pni-page main#main .pni-principle-grid { grid-template-columns:1fr; }
+ html body.pni-page main#main .pni-principle-grid li { border-right:0; border-bottom:1px solid #c0c9db; padding:0 4px 24px; }
+ html body.pni-page main#main .pni-principle-grid h4 { min-height:0; font-size:21px!important; }
+ html body.pni-page main#main .pni-principle-grid p { font-size:16px!important; }
+}

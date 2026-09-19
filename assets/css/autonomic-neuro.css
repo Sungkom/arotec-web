@@ -1,0 +1,224 @@
+/* Source illustrations and selectable copy share the website's content gutters. */
+html:has(body.an-page) { scroll-padding-top:0; scroll-behavior:auto; }
+html body.an-page { --an-ink:#061638; --an-teal:#00586c; --an-green:#3d701a; --an-orange:#bd5a00; --an-line:#bdd2e3; background:#fff; }
+html body.an-page main#main.an-main { display:block!important; width:100%!important; max-width:none!important; margin:0!important; padding:calc(var(--detail-header-space,112px) + 34px) 0 0!important; background:#fff; color:var(--an-ink); font-family:var(--site-font,"DM Sans",sans-serif)!important; }
+html body.an-page main#main *,html body.an-page main#main *::before,html body.an-page main#main *::after { box-sizing:border-box; min-width:0; }
+html body.an-page main#main :is(h1,h2,h3,p,figure,ul,ol) { margin:0!important; padding:0; }
+html body.an-page main#main :is(h1,h2,h3,p,li,span,a) { font-family:var(--site-font,"DM Sans",sans-serif)!important; color:inherit; text-transform:none!important; }
+html body.an-page main#main :is(h1,h2,h3) { font-weight:700!important; letter-spacing:-.025em!important; }
+html body.an-page main#main .an-heading :is(h1,h2) { max-width:none!important; width:100%; }
+html body.an-page main#main p { font-size:clamp(16px,1.4cqw,20px)!important; line-height:1.5!important; font-weight:400!important; text-wrap:pretty; }
+html body.an-page main#main :is(ul,ol) { list-style:none; }
+html body.an-page main#main img { display:block; width:100%; height:auto; object-fit:contain; max-width:100%; border-radius:0; mix-blend-mode:multiply; }
+html body.an-page main#main .an-section { width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px)); max-width:1672px; margin:0 auto 100px; padding:0; container-type:inline-size; scroll-margin-top:calc(var(--detail-header-space,112px) + 24px); content-visibility:visible; contain:none; }
+html body.an-page main#main .an-section::before,html body.an-page main#main .an-section::after { content:none!important; background:none!important; }
+html body.an-page main#main .an-section-label { display:flex; align-items:center; gap:28px; color:var(--an-teal); font-size:clamp(17px,1.65cqw,24px); font-weight:700; line-height:1.3; }
+html body.an-page main#main .an-number { display:grid; place-items:center; flex:0 0 4.8cqw; width:4.8cqw; min-width:54px; height:4.2cqw; min-height:50px; border-radius:6px; background:var(--an-ink); color:#fff; font-size:clamp(28px,2.8cqw,40px); line-height:1; }
+html body.an-page main#main .an-heading h1 { --arotec-display-size:clamp(34px,4.4cqw,64px); --arotec-display-line-height:1.12; --arotec-display-letter-spacing:-.025em; }
+html body.an-page main#main .an-heading :is(h1,h2) { font-size:clamp(34px,4.4cqw,64px)!important; line-height:1.12!important; margin:32px 0 18px!important; text-wrap:balance; }
+html body.an-page main#main .an-heading .an-subtitle { font-size:clamp(20px,2cqw,29px)!important; line-height:1.4!important; font-weight:500!important; color:var(--an-teal); }
+html body.an-page main#main .an-heading::after { content:""; display:block; width:26cqw; max-width:360px; height:1px; background:var(--an-teal); margin:28px 0 30px; }
+html body.an-page main#main .an-top-grid { display:grid; grid-template-columns:60% 40%; align-items:start; }
+html body.an-page main#main .an-top-art { display:flex; align-items:center; justify-content:center; }
+html body.an-page main#main .an-top-art img { height:37cqw; max-height:610px; object-position:top; }
+html body.an-page main#main .an-hero-description { max-width:750px; font-size:clamp(18px,1.75cqw,25px)!important; line-height:1.5!important; padding-right:6%; }
+html body.an-page main#main .an-feature-grid { display:grid; }
+html body.an-page main#main .an-feature h3 { font-size:clamp(18px,1.65cqw,24px)!important; line-height:1.28!important; margin-bottom:12px!important; text-wrap:balance; }
+html body.an-page main#main .an-feature h3::after { content:""; display:block; width:48px; height:2px; background:var(--an-accent,var(--an-teal)); margin-top:14px; }
+html body.an-page main#main .an-feature--green { --an-accent:var(--an-green); }
+html body.an-page main#main .an-feature--teal { --an-accent:var(--an-teal); }
+html body.an-page main#main .an-feature--orange { --an-accent:var(--an-orange); }
+html body.an-page main#main .an-hero-features { grid-template-columns:repeat(4,minmax(0,1fr)); margin:24px 0 30px!important; }
+html body.an-page main#main .an-hero-features .an-feature { text-align:center; padding:0 24px 10px; border-right:1px solid var(--an-line); }
+html body.an-page main#main .an-hero-features .an-feature:first-child { padding-left:0; }
+html body.an-page main#main .an-hero-features .an-feature:last-child { border:0; padding-right:0; }
+html body.an-page main#main .an-hero-features img { height:10cqw; max-height:150px; margin:0 auto 18px; }
+html body.an-page main#main .an-hero-features h3 { min-height:3.1em; }
+html body.an-page main#main .an-hero-features h3::after { margin:14px auto 0; }
+html body.an-page main#main .an-callout { display:flex; align-items:center; gap:24px; padding:20px 24px; border:1px solid #a3c1d9; border-radius:13px; margin-top:30px; background:#fafcfe; }
+html body.an-page main#main .an-callout>img { flex:0 0 5cqw; width:5cqw; height:6.3cqw; min-width:48px; max-height:95px; }
+html body.an-page main#main .an-callout h3 { flex:0 0 auto; max-width:29%; font-size:clamp(18px,1.7cqw,24px)!important; line-height:1.3!important; color:var(--an-teal); }
+html body.an-page main#main .an-callout-copy { flex:1; }
+html body.an-page main#main .an-callout h3+.an-callout-copy { border-left:1px solid #8daec7; padding-left:24px; }
+html body.an-page main#main .an-callout p { font-size:clamp(16px,1.45cqw,22px)!important; }
+html body.an-page main#main .an-callout .an-footnote { flex:0 0 auto; max-width:22%; font-size:clamp(13px,1.05cqw,16px)!important; }
+html body.an-page main#main .an-hero .an-callout p { font-size:clamp(15px,1.2cqw,18px)!important; }
+html body.an-page main#main .an-ans .an-top-grid { grid-template-columns:60% 40%; }
+html body.an-page main#main .an-ans .an-top-art img { height:32cqw; }
+html body.an-page main#main .an-branches { display:grid; grid-template-columns:44% 12% 44%; align-items:center; margin-top:20px; }
+html body.an-page main#main .an-branch { border:1px solid var(--an-teal); border-radius:18px; padding:24px 28px; }
+html body.an-page main#main .an-branch--parasympathetic { border-color:var(--an-green); }
+html body.an-page main#main .an-branch-heading { display:flex; gap:25px; align-items:center; margin-bottom:20px; }
+html body.an-page main#main .an-branch-heading img { flex:0 0 6.2cqw; width:6.2cqw; height:6.2cqw; }
+html body.an-page main#main .an-branch-heading h3 { font-size:clamp(20px,1.85cqw,27px)!important; line-height:1.28!important; }
+html body.an-page main#main .an-branch-list { display:grid; gap:12px; }
+html body.an-page main#main .an-branch-list li { display:flex; align-items:center; gap:32px; }
+html body.an-page main#main .an-branch-list img { flex:0 0 4.3cqw; width:4.3cqw; height:4.3cqw; min-width:40px; min-height:40px; }
+html body.an-page main#main .an-branch-list p { flex:1; font-size:clamp(18px,1.8cqw,26px)!important; border-bottom:1px solid var(--an-line); padding:14px 0 18px; }
+html body.an-page main#main .an-branch-list li:last-child p { border:0; }
+html body.an-page main#main .an-balance-art { width:145%; margin-left:-22.5%!important; position:relative; background:#fff; }
+html body.an-page main#main .an-ans .an-callout p { font-size:clamp(20px,1.95cqw,28px)!important; }
+html body.an-page main#main .an-vagus .an-heading { width:47%; position:relative; z-index:1; }
+html body.an-page main#main .an-vagus-layout { display:grid; grid-template-columns:29% 42% 27%; gap:1%; align-items:end; }
+html body.an-page main#main .an-vagus-figure { align-self:stretch; display:flex; align-items:flex-end; margin-top:-14cqw!important; }
+html body.an-page main#main .an-vagus-figure img { height:58cqw; max-height:850px; }
+html body.an-page main#main .an-vagus-list { display:flex; flex-direction:column; justify-content:space-between; gap:36px; min-height:43cqw; padding-bottom:2cqw!important; }
+html body.an-page main#main .an-vagus-list .an-feature { display:flex; align-items:flex-start; gap:18px; }
+html body.an-page main#main .an-vagus-list .an-feature>img { flex:0 0 7.7cqw; width:7.7cqw; height:7.7cqw; }
+html body.an-page main#main .an-vagus-list h3 { font-size:clamp(18px,1.65cqw,24px)!important; margin-bottom:10px!important; }
+html body.an-page main#main .an-vagus-list h3::after { display:none; }
+html body.an-page main#main .an-vagus-list p { font-size:clamp(16px,1.3cqw,19px)!important; }
+html body.an-page main#main .an-vagus .an-callout { width:82%; margin:24px auto 0; padding:14px 26px; }
+html body.an-page main#main .an-vagus .an-callout>img { height:4.4cqw; }
+html body.an-page main#main .an-matters .an-top-grid { grid-template-columns:76% 24%; }
+html body.an-page main#main .an-matters .an-top-art img { height:28cqw; }
+html body.an-page main#main .an-benefits { grid-template-columns:repeat(3,minmax(0,1fr)); margin:8px 0 24px!important; }
+html body.an-page main#main .an-benefits .an-feature { display:flex; align-items:flex-start; gap:22px; padding:28px 24px; border-right:1px solid var(--an-line); border-bottom:1px solid var(--an-line); }
+html body.an-page main#main .an-benefits .an-feature:nth-child(3n) { border-right:0; padding-right:0; }
+html body.an-page main#main .an-benefits .an-feature:nth-child(3n+1) { padding-left:0; }
+html body.an-page main#main .an-benefits .an-feature:nth-child(n+4) { border-bottom:0; }
+html body.an-page main#main .an-benefits img { flex:0 0 9cqw; width:9cqw; height:10cqw; }
+html body.an-page main#main .an-benefits h3 { font-size:clamp(18px,1.65cqw,24px)!important; }
+html body.an-page main#main .an-benefits p { font-size:clamp(16px,1.4cqw,20px)!important; }
+html body.an-page main#main .an-dysregulation .an-top-art img { height:35cqw; }
+html body.an-page main#main .an-dysregulation .an-subtitle { max-width:650px; }
+html body.an-page main#main .an-symptoms { grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:16px!important; }
+html body.an-page main#main .an-symptoms .an-feature { display:flex; align-items:flex-start; gap:22px; padding:0 24px; border-right:1px solid var(--an-line); }
+html body.an-page main#main .an-symptoms .an-feature:first-child { padding-left:0; }
+html body.an-page main#main .an-symptoms .an-feature:last-child { border:0; padding-right:0; }
+html body.an-page main#main .an-symptoms img { flex:0 0 8.4cqw; width:8.4cqw; height:8.8cqw; }
+html body.an-page main#main .an-symptoms h3 { font-size:clamp(18px,1.55cqw,23px)!important; }
+html body.an-page main#main .an-symptoms h3::after { display:none; }
+html body.an-page main#main .an-symptoms p { font-size:clamp(16px,1.35cqw,19px)!important; }
+html body.an-page main#main .an-symptoms--secondary { grid-template-columns:repeat(4,minmax(0,1fr)); padding-top:34px!important; border-top:1px solid var(--an-line); margin-top:34px!important; }
+html body.an-page main#main .an-symptoms--secondary .an-feature { gap:16px; padding:0 18px; }
+html body.an-page main#main .an-symptoms--secondary img { flex-basis:6.8cqw; width:6.8cqw; height:7cqw; }
+html body.an-page main#main .an-symptoms--secondary h3 { font-size:clamp(17px,1.3cqw,19px)!important; }
+html body.an-page main#main .an-symptoms--secondary p { font-size:clamp(16px,1.25cqw,18px)!important; }
+html body.an-page main#main .an-dysregulation .an-callout { margin-top:40px; }
+html body.an-page main#main .an-principle-note { display:flex; align-items:center; gap:20px; justify-content:center; margin:0 0 24px!important; font-size:clamp(20px,1.8cqw,26px)!important; }
+html body.an-page main#main .an-principle-note::before,html body.an-page main#main .an-principle-note::after { content:""; flex:1; height:1px; background:#617d9f; }
+html body.an-page main#main .an-principles-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+html body.an-page main#main .an-principles-grid>.an-feature { padding:22px 32px; border-right:1px solid var(--an-line); border-bottom:1px solid var(--an-line); text-align:center; }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(3n) { border-right:0; }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(n+4) { border-bottom:0; }
+html body.an-page main#main .an-principles-grid>.an-feature>img { height:10cqw; max-height:150px; margin:0 auto 16px; }
+html body.an-page main#main .an-principles-grid h3 { color:var(--an-accent,var(--an-ink)); }
+html body.an-page main#main .an-principles-grid h3::after { margin:12px auto 0; }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(2) { --an-accent:var(--an-teal); }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(3) { --an-accent:#35136b; }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(4) { --an-accent:#8b004b; }
+html body.an-page main#main .an-principles-grid>.an-feature:nth-child(5) { --an-accent:var(--an-orange); }
+html body.an-page main#main .an-vagal-note { padding:24px 20px; border:1px solid #b1c6df; border-radius:14px; background:#f5f8fc; display:flex; gap:22px; align-items:flex-start; }
+html body.an-page main#main .an-vagal-note>img { width:8cqw; flex:0 0 8cqw; }
+html body.an-page main#main .an-vagal-note h3 { font-size:clamp(20px,1.8cqw,27px)!important; line-height:1.25!important; margin-bottom:14px!important; }
+html body.an-page main#main .an-principles .an-callout p { font-size:clamp(15px,1.25cqw,18px)!important; }
+html body.an-page main#main .an-cycle .an-top-grid { grid-template-columns:59% 41%; align-items:center; }
+html body.an-page main#main .an-cycle .an-top-art img { height:24cqw; }
+html body.an-page main#main .an-cycle .an-subtitle { font-size:clamp(20px,1.8cqw,26px)!important; }
+html body.an-page main#main .an-cycle-stages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4cqw; margin-top:4px!important; }
+html body.an-page main#main .an-cycle-stages .an-feature { position:relative; border:1.5px solid var(--an-accent,var(--an-ink)); border-radius:18px; text-align:center; padding:12px 20px 24px; }
+html body.an-page main#main .an-stage-number { display:grid; place-items:center; width:4cqw; height:4cqw; min-width:42px; min-height:42px; margin:0 auto 10px; border-radius:50%; background:var(--an-accent,var(--an-ink)); color:#fff; font-size:clamp(26px,2.8cqw,40px); font-weight:700; line-height:1; }
+html body.an-page main#main .an-cycle-stages .an-feature>img { height:10.5cqw; margin:0 auto 10px; }
+html body.an-page main#main .an-cycle-stages h3 { color:var(--an-accent,var(--an-ink)); min-height:4.5em; font-size:clamp(18px,1.65cqw,24px)!important; }
+html body.an-page main#main .an-cycle-stages h3::after { margin:12px auto 0; }
+html body.an-page main#main .an-cycle-stages .an-feature>.an-cycle-arrow { position:absolute; left:100%; top:34%; width:4cqw; height:2.5cqw; margin:0; }
+html body.an-page main#main .an-feedback { position:relative; height:6cqw; min-height:64px; margin:0 9%!important; }
+html body.an-page main#main .an-feedback img { height:100%; object-fit:fill; }
+html body.an-page main#main .an-feedback p { position:absolute; left:50.9%; bottom:0; transform:translateX(-50%); min-width:33%; padding:7px 24px!important; border-radius:12px; background:var(--an-ink); color:#fff; white-space:nowrap; text-align:center; font-size:clamp(16px,1.55cqw,23px)!important; font-weight:700!important; }
+html body.an-page main#main .an-cycle .an-callout { margin-top:14px; }
+html body.an-page main#main .an-return { width:calc(100% - 300px); margin:0 auto 70px; }
+html body.an-page main#main .an-return a { color:var(--an-teal); text-decoration:none; border-bottom:1px solid #8ba9ba; font-size:16px; }
+html body.an-page main#main a:focus-visible { outline:3px solid #08798b; outline-offset:6px; }
+@media(max-width:1340px) {
+ html body.an-page main#main .an-section { margin-bottom:72px; }
+ html body.an-page main#main .an-heading :is(h1,h2) { --arotec-display-size:clamp(34px,4.4cqw,54px); font-size:clamp(34px,4.4cqw,54px)!important; }
+ html body.an-page main#main .an-hero-features { grid-template-columns:1fr 1fr; gap:30px 0; margin-top:34px!important; }
+ html body.an-page main#main .an-hero-features .an-feature { padding:0 24px!important; }
+ html body.an-page main#main .an-hero-features .an-feature:nth-child(2) { border:0; }
+ html body.an-page main#main .an-hero-features img { height:120px; }
+ html body.an-page main#main .an-hero-features h3 { min-height:0; }
+ html body.an-page main#main .an-callout { flex-wrap:wrap; gap:18px; }
+ html body.an-page main#main .an-callout h3 { max-width:calc(100% - 100px); flex:1; }
+ html body.an-page main#main .an-callout h3+.an-callout-copy { flex-basis:100%; border:0; padding-left:0; }
+ html body.an-page main#main .an-callout .an-footnote { flex-basis:100%; max-width:none; }
+ html body.an-page main#main .an-branches { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.an-page main#main .an-balance-art { grid-column:1/-1; grid-row:1; width:160px; margin:0 auto 10px!important; }
+ html body.an-page main#main .an-branch { padding:20px; }
+ html body.an-page main#main .an-branch-heading { gap:16px; }
+ html body.an-page main#main .an-branch-list li { gap:20px; }
+ html body.an-page main#main .an-vagus .an-heading { width:100%; }
+ html body.an-page main#main .an-vagus-layout { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.an-page main#main .an-vagus-figure { grid-column:1/-1; grid-row:1; width:65%; margin:0 auto 20px!important; }
+ html body.an-page main#main .an-vagus-figure img { height:650px; }
+ html body.an-page main#main .an-vagus-list { min-height:0; justify-content:flex-start; gap:28px; }
+ html body.an-page main#main .an-vagus-list .an-feature>img { width:76px; height:76px; flex-basis:76px; }
+ html body.an-page main#main .an-vagus .an-callout { width:100%; }
+ html body.an-page main#main .an-benefits { grid-template-columns:1fr 1fr; }
+ html body.an-page main#main .an-benefits .an-feature { padding:24px!important; border-bottom:1px solid var(--an-line)!important; border-right:0; }
+ html body.an-page main#main .an-benefits .an-feature:nth-child(odd) { padding-left:0!important; border-right:1px solid var(--an-line); }
+ html body.an-page main#main .an-benefits .an-feature:nth-child(n+5) { border-bottom:0!important; }
+ html body.an-page main#main .an-symptoms { grid-template-columns:1fr; gap:24px; }
+ html body.an-page main#main .an-symptoms .an-feature { padding:0!important; border:0; }
+ html body.an-page main#main .an-symptoms img { flex-basis:84px; width:84px; height:84px; }
+ html body.an-page main#main .an-symptoms--secondary { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.an-page main#main .an-symptoms--secondary img { flex-basis:68px; width:68px; height:68px; }
+ html body.an-page main#main .an-principles-grid { grid-template-columns:1fr 1fr; }
+ html body.an-page main#main .an-principles-grid>.an-feature { border:0; border-bottom:1px solid var(--an-line); }
+ html body.an-page main#main .an-principles-grid>.an-feature:nth-child(odd) { border-right:1px solid var(--an-line); }
+ html body.an-page main#main .an-principles-grid>.an-feature>img { height:120px; }
+ html body.an-page main#main .an-vagal-note { display:block; }
+ html body.an-page main#main .an-vagal-note>img { width:84px; margin-bottom:16px; }
+ html body.an-page main#main .an-cycle-stages { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.an-page main#main .an-cycle-stages .an-feature { padding:18px 24px 26px; }
+ html body.an-page main#main .an-cycle-stages .an-feature>img { height:140px; }
+ html body.an-page main#main .an-cycle-stages .an-feature>.an-cycle-arrow { display:none; }
+ html body.an-page main#main .an-cycle-stages h3 { min-height:0; }
+ html body.an-page main#main .an-feedback { margin-top:12px!important; }
+}
+@media(max-width:1199px) {
+ html body.an-page main#main .an-section,html body.an-page main#main .an-return { width:calc(100% - 48px); }
+}
+@media(max-width:760px) {
+ html body.an-page main#main.an-main { padding-top:calc(var(--detail-header-space,80px) + 24px)!important; }
+ html body.an-page main#main .an-section { margin-bottom:60px; }
+ html body.an-page main#main .an-section-label { gap:16px; font-size:15px; }
+ html body.an-page main#main .an-heading :is(h1,h2) { --arotec-display-size:34px; font-size:32px!important; margin:24px 0 16px!important; overflow-wrap:break-word; }
+ html body.an-page main#main .an-heading .an-subtitle { font-size:20px!important; }
+ html body.an-page main#main .an-heading::after { width:55%; margin:22px 0 24px; }
+ html body.an-page main#main .an-top-grid,html body.an-page main#main .an-ans .an-top-grid,html body.an-page main#main .an-matters .an-top-grid,html body.an-page main#main .an-cycle .an-top-grid { grid-template-columns:1fr; }
+ html body.an-page main#main .an-top-art { margin:24px auto 12px!important; width:100%; }
+ html body.an-page main#main .an-top-art img,html body.an-page main#main .an-ans .an-top-art img,html body.an-page main#main .an-matters .an-top-art img,html body.an-page main#main .an-dysregulation .an-top-art img,html body.an-page main#main .an-cycle .an-top-art img { height:auto; max-height:460px; }
+ html body.an-page main#main .an-hero-description { padding:0; font-size:18px!important; }
+ html body.an-page main#main .an-hero-features { grid-template-columns:1fr; }
+ html body.an-page main#main .an-hero-features .an-feature { padding:0 0 26px!important; border:0; border-bottom:1px solid var(--an-line); }
+ html body.an-page main#main .an-hero-features h3 { font-size:20px!important; }
+ html body.an-page main#main .an-callout { padding:18px 16px; gap:16px; }
+ html body.an-page main#main .an-callout>img { flex-basis:46px; width:46px; height:60px; }
+ html body.an-page main#main .an-callout p,html body.an-page main#main .an-hero .an-callout p,html body.an-page main#main .an-principles .an-callout p { font-size:16px!important; }
+ html body.an-page main#main .an-callout .an-footnote { font-size:13px!important; }
+ html body.an-page main#main .an-branches { grid-template-columns:1fr; gap:24px; }
+ html body.an-page main#main .an-branch-heading img { width:58px; height:58px; flex-basis:58px; }
+ html body.an-page main#main .an-branch-heading h3 { font-size:19px!important; }
+ html body.an-page main#main .an-branch-list li { gap:22px; }
+ html body.an-page main#main .an-vagus-layout { grid-template-columns:1fr; }
+ html body.an-page main#main .an-vagus-figure { width:100%; }
+ html body.an-page main#main .an-vagus-figure img { height:auto; max-height:590px; }
+ html body.an-page main#main .an-vagus-list .an-feature>img { flex-basis:68px; width:68px; height:68px; }
+ html body.an-page main#main .an-vagus .an-callout>img { height:48px; }
+ html body.an-page main#main .an-benefits { grid-template-columns:1fr; }
+ html body.an-page main#main .an-benefits .an-feature { border-right:0!important; padding:24px 0!important; }
+ html body.an-page main#main .an-benefits img { width:76px; height:84px; flex-basis:76px; }
+ html body.an-page main#main .an-symptoms--secondary { grid-template-columns:1fr; }
+ html body.an-page main#main .an-symptoms img,html body.an-page main#main .an-symptoms--secondary img { width:76px; height:80px; flex-basis:76px; }
+ html body.an-page main#main .an-principle-note { font-size:18px!important; gap:12px; }
+ html body.an-page main#main .an-principles-grid { grid-template-columns:1fr; }
+ html body.an-page main#main .an-principles-grid>.an-feature { border-right:0!important; padding:24px 10px; }
+ html body.an-page main#main .an-vagal-note { margin-top:20px; }
+ html body.an-page main#main .an-vagal-note>img { width:76px; }
+ html body.an-page main#main .an-cycle-stages { grid-template-columns:1fr; }
+ html body.an-page main#main .an-stage-number { width:48px; height:48px; }
+ html body.an-page main#main .an-feedback { height:auto; min-height:0; margin:22px 0!important; }
+ html body.an-page main#main .an-feedback img { display:none; }
+ html body.an-page main#main .an-feedback p { position:static; transform:none; text-align:center; font-size:16px!important; }
+}

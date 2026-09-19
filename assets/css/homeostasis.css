@@ -1,0 +1,258 @@
+/* Homeostasis: borderless sections, readable web typography, and shared gutters. */
+html:has(body.hs-page) { scroll-padding-top:0; scroll-behavior:auto; }
+html body.hs-page { --hs-ink:#06164b; --hs-teal:#00687a; --hs-purple:#5a2991; --hs-green:#205e32; --hs-line:#b9c9df; background:#fff; }
+html body.hs-page main#main.hs-main { display:block!important; width:100%!important; max-width:none!important; margin:0!important; padding:calc(var(--detail-header-space,112px) + 28px) 0 0!important; color:var(--hs-ink); background:#fff; font-family:var(--site-font,"DM Sans",sans-serif)!important; }
+html body.hs-page main#main *,html body.hs-page main#main *::before,html body.hs-page main#main *::after { box-sizing:border-box; min-width:0; }
+html body.hs-page main#main :is(h1,h2,h3,h4,p,figure,ul,ol) { margin:0!important; padding:0; }
+html body.hs-page main#main :is(h1,h2,h3,h4,p,li,span,a,strong) { font-family:var(--site-font,"DM Sans",sans-serif)!important; color:inherit; text-transform:none!important; }
+html body.hs-page main#main :is(h1,h2,h3,h4) { font-weight:700!important; letter-spacing:-.025em!important; max-width:none!important; }
+html body.hs-page main#main p { font-size:clamp(16px,1.25cqw,19px)!important; line-height:1.6!important; font-weight:400!important; text-wrap:pretty; }
+html body.hs-page main#main :is(ul,ol) { list-style:none; }
+html body.hs-page main#main img { display:block; width:100%; height:auto; object-fit:contain; max-width:100%; border-radius:0; mix-blend-mode:multiply; }
+html body.hs-page main#main .hs-sheet { width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px)); max-width:1672px; margin:0 auto 84px; padding:0; container-type:inline-size; content-visibility:visible; contain:none; scroll-margin-top:calc(var(--detail-header-space,112px) + 24px); }
+html body.hs-page main#main .hs-sheet::before,html body.hs-page main#main .hs-sheet::after { content:none!important; background:none!important; }
+html body.hs-page main#main .hs-panel { border:0; border-radius:0; padding:16px 0 0; background:#fff; box-shadow:none; }
+html body.hs-page main#main .hs-heading { text-align:center; }
+html body.hs-page main#main .hs-label { display:inline-block; font-size:clamp(12px,1.05cqw,16px); line-height:1.5; letter-spacing:.06em; font-weight:700; color:var(--hs-teal); }
+html body.hs-page main#main .hs-label--pill { border-radius:24px; padding:8px 20px; color:#fff; background:var(--hs-ink); }
+html body.hs-page main#main .hs-label--purple { background:var(--hs-purple); }
+html body.hs-page main#main .hs-label--outline { background:#fff; color:var(--hs-ink); border:1.5px solid var(--hs-ink); }
+html body.hs-page main#main .hs-heading :is(h1,h2) { max-width:1160px!important; font-size:clamp(34px,4.2cqw,60px)!important; line-height:1.18!important; margin:18px auto 16px!important; text-wrap:balance; }
+html body.hs-page main#main .hs-heading .hs-subtitle { max-width:1000px; margin:0 auto!important; color:var(--hs-teal); font-size:clamp(20px,1.8cqw,26px)!important; line-height:1.5!important; font-weight:500!important; }
+html body.hs-page main#main .hs-divider { width:64%; border:0; border-top:1px solid #5978a0; height:0; margin:24px auto!important; }
+html body.hs-page main#main .hs-hero-emblem { width:24cqw; height:14cqw; max-height:228px; margin:0 auto!important; }
+html body.hs-page main#main .hs-hero-emblem img { height:100%; }
+html body.hs-page main#main .hs-hero h1 { --arotec-display-size:clamp(38px,5.2cqw,80px); --arotec-display-line-height:1.12; --arotec-display-letter-spacing:-.02em; font-size:clamp(38px,5.2cqw,80px)!important; line-height:1.12!important; margin:0 auto 14px!important; }
+html body.hs-page main#main .hs-hero-description { max-width:900px; margin:0 auto 22px!important; text-align:center; font-size:clamp(18px,1.45cqw,21px)!important; }
+html body.hs-page main#main .hs-callout { display:flex; align-items:center; gap:26px; border:1px solid #a391d1; border-radius:14px; background:#f8f7fc; padding:18px 24px; margin:26px auto 0; }
+html body.hs-page main#main .hs-callout>img { flex:0 0 6.6cqw; width:6.6cqw; height:6.6cqw; max-height:110px; }
+html body.hs-page main#main .hs-callout p { flex:1; font-size:clamp(18px,1.55cqw,23px)!important; line-height:1.55!important; font-weight:500!important; }
+html body.hs-page main#main .hs-callout strong { color:var(--hs-purple); font-weight:700; }
+html body.hs-page main#main .hs-hero-definition { width:min(78%,960px); margin:14px auto 30px; border-color:var(--hs-ink); }
+html body.hs-page main#main .hs-hero-definition p { border-left:1px solid #7e83b1; padding-left:26px; font-size:clamp(18px,1.45cqw,21px)!important; font-weight:500!important; }
+html body.hs-page main#main .hs-number { display:grid; place-items:center; width:3.3cqw; min-width:40px; height:3.3cqw; min-height:40px; border-radius:50%; margin:0 auto 10px; background:var(--hs-accent,var(--hs-purple)); color:#fff; font-size:clamp(25px,2.7cqw,38px); line-height:1; font-weight:700; }
+html body.hs-page main#main .hs-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:42px; text-align:center; margin-top:18px!important; }
+html body.hs-page main#main .hs-flow>li { position:relative; }
+html body.hs-page main#main .hs-flow>li>img { height:14cqw; max-height:220px; margin:0 auto 12px; }
+html body.hs-page main#main .hs-flow h3 { font-size:clamp(18px,1.45cqw,21px)!important; line-height:1.4!important; text-wrap:balance; }
+html body.hs-page main#main .hs-flow>li>.hs-flow-arrow { position:absolute; left:calc(100% + 2px); top:40%; width:38px; height:30px; margin:0; }
+html body.hs-page main#main .hs-teal { --hs-accent:var(--hs-teal); }
+html body.hs-page main#main .hs-green { --hs-accent:var(--hs-green); }
+html body.hs-page main#main .hs-purple { --hs-accent:var(--hs-purple); }
+html body.hs-page main#main .hs-navy { --hs-accent:var(--hs-ink); }
+html body.hs-page main#main .hs-distinctions h2 { font-size:clamp(32px,3.5cqw,50px)!important; }
+html body.hs-page main#main .hs-concepts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)) 22%; gap:32px; margin-top:28px; }
+html body.hs-page main#main .hs-concept { position:relative; text-align:center; display:flex; flex-direction:column; }
+html body.hs-page main#main .hs-concept-header { background:var(--hs-accent); border-radius:14px; padding:16px 10px; color:#fff; min-height:100px; }
+html body.hs-page main#main .hs-concept-header h3 { font-size:clamp(20px,1.75cqw,25px)!important; line-height:1.3!important; margin-bottom:8px!important; text-wrap:balance; }
+html body.hs-page main#main .hs-concept-header p { font-size:clamp(16px,1.25cqw,19px)!important; font-weight:600!important; line-height:1.35!important; }
+html body.hs-page main#main .hs-concept>img { height:11.5cqw; max-height:180px; margin:22px auto 18px; }
+html body.hs-page main#main .hs-concept>p { line-height:1.55!important; }
+html body.hs-page main#main .hs-concept-description { flex:1; padding:0 6px!important; }
+html body.hs-page main#main .hs-concept-goal { border-top:1px solid var(--hs-accent); margin-top:22px!important; padding-top:18px!important; }
+html body.hs-page main#main .hs-concept-goal strong { color:var(--hs-accent); }
+html body.hs-page main#main .hs-concept>.hs-flow-arrow { position:absolute; left:calc(100% - 3px); top:38%; width:36px; height:30px; margin:0; }
+html body.hs-page main#main .hs-takeaways { padding:26px 20px; border:1px solid #9878c3; border-radius:20px; background:#f9f7fc; }
+html body.hs-page main#main .hs-takeaways h3 { text-align:center; color:var(--hs-purple); font-size:clamp(20px,1.85cqw,27px)!important; line-height:1.3!important; margin:0 0 20px!important; }
+html body.hs-page main#main .hs-takeaways li { display:flex; align-items:center; gap:16px; padding:20px 0; border-bottom:1px solid #b29acd; }
+html body.hs-page main#main .hs-takeaways li:last-child { border:0; padding-bottom:0; }
+html body.hs-page main#main .hs-takeaways img { flex:0 0 6.5cqw; width:6.5cqw; height:7cqw; }
+html body.hs-page main#main .hs-takeaways p { font-size:clamp(16px,1.4cqw,21px)!important; }
+html body.hs-page main#main .hs-distinctions .hs-callout { border-color:var(--hs-ink); background:#fff; }
+html body.hs-page main#main .hs-distinctions .hs-callout strong { color:var(--hs-ink); }
+html body.hs-page main#main .hs-regulation-stages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px; margin-top:26px!important; }
+html body.hs-page main#main .hs-regulation-stage { position:relative; display:flex; flex-direction:column; }
+html body.hs-page main#main .hs-stage-title { width:92%; margin:0 auto; border-radius:17px 17px 0 0; padding:12px 12px 18px; min-height:90px; display:flex; align-items:center; justify-content:center; background:var(--hs-accent); color:#fff; text-align:center; }
+html body.hs-page main#main .hs-stage-title h3 { font-size:clamp(18px,1.45cqw,21px)!important; line-height:1.35!important; text-wrap:balance; }
+html body.hs-page main#main .hs-stage-panel { flex:1; border:1px solid var(--hs-accent); border-radius:15px; background:#fff; padding:20px 16px; margin-top:-5px; }
+html body.hs-page main#main .hs-stage-panel>p { color:var(--hs-accent); font-size:clamp(17px,1.45cqw,21px)!important; font-weight:600!important; text-align:center; margin-bottom:20px!important; }
+html body.hs-page main#main .hs-mini-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px 14px; text-align:center; }
+html body.hs-page main#main .hs-mini-grid img { height:5.3cqw; max-height:90px; margin:0 auto 8px; }
+html body.hs-page main#main .hs-mini-grid h4 { font-size:clamp(16px,1.08cqw,17px)!important; line-height:1.45!important; }
+html body.hs-page main#main .hs-adaptation-art img { height:28cqw; margin-top:18px; }
+html body.hs-page main#main .hs-regulation-icons { row-gap:28px; }
+html body.hs-page main#main .hs-regulation-icons img { height:6cqw; }
+html body.hs-page main#main .hs-outcome-list { display:flex; flex-direction:column; gap:22px; }
+html body.hs-page main#main .hs-outcome-list li { display:flex; align-items:center; gap:18px; }
+html body.hs-page main#main .hs-outcome-list img { flex:0 0 8cqw; width:8cqw; height:9cqw; }
+html body.hs-page main#main .hs-outcome-list h4 { font-size:clamp(17px,1.4cqw,21px)!important; line-height:1.4!important; }
+html body.hs-page main#main .hs-regulation-stage>.hs-flow-arrow { position:absolute; left:calc(100% - 2px); top:45%; width:37px; height:32px; z-index:1; }
+html body.hs-page main#main .hs-mental-layout { display:grid; grid-template-columns:36% 60%; gap:4%; margin-top:26px; }
+html body.hs-page main#main .hs-mental-figure { text-align:center; padding-right:26px!important; border-right:2px dotted #8173a9; }
+html body.hs-page main#main .hs-mental-figure img { height:31cqw; max-height:480px; margin:0 auto 18px; }
+html body.hs-page main#main .hs-mental-figure p { font-size:clamp(18px,1.5cqw,22px)!important; font-weight:500!important; }
+html body.hs-page main#main .hs-features { display:flex; flex-direction:column; justify-content:space-between; gap:14px; }
+html body.hs-page main#main .hs-feature { display:flex; align-items:flex-start; gap:24px; }
+html body.hs-page main#main .hs-feature>img { flex:0 0 7cqw; width:7cqw; height:7cqw; max-height:110px; }
+html body.hs-page main#main .hs-feature-copy { flex:1; border-bottom:1px solid #c4c6df; padding:8px 0 18px; }
+html body.hs-page main#main .hs-feature:last-child .hs-feature-copy { border:0; }
+html body.hs-page main#main .hs-feature h3 { font-size:clamp(18px,1.6cqw,23px)!important; line-height:1.4!important; margin-bottom:8px!important; text-wrap:balance; }
+html body.hs-page main#main .hs-physiology-diagram { position:relative; aspect-ratio:1320 / 540; margin:8px 0 18px; }
+html body.hs-page main#main .hs-physiology-art { position:absolute; left:18%; top:0; width:64%; height:100%; }
+html body.hs-page main#main .hs-physiology-art img { height:100%; }
+html body.hs-page main#main .hs-physiology-labels { display:contents; }
+html body.hs-page main#main .hs-physiology-label { position:absolute; width:17%; text-align:right; }
+html body.hs-page main#main .hs-physiology-label>img { display:none; }
+html body.hs-page main#main .hs-physiology-label h3 { font-size:clamp(18px,1.55cqw,23px)!important; line-height:1.4!important; text-wrap:balance; }
+html body.hs-page main#main .hs-physiology-label:nth-child(1) { top:6%; left:0; }
+html body.hs-page main#main .hs-physiology-label:nth-child(2) { top:41%; left:0; color:var(--hs-teal); }
+html body.hs-page main#main .hs-physiology-label:nth-child(3) { top:75%; left:0; color:var(--hs-purple); }
+html body.hs-page main#main .hs-physiology-label:nth-child(n+4) { left:83%; text-align:left; }
+html body.hs-page main#main .hs-physiology-label:nth-child(4) { top:6%; color:var(--hs-green); }
+html body.hs-page main#main .hs-physiology-label:nth-child(5) { top:41%; color:var(--hs-teal); }
+html body.hs-page main#main .hs-physiology-label:nth-child(6) { top:78%; color:var(--hs-purple); }
+html body.hs-page main#main .hs-physiology-note { width:64%; border-color:#7896d4; padding:16px 20px; }
+html body.hs-page main#main .hs-physiology-note>img { width:5cqw; height:5cqw; flex-basis:5cqw; }
+html body.hs-page main#main .hs-physiology-note p { font-size:clamp(17px,1.5cqw,22px)!important; }
+html body.hs-page main#main .hs-skin .hs-hero-emblem { height:12cqw; }
+html body.hs-page main#main .hs-skin h2 { font-size:clamp(34px,4.2cqw,60px)!important; margin:8px auto 16px!important; }
+html body.hs-page main#main .hs-skin-layout { display:grid; grid-template-columns:29% 40% 29%; gap:1%; align-items:start; }
+html body.hs-page main#main .hs-skin .hs-feature { gap:18px; }
+html body.hs-page main#main .hs-skin .hs-feature>img { width:8.2cqw; height:8.8cqw; flex-basis:8.2cqw; }
+html body.hs-page main#main .hs-skin .hs-feature h3 { font-size:clamp(18px,1.55cqw,23px)!important; }
+html body.hs-page main#main .hs-skin .hs-feature p { font-size:clamp(16px,1.3cqw,19px)!important; }
+html body.hs-page main#main .hs-skin .hs-feature-copy { padding-top:0; }
+html body.hs-page main#main .hs-skin .hs-features { gap:22px; }
+html body.hs-page main#main .hs-skin-figure>img { height:29cqw; }
+html body.hs-page main#main .hs-skin-note { gap:14px; border-color:#7fa38a; background:#f9fbf9; margin-top:18px; padding:12px 14px; }
+html body.hs-page main#main .hs-skin-note>img { width:5cqw; height:5cqw; flex-basis:5cqw; }
+html body.hs-page main#main .hs-skin-note p { color:#07594f; font-size:clamp(16px,1.35cqw,20px)!important; }
+html body.hs-page main#main .hs-skin-warning { width:68%; }
+html body.hs-page main#main .hs-skin-warning p { font-size:clamp(18px,1.6cqw,24px)!important; }
+html body.hs-page main#main .hs-limits h2 { font-size:clamp(32px,3.8cqw,56px)!important; }
+html body.hs-page main#main .hs-limits-flow { grid-template-columns:repeat(3,minmax(0,1fr)); width:86%; margin:0 auto 26px!important; gap:7cqw; }
+html body.hs-page main#main .hs-limits-flow>li>img { height:11.2cqw; max-height:175px; }
+html body.hs-page main#main .hs-limits-flow h3 { font-size:clamp(20px,1.8cqw,26px)!important; max-width:300px!important; margin:0 auto!important; }
+html body.hs-page main#main .hs-limits-flow>li>.hs-flow-arrow { left:calc(100% + 1cqw); width:5cqw; height:34px; top:42%; }
+html body.hs-page main#main .hs-potential { display:grid; grid-template-columns:16% 84%; align-items:stretch; border:1px solid #c18ba9; background:#fcf8fa; border-radius:14px; padding:20px 14px; margin-top:30px; }
+html body.hs-page main#main .hs-potential-heading { text-align:center; padding:0 16px; color:#800447; }
+html body.hs-page main#main .hs-potential-heading img { height:5.6cqw; margin:0 auto 8px; }
+html body.hs-page main#main .hs-potential-heading h3 { font-size:clamp(19px,1.65cqw,24px)!important; line-height:1.25!important; }
+html body.hs-page main#main .hs-potential-items { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); text-align:center; }
+html body.hs-page main#main .hs-potential-items li { padding:0 9px; border-left:1px solid #c995b1; }
+html body.hs-page main#main .hs-potential-items img { height:5.6cqw; margin:0 auto 10px; }
+html body.hs-page main#main .hs-potential-items h4 { font-size:clamp(16px,1.25cqw,18px)!important; line-height:1.4!important; }
+html body.hs-page main#main .hs-principles { position:relative; border:1.5px solid var(--hs-ink); border-radius:16px; padding:34px 20px 22px; margin-top:46px; }
+html body.hs-page main#main .hs-principles>h3 { position:absolute; top:0; left:50%; transform:translate(-50%,-50%); border-radius:14px; padding:8px 28px; background:var(--hs-ink); color:#fff; font-size:clamp(19px,1.65cqw,24px)!important; line-height:1.2!important; white-space:nowrap; }
+html body.hs-page main#main .hs-principles-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; }
+html body.hs-page main#main .hs-principles-grid li { border-right:1px dotted #555b8c; padding-right:18px; }
+html body.hs-page main#main .hs-principles-grid li:last-child { border:0; padding-right:0; }
+html body.hs-page main#main .hs-principle-heading { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
+html body.hs-page main#main .hs-principle-heading img { flex:0 0 4.5cqw; width:4.5cqw; height:4.8cqw; }
+html body.hs-page main#main .hs-principle-heading h4 { font-size:clamp(16px,1.18cqw,18px)!important; line-height:1.4!important; }
+html body.hs-page main#main .hs-principles-grid p { font-size:clamp(16px,1.2cqw,18px)!important; }
+html body.hs-page main#main .hs-footnote { max-width:1200px; margin:18px auto 0!important; text-align:center; font-size:clamp(15px,1.3cqw,19px)!important; }
+html body.hs-page main#main .hs-return { width:calc(100% - 300px); margin:0 auto 70px; }
+html body.hs-page main#main .hs-return a { color:var(--hs-teal); text-decoration:none; border-bottom:1px solid #8babbe; font-size:16px; }
+html body.hs-page main#main a:focus-visible { outline:3px solid #08798b; outline-offset:6px; }
+@media(min-width:1341px) and (max-width:1600px) {
+ html body.hs-page main#main .hs-regulation-stages { grid-template-columns:1fr 1fr; gap:30px; }
+ html body.hs-page main#main .hs-mini-grid img { height:80px; }
+ html body.hs-page main#main .hs-adaptation-art img { height:350px; }
+ html body.hs-page main#main .hs-outcome-list img { width:100px; height:110px; flex-basis:100px; }
+ html body.hs-page main#main .hs-regulation-stage>.hs-flow-arrow { display:none; }
+}
+@media(min-width:1341px) and (max-width:1640px) {
+ html body.hs-page main#main .hs-principle-heading { display:block; }
+ html body.hs-page main#main .hs-principle-heading img { margin-bottom:12px; }
+}
+@media(max-width:1340px) {
+ html body.hs-page main#main .hs-panel { padding:16px 0 0; }
+ html body.hs-page main#main .hs-sheet { margin-bottom:64px; }
+ html body.hs-page main#main .hs-hero-definition { width:86%; }
+ html body.hs-page main#main .hs-flow { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.hs-page main#main .hs-flow>li>img { height:170px; }
+ html body.hs-page main#main .hs-flow>li>.hs-flow-arrow { display:none; }
+ html body.hs-page main#main .hs-concepts { grid-template-columns:1fr 1fr; gap:30px; }
+ html body.hs-page main#main .hs-concept>img { height:150px; }
+ html body.hs-page main#main .hs-concept>.hs-flow-arrow { display:none; }
+ html body.hs-page main#main .hs-takeaways img { width:70px; height:76px; flex-basis:70px; }
+ html body.hs-page main#main .hs-regulation-stages { grid-template-columns:1fr 1fr; gap:30px; }
+ html body.hs-page main#main .hs-mini-grid img { height:76px; }
+ html body.hs-page main#main .hs-adaptation-art img { height:330px; }
+ html body.hs-page main#main .hs-outcome-list img { width:86px; height:96px; flex-basis:86px; }
+ html body.hs-page main#main .hs-regulation-stage>.hs-flow-arrow { display:none; }
+ html body.hs-page main#main .hs-mental-layout { grid-template-columns:1fr; gap:28px; }
+ html body.hs-page main#main .hs-mental-figure { border:0; max-width:500px; margin:0 auto!important; padding:0!important; }
+ html body.hs-page main#main .hs-mental-figure img { height:350px; }
+ html body.hs-page main#main .hs-feature>img { width:72px; height:72px; flex-basis:72px; }
+ html body.hs-page main#main .hs-physiology-diagram { aspect-ratio:auto; display:flex; flex-direction:column; }
+ html body.hs-page main#main .hs-physiology-art { position:static; width:100%; max-width:650px; margin:0 auto 28px!important; }
+ html body.hs-page main#main .hs-physiology-labels { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+ html body.hs-page main#main .hs-physiology-label { position:static; width:auto; text-align:left!important; display:flex; align-items:center; gap:16px; }
+ html body.hs-page main#main .hs-physiology-label>img { display:block; width:74px; height:74px; flex:0 0 74px; }
+ html body.hs-page main#main .hs-physiology-note { width:90%; }
+ html body.hs-page main#main .hs-skin-layout { grid-template-columns:1fr 1fr; gap:26px; }
+ html body.hs-page main#main .hs-skin-center { grid-column:1/-1; grid-row:1; width:min(90%,550px); margin:0 auto 12px; }
+ html body.hs-page main#main .hs-skin-figure>img { height:400px; }
+ html body.hs-page main#main .hs-skin .hs-feature>img { width:70px; height:76px; flex-basis:70px; }
+ html body.hs-page main#main .hs-skin-warning { width:90%; }
+ html body.hs-page main#main .hs-limits-flow { grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; gap:20px; }
+ html body.hs-page main#main .hs-limits-flow>li>img { height:140px; }
+ html body.hs-page main#main .hs-potential { grid-template-columns:1fr; gap:22px; }
+ html body.hs-page main#main .hs-potential-heading { display:flex; align-items:center; justify-content:center; gap:16px; }
+ html body.hs-page main#main .hs-potential-heading img { width:60px; height:64px; margin:0; }
+ html body.hs-page main#main .hs-potential-items { grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px 0; }
+ html body.hs-page main#main .hs-potential-items li:nth-child(4n+1) { border:0; }
+ html body.hs-page main#main .hs-potential-items img { height:70px; }
+ html body.hs-page main#main .hs-principles-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px 20px; }
+ html body.hs-page main#main .hs-principle-heading { display:block; }
+ html body.hs-page main#main .hs-principle-heading img { width:60px; height:64px; margin-bottom:12px; }
+}
+@media(max-width:1199px) {
+ html body.hs-page main#main .hs-sheet,html body.hs-page main#main .hs-return { width:calc(100% - 48px); }
+}
+@media(max-width:760px) {
+ html body.hs-page main#main.hs-main { padding-top:calc(var(--detail-header-space,80px) + 24px)!important; }
+ html body.hs-page main#main .hs-panel { padding:12px 0 0; }
+ html body.hs-page main#main .hs-sheet { margin-bottom:54px; }
+ html body.hs-page main#main .hs-label { font-size:12px; }
+ html body.hs-page main#main .hs-label--pill { padding:8px 14px; }
+ html body.hs-page main#main .hs-heading :is(h1,h2),html body.hs-page main#main .hs-distinctions h2,html body.hs-page main#main .hs-limits h2 { --arotec-display-size:32px; font-size:30px!important; line-height:1.2!important; overflow-wrap:break-word; }
+ html body.hs-page main#main .hs-hero h1 { font-size:32px!important; }
+ html body.hs-page main#main .hs-heading .hs-subtitle { font-size:19px!important; }
+ html body.hs-page main#main .hs-hero-emblem,html body.hs-page main#main .hs-skin .hs-hero-emblem { width:200px; height:135px; }
+ html body.hs-page main#main .hs-hero-description { font-size:17px!important; }
+ html body.hs-page main#main .hs-divider { width:80%; margin:20px auto!important; }
+ html body.hs-page main#main .hs-callout { gap:15px; padding:16px 14px; align-items:flex-start; }
+ html body.hs-page main#main .hs-callout>img { width:48px; height:56px; flex-basis:48px; }
+ html body.hs-page main#main .hs-callout p { font-size:16px!important; }
+ html body.hs-page main#main .hs-hero-definition { width:100%; flex-direction:column; align-items:center; }
+ html body.hs-page main#main .hs-hero-definition>img { width:70px; height:70px; }
+ html body.hs-page main#main .hs-hero-definition p { border:0; padding:0; }
+ html body.hs-page main#main .hs-flow { grid-template-columns:1fr; gap:28px; }
+ html body.hs-page main#main .hs-flow>li>img { height:190px; }
+ html body.hs-page main#main .hs-flow h3 { font-size:20px!important; }
+ html body.hs-page main#main .hs-concepts,html body.hs-page main#main .hs-regulation-stages { grid-template-columns:1fr; gap:32px; }
+ html body.hs-page main#main .hs-takeaways { padding:20px 16px; }
+ html body.hs-page main#main .hs-takeaways img { flex-basis:64px; width:64px; height:72px; }
+ html body.hs-page main#main .hs-stage-panel { padding:18px 14px; }
+ html body.hs-page main#main .hs-mini-grid { gap:20px 12px; }
+ html body.hs-page main#main .hs-mini-grid h4 { font-size:16px!important; }
+ html body.hs-page main#main .hs-mental-figure img { height:260px; }
+ html body.hs-page main#main .hs-feature { gap:14px; }
+ html body.hs-page main#main .hs-feature>img { flex-basis:54px; width:54px; height:58px; }
+ html body.hs-page main#main .hs-feature h3 { font-size:19px!important; }
+ html body.hs-page main#main .hs-feature-copy { padding-top:0; }
+ html body.hs-page main#main .hs-physiology-labels { grid-template-columns:1fr; gap:22px; }
+ html body.hs-page main#main .hs-physiology-label>img { width:64px; height:64px; flex-basis:64px; }
+ html body.hs-page main#main .hs-physiology-label h3 { font-size:19px!important; }
+ html body.hs-page main#main .hs-physiology-note,html body.hs-page main#main .hs-skin-warning { width:100%; }
+ html body.hs-page main#main .hs-skin-layout { grid-template-columns:1fr; }
+ html body.hs-page main#main .hs-skin-center { width:100%; }
+ html body.hs-page main#main .hs-skin-figure>img { height:auto; max-height:320px; }
+ html body.hs-page main#main .hs-skin .hs-feature>img { width:60px; height:66px; flex-basis:60px; }
+ html body.hs-page main#main .hs-limits-flow { grid-template-columns:1fr; gap:26px; }
+ html body.hs-page main#main .hs-potential { padding:20px 10px; }
+ html body.hs-page main#main .hs-potential-heading { padding:0; }
+ html body.hs-page main#main .hs-potential-items { grid-template-columns:1fr 1fr; gap:24px 0; }
+ html body.hs-page main#main .hs-potential-items li:nth-child(2n+1) { border:0; }
+ html body.hs-page main#main .hs-principles { padding:32px 16px 22px; }
+ html body.hs-page main#main .hs-principles>h3 { font-size:15px!important; padding:9px 14px; }
+ html body.hs-page main#main .hs-principles-grid { grid-template-columns:1fr; gap:22px; }
+ html body.hs-page main#main .hs-principles-grid li { border-right:0; border-bottom:1px dotted #8b87ae; padding:0 0 20px; }
+ html body.hs-page main#main .hs-principle-heading { display:flex; }
+ html body.hs-page main#main .hs-principle-heading img { margin:0; flex-basis:54px; width:54px; height:58px; }
+ html body.hs-page main#main .hs-principle-heading h4 { font-size:17px!important; }
+ html body.hs-page main#main .hs-principles-grid p { font-size:16px!important; }
+}

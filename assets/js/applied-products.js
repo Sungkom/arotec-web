@@ -25,7 +25,8 @@
   });
   const updateSelection = () => {
     main.querySelectorAll('.ap-menu-items a').forEach(link => {
-      if (link.hash === location.hash) link.setAttribute('aria-current', 'location');
+      const isCurrentPanel = link.pathname === location.pathname && link.hash && link.hash === location.hash;
+      if (isCurrentPanel) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
     const panel = document.getElementById(location.hash.slice(1));

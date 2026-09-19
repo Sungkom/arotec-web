@@ -1,0 +1,186 @@
+/* Original Chemical Messengers artwork paired with editable text and the shared site shell. */
+html:has(body.cm-page){scroll-padding-top:0;scroll-behavior:auto}
+html body.cm-page{--cm-ink:#051341;--cm-teal:#005d65;--cm-purple:#443087;--cm-blue:#074083;background:#fff}
+html body.cm-page main#main.cm-main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:calc(var(--detail-header-space,112px) + 30px) 0 0!important;color:var(--cm-ink);background:#fff;font-family:var(--site-font,"DM Sans",sans-serif)!important}
+html body.cm-page main#main *,html body.cm-page main#main *::before,html body.cm-page main#main *::after{box-sizing:border-box;min-width:0}
+html body.cm-page main#main :is(h1,h2,h3,p,figure,ul,ol){margin:0!important;padding:0}
+html body.cm-page main#main :is(h1,h2,h3,p,li,span,strong,a,th,td,figcaption){font-family:var(--site-font,"DM Sans",sans-serif)!important;color:inherit;text-transform:none!important}
+html body.cm-page main#main :is(h1,h2,h3){font-weight:700!important;letter-spacing:-.025em!important;max-width:none!important}
+html body.cm-page main#main :is(ul,ol){list-style:none}
+html body.cm-page main#main p{font-size:clamp(16px,1.55cqw,23px)!important;line-height:1.5!important;font-weight:400!important;text-wrap:pretty}
+html body.cm-page main#main img{display:block;width:100%;height:auto;object-fit:contain;max-width:100%;border-radius:0;mix-blend-mode:multiply}
+html body.cm-page main#main .cm-sheet{width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px));max-width:1672px;margin:0 auto 72px;container-type:inline-size;content-visibility:visible;contain:none;scroll-margin-top:calc(var(--detail-header-space,112px) + 24px)}
+html body.cm-page main#main .cm-sheet::before,html body.cm-page main#main .cm-sheet::after{content:none!important}
+html body.cm-page main#main .cm-panel{padding:8px 0 16px;border:0;border-radius:0;background:transparent}
+html body.cm-page main#main .cm-heading{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:28px;border-bottom:2px solid var(--cm-teal);padding-bottom:26px;margin-bottom:32px}
+html body.cm-page main#main .cm-number{display:grid;place-items:center;width:clamp(68px,7cqw,100px);height:clamp(68px,7cqw,100px);border-radius:14px;background:var(--cm-ink);color:#fff;font-size:clamp(40px,4.8cqw,68px)!important;line-height:1;font-weight:700!important}
+html body.cm-page main#main .cm-heading :is(h1,h2){--arotec-display-size:clamp(30px,3.5cqw,56px);--arotec-display-line-height:1.22;--arotec-display-letter-spacing:-.025em;font-size:clamp(30px,3.5cqw,56px)!important;line-height:1.22!important;text-wrap:balance;overflow-wrap:anywhere;margin-bottom:12px!important}
+html body.cm-page main#main .cm-heading .cm-subtitle{color:var(--cm-teal);font-size:clamp(18px,1.6cqw,24px)!important;font-weight:500!important;line-height:1.5!important}
+html body.cm-page main#main .cm-intro-grid{display:grid;grid-template-columns:42% 54%;gap:4%;align-items:center}
+html body.cm-page main#main .cm-main-art{max-height:38cqw}
+html body.cm-page main#main .cm-definition{font-size:clamp(20px,1.9cqw,27px)!important;font-weight:500!important;line-height:1.5!important;margin-bottom:20px!important}
+html body.cm-page main#main .cm-features{display:flex;flex-direction:column}
+html body.cm-page main#main .cm-features>li{display:flex;align-items:center;gap:1.9cqw;font-size:clamp(18px,1.7cqw,25px)!important;font-weight:500!important;line-height:1.5}
+html body.cm-page main#main .cm-features>li>img{width:5.4cqw;height:5.4cqw;flex:0 0 5.4cqw}
+html body.cm-page main#main .cm-features>li>span{font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important}
+html body.cm-page main#main .cm-definition-features>li{padding:9px 0}
+html body.cm-page main#main .cm-definition-features>li>span{align-self:stretch;display:flex;align-items:center;flex:1;border-bottom:2px dotted var(--cm-teal);padding-bottom:12px}
+html body.cm-page main#main .cm-definition-features>li:last-child>span{border:0;padding-bottom:0}
+html body.cm-page main#main .cm-examples-title{display:flex;align-items:center;gap:24px;color:var(--cm-teal);font-size:clamp(24px,2.7cqw,40px)!important;line-height:1.3!important;margin:1.5cqw 0 1.4cqw!important;text-align:center}
+html body.cm-page main#main .cm-examples-title::before,html body.cm-page main#main .cm-examples-title::after{content:"";height:2px;flex:1;background:var(--cm-teal)}
+html body.cm-page main#main .cm-examples{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3cqw;text-align:center}
+html body.cm-page main#main .cm-examples img{width:13.5cqw;height:13.5cqw;margin:0 auto 10px}
+html body.cm-page main#main .cm-examples span{font-size:clamp(17px,1.5cqw,23px)!important;font-weight:600!important;line-height:1.4}
+html body.cm-page main#main .cm-callout{display:flex;align-items:center;gap:2.5cqw;border:2px solid var(--cm-ink);border-radius:18px;padding:1.6cqw 3cqw;margin:2.5cqw auto 0;min-height:9cqw}
+html body.cm-page main#main .cm-callout>img{width:8cqw;height:8cqw;flex:0 0 8cqw}
+html body.cm-page main#main .cm-callout p{flex:1;font-size:clamp(19px,1.8cqw,27px)!important;font-weight:500!important;line-height:1.5!important;text-align:center}
+html body.cm-page main#main .cm-comparison-grid{display:grid;grid-template-columns:56% 42%;gap:2%;align-items:center}
+html body.cm-page main#main .cm-table{border-spacing:0;border-collapse:separate;width:100%;table-layout:fixed;border:1px solid var(--cm-ink);border-radius:15px;overflow:hidden;font-size:clamp(16px,1.65cqw,24px)!important;line-height:1.45}
+html body.cm-page main#main .cm-table :is(th,td){padding:1.5cqw 1.1cqw;border-right:1px solid #52617e;border-bottom:1px solid #52617e;text-align:left;vertical-align:middle}
+html body.cm-page main#main .cm-table tr>:last-child{border-right:0}
+html body.cm-page main#main .cm-table tbody tr:last-child>*{border-bottom:0}
+html body.cm-page main#main .cm-table thead th{font-size:clamp(14px,1.45cqw,22px)!important;text-align:center;line-height:1.3}
+html body.cm-page main#main .cm-table thead th:first-child{width:41%;background:var(--cm-ink);color:#fff}
+html body.cm-page main#main .cm-table thead th:nth-child(2){width:26%}
+html body.cm-page main#main .cm-table thead th:last-child{background:var(--cm-teal);color:#fff}
+html body.cm-page main#main .cm-table tbody th{text-align:center;font-weight:600!important}
+html body.cm-page main#main .cm-table tbody th img{width:4.5cqw;height:4.5cqw;margin:0 auto 8px}
+html body.cm-page main#main .cm-table td:last-child strong{color:var(--cm-teal)}
+html body.cm-page main#main .cm-comparison-network{position:relative;width:100%;max-width:630px;justify-self:center}
+html body.cm-page main#main .cm-network-label{position:absolute;top:20.5%;font-size:clamp(12px,1.08cqw,18px)!important;line-height:1.3;font-weight:700!important;text-align:center;left:0;width:34%}
+html body.cm-page main#main .cm-network-label--body{left:69.5%;width:30%;color:var(--cm-teal)}
+html body.cm-page main#main .cm-comparison-network figcaption{position:absolute;left:34.8%;top:27.5%;width:31.6%;font-size:clamp(14px,1.32cqw,20px)!important;line-height:1.42;text-align:center}
+html body.cm-page main#main .cm-comparison .cm-callout{max-width:80%}
+html body.cm-page main#main .cm-pathway-grid{display:grid;grid-template-columns:minmax(0,1fr) 3.8cqw minmax(0,1.2fr) 8cqw minmax(0,1.1fr);align-items:stretch}
+html body.cm-page main#main .cm-pathway{border:1.5px solid var(--cm-blue);border-radius:17px;overflow:hidden;display:flex;flex-direction:column}
+html body.cm-page main#main .cm-pathway h3{font-size:clamp(18px,1.8cqw,28px)!important;line-height:1.3!important;text-align:center;background:var(--cm-blue);color:#fff;padding:1.2cqw .9cqw;min-height:6.5cqw;display:grid;place-items:center}
+html body.cm-page main#main .cm-pathway--1{border-color:var(--cm-purple)}
+html body.cm-page main#main .cm-pathway h3{display:block;align-content:center;min-height:7.2cqw}
+html body.cm-page main#main .cm-pathway--1 h3{background:var(--cm-purple)}
+html body.cm-page main#main .cm-pathway--2{border-color:var(--cm-teal)}
+html body.cm-page main#main .cm-pathway--2 h3{background:var(--cm-teal)}
+html body.cm-page main#main .cm-pathway .cm-features{padding:1.2cqw 1.8cqw!important;flex:1;justify-content:space-around}
+html body.cm-page main#main .cm-pathway .cm-features>li{flex:1;padding:1.1cqw 0;gap:1.3cqw;font-size:clamp(17px,1.5cqw,23px)!important;min-height:8.5cqw;border-bottom:2px dotted var(--cm-teal)}
+html body.cm-page main#main .cm-pathway .cm-features>li:last-child{border:0}
+html body.cm-page main#main .cm-pathway .cm-features>li>img{flex-basis:5.3cqw;width:5.3cqw;height:5.3cqw}
+html body.cm-page main#main .cm-pathway-arrow{align-self:center;padding:0 4px}
+html body.cm-page main#main .cm-coordination{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;color:var(--cm-teal);text-align:center;font-size:clamp(13px,1.25cqw,19px)!important;font-weight:500!important;line-height:1.35;padding:0 4px}
+html body.cm-page main#main .cm-coordination>img{height:12cqw;width:2.5cqw}
+html body.cm-page main#main .cm-coordination-flow{display:flex;flex-direction:column;align-items:center;gap:10px}
+html body.cm-page main#main .cm-coordination-flow>img{height:12cqw;width:2.5cqw}
+html body.cm-page main#main .cm-exercise .cm-coordination{position:relative}
+html body.cm-page main#main .cm-exercise .cm-both-arrow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+html body.cm-page main#main .cm-exercise .cm-coordination-flow{position:absolute;top:calc(50% + 2.5cqw);left:0;width:100%}
+html body.cm-page main#main .cm-exercise .cm-coordination-flow>img{height:6cqw}
+html body.cm-page main#main .cm-sleep .cm-pathway--0 .cm-features>li{border:0}
+html body.cm-page main#main .cm-coordination .cm-both-arrow{height:3cqw;width:6cqw}
+html body.cm-page main#main .cm-impact-grid{display:grid;grid-template-columns:31% 37% 32%;align-items:center;min-height:40cqw;padding:1.5cqw 0}
+html body.cm-page main#main .cm-impact .cm-features{gap:3cqw;align-self:stretch;justify-content:space-around}
+html body.cm-page main#main .cm-impact .cm-features>li{gap:1.5cqw;font-size:clamp(19px,1.85cqw,27px)!important;font-weight:500!important}
+html body.cm-page main#main .cm-impact .cm-features>li>img{width:9.5cqw;height:10cqw;flex-basis:9.5cqw}
+html body.cm-page main#main .cm-impact--wellbeing .cm-impact-right>li>img{order:2}
+html body.cm-page main#main .cm-impact--wellbeing .cm-impact-right>li>span{flex:1}
+html body.cm-page main#main .cm-impact--wellbeing .cm-impact-grid{grid-template-columns:28fr 44fr 28fr;gap:16px}
+html body.cm-page main#main .cm-callout--plain{border:0;border-top:2px solid var(--cm-teal);border-radius:0;padding-bottom:0}
+html body.cm-page main#main .cm-callout--plain p{font-weight:500!important;max-width:950px;margin:auto!important}
+html body.cm-page main#main .cm-stages{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2cqw;padding-top:2cqw!important}
+html body.cm-page main#main .cm-stage{--stage-color:#c67003;position:relative;border:1.5px solid var(--stage-color);border-radius:16px;padding:3.1cqw 1.5cqw 1.5cqw;text-align:center;display:flex;flex-direction:column;align-items:center}
+html body.cm-page main#main .cm-stage:nth-child(2){--stage-color:var(--cm-blue)}
+html body.cm-page main#main .cm-stage:nth-child(3){--stage-color:var(--cm-teal)}
+html body.cm-page main#main .cm-stage:nth-child(4){--stage-color:var(--cm-purple)}
+html body.cm-page main#main .cm-stage:nth-child(5){--stage-color:var(--cm-ink)}
+html body.cm-page main#main .cm-step{position:absolute;left:50%;top:-2.2cqw;transform:translateX(-50%);width:4.5cqw;height:4.5cqw;display:grid;place-items:center;border:3px solid #fff;border-radius:50%;background:var(--stage-color);color:#fff;font-size:clamp(26px,3.2cqw,48px)!important;font-weight:700!important;line-height:1}
+html body.cm-page main#main .cm-stage h3{font-size:clamp(18px,1.9cqw,28px)!important;line-height:1.3!important;color:var(--stage-color);min-height:7cqw;display:grid;place-items:center}
+html body.cm-page main#main .cm-stage .cm-day-icon{width:11cqw;height:11cqw;margin:1cqw auto 2cqw}
+html body.cm-page main#main .cm-stage p{border-top:4px dotted var(--stage-color);padding-top:1.4cqw;flex:1;font-size:clamp(17px,1.7cqw,25px)!important;line-height:1.5!important}
+html body.cm-page main#main .cm-stage .cm-stage-arrow{position:absolute;width:3cqw;right:-2.5cqw;top:32%;z-index:1}
+html body.cm-page main#main .cm-timeline{width:100%;margin-top:-1cqw;position:relative;mix-blend-mode:normal}
+html body.cm-page main#main .cm-daily .cm-callout{margin-top:1cqw}
+html body.cm-page main#main .cm-daily .cm-callout p{text-align:left}
+html body.cm-page main#main .cm-return{width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px));max-width:1672px;margin:0 auto 60px}
+html body.cm-page main#main .cm-return a{display:inline-flex;gap:12px;align-items:center;color:var(--cm-teal);font-size:18px!important;font-weight:600!important;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:6px}
+html body.cm-page main#main a:focus-visible{outline:3px solid #12859b;outline-offset:6px}
+@media(max-width:1600px){
+html body.cm-page main#main .cm-comparison-grid{grid-template-columns:1fr}
+html body.cm-page main#main .cm-comparison-network{width:550px;margin-top:24px!important}
+html body.cm-page main#main .cm-network-label{font-size:15px!important}
+html body.cm-page main#main .cm-comparison-network figcaption{font-size:18px!important}
+html body.cm-page main#main .cm-table tbody th img{display:inline-block;vertical-align:middle;width:48px;height:48px;margin:0 12px 0 0}
+html body.cm-page main#main .cm-stage h3{font-size:19px!important}
+html body.cm-page main#main .cm-stage p{font-size:17px!important}
+}
+@media(max-width:1199px){
+html body.cm-page main#main .cm-sheet,html body.cm-page main#main .cm-return{width:calc(100% - 32px)}
+html body.cm-page main#main .cm-panel{padding:8px 0 12px}
+html body.cm-page main#main .cm-sheet{margin-bottom:48px}
+html body.cm-page main#main .cm-heading{gap:20px;padding-bottom:20px;margin-bottom:24px}
+html body.cm-page main#main .cm-pathway-grid{grid-template-columns:1fr;gap:16px}
+html body.cm-page main#main .cm-pathway h3{padding:18px}
+html body.cm-page main#main .cm-pathway .cm-features{padding:12px 24px!important}
+html body.cm-page main#main .cm-pathway .cm-features>li{min-height:85px;gap:24px;padding:16px 0;font-size:20px!important}
+html body.cm-page main#main .cm-pathway .cm-features>li>img{flex-basis:60px;width:60px;height:60px}
+html body.cm-page main#main .cm-pathway-arrow{width:36px;height:36px;transform:rotate(90deg);justify-self:center}
+html body.cm-page main#main .cm-coordination{flex-direction:row;padding:8px;font-size:16px!important}
+html body.cm-page main#main .cm-coordination>img{display:none}
+html body.cm-page main#main .cm-coordination-flow,html body.cm-page main#main .cm-exercise .cm-coordination-flow{position:static;width:auto;flex-direction:row;gap:16px}
+html body.cm-page main#main .cm-coordination-flow>img,html body.cm-page main#main .cm-exercise .cm-coordination-flow>img{height:36px;width:14px}
+html body.cm-page main#main .cm-stages{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 20px;padding-top:24px!important}
+html body.cm-page main#main .cm-stage{padding:36px 18px 24px}
+html body.cm-page main#main .cm-step{width:52px;height:52px;top:-26px}
+html body.cm-page main#main .cm-stage h3{min-height:60px}
+html body.cm-page main#main .cm-stage .cm-day-icon{width:110px;height:110px;margin:14px auto 20px}
+html body.cm-page main#main .cm-stage p{padding-top:20px}
+html body.cm-page main#main .cm-stage .cm-stage-arrow,html body.cm-page main#main .cm-timeline{display:none}
+html body.cm-page main#main .cm-daily .cm-callout{margin-top:28px}
+html body.cm-page main#main .cm-impact .cm-features>li{font-size:18px!important;gap:10px}
+html body.cm-page main#main .cm-impact .cm-impact-grid{grid-template-columns:1fr 1fr;gap:26px}
+html body.cm-page main#main .cm-impact-grid>figure{grid-row:1;grid-column:1/-1;width:400px;max-width:100%;justify-self:center}
+}
+@media(max-width:767px){
+html body.cm-page main#main.cm-main{padding-top:calc(var(--detail-header-space,90px) + 18px)!important}
+html body.cm-page main#main .cm-panel{padding:4px 0 8px}
+html body.cm-page main#main .cm-heading{grid-template-columns:1fr;gap:16px}
+html body.cm-page main#main .cm-number{width:64px;height:64px;min-width:0;min-height:0;border-radius:12px;font-size:38px!important}
+html body.cm-page main#main .cm-heading :is(h1,h2){--arotec-display-size:clamp(26px,7.2vw,30px);font-size:clamp(26px,7.2vw,30px)!important;line-height:1.25!important;text-wrap:wrap}
+html body.cm-page main#main .cm-heading .cm-subtitle{font-size:17px!important}
+html body.cm-page main#main .cm-intro-grid{grid-template-columns:1fr;gap:24px}
+html body.cm-page main#main .cm-main-art{max-height:350px;width:100%;margin:0 auto}
+html body.cm-page main#main .cm-definition{font-size:20px!important}
+html body.cm-page main#main .cm-definition-features>li{font-size:18px!important;gap:16px;padding:10px 0}
+html body.cm-page main#main .cm-definition-features>li>img{flex-basis:48px;width:48px;height:48px}
+html body.cm-page main#main .cm-examples-title{margin:28px 0 20px!important;font-size:24px!important;gap:12px}
+html body.cm-page main#main .cm-examples{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+html body.cm-page main#main .cm-examples img{width:114px;height:114px;margin-bottom:12px}
+html body.cm-page main#main .cm-examples span{font-size:16px!important;overflow-wrap:anywhere}
+html body.cm-page main#main .cm-examples li:last-child{grid-column:1/-1}
+html body.cm-page main#main .cm-callout{padding:20px 16px;gap:16px;margin-top:24px;flex-direction:column}
+html body.cm-page main#main .cm-callout>img{width:64px;height:64px;flex-basis:64px}
+html body.cm-page main#main .cm-callout p{font-size:19px!important;line-height:1.5!important}
+html body.cm-page main#main .cm-comparison .cm-callout{max-width:100%}
+html body.cm-page main#main .cm-table,html body.cm-page main#main .cm-table tbody{display:block;border:0;overflow:visible}
+html body.cm-page main#main .cm-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+html body.cm-page main#main .cm-table tbody tr{display:grid;grid-template-columns:1fr;grid-template-rows:auto auto auto;border:1px solid #8291ab;border-radius:12px;margin-bottom:16px;overflow:hidden}
+html body.cm-page main#main .cm-table tbody th{grid-row:1;background:#f2f6fa;text-align:left}
+html body.cm-page main#main .cm-table tbody :is(th,td){display:block;padding:16px;border:0;font-size:17px!important}
+html body.cm-page main#main .cm-table tbody td::before{content:attr(data-label);display:block;font-size:15px!important;font-weight:700!important;color:var(--cm-teal);margin-bottom:8px}
+html body.cm-page main#main .cm-table tbody th img{width:40px;height:40px}
+html body.cm-page main#main .cm-comparison-network{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px!important}
+html body.cm-page main#main .cm-comparison-network>img{grid-column:1/-1}
+html body.cm-page main#main .cm-network-label{position:static;width:auto;font-size:13px!important}
+html body.cm-page main#main .cm-comparison-network figcaption{position:static;width:100%;grid-column:1/-1;font-size:18px!important;line-height:1.5}
+html body.cm-page main#main .cm-pathway h3{font-size:20px!important}
+html body.cm-page main#main .cm-pathway .cm-features{padding:8px 16px!important}
+html body.cm-page main#main .cm-pathway .cm-features>li{gap:16px;font-size:18px!important}
+html body.cm-page main#main .cm-pathway .cm-features>li>img{width:48px;height:48px;flex-basis:48px}
+html body.cm-page main#main .cm-impact .cm-impact-grid{grid-template-columns:1fr;padding:0;gap:24px}
+html body.cm-page main#main .cm-impact-grid>figure{grid-row:1;width:min(100%,370px);justify-self:center}
+html body.cm-page main#main .cm-impact .cm-features{gap:20px}
+html body.cm-page main#main .cm-impact .cm-features>li{gap:20px;font-size:21px!important}
+html body.cm-page main#main .cm-impact .cm-features>li>img{width:75px;height:75px;flex-basis:75px}
+html body.cm-page main#main .cm-impact--wellbeing .cm-impact-right>li>img{order:0}
+html body.cm-page main#main .cm-stages{grid-template-columns:1fr;gap:42px}
+html body.cm-page main#main .cm-stage h3{font-size:23px!important;min-height:0}
+html body.cm-page main#main .cm-stage p{font-size:19px!important}
+html body.cm-page main#main .cm-daily .cm-callout p{text-align:center}
+html body.cm-page main#main .cm-return{margin-bottom:36px}
+}

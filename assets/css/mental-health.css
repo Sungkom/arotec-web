@@ -1,0 +1,210 @@
+/* Original illustrations and readable web typography, within shared content gutters. */
+html:has(body.mh-page) { scroll-padding-top:0; scroll-behavior:auto; }
+html body.mh-page { --mh-ink:#061b55; --mh-teal:#006c80; --mh-line:#6e92bc; background:#fff; }
+html body.mh-page main#main.mh-main { display:block!important; width:100%!important; max-width:none!important; margin:0!important; padding:calc(var(--detail-header-space,112px) + 30px) 0 0!important; color:var(--mh-ink); background:#fff; font-family:var(--site-font,"DM Sans",sans-serif)!important; }
+html body.mh-page main#main * { box-sizing:border-box; min-width:0; }
+html body.mh-page main#main :is(h1,h2,h3,p,figure,ul,ol) { margin:0!important; padding:0; }
+html body.mh-page main#main :is(h1,h2,h3,p,li,span,a) { font-family:var(--site-font,"DM Sans",sans-serif)!important; color:inherit; text-transform:none!important; }
+html body.mh-page main#main :is(ul,ol) { list-style:none; }
+html body.mh-page main#main :is(h1,h2,h3) { font-weight:700!important; letter-spacing:-.025em!important; }
+html body.mh-page main#main p { font-size:clamp(16px,1.25cqw,19px)!important; line-height:1.6!important; font-weight:400!important; text-wrap:pretty; }
+html body.mh-page main#main img { display:block; width:100%; height:auto; object-fit:contain; max-width:100%; border-radius:0; mix-blend-mode:multiply; }
+html body.mh-page main#main .mh-sheet { width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px)); max-width:1672px; margin:0 auto 84px; padding:0; container-type:inline-size; scroll-margin-top:calc(var(--detail-header-space,112px) + 22px); content-visibility:visible; contain:none; }
+html body.mh-page main#main .mh-panel { position:relative; border:0; border-radius:0; padding:16px 0 0; background:#fff; }
+html body.mh-page main#main .mh-number { display:grid; place-items:center; width:5.8cqw; min-width:56px; height:4.7cqw; min-height:48px; border-radius:11px; background:#051c51; color:#fff; font-size:clamp(30px,3.35cqw,48px); font-weight:700; line-height:1; }
+html body.mh-page main#main .mh-heading h1 { --arotec-display-size:clamp(36px,4.4cqw,64px); --arotec-display-line-height:1.12; --arotec-display-letter-spacing:-.02em; }
+html body.mh-page main#main .mh-heading :is(h1,h2) { font-size:clamp(34px,4.2cqw,60px)!important; line-height:1.12!important; letter-spacing:-.02em!important; margin:20px 0 16px!important; text-wrap:balance; }
+html body.mh-page main#main .mh-heading .mh-subtitle { font-size:clamp(20px,1.8cqw,26px)!important; line-height:1.5!important; font-weight:500!important; color:var(--mh-teal); text-wrap:pretty; }
+html body.mh-page main#main .mh-heading::after { content:""; display:block; width:5.4cqw; min-width:56px; height:3px; margin:18px 0 22px; background:var(--mh-teal); border-radius:2px; }
+html body.mh-page main#main .mh-feature-list { display:grid; gap:20px; }
+html body.mh-page main#main .mh-feature { display:flex; align-items:center; gap:18px; }
+html body.mh-page main#main .mh-feature>img { flex:0 0 5.4cqw; width:5.4cqw; height:5.4cqw; min-width:48px; min-height:48px; }
+html body.mh-page main#main .mh-feature-copy { border-left:1px solid #91b9cd; padding-left:20px; }
+html body.mh-page main#main .mh-feature h3 { font-size:clamp(18px,1.6cqw,23px)!important; line-height:1.35!important; margin-bottom:8px!important; text-wrap:balance; }
+html body.mh-page main#main .mh-callout { display:flex; align-items:center; gap:24px; padding:18px 26px; border:1px solid #7595c5; border-radius:13px; margin-top:28px; background:#f9fbfe; }
+html body.mh-page main#main .mh-callout>img { flex:0 0 7cqw; width:7cqw; height:7cqw; max-width:100px; max-height:100px; }
+html body.mh-page main#main .mh-callout-copy { flex:1; padding-left:24px; border-left:1px solid #86acbe; }
+html body.mh-page main#main .mh-callout h3 { font-size:clamp(20px,2cqw,28px)!important; line-height:1.25!important; color:var(--mh-teal); margin-bottom:5px!important; }
+html body.mh-page main#main .mh-callout p { font-size:clamp(18px,1.55cqw,23px)!important; line-height:1.55!important; }
+html body.mh-page main#main .mh-hero-grid { display:grid; grid-template-columns:47% 53%; align-items:stretch; }
+html body.mh-page main#main .mh-hero-description { width:min(100%,560px); margin:0 0 24px!important; font-size:clamp(18px,1.45cqw,21px)!important; }
+html body.mh-page main#main .mh-hero .mh-feature-list { width:min(100%,560px); }
+html body.mh-page main#main .mh-hero .mh-feature { gap:24px; }
+html body.mh-page main#main .mh-hero .mh-feature-copy { padding-left:24px; }
+html body.mh-page main#main .mh-hero-portrait { display:flex; align-items:flex-end; }
+html body.mh-page main#main .mh-hero-portrait img { height:100%; object-position:bottom; }
+html body.mh-page main#main .mh-hero .mh-callout { margin-top:26px; }
+html body.mh-page main#main .mh-hero .mh-callout p { max-width:780px; }
+html body.mh-page main#main .mh-factors-layout { display:grid; grid-template-columns:28% 40% 28%; gap:2%; align-items:center; }
+html body.mh-page main#main .mh-factor-group h3 { max-width:16cqw; font-size:clamp(20px,2cqw,28px)!important; line-height:1.2!important; margin-bottom:18px!important; }
+html body.mh-page main#main .mh-factor-group--risk>h3 { color:#a01824; }
+html body.mh-page main#main .mh-factor-group--support>h3 { color:#155735; }
+html body.mh-page main#main .mh-factor-group .mh-feature { gap:16px; }
+html body.mh-page main#main .mh-factor-group .mh-feature>img { flex-basis:4.2cqw; width:4.2cqw; height:4.2cqw; min-width:40px; min-height:40px; }
+html body.mh-page main#main .mh-factor-group .mh-feature-copy { padding-left:16px; }
+html body.mh-page main#main .mh-dual-callouts { display:grid; grid-template-columns:1fr 1.15fr; gap:26px; }
+html body.mh-page main#main .mh-dual-callouts .mh-callout { padding:20px; gap:18px; }
+html body.mh-page main#main .mh-dual-callouts .mh-callout-copy { padding-left:20px; }
+html body.mh-page main#main .mh-dual-callouts .mh-callout p { font-size:clamp(16px,1.45cqw,21px)!important; }
+html body.mh-page main#main .mh-heading--inline { display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:26px; align-items:start; }
+html body.mh-page main#main .mh-heading--inline h2 { font-size:clamp(30px,3.3cqw,49px)!important; margin:6px 0 14px!important; }
+html body.mh-page main#main .mh-heading--inline .mh-subtitle { grid-column:2; font-size:clamp(18px,1.85cqw,27px)!important; }
+html body.mh-page main#main .mh-heading--inline::after { display:none; }
+html body.mh-page main#main .mh-integration-diagram { position:relative; aspect-ratio:1320 / 710; margin:28px 0 10px; }
+html body.mh-page main#main .mh-integration-art { position:absolute; left:24.3%; top:0; width:51.8%; height:100%; }
+html body.mh-page main#main .mh-integration-art img { height:100%; }
+html body.mh-page main#main .mh-integration-points { display:contents; }
+html body.mh-page main#main .mh-integration-point { position:absolute; width:21%; }
+html body.mh-page main#main .mh-integration-point>img { display:none; }
+html body.mh-page main#main .mh-integration-point h3 { font-size:clamp(17px,1.48cqw,22px)!important; line-height:1.35!important; margin-bottom:8px!important; text-wrap:balance; }
+html body.mh-page main#main .mh-integration-point p { font-size:clamp(16px,1.25cqw,18px)!important; line-height:1.5!important; }
+html body.mh-page main#main .mh-integration-point--brain { left:55.3%; top:1%; width:22.5%; }
+html body.mh-page main#main .mh-integration-point--emotion { left:1%; top:17%; text-align:right; }
+html body.mh-page main#main .mh-integration-point--behavior { left:0; top:44%; text-align:right; }
+html body.mh-page main#main .mh-integration-point--sleep { left:2%; top:70%; text-align:right; }
+html body.mh-page main#main .mh-integration-point--cognition { left:78%; top:17%; width:22%; }
+html body.mh-page main#main .mh-integration-point--sensory { left:79%; top:45%; }
+html body.mh-page main#main .mh-integration-point--endocrine { left:75%; top:68%; width:25%; }
+html body.mh-page main#main .mh-integration-point--autonomic { left:55%; top:88%; width:34%; }
+html body.mh-page main#main .mh-integration .mh-callout { width:88%; margin:64px auto 0; }
+html body.mh-page main#main .mh-triptych { display:grid; grid-template-columns:28% 40% 28%; gap:2%; align-items:stretch; margin-top:16px; }
+html body.mh-page main#main .mh-triptych .mh-feature-list { display:flex; flex-direction:column; justify-content:space-between; gap:30px; }
+html body.mh-page main#main .mh-triptych .mh-feature { gap:12px; align-items:flex-start; }
+html body.mh-page main#main .mh-triptych .mh-feature-copy { padding-left:12px; }
+html body.mh-page main#main .mh-triptych .mh-feature>img { flex-basis:6.5cqw; width:6.5cqw; height:6.5cqw; }
+html body.mh-page main#main .mh-triptych-figure { display:flex; align-items:center; justify-content:center; }
+html body.mh-page main#main .mh-triptych-figure img { height:100%; object-fit:contain; }
+html body.mh-page main#main .mh-cognition .mh-subtitle { max-width:65%; }
+html body.mh-page main#main .mh-context-note { padding:12px 24px; margin-top:24px; background:#f6fafb; border-color:#3a8295; }
+html body.mh-page main#main .mh-context-note>img { flex-basis:5cqw; width:5cqw; height:5cqw; }
+html body.mh-page main#main .mh-context-note p { color:#07505d; font-size:clamp(16px,1.65cqw,24px)!important; }
+html body.mh-page main#main .mh-cognition>.mh-panel>.mh-callout:last-child { margin-top:14px; }
+html body.mh-page main#main .mh-cognition>.mh-panel>.mh-callout:last-child p { max-width:1000px; font-size:clamp(21px,2.35cqw,34px)!important; font-weight:500!important; }
+html body.mh-page main#main .mh-lifespan-grid { display:grid; grid-template-columns:46% 52%; gap:2%; align-items:start; }
+html body.mh-page main#main .mh-lifespan .mh-heading h2 { font-size:clamp(32px,4.25cqw,61px)!important; }
+html body.mh-page main#main .mh-lifespan .mh-feature-list { gap:22px; }
+html body.mh-page main#main .mh-lifespan .mh-feature { align-items:flex-start; }
+html body.mh-page main#main .mh-lifespan-art { padding-top:22px; }
+html body.mh-page main#main .mh-lifespan-art>img { height:36cqw; }
+html body.mh-page main#main .mh-lifespan-timeline { margin-top:22px!important; }
+html body.mh-page main#main .mh-life-stages .mh-life-stage-image { display:none; }
+html body.mh-page main#main .mh-life-stages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:22px!important; text-align:center; }
+html body.mh-page main#main .mh-life-stages img { width:100%; height:9cqw; margin:0 auto 12px; }
+html body.mh-page main#main .mh-life-stages h3 { font-size:clamp(16px,1.5cqw,22px)!important; line-height:1.3!important; margin-bottom:6px!important; }
+html body.mh-page main#main .mh-life-stages p { font-size:16px!important; line-height:1.5!important; }
+html body.mh-page main#main .mh-domains .mh-heading--inline .mh-subtitle { grid-column:1 / -1; margin-top:8px!important; }
+html body.mh-page main#main .mh-domains .mh-heading--inline::after { display:block; margin-bottom:18px; }
+html body.mh-page main#main .mh-domains .mh-heading--inline h2 { font-size:clamp(32px,4cqw,60px)!important; }
+html body.mh-page main#main .mh-domains .mh-triptych { margin-top:4px; grid-template-columns:30% 35% 31%; }
+html body.mh-page main#main .mh-domains .mh-triptych-figure img { height:44cqw; max-height:650px; }
+html body.mh-page main#main .mh-domains .mh-feature-list { justify-content:space-around; }
+html body.mh-page main#main .mh-cycle-kicker { font-size:14px!important; font-weight:700!important; margin-bottom:20px!important; }
+html body.mh-page main#main .mh-cycle-heading { position:relative; text-align:center; }
+html body.mh-page main#main .mh-cycle-heading h2 { font-size:clamp(30px,3.2cqw,50px)!important; line-height:1.1!important; padding:0 6%; text-wrap:balance; }
+html body.mh-page main#main .mh-cycle-heading h2 span { color:var(--mh-teal); }
+html body.mh-page main#main .mh-cycle-heading>img { position:absolute; width:7%; top:10px; left:0; }
+html body.mh-page main#main .mh-cycle-heading p { color:var(--mh-teal); font-size:clamp(20px,1.9cqw,29px)!important; margin-top:16px!important; }
+html body.mh-page main#main .mh-cycle-stages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px; margin:34px 0 0!important; text-align:center; }
+html body.mh-page main#main .mh-cycle-stages li { position:relative; }
+html body.mh-page main#main .mh-cycle-flow { position:relative; padding:0 3% 26px; }
+html body.mh-page main#main .mh-cycle-return { position:absolute; inset:auto 0 0; width:100%; height:67%; pointer-events:none; }
+html body.mh-page main#main .mh-cycle-stages img { height:16.5cqw; margin:0 auto 14px; }
+html body.mh-page main#main .mh-cycle-stages h3 { font-size:clamp(17px,1.65cqw,24px)!important; line-height:1.3!important; min-height:2.6em; align-content:center; margin-bottom:8px!important; }
+html body.mh-page main#main .mh-cycle-stages li:last-child h3 { color:var(--mh-teal); }
+html body.mh-page main#main .mh-cycle-arrow { position:absolute; right:-31px; top:7.4cqw; font-size:26px; color:#123e82; }
+html body.mh-page main#main .mh-interface { display:grid; grid-template-columns:10% 37% 49%; gap:2%; align-items:center; padding:20px; margin-top:32px; border:1px solid #5275ab; border-radius:14px; background:#fbfcfe; }
+html body.mh-page main#main .mh-interface-copy { border-left:1px solid #84a4c7; padding-left:24px; }
+html body.mh-page main#main .mh-interface h3 { font-size:clamp(20px,2.2cqw,32px)!important; line-height:1.2!important; margin-bottom:10px!important; }
+html body.mh-page main#main .mh-interface-steps { display:flex; gap:10px; align-items:center; }
+html body.mh-page main#main .mh-interface-steps li { flex:1; }
+html body.mh-page main#main .mh-interface-steps i { color:#2e598b; }
+html body.mh-page main#main .mh-return { padding:0 24px 48px; text-align:center; }
+html body.mh-page main#main .mh-return a { display:inline-flex; align-items:center; gap:12px; padding:12px 0; text-decoration:none; border-bottom:1px solid #8babbe; font-size:16px; }
+html body.mh-page main#main a:focus-visible { outline:3px solid #08798b; outline-offset:6px; }
+@media(max-width:1199px) {
+ html body.mh-page main#main .mh-sheet { width:calc(100% - 48px); }
+}
+@media(max-width:1340px) {
+ html body.mh-page main#main .mh-panel { padding:16px 0 0; }
+ html body.mh-page main#main .mh-sheet { margin-bottom:64px; }
+ html body.mh-page main#main .mh-heading :is(h1,h2) { --arotec-display-size:clamp(34px,4.6cqw,52px); font-size:clamp(32px,4.4cqw,50px)!important; }
+ html body.mh-page main#main .mh-feature { gap:14px; }
+ html body.mh-page main#main .mh-feature-copy { padding-left:14px; }
+ html body.mh-page main#main .mh-hero .mh-feature { gap:14px; }
+ html body.mh-page main#main .mh-hero .mh-feature-copy { padding-left:14px; }
+ html body.mh-page main#main .mh-factors-layout { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.mh-page main#main .mh-factor-group h3 { max-width:100%; }
+ html body.mh-page main#main .mh-factors-brain { grid-column:1 / -1; grid-row:1; width:min(60%,410px); margin:0 auto 12px!important; }
+ html body.mh-page main#main .mh-dual-callouts { gap:18px; grid-template-columns:1fr 1fr; }
+ html body.mh-page main#main .mh-dual-callouts .mh-callout { display:block; }
+ html body.mh-page main#main .mh-dual-callouts .mh-callout>img { width:58px; height:58px; margin-bottom:14px; }
+ html body.mh-page main#main .mh-dual-callouts .mh-callout-copy { border:0; padding:0; }
+ html body.mh-page main#main .mh-heading--inline h2 { font-size:clamp(27px,3.5cqw,38px)!important; }
+ html body.mh-page main#main .mh-integration-diagram { aspect-ratio:auto; display:flex; flex-direction:column; margin-top:28px; }
+ html body.mh-page main#main .mh-integration-art { position:static; width:min(100%,510px); height:auto; margin:0 auto 30px!important; }
+ html body.mh-page main#main .mh-integration-points { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+ html body.mh-page main#main .mh-integration-point { position:static; width:auto; display:flex; gap:16px; text-align:left; }
+ html body.mh-page main#main .mh-integration-point>img { display:block; width:64px; height:64px; flex:0 0 64px; }
+ html body.mh-page main#main .mh-integration-point p { font-size:16px!important; }
+ html body.mh-page main#main .mh-integration .mh-callout { width:100%; margin-top:30px; }
+ html body.mh-page main#main .mh-triptych { grid-template-columns:1fr 1fr; gap:28px; }
+ html body.mh-page main#main .mh-domains .mh-triptych { grid-template-columns:1fr 1fr; }
+ html body.mh-page main#main .mh-triptych-figure { grid-column:1 / -1; grid-row:1; width:min(65%,480px); margin:0 auto 12px!important; }
+ html body.mh-page main#main .mh-triptych .mh-feature-list { gap:26px; justify-content:flex-start; }
+ html body.mh-page main#main .mh-triptych .mh-feature>img { width:64px; height:64px; flex-basis:64px; }
+ html body.mh-page main#main .mh-cognition .mh-subtitle { max-width:90%; }
+ html body.mh-page main#main .mh-lifespan-grid { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-lifespan .mh-heading h2 { max-width:800px; }
+ html body.mh-page main#main .mh-lifespan .mh-feature-list { grid-template-columns:1fr 1fr; }
+ html body.mh-page main#main .mh-lifespan-art>img { height:42cqw; }
+ html body.mh-page main#main .mh-life-stages img { height:12cqw; }
+ html body.mh-page main#main .mh-cycle-stages { grid-template-columns:1fr 1fr; gap:30px; }
+ html body.mh-page main#main .mh-cycle-stages img { height:190px; }
+ html body.mh-page main#main .mh-cycle-arrow { display:none; }
+ html body.mh-page main#main .mh-interface { grid-template-columns:70px 1fr; gap:20px; }
+ html body.mh-page main#main .mh-interface-steps { grid-column:1 / -1; width:min(100%,580px); margin:14px auto 0!important; }
+ html body.mh-page main#main .mh-interface-path { grid-column:1 / -1; width:min(100%,580px); margin:14px auto 0!important; }
+ html body.mh-page main#main .mh-cycle-return { display:none; }
+}
+@media(max-width:760px) {
+ html body.mh-page main#main.mh-main { padding-top:calc(var(--detail-header-space,80px) + 22px)!important; }
+ html body.mh-page main#main .mh-sheet { margin-bottom:54px; }
+ html body.mh-page main#main .mh-panel { padding:12px 0 0; }
+ html body.mh-page main#main .mh-heading :is(h1,h2) { --arotec-display-size:34px; font-size:32px!important; line-height:1.12!important; }
+ html body.mh-page main#main .mh-heading .mh-subtitle { font-size:20px!important; }
+ html body.mh-page main#main .mh-feature>img { width:50px; height:50px; flex-basis:50px; }
+ html body.mh-page main#main .mh-hero-grid { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-hero .mh-feature-list,html body.mh-page main#main .mh-hero-description { width:100%; max-width:100%; }
+ html body.mh-page main#main .mh-hero-portrait { width:min(100%,440px); margin:24px auto 0!important; }
+ html body.mh-page main#main .mh-hero-portrait img { max-height:490px; }
+ html body.mh-page main#main .mh-callout { gap:16px; padding:18px 16px; align-items:flex-start; }
+ html body.mh-page main#main .mh-callout>img { flex-basis:48px; width:48px; height:48px; }
+ html body.mh-page main#main .mh-callout-copy { padding-left:14px; }
+ html body.mh-page main#main .mh-callout p { font-size:16px!important; }
+ html body.mh-page main#main .mh-factors-layout,html body.mh-page main#main .mh-dual-callouts,html body.mh-page main#main .mh-integration-points,html body.mh-page main#main .mh-triptych { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-domains .mh-triptych { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-factors-brain { width:100%; }
+ html body.mh-page main#main .mh-dual-callouts { gap:0; }
+ html body.mh-page main#main .mh-heading--inline { display:block; }
+ html body.mh-page main#main .mh-heading--inline h2 { margin-top:18px!important; font-size:29px!important; }
+ html body.mh-page main#main .mh-integration-point>img { width:56px; height:56px; flex-basis:56px; }
+ html body.mh-page main#main .mh-integration-point h3 { font-size:18px!important; }
+ html body.mh-page main#main .mh-triptych-figure { width:100%; }
+ html body.mh-page main#main .mh-cognition .mh-subtitle { max-width:100%; }
+ html body.mh-page main#main .mh-lifespan .mh-feature-list { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-lifespan-art>img { height:auto; max-height:420px; }
+ html body.mh-page main#main .mh-life-stages { grid-template-columns:1fr 1fr; gap:24px 16px; }
+ html body.mh-page main#main .mh-life-stages img { height:110px; }
+ html body.mh-page main#main .mh-life-stages .mh-life-stage-image { display:block; }
+ html body.mh-page main#main .mh-lifespan-timeline { display:none; }
+ html body.mh-page main#main .mh-domains .mh-triptych-figure img { height:420px; }
+ html body.mh-page main#main .mh-cycle-heading>img { display:none; }
+ html body.mh-page main#main .mh-cycle-heading h2 { padding:0; font-size:30px!important; }
+ html body.mh-page main#main .mh-cycle-stages { grid-template-columns:1fr; }
+ html body.mh-page main#main .mh-cycle-stages img { height:210px; }
+ html body.mh-page main#main .mh-cycle-stages h3 { font-size:20px!important; min-height:0; }
+ html body.mh-page main#main .mh-interface { padding:18px 14px; grid-template-columns:50px 1fr; gap:14px; }
+ html body.mh-page main#main .mh-interface-copy { border:0; padding-left:0; }
+ html body.mh-page main#main .mh-interface h3 { font-size:20px!important; }
+ html body.mh-page main#main .mh-interface-steps { gap:4px; }
+}
