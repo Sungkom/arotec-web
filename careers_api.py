@@ -26,7 +26,7 @@ LOCATIONS = {"Taipei / New Taipei City", "Bangkok", "Tokyo", "Los Angeles / Cali
 CONSENT_VERSION = "2026-09-09"
 JOB_COLUMNS = "id,title,department,location,employment_type,experience,summary,description,requirements,status,created_at,updated_at"
 APPLICATION_COLUMNS = """id,reference,job_id,job_title,full_name,email,phone,current_location,
-preferred_locations,professional_background,current_role,profile_url,privacy_consent,
+preferred_locations,professional_background,"current_role",profile_url,privacy_consent,
 future_consent,consent_version,status,admin_notes,created_at,updated_at"""
 REFERENCE_JOBS = [
     ("Senior Flavorist", "Flavor", "Taipei / Bangkok", "5+ years", "Develop innovative flavors and solutions for food & beverage, health, and functional products."),
@@ -108,7 +108,7 @@ class CareersAPI:
                 job_id TEXT REFERENCES career_jobs(id), job_title TEXT NOT NULL,
                 full_name TEXT NOT NULL, email TEXT NOT NULL, phone TEXT NOT NULL,
                 current_location TEXT NOT NULL, preferred_locations TEXT NOT NULL,
-                professional_background TEXT NOT NULL, current_role TEXT NOT NULL,
+                professional_background TEXT NOT NULL, "current_role" TEXT NOT NULL,
                 profile_url TEXT NOT NULL, privacy_consent INTEGER NOT NULL,
                 future_consent INTEGER NOT NULL, consent_version TEXT NOT NULL,
                 status TEXT NOT NULL DEFAULT 'new', admin_notes TEXT NOT NULL DEFAULT '',
@@ -342,7 +342,7 @@ class CareersAPI:
                     now = timestamp()
                     self.execute(connection, """INSERT INTO career_applications
                         (id,reference,submission_key,submission_hash,job_id,job_title,full_name,email,phone,current_location,
-                         preferred_locations,professional_background,current_role,profile_url,privacy_consent,future_consent,
+                         preferred_locations,professional_background,"current_role",profile_url,privacy_consent,future_consent,
                          consent_version,status,admin_notes,created_at,updated_at)
                         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                         ON CONFLICT(submission_key) DO NOTHING""",

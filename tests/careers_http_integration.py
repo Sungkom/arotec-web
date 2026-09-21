@@ -3,11 +3,13 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import secrets
 import shutil
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from html.parser import HTMLParser
@@ -47,6 +49,17 @@ class RecruitmentHTTP(unittest.TestCase):
             raise RuntimeError("Unexpected test directory")
         server.DB_PATH = cls.data_directory / "test.sqlite"
         server.init_db()
+        execute = server.CAREERS.execute
+        def postgres_identifier_guard(connection, sql, parameters=()):
+            # SQLite accepts CURRENT_ROLE as a bare column; PostgreSQL treats
+            # it as a reserved session expression. Check the SQL actually used
+            # by schema creation, submission, and admin reads in this suite.
+            if re.search(r'(?<!")\bcurrent_role\b(?!")', sql, re.IGNORECASE):
+                raise AssertionError('The SQL column "current_role" must be quoted')
+            return execute(connection, sql, parameters)
+        guard = patch.object(server.CAREERS, "execute", side_effect=postgres_identifier_guard)
+        guard.start()
+        cls.addClassCleanup(guard.stop)
         server.CAREERS.initialize()
         server.CAREERS.initialize()
         class QuietHandler(server.ArotecHandler):
@@ -173,6 +186,7 @@ class RecruitmentHTTP(unittest.TestCase):
         self.assertEqual(self.request(path)[0], 401)
         detail = self.request(path, auth=True)[1]["application"]
         self.assertEqual(detail["full_name"], fields["full_name"])
+        self.assertEqual(detail["current_role"], fields["current_role"])
         self.assertEqual(detail["preferred_locations"], ["Bangkok"])
         self.assertEqual(len(detail["files"]), 2)
         self.assertEqual(detail["future_consent"], 1)
@@ -220,4 +234,3 @@ class RecruitmentHTTP(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
-
