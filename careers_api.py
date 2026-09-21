@@ -3,7 +3,9 @@
 PDF files are stored as private database blobs, never as public static assets.
 """
 import hashlib
+import ipaddress
 import json
+import os
 import re
 import secrets
 import threading
@@ -61,6 +63,11 @@ class CareersAPI:
         self.connect = connect
         self.postgres = postgres
         self.admin_password = admin_password
+        self.trust_render_proxy = (
+            os.environ.get("AROTEC_TRUST_RENDER_PROXY", "").strip().lower() == "true"
+            and os.environ.get("RENDER", "").strip().lower() == "true"
+            and os.environ.get("RENDER_SERVICE_TYPE", "") == "web"
+        )
         self.rate_lock = threading.Lock()
         self.rate_windows = OrderedDict()
         self.upload_slots = threading.BoundedSemaphore(2)
@@ -142,8 +149,22 @@ class CareersAPI:
         handler.end_headers()
         handler.wfile.write(body)
 
+    def client_ip(self, handler):
+        peer = handler.client_address[0]
+        if not self.trust_render_proxy:
+            return peer
+        # Render's public edge overwrites this single-IP header. Do not trust
+        # caller-supplied forwarding chains or headers on other deployments.
+        forwarded = handler.headers.get("CF-Connecting-IP", "").strip()
+        if "%" in forwarded:
+            return peer
+        try:
+            return str(ipaddress.ip_address(forwarded))
+        except ValueError:
+            return peer
+
     def rate_limit(self, handler, group, limit, seconds):
-        key = (group, handler.client_address[0])
+        key = (group, self.client_ip(handler))
         now = time.monotonic()
         with self.rate_lock:
             count, start = self.rate_windows.get(key, (0, now))
@@ -487,4 +508,3 @@ class CareersAPI:
             handler.close_connection = True
             self.response(handler, 500, {"ok": False, "error": "The recruitment service could not complete this request. Please try again."})
         return True
-
