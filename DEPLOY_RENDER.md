@@ -1,13 +1,16 @@
 # Deploy Arotec with GitHub, Render Free and Neon Free
 
 GitHub stores the source, Render runs the Python website and APIs, and Neon
-stores PostgreSQL data. The included `render.yaml` creates one Free Render web
-service; it does not create a Render Postgres database.
+stores PostgreSQL data. The included `render.yaml` configures the existing Free
+Render service `arotec-web` in Oregon (US West), preserving
+[arotec-web.onrender.com](https://arotec-web.onrender.com). It does not create a
+Render Postgres database.
 
 ## Database and secrets
 
-1. Create a Neon project on its Free plan in Singapore, matching the Render
-   region. If unavailable in the account, choose the nearest available region.
+1. Create a Neon project on its Free plan in AWS Oregon (`us-west-2`), near the
+   existing Render service. If unavailable, choose the nearest available region
+   while keeping the existing Render service in Oregon.
 2. Copy Neon's **direct PostgreSQL connection string**, with connection pooling
    disabled. Keep all provider-supplied parameters intact, including
    `sslmode=require` and any `channel_binding` setting. Use a backend database
@@ -23,13 +26,15 @@ that fallback on Render's ephemeral filesystem.
 
 ## GitHub connection and automatic deployment
 
-Connect `Sungkom/arotec-web` through Render's **GitHub provider integration**,
-select `main`, and use `render.yaml`. The Public Git Repository URL deployment
-option does not support automatic deploys.
+Reuse the existing `arotec-web` service, its Blueprint, and its **GitHub provider
+integration** for `Sungkom/arotec-web` on `main`. Automatic deployment is already
+enabled; sync this `render.yaml` through that existing Blueprint. Keep the
+current service and region so its URL is preserved. The Public Git Repository
+URL deployment option does not support automatic deploys.
 
 The Blueprint configures:
 
-- Free Python web service `arotec-web` in Singapore.
+- Existing Free Python web service `arotec-web` in Oregon.
 - Automatic deployment on each commit to `main`.
 - Python 3.14.6.
 - Build: `pip install -r requirements.txt`.
