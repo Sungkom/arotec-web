@@ -1,83 +1,96 @@
-# Deploy Arotec Website With Backend Database
+# Deploy Arotec with GitHub, Render Free and Neon Free
 
-This project is ready for Render Web Service + Render Postgres.
+GitHub stores the source, Render runs the Python website and APIs, and Neon
+stores PostgreSQL data. The included `render.yaml` creates one Free Render web
+service; it does not create a Render Postgres database.
 
-## What Render Runs
+## Database and secrets
 
-- Build command: `pip install -r requirements.txt`
-- Start command: `python server.py`
-- Public page: `/index.html`
-- Member form: `/pages/members.html`
-- Customized commerce page: `/pages/customized.html`
-- Admin member list: `/pages/admin-members.html`
-- Health check: `/api/health`
+1. Create a Neon project on its Free plan in Singapore, matching the Render
+   region. If unavailable in the account, choose the nearest available region.
+2. Copy Neon's **direct PostgreSQL connection string**, with connection pooling
+   disabled. Keep all provider-supplied parameters intact, including
+   `sslmode=require` and any `channel_binding` setting. Use a backend database
+   role that can create the site's tables and indexes.
+3. Enter the complete connection string as Render's secret `DATABASE_URL`.
+4. The owner enters `AROTEC_ADMIN_PASSWORD` in Render's secret environment
+   field. It controls contact, recruitment, member, and commerce administration.
 
-## Required Service Setup
+Both secrets use `sync: false` in the Blueprint. Never put their values in
+GitHub, screenshots, logs, or frontend files. No additional Python package is
+needed. Without `DATABASE_URL`, the server falls back to SQLite; do not use
+that fallback on Render's ephemeral filesystem.
 
-Use the included `render.yaml` as a Render Blueprint. It creates:
+## GitHub connection and automatic deployment
 
-- `arotec-web` web service
-- `arotec-members-db` PostgreSQL database
-- `DATABASE_URL` environment variable connected to the database
-- `AROTEC_ADMIN_PASSWORD` environment variable for admin member, product, formula and order data
+Connect `Sungkom/arotec-web` through Render's **GitHub provider integration**,
+select `main`, and use `render.yaml`. The Public Git Repository URL deployment
+option does not support automatic deploys.
 
-## Notes
+The Blueprint configures:
 
-- Locally, `server.py` uses SQLite at `database/members.sqlite`.
-- On Render, `server.py` uses PostgreSQL automatically when `DATABASE_URL` exists.
-- The server binds to `0.0.0.0` when Render provides `PORT`.
-- Admin member list: `/pages/admin-members.html`
-- Product, formula and order management is inside `/pages/customized.html` using the admin icon.
-- Public commerce APIs include `/api/catalog/products`, `/api/formulas` and `/api/orders`.
-- Admin APIs include `/api/admin/products`, `/api/admin/formulas` and `/api/admin/orders`.
+- Free Python web service `arotec-web` in Singapore.
+- Automatic deployment on each commit to `main`.
+- Python 3.14.6.
+- Build: `pip install -r requirements.txt`.
+- Start: `python server.py`.
+- Health check: `/api/health`.
 
-## Contact and recruitment deployment
+The server listens on Render's `PORT` at `0.0.0.0`. Use the same HTTPS Render
+URL, or attached custom domain, for pages and APIs:
 
-The same web service serves all HTML, assets, and Python API routes. Use its
-HTTPS Render URL (or an attached custom domain) for both public forms and admin:
+- Website: `/index.html`.
+- Contact: `/pages/get-in-touch.html`; admin: `/pages/contact-admin.html`.
+- Recruitment: `/pages/join-us.html`; admin: `/pages/careers-admin.html`.
+- Members: `/pages/members.html`; admin: `/pages/admin-members.html`.
+- Commerce administration: the admin control in `/pages/customized.html`.
 
-- `/pages/get-in-touch.html` and `/pages/contact-admin.html`
-- `/pages/join-us.html` and `/pages/careers-admin.html`
+The GitHub Pages copy remains static and cannot execute the Python APIs.
+Connecting Render and Neon does not make forms on the GitHub Pages origin
+submit to Render automatically.
 
-The GitHub Pages copy remains static and cannot run these APIs. Do not point
-the forms at a different origin without reviewing the integration and origin
-protection first.
+`AROTEC_TRUST_RENDER_PROXY=true` enables per-visitor rate limits only when
+Render also supplies `RENDER=true` and `RENDER_SERVICE_TYPE=web`. It validates
+the public edge's `CF-Connecting-IP`, with the socket address as fallback.
 
-### Blueprint configuration
+## Storage and Free-only cost guardrail
 
-Connect `Sungkom/arotec-web` through Render's GitHub integration, select `main`,
-and use `render.yaml`. The Blueprint sets automatic deployment on each commit,
-Python 3.14.6, the `/api/health` health check, and Singapore for both the web
-service and PostgreSQL. The database accepts internal connections only, and
-Render injects its internal connection string as `DATABASE_URL`.
+The owner selected **Free plans only**. Do not select paid plans or enable
+paid add-ons. Before deployment, inspect the Render account's billing controls
+and confirm there is no automatic overage charge path. Without a payment
+method, exhausting applicable free quotas can suspend services or stop builds;
+if billing is already attached, review the relevant spending controls before
+creating resources. A paid upgrade requires separate owner approval.
 
-Set `AROTEC_ADMIN_PASSWORD` in Render's secret environment field. Never put
-its value in the repository, screenshots, logs, or a public frontend file.
-The API disables contact submissions and administration until it is configured.
-Do not reuse the local SQLite database on Render's ephemeral filesystem.
+Startup initializes PostgreSQL tables and indexes. Reference recruitment
+positions are seeded once as drafts, not published vacancies. This setup does
+not migrate existing SQLite or Render Postgres records, notes, applications,
+or documents. Existing data needs a separate migration before a database switch.
 
-The Blueprint retains the Free plans until the owner selects the deployment
-plan. Free PostgreSQL expires after 30 days and is not durable production
-storage; use an approved paid database plan for ongoing inquiries and resumes.
-Free web services also sleep after inactivity. Review the actual service and
-storage charges in Render before creating paid resources.
+PDFs remain private PostgreSQL `BYTEA` values and count against **Neon's
+database storage quota**, not an object-storage quota. Each application can
+contain a 10 MiB resume and a 20 MiB portfolio. Downloads transfer the complete
+file through Render.
 
-`AROTEC_TRUST_RENDER_PROXY=true` enables per-visitor rate limits behind Render's
-public edge only when Render also supplies `RENDER=true` and
-`RENDER_SERVICE_TYPE=web`. It uses the validated
-`CF-Connecting-IP` supplied by that edge, with the socket address as fallback.
-Do not enable this setting for an untrusted proxy or another hosting platform.
+Render Free can sleep after inactivity, and Neon Free can suspend idle compute,
+so first requests can take longer. Storage is independent of Render restarts,
+but Free compute, storage, transfer, and usage limits still apply. This setup
+does not promise unlimited usage or permanent availability. Review
+[Render Free limits](https://render.com/docs/free) and
+[Neon plans and limits](https://neon.com/pricing).
 
-### Verify after the first deployment
+## Verify after deployment
 
-1. Confirm `/api/health` reports PostgreSQL, `/api/contact/status` enables
-   submissions, and `/api/careers/jobs` returns JSON.
-2. Confirm anonymous access to both admin APIs is rejected, then test sign-in.
-3. Confirm the web service cannot serve dotfiles, database files, or uploaded
-   applicant PDFs as public static files.
-4. Review the reference job drafts in Recruitment Admin and publish only real
-   vacancies. Startup does not publish the reference drafts automatically.
-5. Use clearly identified synthetic records for any approved submission checks;
-   verify them through admin and remove only those test records afterward.
+1. Confirm `/api/health` reports `postgres`. It identifies the selected backend;
+   also check `/api/careers/jobs` to exercise a real database read.
+2. Confirm `/api/contact/status` enables submissions, anonymous admin access is
+   rejected, and the owner can sign in through the HTTPS admin pages.
+3. Confirm dotfiles, private database paths, and applicant documents cannot be
+   fetched as public static files. Documents require authenticated downloads.
+4. Review recruitment drafts and publish only approved vacancies.
+5. For authorized submission checks, use clearly labeled synthetic data, verify
+   it in admin, and remove only those test records afterward.
+6. Confirm a subsequent GitHub commit triggers Render deployment without
+   replacing or resetting the Neon database.
 
-See `CONTACT_SETUP.md` and `CAREERS_SETUP.md` for the supported workflows.
+See `CONTACT_SETUP.md` and `CAREERS_SETUP.md` for supported workflows.

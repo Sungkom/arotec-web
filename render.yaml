@@ -17,14 +17,6 @@ services:
       - key: AROTEC_TRUST_RENDER_PROXY
         value: "true"
       - key: DATABASE_URL
-        fromDatabase:
-          name: arotec-members-db
-          property: connectionString
+        sync: false
       - key: AROTEC_ADMIN_PASSWORD
         sync: false
-
-databases:
-  - name: arotec-members-db
-    plan: free
-    region: singapore
-    ipAllowList: []
