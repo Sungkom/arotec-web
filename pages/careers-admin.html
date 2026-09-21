@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="same-origin">
+<title>Recruitment Admin | Arotec</title>
+<link rel="stylesheet" href="../assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
+<link rel="stylesheet" href="../assets/css/index-home.css?v=20260910-typography-title-case-v3">
+<link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715-home-footer-cleanup">
+<link rel="stylesheet" href="../assets/css/site-navigation.min.css?v=20260910-closed-panel-shadow-v1">
+<link rel="stylesheet" href="../assets/vendor/phosphor-icons/regular/style.css">
+<link rel="stylesheet" href="../assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="../assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
+    <link rel="stylesheet" href="../assets/css/site-typography.css?v=20260910-typography-complete-v5"><script src="../assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
+<link rel="stylesheet" href="../assets/css/synesthetic-flavor-partnership.css?v=20260905-v1">
+<link rel="stylesheet" href="../assets/css/careers-admin.css?v=20260919-join-us-v2">
+</head>
+<body class="sp-page ca-page" data-page="home" data-root="../" data-nav-active="join" data-header-variant="home" data-default-language="en" data-shell-only>
+<a class="skip-link" href="#main">Skip to content</a><div id="site-shell"></div>
+<main id="main" class="sp-main ca-main" data-home-detail tabindex="-1">
+<div class="ca-container">
+<header class="ca-header"><div><p class="ca-eyebrow">AROTEC / RECRUITMENT</p><h1>Recruitment Admin</h1></div><div class="ca-actions"><a class="ca-button ca-secondary" href="contact-admin.html">Contact inquiries</a><a class="ca-button ca-secondary" href="join-us.html">View Join Us</a><button class="ca-button ca-secondary" id="ca-logout" type="button" hidden>Sign out</button></div></header>
+<section class="ca-panel ca-login" id="ca-login-panel" aria-labelledby="ca-login-title">
+<h2 id="ca-login-title">Admin sign in</h2><p>Use the existing website admin password. Access is limited to authorized recruitment staff.</p>
+<form id="ca-login"><label>Admin password<input type="password" name="password" autocomplete="current-password" required maxlength="4096"></label><button class="ca-button" type="submit">Sign in</button></form>
+<p class="ca-help">Uses the server&rsquo;s AROTEC_ADMIN_PASSWORD. The password is kept only in this tab&rsquo;s memory and is cleared on sign out or inactivity.</p>
+<p class="ca-message" id="ca-login-message" role="status"></p>
+</section>
+<div id="ca-workspace" hidden>
+<nav class="ca-tabs" aria-label="Recruitment sections"><button class="ca-button" type="button" id="ca-jobs-tab" aria-pressed="true">Open positions</button><button class="ca-button ca-secondary" type="button" id="ca-apps-tab" aria-pressed="false">Applications</button></nav>
+<p class="ca-message" id="ca-message" role="status"></p>
+<section id="ca-jobs-panel" aria-labelledby="ca-jobs-title">
+<div class="ca-section-heading"><div><h2 id="ca-jobs-title">Manage positions</h2><p>Drafts stay private. Only published positions appear on Join Us.</p></div><button class="ca-button" type="button" id="ca-new-job">New position</button></div>
+<div class="ca-job-counts" id="ca-job-counts" aria-label="Position publication summary"></div>
+<div class="ca-job-layout"><div class="ca-panel"><p class="ca-help">Review the description and requirements before publishing. New positions start as drafts; the badge below shows each position&rsquo;s saved status.</p><div id="ca-jobs-list" class="ca-jobs-list"></div></div>
+<form class="ca-panel" id="ca-job-form"><h3 id="ca-editor-title">New position</h3>
+<div class="ca-fields"><label>Job title *<input name="title" maxlength="180" required></label><label>Department<input name="department" maxlength="120"></label></div>
+<label>Work location *<input name="location" maxlength="180" placeholder="Taipei / Bangkok" required></label>
+<div class="ca-fields"><label>Employment type *<input name="employment_type" maxlength="80" value="Full-time" required></label><label>Experience<input name="experience" maxlength="80" placeholder="3+ years"></label></div>
+<label>Card summary *<textarea name="summary" rows="3" maxlength="1000" required></textarea></label>
+<label>Job description *<textarea name="description" rows="6" maxlength="15000" required></textarea></label>
+<label>Requirements<textarea name="requirements" rows="5" maxlength="15000"></textarea></label>
+<label>Publication status<select name="status"><option value="draft">Draft - not visible on the website</option><option value="published">Published - accepting applications</option><option value="closed">Closed - no longer visible</option></select></label>
+<p class="ca-help" id="ca-publication-help" aria-live="polite"></p>
+<p class="ca-help">Text is displayed as plain text. Use line breaks for paragraphs and bullet-style lists.</p>
+<section class="ca-preview" aria-labelledby="ca-preview-heading"><h4 id="ca-preview-heading">Position card preview</h4><p class="ca-help">Preview updates as you type. Save the position to apply changes.</p><article class="ca-preview-card"><div class="ca-preview-heading"><span class="ca-preview-icon" aria-hidden="true"><i class="ph ph-flask" id="ca-preview-icon"></i></span><div><h5 id="ca-preview-title">Job title</h5><p class="ca-preview-location"><i class="ph ph-map-pin" aria-hidden="true"></i> <span id="ca-preview-location">Work location</span></p><div class="ca-preview-tags" id="ca-preview-tags"></div></div></div><p id="ca-preview-summary">A short summary of the role will appear here.</p><div class="ca-preview-actions" aria-hidden="true"><span>View details</span><span>Apply now</span></div></article></section>
+<div class="ca-actions"><button class="ca-button" type="submit" id="ca-save-job">Save position</button><button class="ca-button ca-secondary" type="button" id="ca-reset-job">Clear editor</button></div>
+</form></div>
+</section>
+<section id="ca-apps-panel" aria-labelledby="ca-apps-title" hidden>
+<div class="ca-section-heading"><div><h2 id="ca-apps-title">Applications</h2><p>Review applicant information, update progress and download submitted PDFs.</p></div></div>
+<form id="ca-app-filter" class="ca-filter ca-panel"><label>Search<input name="q" type="search" maxlength="180" placeholder="Name, email, reference or position"></label><label>Status<select name="status"><option value="">All statuses</option><option value="new">New</option><option value="in_review">In review</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="hired">Hired</option><option value="not_selected">Not selected</option></select></label><button class="ca-button" type="submit">Search</button></form>
+<div class="ca-panel ca-table-wrap"><table class="ca-table"><thead><tr><th>Applicant</th><th>Position</th><th>Submitted</th><th>Status</th><th>Details</th></tr></thead><tbody id="ca-apps-list"></tbody></table><p id="ca-empty-apps" class="ca-help" hidden>No applications match this search.</p></div>
+<div class="ca-pager"><button class="ca-button ca-secondary" id="ca-previous" type="button">Previous</button><span id="ca-page-label"></span><button class="ca-button ca-secondary" id="ca-next" type="button">Next</button></div>
+</section>
+</div>
+</div>
+</main>
+<div id="site-footer-shell"></div>
+<dialog class="ca-dialog" id="ca-app-dialog" aria-labelledby="ca-app-dialog-title"><button class="ca-close" type="button" id="ca-close-dialog" aria-label="Close applicant details"><i class="ph ph-x" aria-hidden="true"></i></button><p class="ca-eyebrow" id="ca-app-reference"></p><h2 id="ca-app-dialog-title">Application</h2>
+<dl id="ca-app-info" class="ca-app-info"></dl><h3>Submitted documents</h3><div class="ca-actions" id="ca-app-files"></div><p class="ca-warning">Uploaded PDFs are not malware-scanned. Scan downloaded documents with your security tools before opening them.</p>
+<form id="ca-app-form"><label>Application status<select name="status"><option value="new">New</option><option value="in_review">In review</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="hired">Hired</option><option value="not_selected">Not selected</option></select></label><label>Internal recruitment notes<textarea name="admin_notes" rows="5" maxlength="10000"></textarea></label><div class="ca-actions"><button class="ca-button" id="ca-save-app" type="submit">Save progress</button><button class="ca-button ca-danger" id="ca-delete-app" type="button">Delete application &amp; documents</button></div></form><p class="ca-message" id="ca-detail-message" role="status"></p></dialog>
+<script src="../assets/js/site.min.js?v=20260914-zh-cn-v1" defer></script>
+<script src="../assets/js/synesthetic-flavor-detail-shell.js?v=20260905-v1" defer></script>
+<script src="../assets/js/home-header.js?v=20260904-hero-logo-align-v3" defer></script>
+<script src="../assets/js/careers-admin.js?v=20260919-join-us-v2" defer></script>
+</body></html>

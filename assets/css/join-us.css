@@ -1,0 +1,208 @@
+/* Join Us — supplied September 2026 reference, within the shared site shell. */
+html body.ju-page { --ju-ink:#092b59; --ju-muted:#425878; --ju-line:#e0e5ed; --ju-soft:#f1f4f8; font-family:var(--site-font,"DM Sans",sans-serif); }
+html body.ju-page main#main#main { width:100%;max-width:none;margin:0;padding:var(--detail-header-space,134px) 0 0!important;background:#fff;color:var(--ju-ink);font-family:var(--site-font,"DM Sans",sans-serif); }
+.ju-main *, .ju-main *::before, .ju-main *::after { box-sizing:border-box; }
+html body.ju-page main#main#main .ju-section { padding:18px 5.1% 0;scroll-margin-top:calc(var(--detail-header-space,0px) + 20px); }
+html body.ju-page main#main#main .ju-container { width:100%!important;max-width:1280px!important;margin-inline:auto!important;min-width:0; }
+html body.ju-page main#main#main .ju-hero { position:relative;isolation:isolate;display:flex;align-items:center;min-height:38.1vw;padding:4.8% 5.1% 4.1%;background:#f3f5f7; }
+.ju-page .ju-hero-image { position:absolute;z-index:-1;inset:0;width:100%;height:100%;object-fit:cover;object-position:center; }
+.ju-page .ju-hero-grid { display:block; }
+.ju-page .ju-hero-copy { width:34%;max-width:450px; }
+html body.ju-page main#main#main p { color:inherit; }
+html body.ju-page main#main#main .ju-hero p { font-size:clamp(13px,1.22vw,17px)!important;line-height:1.5!important;margin:0 0 1.3em; }
+html body.ju-page main#main#main .ju-hero .ju-lead { font-size:clamp(23px,2.25vw,32px)!important;line-height:1.3!important;margin:8px 0 0;letter-spacing:.01em; }
+.ju-page .ju-hero p:last-child { margin-bottom:0!important; }
+.ju-page .ju-rule { display:block;width:42px;height:2px;margin:16px 0 19px;background:var(--ju-ink); }
+.ju-page .ju-section-heading { text-align:center;margin:0 0 14px; }
+.ju-page .ju-section-heading h2::after { content:"";display:block;width:26px;height:2px;background:#6b87ad;margin:6px auto 0; }
+html body.ju-page main#main#main .ju-section-heading p { margin:5px 0 0;font-size:clamp(12px,1.15vw,15px)!important;line-height:1.4!important;color:var(--ju-muted); }
+.ju-page .ju-jobs { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px; }
+.ju-page .ju-job { display:flex;flex-direction:column;gap:17px;min-width:0;padding:20px 18px 17px;border:1px solid var(--ju-line);border-radius:13px;background:#fff; }
+.ju-page .ju-job-header { display:flex;gap:16px;align-items:flex-start; }
+.ju-page .ju-icon { display:grid;place-items:center;width:54px;height:54px;flex:0 0 54px;border-radius:15px;background:var(--ju-soft);color:var(--ju-ink); }
+.ju-page .ju-icon i { font-size:32px;line-height:1; }
+.ju-page .ju-job .ju-icon { width:49px;height:49px;flex-basis:49px;color:#fff;background:var(--ju-ink);box-shadow:0 2px 8px #092b5918; }
+html body.ju-page main#main#main .ju-job-location { margin:5px 0 0;font-size:clamp(12px,1.1vw,15px)!important;line-height:1.4!important; }
+.ju-page .ju-job-location i { margin-right:4px; }
+.ju-page .ju-tags { display:flex;flex-wrap:wrap;gap:8px;margin-top:10px; }
+.ju-page .ju-tags span { padding:3px 9px;background:var(--ju-soft);border-radius:20px;font-size:clamp(11px,.95vw,13px);line-height:1.4; }
+html body.ju-page main#main#main .ju-job-summary { margin:0;font-size:clamp(13px,1.2vw,17px)!important;line-height:1.5!important; }
+.ju-page .ju-job-actions { display:flex;gap:14px;margin-top:auto; }
+.ju-page .ju-job-actions>* { flex:1; }
+.ju-page .ju-button { display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:38px;padding:8px 12px;border:1px solid var(--ju-ink);border-radius:4px;background:var(--ju-ink);color:#fff;font:600 12px/1.3 var(--site-font,"DM Sans",sans-serif);text-decoration:none;text-align:center;text-transform:uppercase;cursor:pointer; }
+.ju-page .ju-button--outline { border-color:#9aa8bc;background:#fff;color:var(--ju-ink); }
+.ju-page .ju-button--wide { width:100%; }
+.ju-page .ju-button:disabled { opacity:.55;cursor:not-allowed; }
+.ju-page .ju-button:hover:not(:disabled) { background:#164274;color:#fff; }
+.ju-page :is(button,a,input,select,textarea):focus-visible { outline:3px solid #347db0;outline-offset:3px; }
+.ju-page .ju-text-button { display:block;margin:13px auto 0;padding:4px 10px;border:0;background:none;color:var(--ju-ink);font:600 12px var(--site-font,"DM Sans",sans-serif);cursor:pointer; }
+.ju-page .ju-text-button i { margin-left:10px; }
+.ju-page [hidden] { display:none!important; }
+.ju-page .ju-talent { display:grid;grid-template-columns:1.08fr 1fr;gap:30px;padding:23px 28px;margin-top:15px;border-radius:12px;background:var(--ju-soft); }
+.ju-page .ju-talent-copy { display:flex;gap:24px;align-items:center; }
+.ju-page .ju-talent-copy>.ju-icon { width:92px;flex-basis:92px;background:none; }
+.ju-page .ju-talent-copy>.ju-icon i { font-size:72px; }
+html body.ju-page main#main#main .ju-talent-copy p { font-size:clamp(11px,1vw,14px)!important;line-height:1.6!important;margin:10px 0 13px; }
+.ju-page .ju-benefits { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px;list-style:none;padding:0 0 0 30px;margin:0;border-left:1px solid #d6deea; }
+.ju-page .ju-benefits li { display:grid;justify-items:center;align-content:start;gap:7px;text-align:center;font-size:clamp(10px,.9vw,12px);line-height:1.4;font-weight:600; }
+.ju-page .ju-benefits i { font-size:33px;line-height:1; }
+html body.ju-page main#main#main .ju-apply { padding-top:18px;padding-bottom:12px; }
+.ju-page .ju-steps { list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px;padding:0 28px;margin:0 0 14px;text-align:center; }
+.ju-page .ju-steps li { display:flex;position:relative;flex-direction:column;align-items:center;gap:7px; }
+.ju-page .ju-step-arrow { position:absolute;right:-21px;top:26px;font-size:18px; }
+.ju-page .ju-steps .ju-icon { width:70px;height:70px;flex:0 0 70px;border-radius:50%; }
+.ju-page .ju-steps .ju-icon i { font-size:40px; }
+.ju-page .ju-steps b { display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:var(--ju-ink);color:#fff;font-size:12px;line-height:1; }
+html body.ju-page main#main#main .ju-steps p { font-size:clamp(11px,1vw,14px)!important;line-height:1.45!important;max-width:155px;margin:0; }
+.ju-page .ju-form-grid { display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:stretch; }
+.ju-page .ju-panel { position:relative;min-width:0;margin:0;padding:18px;border:1px solid var(--ju-line);border-radius:11px;background:#fff; }
+.ju-page .ju-panel>legend { float:left;width:100%;padding:0;font-size:clamp(15px,1.3vw,18px);line-height:1.3;font-weight:700;text-transform:uppercase; }
+.ju-page .ju-panel>legend::after { content:"";display:block;width:24px;height:2px;margin:7px 0 10px;background:var(--ju-ink); }
+.ju-page .ju-panel-body { clear:both; }
+html body.ju-page main#main#main .ju-help { font-size:11px!important;color:var(--ju-muted);line-height:1.5!important;margin:6px 0 7px; }
+.ju-page .ju-fields { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px; }
+.ju-page .ju-fields--three { grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+.ju-page .ju-panel label:not(.ju-check):not(.ju-file) { display:block;margin-bottom:9px;font-size:10px;line-height:1.4;font-weight:600; }
+.ju-page .ju-required { color:#b22234; }
+.ju-page :is(input:not([type="checkbox"]):not([type="file"]),select,textarea) { display:block;box-sizing:border-box;width:100%;min-width:0;min-height:32px;margin-top:4px;padding:6px 9px;border:1px solid #dce2eb;border-radius:3px;background:#fcfdff;color:var(--ju-ink);font:400 11px/1.4 var(--site-font,"DM Sans",sans-serif); }
+.ju-page input::placeholder,.ju-page textarea::placeholder { color:#68768b;opacity:1; }
+.ju-page select:disabled { background:#edf1f5;opacity:.65; }
+.ju-page textarea { resize:vertical; }
+.ju-page .ju-location-field { width:51%; }
+.ju-page .ju-position-row { display:grid;grid-template-columns:1.05fr 1fr;gap:20px;align-items:center; }
+.ju-page .ju-check { display:flex;align-items:flex-start;gap:7px;margin:7px 0;font-size:10px;line-height:1.45;font-weight:400; }
+.ju-page input[type="checkbox"] { width:13px;height:13px;flex:0 0 13px;margin:1px 0 0;accent-color:var(--ju-ink); }
+.ju-page .ju-preferences { padding:0;border:0;margin:0 0 8px; }
+.ju-page .ju-preferences legend { font-size:10px;font-weight:600;padding:0; }
+.ju-page .ju-preferences legend span { font-weight:400; }
+.ju-page .ju-check-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px; }
+.ju-page .ju-check-grid .ju-check { margin:5px 0; }
+.ju-page .ju-personal-panel .ju-button { min-height:32px;font-size:11px; }
+.ju-page .ju-file { display:flex;gap:15px;padding:10px 14px;margin:0 0 7px;background:var(--ju-soft);border-radius:5px; }
+.ju-page .ju-file>span { min-width:0; }
+.ju-page .ju-file i { font-size:26px;line-height:1.2; }
+.ju-page .ju-file strong { display:block;font-size:11px;line-height:1.3; }
+.ju-page .ju-file small { display:block;font-size:10px;line-height:1.35;margin:3px 0 5px;color:var(--ju-muted); }
+.ju-page input[type="file"] { display:block;max-width:100%;font:400 10px var(--site-font,"DM Sans",sans-serif); }
+.ju-page input[type="file"]::file-selector-button { padding:3px 17px;margin-right:8px;border:1px solid #c1ccda;border-radius:3px;background:#fff;color:var(--ju-ink);font:600 10px var(--site-font,"DM Sans",sans-serif);text-transform:uppercase;cursor:pointer; }
+.ju-page .ju-file-info { display:block;font-size:11px;margin-top:5px;overflow-wrap:anywhere; }
+.ju-page .ju-file-info:empty { display:none; }
+.ju-page .ju-file-notes { list-style:none;font-size:10px;line-height:1.6;padding:0;margin:0; }
+.ju-page .ju-file-notes li { display:flex;gap:5px;align-items:baseline; }
+.ju-page .ju-file-notes i { flex-shrink:0; }
+.ju-page .ju-upload-panel .ju-help { text-transform:uppercase; }
+.ju-page .ju-background { margin-top:18px;scroll-margin-top:calc(var(--detail-header-space,100px) + 20px); }
+.ju-page .ju-background :is(input,textarea) { font-size:14px; }
+.ju-page .ju-background label:not(.ju-check):not(.ju-file) { font-size:13px; }
+.ju-page .ju-consent { display:grid;grid-template-columns:1.6fr 1fr;gap:35px;align-items:center;padding:16px 20px;margin-top:15px;border-radius:10px;background:var(--ju-soft); }
+.ju-page .ju-consent fieldset { border:0;min-width:0;padding:0;margin:0; }
+.ju-page .ju-consent legend { font-size:15px;line-height:1.3;font-weight:700;padding:0;text-transform:uppercase; }
+.ju-page .ju-consent .ju-check:last-child { margin-bottom:0; }
+.ju-page .ju-submit-area { max-width:320px;width:100%;justify-self:center; }
+.ju-page .ju-submit-area .ju-button { min-height:48px;font-size:15px; }
+html body.ju-page main#main#main .ju-submit-area p { font-size:10px!important;text-align:center;line-height:1.4!important;margin:8px 0 0; }
+.ju-page .ju-notice { padding:14px 18px;border-radius:8px;background:#eef4fa;font-size:14px;line-height:1.6;margin:12px 0; }
+.ju-page .ju-notice:empty { display:none; }
+.ju-page .ju-notice.is-error { color:#8b2430;background:#fff0f1; }
+.ju-page .ju-honeypot { position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden; }
+.ju-page .ju-application { scroll-margin-top:calc(var(--detail-header-space,100px) + 20px); }
+.ju-page .ju-values { padding:12px 5.1% 15px;background:#092b59;color:#fff; }
+.ju-page .ju-values ul { list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:0;margin:10px 0 0; }
+.ju-page .ju-values li { display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border-left:1px solid #ffffff20;font-size:12px;line-height:1.3; }
+.ju-page .ju-values li:first-child { border-left:0; }
+.ju-page .ju-values i { font-size:31px; }
+.ju-page .ju-dialog { box-sizing:border-box;max-width:min(720px,90vw);width:720px;max-height:85vh;padding:36px;border:1px solid var(--ju-line);border-radius:16px;color:var(--ju-ink);font-family:var(--site-font,"DM Sans",sans-serif); }
+.ju-page .ju-dialog::backdrop { background:rgba(9,25,50,.55); }
+.ju-page .ju-dialog-close { float:right;width:36px;height:36px;border:0;border-radius:50%;background:var(--ju-soft);color:var(--ju-ink);cursor:pointer; }
+.ju-page .ju-job-description { white-space:pre-wrap;overflow-wrap:anywhere;font-size:16px;line-height:1.75;margin:22px 0; }
+.ju-page .ju-eyebrow { font-size:12px;letter-spacing:.08em;font-weight:600; }
+/* Match the compact reference while keeping shared fonts and navigation. */
+@layer arotec-display-headings.spec.request-20260910 {
+ html body.ju-page main#main#main h1 { margin:0!important;font-size:clamp(54px,6.6vw,90px)!important;line-height:1.05!important;font-weight:800!important;letter-spacing:-1.8px!important;text-transform:uppercase!important; }
+ html body.ju-page main#main#main h2 { margin:0!important;font-size:clamp(19px,1.75vw,25px)!important;line-height:1.2!important;font-weight:700!important;letter-spacing:0!important; }
+ html body.ju-page main#main#main h3 { margin:0!important;font-size:clamp(15px,1.35vw,19px)!important;line-height:1.25!important;font-weight:700!important;letter-spacing:0!important; }
+ html body.ju-page main#main#main .ju-talent h3 { font-size:clamp(19px,1.8vw,25px)!important; }
+ html body.ju-page main#main#main .ju-steps h3 { max-width:105px;min-height:32px;font-size:clamp(12px,1.1vw,15px)!important; }
+ html body.ju-page main#main#main .ju-hero .ju-lead { font-size:clamp(23px,2.25vw,32px)!important;line-height:1.3!important; }
+ html body.ju-page main#main#main .ju-section-heading p { font-size:clamp(12px,1.15vw,15px)!important;line-height:1.4!important; }
+ html body.ju-page main#main#main .ju-values h2 { color:#fff!important;font-size:clamp(11px,1.1vw,15px)!important;letter-spacing:.08em!important;text-align:center; }
+ html body.ju-page .ju-dialog h2 { font-size:30px!important;line-height:1.3!important;letter-spacing:-.5px!important; }
+ html body.ju-page .ju-dialog h3 { font-size:20px!important;line-height:1.3!important;letter-spacing:0!important; }
+}
+@media(min-width:1600px) { html body.ju-page main#main#main .ju-hero { min-height:600px; } .ju-page .ju-hero-copy { width:35%; } }
+@media(max-width:900px) {
+ html body.ju-page main#main#main .ju-hero { min-height:390px; }
+ .ju-page .ju-hero-copy { width:40%; }
+ .ju-page .ju-jobs { gap:12px; }.ju-page .ju-job { padding:15px 12px; }.ju-page .ju-job-header { gap:10px; }.ju-page .ju-job .ju-icon { width:40px;height:40px;flex-basis:40px; }.ju-page .ju-job-actions { gap:8px; }.ju-page .ju-job-actions .ju-button { font-size:10px;padding-inline:5px; }
+ .ju-page .ju-talent { gap:20px;padding:22px; }.ju-page .ju-talent-copy { gap:15px; }.ju-page .ju-talent-copy>.ju-icon { width:58px;flex-basis:58px; }.ju-page .ju-talent-copy>.ju-icon i { font-size:52px; }.ju-page .ju-benefits { padding-left:20px; }
+ .ju-page .ju-form-grid { grid-template-columns:1fr; }.ju-page .ju-panel label:not(.ju-check):not(.ju-file),.ju-page .ju-check,.ju-page .ju-preferences legend,.ju-page .ju-file-notes { font-size:12px; }
+ .ju-page :is(input:not([type="checkbox"]):not([type="file"]),select,textarea) { min-height:40px;font-size:14px; }.ju-page .ju-file strong { font-size:13px; }.ju-page .ju-file small,.ju-page input[type="file"] { font-size:12px; }
+}
+@media(max-width:640px) {
+ html body.ju-page main#main#main .ju-section { padding:26px 20px 0; }
+ html body.ju-page main#main#main .ju-hero { padding:215px 22px 28px;min-height:0;background:#f1f4f7; }
+ .ju-page .ju-hero-image { height:195px;object-fit:cover;object-position:63% top; }.ju-page .ju-hero-copy { width:100%;max-width:none; }
+ html body.ju-page main#main#main .ju-hero p { font-size:15px!important; }.ju-page .ju-rule { margin:16px 0; }
+ .ju-page .ju-section-heading { margin-bottom:20px; }.ju-page .ju-jobs { grid-template-columns:1fr;gap:14px; }.ju-page .ju-job { padding:20px;gap:17px; }.ju-page .ju-job-header { gap:15px; }.ju-page .ju-job .ju-icon { width:49px;height:49px;flex-basis:49px; }
+ html body.ju-page main#main#main .ju-job-summary { font-size:15px!important; }.ju-page .ju-job-actions .ju-button { min-height:44px;font-size:12px; }.ju-page .ju-tags span { font-size:12px; }
+ .ju-page .ju-talent { grid-template-columns:1fr;padding:23px 20px;gap:23px;margin-top:24px; }.ju-page .ju-talent-copy { align-items:flex-start;gap:15px; }.ju-page .ju-talent-copy>.ju-icon { flex-basis:40px;width:40px;height:40px; }.ju-page .ju-talent-copy>.ju-icon i { font-size:40px; }
+ html body.ju-page main#main#main .ju-talent-copy p { font-size:13px!important; }.ju-page .ju-benefits { border-left:0;padding:22px 0 0;border-top:1px solid var(--ju-line);gap:23px 10px; }.ju-page .ju-benefits li { font-size:11px; }
+ html body.ju-page main#main#main .ju-apply { padding-top:28px;padding-bottom:24px; }.ju-page .ju-steps { grid-template-columns:1fr;gap:17px;padding:0;margin-bottom:24px;text-align:left; }.ju-page .ju-steps li { display:grid;grid-template-columns:54px 22px 1fr;gap:5px 12px;align-items:center; }.ju-page .ju-steps .ju-icon { grid-row:1/3;width:54px;height:54px; }.ju-page .ju-steps .ju-icon i { font-size:31px; }.ju-page .ju-steps b { grid-column:2;grid-row:1/3; }.ju-page .ju-step-arrow { display:none; }
+ html body.ju-page main#main#main .ju-steps p { grid-column:3;font-size:13px!important;max-width:none; }
+ .ju-page .ju-panel { padding:18px; }.ju-page .ju-fields,.ju-page .ju-fields--three { grid-template-columns:1fr;gap:2px; }.ju-page .ju-location-field { width:100%; }.ju-page .ju-position-row { grid-template-columns:1fr;gap:0; }.ju-page .ju-check-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px; }.ju-page .ju-preferences { margin:12px 0; }
+ .ju-page :is(input:not([type="checkbox"]):not([type="file"]),select,textarea) { font-size:16px;min-height:44px; }.ju-page input[type="checkbox"] { width:16px;height:16px;flex-basis:16px; }.ju-page .ju-check { margin-block:9px; }.ju-page .ju-personal-panel .ju-button { min-height:44px; }
+ .ju-page .ju-file { padding:14px 10px;gap:10px; }.ju-page .ju-file small { font-size:11px; }.ju-page input[type="file"] { font-size:11px; }.ju-page input[type="file"]::file-selector-button { min-height:36px;padding-inline:10px; }.ju-page .ju-file-notes { font-size:11px;line-height:1.75; }
+ .ju-page .ju-consent { grid-template-columns:1fr;gap:22px;padding:20px; }.ju-page .ju-consent .ju-check { font-size:12px; }.ju-page .ju-submit-area { max-width:none; }.ju-page .ju-submit-area .ju-button { min-height:50px; }
+ .ju-page .ju-values { padding:20px; }.ju-page .ju-values ul { grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 8px;margin-top:22px; }.ju-page .ju-values li { font-size:11px; }.ju-page .ju-values li:nth-child(4) { border:0; }.ju-page .ju-dialog { padding:24px; }
+}
+@layer arotec-display-headings.spec.request-20260910 {
+ @media(max-width:640px) {
+  html body.ju-page main#main#main h1 { font-size:55px!important; }
+  html body.ju-page main#main#main h2 { font-size:22px!important; }
+  html body.ju-page main#main#main h3 { font-size:18px!important; }
+  html body.ju-page main#main#main .ju-steps h3 { grid-column:3;max-width:none;min-height:0;font-size:14px!important; }
+ }
+}
+/* Keep compact UI text independent of global editorial body/button sizes. */
+html body.ju-page main#main#main .ju-button { font-size:12px!important;line-height:1.3!important;font-weight:600!important; }
+html body.ju-page main#main#main .ju-benefits li { font-size:clamp(10px,.9vw,12px)!important;line-height:1.4!important;font-weight:600!important; }
+html body.ju-page main#main#main .ju-file-notes li { font-size:10px!important;line-height:1.6!important; }
+html body.ju-page main#main#main .ju-values li { font-size:12px!important;line-height:1.3!important; }
+html body.ju-page main#main#main .ju-personal-panel .ju-button { font-size:11px!important; }
+html body.ju-page main#main#main .ju-submit-area .ju-button { font-size:15px!important; }
+html body.ju-page main#main#main .ju-hero p:not(.ju-lead) { font-size:clamp(12px,1.14vw,16px)!important; }
+html body.ju-page main#main#main .ju-hero { min-height:38.1vw;padding-top:6.4%;padding-bottom:4.1%; }
+@media(max-width:900px) { html body.ju-page main#main#main .ju-hero { min-height:390px; } html body.ju-page main#main#main .ju-file-notes li { font-size:12px!important; } }
+@media(max-width:640px) {
+ html body.ju-page main#main#main .ju-hero { padding:215px 22px 28px;min-height:0; }
+ html body.ju-page main#main#main .ju-hero p:not(.ju-lead) { font-size:15px!important; }
+ html body.ju-page main#main#main .ju-benefits li,html body.ju-page main#main#main .ju-values li,html body.ju-page main#main#main .ju-file-notes li { font-size:11px!important; }
+ html body.ju-page main#main#main :is(input:not([type="checkbox"]):not([type="file"]),select,textarea) { font-size:16px!important;font-weight:400!important; }
+}
+@media(min-width:901px) {
+ .ju-page .ju-job { padding:17px 16px;gap:12px; }
+ html body.ju-page main#main#main .ju-job-summary { line-height:1.4!important; }
+ .ju-page .ju-job-actions .ju-button { min-height:32px;padding-block:6px; }
+ .ju-page .ju-panel { padding:15px; }
+ .ju-page .ju-panel label:not(.ju-check):not(.ju-file) { font-size:9.5px;margin-bottom:6px; }
+ html body.ju-page main#main#main :is(input:not([type="checkbox"]):not([type="file"]),select) { min-height:25px;margin-top:3px;padding:4px 8px;font-size:10px!important;font-weight:400!important;line-height:1.4!important; }
+ .ju-page .ju-panel>legend::after { margin:5px 0 8px; }
+ .ju-page .ju-check-grid .ju-check { margin:3px 0;font-size:9.5px; }
+ .ju-page .ju-preferences { margin-bottom:6px; }
+ .ju-page .ju-preferences legend { line-height:1.4; }
+ .ju-page .ju-personal-panel .ju-button { min-height:28px;padding-block:6px; }
+ .ju-page .ju-file { padding:8px 12px;gap:12px; }
+ .ju-page .ju-file>span { display:block;line-height:1.25; }
+ .ju-page .ju-file strong { font-size:10px; }
+ .ju-page .ju-file small { font-size:9px;margin:2px 0 4px; }
+ html body.ju-page main#main#main input[type="file"] { font-size:10px!important;line-height:1.25!important;font-weight:400!important; }
+ .ju-page input[type="file"]::file-selector-button { padding:2px 14px; }
+ .ju-page .ju-consent { padding-block:13px; }
+}
+html:has(body.ju-page) { scroll-behavior:auto!important; }
+.ju-page .ju-apply>.ju-container>.ju-section-heading { margin-bottom:7px; }
+.ju-page .ju-steps { margin-bottom:7px; }
+@media(min-width:641px) { .ju-page .ju-steps li { gap:5px; }.ju-page .ju-steps .ju-icon { width:64px;height:64px;flex-basis:64px; } }
+/* The reference has neutral surfaces; suppress the shared decorative wash. */
+html body.ju-page main#main#main>section::before { content:none!important; }
+@media(max-width:640px) { .ju-page .ju-desktop-break { display:none; } }

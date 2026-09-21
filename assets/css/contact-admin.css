@@ -1,0 +1,12 @@
+.ct-page .ct-caption { text-align:left;padding:0 12px 18px;color:var(--ca-muted);font-size:13px; }
+.ct-page .ct-detail-form { margin-top:26px; }
+.ct-page .ca-badge--in_progress { background:#fff3d9;color:#805413; }
+.ct-page .ca-badge--replied { background:#e4f3eb;color:#216448; }
+.ct-page .ca-table td:nth-child(2),.ct-page .ca-table td:nth-child(3) { min-width:150px; }
+.ct-page .ca-table td:nth-child(4) { min-width:130px; }
+.ct-page #ct-page-label { text-align:center; }
+.ct-page .ca-dialog h2 { overflow-wrap:anywhere; }
+html body.ct-page .ca-button:not(.ca-secondary):not(.ca-danger) { color:#fff!important;-webkit-text-fill-color:#fff; }
+.ct-page #ct-reply { overflow-wrap:anywhere; }
+@media(max-width:580px) { .ct-page .ca-header .ca-actions { width:100%; } .ct-page .ca-pager { gap:8px; } .ct-page .ca-pager .ca-button { padding:10px 12px; } }
+

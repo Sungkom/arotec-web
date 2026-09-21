@@ -7,6 +7,8 @@ import os
 import secrets
 import sqlite3
 import traceback
+from careers_api import CareersAPI
+from contact_api import ContactAPI
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -354,6 +356,10 @@ def make_public_code(prefix: str) -> str:
     return f"{prefix}-{secrets.token_hex(4).upper()}"
 
 
+CAREERS = CareersAPI(connect_db, bool(DATABASE_URL), ADMIN_PASSWORD)
+CONTACT = ContactAPI(connect_db, bool(DATABASE_URL), ADMIN_PASSWORD)
+
+
 class ArotecHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(BASE_DIR), **kwargs)
@@ -362,10 +368,46 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
+    def send_head(self):
+        # The database contains private member and recruitment records and PDFs.
+        # Serve public web assets only, including for HEAD requests.
+        candidate = Path(self.translate_path(self.path)).resolve()
+        try:
+            relative = candidate.relative_to(BASE_DIR)
+        except ValueError:
+            self.send_error(403, "Forbidden")
+            return None
+        if any(part.startswith(".") or part.lower() == "database" for part in relative.parts):
+            self.send_error(403, "Forbidden")
+            return None
+        if candidate.is_dir():
+            for filename in ("index.html", "index.htm"):
+                index = candidate / filename
+                if index.is_file():
+                    candidate = index.resolve()
+                    break
+            else:
+                self.send_error(403, "Directory listing is disabled")
+                return None
+        try:
+            relative = candidate.relative_to(BASE_DIR)
+        except ValueError:
+            self.send_error(403, "Forbidden")
+            return None
+        allowed = {".html", ".htm", ".css", ".js", ".mjs", ".json", ".png", ".jpg", ".jpeg", ".webp", ".avif", ".svg", ".gif", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".eot", ".mp4", ".webm", ".mp3", ".wav", ".pdf", ".txt", ".xml", ".webmanifest"}
+        if candidate.suffix.lower() not in allowed or any(part.startswith(".") or part.lower() == "database" for part in relative.parts):
+            self.send_error(403, "Forbidden")
+            return None
+        return super().send_head()
+
     def do_OPTIONS(self) -> None:
+        if CAREERS.handle(self) or CONTACT.handle(self):
+            return
         json_response(self, 200, {"ok": True})
 
     def do_GET(self) -> None:
+        if CAREERS.handle(self) or CONTACT.handle(self):
+            return
         parsed = urlparse(self.path)
         if parsed.path == "/api/health":
             json_response(self, 200, {"ok": True, "database": db_backend()})
@@ -396,6 +438,8 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self) -> None:
+        if CAREERS.handle(self) or CONTACT.handle(self):
+            return
         parsed = urlparse(self.path)
         if parsed.path == "/api/members":
             self.create_member()
@@ -414,6 +458,8 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         json_response(self, 404, {"ok": False, "error": "Not found"})
 
     def do_PUT(self) -> None:
+        if CAREERS.handle(self) or CONTACT.handle(self):
+            return
         parsed = urlparse(self.path)
         if parsed.path.startswith("/api/admin/products/"):
             if not self.require_admin():
@@ -423,6 +469,8 @@ class ArotecHandler(SimpleHTTPRequestHandler):
         json_response(self, 404, {"ok": False, "error": "Not found"})
 
     def do_DELETE(self) -> None:
+        if CAREERS.handle(self) or CONTACT.handle(self):
+            return
         parsed = urlparse(self.path)
         if parsed.path.startswith("/api/admin/products/"):
             if not self.require_admin():
@@ -1001,6 +1049,8 @@ class ArotecHandler(SimpleHTTPRequestHandler):
 
 def main() -> None:
     init_db()
+    CAREERS.initialize()
+    CONTACT.initialize()
     mimetypes.add_type("application/javascript; charset=utf-8", ".js")
     mimetypes.add_type("text/css; charset=utf-8", ".css")
     server = ThreadingHTTPServer((HOST, PORT), ArotecHandler)
