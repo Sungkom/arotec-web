@@ -179,9 +179,10 @@ html body.ci-page .ci-team a:hover { text-decoration:underline;text-underline-of
 @media(max-width:700px) { .ci-page .ci-location-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(min-width:701px) and (max-width:1000px) { .ci-page .ci-hero::before { inset-inline-end:38%; } }
 
-/* Keep the complete banner in proportion across desktop widths. The ratio
-   belongs to the full-width backdrop, independently of the content gutters. */
+/* Fill the desktop viewport below the measured shared header. Keep the
+   photograph proportional; allow the copy to set the minimum on short screens. */
 @media(min-width:1001px) {
- .ci-page .ci-hero { display:grid;aspect-ratio:1045 / 484; }
+ .ci-page .ci-hero { display:grid;min-height:calc(100vh - var(--detail-header-space,134px));min-height:calc(100svh - var(--detail-header-space,134px)); }
  .ci-page .ci-hero-grid { min-height:0;align-items:center; }
+ .ci-page .ci-hero-copy { padding-block:32px; }
 }
