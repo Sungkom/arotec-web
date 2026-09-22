@@ -3,7 +3,7 @@
 
   const start = () => {
     const shell = document.getElementById("site-shell");
-    const main = document.querySelector("main.he-main");
+    const main = document.querySelector("body.cf-page main.cf-main");
     const footer = document.getElementById("site-footer-shell");
     if (!shell || !main || !footer) return;
 
@@ -13,7 +13,10 @@
       if (!header?.isConnected) return;
       const position = getComputedStyle(header).position;
       const overlaysContent = position === "fixed" || position === "absolute";
-      main.style.setProperty("--he-header-space", overlaysContent ? header.offsetHeight + "px" : "0px");
+      const space = overlaysContent ? `${header.offsetHeight}px` : "0px";
+      if (main.style.getPropertyValue("--detail-header-space") !== space) {
+        main.style.setProperty("--detail-header-space", space);
+      }
     };
 
     const resizeObserver = "ResizeObserver" in window ? new ResizeObserver(updateHeaderSpace) : null;
@@ -22,9 +25,14 @@
     stateObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
     const mountHomeShell = () => {
-      // Keep the same nodes, including their content, through a shell rerender.
-      // The index shell's navigation and footer rules rely on this ancestry.
+      // The index header and footer styles depend on this shared ancestry.
+      // Reuse the original content nodes when the language controls rerender it.
       shell.append(main, footer);
+
+      shell.querySelectorAll('.site-header a[href^="#"], .site-footer a[href^="#"]').forEach((link) => {
+        const hash = link.getAttribute("href");
+        if (hash && hash.length > 1) link.setAttribute("href", `../index.html${hash}`);
+      });
 
       const nextHeader = shell.querySelector(".site-header");
       if (nextHeader !== header) {
@@ -45,9 +53,8 @@
         ? event.target.closest("#languageSelect")
         : event.target.closest("[data-lang-chip]");
       if (!languageControl) return;
-      // site.js replaces shell.innerHTML before wiring the new footer controls.
-      // Park these nodes in the document so that content survives and the
-      // newsletter form remains discoverable while wireEvents runs.
+      // site.js replaces shell.innerHTML synchronously. Keep the main and
+      // footer in the document so its newsletter event binding still works.
       if (main.parentElement === shell) shell.after(main, footer);
     };
 

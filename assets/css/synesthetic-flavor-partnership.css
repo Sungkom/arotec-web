@@ -1,5 +1,6 @@
+/* Compatibility: preserve existing consumers; latest Partnership keeps its original route. */
 /* Shared home shell, with scoped Partnership content styles. */
-html body.sp-page main#main.sp-main {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main.sp-main {
   --sp-ink: #09264d;
   --sp-soft: #264a73;
   --sp-blue: #1277d5;
@@ -9,140 +10,328 @@ html body.sp-page main#main.sp-main {
   color: var(--sp-ink);
   background: #f8fbff;
 }
-.sp-main *, .sp-main *::before, .sp-main *::after { box-sizing: border-box; }
-.sp-container { width: calc(100% - 120px); max-width: 1320px; margin-inline: auto; }
-.sp-section { padding: 88px 0; }
-.sp-hero { padding-top: 64px; }
-.sp-tint { background: #eff7ff; }
-.sp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.sp-split > * { min-width: 0; }
-html body.sp-page main#main h1 {
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-main *, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-main *::before, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-main *::after { box-sizing: border-box; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-container { width: calc(100% - 120px); max-width: 1320px; margin-inline: auto; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-section { padding: 88px 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-hero { padding-top: 64px; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-tint { background: #eff7ff; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-split > * { min-width: 0; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h1 {
   font-size: 56px !important; line-height: 1.12 !important; font-weight: 700 !important;
   letter-spacing: -1.12px !important; text-transform: uppercase;
   color: var(--sp-ink); margin: 0 0 28px !important;
 }
-html body.sp-page main#main h2 {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h2 {
   font-size: 48px !important; line-height: 1.15 !important; font-weight: 700 !important;
   letter-spacing: -.96px !important; text-transform: uppercase;
   color: var(--sp-ink); margin: 0 0 24px !important;
 }
-html body.sp-page main#main h3 {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h3 {
   font-size: 20px !important; line-height: 1.35 !important; font-weight: 700 !important;
   letter-spacing: -.2px !important; color: var(--sp-ink); margin: 0 0 14px !important;
 }
-html body.sp-page main#main p {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main p {
   font-size: 18px !important; line-height: 1.6 !important; font-weight: 400 !important;
   color: var(--sp-soft); margin: 0 0 20px;
 }
-html body.sp-page main#main .sp-eyebrow {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-eyebrow {
   font-size: 14px !important; line-height: 1.5 !important; font-weight: 700 !important;
   letter-spacing: 1.8px; text-transform: uppercase; color: var(--sp-blue); margin-bottom: 22px;
 }
-html body.sp-page main#main .sp-lead {
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-lead {
   font-size: 24px !important; line-height: 1.4 !important; font-weight: 500 !important; margin-bottom: 28px;
 }
-.sp-art { position: relative; width: 100%; aspect-ratio: var(--ratio); overflow: hidden; border-radius: 24px; }
-html body.sp-page main#main .sp-art img {
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-art { position: relative; width: 100%; aspect-ratio: var(--ratio); overflow: hidden; border-radius: 24px; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-art img {
   position: absolute; width: var(--width); max-width: none !important; height: auto;
   display: block; left: var(--left); top: var(--top);
 }
-.sp-icon {
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-icon {
   width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0; color: var(--sp-blue); border: 1px solid var(--sp-line); border-radius: 50%;
 }
-.sp-icon i { font-size: 26px; line-height: 1; }
-.sp-benefits, .sp-insights, .sp-support-steps, .sp-commitments { list-style: none; padding: 0; }
-.sp-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 36px 0 0; }
-.sp-benefits li { text-align: center; }
-.sp-benefits li + li { border-left: 1px solid var(--sp-line); padding-left: 16px; }
-.sp-benefits span:not(.sp-icon) { display: block; margin-top: 14px; font-size: 13px; line-height: 1.5; font-weight: 500; text-transform: uppercase; }
-.sp-purpose { margin-top: 56px; border-left: 2px solid var(--sp-blue); padding: 0 0 0 28px; max-width: 1050px; }
-html body.sp-page main#main .sp-purpose h2 { font-size: 32px !important; line-height: 1.35 !important; text-transform: none; letter-spacing: -.4px !important; }
-.sp-purpose h2 span { color: var(--sp-blue); }
-html body.sp-page main#main .sp-purpose p:last-child { margin-bottom: 0; }
-.sp-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; border-top: 1px solid var(--sp-line); padding-top: 36px; }
-.sp-pillars article { padding-inline: 30px; border-left: 1px solid var(--sp-line); }
-.sp-pillars article:first-child { padding-left: 0; border-left: 0; }
-.sp-pillars article:last-child { padding-right: 0; }
-.sp-pillars .sp-icon { margin-bottom: 20px; }
-html body.sp-page main#main .sp-pillars h3 { text-transform: uppercase; }
-html body.sp-page main#main .sp-pillars p { margin-bottom: 0; font-size: 16px !important; }
-.sp-heading { text-align: center; margin-bottom: 48px; }
-html body.sp-page main#main .sp-feature-title { font-size: 36px !important; line-height: 1.2 !important; margin-bottom: 24px !important; }
-.sp-insights { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--sp-line); }
-.sp-insights li { padding-inline: 22px; border-left: 1px solid var(--sp-line); text-align: center; }
-.sp-insights li:first-child { border-left: 0; padding-left: 0; }
-.sp-insights li:last-child { padding-right: 0; }
-.sp-number { display: block; font-size: 13px; color: var(--sp-blue); font-weight: 500; letter-spacing: 1px; margin: 14px 0 10px; }
-html body.sp-page main#main .sp-insights h3 { font-size: 18px !important; }
-html body.sp-page main#main .sp-insights p { font-size: 15px !important; margin: 0; }
-html body.sp-page main#main .sp-quote {
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-icon i { font-size: 26px; line-height: 1; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-steps, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments { list-style: none; padding: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 36px 0 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits li { text-align: center; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits li + li { border-left: 1px solid var(--sp-line); padding-left: 16px; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits span:not(.sp-icon) { display: block; margin-top: 14px; font-size: 13px; line-height: 1.5; font-weight: 500; text-transform: uppercase; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-purpose { margin-top: 56px; border-left: 2px solid var(--sp-blue); padding: 0 0 0 28px; max-width: 1050px; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-purpose h2 { font-size: 32px !important; line-height: 1.35 !important; text-transform: none; letter-spacing: -.4px !important; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-purpose h2 span { color: var(--sp-blue); }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-purpose p:last-child { margin-bottom: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; border-top: 1px solid var(--sp-line); padding-top: 36px; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article { padding-inline: 30px; border-left: 1px solid var(--sp-line); }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article:first-child { padding-left: 0; border-left: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article:last-child { padding-right: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars .sp-icon { margin-bottom: 20px; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-pillars h3 { text-transform: uppercase; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-pillars p { margin-bottom: 0; font-size: 16px !important; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-heading { text-align: center; margin-bottom: 48px; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-feature-title { font-size: 36px !important; line-height: 1.2 !important; margin-bottom: 24px !important; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--sp-line); }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li { padding-inline: 22px; border-left: 1px solid var(--sp-line); text-align: center; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:first-child { border-left: 0; padding-left: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:last-child { padding-right: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-number { display: block; font-size: 13px; color: var(--sp-blue); font-weight: 500; letter-spacing: 1px; margin: 14px 0 10px; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-insights h3 { font-size: 18px !important; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-insights p { font-size: 15px !important; margin: 0; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-quote {
   max-width: 880px; margin: 40px auto 0; border: 0; padding: 24px;
   font-family: inherit; font-style: normal; font-size: 24px; line-height: 1.5;
   color: var(--sp-soft); text-align: center; background: rgba(255, 255, 255, .6); border-radius: 16px;
 }
-.sp-closing { margin-top: 40px; text-align: center; padding-top: 28px; border-top: 1px solid var(--sp-line); }
-html body.sp-page main#main .sp-closing h3 { color: var(--sp-blue); font-size: 32px !important; line-height: 1.3 !important; }
-html body.sp-page main#main .sp-closing p { margin-bottom: 0; }
-.sp-support { grid-template-columns: .85fr 1.15fr; }
-.sp-support-art { margin: 0; }
-.sp-support-steps { margin: 32px 0 0; }
-.sp-support-steps li { display: grid; grid-template-columns: 54px 28px minmax(0, 1fr); gap: 18px; align-items: center; border-top: 1px solid var(--sp-line); padding: 14px 0; }
-.sp-support-steps .sp-number { margin: 0; }
-html body.sp-page main#main .sp-support-steps h3 { margin: 0 !important; }
-html body.sp-page main#main .sp-statement { color: var(--sp-blue); font-size: 28px !important; font-weight: 500 !important; margin: 28px 0 0; }
-.sp-commitments { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 0; }
-.sp-commitments li { display: flex; gap: 14px; align-items: center; padding: 12px 16px 12px 12px; border: 1px solid var(--sp-line); border-radius: 40px; font-size: 20px; font-weight: 500; }
-.sp-trust { margin-top: 48px; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-closing { margin-top: 40px; text-align: center; padding-top: 28px; border-top: 1px solid var(--sp-line); }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-closing h3 { color: var(--sp-blue); font-size: 32px !important; line-height: 1.3 !important; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-closing p { margin-bottom: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support { grid-template-columns: .85fr 1.15fr; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-art { margin: 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-steps { margin: 32px 0 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-steps li { display: grid; grid-template-columns: 54px 28px minmax(0, 1fr); gap: 18px; align-items: center; border-top: 1px solid var(--sp-line); padding: 14px 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-steps .sp-number { margin: 0; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-support-steps h3 { margin: 0 !important; }
+html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-statement { color: var(--sp-blue); font-size: 28px !important; font-weight: 500 !important; margin: 28px 0 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 0; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments li { display: flex; gap: 14px; align-items: center; padding: 12px 16px 12px 12px; border: 1px solid var(--sp-line); border-radius: 40px; font-size: 20px; font-weight: 500; }
+:where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-trust { margin-top: 48px; }
 @media (max-width: 1199px) {
-  .sp-container { width: calc(100% - 80px); }
-  .sp-split { gap: 36px; }
-  html body.sp-page main#main h1 { font-size: 46px !important; }
-  html body.sp-page main#main h2 { font-size: 40px !important; }
-  .sp-commitments { grid-template-columns: 1fr; }
-  .sp-insights li { padding-inline: 14px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-container { width: calc(100% - 80px); }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-split { gap: 36px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h1 { font-size: 46px !important; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h2 { font-size: 40px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments { grid-template-columns: 1fr; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li { padding-inline: 14px; }
 }
 @media (max-width: 991px) {
-  .sp-container { width: calc(100% - 48px); }
-  .sp-section { padding: 64px 0; }
-  .sp-hero { padding-top: 48px; }
-  .sp-split { grid-template-columns: 1fr; }
-  .sp-art { max-width: 680px; margin-inline: auto; }
-  .sp-support-art { order: 2; max-width: 480px; margin-inline: auto; width: 100%; }
-  .sp-pillars article { padding-inline: 20px; }
-  .sp-insights { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 0; }
-  .sp-insights li:nth-child(4) { border-left: 0; }
-  .sp-insights li:first-child, .sp-insights li:last-child { padding-inline: 14px; }
-  .sp-commitments { grid-template-columns: 1fr 1fr; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-container { width: calc(100% - 48px); }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-section { padding: 64px 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-hero { padding-top: 48px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-split { grid-template-columns: 1fr; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-art { max-width: 680px; margin-inline: auto; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-art { order: 2; max-width: 480px; margin-inline: auto; width: 100%; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article { padding-inline: 20px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:nth-child(4) { border-left: 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:first-child, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:last-child { padding-inline: 14px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 599px) {
-  .sp-container { width: calc(100% - 40px); }
-  .sp-section { padding: 48px 0; }
-  .sp-hero { padding-top: 36px; }
-  html body.sp-page main#main h1 { font-size: 36px !important; line-height: 1.15 !important; letter-spacing: -.72px !important; overflow-wrap: anywhere; }
-  html body.sp-page main#main h2 { font-size: 32px !important; letter-spacing: -.64px !important; }
-  html body.sp-page main#main p { font-size: 16px !important; }
-  html body.sp-page main#main .sp-lead { font-size: 20px !important; }
-  .sp-art { border-radius: 16px; }
-  .sp-benefits { gap: 10px; }
-  .sp-benefits li + li { padding-left: 10px; }
-  .sp-benefits span:not(.sp-icon) { font-size: 11px; }
-  .sp-purpose { margin-top: 36px; padding-left: 20px; }
-  html body.sp-page main#main .sp-purpose h2 { font-size: 26px !important; }
-  .sp-pillars { grid-template-columns: 1fr; gap: 28px; margin-top: 36px; }
-  .sp-pillars article, .sp-pillars article:first-child, .sp-pillars article:last-child { padding: 0; border-left: 0; }
-  .sp-pillars article + article { border-top: 1px solid var(--sp-line); padding-top: 28px; }
-  .sp-heading { text-align: left; margin-bottom: 32px; }
-  html body.sp-page main#main .sp-feature-title { font-size: 28px !important; }
-  .sp-insights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sp-insights li:nth-child(odd) { border-left: 0; }
-  .sp-insights li:nth-child(4) { border-left: 1px solid var(--sp-line); }
-  .sp-insights li:last-child { grid-column: 1 / -1; max-width: 260px; margin-inline: auto; }
-  html body.sp-page main#main .sp-quote { margin-top: 28px; padding: 20px; font-size: 20px; }
-  html body.sp-page main#main .sp-closing h3 { font-size: 26px !important; }
-  .sp-commitments { grid-template-columns: 1fr; gap: 12px; }
-  .sp-support-steps li { gap: 12px; }
-  html body.sp-page main#main .sp-support-steps h3 { font-size: 18px !important; }
-  html body.sp-page main#main .sp-statement { font-size: 24px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-container { width: calc(100% - 40px); }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-section { padding: 48px 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-hero { padding-top: 36px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h1 { font-size: 36px !important; line-height: 1.15 !important; letter-spacing: -.72px !important; overflow-wrap: anywhere; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main h2 { font-size: 32px !important; letter-spacing: -.64px !important; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main p { font-size: 16px !important; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-lead { font-size: 20px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-art { border-radius: 16px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits { gap: 10px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits li + li { padding-left: 10px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-benefits span:not(.sp-icon) { font-size: 11px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-purpose { margin-top: 36px; padding-left: 20px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-purpose h2 { font-size: 26px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars { grid-template-columns: 1fr; gap: 28px; margin-top: 36px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article:first-child, :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article:last-child { padding: 0; border-left: 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-pillars article + article { border-top: 1px solid var(--sp-line); padding-top: 28px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-heading { text-align: left; margin-bottom: 32px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-feature-title { font-size: 28px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:nth-child(odd) { border-left: 0; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:nth-child(4) { border-left: 1px solid var(--sp-line); }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-insights li:last-child { grid-column: 1 / -1; max-width: 260px; margin-inline: auto; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-quote { margin-top: 28px; padding: 20px; font-size: 20px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-closing h3 { font-size: 26px !important; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-commitments { grid-template-columns: 1fr; gap: 12px; }
+  :where(body.sp-page:not([data-page="synesthetic-flavor"])) .sp-support-steps li { gap: 12px; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-support-steps h3 { font-size: 18px !important; }
+  html body.sp-page:where(:not([data-page="synesthetic-flavor"])) main#main .sp-statement { font-size: 24px !important; }
 }
 
+
+
+/* Scoped Partnership layout; fonts, header and footer come from the main site. */
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main.sp-main {
+  --sp-ink: #091d40; --sp-orange: #ec7136; --sp-line: #ccd0d8;
+  --arotec-display-size: clamp(40px, 4vw, 68px); --arotec-display-line-height: 1.08; --arotec-display-letter-spacing: -.04em;
+  --arotec-supporting-size: 20px; --arotec-supporting-line-height: 1.5;
+  padding-top: var(--detail-header-space, 134px) !important; margin: 0; color: var(--sp-ink); background: #fff; font-family: var(--site-font);
+}
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-main *, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-main *::before, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-main *::after { box-sizing: border-box; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-container { width: calc(100% - 300px); max-width: 1440px; margin-inline: auto; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-section { position: relative; background: #fff; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-section + .sp-section { border-top: 1px solid #e5e7eb; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage { position: relative; isolation: isolate; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media { position: absolute; inset: 0; z-index: -1; margin: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage > .sp-container { min-height: 640px; display: flex; align-items: center; padding-block: 72px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-copy { width: 47%; min-width: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container { min-height: 710px; padding-top: 52px; padding-bottom: 44px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main :is(h1, h2, h3, p, blockquote) { color: var(--sp-ink); }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main :is(h1, h2) { margin: 0 0 24px !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main h3 { font-size: 20px !important; font-weight: 700 !important; line-height: 1.3 !important; letter-spacing: -.02em !important; text-transform: none !important; margin: 0 0 12px !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main p { font-size: 17px !important; line-height: 1.6 !important; margin: 0; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-eyebrow { font-size: 12px !important; font-weight: 700; letter-spacing: .14em !important; text-transform: uppercase; margin-bottom: 16px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-lead { margin-bottom: 26px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-rule { display: block; width: 64px; border-top: 4px solid var(--sp-orange); margin: 28px 0 32px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-main :is(ul, ol) { list-style: none; padding: 0; margin: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sp-ink); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-icon .ph { font-size: 48px; line-height: 1; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 26px 0 32px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 0 12px; font-size: 13px; line-height: 1.4; font-weight: 700; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits li + li { border-left: 1px solid #929bad; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits li:first-child { padding-left: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits li:last-child { padding-right: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-purpose { border-left: 2px solid #788499; padding-left: 22px; --arotec-supporting-size: 25px; --arotec-supporting-line-height: 1.25; --arotec-supporting-weight: 700; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-purpose .sp-eyebrow { text-transform: none; letter-spacing: 0 !important; font-size: 17px !important; margin-bottom: 8px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-purpose h2 { margin-bottom: 14px !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-purpose p:last-child { font-size: 15px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #8792a4; padding: 32px 0 40px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article { display: grid; grid-template-columns: 64px 1fr; align-content: start; column-gap: 18px; padding: 0 28px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article:first-child { padding-left: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article:last-child { padding-right: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article + article { border-left: 1px solid var(--sp-line); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars .sp-icon { width: 64px; height: 64px; background: #f5f4f1; border-radius: 50%; grid-row: 1 / 3; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars .sp-icon .ph { font-size: 36px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-pillars h3 { font-size: 19px !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-pillars p { font-size: 14px !important; line-height: 1.55 !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-feature-title { font-size: clamp(26px, 2.2vw, 36px) !important; line-height: 1.22 !important; margin-bottom: 24px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insight-rail { display: grid; grid-template-columns: 5fr 1.45fr; border-top: 1px solid #8792a4; padding-block: 30px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li { text-align: center; padding: 0 16px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li:first-child { padding-left: 0; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li + li { border-left: 1px solid var(--sp-line); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights .sp-icon { margin-bottom: 16px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-insights h3 { font-size: 17px !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-insights p { font-size: 14px !important; line-height: 1.5 !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-quote { margin: 0 0 0 20px; padding-left: 24px; border-left: 1px solid var(--sp-line); font-size: 20px; line-height: 1.5; font-weight: 500; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-quote .sp-rule { margin: 10px 0 18px; width: 44px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-closing { display: flex; gap: 24px; align-items: baseline; padding: 20px 0 28px; border-top: 1px solid #8792a4; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-closing p { font-size: 15px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-closing strong { border-right: 2px solid var(--sp-orange); padding-right: 24px; font-size: 16px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-stage > .sp-container { min-height: 710px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-copy { width: 50%; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 38px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon { width: 70px; height: 70px; border: 1px solid #9caaca; border-radius: 50%; margin-bottom: 12px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon .ph { font-size: 36px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-step-arrow { position: absolute; right: -18px; top: 28px; color: var(--sp-orange); font-size: 18px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-number { font-size: 26px; font-weight: 700; line-height: 1.1; border-bottom: 3px solid var(--sp-orange); padding-bottom: 5px; margin-bottom: 10px; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-support-steps h3 { font-size: 15px !important; font-weight: 500 !important; margin-bottom: 0 !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-statement { margin-top: 36px; padding-top: 20px; border-top: 1px solid #8792a4; text-align: center; font-size: 21px !important; letter-spacing: .03em; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitment .sp-stage > .sp-container { min-height: 710px; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; margin-top: 30px !important; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments li { display: flex; align-items: center; gap: 18px; padding: 18px 0; font-size: 23px; font-weight: 700; }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments li:nth-child(n+3) { border-top: 1px solid var(--sp-line); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments .sp-icon { color: var(--sp-orange); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments .sp-icon .ph { font-size: 44px; }
+@media (min-width: 1800px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitment .sp-stage > .sp-container { min-height: 800px; }
+}
+@media (max-width: 1199px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-container { width: calc(100% - 96px); }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-copy { width: 48%; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article { grid-template-columns: 1fr; padding-inline: 22px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars .sp-icon { grid-row: auto; margin-bottom: 16px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insight-rail { grid-template-columns: 1fr; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-quote { margin: 28px 0 0; padding: 20px 0 0; border-left: 0; border-top: 1px solid var(--sp-line); }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-quote .sp-rule { display: none; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps { gap: 10px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon { width: 58px; height: 58px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-step-arrow { right: -14px; top: 22px; }
+}
+@media (max-width: 899px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-container { width: calc(100% - 64px); }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage { display: flex; flex-direction: column; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitment .sp-stage > .sp-container { min-height: 0; padding-block: 44px 28px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-copy, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-copy { width: 100%; max-width: 660px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media { position: relative; order: 2; z-index: 0; height: clamp(260px, 52vw, 440px); overflow: hidden; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media img { width: 150%; max-width: none; margin-left: -50%; object-fit: cover; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-media img { object-position: center 40%; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits { max-width: 520px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-purpose { max-width: 600px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars { padding-top: 28px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li { padding-inline: 12px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps { max-width: 620px; gap: 22px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon { width: 70px; height: 70px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-step-arrow { right: -24px; top: 28px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments { max-width: 560px; }
+}
+@media (max-width: 599px) {
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main.sp-main { --arotec-display-size: 38px; --arotec-display-line-height: 1.12; --arotec-supporting-size: 18px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-container { width: calc(100% - 40px); }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support .sp-stage > .sp-container, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitment .sp-stage > .sp-container { padding-top: 36px; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main p { font-size: 16px !important; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits li { font-size: 12px; padding-inline: 8px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-benefits .sp-icon .ph { font-size: 42px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-purpose { padding-left: 16px; --arotec-supporting-size: 22px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media { height: 260px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-media img { width: 180%; margin-left: -80%; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars { grid-template-columns: 1fr; gap: 24px; padding-bottom: 32px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article:first-child, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article:last-child { grid-template-columns: 58px 1fr; column-gap: 16px; padding: 0; border-left: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars article + article { border-top: 1px solid var(--sp-line); padding-top: 24px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-pillars .sp-icon { grid-row: 1 / 3; width: 58px; height: 58px; margin-bottom: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li:first-child { padding-inline: 14px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li:nth-child(odd) { border-left: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-insights li:last-child { grid-column: 1 / -1; max-width: 240px; justify-self: center; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-closing { flex-direction: column; gap: 10px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-closing strong { border-right: 0; padding-right: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps { grid-template-columns: 1fr; gap: 14px; margin-top: 28px !important; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps li { flex-direction: row; gap: 16px; text-align: left; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon { width: 50px; height: 50px; margin-bottom: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-support-steps .sp-icon .ph { font-size: 28px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-number { font-size: 21px; margin-bottom: 0; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-step-arrow { display: none; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-support-steps h3 { font-size: 17px !important; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments { gap: 0 18px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments li { gap: 10px; font-size: 18px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitments .sp-icon .ph { font-size: 36px; }
+}
+/* Match each label's role without changing the global body-text tokens. */
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-benefits li,
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-benefits li > span:not(.sp-icon) { font-size: 13px !important; font-weight: 700 !important; line-height: 1.4 !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-commitments li,
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-commitments li > span:not(.sp-icon) { font-size: 23px !important; font-weight: 700 !important; line-height: 1.3 !important; }
+html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-number { font-size: 26px !important; font-weight: 700 !important; line-height: 1.1 !important; }
+@media (min-width: 900px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-clients .sp-media, :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-commitment .sp-media { left: 12%; }
+}
+@media (max-width: 599px) {
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-benefits li,
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-benefits li > span:not(.sp-icon) { font-size: 12px !important; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-commitments li,
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-commitments li > span:not(.sp-icon) { font-size: 18px !important; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-number { font-size: 21px !important; }
+}
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-main :is(h1[id], h2[id]) { scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px); }
+:where(body.sp-page[data-page="synesthetic-flavor"]) .sp-stage { background: #fff; }
+
+/* Fit the opening photograph into the desktop space below the shared menu. */
+@media (min-width: 900px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container {
+    min-height: calc(100svh - var(--detail-header-space, 134px));
+  }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-media img {
+    object-fit: contain;
+    object-position: right center;
+  }
+}
+
+/* Keep all opening copy readable in shorter laptop viewports. */
+@media (min-width: 900px) and (max-height: 850px) {
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero {
+    --arotec-display-size: clamp(38px, 3.2vw, 48px);
+    --arotec-supporting-size: 18px;
+  }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-stage > .sp-container { padding-block: 24px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-copy { width: 49%; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero .sp-eyebrow { margin-bottom: 10px; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero h1 { margin-bottom: 16px !important; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero .sp-lead { margin-bottom: 18px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-benefits { margin: 18px 0 22px !important; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-benefits .sp-icon .ph { font-size: 40px; }
+  :where(body.sp-page[data-page="synesthetic-flavor"]) .sp-hero .sp-purpose { --arotec-supporting-size: 22px; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero .sp-purpose .sp-eyebrow { margin-bottom: 6px; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero .sp-purpose h2 { margin-bottom: 10px !important; }
+  html body.sp-page:where([data-page="synesthetic-flavor"]) main#main .sp-hero .sp-purpose p:last-child { font-size: 14px !important; line-height: 1.5 !important; }
+}

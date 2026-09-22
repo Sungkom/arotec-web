@@ -1,145 +1,180 @@
-/* Create Flavors inherits the home navigation, footer and DM Sans typography. */
-html body.cf-page main#main.cf-main {
-  --cf-ink: #09264d;
-  --cf-soft: #264a73;
-  --cf-blue: #1277d5;
-  --cf-line: rgba(32, 122, 202, .2);
-  padding-top: var(--detail-header-space, 134px) !important;
-  color: var(--cf-ink);
-  background: #f8fbff;
-  font-family: "DM Sans", sans-serif;
+/* Create Flavors: supplied September artwork, shared index shell and DM Sans. */
+body.cf-page { margin: 0; color: #0c2047; background: #f8f5ef; font-family: var(--site-font); }
+html body.cf-page main#main.cf-main { padding-top: var(--detail-header-space, 134px) !important; }
+html body.cf-page main#main { --cf-ink: #0c2047; --cf-muted: #293b57; --cf-orange: #d95a2a; --cf-line: #cec8bd; }
+.cf-main, html body.cf-page main#main *, html body.cf-page main#main *::before, html body.cf-page main#main *::after { box-sizing: border-box; }
+html body.cf-page main#main :is(ul,ol) { list-style: none; padding: 0; margin: 0; }
+html body.cf-page main#main a { color: var(--cf-ink); text-decoration: none; }
+html body.cf-page main#main a:hover { color: #1277d5; }
+html body.cf-page main#main a:focus-visible { outline: 2px solid #1277d5; outline-offset: 6px; }
+.cf-scene { position: relative; container-type: inline-size; background: #f8f5ef; content-visibility: visible !important; contain-intrinsic-size: none !important; }
+html body.cf-page main#main > .cf-scene::before, html body.cf-page main#main > .cf-scene::after { content: none !important; }
+.cf-frame { width: 92%; max-width: 1800px; margin-inline: auto; }
+.cf-stage { position: relative; isolation: isolate; min-height: 460px; aspect-ratio: 2.6; }
+.cf-stage-art { position: absolute; z-index: -1; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center top; }
+.cf-stage-copy { position: relative; padding: 5.5cqw 0 3cqw; margin-left: 4%; width: 44%; }
+html body.cf-page main#main .cf-stage-copy :is(h1,h2) { --arotec-display-size: clamp(42px, 4.15cqw, 80px); --arotec-display-line-height: 1.08; --arotec-display-letter-spacing: -.045em; color: var(--cf-ink); font-family: var(--site-font) !important; font-size: var(--arotec-display-size) !important; font-weight: 700 !important; line-height: 1.08 !important; letter-spacing: -.045em !important; text-transform: none !important; margin: 0 0 1.4cqw !important; text-wrap: initial; }
+html body.cf-page main#main p { color: var(--cf-muted); font-size: clamp(16px, 1.22cqw, 23px) !important; font-weight: 400 !important; line-height: 1.5 !important; margin: 0; }
+html body.cf-page main#main .cf-lead { --arotec-supporting-size: clamp(19px, 1.6cqw, 30px); --arotec-supporting-line-height: 1.4; color: var(--cf-ink); font-size: var(--arotec-supporting-size) !important; font-weight: 500 !important; line-height: 1.4 !important; letter-spacing: -.02em; }
+.cf-intro { margin-top: 2cqw; max-width: 40cqw; }
+html body.cf-page main#main .cf-intro p + p { margin-top: .65em; }
+html body.cf-page main#main h3 { color: var(--cf-ink); font-family: var(--site-font); font-size: clamp(18px, 1.55cqw, 29px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.025em !important; text-transform: none !important; margin: 0 0 12px !important; }
+.cf-icon { display: inline-flex; align-self: center; flex: 0 0 auto; justify-content: center; align-items: center; width: clamp(58px, 5.2cqw, 98px); aspect-ratio: 1; color: var(--cf-ink); border: 1.5px solid currentColor; border-radius: 50%; }
+.cf-icon > i { font-size: clamp(29px, 2.65cqw, 50px); line-height: 1; }
+.cf-pillars { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.7cqw; padding-top: 2.5cqw; }
+.cf-pillars article { display: flex; gap: 1.8cqw; padding-right: 2.3cqw; border-right: 1px solid var(--cf-line); }
+.cf-pillars article:last-child { border: 0; padding-right: 0; }
+.cf-pillars article > div { min-width: 0; }
+.cf-accent { display: block; width: 34px; height: 2px; background: var(--cf-orange); margin: 16px 0; }
+html body.cf-page main#main .cf-journey { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 2cqw; padding: 3.6cqw 0 3.8cqw; }
+.cf-journey li { position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; color: var(--cf-ink); font-size: clamp(12px, 1.08cqw, 20px); line-height: 1.35; font-weight: 500; }
+.cf-arrow { position: absolute; top: 2.1cqw; right: -2.15cqw; color: var(--cf-orange); font-size: 2.2cqw; }
+html body.cf-page main#main li:last-child > .cf-arrow, .cf-steps li:last-child .cf-arrow { display: none; }
+.cf-process { border-top: 1px solid #e3ded5; }
+.cf-process .cf-stage { aspect-ratio: 2.42; min-height: 460px; }
+.cf-process .cf-stage-copy { width: 53%; padding-top: 4.2cqw; }
+.cf-process .cf-lead { max-width: 42cqw; }
+html body.cf-page main#main .cf-steps { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 2.2cqw; margin-inline: auto; padding: 1.5cqw 0 4cqw; }
+.cf-step-top { display: flex; align-items: center; position: relative; gap: 15px; margin-bottom: 20px; }
+.cf-step-number { font-size: clamp(22px, 2cqw, 36px); color: var(--cf-orange); font-weight: 700; }
+.cf-icon-bare { width: 3.6cqw; min-width: 42px; border: 0; }
+.cf-step-top .cf-arrow { top: 50%; transform: translateY(-50%); right: -1.75cqw; }
+html body.cf-page main#main .cf-steps h3, html body.cf-page main#main .cf-outcomes h3 { font-size: clamp(17px, 1.27cqw, 24px) !important; }
+html body.cf-page main#main .cf-steps p, html body.cf-page main#main .cf-outcomes p { font-size: clamp(15px, 1.1cqw, 21px) !important; line-height: 1.5 !important; }
+.cf-science { background: #faf9f6; }
+.cf-science .cf-stage { aspect-ratio: 3.5; min-height: 390px; }
+.cf-science .cf-stage-art { object-position: center bottom; }
+.cf-science .cf-stage-copy { width: 38%; padding-top: 3.3cqw; }
+html body.cf-page main#main .cf-science .cf-stage-copy h2 { --arotec-display-size: clamp(38px, 3.6cqw, 70px); }
+html body.cf-page main#main .cf-science .cf-lead { --arotec-supporting-size: clamp(17px, 1.3cqw, 25px); }
+.cf-science-pillars { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-block: 1px solid #e5e1da; }
+.cf-science-pillars article { position: relative; text-align: center; border-right: 1px solid #e5e1da; overflow: hidden; }
+.cf-science-pillars article:last-child { border-right: 0; }
+.cf-science-copy { position: relative; z-index: 1; padding: 2.2cqw 12% 0; }
+.cf-science-copy .cf-icon { margin-bottom: 15px; }
+html body.cf-page main#main .cf-science-copy p { max-width: 310px; margin-inline: auto; }
+.cf-pillar-art { display: block; width: 100%; height: 15cqw; object-fit: cover; object-position: center bottom; margin-top: -1cqw; }
+html body.cf-page main#main .cf-transition { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 22px 4%; color: var(--cf-ink); text-align: center; font-weight: 500 !important; }
+.cf-transition > i { font-size: 32px; }
+.cf-wellbeing { position: relative; isolation: isolate; min-height: 210px; aspect-ratio: 7.18; }
+.cf-wellbeing-copy { width: 54%; padding: 1.2cqw 0 2cqw 4%; display: flex; gap: 2.5cqw; align-items: center; }
+html body.cf-page main#main .cf-wellbeing h3 { font-size: clamp(26px, 2.45cqw, 48px) !important; margin: 0 !important; flex: 1.2; }
+.cf-wellbeing p { flex: 1; }
+.cf-finale .cf-stage { aspect-ratio: 2.3; }
+.cf-finale .cf-stage-copy { width: 48%; padding-top: 6cqw; }
+html body.cf-page main#main .cf-finale .cf-stage-copy h2 { --arotec-display-size: clamp(38px, 3.65cqw, 72px); }
+html body.cf-page main#main .cf-finale .cf-lead { margin-top: 2cqw; line-height: 1.6 !important; }
+html body.cf-page main#main .cf-outcomes { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 2.2cqw; padding: 1.7cqw 0 4cqw; margin-inline: auto; }
+.cf-outcomes li { position: relative; text-align: center; }
+.cf-outcomes .cf-icon { margin-bottom: 18px; }
+.cf-outcomes li:last-child .cf-icon { color: var(--cf-orange); }
+.cf-outcomes li:last-child .cf-icon i { color: var(--cf-ink); }
+html:has(.cf-page) { scroll-padding-top: 130px; }
+@media (min-width: 1921px) { .cf-stage-copy { max-width: 850px; } }
+@media (max-width: 1100px) {
+  .cf-stage-copy { width: 46%; }
+  .cf-intro { max-width: none; }
+  .cf-pillars article { flex-direction: column; gap: 18px; }
+  html body.cf-page main#main .cf-steps, html body.cf-page main#main .cf-outcomes { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 30px; padding-block: 32px 48px; }
+  .cf-steps li:nth-child(4) .cf-arrow, .cf-outcomes li:nth-child(4) > .cf-arrow { display: none; }
+  .cf-arrow { font-size: 25px; }
+  .cf-science .cf-stage { min-height: 365px; }
+  .cf-science .cf-stage-copy { width: 43%; }
+  .cf-science .cf-stage-art { object-fit: contain; }
+  .cf-science-copy { padding-inline: 8%; }
+  .cf-wellbeing-copy { width: 52%; display: block; padding-bottom: 24px; }
+  html body.cf-page main#main .cf-wellbeing h3 { margin-bottom: 16px !important; }
+  .cf-finale .cf-stage { min-height: 470px; }
 }
-.cf-main *, .cf-main *::before, .cf-main *::after { box-sizing: border-box; }
-.cf-container { width: calc(100% - 120px); max-width: 1320px; margin-inline: auto; }
-.cf-section { padding: 88px 0; }
-.cf-hero { padding-top: 64px; }
-.cf-section-tint { background: #eff7ff; }
-.cf-split { display: grid; align-items: center; gap: 64px; }
-.cf-split > * { min-width: 0; }
-.cf-hero-grid { grid-template-columns: 1.2fr .8fr; }
-.cf-science-grid { grid-template-columns: .95fr 1.05fr; gap: 40px; }
-.cf-finale-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-html body.cf-page main#main h1 {
-  font-size: 72px !important; line-height: 1.08 !important;
-  font-weight: 700 !important; letter-spacing: -1.44px !important;
-  text-transform: uppercase; margin: 0 0 28px !important; color: var(--cf-ink);
+@media (max-width: 1000px) {
+  .cf-frame { width: 88%; }
+  .cf-stage, .cf-process .cf-stage, .cf-science .cf-stage, .cf-finale .cf-stage { display: flex; flex-direction: column; aspect-ratio: auto; min-height: 0; }
+  .cf-stage-copy, .cf-process .cf-stage-copy, .cf-science .cf-stage-copy, .cf-finale .cf-stage-copy { order: 0; width: auto; margin: 0; padding: 38px 6% 10px; }
+  html body.cf-page main#main .cf-stage-copy :is(h1,h2) { --arotec-display-size: clamp(34px, 6.5vw, 48px); margin-bottom: 20px !important; }
+  html body.cf-page main#main .cf-stage-copy h1 { --arotec-display-size: clamp(42px, 8vw, 56px); }
+  html body.cf-page main#main .cf-lead, html body.cf-page main#main .cf-science .cf-lead { --arotec-supporting-size: 19px; max-width: none; }
+  .cf-intro { margin-top: 22px; }
+  html body.cf-page main#main p { font-size: 16px !important; line-height: 1.6 !important; }
+  .cf-stage .cf-stage-art { order: 1; position: relative; z-index: auto; height: auto; width: 100%; object-fit: cover; margin-top: 8px; }
+  .cf-hero .cf-stage-art { height: 60vw; object-position: 90% 34%; object-fit: cover; width: 100%; }
+  .cf-process .cf-stage-art { height: 49vw; object-position: center 39%; }
+  .cf-science .cf-stage-art { height: 40vw; object-fit: cover; object-position: right bottom; }
+  .cf-finale .cf-stage-art { height: 83vw; object-fit: cover; object-position: 94% 25%; }
+  .cf-pillars { grid-template-columns: 1fr; gap: 26px; padding-top: 30px; }
+  .cf-pillars article { flex-direction: row; gap: 20px; padding: 0 0 26px; border-right: 0; border-bottom: 1px solid var(--cf-line); }
+  .cf-pillars article:last-child { padding-bottom: 0; }
+  html body.cf-page main#main h3 { font-size: 21px !important; }
+  .cf-icon { width: 64px; }
+  .cf-icon > i { font-size: 32px; }
+  .cf-accent { margin: 12px 0; }
+  html body.cf-page main#main .cf-journey { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px 12px; padding: 36px 0; }
+  .cf-journey li { font-size: 12px; }
+  .cf-journey .cf-icon { width: 50px; }
+  .cf-journey .cf-icon > i { font-size: 26px; }
+  .cf-arrow { display: none; }
+  html body.cf-page main#main .cf-steps, html body.cf-page main#main .cf-outcomes { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 24px; padding: 25px 0 42px; }
+  .cf-step-top { gap: 15px; margin-bottom: 15px; }
+  .cf-step-number { font-size: 24px; }
+  .cf-icon-bare { width: 42px; }
+  html body.cf-page main#main .cf-steps h3, html body.cf-page main#main .cf-outcomes h3 { font-size: 18px !important; }
+  html body.cf-page main#main .cf-steps p, html body.cf-page main#main .cf-outcomes p { font-size: 15px !important; line-height: 1.55 !important; }
+  .cf-science-pillars { grid-template-columns: 1fr; }
+  .cf-science-pillars article { border-right: 0; border-bottom: 1px solid #e5e1da; }
+  .cf-science-pillars article:last-child { border-bottom: 0; }
+  .cf-science-copy { padding: 32px 8% 0; }
+  .cf-pillar-art { height: 42vw; max-height: 280px; object-fit: cover; margin-top: -8px; }
+  .cf-science-pillars article:nth-child(2) .cf-pillar-art { object-fit: contain; }
+  html body.cf-page main#main .cf-transition { padding: 24px 8%; gap: 15px; }
+  .cf-wellbeing { display: flex; flex-direction: column; aspect-ratio: auto; min-height: 0; }
+  .cf-wellbeing-copy { order: 0; width: auto; padding: 12px 6% 22px; }
+  html body.cf-page main#main .cf-wellbeing h3 { font-size: 32px !important; }
+  .cf-wellbeing > .cf-stage-art { order: 1; position: relative; z-index: auto; height: 37vw; width: 100%; object-fit: cover; object-position: right; }
+  html body.cf-page main#main .cf-outcomes { padding-top: 28px; }
+  .cf-outcomes li:last-child { grid-column: 1 / -1; max-width: 250px; margin-inline: auto; }
 }
-html body.cf-page main#main h2 {
-  font-size: 48px !important; line-height: 1.14 !important;
-  font-weight: 700 !important; letter-spacing: -.96px !important;
-  text-transform: uppercase; margin: 0 0 24px !important; color: var(--cf-ink);
+@media (max-width: 380px) {
+  html body.cf-page main#main .cf-journey { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  html body.cf-page main#main .cf-steps { grid-template-columns: 1fr; gap: 24px; }
+  .cf-steps li { border-bottom: 1px solid var(--cf-line); padding-bottom: 22px; }
+  .cf-steps li:last-child { border: 0; padding-bottom: 0; }
 }
-html body.cf-page main#main h3 {
-  font-size: 20px !important; line-height: 1.3 !important;
-  font-weight: 700 !important; letter-spacing: -.2px !important;
-  margin: 0 0 12px !important; color: var(--cf-ink);
-}
-html body.cf-page main#main p {
-  font-size: 18px !important; line-height: 1.6 !important;
-  font-weight: 400 !important; color: var(--cf-soft); margin: 0 0 18px;
-}
-html body.cf-page main#main .cf-eyebrow {
-  color: var(--cf-blue); font-size: 14px !important; font-weight: 700 !important;
-  line-height: 1.5 !important; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px;
-}
-html body.cf-page main#main .cf-lead {
-  font-size: 24px !important; line-height: 1.4 !important;
-  font-weight: 500 !important; margin-bottom: 28px;
-}
-.cf-art { position: relative; width: 100%; aspect-ratio: var(--image-ratio); overflow: hidden; border-radius: 24px; }
-html body.cf-page main#main .cf-art img {
-  position: absolute; width: var(--image-width); max-width: none !important;
-  height: auto; display: block; left: var(--image-left); top: var(--image-top);
-}
-.cf-icon {
-  width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center;
-  flex-shrink: 0; color: var(--cf-blue); border: 1px solid var(--cf-line); border-radius: 50%;
-}
-.cf-icon i { font-size: 26px; line-height: 1; }
-.cf-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 64px; }
-.cf-pillars article { padding: 4px 32px; border-left: 1px solid var(--cf-line); }
-.cf-pillars article:first-child { padding-left: 0; border-left: 0; }
-.cf-pillars article:last-child { padding-right: 0; }
-.cf-pillars .cf-icon { margin-bottom: 22px; }
-html body.cf-page main#main .cf-pillars h3 { text-transform: uppercase; }
-html body.cf-page main#main .cf-pillars p { margin-bottom: 0; }
-.cf-journey, .cf-outcomes, .cf-steps { list-style: none; padding: 0; }
-.cf-journey { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 24px; margin: 64px 0 0; }
-.cf-journey li { text-align: center; position: relative; }
-.cf-journey li + li::before { content: ""; position: absolute; top: 27px; left: -26px; width: 28px; border-top: 1px solid var(--cf-line); }
-.cf-journey span:not(.cf-icon) { display: block; font-size: 14px; font-weight: 500; line-height: 1.45; margin-top: 16px; text-transform: uppercase; }
-html body.cf-page main#main .cf-statement {
-  text-align: center; font-size: 28px !important; line-height: 1.4 !important;
-  margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--cf-line);
-}
-.cf-statement span, html body.cf-page main#main .cf-finale h2 span { color: var(--cf-blue); }
-.cf-section-intro { max-width: 960px; margin-bottom: 48px; }
-.cf-process-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-.cf-steps { margin: 0; }
-.cf-steps li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 24px; position: relative; padding-bottom: 26px; }
-.cf-steps li:last-child { padding-bottom: 0; }
-.cf-step-marker { position: relative; }
-.cf-steps li:not(:last-child) .cf-step-marker::after { content: ""; position: absolute; top: 62px; bottom: 8px; left: 26px; border-left: 1px solid var(--cf-line); }
-.cf-step-number { display: block; color: var(--cf-blue); font-size: 12px; letter-spacing: 1.5px; margin-bottom: 5px; }
-html body.cf-page main#main .cf-steps h3 { text-transform: uppercase; margin-bottom: 8px !important; }
-html body.cf-page main#main .cf-steps p { margin: 0; font-size: 16px !important; line-height: 1.55 !important; }
-.cf-process-art { margin: 0; }
-.cf-process-art figcaption { color: var(--cf-blue); font-size: 20px; text-align: center; margin-top: 24px; }
-.cf-science-pillars { margin-top: 48px; }
-html body.cf-page main#main .cf-transition { margin: 48px 0 0; padding: 24px 0; border-block: 1px solid var(--cf-line); text-align: center; }
-.cf-wellbeing { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 40px; }
-html body.cf-page main#main .cf-wellbeing h3 { font-size: 36px !important; line-height: 1.2 !important; }
-html body.cf-page main#main .cf-wellbeing p { margin-bottom: 0; }
-.cf-outcomes { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; margin: 64px 0 0; }
-.cf-outcomes li { padding: 0 16px; border-left: 1px solid var(--cf-line); text-align: center; }
-.cf-outcomes li:first-child { border-left: 0; padding-left: 0; }
-.cf-outcomes li:last-child { padding-right: 0; }
-.cf-outcomes .cf-icon { margin-bottom: 20px; }
-html body.cf-page main#main .cf-outcomes h3 { font-size: 15px !important; line-height: 1.35 !important; text-transform: uppercase; min-height: 41px; }
-html body.cf-page main#main .cf-outcomes p { font-size: 14px !important; line-height: 1.65 !important; margin: 0; }
-@media (max-width: 1199px) {
-  .cf-container { width: calc(100% - 80px); }
-  .cf-split { gap: 36px; }
-  html body.cf-page main#main h1 { font-size: 56px !important; }
-  html body.cf-page main#main h2 { font-size: 40px !important; }
-  .cf-outcomes { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 0; }
-  .cf-outcomes li:nth-child(5) { border-left: 0; }
-  .cf-outcomes li:first-child, .cf-outcomes li:last-child { padding-inline: 16px; }
-}
-@media (max-width: 991px) {
-  .cf-container { width: calc(100% - 48px); }
-  .cf-section { padding: 64px 0; }
-  .cf-hero { padding-top: 48px; }
-  .cf-split { grid-template-columns: 1fr; }
-  .cf-hero-grid .cf-art { max-width: 520px; margin-inline: auto; }
-  .cf-process-art { width: min(100%, 620px); margin-inline: auto; }
-  .cf-finale-grid .cf-art { max-width: 620px; margin-inline: auto; }
-  .cf-pillars article { padding-inline: 22px; }
-  .cf-journey { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
-  .cf-journey li:nth-child(5)::before { display: none; }
-  .cf-wellbeing { grid-template-columns: 1fr; gap: 28px; }
-}
-@media (max-width: 599px) {
-  .cf-container { width: calc(100% - 40px); }
-  .cf-section { padding: 48px 0; }
-  .cf-hero { padding-top: 36px; }
-  html body.cf-page main#main h1 { font-size: 40px !important; line-height: 1.15 !important; letter-spacing: -.8px !important; }
-  html body.cf-page main#main h2 { font-size: 32px !important; line-height: 1.18 !important; letter-spacing: -.6px !important; }
-  html body.cf-page main#main .cf-lead { font-size: 20px !important; }
-  html body.cf-page main#main p { font-size: 16px !important; }
-  .cf-art { border-radius: 16px; }
-  .cf-pillars { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
-  .cf-pillars article, .cf-pillars article:first-child, .cf-pillars article:last-child { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--cf-line); }
-  .cf-pillars .cf-icon { margin-bottom: 16px; }
-  .cf-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 40px; }
-  .cf-journey li::before { display: none; }
-  .cf-journey li:last-child { grid-column: 1 / -1; }
-  .cf-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 40px; }
-  .cf-outcomes li:nth-child(odd) { border-left: 0; }
-  .cf-outcomes li:last-child { grid-column: 1 / -1; max-width: 280px; margin-inline: auto; border-left: 0; }
-  .cf-steps li { gap: 16px; }
-  html body.cf-page main#main .cf-steps h3 { font-size: 18px !important; }
-  html body.cf-page main#main .cf-statement { font-size: 22px !important; margin-top: 36px; }
-  html body.cf-page main#main .cf-wellbeing h3 { font-size: 30px !important; }
+
+
+
+.cf-pillars .cf-icon { align-self: flex-start; }
+@media (max-width: 1000px) { html body.cf-page main#main .cf-science .cf-stage-copy h2, html body.cf-page main#main .cf-finale .cf-stage-copy h2 { --arotec-display-size: clamp(34px, 6.5vw, 48px); } }
+
+
+.cf-responsive-art { display: contents; }
+
+
+/* Keep aspect-ratio minimum heights from widening stages on tablets. */
+.cf-stage, .cf-wellbeing { width: 100%; }
+
+
+
+/* Chapter links move directly to readable content below the shared header. */
+html:has(.cf-page) { scroll-behavior: auto !important; }
+
+/* Match the index narrative gutters without moving artwork or its captions. */
+@media (min-width: 1200px) {
+  .cf-stage-copy {
+    --cf-copy-right: 48%;
+    margin-left: var(--arotec-content-left, 150px);
+    width: calc(var(--cf-copy-right) - var(--arotec-content-left, 150px));
+  }
+  .cf-process .cf-stage-copy { --cf-copy-right: 57%; }
+  .cf-science .cf-stage-copy { --cf-copy-right: 42%; }
+  .cf-finale .cf-stage-copy { --cf-copy-right: 52%; }
+  .cf-process .cf-stage-copy,
+  .cf-science .cf-stage-copy,
+  .cf-finale .cf-stage-copy {
+    width: calc(var(--cf-copy-right) - var(--arotec-content-left, 150px));
+  }
+  .cf-wellbeing-copy {
+    padding-left: 0;
+    margin-left: var(--arotec-content-left, 150px);
+    width: calc(54% - var(--arotec-content-left, 150px));
+  }
 }
 
