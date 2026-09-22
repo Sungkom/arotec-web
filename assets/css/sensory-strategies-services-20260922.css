@@ -1,0 +1,185 @@
+/* Reference artwork 7.2–7.16. The site gutter applies to foreground content only. */
+html:has(body.sv-page) { scroll-behavior: auto; scroll-padding-top: 0; }
+body.sv-page { background: #faf9f6; }
+.sv-main {
+  --sv-ink: #06133e;
+  --sv-gutter: 32px;
+  --sv-title: clamp(36px, 3.8vw, 80px);
+  --sv-card-min: 13vw;
+  margin: 0;
+  padding: var(--detail-header-space, 112px) 0 0;
+  color: var(--sv-ink);
+}
+.sv-main *, .sv-main *::before, .sv-main *::after { box-sizing: border-box; }
+.sv-main .sv-scene { position: relative; isolation: isolate; margin: 0; padding: 0; min-height: 56.28vw; scroll-margin-top: var(--detail-header-space, 112px); content-visibility: visible !important; }
+.sv-main .sv-scene::before, .sv-main .sv-scene::after { content: none !important; }
+.sv-picture { display: block; position: absolute; inset: 0; z-index: -1; }
+.sv-backdrop { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.sv-content { min-height: 56.28vw; padding: 4.1vw var(--sv-gutter) 3.4vw; display: flex; flex-direction: column; align-items: flex-start; }
+.sv-copy { width: calc(43vw - var(--sv-gutter)); margin: 0 0 3vw; }
+.sv-heading { --arotec-display-size: var(--sv-title); --arotec-display-line-height: 1.05; --arotec-display-letter-spacing: -.045em; --arotec-display-weight: 700; }
+html body.sv-page #main#main .sv-heading { font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: var(--sv-title) !important; font-weight: 700 !important; line-height: 1.05 !important; letter-spacing: -.045em !important; text-transform: none !important; text-wrap: initial !important; overflow-wrap: normal !important; color: var(--sv-ink); margin: 0 0 1.8vw !important; }
+html body.sv-page #main#main p { font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: clamp(16px, 1.3vw, 25px) !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: -.018em !important; color: var(--sv-ink); margin: 0; }
+html body.sv-page #main#main .sv-eyebrow { font-size: clamp(12px, 1.12vw, 23px) !important; font-weight: 700 !important; line-height: 1.3 !important; letter-spacing: .055em !important; margin-bottom: 2vw; }
+html body.sv-page #main#main .sv-category { font-size: clamp(13px, 1.3vw, 25px) !important; font-weight: 700 !important; letter-spacing: .11em !important; margin: 0 0 .65vw; }
+html body.sv-page #main#main .sv-lead { font-size: clamp(19px, 1.65vw, 32px) !important; font-weight: 700 !important; line-height: 1.3 !important; margin: 0 0 1.5vw; }
+.sv-cards { --cards-width: 100%; display: grid; grid-template-columns: repeat(var(--columns, 4), minmax(0, 1fr)); gap: 1.05vw; width: min(100%, var(--cards-width)); margin: auto 0 0; padding: 0; list-style: none; }
+.sv-card { position: relative; display: flex; flex-direction: column; align-items: center; min-height: var(--sv-card-min); padding: 1.35vw .8vw 1.5vw; border: 1px solid #acb2c1; border-radius: .9vw; background: #faf9f7; text-align: center; min-width: 0; }
+.sv-icon { display: inline-flex; align-items: center; justify-content: center; width: 5.15vw; height: 5.15vw; flex: 0 0 auto; border: 1.5px solid currentColor; border-radius: 50%; background: #faf9f7; color: var(--sv-ink); margin-bottom: .9vw; }
+html body.sv-page #main#main .sv-icon .ph { font-family: "Phosphor" !important; font-weight: 400 !important; font-size: 3.25vw !important; line-height: 1 !important; }
+html body.sv-page #main#main .sv-card h3 { font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: clamp(14px, 1.36vw, 27px) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.035em !important; color: var(--sv-ink); margin: 0 0 .8vw !important; }
+.sv-card h3::after { content: ""; display: block; width: 2.2vw; border-top: 1.5px solid currentColor; margin: 1vw auto 0; }
+html body.sv-page #main#main .sv-card p { font-size: clamp(12px, 1.08vw, 21px) !important; line-height: 1.4 !important; letter-spacing: -.025em !important; }
+.sv-floating { margin-top: auto; }
+.sv-content:has(> .sv-floating) > .sv-copy { margin-bottom: 5.7vw; }
+.sv-floating .sv-card { padding-top: 2.7vw; }
+.sv-floating .sv-icon { position: absolute; top: -2.6vw; }
+.sv-flow { gap: 2.2vw; }
+.sv-flow > .sv-card:not(:last-child)::after { content: "\e06c"; position: absolute; top: 4.2vw; right: -2.1vw; font-family: "Phosphor" !important; font-size: 2vw; font-weight: 400; line-height: 1; }
+.sv-scene-2 .sv-content, .sv-scene-4 .sv-content { padding-top: 2.2vw; }
+.sv-scene-2 .sv-eyebrow, .sv-scene-4 .sv-eyebrow { margin-bottom: 1.4vw !important; }
+.sv-scene-2 .sv-cards { --cards-width: 61vw; }
+.sv-scene-3 .sv-cards { --cards-width: 68vw; }
+.sv-scene-3 .sv-content { padding-top: 3.3vw; }
+.sv-scene-3 { --sv-title: clamp(34px, 3.55vw, 76px); }
+.sv-scene-4 .sv-cards { --cards-width: 70vw; }
+.sv-scene-4 .sv-copy { margin-bottom: 2.6vw; }
+.sv-scene-4 .sv-icon { border: 0; height: 3.8vw; }
+.sv-scene-4 .sv-card h3::after { display: none; }
+.sv-scene-4 .sv-card h3 { min-height: 2.8vw; display: flex; align-items: center; }
+.sv-scene-6 .sv-cards { --cards-width: 83vw; }
+.sv-scene-7 .sv-copy { margin-bottom: 1vw; }
+.sv-scene-7 .sv-content > .sv-copy { margin-bottom: 1vw; }
+.sv-scene-7 { --sv-title: clamp(34px, 3.45vw, 74px); }
+.sv-palette { --cards-width: calc(46vw - var(--sv-gutter)); grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3vw .7vw; margin-top: 2.6vw; }
+.sv-palette, .sv-outcomes { --sv-card-min: 0px; }
+.sv-palette .sv-icon { width: 4.4vw; height: 4.4vw; top: -2.2vw; }
+.sv-palette .sv-card { padding: 2.55vw .65vw 1vw; }
+html body.sv-page #main#main .sv-palette h3 { font-size: clamp(11px, 1vw, 21px) !important; }
+.sv-palette h3::after { display: none; }
+html body.sv-page #main#main .sv-palette p { font-size: clamp(10px, .9vw, 18px) !important; }
+.sv-scene-8 { --sv-title: clamp(30px, 2.65vw, 60px); }
+.sv-scene-8 .sv-copy { width: calc(45vw - var(--sv-gutter)); margin-bottom: 2vw; }
+.sv-scene-8 .sv-content > .sv-copy { margin-bottom: 2.35vw; }
+.sv-summary { width: 100%; }
+.sv-lead-icon { display: flex; align-items: center; gap: 1vw; }
+.sv-lead-icon .sv-icon { width: 4.3vw; height: 4.3vw; margin: 0; }
+.sv-summary .sv-card { padding: 2.9vw 1.15vw 1.2vw; }
+.sv-summary h3::after { display: none; }
+.sv-summary ul { list-style: none; padding: 0; margin: .7vw 0 0; width: 100%; text-align: left; }
+html body.sv-page #main#main .sv-summary ul li { display: flex; align-items: center; gap: .6vw; padding: .28vw 0; font-size: clamp(11px, .92vw, 19px) !important; line-height: 1.25 !important; border-top: 1px solid #cdd0d8; }
+html body.sv-page #main#main .sv-summary ul .ph { font-family: "Phosphor" !important; font-size: 1.35vw !important; font-weight: 400 !important; flex: 0 0 auto; }
+.sv-scene-9 .sv-cards { --cards-width: 57vw; }
+.sv-scene-11 .sv-copy { width: calc(47vw - var(--sv-gutter)); }
+.sv-scene-12 .sv-copy { width: calc(46vw - var(--sv-gutter)); }
+.sv-scene-12 { --sv-title: clamp(34px, 3.65vw, 77px); }
+.sv-scene-12 .sv-cards { --cards-width: 60vw; }
+.sv-scene-12 .sv-lead::after { content: ""; display: block; width: 4vw; border-top: 2px solid currentColor; margin: 2vw 0; }
+.sv-scene-13 .sv-cards { --cards-width: 59vw; }
+.sv-scene-14 .sv-content { padding-top: 8.3vw; }
+.sv-scene-14 .sv-copy { width: calc(40vw - var(--sv-gutter)); margin-bottom: 1vw; }
+.sv-scene-14 .sv-eyebrow::after { content: ""; display: block; width: 4vw; border-top: 2px solid #ae390d; margin-top: 2vw; }
+.sv-outcomes { --cards-width: calc(40vw - var(--sv-gutter)); gap: 1vw; margin-top: 1vw; }
+.sv-outcomes .sv-card { border: 0; background: transparent; padding: 0; }
+.sv-outcomes .sv-icon { color: #ae390d; width: 4.5vw; height: 4.5vw; }
+.sv-outcomes h3::after { display: none; }
+html body.sv-page #main#main .sv-outcomes h3 { font-size: clamp(10px, .93vw, 20px) !important; margin-bottom: .4vw !important; }
+html body.sv-page #main#main .sv-outcomes p { font-size: clamp(10px, .88vw, 18px) !important; }
+.sv-scene-15 .sv-content { padding-top: 2.2vw; padding-bottom: 7.2vw; }
+.sv-scene-15 .sv-copy { width: calc(46vw - var(--sv-gutter)); }
+.sv-scene-16 { --sv-title: clamp(34px, 3.7vw, 79px); }
+@media (min-width: 1200px) { .sv-main { --sv-gutter: var(--arotec-content-left, 150px); } }
+@media (min-width: 1000px) and (max-width: 1399px) {
+  .sv-main { --sv-title: 3.55vw; }
+  .sv-content { min-height: 62vw; }
+  .sv-copy { width: calc(43vw - var(--sv-gutter)); }
+  .sv-scene-8 { --sv-title: 2.6vw; }
+  .sv-scene-7 { --sv-title: 3.2vw; }
+  .sv-scene-14 .sv-copy, .sv-outcomes { width: calc(43vw - var(--sv-gutter)); }
+}
+/* Fit the opening scene below the shared header on desktop. Allow content
+   to grow on unusually short screens instead of clipping the copy or cards. */
+@media (min-width: 1000px) {
+  .sv-main .sv-scene-2 {
+    --sv-title: clamp(36px, min(3.8vw, 6svh), 80px);
+    min-height: calc(100svh - var(--detail-header-space, 112px));
+  }
+  .sv-scene-2 .sv-content {
+    min-height: calc(100svh - var(--detail-header-space, 112px));
+    padding-block: clamp(20px, 2.6svh, 36px);
+  }
+  .sv-scene-2 .sv-backdrop { object-position: center bottom; }
+  .sv-scene-2 .sv-content > .sv-copy { margin-bottom: clamp(44px, 6.5svh, 76px); }
+  html body.sv-page #main#main .sv-scene-2 .sv-heading { margin-bottom: clamp(16px, 2svh, 26px) !important; }
+  html body.sv-page #main#main .sv-scene-2 .sv-eyebrow { margin-bottom: clamp(10px, 1.5svh, 20px) !important; }
+  html body.sv-page #main#main .sv-scene-2 .sv-lead {
+    font-size: clamp(19px, min(1.65vw, 2.6svh), 32px) !important;
+    margin-bottom: clamp(14px, 1.8svh, 24px);
+  }
+  html body.sv-page #main#main .sv-scene-2 .sv-body { font-size: clamp(16px, min(1.3vw, 2.15svh), 25px) !important; }
+  .sv-scene-2 .sv-card { min-height: 0; padding: clamp(34px, 4.3svh, 50px) .8vw clamp(12px, 1.8svh, 24px); }
+  .sv-scene-2 .sv-icon {
+    width: min(5.15vw, 8.3svh);
+    height: min(5.15vw, 8.3svh);
+    top: max(-2.6vw, -4.15svh);
+  }
+  html body.sv-page #main#main .sv-scene-2 .sv-icon .ph { font-size: min(3.25vw, 5.3svh) !important; }
+  html body.sv-page #main#main .sv-scene-2 .sv-card h3 { font-size: clamp(14px, min(1.36vw, 2.3svh), 27px) !important; }
+  html body.sv-page #main#main .sv-scene-2 .sv-card p { font-size: clamp(12px, min(1.08vw, 1.95svh), 21px) !important; }
+}
+@media (max-width: 999px) {
+  .sv-main { --sv-gutter: 32px; --sv-title: clamp(36px, 5.5vw, 56px); --sv-card-min: 0px; }
+  .sv-main .sv-scene { min-height: 0; display: flex; flex-direction: column; background: #faf9f6; }
+  .sv-picture { position: relative; inset: auto; z-index: auto; order: 0; }
+  .sv-backdrop { height: auto; max-height: 420px; aspect-ratio: 9/7; object-fit: cover; }
+  .sv-content, .sv-scene-2 .sv-content, .sv-scene-3 .sv-content, .sv-scene-4 .sv-content, .sv-scene-14 .sv-content, .sv-scene-15 .sv-content { min-height: 0; width: 100%; padding: 38px var(--sv-gutter) 48px; }
+  .sv-copy, .sv-scene-8 .sv-copy, .sv-scene-11 .sv-copy, .sv-scene-12 .sv-copy, .sv-scene-14 .sv-copy, .sv-scene-15 .sv-copy { width: 100%; max-width: 700px; margin: 0 0 28px; }
+  .sv-scene-3, .sv-scene-7, .sv-scene-8, .sv-scene-12, .sv-scene-16 { --sv-title: clamp(34px, 5.5vw, 56px); }
+  html body.sv-page #main#main .sv-heading { margin-bottom: 24px !important; }
+  html body.sv-page #main#main p { font-size: 18px !important; line-height: 1.5 !important; }
+  html body.sv-page #main#main .sv-eyebrow { font-size: 13px !important; margin-bottom: 24px !important; }
+  html body.sv-page #main#main .sv-category { font-size: 14px !important; margin-bottom: 12px; }
+  html body.sv-page #main#main .sv-lead { font-size: 23px !important; line-height: 1.35 !important; margin-bottom: 20px; }
+  .sv-cards, .sv-outcomes { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 0; }
+  .sv-card, .sv-summary .sv-card, .sv-palette .sv-card { padding: 24px 16px; border-radius: 12px; }
+  .sv-icon, .sv-palette .sv-icon, .sv-outcomes .sv-icon { width: 68px; height: 68px; margin-bottom: 16px; }
+  html body.sv-page #main#main .sv-icon .ph { font-size: 43px !important; }
+  html body.sv-page #main#main .sv-card h3, html body.sv-page #main#main .sv-palette h3, html body.sv-page #main#main .sv-outcomes h3 { font-size: 20px !important; margin: 0 0 12px !important; }
+  .sv-card h3::after { width: 32px; margin-top: 14px; }
+  html body.sv-page #main#main .sv-card p, html body.sv-page #main#main .sv-palette p, html body.sv-page #main#main .sv-outcomes p { font-size: 16px !important; line-height: 1.4 !important; }
+  .sv-floating { margin-top: 34px; row-gap: 54px; }
+  .sv-content:has(> .sv-floating) > .sv-copy { margin-bottom: 28px; }
+  .sv-floating .sv-card, .sv-summary .sv-card { padding-top: 45px; }
+  .sv-floating .sv-icon, .sv-palette .sv-icon { top: -34px; }
+  .sv-flow > .sv-card:not(:last-child)::after { display: none; }
+  .sv-scene-4 .sv-icon { height: 68px; }
+  .sv-summary ul { margin-top: 18px; }
+  .sv-lead-icon { gap: 16px; }
+  .sv-lead-icon .sv-icon { width: 58px; height: 58px; }
+  html body.sv-page #main#main .sv-summary ul li { font-size: 15px !important; gap: 10px; padding: 9px 0; }
+  html body.sv-page #main#main .sv-summary ul .ph { font-size: 23px !important; }
+  .sv-scene-12 .sv-lead::after, .sv-scene-14 .sv-eyebrow::after { width: 54px; margin: 24px 0; }
+  .sv-outcomes .sv-card { padding: 14px 0; }
+}
+@media (max-width: 599px) {
+  .sv-main { --sv-gutter: 22px; --sv-title: clamp(32px, 8.4vw, 46px); }
+  .sv-scene-3, .sv-scene-7, .sv-scene-8, .sv-scene-12, .sv-scene-16 { --sv-title: clamp(30px, 8.1vw, 44px); }
+  .sv-backdrop { max-height: 310px; }
+  html body.sv-page #main#main p { font-size: 16px !important; }
+  html body.sv-page #main#main .sv-lead { font-size: 21px !important; }
+  .sv-cards { gap: 16px 12px; }
+  .sv-card, .sv-palette .sv-card { padding: 20px 12px; }
+  html body.sv-page #main#main .sv-card h3, html body.sv-page #main#main .sv-palette h3 { font-size: 17px !important; }
+  html body.sv-page #main#main .sv-card p, html body.sv-page #main#main .sv-palette p { font-size: 14px !important; }
+  .sv-icon, .sv-palette .sv-icon { width: 58px; height: 58px; }
+  html body.sv-page #main#main .sv-icon .ph { font-size: 36px !important; }
+  .sv-floating { margin-top: 29px; row-gap: 45px; }
+  .sv-floating .sv-icon, .sv-palette .sv-icon { top: -29px; }
+  .sv-floating .sv-card { padding-top: 39px; }
+  .sv-summary, .sv-flow { grid-template-columns: 1fr; gap: 18px; }
+  .sv-summary { gap: 48px; }
+  .sv-flow .sv-card { padding: 24px; }
+  .sv-summary .sv-card { padding: 40px 24px 24px; }
+  html body.sv-page #main#main .sv-summary .sv-card h3, html body.sv-page #main#main .sv-flow .sv-card h3 { font-size: 22px !important; }
+  html body.sv-page #main#main .sv-flow .sv-card p { font-size: 16px !important; }
+}

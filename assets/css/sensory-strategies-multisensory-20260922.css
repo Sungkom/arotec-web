@@ -1,0 +1,135 @@
+/* Full-bleed supplied artwork. Only foreground copy uses the homepage gutter. */
+html:has(body.ms-page) { scroll-behavior: auto; }
+body.ms-page { background: #f0e7df; }
+body.ms-page #site-footer-shell { line-height: 1.6; }
+.ms-main {
+  --ms-ink: #06163f;
+  --ms-gutter: max(32px, var(--arotec-content-left, 0px));
+  --ms-title-size: clamp(36px, 3.65vw, 76px);
+  margin: 0;
+  padding: var(--detail-header-space, 112px) 0 0;
+  color: var(--ms-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+}
+.ms-main *, .ms-main *::before, .ms-main *::after { box-sizing: border-box; }
+.ms-heading[id] { scroll-margin-top: 135px; }
+.ms-main .ms-scene {
+  position: relative;
+  isolation: isolate;
+  min-height: 56.25vw;
+  margin: 0;
+  padding: 0;
+  scroll-margin-top: 120px;
+  content-visibility: visible !important;
+}
+.ms-picture { position: absolute; inset: 0; z-index: -1; display: block; }
+.ms-backdrop { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.ms-copy { width: calc(45% - var(--ms-gutter)); margin-left: var(--ms-gutter); padding: 6.55vw 0 5vw; }
+html body.ms-page #main#main .ms-copy > .ms-eyebrow {
+  margin: 0 0 2.05vw;
+  font-size: clamp(11px, 1.06vw, 21px) !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  letter-spacing: .17em !important;
+  color: var(--ms-ink);
+}
+html body.ms-page #main#main .ms-heading {
+  --arotec-display-size: var(--ms-title-size);
+  --arotec-display-line-height: 1.08;
+  --arotec-display-letter-spacing: -.04em;
+  --arotec-display-weight: 700;
+  font-family: var(--site-font, "DM Sans", sans-serif) !important;
+  font-size: var(--ms-title-size) !important;
+  line-height: 1.08 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.04em !important;
+  overflow-wrap: normal !important;
+  max-width: none !important;
+  text-wrap: wrap !important;
+  text-transform: none !important;
+  color: var(--ms-ink);
+  margin: 0 0 1.55vw !important;
+}
+html body.ms-page #main#main .ms-lead {
+  font-size: clamp(22px, 1.98vw, 40px) !important;
+  line-height: 1.22 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.035em !important;
+  color: var(--ms-ink);
+  margin: 0 0 1.65vw;
+}
+html body.ms-page #main#main .ms-body {
+  font-size: clamp(16px, 1.33vw, 26px) !important;
+  line-height: 1.42 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.02em !important;
+  color: var(--ms-ink);
+  margin: 0;
+}
+.ms-features { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 2.6vw 0 0; }
+.ms-features > li { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 0 .45vw; gap: .65vw; text-align: center; }
+.ms-icon { display: inline-flex; align-items: center; justify-content: center; width: clamp(64px, 5.6vw, 114px); height: clamp(64px, 5.6vw, 114px); border: 1.5px solid #85796f; border-radius: 50%; }
+html body.ms-page #main#main .ms-icon > .ph { font-family: "Phosphor" !important; font-size: clamp(35px, 3.35vw, 68px) !important; font-weight: 400 !important; line-height: 1 !important; }
+.ms-icon.ms-reference-icon { position: relative; overflow: hidden; border: 0; background: transparent; }
+.ms-reference-icon > img { position: absolute; display: block; width: var(--icon-width); max-width: none; height: auto; left: var(--icon-left); top: var(--icon-top); }
+html body.ms-page #main#main .ms-label { font-family: var(--site-font) !important; font-size: clamp(12px, 1.08vw, 22px) !important; font-weight: 500 !important; line-height: 1.3 !important; letter-spacing: -.025em !important; color: var(--ms-ink); }
+.ms-sight .ms-features > li + li, .ms-sound .ms-features > li + li, .ms-touch .ms-features > li + li { border-left: 1px solid #bcaa96; }
+.ms-touch .ms-icon { background: #f1e8dc; }
+.ms-taste .ms-icon { border-color: #b7a086; }
+.ms-taste .ms-features > li + li::before { content: ""; position: absolute; right: calc(100% - .55vw); top: 2.8vw; width: 1.1vw; border-top: 1px solid #b7a086; }
+.ms-texture .ms-icon, .ms-temperature .ms-icon { border-color: var(--ms-ink); }
+.ms-temperature .ms-features > li:nth-child(2) .ph { transform: rotate(90deg); }
+.ms-hero { --ms-title-size: clamp(42px, calc(4.7vw - 10px), 88px); }
+.ms-hero .ms-copy { width: calc(50% - var(--ms-gutter)); }
+.ms-hero .ms-lead { max-width: 760px; }
+.ms-story { --ms-title-size: clamp(36px, 3.35vw, 70px); }
+.ms-story .ms-copy { width: calc(50% - var(--ms-gutter)); }
+.ms-texture { --ms-title-size: clamp(34px, 3.35vw, 68px); }
+.ms-temperature { --ms-title-size: clamp(28px, 2.3vw, 50px); }
+@media (min-width: 1000px) {
+  /* Fit the opening artwork below the measured desktop header. */
+  .ms-main .ms-hero {
+    min-height: calc(100svh - var(--detail-header-space, 112px));
+    display: flex;
+    align-items: center;
+  }
+  .ms-main .ms-hero .ms-copy { padding-block: clamp(24px, 4svh, 64px); }
+  .ms-main .ms-hero .ms-backdrop { object-position: center top; }
+  /* Keep the navy copy on the lit wall instead of the dark doorway. */
+  .ms-touch { --ms-title-size: clamp(32px, 3vw, 62px); }
+  .ms-touch .ms-copy { width: calc(36.5% - var(--ms-gutter)); }
+  html body.ms-page #main#main .ms-touch .ms-lead { font-size: clamp(22px, 1.72vw, 35px) !important; }
+  html body.ms-page #main#main .ms-touch .ms-body { font-size: clamp(16px, 1.22vw, 25px) !important; }
+}
+@media (max-width: 1199px) and (min-width: 1000px) { .ms-main { --ms-gutter: 32px; } }
+@media (max-width: 999px) {
+  .ms-main { --ms-gutter: 32px; --ms-title-size: clamp(36px, 5.2vw, 54px); }
+  .ms-main .ms-scene { display: flex; flex-direction: column; min-height: 0; background: #f3ede7; }
+  .ms-picture { position: relative; inset: auto; z-index: auto; width: 100%; }
+  .ms-backdrop { height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+  .ms-copy, .ms-hero .ms-copy, .ms-story .ms-copy { width: auto; margin: 0; padding: 38px var(--ms-gutter) 46px; }
+  .ms-hero, .ms-story, .ms-texture, .ms-temperature { --ms-title-size: clamp(36px, 5.2vw, 54px); }
+  html body.ms-page #main#main .ms-copy > .ms-eyebrow { font-size: 12px !important; margin-bottom: 24px; }
+  html body.ms-page #main#main .ms-heading { margin-bottom: 22px !important; }
+  html body.ms-page #main#main .ms-lead { font-size: 26px !important; line-height: 1.3 !important; margin-bottom: 22px; }
+  html body.ms-page #main#main .ms-body { font-size: 18px !important; line-height: 1.5 !important; }
+  .ms-features { max-width: 700px; margin-top: 30px; gap: 16px; }
+  .ms-features > li { gap: 12px; padding: 0; }
+  .ms-icon { width: 76px; height: 76px; }
+  html body.ms-page #main#main .ms-icon > .ph { font-size: 45px !important; }
+  html body.ms-page #main#main .ms-label { font-size: 15px !important; }
+  .ms-taste .ms-features > li + li::before { display: none; }
+}
+@media (max-width: 599px) {
+  .ms-main { --ms-gutter: 22px; }
+  .ms-main .ms-scene { --ms-title-size: clamp(30px, 8.4vw, 44px); }
+  .ms-main .ms-hero { --ms-title-size: clamp(34px, 9.2vw, 48px); }
+  .ms-copy, .ms-hero .ms-copy, .ms-story .ms-copy { padding-top: 30px; padding-bottom: 40px; }
+  html body.ms-page #main#main .ms-copy > .ms-eyebrow { font-size: 10px !important; letter-spacing: .14em !important; margin-bottom: 20px; }
+  html body.ms-page #main#main .ms-lead { font-size: 23px !important; }
+  html body.ms-page #main#main .ms-body { font-size: 16px !important; }
+  .ms-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 16px; }
+  .ms-features > li:nth-child(3) { border-left: 0; }
+  .ms-icon { width: 74px; height: 74px; }
+  html body.ms-page #main#main .ms-label { font-size: 14px !important; }
+}

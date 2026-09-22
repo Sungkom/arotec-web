@@ -1,117 +1,109 @@
-.value-experience-page .sv-copy {
-  min-width: 0;
-}
-
-.value-experience-page .sv-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding: 0;
-  margin: 32px 0 0;
-  list-style: none;
-}
-
-.value-experience-page .sv-card {
-  min-width: 0;
-  padding: 22px;
-  border: 1px solid var(--sp-line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.value-experience-page .sv-card .sp-icon {
-  margin-bottom: 16px;
-}
-
-html body.value-experience-page main#main .sv-card h3 {
-  margin: 0 0 10px;
-  color: var(--sp-ink) !important;
-  font-family: "DM Sans", sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  overflow-wrap: anywhere;
-}
-
-html body.value-experience-page main#main .sv-card p {
+/* September 19 artwork, full bleed; only live text follows the homepage gutters. */
+body.value-experience-page { background: #faf8f4; }
+html:has(body.value-experience-page) { scroll-behavior: auto; scroll-padding-top: 0; }
+html body.value-experience-page main#main > .sv-scene { content-visibility: visible !important; contain-intrinsic-size: none !important; }
+.sv-main {
+  --sv-ink: #061332;
+  --sv-gutter: max(32px, var(--arotec-content-left, 0px));
+  padding: var(--detail-header-space, 112px) 0 0;
   margin: 0;
-  font-size: 16px !important;
-  line-height: 1.55 !important;
+  color: var(--sv-ink);
 }
-
-.value-experience-page .sv-number {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--sp-blue);
-  font-size: 14px;
-  font-weight: 700;
+.sv-main *, .sv-main *::before, .sv-main *::after { box-sizing: border-box; }
+.sv-main .sv-scene { position: relative; isolation: isolate; min-height: 56.25vw; margin: 0; padding: 0; content-visibility: visible; scroll-margin-top: var(--detail-header-space,112px); }
+.sv-main .sv-scene::before { content: none; }
+.sv-main .sv-frame { width: auto; margin-left: var(--sv-gutter); margin-right: var(--sv-gutter); }
+.sv-picture { position: absolute; inset: 0; display: block; z-index: -1; }
+.sv-backdrop { display: block; width: 100%; height: 100%; object-fit: fill; }
+.sv-copy { padding-top: 6.3vw; }
+html body.value-experience-page #main#main :is(h1,h2,h3,p,li,a,span) { font-family: var(--site-font, "DM Sans", sans-serif) !important; color: var(--sv-ink); text-transform: none !important; }
+html body.value-experience-page #main#main .sv-eyebrow { margin: 0 0 1.1vw; font-size: clamp(12px,1.36vw,28px) !important; font-weight: 700 !important; letter-spacing: .06em !important; line-height: 1.2 !important; }
+html body.value-experience-page #main#main .sv-title {
+  --arotec-display-size: clamp(35px,3.55vw,76px);
+  --arotec-display-weight: 800;
+  --arotec-display-line-height: 1.08;
+  --arotec-display-letter-spacing: -.045em;
+  margin: 0 0 1.45vw !important;
+  max-width: none !important;
+  text-wrap: wrap !important;
+  font-size: var(--arotec-display-size) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.045em !important;
+  overflow-wrap: normal !important;
+  scroll-margin-top: 140px;
 }
-
-.value-experience-page .sv-path {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  padding: 24px 0 0;
-  margin: 28px 0 0;
-  border-top: 1px solid var(--sp-line);
-  list-style: none;
+html body.value-experience-page #main#main .sv-lead { max-width: 58vw; margin: 0 0 .75vw; font-size: clamp(21px,2.05vw,42px) !important; line-height: 1.16 !important; font-weight: 700 !important; letter-spacing: -.035em !important; }
+html body.value-experience-page #main#main .sv-body { max-width: 46vw; margin: 0; font-size: clamp(15px,1.3vw,27px) !important; line-height: 1.3 !important; font-weight: 400 !important; letter-spacing: -.025em !important; }
+.sv-main .sv-labels { position: absolute; top: 40.6vw; left: 0; right: 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); column-gap: 2.7vw; padding: 0; margin-top: 0; margin-bottom: 0; list-style: none; }
+.sv-label { position: relative; text-align: center; padding: 0; min-width: 0; }
+html body.value-experience-page #main#main .sv-label h3 { font-size: clamp(16px,1.52vw,31px) !important; font-weight: 700 !important; line-height: 1.12 !important; letter-spacing: -.045em !important; margin: 0 0 .4vw !important; }
+html body.value-experience-page #main#main .sv-label p { font-size: clamp(13px,1.12vw,23px) !important; line-height: 1.23 !important; font-weight: 400 !important; letter-spacing: -.025em !important; margin: 0 auto; max-width: 15.6vw; }
+html body.value-experience-page #main#main .ph { font-family: "Phosphor" !important; font-weight: 400 !important; }
+.sv-pointer { position: absolute; bottom: calc(100% + .4vw); left: 50%; width: auto; height: 3.6vw; transform: translateX(-50%); }
+.sv-engagement .sv-label .sv-pointer { width: .99vw; height: auto; }
+.sv-main .sv-flow { position: absolute; left: 0; right: 0; top: 50.1vw; display: flex; align-items: center; gap: 2.5vw; margin-top: 0; margin-bottom: 0; padding: 0; list-style: none; }
+html body.value-experience-page #main#main .sv-flow li { display: flex; align-items: center; flex: 1 1 auto; gap: 2.5vw; font-size: clamp(17px,1.8vw,36px) !important; line-height: 1.2 !important; font-weight: 700 !important; letter-spacing: -.025em !important; }
+.sv-flow li:last-child { flex: 0 0 auto; }
+.sv-flow span { white-space: nowrap; }
+.sv-flow-arrow { display: block; flex: 1 1 0; min-width: 32px; width: 0; height: 1.1vw; object-fit: fill; }
+.sv-experience .sv-title { --arotec-display-size: clamp(42px,4.05vw,84px) !important; }
+.sv-experience .sv-lead { max-width: 42vw !important; }
+.sv-experience .sv-body { max-width: 42vw !important; }
+.sv-main .sv-experience .sv-labels { grid-template-columns: repeat(6,minmax(0,1fr)); top: 41.45vw; gap: 1.3vw; }
+html body.value-experience-page #main#main .sv-experience .sv-label h3 { font-size: clamp(12px,1.11vw,23px) !important; letter-spacing: -.03em !important; line-height: 1.15 !important; }
+html body.value-experience-page #main#main .sv-experience .sv-label p { font-size: clamp(12px,.99vw,20px) !important; line-height: 1.28 !important; }
+html body.value-experience-page #main#main .sv-experience .sv-flow li { font-size: clamp(14px,1.32vw,27px) !important; }
+.sv-experience .sv-flow .ph { transform: scaleX(2.5); }
+.sv-main .sv-business-value .sv-labels { top: 43.55vw; gap: 0; }
+html body.value-experience-page #main#main .sv-number { display: block; font-size: clamp(24px,2.1vw,43px) !important; line-height: 1; font-weight: 700 !important; margin-bottom: .5vw; }
+.sv-business-value .sv-label { padding: 0 1vw; }
+.sv-business-value .sv-label + .sv-label { border-left: 1px solid #cfcac4; }
+.sv-business-value .sv-label > .ph { position: absolute; top: 2.2vw; right: -.9vw; font-size: 2.3vw; transform: scaleX(1.5); }
+html body.value-experience-page #main#main .sv-business-value .sv-label p { max-width: 12vw; margin-top: .9vw; font-size: clamp(16px,1.3vw,27px) !important; }
+html body.value-experience-page #main#main :is(.sv-preference,.sv-premium,.sv-loyalty) .sv-title { --arotec-display-size: clamp(33px,3.25vw,68px); }
+@media (min-width: 1200px) { .sv-main { --sv-gutter: 150px; } }
+@media (min-width: 1000px) {
+  html body.value-experience-page #main#main .sv-memory .sv-body { max-width: 35vw; font-size: clamp(15px,1.2vw,25px) !important; }
+  html body.value-experience-page #main#main .sv-memory .sv-lead { font-size: clamp(21px,1.95vw,40px) !important; }
 }
-
-.value-experience-page .sv-path li {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-  color: var(--sp-ink);
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: center;
+@media (max-width: 1199px) and (min-width: 1000px) { .sv-main { --sv-gutter: 32px; } }
+@media (max-width: 999px) {
+  .sv-main { --sv-gutter: 32px; }
+  .sv-main .sv-scene { display: flex; flex-direction: column; min-height: 0; padding: 42px 0 48px; }
+  .sv-copy { padding-top: 0; order: 0; }
+  .sv-picture { position: relative; inset: auto; z-index: 0; order: 1; width: 100%; height: auto; margin: 20px 0 24px; }
+  .sv-backdrop { position: static; height: auto; width: 100%; }
+  html body.value-experience-page #main#main .sv-title,
+  html body.value-experience-page #main#main .sv-experience .sv-title { --arotec-display-size: clamp(34px,5.5vw,54px) !important; margin-bottom: 22px !important; }
+  html body.value-experience-page #main#main .sv-eyebrow { font-size: 13px !important; margin-bottom: 16px; }
+  html body.value-experience-page #main#main .sv-lead { font-size: 25px !important; max-width: 100% !important; margin-bottom: 16px; }
+  html body.value-experience-page #main#main .sv-body { font-size: 17px !important; max-width: 100% !important; line-height: 1.5 !important; }
+  .sv-desktop-break { display: none; }
+  .sv-main .sv-labels, .sv-main .sv-experience .sv-labels, .sv-main .sv-business-value .sv-labels { position: relative; inset: auto; order: 2; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 24px; margin-top: 0; margin-bottom: 0; }
+  html body.value-experience-page #main#main .sv-label h3, html body.value-experience-page #main#main .sv-experience .sv-label h3 { font-size: 20px !important; line-height: 1.2 !important; margin-bottom: 9px !important; }
+  html body.value-experience-page #main#main .sv-label p, html body.value-experience-page #main#main .sv-experience .sv-label p, html body.value-experience-page #main#main .sv-business-value .sv-label p { font-size: 16px !important; max-width: 260px; line-height: 1.4 !important; }
+  .sv-pointer { display: none; }
+  .sv-main .sv-flow { position: relative; inset: auto; order: 3; margin-top: 34px; gap: 24px; }
+  html body.value-experience-page #main#main .sv-flow li, html body.value-experience-page #main#main .sv-experience .sv-flow li { font-size: 16px !important; gap: 20px; }
+  .sv-flow span { white-space: normal; }
+  .sv-flow-arrow { flex: 0 0 auto; width: 30px; min-width: 0; height: 10px; }
+  .sv-business-value .sv-label { border: 0 !important; padding: 0; }
+  .sv-business-value .sv-label > .ph { display: none; }
+  html body.value-experience-page #main#main .sv-number { font-size: 30px !important; margin-bottom: 10px; }
 }
-
-.value-experience-page .sv-path li:not(:last-child)::after {
-  position: absolute;
-  top: 13px;
-  right: -21px;
-  content: "\2192";
-  color: var(--sp-blue);
-  font-size: 22px;
-  font-weight: 400;
-}
-
-@media (max-width: 991px) {
-  .value-experience-page .sp-split > .sp-art {
-    max-width: 540px;
-  }
-}
-
 @media (max-width: 599px) {
-  .value-experience-page .sv-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 24px;
-  }
-
-  .value-experience-page .sv-card {
-    padding: 20px;
-    border-radius: 16px;
-  }
-
-  .value-experience-page .sv-path {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .value-experience-page .sv-path li:not(:last-child)::after {
-    top: auto;
-    right: auto;
-    bottom: -31px;
-    left: 50%;
-    content: "\2193";
-    transform: translateX(-50%);
-  }
+  .sv-main { --sv-gutter: 22px; }
+  .sv-main .sv-scene { padding: 34px 0 42px; }
+  html body.value-experience-page #main#main .sv-title, html body.value-experience-page #main#main .sv-experience .sv-title { --arotec-display-size: clamp(32px,8.6vw,46px) !important; }
+  html body.value-experience-page #main#main .sv-eyebrow { font-size: 11px !important; letter-spacing: .06em !important; }
+  html body.value-experience-page #main#main .sv-lead { font-size: 23px !important; line-height: 1.22 !important; }
+  html body.value-experience-page #main#main .sv-body { font-size: 16px !important; }
+  .sv-picture { margin-top: 18px; }
+  .sv-main .sv-labels, .sv-main .sv-experience .sv-labels, .sv-main .sv-business-value .sv-labels { gap: 28px 20px; }
+  html body.value-experience-page #main#main .sv-label h3, html body.value-experience-page #main#main .sv-experience .sv-label h3 { font-size: 17px !important; }
+  html body.value-experience-page #main#main .sv-label p, html body.value-experience-page #main#main .sv-experience .sv-label p, html body.value-experience-page #main#main .sv-business-value .sv-label p { font-size: 14px !important; }
+  .sv-main .sv-flow { flex-direction: column; gap: 14px; align-items: stretch; text-align: center; }
+  html body.value-experience-page #main#main .sv-flow li, html body.value-experience-page #main#main .sv-experience .sv-flow li { flex-direction: column; gap: 14px; font-size: 18px !important; }
+  .sv-flow-arrow { transform: rotate(90deg); width: 34px; height: 10px; margin: 10px 0; }
 }
