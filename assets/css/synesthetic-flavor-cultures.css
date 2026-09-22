@@ -1,4 +1,5 @@
-:root {
+/* Compatibility: preserve existing About pages and the latest Cultures design at their original URLs. */
+:root:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   --sfc-ink: #09264d;
   --sfc-ink-soft: #264a73;
   --sfc-blue: #1277d5;
@@ -13,12 +14,12 @@
   --sfc-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html {
+html:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   scroll-behavior: smooth;
   scroll-padding-top: 112px;
 }
 
-body.sfc-page {
+body.sfc-page:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin: 0;
   overflow-x: clip;
   color: var(--sfc-ink);
@@ -30,31 +31,31 @@ body.sfc-page {
   -webkit-font-smoothing: antialiased;
 }
 
-body.sfc-page *,
-body.sfc-page *::before,
-body.sfc-page *::after {
+body.sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before,
+body.sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
   box-sizing: border-box;
 }
 
-body.sfc-page #site-shell {
+body.sfc-page #site-shell:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: calc(var(--arotec-utility-height, 30.6px) + var(--arotec-main-height, 80px));
 }
 
-body.sfc-page img {
+body.sfc-page img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 100%;
 }
 
-body.sfc-page figure,
-body.sfc-page blockquote,
-body.sfc-page p,
-body.sfc-page h1,
-body.sfc-page h2,
-body.sfc-page h3,
-body.sfc-page ul {
+body.sfc-page figure:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page p:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+body.sfc-page ul:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-top: 0;
 }
 
-.sfc-main {
+.sfc-main:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   z-index: 1;
   overflow: clip;
@@ -63,12 +64,12 @@ body.sfc-page ul {
     linear-gradient(180deg, #fbfdff 0%, #f5faff 42%, #fbfdff 100%);
 }
 
-.sfc-shell {
+.sfc-shell:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: var(--sfc-shell);
   margin-inline: auto;
 }
 
-.sfc-eyebrow {
+.sfc-eyebrow:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 16px;
   color: var(--sfc-blue);
   font-size: 0.76rem;
@@ -77,7 +78,7 @@ body.sfc-page ul {
   text-transform: uppercase;
 }
 
-.sfc-hero {
+.sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   min-height: 742px;
   display: flex;
@@ -88,7 +89,7 @@ body.sfc-page ul {
   background: #f1e8de;
 }
 
-.sfc-hero::before {
+.sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -97,7 +98,7 @@ body.sfc-page ul {
   background: linear-gradient(90deg, rgba(255, 252, 248, 0.9) 0%, rgba(255, 252, 248, 0.7) 30%, rgba(255, 252, 248, 0.08) 57%, transparent 72%);
 }
 
-.sfc-hero::after {
+.sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
   position: absolute;
   inset: auto 0 0;
   height: 110px;
@@ -107,7 +108,7 @@ body.sfc-page ul {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.72));
 }
 
-.sfc-hero__grid {
+.sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 742px;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -116,7 +117,7 @@ body.sfc-page ul {
   padding-block: 48px 38px;
 }
 
-.sfc-hero__copy {
+.sfc-hero__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 1 / 6;
   position: relative;
   z-index: 2;
@@ -124,7 +125,7 @@ body.sfc-page ul {
   padding-block: 32px 18px;
 }
 
-.sfc-hero h1 {
+.sfc-hero h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 24px;
   color: var(--sfc-ink);
   font-family: var(--sfc-serif);
@@ -135,12 +136,12 @@ body.sfc-page ul {
   text-wrap: balance;
 }
 
-.sfc-hero h1 span {
+.sfc-hero h1 span:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: block;
   white-space: nowrap;
 }
 
-.sfc-hero__lead {
+.sfc-hero__lead:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 16px;
   color: var(--sfc-blue);
   font-family: var(--sfc-serif);
@@ -149,7 +150,7 @@ body.sfc-page ul {
   line-height: 1.03;
 }
 
-.sfc-hero__body {
+.sfc-hero__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 510px;
   margin-bottom: 30px;
   color: var(--sfc-ink-soft);
@@ -157,7 +158,7 @@ body.sfc-page ul {
   line-height: 1.65;
 }
 
-.sfc-feature-list {
+.sfc-feature-list:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 520px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -167,7 +168,7 @@ body.sfc-page ul {
   list-style: none;
 }
 
-.sfc-feature-list li {
+.sfc-feature-list li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-width: 0;
   display: grid;
   place-items: center;
@@ -175,18 +176,18 @@ body.sfc-page ul {
   text-align: center;
 }
 
-.sfc-feature-list li + li {
+.sfc-feature-list li + li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   border-left: 1px solid var(--sfc-line);
 }
 
-.sfc-feature-list strong {
+.sfc-feature-list strong:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   color: #174574;
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.sfc-icon-ring {
+.sfc-icon-ring:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 60px;
   height: 60px;
   display: grid;
@@ -198,7 +199,7 @@ body.sfc-page ul {
   box-shadow: 0 12px 28px rgba(43, 113, 174, 0.08);
 }
 
-.sfc-line-icon {
+.sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 1em;
   height: 1em;
   display: block;
@@ -210,12 +211,12 @@ body.sfc-page ul {
   stroke-linejoin: round;
 }
 
-.sfc-icon-ring .sfc-line-icon {
+.sfc-icon-ring .sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 1.7rem;
   height: 1.7rem;
 }
 
-.sfc-hero__visual {
+.sfc-hero__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -225,14 +226,14 @@ body.sfc-page ul {
   transition: none;
 }
 
-.sfc-hero__visual picture {
+.sfc-hero__visual picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   max-width: none;
   height: 100%;
   display: block;
 }
 
-.sfc-hero__visual img {
+.sfc-hero__visual img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   max-height: none;
@@ -242,11 +243,11 @@ body.sfc-page ul {
   filter: none;
 }
 
-.sfc-section-nav {
+.sfc-section-nav:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: none;
 }
 
-.sfc-country {
+.sfc-country:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   min-height: 740px;
   display: flex;
@@ -258,20 +259,20 @@ body.sfc-page ul {
     linear-gradient(90deg, #fbfdff 0%, #f4f9ff 100%);
 }
 
-.sfc-country--thailand {
+.sfc-country--thailand:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   background:
     radial-gradient(circle at 76% 34%, rgba(230, 207, 142, 0.16), transparent 31%),
     linear-gradient(90deg, #f8fbff 0%, #eff7ff 100%);
 }
 
-.sfc-country--japan {
+.sfc-country--japan:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 760px;
   background:
     radial-gradient(circle at 76% 30%, rgba(202, 221, 240, 0.27), transparent 34%),
     linear-gradient(90deg, #fbfdff 0%, #f3f8fd 100%);
 }
 
-.sfc-country__grid {
+.sfc-country__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: inherit;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -280,7 +281,7 @@ body.sfc-page ul {
   padding-block: 30px 36px;
 }
 
-.sfc-country__copy {
+.sfc-country__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 1 / 6;
   position: relative;
   z-index: 3;
@@ -288,7 +289,7 @@ body.sfc-page ul {
   align-self: start;
 }
 
-.sfc-country h2 {
+.sfc-country h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 2px;
   color: var(--sfc-ink);
   font-family: var(--sfc-serif);
@@ -298,7 +299,7 @@ body.sfc-page ul {
   line-height: 0.92;
 }
 
-.sfc-country__subtitle {
+.sfc-country__subtitle:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 19px;
   color: var(--sfc-blue);
   font-family: var(--sfc-serif);
@@ -307,22 +308,22 @@ body.sfc-page ul {
   line-height: 1.1;
 }
 
-.sfc-country__body {
+.sfc-country__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 510px;
   color: var(--sfc-ink-soft);
   font-size: clamp(0.82rem, 0.92vw, 0.93rem);
   line-height: 1.52;
 }
 
-.sfc-country__body p {
+.sfc-country__body p:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 11px;
 }
 
-.sfc-country__body p:last-child {
+.sfc-country__body p:last-child:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 0;
 }
 
-.sfc-ingredients {
+.sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -332,12 +333,12 @@ body.sfc-page ul {
   list-style: none;
 }
 
-.sfc-ingredients--six {
+.sfc-ingredients--six:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 5px;
 }
 
-.sfc-ingredient {
+.sfc-ingredient:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-width: 0;
   display: grid;
   align-content: start;
@@ -348,7 +349,7 @@ body.sfc-page ul {
   transition: transform 260ms var(--sfc-ease);
 }
 
-.sfc-ingredient picture {
+.sfc-ingredient picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: min(70px, 100%);
   aspect-ratio: 1;
   display: block;
@@ -360,7 +361,7 @@ body.sfc-page ul {
   transition: border-color 260ms ease, box-shadow 260ms ease;
 }
 
-.sfc-ingredient img {
+.sfc-ingredient img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   display: block;
@@ -370,7 +371,7 @@ body.sfc-page ul {
   transition: transform 260ms var(--sfc-ease);
 }
 
-.sfc-ingredient span {
+.sfc-ingredient span:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 78px;
   font-size: clamp(0.55rem, 0.64vw, 0.66rem);
   font-weight: 700;
@@ -378,23 +379,23 @@ body.sfc-page ul {
   text-transform: uppercase;
 }
 
-.sfc-ingredient:hover,
-.sfc-ingredient:focus-within {
+.sfc-ingredient:hover:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-ingredient:focus-within:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: translateY(-4px);
 }
 
-.sfc-ingredient:hover picture,
-.sfc-ingredient:focus-within picture {
+.sfc-ingredient:hover picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-ingredient:focus-within picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   border-color: rgba(18, 119, 213, 0.74);
   box-shadow: 0 13px 26px rgba(32, 86, 133, 0.15);
 }
 
-.sfc-ingredient:hover img,
-.sfc-ingredient:focus-within img {
+.sfc-ingredient:hover img:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-ingredient:focus-within img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: scale(1.04);
 }
 
-.sfc-country blockquote {
+.sfc-country blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 0;
   color: var(--sfc-ink);
   font-family: var(--sfc-serif);
@@ -404,12 +405,12 @@ body.sfc-page ul {
   line-height: 0.99;
 }
 
-.sfc-country blockquote em {
+.sfc-country blockquote em:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   color: var(--sfc-blue);
   font-weight: 600;
 }
 
-.sfc-country__thailand-scene {
+.sfc-country__thailand-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 1 / 8;
   grid-row: 1;
   align-self: center;
@@ -417,55 +418,55 @@ body.sfc-page ul {
   margin: 0;
 }
 
-.sfc-country__thailand-scene picture,
-.sfc-country__thailand-scene img {
+.sfc-country__thailand-scene picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__thailand-scene img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: block;
   width: 100%;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  .sfc-country--thailand .sfc-country__copy {
+  .sfc-country--thailand .sfc-country__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 8 / 13;
     grid-row: 1;
   }
 }
 
 @media (max-width: 991px) {
-  .sfc-country__thailand-scene {
+  .sfc-country__thailand-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1 / -1;
     grid-row: auto;
     order: 4;
   }
 }
 
-.sfc-country__taiwan-scene,
-.sfc-country__japan-scene {
+.sfc-country__taiwan-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__japan-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 6 / 13;
   align-self: center;
   min-width: 0;
   margin: 0;
 }
 
-.sfc-country__taiwan-scene picture,
-.sfc-country__taiwan-scene img,
-.sfc-country__japan-scene picture,
-.sfc-country__japan-scene img {
+.sfc-country__taiwan-scene picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__taiwan-scene img:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__japan-scene picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__japan-scene img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: block;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 991px) {
-  .sfc-country__taiwan-scene,
-  .sfc-country__japan-scene {
+  .sfc-country__taiwan-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__japan-scene:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1 / -1;
     order: 4;
   }
 }
 
-.sfc-country__map,
-.sfc-country__product {
+.sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   z-index: 2;
   min-width: 0;
@@ -474,14 +475,14 @@ body.sfc-page ul {
   transition: transform 320ms var(--sfc-ease), filter 420ms ease;
 }
 
-.sfc-country__map {
+.sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 6 / 9;
   height: 590px;
   display: grid;
   place-items: center;
 }
 
-.sfc-country__product {
+.sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 9 / 13;
   height: 620px;
   align-self: end;
@@ -489,20 +490,20 @@ body.sfc-page ul {
   place-items: end center;
 }
 
-.sfc-country__map picture,
-.sfc-country__product picture {
+.sfc-country__map picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__product picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.sfc-country__product picture {
+.sfc-country__product picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   -webkit-mask-image: radial-gradient(ellipse 98% 92% at 50% 50%, #000 72%, transparent 100%);
   mask-image: radial-gradient(ellipse 98% 92% at 50% 50%, #000 72%, transparent 100%);
 }
 
-.sfc-country__map img,
-.sfc-country__product img {
+.sfc-country__map img:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country__product img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   display: block;
@@ -512,17 +513,17 @@ body.sfc-page ul {
   transition: transform 580ms var(--sfc-ease), filter 580ms ease;
 }
 
-.sfc-country__map.is-active img,
-.sfc-country.is-visual-active .sfc-country__map img {
+.sfc-country__map.is-active img:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-country.is-visual-active .sfc-country__map img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: scale(1.018);
   filter: saturate(1) drop-shadow(0 24px 36px rgba(38, 93, 142, 0.16));
 }
 
-.sfc-country__product:hover img {
+.sfc-country__product:hover img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: scale(1.015);
 }
 
-.sfc-comparison {
+.sfc-comparison:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   min-height: 650px;
   display: flex;
@@ -536,7 +537,7 @@ body.sfc-page ul {
 }
 
 /* Reference layout with AROTEC colors and shared DM Sans typography. */
-html body.sfc-page #science.sfc-comparison {
+html body.sfc-page #science.sfc-comparison:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   padding-block: clamp(44px, 7vw, 100px) 40px;
   color: var(--sfc-ink);
   font-family: "DM Sans", sans-serif;
@@ -546,13 +547,13 @@ html body.sfc-page #science.sfc-comparison {
     linear-gradient(180deg, #eef7ff 0%, #f8fbff 100%);
 }
 
-html body.sfc-page #science .sfc-comparison__header {
+html body.sfc-page #science .sfc-comparison__header:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 1060px;
   margin: 0 auto 24px;
   text-align: left;
 }
 
-html body.sfc-page #science h2 {
+html body.sfc-page #science h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: none;
   margin: 0;
   color: var(--sfc-ink);
@@ -566,16 +567,16 @@ html body.sfc-page #science h2 {
   text-wrap: initial;
 }
 
-html body.sfc-page #science h2 span {
+html body.sfc-page #science h2 span:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: block;
   color: inherit;
 }
 
-html body.sfc-page #science .sfc-card-grid {
+html body.sfc-page #science .sfc-card-grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   gap: clamp(24px, 3vw, 44px);
 }
 
-html body.sfc-page #science .sfc-culture-card {
+html body.sfc-page #science .sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -587,7 +588,7 @@ html body.sfc-page #science .sfc-culture-card {
   transform: none;
 }
 
-html body.sfc-page #science .sfc-culture-card figure {
+html body.sfc-page #science .sfc-culture-card figure:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   order: 0;
   width: 100%;
   height: auto;
@@ -597,12 +598,12 @@ html body.sfc-page #science .sfc-culture-card figure {
   background: transparent;
 }
 
-html body.sfc-page #science .sfc-culture-card img {
+html body.sfc-page #science .sfc-culture-card img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   object-fit: contain;
   transform: none;
 }
 
-html body.sfc-page #science .sfc-culture-card h3 {
+html body.sfc-page #science .sfc-culture-card h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   order: 1;
   margin: 0;
   padding: 20px 0 8px;
@@ -615,16 +616,16 @@ html body.sfc-page #science .sfc-culture-card h3 {
   text-align: center;
 }
 
-html body.sfc-page #science .sfc-culture-card[href="#taiwan"] h3 {
+html body.sfc-page #science .sfc-culture-card[href="#taiwan"] h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   color: var(--sfc-ink);
 }
 
-html body.sfc-page #science .sfc-culture-card__body {
+html body.sfc-page #science .sfc-culture-card__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   order: 2;
   padding: 0;
 }
 
-html body.sfc-page #science .sfc-culture-card ul {
+html body.sfc-page #science .sfc-culture-card ul:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
@@ -632,7 +633,7 @@ html body.sfc-page #science .sfc-culture-card ul {
   padding: 0;
 }
 
-html body.sfc-page #science .sfc-culture-card li {
+html body.sfc-page #science .sfc-culture-card li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 0;
   justify-content: center;
   color: var(--sfc-ink-soft);
@@ -643,11 +644,11 @@ html body.sfc-page #science .sfc-culture-card li {
   line-height: 28px !important;
 }
 
-html body.sfc-page #science .sfc-culture-card li svg {
+html body.sfc-page #science .sfc-culture-card li svg:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: none;
 }
 
-html body.sfc-page #science .sfc-comparison__closing {
+html body.sfc-page #science .sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin: 30px auto 0;
   color: var(--sfc-ink-soft);
   font-family: "DM Sans", sans-serif;
@@ -658,14 +659,14 @@ html body.sfc-page #science .sfc-comparison__closing {
   text-align: center;
 }
 
-html body.sfc-page #science .sfc-comparison__closing::before {
+html body.sfc-page #science .sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before {
   width: 96px;
   margin: 0 auto 22px;
   background: var(--sfc-blue);
 }
 
 @media (min-width: 768px) {
-  html body.sfc-page #science .sfc-culture-card + .sfc-culture-card::after {
+  html body.sfc-page #science .sfc-culture-card + .sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
     position: absolute;
     top: calc(100% - 192px);
     bottom: 0;
@@ -678,7 +679,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
 }
 
 @media (max-width: 1199px) {
-  html body.sfc-page #science h2 {
+  html body.sfc-page #science h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 48px !important;
     line-height: 56px !important;
     letter-spacing: -0.96px;
@@ -686,29 +687,29 @@ html body.sfc-page #science .sfc-comparison__closing::before {
 }
 
 @media (max-width: 767px) {
-  html body.sfc-page #science h2 {
+  html body.sfc-page #science h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 32px !important;
     line-height: 40px !important;
     letter-spacing: -0.64px;
   }
 
-  html body.sfc-page #science .sfc-card-grid {
+  html body.sfc-page #science .sfc-card-grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
-  html body.sfc-page #science .sfc-culture-card {
+  html body.sfc-page #science .sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: min(100%, 400px);
     margin-inline: auto;
   }
 }
 
-.sfc-comparison__header {
+.sfc-comparison__header:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.sfc-comparison h2 {
+.sfc-comparison h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   max-width: 1040px;
   margin-inline: auto;
   margin-bottom: 0;
@@ -720,17 +721,17 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   line-height: 0.91;
 }
 
-.sfc-comparison h2 span {
+.sfc-comparison h2 span:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   color: #103d71;
 }
 
-.sfc-card-grid {
+.sfc-card-grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 26px;
 }
 
-.sfc-culture-card {
+.sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-width: 0;
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -744,48 +745,48 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   transition: transform 300ms var(--sfc-ease), box-shadow 300ms ease, border-color 300ms ease;
 }
 
-.sfc-culture-card:hover,
-.sfc-culture-card:focus-visible {
+.sfc-culture-card:hover:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-culture-card:focus-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: translateY(-6px);
   border-color: rgba(18, 119, 213, 0.48);
   box-shadow: 0 25px 52px rgba(40, 99, 150, 0.16);
 }
 
-.sfc-culture-card:focus-visible {
+.sfc-culture-card:focus-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   outline: 3px solid rgba(18, 119, 213, 0.32);
   outline-offset: 4px;
 }
 
-.sfc-culture-card figure {
+.sfc-culture-card figure:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   aspect-ratio: 1.55;
   margin: 0;
   overflow: hidden;
   background: #e8f4fc;
 }
 
-.sfc-culture-card picture,
-.sfc-culture-card img {
+.sfc-culture-card picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-culture-card img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.sfc-culture-card img {
+.sfc-culture-card img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   object-fit: cover;
   object-position: center;
   transition: transform 420ms var(--sfc-ease);
 }
 
-.sfc-culture-card:hover img,
-.sfc-culture-card:focus-visible img {
+.sfc-culture-card:hover img:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-culture-card:focus-visible img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: scale(1.025);
 }
 
-.sfc-culture-card__body {
+.sfc-culture-card__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   padding: 10px 22px 14px;
 }
 
-.sfc-culture-card h3 {
+.sfc-culture-card h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin: 0;
   padding: 12px 20px 10px;
   color: var(--sfc-ink);
@@ -797,7 +798,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   text-align: center;
 }
 
-.sfc-culture-card ul {
+.sfc-culture-card ul:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 9px 12px;
@@ -806,7 +807,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   list-style: none;
 }
 
-.sfc-culture-card li {
+.sfc-culture-card li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 30px;
   display: flex;
   gap: 7px;
@@ -817,13 +818,13 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   font-weight: 600;
 }
 
-.sfc-culture-card li .sfc-line-icon {
+.sfc-culture-card li .sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 1rem;
   height: 1rem;
   color: var(--sfc-blue);
 }
 
-.sfc-comparison__closing {
+.sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin: 20px auto 0;
   color: #1f588e;
   font-family: var(--sfc-serif);
@@ -832,7 +833,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   text-align: center;
 }
 
-.sfc-comparison__closing::before {
+.sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before {
   width: 90px;
   height: 1px;
   display: block;
@@ -841,7 +842,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   background: var(--sfc-blue);
 }
 
-.sfc-cta {
+.sfc-cta:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 330px;
   display: flex;
   align-items: center;
@@ -851,7 +852,7 @@ html body.sfc-page #science .sfc-comparison__closing::before {
     linear-gradient(102deg, #fbfdff 0%, #f0f8ff 100%);
 }
 
-.sfc-cta__grid {
+.sfc-cta__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 330px;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -860,13 +861,13 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   padding-block: 36px;
 }
 
-.sfc-cta__copy {
+.sfc-cta__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 1 / 6;
   position: relative;
   z-index: 2;
 }
 
-.sfc-cta h2 {
+.sfc-cta h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 9px;
   color: var(--sfc-ink);
   font-family: var(--sfc-serif);
@@ -876,14 +877,14 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   line-height: 0.95;
 }
 
-.sfc-cta p {
+.sfc-cta p:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   margin-bottom: 20px;
   color: var(--sfc-ink-soft);
   font-size: 0.92rem;
   line-height: 1.55;
 }
 
-.sfc-button {
+.sfc-button:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   min-height: 46px;
   width: fit-content;
   display: inline-flex;
@@ -902,51 +903,51 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   transition: transform 220ms var(--sfc-ease), background-color 220ms ease, box-shadow 220ms ease;
 }
 
-.sfc-button .sfc-line-icon {
+.sfc-button .sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 1rem;
   height: 1rem;
   transition: transform 220ms var(--sfc-ease);
 }
 
-.sfc-button:hover,
-.sfc-button:focus-visible {
+.sfc-button:hover:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-button:focus-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   color: #fff;
   background: #075ba9;
   box-shadow: 0 16px 30px rgba(18, 119, 213, 0.24);
   transform: translateY(-2px);
 }
 
-.sfc-button:hover .sfc-line-icon,
-.sfc-button:focus-visible .sfc-line-icon {
+.sfc-button:hover .sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-button:focus-visible .sfc-line-icon:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: translateX(4px);
 }
 
-.sfc-button:focus-visible {
+.sfc-button:focus-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   outline: 3px solid rgba(18, 119, 213, 0.32);
   outline-offset: 4px;
 }
 
-.sfc-cta__visual {
+.sfc-cta__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   grid-column: 6 / 13;
   position: relative;
   height: 270px;
   margin: 0;
 }
 
-.sfc-cta__visual picture,
-.sfc-cta__visual img {
+.sfc-cta__visual picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+.sfc-cta__visual img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.sfc-cta__visual img {
+.sfc-cta__visual img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   object-fit: cover;
   object-position: center 45%;
   mix-blend-mode: multiply;
 }
 
-.sfc-ripple-overlay {
+.sfc-ripple-overlay:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: absolute;
   left: 50%;
   top: 58%;
@@ -960,8 +961,8 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   animation: sfc-ripple 4.8s var(--sfc-ease) infinite;
 }
 
-.sfc-ripple-overlay::before,
-.sfc-ripple-overlay::after {
+.sfc-ripple-overlay:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before,
+.sfc-ripple-overlay:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
   position: absolute;
   inset: 14%;
   border: 1px solid rgba(44, 125, 190, 0.22);
@@ -969,11 +970,11 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   content: "";
 }
 
-.sfc-ripple-overlay::after {
+.sfc-ripple-overlay:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
   inset: 28%;
 }
 
-.sfc-js [data-reveal] {
+.sfc-js [data-reveal]:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   opacity: 0;
   transform: translate3d(0, 22px, 0);
   transition:
@@ -981,12 +982,12 @@ html body.sfc-page #science .sfc-comparison__closing::before {
     transform 700ms var(--sfc-ease) var(--sfc-reveal-delay, var(--stagger, 0ms));
 }
 
-.sfc-js [data-reveal].is-visible {
+.sfc-js [data-reveal].is-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
-.sfc-js [data-reveal][data-parallax].is-visible {
+.sfc-js [data-reveal][data-parallax].is-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   transform: translate3d(var(--sfc-parallax-x, 0), var(--sfc-parallax-y, 0), 0);
 }
 
@@ -996,119 +997,119 @@ html body.sfc-page #science .sfc-comparison__closing::before {
   100% { transform: translate(-50%, -50%) scale(1.08); opacity: 0; }
 }
 
-body.sfc-page #site-shell > .site-header.is-compact {
+body.sfc-page #site-shell > .site-header.is-compact:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   box-shadow: 0 14px 34px rgba(17, 53, 104, 0.13);
 }
 
-body.sfc-page #site-footer-shell {
+body.sfc-page #site-footer-shell:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   position: relative;
   z-index: 2;
 }
 
-body.sfc-page #site-footer-shell .site-footer {
+body.sfc-page #site-footer-shell .site-footer:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
   border-top: 0;
 }
 
 @media (min-width: 1061px) {
-  body.sfc-page #site-shell .mobile-panel,
-  body.sfc-page #site-shell .mobile-scrim {
+  body.sfc-page #site-shell .mobile-panel:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  body.sfc-page #site-shell .mobile-scrim:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     display: none !important;
   }
 }
 
 @media (max-width: 1199px) {
-  :root {
+  :root:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     --sfc-shell: min(1120px, calc(100vw - 80px));
   }
 
-  .sfc-hero,
-  .sfc-hero__grid {
+  .sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 700px;
   }
 
-  .sfc-hero h1 {
+  .sfc-hero h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: clamp(3.9rem, 5.7vw, 4.8rem);
   }
 
-  .sfc-country,
-  .sfc-country--japan {
+  .sfc-country:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country--japan:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 700px;
   }
 
-  .sfc-country__map {
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: 540px;
   }
 
-  .sfc-country__product {
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: 565px;
   }
 
-  .sfc-icon-ring {
+  .sfc-icon-ring:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 56px;
     height: 56px;
   }
 }
 
 @media (max-width: 991px) {
-  :root {
+  :root:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     --sfc-shell: min(944px, calc(100vw - 48px));
   }
 
-  html {
+  html:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     scroll-padding-top: 92px;
   }
 
-  body.sfc-page #site-shell {
+  body.sfc-page #site-shell:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: var(--arotec-main-height, 74px);
   }
 
-  .sfc-hero,
-  .sfc-hero__grid {
+  .sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 640px;
   }
 
-  .sfc-hero__grid {
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px;
     padding-block: 40px;
   }
 
-  .sfc-hero__copy {
+  .sfc-hero__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1;
     padding-block: 20px;
   }
 
-  .sfc-hero__visual {
+  .sfc-hero__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 2;
   }
 
-  .sfc-hero__visual picture {
+  .sfc-hero__visual picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 100%;
   }
 
-  .sfc-hero h1 {
+  .sfc-hero h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: clamp(3rem, 6vw, 4rem);
   }
 
-  .sfc-hero__lead {
+  .sfc-hero__lead:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 1.55rem;
   }
 
-  .sfc-feature-list {
+  .sfc-feature-list:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     gap: 8px;
   }
 
-  .sfc-icon-ring {
+  .sfc-icon-ring:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 52px;
     height: 52px;
   }
 
-  .sfc-country,
-  .sfc-country--japan {
+  .sfc-country:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country--japan:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: auto;
   }
 
-  .sfc-country__grid {
+  .sfc-country__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -1116,201 +1117,201 @@ body.sfc-page #site-footer-shell .site-footer {
     padding-block: 62px 52px;
   }
 
-  .sfc-country__copy {
+  .sfc-country__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     display: contents;
   }
 
-  .sfc-country h2,
-  .sfc-country__subtitle,
-  .sfc-country__body,
-  .sfc-ingredients,
-  .sfc-country blockquote {
+  .sfc-country h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__subtitle:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1 / -1;
   }
 
-  .sfc-country h2 {
+  .sfc-country h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: -16px;
   }
 
-  .sfc-country__subtitle {
+  .sfc-country__subtitle:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 0;
   }
 
-  .sfc-country__body {
+  .sfc-country__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     max-width: 760px;
     margin-bottom: 2px;
   }
 
-  .sfc-country__map,
-  .sfc-country__product {
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: 400px;
     align-self: stretch;
   }
 
-  .sfc-country__map {
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1;
   }
 
-  .sfc-country__product {
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 2;
   }
 
-  .sfc-ingredients {
+  .sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-row: auto;
     max-width: 680px;
     margin: 8px 0 3px;
   }
 
-  .sfc-country blockquote {
+  .sfc-country blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-top: 0;
   }
 
-  .sfc-card-grid {
+  .sfc-card-grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     gap: 16px;
   }
 
-  .sfc-culture-card__body {
+  .sfc-culture-card__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     padding-inline: 14px;
   }
 
-  .sfc-culture-card li {
+  .sfc-culture-card li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 0.69rem;
   }
 
-  .sfc-cta__copy {
+  .sfc-cta__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1 / 7;
   }
 
-  .sfc-cta__visual {
+  .sfc-cta__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 7 / 13;
   }
 }
 
 @media (max-width: 767px) {
-  :root {
+  :root:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     --sfc-shell: calc(100vw - 44px);
   }
 
-  body.sfc-page {
+  body.sfc-page:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 15px;
   }
 
-  .sfc-hero,
-  .sfc-hero__grid {
+  .sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 0;
   }
 
-  .sfc-hero__grid {
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: 1fr;
     gap: 18px;
     padding-block: 42px 30px;
   }
 
-  .sfc-hero__copy,
-  .sfc-hero__visual {
+  .sfc-hero__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-hero__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1;
   }
 
-  .sfc-hero__copy {
+  .sfc-hero__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     padding: 0;
   }
 
-  .sfc-eyebrow {
+  .sfc-eyebrow:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 13px;
     font-size: 0.68rem;
   }
 
-  .sfc-hero h1 {
+  .sfc-hero h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 20px;
     font-size: clamp(3.08rem, 14.1vw, 4rem);
     line-height: 0.82;
   }
 
-  .sfc-hero__lead {
+  .sfc-hero__lead:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 14px;
     font-size: 1.62rem;
   }
 
-  .sfc-hero__body {
+  .sfc-hero__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 26px;
     font-size: 0.96rem;
   }
 
-  .sfc-feature-list {
+  .sfc-feature-list:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     gap: 0;
   }
 
-  .sfc-feature-list strong {
+  .sfc-feature-list strong:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 0.65rem;
   }
 
-  .sfc-icon-ring {
+  .sfc-icon-ring:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 56px;
     height: 56px;
   }
 
-  .sfc-hero__visual {
+  .sfc-hero__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: 100%;
   }
 
-  .sfc-hero__visual picture {
+  .sfc-hero__visual picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 100%;
     margin-left: 0;
   }
 
-  .sfc-hero__visual img {
+  .sfc-hero__visual img:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     object-position: 64% center;
   }
 
-  .sfc-hero::before {
+  .sfc-hero:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before {
     background: linear-gradient(90deg, rgba(255, 252, 248, 0.94) 0%, rgba(255, 252, 248, 0.84) 58%, rgba(255, 252, 248, 0.48) 100%);
   }
 
-  .sfc-country__grid {
+  .sfc-country__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: minmax(0, 1fr);
     gap: 17px;
     padding-block: 50px 44px;
   }
 
-  .sfc-country h2,
-  .sfc-country__subtitle,
-  .sfc-country__body,
-  .sfc-ingredients,
-  .sfc-country blockquote,
-  .sfc-country__map,
-  .sfc-country__product {
+  .sfc-country h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__subtitle:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1;
   }
 
-  .sfc-country h2 {
+  .sfc-country h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 1;
     margin-bottom: -11px;
     font-size: clamp(3.4rem, 16vw, 4.5rem);
   }
 
-  .sfc-country__subtitle {
+  .sfc-country__subtitle:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 2;
     font-size: 1.5rem;
   }
 
-  .sfc-country__body {
+  .sfc-country__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 3;
     font-size: 0.95rem;
     line-height: 1.62;
   }
 
-  .sfc-country__map {
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 4;
     height: min(98vw, 430px);
   }
 
-  .sfc-country__product {
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 5;
     height: min(98vw, 430px);
   }
 
-  .sfc-ingredients,
-  .sfc-ingredients--six {
+  .sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-ingredients--six:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 6;
     width: calc(100vw - 22px);
     max-width: none;
@@ -1324,113 +1325,113 @@ body.sfc-page #site-footer-shell .site-footer {
     scrollbar-width: none;
   }
 
-  .sfc-ingredients::-webkit-scrollbar {
+  .sfc-ingredients:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::-webkit-scrollbar {
     display: none;
   }
 
-  .sfc-ingredient {
+  .sfc-ingredient:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 74px;
     min-width: 74px;
     scroll-snap-align: start;
   }
 
-  .sfc-ingredient picture {
+  .sfc-ingredient picture:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 68px;
   }
 
-  .sfc-ingredient span {
+  .sfc-ingredient span:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 0.61rem;
   }
 
-  .sfc-country blockquote {
+  .sfc-country blockquote:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     order: 7;
     font-size: clamp(2rem, 9vw, 2.65rem);
   }
 
-  .sfc-comparison {
+  .sfc-comparison:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: auto;
     padding-block: 47px 42px;
   }
 
-  .sfc-comparison__header {
+  .sfc-comparison__header:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     margin-bottom: 24px;
     text-align: left;
   }
 
-  .sfc-comparison h2 {
+  .sfc-comparison h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: clamp(2.5rem, 11.5vw, 3.35rem);
   }
 
-  .sfc-card-grid {
+  .sfc-card-grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .sfc-culture-card {
+  .sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
     min-height: 0;
     border-radius: 24px;
   }
 
-  .sfc-culture-card figure {
+  .sfc-culture-card figure:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: auto;
     aspect-ratio: 1.55;
   }
 
-  .sfc-culture-card__body {
+  .sfc-culture-card__body:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     display: grid;
     align-content: center;
     padding: 10px 16px 18px;
   }
 
-  .sfc-culture-card h3 {
+  .sfc-culture-card h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     text-align: center;
   }
 
-  .sfc-culture-card ul {
+  .sfc-culture-card ul:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 7px;
   }
 
-  .sfc-culture-card li {
+  .sfc-culture-card li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 26px;
     justify-content: center;
   }
 
-  .sfc-comparison__closing {
+  .sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     text-align: left;
   }
 
-  .sfc-comparison__closing::before {
+  .sfc-comparison__closing:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before {
     margin-inline: 0;
   }
 
-  .sfc-cta,
-  .sfc-cta__grid {
+  .sfc-cta:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-cta__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     min-height: 0;
   }
 
-  .sfc-cta__grid {
+  .sfc-cta__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
     padding-block: 42px 0;
   }
 
-  .sfc-cta__copy,
-  .sfc-cta__visual {
+  .sfc-cta__copy:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-cta__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-column: 1;
   }
 
-  .sfc-cta h2 {
+  .sfc-cta h2:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: clamp(3rem, 13vw, 4rem);
   }
 
-  .sfc-cta p {
+  .sfc-cta p:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: 0.92rem;
   }
 
-  .sfc-cta__visual {
+  .sfc-cta__visual:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: calc(100vw + 18px);
     height: 220px;
     margin-left: -31px;
@@ -1438,82 +1439,179 @@ body.sfc-page #site-footer-shell .site-footer {
 }
 
 @media (max-width: 479px) {
-  :root {
+  :root:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     --sfc-shell: calc(100vw - 40px);
   }
 
-  .sfc-hero__grid {
+  .sfc-hero__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     padding-top: 34px;
   }
 
-  .sfc-hero h1 {
+  .sfc-hero h1:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     font-size: clamp(2.7rem, 12.2vw, 3rem);
   }
 
-  .sfc-feature-list strong {
+  .sfc-feature-list strong:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     max-width: 78px;
   }
 
-  .sfc-country__grid {
+  .sfc-country__grid:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     padding-block: 44px 40px;
   }
 
-  .sfc-country__map,
-  .sfc-country__product {
+  .sfc-country__map:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-country__product:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: min(104vw, 400px);
   }
 
-  .sfc-culture-card {
+  .sfc-culture-card:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: 1fr;
     min-height: 0;
   }
 
-  .sfc-culture-card figure {
+  .sfc-culture-card figure:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     height: auto;
     aspect-ratio: 1.45;
     border-radius: 23px 23px 0 0;
   }
 
-  .sfc-culture-card h3 {
+  .sfc-culture-card h3:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     text-align: center;
   }
 
-  .sfc-culture-card ul {
+  .sfc-culture-card ul:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sfc-culture-card li {
+  .sfc-culture-card li:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     justify-content: center;
   }
 
-  .sfc-button {
+  .sfc-button:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     scroll-behavior: auto;
   }
 
-  .sfc-page *,
-  .sfc-page *::before,
-  .sfc-page *::after {
+  .sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::before,
+  .sfc-page *:where(html:has(body.sfc-page), html:has(body.sfc-page) *)::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
 
-  .sfc-js [data-reveal],
-  .sfc-js [data-reveal].is-visible,
-  .sfc-js [data-reveal][data-parallax].is-visible,
-  [data-parallax] {
+  .sfc-js [data-reveal]:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-js [data-reveal].is-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  .sfc-js [data-reveal][data-parallax].is-visible:where(html:has(body.sfc-page), html:has(body.sfc-page) *),
+  [data-parallax]:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     opacity: 1 !important;
     transform: none !important;
   }
 
-  .sfc-ripple-overlay {
+  .sfc-ripple-overlay:where(html:has(body.sfc-page), html:has(body.sfc-page) *) {
     animation: none;
   }
 }
+
+
+/* Supplied September artwork with live Arotec typography. */
+html:has(.scc-page):where(html:has(body.scc-page), html:has(body.scc-page) *) { scroll-behavior:auto; }
+.scc-page:where(html:has(body.scc-page), html:has(body.scc-page) *) { background:#f8f5ed; color:#101d40; }
+.scc-page #main:where(html:has(body.scc-page), html:has(body.scc-page) *) { margin:0; padding:var(--scc-header-space,110px) 0 0; color:#101d40; }
+.scc-page #main *:where(html:has(body.scc-page), html:has(body.scc-page) *) { box-sizing:border-box; }
+.scc-page #main :is(section,figure,h1,h2,h3,p,ul):where(html:has(body.scc-page), html:has(body.scc-page) *) { margin:0; }
+.scc-page #main section:where(html:has(body.scc-page), html:has(body.scc-page) *) { scroll-margin-top:16px; content-visibility:visible; }
+.scc-page #main section:where(html:has(body.scc-page), html:has(body.scc-page) *)::before { display:none; }
+.scc-page #main ul:where(html:has(body.scc-page), html:has(body.scc-page) *) { padding:0; list-style:none; }
+.scc-page #main a:focus-visible:where(html:has(body.scc-page), html:has(body.scc-page) *) { outline:3px solid #1e69b0; outline-offset:6px; }
+.scc-page #main a:where(html:has(body.scc-page), html:has(body.scc-page) *) { color:inherit; }
+.scc-page #main .scc-sr-only:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; width:1px; height:1px; padding:0; margin:-1px!important; overflow:hidden; clip:rect(0,0,0,0); clip-path:inset(50%); white-space:nowrap; border:0; }
+.scc-scene:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-comparison:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:relative; isolation:isolate; aspect-ratio:16/9; overflow:hidden; }
+.scc-scene:where(html:has(body.scc-page), html:has(body.scc-page) *) { container-type:inline-size; }
+.scc-art:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; inset:0; z-index:-1; }
+.scc-art img:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:block; width:100%; height:100%; object-fit:cover; }
+.scc-copy:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; top:7%; left:60.5%; width:35%; }
+.scc-page #main .scc-copy h2:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(56px,5.4vw,112px)!important; line-height:1.04!important; letter-spacing:-.045em!important; font-weight:700!important; color:inherit; margin:0 0 1vw!important; }
+.scc-page #main .scc-lead:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(25px,2.35vw,48px)!important; line-height:1.14!important; font-weight:700!important; letter-spacing:-.025em!important; margin-bottom:1.65vw; }
+.scc-page #main .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(15px,1.25vw,26px)!important; line-height:1.4!important; font-weight:400!important; color:inherit; margin:0 0 1vw; }
+.scc-page #main .scc-blend:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:1.65vw; text-align:center; }
+.scc-page #main .scc-blend li:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(10px,.84vw,18px)!important; font-weight:700!important; }
+.scc-qualities:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:1.8vw!important; text-align:center; }
+.scc-qualities li:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:flex; flex-direction:column; align-items:center; gap:.65vw; }
+.scc-qualities .ph:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:grid; place-items:center; width:4.4vw; height:4.4vw; border:1.5px solid currentColor; border-radius:50%; font-size:2.7vw; }
+.scc-qualities span:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(10px,.86vw,18px); font-weight:600; }
+.scc-page #main .scc-closing:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(17px,1.48vw,31px)!important; line-height:1.3!important; font-weight:700!important; color:inherit; letter-spacing:-.025em; margin-top:2vw; }
+.scc-closing em:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-weight:inherit; }
+.scc-thailand .scc-copy:where(html:has(body.scc-page), html:has(body.scc-page) *) { top:5%; left:3.8%; width:38%; }
+.scc-japan .scc-copy:where(html:has(body.scc-page), html:has(body.scc-page) *) { top:4.5%; left:64%; width:33%; }
+.scc-thailand:where(html:has(body.scc-page), html:has(body.scc-page) *) { --scc-ingredient-art:url('../images/synesthetic-flavor-cultures/20260921/thailand.webp'); --scc-source-left:9.75cqw; --scc-row-left:5.15%; --scc-row-width:35.3%; }
+.scc-japan:where(html:has(body.scc-page), html:has(body.scc-page) *) { --scc-ingredient-art:url('../images/synesthetic-flavor-cultures/20260921/japan.webp'); --scc-source-left:62cqw; --scc-row-left:66.5%; --scc-row-width:28%; }
+.scc-page #main .scc-thailand .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(15px,1.2vw,25px)!important; margin-bottom:.8vw; }
+.scc-page #main .scc-japan .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(14.5px,1.12vw,24px)!important; margin-bottom:.8vw; }
+.scc-page #main .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; z-index:1; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); left:var(--scc-row-left); width:var(--scc-row-width); top:68.5%; padding-top:5.90625cqw; gap:0; }
+/* The source artwork includes these ingredient photographs. Reposition the
+   complete strip with its labels, using the same artwork's blank paper texture
+   to cover its original position. The food scene remains unchanged. */
+.scc-thailand:where(html:has(body.scc-page), html:has(body.scc-page) *)::after,.scc-japan:where(html:has(body.scc-page), html:has(body.scc-page) *)::after { content:""; position:absolute; z-index:0; left:calc(var(--scc-source-left) - .25cqw); top:68%; width:calc(var(--scc-row-width) + .5%); height:12%; background-image:var(--scc-ingredient-art); background-size:100cqw 56.25cqw; background-position:calc(.25cqw - var(--scc-source-left)) -28cqw; background-repeat:no-repeat; pointer-events:none; }
+.scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *)::before { content:""; position:absolute; inset:0 0 auto; height:5.90625cqw; background-image:var(--scc-ingredient-art); background-size:100cqw 56.25cqw; background-position:calc(-1 * var(--scc-source-left)) -38.53125cqw; background-repeat:no-repeat; pointer-events:none; }
+.scc-ingredients li:where(html:has(body.scc-page), html:has(body.scc-page) *) { text-align:center; }
+.scc-ingredients img:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:none; }
+.scc-ingredients span:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:block; padding:0 3px; font-size:clamp(10px,.77vw,16px); font-weight:700; line-height:1.3; }
+.scc-page #main .scc-japan .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *) { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.scc-page #main .scc-scene-closing:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; top:87%; left:3.8%; width:39%; padding-top:1vw; border-top:1px solid #7b807e; margin:0; }
+.scc-page #main .scc-japan .scc-scene-closing:where(html:has(body.scc-page), html:has(body.scc-page) *) { left:64%; width:31%; }
+.scc-page #main .scc-comparison h2:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; left:14%; top:3.5%; font-size:clamp(25px,2.35vw,48px)!important; line-height:1.18!important; letter-spacing:-.035em!important; font-weight:700!important; color:inherit; margin:0!important; }
+.scc-comparison h2 span:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-comparison h2 strong:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:block; }
+.scc-page #main .scc-comparison h2 strong:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:1.24em; font-weight:700; }
+.scc-cultures:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; left:3%; right:3%; top:72%; display:grid; grid-template-columns:repeat(3,1fr); text-align:center; }
+.scc-page #main .scc-culture:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:block; width:max-content; max-width:100%; margin:auto; text-decoration:none; }
+.scc-page #main .scc-culture h3:where(html:has(body.scc-page), html:has(body.scc-page) *) { color:inherit; font-size:clamp(24px,2.2vw,45px)!important; line-height:1.2!important; letter-spacing:-.03em!important; margin:0 0 .8vw!important; padding-bottom:.6vw; border-bottom:1px solid #a88e5d; }
+.scc-page #main .scc-culture li:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(16px,1.45vw,30px)!important; line-height:1.35!important; }
+.scc-page #main .scc-culture:hover h3:where(html:has(body.scc-page), html:has(body.scc-page) *) { color:#806128; border-color:currentColor; }
+@media (max-width:1240px) {
+  .scc-scene:where(html:has(body.scc-page), html:has(body.scc-page) *) { aspect-ratio:auto; display:flex; flex-direction:column; overflow:visible; background:#f8f5ed; }
+  .scc-scene .scc-art:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:relative; inset:auto; z-index:0; height:clamp(320px,55vw,620px); overflow:hidden; order:0; }
+  .scc-scene .scc-art img:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:absolute; top:0; left:0; width:182%; max-width:none; height:100%; object-fit:cover; }
+  .scc-thailand .scc-art img:where(html:has(body.scc-page), html:has(body.scc-page) *) { left:auto; right:0; width:190%; }
+  .scc-japan .scc-art img:where(html:has(body.scc-page), html:has(body.scc-page) *) { width:166%; }
+  .scc-copy:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:relative; inset:auto!important; width:auto!important; padding:40px clamp(24px,7vw,80px) 0; order:1; }
+  .scc-page #main .scc-copy h2:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(48px,7vw,72px)!important; margin-bottom:16px!important; }
+  .scc-page #main .scc-lead:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:clamp(26px,4vw,38px)!important; margin-bottom:25px; }
+  .scc-page #main .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-page #main .scc-thailand .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-page #main .scc-japan .scc-body p:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:17px!important; line-height:1.6!important; margin-bottom:18px; }
+  .scc-page #main .scc-blend:where(html:has(body.scc-page), html:has(body.scc-page) *) { margin-top:28px; gap:8px; }
+  .scc-page #main .scc-blend li:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:12px!important; }
+  .scc-qualities:where(html:has(body.scc-page), html:has(body.scc-page) *) { margin-top:28px!important; gap:8px; }
+  .scc-qualities li:where(html:has(body.scc-page), html:has(body.scc-page) *) { gap:12px; }
+  .scc-qualities .ph:where(html:has(body.scc-page), html:has(body.scc-page) *) { width:58px; height:58px; font-size:34px; }
+  .scc-qualities span:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:12px; }
+  .scc-page #main .scc-closing:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:24px!important; margin:32px 0 42px; }
+  .scc-page #main .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-page #main .scc-japan .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:static; width:auto; order:2; padding:12px clamp(24px,7vw,80px) 0; gap:16px; }
+  .scc-thailand:where(html:has(body.scc-page), html:has(body.scc-page) *)::after,.scc-japan:where(html:has(body.scc-page), html:has(body.scc-page) *)::after,.scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *)::before { display:none; }
+  .scc-ingredients img:where(html:has(body.scc-page), html:has(body.scc-page) *) { display:block; width:100%; max-width:94px; height:auto; margin:0 auto 12px; border-radius:50%; }
+  .scc-ingredients span:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:12px; }
+  .scc-page #main .scc-scene-closing:where(html:has(body.scc-page), html:has(body.scc-page) *),.scc-page #main .scc-japan .scc-scene-closing:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:static; width:auto; order:3; margin:32px clamp(24px,7vw,80px) 42px; padding-top:20px; }
+  .scc-page #main .scc-comparison h2:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:2.7vw!important; }
+  .scc-page #main .scc-culture h3:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:2.8vw!important; }
+  .scc-page #main .scc-culture li:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:1.9vw!important; }
+}
+@media (max-width:760px) {
+  .scc-scene .scc-art:where(html:has(body.scc-page), html:has(body.scc-page) *) { height:340px; }
+  .scc-page #main .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *) { grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px 14px; }
+  .scc-page #main .scc-japan .scc-ingredients:where(html:has(body.scc-page), html:has(body.scc-page) *) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .scc-comparison:where(html:has(body.scc-page), html:has(body.scc-page) *) { aspect-ratio:auto; padding:36px 20px; display:flex; flex-direction:column; overflow:hidden; }
+  .scc-comparison .scc-art:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:relative; inset:auto; z-index:0; order:1; height:235px; margin:20px -20px 0!important; overflow:hidden; }
+  .scc-comparison .scc-art img:where(html:has(body.scc-page), html:has(body.scc-page) *) { width:100%; height:100%; object-fit:cover; }
+  .scc-page #main .scc-comparison h2:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:static; font-size:clamp(22px,5.8vw,34px)!important; order:0; }
+  .scc-page #main .scc-comparison h2 strong:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:1.08em; margin-top:8px; }
+  .scc-cultures:where(html:has(body.scc-page), html:has(body.scc-page) *) { position:static; order:2; margin-top:20px; gap:10px; }
+  .scc-page #main .scc-culture h3:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:20px!important; padding-bottom:10px; margin-bottom:10px!important; }
+  .scc-page #main .scc-culture li:where(html:has(body.scc-page), html:has(body.scc-page) *) { font-size:14px!important; line-height:1.5!important; }
+}
+@media (prefers-reduced-motion:reduce) { html:has(.scc-page):where(html:has(body.scc-page), html:has(body.scc-page) *) { scroll-behavior:auto; } }
+
