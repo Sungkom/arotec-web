@@ -1,0 +1,128 @@
+/* September 19 Sensory Strategies artwork with selectable site typography. */
+html:has(body.sf-page) { scroll-behavior: auto; }
+body.sf-page { background: #fff; }
+.sf-main {
+  --sf-ink: #07132f;
+  --sf-body-ink: #243c60;
+  --sf-accent: #b55c2f;
+  --sf-gutter: max(32px, var(--arotec-content-left, 0px));
+  --sf-heading-size: clamp(32px, 3.25vw, 66px);
+  margin: 0;
+  padding: var(--detail-header-space, 112px) 0 0;
+  color: var(--sf-ink);
+  overflow: clip;
+}
+.sf-main *, .sf-main *::before, .sf-main *::after { box-sizing: border-box; }
+.sf-main .sf-scene { position: relative; isolation: isolate; margin: 0; padding: 0; min-height: 56.25vw; }
+.sf-picture { position: absolute; inset: 0; z-index: -1; display: block; width: 100%; height: 100%; }
+.sf-backdrop { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sf-copy { position: relative; left: var(--sf-gutter); width: calc(38% - var(--sf-gutter)); padding-top: 16.9vw; padding-bottom: 4vw; }
+.sf-right .sf-copy { left: 66%; width: calc(34% - var(--sf-gutter)); }
+html body.sf-page #main#main .sf-heading {
+  --arotec-display-size: var(--sf-heading-size);
+  --arotec-display-line-height: 1.08;
+  --arotec-display-letter-spacing: -.04em;
+  --arotec-display-weight: 700;
+  font-family: var(--site-font, "DM Sans", sans-serif) !important;
+  font-size: var(--sf-heading-size) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.04em !important;
+  text-transform: none !important;
+  overflow-wrap: normal !important;
+  color: var(--sf-ink);
+  margin: 0 0 2.1vw !important;
+}
+html body.sf-page #main#main .sf-body,
+html body.sf-page #main#main .sf-copy > p {
+  font-family: var(--site-font, "DM Sans", sans-serif) !important;
+  font-size: clamp(15px, 1.25vw, 24px) !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+  letter-spacing: -.015em !important;
+  color: var(--sf-body-ink);
+  margin: 0 0 1.2vw;
+}
+html body.sf-page #main#main .sf-copy > .sf-lead {
+  font-size: clamp(21px, 2.1vw, 40px) !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.025em !important;
+  color: var(--sf-ink);
+  margin: -.7vw 0 2.5vw;
+}
+html body.sf-page #main#main .sf-body:last-child { margin-bottom: 0; }
+.sf-steps { display: grid; grid-template-columns: repeat(var(--step-count, 3), minmax(0, 1fr)); gap: 1.2vw; list-style: none; padding: 0; margin: 3vw 0 0; }
+html body.sf-page #main#main .sf-steps > li {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: .55vw;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(10px, .9vw, 17px) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-align: center;
+  color: var(--sf-ink);
+}
+.sf-icon { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 4.25vw; height: 4.25vw; max-width: 82px; max-height: 82px; border: 1.5px solid currentColor; border-radius: 50%; color: var(--sf-accent); }
+html body.sf-page #main#main .sf-icon > .ph { font-family: "Phosphor" !important; font-size: clamp(25px, 2.55vw, 50px) !important; font-weight: 400 !important; line-height: 1 !important; }
+html body.sf-page #main#main .sf-step-label { font-family: var(--site-font, "DM Sans", sans-serif) !important; font-size: inherit !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: -.035em !important; }
+html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { content: "\e06c"; position: absolute; right: -1.2vw; top: 1.4vw; font-family: "Phosphor" !important; font-size: clamp(17px, 1.5vw, 29px) !important; font-weight: 400 !important; line-height: 1 !important; color: var(--sf-accent); }
+.sf-impressions, .sf-comfort { --sf-accent: #cb5726; }
+.sf-atmosphere, .sf-choice, .sf-felt { --sf-accent: #f36937; }
+.sf-first .sf-copy { padding-top: 17.2vw; }
+.sf-first { --sf-heading-size: clamp(36px, 3.8vw, 76px); }
+.sf-felt .sf-copy { padding-top: 16.3vw; }
+@media (min-width: 1000px) {
+  .sf-main .sf-first { min-height: min(56.25vw, calc(100svh - var(--detail-header-space, 112px))); }
+  .sf-first .sf-copy { padding-top: clamp(125px, 26svh, 17.2vw); padding-bottom: 6vw; }
+  .sf-right { --sf-heading-size: clamp(32px, 2.8vw, 60px); }
+  .sf-atmosphere { --sf-heading-size: clamp(32px, 2.7vw, 56px); }
+  .sf-impressions { --sf-heading-size: clamp(32px, 2.8vw, 60px); }
+  .sf-felt { --sf-heading-size: clamp(32px, 3vw, 64px); }
+  .sf-impressions .sf-copy, .sf-felt .sf-copy {
+    width: calc(34% - var(--sf-gutter));
+    padding-top: 15.5vw;
+    padding-bottom: 3vw;
+  }
+  .sf-copy-break { display: none; }
+}
+@media (min-width: 1200px) { .sf-main { --sf-gutter: 150px; } }
+@media (min-width: 1000px) and (max-width: 1199px) { .sf-main { --sf-gutter: 32px; } }
+@media (max-width: 999px) {
+  .sf-main { --sf-gutter: 32px; --sf-heading-size: clamp(36px, 5.2vw, 54px); }
+  .sf-main .sf-scene, .sf-main .sf-first { display: flex; flex-direction: column; min-height: 0; }
+  .sf-picture { position: relative; inset: auto; width: 100%; height: auto; z-index: auto; }
+  .sf-backdrop { width: 100%; height: auto; object-fit: cover; }
+  .sf-copy, .sf-right .sf-copy, .sf-first .sf-copy, .sf-felt .sf-copy { position: relative; left: auto; width: auto; padding: 38px var(--sf-gutter) 54px; }
+  .sf-first { --sf-heading-size: clamp(36px, 5.2vw, 54px); }
+  html body.sf-page #main#main .sf-heading { margin-bottom: 24px !important; }
+  html body.sf-page #main#main .sf-body,
+  html body.sf-page #main#main .sf-copy > p { font-size: 18px !important; line-height: 1.5 !important; margin: 0 0 18px; }
+  html body.sf-page #main#main .sf-copy > .sf-lead { font-size: 26px !important; line-height: 1.25 !important; margin: -8px 0 26px; }
+  .sf-steps { gap: 28px; max-width: 620px; margin: 32px 0 0; }
+  html body.sf-page #main#main .sf-steps > li { font-size: 14px !important; gap: 10px; }
+  .sf-icon { width: 66px; height: 66px; max-width: none; max-height: none; }
+  html body.sf-page #main#main .sf-icon > .ph { font-size: 39px !important; }
+  html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { top: 21px; right: -25px; font-size: 24px !important; }
+}
+@media (max-width: 599px) {
+  .sf-main { --sf-gutter: 22px; --sf-heading-size: clamp(32px, 8.6vw, 44px); }
+  .sf-first { --sf-heading-size: clamp(34px, 9vw, 46px); }
+  .sf-copy, .sf-right .sf-copy, .sf-first .sf-copy, .sf-felt .sf-copy { padding-top: 30px; padding-bottom: 44px; }
+  html body.sf-page #main#main .sf-heading { margin-bottom: 22px !important; }
+  html body.sf-page #main#main .sf-body,
+  html body.sf-page #main#main .sf-copy > p { font-size: 16px !important; line-height: 1.5 !important; margin-bottom: 16px; }
+  html body.sf-page #main#main .sf-copy > .sf-lead { font-size: 23px !important; margin-bottom: 24px; }
+  .sf-steps { gap: 26px 20px; margin-top: 28px; }
+  .sf-steps[style*="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body.sf-page #main#main .sf-steps > li { font-size: 12px !important; gap: 10px; }
+  .sf-icon { width: 58px; height: 58px; }
+  html body.sf-page #main#main .sf-icon > .ph { font-size: 34px !important; }
+  html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { top: 19px; right: -18px; font-size: 20px !important; }
+  html body.sf-page #main#main .sf-steps[style*="4"] > li:nth-child(2)::after { content: none; }
+}
