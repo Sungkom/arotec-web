@@ -3,6 +3,8 @@
   if (!shell || document.documentElement.hasAttribute('data-ap-products-navigation')) return;
   document.documentElement.setAttribute('data-ap-products-navigation', 'ready');
   const productsUrl = new URL('../../pages/applied-products.html', document.currentScript.src).href;
+  const countdownUrl = new URL('../../applied-products-countdown.html', document.currentScript.src).href;
+  const countdownLabels = new Set(['Vagus spa', 'Vagus scent bulb', 'Neuro-cosmetic', 'Bespoke Services']);
   const directLinks = new WeakSet();
 
   // Keep the dedicated page destination, but leave the trigger, chevron and
@@ -10,7 +12,10 @@
   // Mobile uses the same visible submenu list as the other navigation groups.
   const connect = () => {
     shell.querySelectorAll('.site-header nav a, .commerce-header nav a, .mobile-panel nav a').forEach(link => {
-      if (link.closest('.nav-submenu, .mobile-nav-submenu')) return;
+      if (link.closest('.nav-submenu, .mobile-nav-submenu')) {
+        if (countdownLabels.has(link.textContent.trim())) link.href = countdownUrl;
+        return;
+      }
       const href = link.getAttribute('href') || '';
       const isProducts = link.textContent.trim() === 'Applied Products'
         || /(?:^|\/)(?:index\.html)?#products$/.test(href)

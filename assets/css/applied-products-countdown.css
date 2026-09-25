@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "Nuro Display";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nuro Sans";
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.applied-countdown-page {
+  margin: 0;
+  background: #031c2c;
+  font-family: "Nuro Sans", Arial, sans-serif;
+}
+
+/* Keep the shared menu in flow so it never obscures the campaign artwork. */
+.applied-countdown-page #site-shell > .site-header {
+  position: relative;
+  inset: auto;
+}
+
+.applied-countdown-page #main { margin: 0; padding: 0; }
+.nuro-screen { display: contents; }
+
+.nuro-launch {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 25 / 9;
+  overflow: hidden;
+  color: #fafafa;
+  background: #031c2c;
+}
+
+.nuro-launch__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuro-brand { position: absolute; left: 21.776%; top: 15%; }
+.nuro-brand__logo { display: block; width: 9.28cqw; height: auto; }
+.nuro-brand__byline {
+  margin: .064cqw 0 0 .992cqw;
+  font-size: .7168cqw;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: .29em;
+  white-space: nowrap;
+}
+
+.nuro-intro { position: absolute; top: 41.1%; left: 22.768%; }
+.nuro-intro h1 {
+  margin: 0;
+  color: inherit;
+  font-family: "Nuro Display", "Arial Narrow", sans-serif;
+  font-size: 5.856cqw;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .008em;
+  white-space: nowrap;
+  transform: scaleX(.63);
+  transform-origin: left center;
+}
+.nuro-intro > p {
+  margin: -.256cqw 0 0;
+  font-family: "Nuro Display", "Arial Narrow", sans-serif;
+  font-size: 1.888cqw;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: .15em;
+  transform: scaleX(.79);
+  transform-origin: left center;
+}
+
+.nuro-countdown {
+  position: absolute;
+  top: 32.5%;
+  left: 56.08%;
+  width: 13.696%;
+  text-align: center;
+  font-family: "Nuro Sans", Arial, sans-serif;
+}
+.nuro-countdown__number {
+  display: block;
+  font-size: 6.848cqw;
+  font-weight: 150;
+  line-height: .94;
+  letter-spacing: -.07em;
+  padding-right: .07em;
+  font-variant-numeric: tabular-nums;
+  transform: scaleX(1.15);
+}
+.nuro-countdown__unit {
+  display: block;
+  margin-top: -.32cqw;
+  padding-left: .34em;
+  font-size: 1.6cqw;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .34em;
+}
+.nuro-countdown__message {
+  margin: .32cqw 0 0;
+  font-size: 1.0752cqw;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.nuro-countdown__message span,
+.nuro-countdown__message strong { display: block; }
+.nuro-countdown__message strong { margin-top: .13em; font-weight: 500; }
+.nuro-countdown__fallback { font-size: .704cqw; }
+.nuro-countdown:has(noscript p) .nuro-countdown__timer { display: none; }
+
+/* Header and campaign occupy the first desktop screen. The footer follows
+   below it, so it no longer reduces the background's viewport height.
+   Keep BG2 and its overlays on the same 25:9 canvas while scaling. */
+@media (min-width: 1024px) {
+  .nuro-screen {
+    height: 100vh;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  body.applied-countdown-page[data-header-variant="home"] #site-shell > .site-header {
+    position: relative;
+    inset: auto;
+    transform: none;
+  }
+
+  .applied-countdown-page #main {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: clip;
+    container-type: size;
+    container-name: nuro-viewport;
+  }
+
+  .nuro-launch {
+    position: absolute;
+    width: max(100cqw, 277.777778cqh);
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+  }
+
+  /* In tall desktop windows, keep the background at full height and reflow
+     the left copy. The timer tracks the frame's 62.928% horizontal anchor. */
+  @container nuro-viewport (max-aspect-ratio: 3 / 2) {
+    .nuro-launch { inset: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; container-type: size; }
+    .nuro-launch__background { object-position: 62.928% center; }
+    .nuro-brand { left: 5.9%; }
+    .nuro-intro { left: 7.45%; }
+    .nuro-countdown { left: calc(62.928% - 19.02222cqh); width: 38.04444cqh; }
+    .nuro-countdown__number { font-size: 19.02222cqh; }
+    .nuro-countdown__unit { margin-top: -.88889cqh; font-size: 4.44444cqh; }
+    .nuro-countdown__message { margin-top: .88889cqh; font-size: 2.98667cqh; }
+    .nuro-countdown__fallback { font-size: 1.95556cqh; }
+  }
+}
+
+/* Reframe the original artwork for portrait: the brand remains above the
+   countdown, and the full glowing frame stays visible behind the live digits. */
+@media (max-width: 600px) {
+  .nuro-launch { aspect-ratio: auto; min-height: 760px; height: 190cqw; }
+  .nuro-launch__background { object-fit: cover; object-position: 65.8% center; }
+  .nuro-brand { top: 3%; left: 5%; }
+  .nuro-brand__logo { width: 24cqw; }
+  .nuro-brand__byline { margin: 1cqw 0 0 2.7cqw; font-size: 2.6cqw; }
+  .nuro-intro { top: 16%; left: 8%; }
+  .nuro-intro h1 { font-size: 15.8cqw; transform: scaleX(.7); }
+  .nuro-intro > p { margin-top: .6cqw; font-size: 4.8cqw; }
+  .nuro-countdown { top: 36%; left: 20%; width: 60%; }
+  .nuro-countdown__number { font-size: 29cqw; }
+  .nuro-countdown__unit { margin-top: 0; font-size: 6.6cqw; }
+  .nuro-countdown__message { margin-top: 2cqw; font-size: 4.1cqw; }
+  .nuro-countdown__fallback { font-size: 3cqw; }
+}
+
