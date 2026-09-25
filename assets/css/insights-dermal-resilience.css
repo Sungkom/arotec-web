@@ -1,0 +1,69 @@
+/* Native text and SVG callouts over the supplied 3.1a.png artwork.
+   Coordinates follow the 2048 x 1152 composition in reference 3.1.png.
+   The shared local Insights Condensed face is loaded by the overview CSS. */
+#main #skin-resilience {
+  --site-font: "Insights Condensed", "DM Sans", sans-serif;
+  --arotec-font-family: var(--site-font);
+  --dermis-ink: #06132f;
+  --dermis-copy: #354b75;
+  --dermis-teal: #408f98;
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+#skin-resilience .dermis-composition { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: clip; isolation: isolate; }
+#skin-resilience .dermis-artwork { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+#skin-resilience .dermis-connectors { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#skin-resilience .dermis-connectors g { stroke-linecap: round; stroke-linejoin: round; }
+#skin-resilience .dermis-connector-halo { stroke: #fff; stroke-width: 4.5; stroke-opacity: .75; }
+#skin-resilience .dermis-connector-lines { stroke: #55a1ae; stroke-width: 2.2; }
+#skin-resilience .dermis-connector-points { fill: #fff; stroke: #55a1ae; stroke-width: 2.8; }
+#main #skin-resilience :is(h2, h3, p, li, span) { font-family: var(--site-font) !important; }
+#main #skin-resilience :is(h2, h3, p) { margin: 0 !important; }
+#skin-resilience .dermis-intro { position: absolute; left: 3.955%; top: 3.385%; width: 38.9%; }
+#main #skin-resilience .dermis-eyebrow { font-size: 1.27cqw !important; line-height: 1.465cqw !important; font-weight: 700 !important; letter-spacing: .195cqw; text-transform: uppercase; color: var(--dermis-teal); margin-bottom: .293cqw !important; }
+#skin-resilience .dermis-eyebrow::before { content: ""; display: block; width: 3.418cqw; height: .293cqw; margin-bottom: .684cqw; background: var(--dermis-teal); }
+#skin-resilience .dermis-eyebrow > span { display: block; width: 119.05%; transform: scaleX(.84); transform-origin: left top; }
+#main #skin-resilience #skin-resilience-title { position: relative; top: .293cqw; font-size: 4.981cqw !important; line-height: 4.15cqw !important; font-weight: 900 !important; letter-spacing: 0 !important; text-transform: uppercase; color: var(--dermis-ink); margin-bottom: .928cqw !important; }
+#skin-resilience :is(#skin-resilience-title, .dermis-summary, .dermis-description) > span { display: block; white-space: nowrap; }
+#skin-resilience #skin-resilience-title > span { width: max-content; transform: scaleX(.727); transform-origin: left top; }
+#skin-resilience #skin-resilience-title > span + span { transform: scaleX(.715); }
+#main #skin-resilience .dermis-summary { font-size: 1.563cqw !important; line-height: 1.807cqw !important; color: var(--dermis-copy); width: 111.111%; transform: scaleX(.9); transform-origin: left top; }
+#skin-resilience .dermis-processes { padding: 0; margin: 0; list-style: none; }
+#skin-resilience .dermis-process { position: absolute; display: grid; grid-template-columns: 5.469cqw minmax(0, 1fr); align-items: start; }
+#skin-resilience .dermis-matrix { left: 3.906%; top: 39.844%; width: 35%; }
+#skin-resilience .dermis-inflammation { left: 67.48%; top: 42.708%; width: 29.8%; grid-template-columns: 5.273cqw minmax(0, 1fr); }
+#skin-resilience .dermis-pigment { left: 3.906%; top: 67.188%; width: 35%; }
+#main #skin-resilience .dermis-number { color: var(--dermis-teal); font-size: 4.004cqw; line-height: 1; font-weight: 800; letter-spacing: -.073cqw; transform: scaleX(.78); transform-origin: left top; }
+#skin-resilience .dermis-process-copy { min-width: 0; padding-top: .293cqw; }
+#main #skin-resilience .dermis-process h3 { font-size: 2.148cqw !important; line-height: 2.148cqw !important; font-weight: 800 !important; letter-spacing: 0 !important; color: var(--dermis-ink); text-transform: uppercase; white-space: nowrap; width: 128.205%; transform: scaleX(.78); transform-origin: left top; }
+#main #skin-resilience .dermis-inflammation h3 { width: 134.228%; transform: scaleX(.745); }
+#main #skin-resilience .dermis-pigment h3 { position: relative; top: -.195cqw; width: 125%; transform: scaleX(.8); }
+#main #skin-resilience .dermis-caption { font-size: 1.172cqw !important; line-height: 1.416cqw !important; font-weight: 700 !important; color: var(--dermis-copy); letter-spacing: .098cqw; text-transform: uppercase; white-space: nowrap; margin-bottom: .537cqw !important; }
+#main #skin-resilience .dermis-inflammation .dermis-caption { letter-spacing: .068cqw; margin-bottom: 1.025cqw !important; }
+#main #skin-resilience .dermis-description { font-size: 1.367cqw !important; line-height: 1.538cqw !important; color: var(--dermis-copy); width: 114.943%; transform: scaleX(.87); transform-origin: left top; }
+#main #skin-resilience .dermis-pigment .dermis-description { width: 112.36%; transform: scaleX(.89); }
+#main #skin-resilience .dermis-keywords { font-size: 1.172cqw !important; line-height: 1.27cqw !important; font-weight: 600 !important; color: var(--dermis-copy); text-transform: uppercase; white-space: nowrap; width: 114.943%; transform: scaleX(.87); transform-origin: left top; margin-top: .684cqw !important; }
+#main #skin-resilience .dermis-inflammation .dermis-keywords { position: relative; left: -4.785cqw; width: 125%; transform: scaleX(.8); margin-top: 1.318cqw !important; }
+
+@media (max-width: 900px) {
+  #skin-resilience .dermis-composition { aspect-ratio: auto; display: flex; flex-direction: column; padding-bottom: 40px; }
+  #skin-resilience .dermis-intro { position: static; order: -1; width: auto; margin: 40px var(--insights-gutter) 24px; }
+  #main #skin-resilience .dermis-eyebrow { font-size: 12px !important; line-height: 18px !important; letter-spacing: 2px; margin-bottom: 14px !important; }
+  #skin-resilience .dermis-eyebrow::before { width: 42px; height: 3px; margin-bottom: 14px; }
+  #skin-resilience .dermis-eyebrow > span { width: auto; transform: none; }
+  #main #skin-resilience #skin-resilience-title { top: auto; font-size: clamp(30px, 4.5vw, 44px) !important; line-height: 1.1 !important; letter-spacing: -.02em !important; margin-bottom: 18px !important; }
+  #skin-resilience :is(#skin-resilience-title, .dermis-summary, .dermis-description) > span { display: inline; white-space: normal; }
+  #skin-resilience #skin-resilience-title > span { width: auto; transform: none; }
+  #main #skin-resilience .dermis-summary { font-size: 17px !important; line-height: 1.55 !important; width: auto; transform: none; }
+  #skin-resilience .dermis-artwork { position: static; height: auto; aspect-ratio: 16 / 9; z-index: auto; }
+  #skin-resilience .dermis-connectors { display: none; }
+  #skin-resilience .dermis-processes { display: grid; grid-template-columns: 1fr; gap: 28px; margin: 28px var(--insights-gutter) 0; }
+  #skin-resilience .dermis-process { position: static; grid-template-columns: 44px minmax(0, 1fr); width: auto; padding-top: 18px; border-top: 1px solid #c7dce0; }
+  #main #skin-resilience .dermis-number { font-size: 32px; line-height: 1; letter-spacing: -1px; transform: none; }
+  #skin-resilience .dermis-process-copy { padding: 0; }
+  #main #skin-resilience .dermis-process h3 { top: auto; font-size: 23px !important; line-height: 1.2 !important; width: auto; transform: none; white-space: normal; margin-bottom: 6px !important; }
+  #main #skin-resilience .dermis-process .dermis-caption { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: 1.2px; white-space: normal; margin-bottom: 14px !important; }
+  #main #skin-resilience .dermis-process .dermis-description { font-size: 16px !important; line-height: 1.5 !important; width: auto; transform: none; }
+  #main #skin-resilience .dermis-process .dermis-keywords { position: static; font-size: 13px !important; line-height: 1.6 !important; letter-spacing: .6px; white-space: normal; width: auto; transform: none; margin-top: 16px !important; }
+}

@@ -1,0 +1,141 @@
+/* 3.png composition, with native HTML type over its text-free 3a.png artwork.
+   Coordinates use the 2048 x 1152 reference; no crop or enlargement is needed.
+   Insights Condensed is the local font loaded by insights-system-overview.css. */
+#main #skin-biology {
+  --site-font: "Insights Condensed", "DM Sans", sans-serif;
+  --arotec-font-family: var(--site-font);
+  --skin-ink: #06132f;
+  --skin-copy: #354b75;
+  --skin-teal: #408f98;
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+#skin-biology .skin-composition {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: clip;
+  isolation: isolate;
+}
+#skin-biology .skin-artwork { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+#main #skin-biology :is(h2, h3, p, li, span) { font-family: var(--site-font) !important; }
+#main #skin-biology :is(h2, h3, p) { margin: 0 !important; }
+#skin-biology .skin-intro { position: absolute; left: 3.86%; top: 3.646%; width: 37%; }
+#main #skin-biology .skin-eyebrow {
+  font-size: 1.27cqw !important;
+  line-height: 1.465cqw !important;
+  font-weight: 700 !important;
+  letter-spacing: .195cqw;
+  text-transform: uppercase;
+  color: var(--skin-teal);
+  margin-bottom: .488cqw !important;
+}
+#skin-biology .skin-eyebrow::before { content: ""; display: block; width: 3.418cqw; height: .293cqw; margin-bottom: 1.074cqw; background: var(--skin-teal); }
+#skin-biology .skin-eyebrow > span { display: block; width: 119.05%; transform: scaleX(.84); transform-origin: left top; }
+#main #skin-biology #skin-title {
+  font-size: 4.492cqw !important;
+  line-height: 3.965cqw !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+  color: var(--skin-ink);
+  margin-bottom: .781cqw !important;
+}
+#skin-biology :is(#skin-title, .skin-summary, .skin-process-description) > span { display: block; white-space: nowrap; }
+#skin-biology #skin-title > span { width: max-content; transform: scaleX(.733); transform-origin: left top; }
+#skin-biology #skin-title > span + span { transform: scaleX(.744); }
+#main #skin-biology .skin-summary {
+  font-size: 1.465cqw !important;
+  line-height: 1.775cqw !important;
+  color: var(--skin-copy);
+  width: 112.36%;
+  transform: scaleX(.89);
+  transform-origin: left top;
+}
+#skin-biology .skin-processes { padding: 0; margin: 0; list-style: none; }
+#skin-biology .skin-process {
+  position: absolute;
+  top: 66.145%;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 3.516cqw minmax(0, 1fr);
+  width: 21.5%;
+}
+#skin-biology .skin-process-barrier { left: 3.662%; }
+#skin-biology .skin-process-renewal { left: 45.654%; grid-template-columns: 3.711cqw minmax(0, 1fr); width: 19.8%; }
+#main #skin-biology .skin-number { color: var(--skin-teal); font-size: 2.832cqw; line-height: 1; font-weight: 800; letter-spacing: -.073cqw; transform: scaleX(.74); transform-origin: left top; }
+#skin-biology .skin-process-copy { min-width: 0; padding-top: .342cqw; }
+#main #skin-biology .skin-process h3 {
+  font-size: 1.855cqw !important;
+  line-height: 2.051cqw !important;
+  font-weight: 800 !important;
+  letter-spacing: -.024cqw !important;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--skin-ink);
+  width: 131.579%;
+  transform: scaleX(.76);
+  transform-origin: left top;
+}
+#main #skin-biology .skin-process-caption {
+  color: var(--skin-copy);
+  font-size: 1.074cqw !important;
+  line-height: 1.367cqw !important;
+  font-weight: 700 !important;
+  letter-spacing: .022cqw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: .684cqw !important;
+}
+#main #skin-biology .skin-process-description {
+  color: var(--skin-copy);
+  font-size: 1.172cqw !important;
+  line-height: 1.367cqw !important;
+  width: 125%;
+  transform: scaleX(.8);
+  transform-origin: left top;
+}
+#skin-biology .skin-keywords { list-style: none; margin: 1.465cqw 0 0; padding: 0; }
+#main #skin-biology .skin-keywords li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.123cqw;
+  color: var(--skin-copy);
+  font-size: 1.074cqw !important;
+  line-height: 1.685cqw !important;
+  font-weight: 700 !important;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+#skin-biology .skin-keywords li::before { content: ""; display: block; flex: 0 0 .684cqw; width: .684cqw; height: .684cqw; border-radius: 50%; background: var(--skin-teal); }
+#skin-biology .skin-keywords li > span { display: block; flex-shrink: 0; white-space: nowrap; }
+
+/* Keep the same content readable on tablets and phones. */
+@media (max-width: 900px) {
+  #skin-biology .skin-composition { aspect-ratio: auto; display: flex; flex-direction: column; padding-bottom: 40px; }
+  #skin-biology .skin-intro { position: static; order: -1; width: auto; margin: 40px var(--insights-gutter) 24px; }
+  #main #skin-biology .skin-eyebrow { font-size: 12px !important; line-height: 18px !important; letter-spacing: 2px; margin-bottom: 14px !important; }
+  #skin-biology .skin-eyebrow::before { width: 42px; height: 3px; margin-bottom: 14px; }
+  #skin-biology .skin-eyebrow > span { width: auto; transform: none; }
+  #main #skin-biology #skin-title { font-size: clamp(30px, 4.5vw, 44px) !important; line-height: 1.1 !important; letter-spacing: -.02em !important; width: auto; transform: none; margin-bottom: 18px !important; }
+  #skin-biology :is(#skin-title, .skin-summary, .skin-process-description) > span { display: inline; white-space: normal; }
+  #skin-biology #skin-title > span { width: auto; transform: none; }
+  #main #skin-biology .skin-summary { font-size: 17px !important; line-height: 1.55 !important; width: auto; transform: none; }
+  #skin-biology .skin-artwork { position: static; height: auto; aspect-ratio: 16 / 9; z-index: auto; }
+  #skin-biology .skin-processes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin: 28px var(--insights-gutter) 0; }
+  #skin-biology .skin-process { position: static; width: auto; grid-template-columns: 40px minmax(0, 1fr); padding-top: 18px; border-top: 1px solid #c7dce0; }
+  #main #skin-biology .skin-number { font-size: 30px; line-height: 1; letter-spacing: -1px; transform: none; }
+  #skin-biology .skin-process-copy { padding: 0; }
+  #main #skin-biology .skin-process h3 { font-size: 23px !important; line-height: 1.2 !important; letter-spacing: -.01em !important; width: auto; transform: none; white-space: normal; margin-bottom: 6px !important; }
+  #main #skin-biology .skin-process-caption { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: 1.2px; width: auto; transform: none; white-space: normal; margin-bottom: 14px !important; }
+  #main #skin-biology .skin-process-description { font-size: 16px !important; line-height: 1.5 !important; width: auto; transform: none; }
+  #skin-biology .skin-keywords { margin-top: 18px; }
+  #main #skin-biology .skin-keywords li { font-size: 13px !important; line-height: 1.7 !important; gap: 10px; letter-spacing: 1px; }
+  #skin-biology .skin-keywords li::before { flex-basis: 7px; width: 7px; height: 7px; }
+  #skin-biology .skin-keywords li > span { flex: 1; min-width: 0; transform: none; white-space: normal; }
+}
+@media (max-width: 650px) {
+  #skin-biology .skin-processes { grid-template-columns: 1fr; }
+}

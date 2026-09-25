@@ -1,0 +1,91 @@
+/* Source photograph, diagram and clipped source details; all copy is live HTML. */
+@layer sleep-conditions-reference {
+  html body #restorative-conditions :is(p,h3,strong,.sh-number) { font-family:"Sleep Roboto Condensed",sans-serif!important; letter-spacing:0!important; margin:0!important; color:#071331!important; }
+  html body #restorative-conditions #conditions-title { font-family:var(--site-font)!important; font-size:3.22265625cqw!important; font-weight:var(--arotec-display-weight)!important; line-height:1.02!important; letter-spacing:-.025em!important; text-transform:none!important; white-space:nowrap!important; text-wrap:nowrap!important; width:max-content!important; max-width:none!important; margin:0!important; color:#020e29!important; }
+  html body #restorative-conditions .sh-intro .sh-subtitle { font-size:1.806640625cqw!important; font-weight:700!important; line-height:1!important; }
+  html body #restorative-conditions .sh-intro > p:not(.sh-subtitle) { font-size:1.46484375cqw!important; font-weight:400!important; line-height:1.025!important; }
+  html body #restorative-conditions .sh-number { font-size:3.662109375cqw!important; font-weight:700!important; line-height:1!important; color:#4ba1d2!important; -webkit-text-stroke:.06cqw #fff; paint-order:stroke fill; }
+  html body #restorative-conditions h3 { font-size:1.611328125cqw!important; font-weight:700!important; line-height:1!important; text-transform:uppercase!important; }
+  html body #restorative-conditions .sh-condition-list p { font-size:1.171875cqw!important; font-weight:400!important; line-height:1.08!important; color:#223557!important; }
+  html body #restorative-conditions .sh-condition-list strong { font-size:1.171875cqw!important; font-weight:700!important; line-height:1.06!important; }
+  html body #restorative-conditions .sh-regulation { font-size:1.611328125cqw!important; font-weight:700!important; line-height:1!important; text-transform:uppercase!important; }
+  html body #restorative-conditions .sh-conditions-outcomes > p { font-size:1.708984375cqw!important; font-weight:700!important; line-height:1!important; text-transform:uppercase!important; }
+}
+#restorative-conditions { container-type:inline-size; }
+#restorative-conditions .sh-scene { display:block; min-height:0; height:auto; aspect-ratio:3154 / 1774; }
+#restorative-conditions .sh-conditions-artwork { position:absolute; inset:0; overflow:hidden; }
+/* The 3840×2160 clean source is the poster's exact centered 3154×1774 crop. */
+#restorative-conditions .sh-art { position:absolute; inset:auto; left:50%; top:50%; width:121.7501585%; max-width:none; height:auto; transform:translate(-50%,-50%); }
+#restorative-conditions .sh-conditions-source-details, #restorative-conditions .sh-conditions-source-details img { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+#restorative-conditions .sh-conditions-source-details img { display:block; object-fit:fill; }
+/* Preserve the reference foreground where the supplied clean image was retouched. */
+#restorative-conditions .sh-condition-photo-left { clip-path:inset(46% 65% 0 0); }
+#restorative-conditions .sh-condition-photo-right { clip-path:inset(44% 0 0 66%); }
+#restorative-conditions .sh-condition-photo-bottom { clip-path:inset(93.4% 0 0 0); }
+/* These clips retain actual waveform/separator pixels from the supplied poster. */
+#restorative-conditions .sh-condition-wave { clip-path:inset(59.4% 45.35% 35.1% 46.25%); }
+#restorative-conditions .sh-condition-separator-1 { clip-path:inset(89.35% 52.15% 10.05% 45.4%); }
+#restorative-conditions .sh-condition-separator-2 { clip-path:inset(89.35% 44.8% 10.05% 52.7%); }
+#restorative-conditions .sh-intro { position:absolute; inset:3.1% auto auto 4.25%; width:55%; max-width:none; margin:0; padding:0; }
+#restorative-conditions .sh-intro .sh-subtitle { position:absolute; top:6.6cqw; left:0; width:max-content; max-width:none; white-space:nowrap; transform:scaleX(.98); transform-origin:left top; }
+#restorative-conditions .sh-intro > p:not(.sh-subtitle) { position:absolute; top:8.8cqw; left:0; width:max-content; max-width:none; white-space:nowrap; transform:scaleX(.92); transform-origin:left top; }
+#restorative-conditions .sh-condition-list { position:absolute; inset:0; display:block; margin:0; padding:0; }
+#restorative-conditions .sh-condition-list > li { position:absolute; width:max-content; margin:0; padding:0; }
+#restorative-conditions .sh-condition-detail { display:none; }
+#restorative-conditions .sh-number { position:absolute; left:0; top:0; }
+#restorative-conditions .sh-condition-list h3 { position:absolute; top:.6cqw; left:4.7cqw; width:max-content; white-space:nowrap; transform:scaleX(.76); transform-origin:left top; }
+#restorative-conditions .sh-condition-list p { position:absolute; top:2.47cqw; left:4.7cqw; width:max-content; white-space:nowrap; transform:scaleX(.9); transform-origin:left top; }
+#restorative-conditions .sh-condition-list strong { display:block; position:absolute; top:5.2cqw; left:4.7cqw; width:max-content; white-space:nowrap; transform:scaleX(.9); transform-origin:left top; }
+#restorative-conditions .sh-condition-timing { left:7.22%; top:28.75%; }
+#restorative-conditions .sh-condition-arousal { left:40.98%; top:24.75%; }
+#restorative-conditions .sh-condition-arousal :is(h3,p,strong) { left:4.54cqw; }
+#restorative-conditions .sh-condition-arousal p { top:2.27cqw; transform:scaleX(.78); }
+#restorative-conditions .sh-condition-arousal strong { top:5cqw; }
+#restorative-conditions .sh-condition-context { left:70%; top:28.75%; }
+#restorative-conditions .sh-condition-context :is(h3,p,strong) { left:4.63cqw; }
+#restorative-conditions .sh-condition-context p { transform:scaleX(.8); }
+#restorative-conditions .sh-regulation { position:absolute; left:50.24%; top:65.1%; width:max-content; text-align:center; transform:translateX(-50%) scaleX(.8); }
+#restorative-conditions .sh-conditions-outcomes { position:absolute; inset:0; }
+#restorative-conditions .sh-conditions-outcomes > p { position:absolute; left:50.22%; top:82.3%; width:max-content; white-space:nowrap; transform:translateX(-50%) scaleX(.76); }
+#restorative-conditions .sh-outcome-icons { position:absolute; inset:0; display:block; margin:0; padding:0!important; border:0; }
+#restorative-conditions .sh-outcome-icons li { display:block; position:absolute; top:86.28%; width:3.677869cqw; height:3.677869cqw; }
+#restorative-conditions .sh-outcome-icons li:nth-child(1) { left:41.13%; }
+#restorative-conditions .sh-outcome-icons li:nth-child(2) { left:48.37%; }
+#restorative-conditions .sh-outcome-icons li:nth-child(3) { left:55.62%; }
+#restorative-conditions .sh-outcome-icons img { display:block; width:100%; height:100%; border-radius:0; }
+
+@media(max-width:1199px) {
+  #restorative-conditions .sh-scene { display:flex; flex-direction:column; aspect-ratio:auto; }
+  #restorative-conditions .sh-intro { position:static; order:-1; display:grid; gap:18px; width:auto; max-width:none; margin:0 24px; padding:32px 0 28px; }
+  #restorative-conditions .sh-intro .sh-subtitle, #restorative-conditions .sh-intro > p:not(.sh-subtitle) { position:static; width:auto; white-space:normal; transform:none; }
+  #restorative-conditions .sh-conditions-break { display:none; }
+  #restorative-conditions .sh-condition-list .sh-conditions-break { display:initial; }
+  #restorative-conditions .sh-conditions-artwork { position:relative; inset:auto; flex:none; order:0; width:100%; aspect-ratio:3154 / 1774; }
+  #restorative-conditions .sh-art { position:absolute; left:50%; top:50%; width:121.7501585%; height:auto; aspect-ratio:16/9; transform:translate(-50%,-50%); }
+  #restorative-conditions .sh-condition-separator { display:none; }
+  #restorative-conditions .sh-condition-list { position:static; order:1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin:32px 24px; padding:0; }
+  #restorative-conditions .sh-condition-list > li { position:static; display:grid; align-content:start; gap:12px; width:auto; }
+  #restorative-conditions .sh-condition-detail { display:block; width:100px; height:100px; border-radius:0; margin:0 0 4px; }
+  #restorative-conditions .sh-number, #restorative-conditions .sh-condition-list :is(h3,p,strong) { position:static; width:auto; white-space:normal; transform:none; }
+  #restorative-conditions .sh-regulation { position:static; order:2; width:auto; margin:0 24px 20px!important; transform:none; }
+  #restorative-conditions .sh-regulation br { display:none; }
+  #restorative-conditions .sh-conditions-outcomes { position:static; order:3; display:grid; gap:24px; margin:0 24px 36px; }
+  #restorative-conditions .sh-conditions-outcomes > p { position:static; width:auto; white-space:normal; text-align:center; transform:none; }
+  #restorative-conditions .sh-outcome-icons { position:static; display:flex; justify-content:center; gap:28px; }
+  #restorative-conditions .sh-outcome-icons li { position:static; width:64px; height:64px; }
+  @layer sleep-conditions-reference {
+    html body #restorative-conditions #conditions-title { font-size:clamp(30px,4.5vw,52px)!important; line-height:1.1!important; width:auto!important; max-width:100%!important; white-space:normal!important; text-wrap:wrap!important; }
+    html body #restorative-conditions .sh-intro .sh-subtitle { font-size:24px!important; line-height:1.25!important; }
+    html body #restorative-conditions .sh-intro > p:not(.sh-subtitle) { font-size:18px!important; line-height:1.5!important; }
+    html body #restorative-conditions .sh-number { font-size:38px!important; }
+    html body #restorative-conditions h3 { font-size:23px!important; line-height:1.15!important; }
+    html body #restorative-conditions .sh-condition-list p { font-size:17px!important; line-height:1.4!important; }
+    html body #restorative-conditions .sh-condition-list strong { font-size:17px!important; line-height:1.3!important; }
+    html body #restorative-conditions .sh-regulation { font-size:24px!important; line-height:1.1!important; }
+    html body #restorative-conditions .sh-conditions-outcomes > p { font-size:24px!important; line-height:1.3!important; }
+  }
+}
+@media(max-width:700px) {
+  #restorative-conditions .sh-condition-list { grid-template-columns:1fr; gap:32px; }
+  #restorative-conditions .sh-condition-detail { width:88px; height:88px; }
+}

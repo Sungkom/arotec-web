@@ -1,0 +1,83 @@
+/* Native site-font labels over the supplied complete cellular illustration. */
+html body.exercise-systemic-page main#main #cellular.esh-cellular-reference { padding: 0; margin: 0; scroll-margin-top: 0; color: #071748; }
+.esh-cellular-scene { position: relative; isolation: isolate; container-type: inline-size; width: 100%; aspect-ratio: 16 / 9; overflow: clip; background: #fff; }
+.esh-cellular-backdrop { position: absolute; z-index: -1; width: 121.75%; max-width: none; height: auto; left: -10.875%; top: -10.875%; }
+html body.exercise-systemic-page main#main #cellular :is(h2,h3,p,li,dt,dd) { margin: 0 !important; padding: 0; color: #071748; font-family: var(--site-font) !important; font-style: normal; }
+.esh-cellular-copy { position: absolute; left: var(--arotec-content-left,150px); top: 14%; width: calc(30.6% - var(--arotec-content-left,150px)); }
+html body.exercise-systemic-page main#main #cellular #cellular-title {
+  --site-type-h2: clamp(34px,3.05cqw,74px); --site-line-h2: 1.15; --site-letter-h2: -.05em;
+  --arotec-display-size: var(--site-type-h2); --arotec-display-line-height: var(--site-line-h2); --arotec-display-letter-spacing: var(--site-letter-h2); --arotec-display-weight: 700;
+  max-width: none; font-size: var(--site-type-h2) !important; line-height: var(--site-line-h2) !important; font-weight: 700 !important; letter-spacing: var(--site-letter-h2) !important; margin-bottom: 1.5cqw !important;
+}
+html body.exercise-systemic-page main#main #cellular .esh-cellular-subtitle { font-size: clamp(22px,1.65cqw,40px) !important; line-height: 1.2 !important; font-weight: 600 !important; letter-spacing: -.04em !important; }
+.esh-cellular-prose { margin-top: 2.25cqw; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-prose p { font-size: clamp(18px,1.35cqw,34px) !important; line-height: 1.28 !important; font-weight: 400 !important; letter-spacing: -.025em !important; color: #354b84; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-prose p + p { margin-top: 1.6cqw !important; }
+.esh-cellular-source { position: absolute; top: 5%; text-align: left; }
+.esh-cellular-peripheral { left: 34%; width: 18%; }
+.esh-cellular-central { left: 57%; width: 16%; }
+.esh-cellular-organs { left: 77.4%; width: 19.5%; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-source h3 { font-size: clamp(15px,1.3cqw,32px) !important; line-height: 1.12 !important; font-weight: 700 !important; letter-spacing: -.045em !important; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-source p { font-size: clamp(12px,1cqw,26px) !important; line-height: 1.15 !important; font-weight: 400 !important; letter-spacing: -.035em !important; margin-top: .3cqw !important; }
+#cellular .esh-cellular-peripheral ul { list-style: none; margin: 0; padding: 0; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-peripheral li { position: absolute; width: 44%; font-size: clamp(12px,1.02cqw,26px) !important; line-height: 1.16 !important; font-weight: 500 !important; letter-spacing: -.04em !important; }
+.esh-cellular-peripheral li:nth-child(1) { top: 5.8cqw; left: 62.8%; }
+.esh-cellular-peripheral li:nth-child(2) { top: 8.65cqw; left: 65.6%; }
+.esh-cellular-peripheral li:nth-child(3) { top: 11.1cqw; left: 66.7%; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-compartments p { position: absolute; left: 89.4%; width: 9%; font-size: clamp(12px,1cqw,25px) !important; line-height: 1.15 !important; font-weight: 400 !important; letter-spacing: -.035em !important; text-align: center; }
+.esh-cellular-compartments p:nth-child(1) { top: 38.2%; }
+.esh-cellular-compartments p:nth-child(2) { top: 46.4%; }
+@media (min-width:1280px) { html body.exercise-systemic-page main#main #cellular .esh-cellular-compartments p:nth-child(2) { width: 7.3%; } }
+.esh-cellular-compartments p:nth-child(3) { top: 54%; }
+#cellular .esh-cellular-pathways { margin: 0; padding: 0; }
+.esh-cellular-pathway { position: absolute; top: 58.1%; height: 36.8%; text-align: center; }
+.esh-cellular-pathway-1 { left: 32.7%; width: 9.13%; }
+.esh-cellular-pathway-2 { left: 42.94%; width: 9.68%; }
+.esh-cellular-pathway-3 { left: 53.72%; width: 9.3%; }
+.esh-cellular-pathway-4 { left: 64.08%; width: 9.25%; }
+.esh-cellular-pathway-5 { left: 74.37%; width: 10.65%; }
+.esh-cellular-pathway-6 { left: 86.1%; width: 10.65%; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-pathway dt { position: absolute; top: 4%; left: 2%; width: 96%; font-size: clamp(13px,1.12cqw,28px) !important; line-height: 1.05 !important; font-weight: 700 !important; letter-spacing: -.04em !important; }
+html body.exercise-systemic-page main#main #cellular .esh-cellular-pathway dd { position: absolute; top: 47.6%; height: 20.7%; left: 3%; width: 94%; display: grid; align-content: center; font-size: clamp(12px,.98cqw,25px) !important; line-height: 1.12 !important; font-weight: 500 !important; letter-spacing: -.045em !important; }
+.esh-cellular-mobile-art { display: none; }
+@media (min-width:1280px) and (width < 1600px) {
+  .esh-cellular-copy { top: 8%; }
+  .esh-cellular-prose { margin-top: 1.5cqw; }
+}
+@media (min-width:1280px) and (width < 1400px) {
+  .esh-cellular-copy { top: 4%; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-prose p + p { margin-top: 16px !important; }
+}
+@media (width < 1280px) {
+  .esh-cellular-scene { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; aspect-ratio: auto; padding: 48px 28px; }
+  .esh-cellular-backdrop { display: none; }
+  .esh-cellular-copy { position: static; grid-column: 1 / -1; width: 100%; max-width: 900px; }
+  html body.exercise-systemic-page main#main #cellular #cellular-title { --site-type-h2: 48px; margin-bottom: 20px !important; }
+  #cellular-title br { display: none; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-subtitle { font-size: 24px !important; line-height: 32px !important; letter-spacing: normal !important; }
+  .esh-cellular-prose { margin-top: 24px; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-prose p { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-prose p + p { margin-top: 20px !important; }
+  .esh-cellular-mobile-art { display: block; grid-column: 1 / -1; width: min(100%,1000px); justify-self: center; }
+  .esh-cellular-source { position: static; width: 100%; border-top: 1px solid #c3d2e4; padding-top: 20px; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-source h3 { font-size: 21px !important; line-height: 26px !important; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-source p { font-size: 18px !important; line-height: 25px !important; margin-top: 8px !important; letter-spacing: normal !important; }
+  #cellular .esh-cellular-peripheral ul { margin-top: 16px; padding-left: 20px; list-style: disc; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-peripheral li { position: static; width: 100%; font-size: 18px !important; line-height: 26px !important; letter-spacing: normal !important; }
+  .esh-cellular-source br { display: none; }
+  .esh-cellular-compartments { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px 24px; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-compartments p { position: static; width: auto; font-size: 16px !important; }
+  #cellular .esh-cellular-pathways { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+  .esh-cellular-pathway { position: static; width: 100%; height: auto; border-top: 1px solid #c3d2e4; padding-top: 18px; text-align: left; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-pathway dt { position: static; width: 100%; font-size: 20px !important; line-height: 26px !important; }
+  html body.exercise-systemic-page main#main #cellular .esh-cellular-pathway dd { position: static; display: block; width: 100%; height: auto; margin-top: 8px !important; font-size: 18px !important; line-height: 26px !important; letter-spacing: normal !important; }
+  .esh-cellular-pathway br { display: none; }
+}
+@media (min-width:1200px) and (width < 1280px) {
+  .esh-cellular-copy { width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 56px); max-width: none; margin-inline: calc(var(--arotec-content-left) - 28px) calc(var(--arotec-content-right) - 28px); }
+}
+@media (width < 768px) {
+  .esh-cellular-scene { grid-template-columns: minmax(0,1fr); padding: 40px 24px; }
+  html body.exercise-systemic-page main#main #cellular #cellular-title { --site-type-h2: 34px; }
+  #cellular .esh-cellular-pathways { grid-template-columns: 1fr; }
+}

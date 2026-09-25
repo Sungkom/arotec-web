@@ -1,0 +1,124 @@
+/* Reference composition: the original artwork is enlarged 121.75% about its center.
+   All source wording remains native HTML using the site's DM Sans family. */
+html body.exercise-systemic-page main#main #peripheral.esh-peripheral-reference {
+  padding: 0;
+  margin: 0;
+  scroll-margin-top: 0;
+  color: #071748;
+}
+.esh-peripheral-scene {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #fff;
+}
+.esh-peripheral-artwork { position: absolute; z-index: -1; inset: 0; overflow: hidden; }
+.esh-peripheral-backdrop { position: absolute; width: 121.75%; max-width: none; height: auto; left: -10.875%; top: -10.875%; }
+html body.exercise-systemic-page main#main #peripheral :is(h2,h3,p,li) {
+  margin: 0 !important;
+  padding: 0;
+  color: #071748;
+  font-family: var(--site-font) !important;
+  font-style: normal;
+}
+.esh-peripheral-copy { position: absolute; left: 6.15%; top: 17.45%; width: 29.6%; }
+html body.exercise-systemic-page main#main #peripheral #peripheral-title {
+  --site-type-h2: clamp(32px,3.05cqw,74px);
+  --site-line-h2: 1.24;
+  --site-letter-h2: -.05em;
+  --arotec-display-size: var(--site-type-h2);
+  --arotec-display-line-height: var(--site-line-h2);
+  --arotec-display-letter-spacing: var(--site-letter-h2);
+  --arotec-display-weight: 700;
+  max-width: none;
+  font-size: var(--site-type-h2) !important;
+  line-height: var(--site-line-h2) !important;
+  font-weight: 700 !important;
+  letter-spacing: var(--site-letter-h2) !important;
+  margin-bottom: 1.25cqw !important;
+}
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-subtitle {
+  font-size: clamp(22px,1.65cqw,40px) !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  letter-spacing: -.045em !important;
+}
+.esh-peripheral-prose { margin-top: 2.1cqw; }
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-prose p {
+  font-size: clamp(18px,1.3cqw,32px) !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.025em !important;
+  color: #344fa0;
+}
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-prose p + p { margin-top: 1.8cqw !important; }
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-muscle-label {
+  position: absolute;
+  left: 39.05%;
+  top: 35.25%;
+  width: 15.05%;
+  height: 12.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(16px,1.36cqw,33px) !important;
+  line-height: 1.18 !important;
+  font-weight: 600 !important;
+  letter-spacing: -.035em !important;
+}
+.esh-peripheral-signal { position: absolute; --signal-color: #9256dc; }
+.esh-peripheral-myokines { left: 70.85%; top: 8%; width: 13.55%; }
+.esh-peripheral-metabolites { left: 75.05%; top: 34.2%; width: 10.5%; --signal-color: #ff6266; }
+.esh-peripheral-growth { left: 71.3%; top: 57.2%; width: 15.4%; --signal-color: #2eb5be; }
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal h3 {
+  font-size: clamp(14px,1.05cqw,26px) !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.045em !important;
+  white-space: nowrap;
+  border-bottom: 1.5px solid var(--signal-color);
+  margin-left: -1.15cqw !important;
+  padding: 0 0 .35cqw 1.15cqw;
+}
+#peripheral .esh-peripheral-signal ul { margin: .4cqw 0 0; padding-left: 1.9cqw; }
+html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal li {
+  font-size: clamp(16px,1.12cqw,28px) !important;
+  line-height: 1.42 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.035em !important;
+  padding-left: .05cqw;
+}
+@media (min-width:1280px) and (width < 1500px) {
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-prose p { line-height: 1.32 !important; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal li { line-height: 1.34 !important; }
+  .esh-peripheral-metabolites { width: 11.5%; }
+  .esh-peripheral-growth { width: 15.8%; }
+}
+@media (width < 1500px) {
+  .esh-peripheral-desktop-break { display: none; }
+}
+@media (width < 1280px) {
+  .esh-peripheral-scene { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px 24px; aspect-ratio: auto; padding: 48px 28px; }
+  .esh-peripheral-copy { position: static; grid-column: 1 / -1; width: 100%; max-width: 760px; }
+  html body.exercise-systemic-page main#main #peripheral #peripheral-title { --site-type-h2: 48px; --site-line-h2: 1.15; --site-letter-h2: -.035em; margin-bottom: 20px !important; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-subtitle { font-size: 24px !important; line-height: 32px !important; letter-spacing: normal !important; }
+  .esh-peripheral-prose { margin-top: 24px; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-prose p { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-prose p + p { margin-top: 20px !important; }
+  .esh-peripheral-artwork { position: relative; inset: auto; z-index: auto; grid-column: 1 / -1; width: calc(100% + 56px); margin-inline: -28px; aspect-ratio: 1.1466667; container-type: inline-size; }
+  .esh-peripheral-backdrop { width: 188.75969%; left: -71.82171%; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-muscle-label { left: 5.5%; width: max(23.333%,120px); height: auto; min-height: 12.4%; padding: 8px 6px; border: 1px solid rgba(255,255,255,.7); border-radius: 10px; background: rgba(255,255,255,.78); font-size: max(12px,2.11cqw) !important; }
+  .esh-peripheral-signal { position: static; width: auto; min-width: 0; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal h3 { font-size: 18px !important; line-height: 26px !important; white-space: normal; margin: 0 !important; padding: 0 0 10px; }
+  #peripheral .esh-peripheral-signal ul { margin-top: 14px; padding-left: 22px; }
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal li { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+}
+@media (max-width:767px) {
+  .esh-peripheral-scene { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+  html body.exercise-systemic-page main#main #peripheral #peripheral-title { --site-type-h2: 34px; --site-letter-h2: -.05em; }
+  .esh-peripheral-artwork { width: calc(100% + 48px); margin-inline: -24px; }
+}

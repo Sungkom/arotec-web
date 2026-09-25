@@ -1,0 +1,93 @@
+/* Reference composition, live labels, and the shared site's Title Case heading. */
+@layer sleep-neuro-reference {
+  html body #neurobiology :is(p,h3,li,dt,dd) {
+    font-family:"Sleep Roboto Condensed",sans-serif!important;
+    letter-spacing:0!important;
+    color:inherit!important;
+    margin:0!important;
+  }
+  html body #neurobiology #neuro-title {
+    font-family:var(--site-font)!important;
+    font-size:2.65cqw!important;
+    font-weight:var(--arotec-display-weight)!important;
+    line-height:1.1!important;
+    letter-spacing:-.02em!important;
+    text-transform:none!important;
+    margin:0!important;
+    width:max-content!important;
+    max-width:none!important;
+    white-space:nowrap!important;
+    text-wrap:nowrap!important;
+  }
+  html body #neurobiology .sh-intro > p {
+    font-size:1.5625cqw!important;
+    line-height:1.135!important;
+    font-weight:400!important;
+  }
+  html body #neurobiology h3 {
+    font-size:1.66015625cqw!important;
+    line-height:1.1!important;
+    font-weight:700!important;
+    text-transform:uppercase!important;
+    white-space:nowrap;
+  }
+  html body #neurobiology :is(li,dd) {
+    font-size:1.26953125cqw!important;
+    line-height:1.15!important;
+    font-weight:400!important;
+  }
+  html body #neurobiology li { font-size:1.3671875cqw!important; }
+  html body #neurobiology dt {
+    font-size:1.3671875cqw!important;
+    line-height:1.12!important;
+    font-weight:700!important;
+    text-transform:uppercase!important;
+  }
+}
+#neurobiology { container-type:inline-size; color:#f1f2f5; }
+#neurobiology .sh-scene { display:block; min-height:0; height:auto; aspect-ratio:3154 / 1774; }
+#neurobiology .sh-art { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+#neurobiology .sh-intro { position:absolute; inset:4.1% auto auto 2.93%; width:65%; max-width:none; margin:0; padding:0; }
+#neurobiology .sh-intro > p { position:absolute; top:3.2cqw; left:0; max-width:none; white-space:nowrap; }
+#neurobiology .sh-neuro-label { position:absolute; width:auto; padding:0; margin:0; }
+#neurobiology .sh-neuro-label ul { display:grid; margin:0; padding:0; }
+#neurobiology .sh-restorative { top:29.6%; left:13.96%; right:auto; color:#95ecb3; }
+#neurobiology .sh-restorative h3 { transform:scaleX(.87); transform-origin:left top; }
+#neurobiology .sh-restorative ul { position:absolute; top:2.56cqw; right:auto; left:0; width:13.77cqw; gap:1.504cqw; text-align:right; }
+#neurobiology .sh-restorative li { white-space:nowrap; transform:scaleX(.9); transform-origin:right top; }
+#neurobiology .sh-arousal { top:23.7%; left:84.48%; right:auto; color:#af81f3; }
+#neurobiology .sh-arousal h3 { color:#8e55ee!important; transform:scaleX(.91); transform-origin:left top; }
+#neurobiology .sh-arousal ul { position:absolute; top:2.15cqw; left:.15cqw; gap:.72265625cqw; white-space:nowrap; }
+#neurobiology .sh-arousal li { transform:scaleX(.92); transform-origin:left top; }
+#neurobiology .sh-network { position:absolute; inset:0; display:block; margin:0; padding:0; border:0; }
+#neurobiology .sh-network > div { position:absolute; white-space:nowrap; }
+#neurobiology .sh-network dd { margin-top:.1cqw!important; }
+#neurobiology .sh-network dt { transform:scaleX(.94); transform-origin:left top; }
+#neurobiology .sh-network dd { transform:scaleX(.92); transform-origin:left top; }
+#neurobiology .sh-node-scn :is(dt,dd) { transform-origin:right top; }
+#neurobiology .sh-node-scn { top:22.1%; right:60.75%; text-align:right; }
+#neurobiology .sh-node-limbic { top:14.85%; left:74.35%; }
+#neurobiology .sh-node-hypothalamus { top:36.85%; left:65.05%; }
+#neurobiology .sh-node-autonomic { top:58.35%; left:71.6%; }
+#neurobiology .sh-node-hpa { top:73.35%; left:48.35%; }
+
+@media(max-width:1199px) {
+  #neurobiology .sh-scene { display:flex; flex-direction:column; aspect-ratio:auto; }
+  #neurobiology .sh-intro { position:static; display:grid; gap:20px; order:-1; width:auto; margin:0 24px; padding:32px 0 28px; }
+  #neurobiology .sh-intro > p { position:static; white-space:normal; margin-top:20px!important; }
+  #neurobiology .sh-neuro-break { display:none; }
+  #neurobiology .sh-art { position:static; order:0; height:auto; aspect-ratio:3154 / 1774; }
+  #neurobiology .sh-neuro-label { position:static; order:1; width:auto; margin:28px 24px 0; }
+  #neurobiology .sh-neuro-label ul { position:static; display:grid; width:auto; gap:12px; text-align:left; margin-top:16px; white-space:normal; }
+  #neurobiology .sh-network { position:static; order:2; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:32px 24px; padding:0; }
+  #neurobiology .sh-network > div { position:static; white-space:normal; text-align:left; }
+  #neurobiology :is(.sh-neuro-label,.sh-network) :is(h3,li,dt,dd) { transform:none; }
+  @layer sleep-neuro-reference {
+    html body #neurobiology #neuro-title { font-size:clamp(30px,4.5vw,52px)!important; line-height:1.1!important; width:auto!important; max-width:100%!important; white-space:normal!important; text-wrap:wrap!important; }
+    html body #neurobiology .sh-intro > p { font-size:18px!important; line-height:1.5!important; }
+    html body #neurobiology h3 { font-size:22px!important; line-height:1.2!important; white-space:normal; }
+    html body #neurobiology dt { font-size:19px!important; line-height:1.25!important; }
+    html body #neurobiology :is(li,dd) { font-size:18px!important; line-height:1.4!important; }
+  }
+}
+@media(max-width:480px) { #neurobiology .sh-network { grid-template-columns:1fr; } }

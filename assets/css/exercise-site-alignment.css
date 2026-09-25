@@ -1,0 +1,72 @@
+/* Reference artwork and its labels share the original full-width desktop scene.
+   Standalone editorial sections retain the main site's content gutters. */
+.esh-reference-frame { width: 100%; }
+html body.exercise-systemic-page main#main > .esh-section + .esh-section { margin-block-start: 0 !important; border-top: 0; }
+html body.exercise-systemic-page main#main :is(h1[id$="-title"],h2[id$="-title"]) { text-transform: none !important; }
+
+@media (min-width:1200px) {
+  html body.exercise-systemic-page main#main .esh-section > .esh-container {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+  .esh-section > .esh-container > .esh-wide-intro {
+    width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right));
+    max-width: none;
+    margin-inline: var(--arotec-content-left) var(--arotec-content-right);
+  }
+  /* Only editorial copy follows the shared gutter. Anatomy, connectors and
+     their attached labels keep their original full-width coordinates. */
+  .esh-reference-copy, .esh-peripheral-copy, .esh-neural-copy,
+  .esh-neurochemical-copy, .esh-crosstalk-copy {
+    left: var(--arotec-content-left);
+  }
+  .esh-sensors-heading {
+    inset-inline: var(--arotec-content-left) var(--arotec-content-right);
+  }
+  .esh-sensors-intro { max-width: 100%; }
+}
+@media (min-width:1280px) {
+  .esh-reference-copy { width: calc(30.53% - var(--arotec-content-left)); }
+  .esh-peripheral-copy { width: calc(35.75% - var(--arotec-content-left)); }
+  .esh-neural-copy { width: calc(32.45% - var(--arotec-content-left)); }
+  .esh-neurochemical-copy {
+    --copy-top: 10.125cqw;
+    top: var(--copy-top);
+    width: calc(32.7% - var(--arotec-content-left));
+  }
+  /* Wrap prose around the existing cholinergic annotation without moving it. */
+  .esh-neurochemical-copy::before {
+    content: "";
+    float: right;
+    width: 6cqw;
+    height: calc(38cqw - var(--copy-top));
+    shape-outside: inset(calc(29cqw - var(--copy-top)) 0 0 0);
+  }
+  .esh-crosstalk-copy { width: calc(32.2% - var(--arotec-content-left)); }
+  .esh-neurochemical-prose { max-width: 100%; }
+  .esh-peripheral-desktop-break, .esh-crosstalk-copy-break { display: none; }
+}
+@media (min-width:1400px) and (width < 1800px) {
+  .esh-neural-copy { top: 8%; }
+  .esh-neurochemical-copy { --copy-top: 4.5cqw; }
+}
+@media (min-width:1280px) and (width < 1400px) {
+  .esh-reference-copy, .esh-neural-copy { top: 4%; }
+  .esh-neurochemical-copy { --copy-top: 2.25cqw; }
+  html body.exercise-systemic-page main#main #neural #neural-title,
+  html body.exercise-systemic-page main#main #neurochemical #neurochemical-title { --site-line-h2: 1.15; }
+  .esh-neural-prose { margin-top: 16px; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-prose p + p { margin-top: 12px !important; }
+}
+@media (min-width:1200px) and (width < 1280px) {
+  .esh-reference-copy, .esh-sensors-heading, .esh-peripheral-copy,
+  .esh-neural-copy, .esh-neurochemical-copy, .esh-crosstalk-copy {
+    width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right) + 56px);
+    max-width: none;
+    margin-inline: calc(var(--arotec-content-left) - 28px) calc(var(--arotec-content-right) - 28px);
+  }
+}
+@media (width < 1280px) {
+  html body.exercise-systemic-page main#main #peripheral .esh-peripheral-signal h3 { white-space: normal; }
+}

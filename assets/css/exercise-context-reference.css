@@ -1,0 +1,170 @@
+/* The supplied composition is a single desktop scene. Text stays native DM Sans;
+   artwork and connectors retain their measured positions in the 2048 × 1152 reference. */
+html body.exercise-systemic-page main#main #context.esh-context-reference {
+  padding: var(--detail-header-space, 110px) 0 0;
+  margin: 0;
+  scroll-margin: 0;
+  color: #071b46;
+  --site-type-body: 18px;
+  --site-line-body: 1.45;
+}
+.esh-context-scene {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 2048 / 1152;
+  overflow: hidden;
+  background: #fff;
+}
+.esh-context-backdrop {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 121.75%;
+  max-width: none;
+  height: auto;
+  left: -10.875%;
+  top: -10.875%;
+}
+html body.exercise-systemic-page main#main #context :is(h1,h3,p,li) {
+  margin: 0 !important;
+  padding: 0;
+  color: #071b46;
+  font-family: var(--site-font) !important;
+  font-style: normal;
+}
+.esh-reference-copy {
+  position: absolute;
+  left: 5.03%;
+  top: 16.55%;
+  width: 25.5%;
+}
+.esh-reference-eyebrow {
+  margin-bottom: 1cqw;
+  font-size: clamp(14px,1.23cqw,28px);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+html body.exercise-systemic-page main#main #context #context-title {
+  --site-type-h1: clamp(32px,2.55cqw,64px);
+  --site-line-h1: 1.12;
+  --site-letter-h1: -.045em;
+  --arotec-display-size: var(--site-type-h1);
+  --arotec-display-line-height: var(--site-line-h1);
+  --arotec-display-letter-spacing: var(--site-letter-h1);
+  --arotec-display-weight: 700;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 2.3cqw !important;
+}
+html body.exercise-systemic-page main#main #context .esh-reference-subtitle {
+  font-size: clamp(22px,1.54cqw,36px) !important;
+  line-height: 1.22 !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.8cqw !important;
+  letter-spacing: -.035em !important;
+}
+html body.exercise-systemic-page main#main #context .esh-reference-paragraph {
+  font-size: clamp(18px,1.3cqw,30px) !important;
+  line-height: 1.28 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.025em !important;
+}
+html body.exercise-systemic-page main#main #context .esh-reference-paragraph + .esh-reference-paragraph {
+  margin-top: 1.1cqw !important;
+}
+.esh-reference-behavior,.esh-reference-physiology,.esh-reference-modalities,.esh-reference-dose {
+  position: absolute;
+  z-index: 1;
+  min-width: 0;
+}
+.esh-reference-behavior { left: 32.1289%; top: 20.70%; width: 13.1%; }
+.esh-reference-physiology { left: 45.72%; top: 20.95%; width: 16%; }
+.esh-reference-modalities { left: 82.7637%; top: 20.43%; width: 15.6%; }
+.esh-reference-dose { left: 82.42%; top: 63.3%; width: 16%; }
+html body.exercise-systemic-page main#main #context h3 {
+  font-size: clamp(13px,.94cqw,23px) !important;
+  line-height: 1.18 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.04em !important;
+}
+#context .esh-reference-behavior h3 { width: 112%; }
+#context .esh-reference-physiology h3 { width: 75%; text-align: center; }
+#context .esh-reference-modalities h3 { margin-left: -.45cqw !important; }
+#context .esh-reference-dose h3 { margin-left: 1.6cqw !important; }
+#context .esh-reference-icons { display: grid; gap: 0; padding: 0; margin: 0; list-style: none; }
+#context .esh-reference-icons li { display: flex; align-items: center; min-width: 0; }
+#context .esh-reference-icons img { display: block; height: auto; object-fit: contain; flex: 0 0 auto; }
+#context .esh-reference-icons span {
+  position: relative;
+  font-size: clamp(14px,1.02cqw,24px);
+  line-height: 1.22;
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+#context :is(.esh-reference-behavior,.esh-reference-physiology) .esh-reference-icons span::before {
+  content: '';
+  position: absolute;
+  width: .36cqw;
+  height: .36cqw;
+  border-radius: 50%;
+  background: var(--point-color);
+  left: -.65cqw;
+  top: calc(50% - .18cqw);
+}
+#context .esh-reference-behavior .esh-reference-icons { margin-top: .4cqw; }
+#context .esh-reference-behavior li { height: 5.2734cqw; gap: .83cqw; }
+#context .esh-reference-behavior img { width: 5.2734cqw; }
+#context .esh-reference-behavior .esh-reference-icons span { min-width: 0; max-width: 6.5cqw; font-size: clamp(14px,.97cqw,23px); }
+#context .esh-reference-physiology .esh-reference-icons { margin-top: 1.65cqw; }
+#context .esh-reference-physiology li { height: 6.0107cqw; gap: 1.02cqw; }
+#context .esh-reference-physiology img { width: 5.5664cqw; }
+#context .esh-reference-modalities .esh-reference-icons { margin-top: .6cqw; }
+#context .esh-reference-modalities li { height: 5.17cqw; gap: 1.16cqw; }
+#context .esh-reference-modalities img { width: 5.5176cqw; }
+#context .esh-reference-dose > img { position: absolute; left: 0; top: 2cqw; width: 6.02cqw; height: auto; }
+#context .esh-reference-dose ul { position: absolute; left: 7.77cqw; top: 1.75cqw; padding: 0; margin: 0; list-style: none; }
+html body.exercise-systemic-page main#main #context .esh-reference-dose li { position: relative; font-size: clamp(14px,1.05cqw,24px) !important; line-height: 1.52 !important; letter-spacing: -.035em; }
+#context .esh-reference-dose li::before { content: ''; position: absolute; left: -.9cqw; top: .55em; width: .42cqw; height: .42cqw; background: var(--point-color); border-radius: 50%; }
+.esh-reference-connector { position: absolute; pointer-events: none; object-fit: fill; }
+.esh-connector-context-combined { left: 42.3875%; top: 26.3889%; width: 3.0762%; height: 45.9201%; }
+.esh-connector-modalities-bracket { left: 81.2012%; top: 24.2188%; width: 1.416%; height: 36.9792%; }
+.esh-connector-dose-bracket { left: 81.2012%; top: 65.9722%; width: 1.416%; height: 12.066%; }
+.esh-connector-modalities-arrow { left: 77.9297%; top: 42.8819%; width: 3.125%; height: 4.2535%; }
+.esh-connector-dose-arrow { left: 77.4902%; top: 70.2257%; width: 3.5645%; height: 4.6007%; }
+@media (min-width:1280px) and (width < 1400px) {
+  #context .esh-reference-behavior img { width: 4.9cqw; }
+  #context .esh-reference-behavior .esh-reference-icons span { max-width: 7cqw; }
+}
+@media (width < 1280px) {
+  .esh-context-scene { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px 36px; aspect-ratio: auto; padding: 48px 28px; }
+  .esh-reference-copy { position: static; grid-column: 1 / -1; grid-row: 1; width: 100%; max-width: 760px; }
+  .esh-reference-eyebrow { font-size: 14px; letter-spacing: .04em; margin-bottom: 16px; }
+  html body.exercise-systemic-page main#main #context #context-title { --site-type-h1: 52px; --site-line-h1: 1.1; --site-letter-h1: -.025em; margin-bottom: 20px !important; }
+  html body.exercise-systemic-page main#main #context .esh-reference-subtitle { font-size: 24px !important; line-height: 32px !important; letter-spacing: normal !important; margin-bottom: 24px !important; }
+  html body.exercise-systemic-page main#main #context .esh-reference-paragraph { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  html body.exercise-systemic-page main#main #context .esh-reference-paragraph + .esh-reference-paragraph { margin-top: 20px !important; }
+  .esh-context-backdrop { position: static; grid-column: 1 / -1; grid-row: 2; width: calc(100% + 56px); height: auto; margin-inline: -28px; aspect-ratio: 16 / 7; object-fit: cover; object-position: 72% center; }
+  .esh-reference-behavior,.esh-reference-physiology,.esh-reference-modalities,.esh-reference-dose { position: relative; inset: auto; width: auto; align-self: start; }
+  html body.exercise-systemic-page main#main #context h3 { width: 100%; font-size: 18px !important; line-height: 26px !important; letter-spacing: -.02em !important; margin: 0 0 20px !important; text-align: left; }
+  #context .esh-reference-icons { margin: 0; gap: 16px; }
+  #context .esh-reference-icons li { height: auto; gap: 16px; }
+  #context .esh-reference-icons img { width: 64px; }
+  #context .esh-reference-icons span, #context .esh-reference-behavior .esh-reference-icons span { max-width: none; font-size: 18px; line-height: 26px; letter-spacing: normal; }
+  #context :is(.esh-reference-behavior,.esh-reference-physiology) .esh-reference-icons span::before { width: 5px; height: 5px; left: -11px; top: calc(50% - 2px); }
+  .esh-reference-dose { display: grid; grid-template-columns: 72px 1fr; gap: 0 24px; }
+  #context .esh-reference-dose h3 { grid-column: 1 / -1; }
+  #context .esh-reference-dose > img { position: static; width: 72px; }
+  #context .esh-reference-dose ul { position: static; }
+  html body.exercise-systemic-page main#main #context .esh-reference-dose li { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal; }
+  #context .esh-reference-dose li::before { left: -13px; width: 6px; height: 6px; }
+  .esh-reference-connector { display: none; }
+}
+@media (max-width:767px) {
+  .esh-context-scene { grid-template-columns: 1fr; gap: 36px; padding: 36px 24px 48px; }
+  html body.exercise-systemic-page main#main #context #context-title { --site-type-h1: 36px; --site-line-h1: 42px; --site-letter-h1: -.035em; }
+  .esh-context-backdrop { width: calc(100% + 48px); margin-inline: -24px; aspect-ratio: 1; }
+}

@@ -1,0 +1,154 @@
+/* Reference 2.png: selectable type over the supplied text-free 2.1 artwork.
+   The source poster uses a centered 1.22x crop of that artwork. Coordinates
+   below refer to its 2048 x 1152 composition and scale with this section. */
+@font-face {
+  font-family: "Insights Condensed";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+#main #integrated-system {
+  --site-font: "Insights Condensed", "DM Sans", sans-serif;
+  --arotec-font-family: var(--site-font);
+  --system-ink: #06132f;
+  --system-copy: #354b75;
+  --system-teal: #408f98;
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+#integrated-system .system-composition {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  isolation: isolate;
+  overflow: clip;
+}
+#integrated-system .system-artwork { position: absolute; inset: 0; overflow: hidden; z-index: -1; }
+#integrated-system .system-artwork img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.22); transform-origin: center; }
+#main #integrated-system :is(h2, h3, p, li, span, strong, a) { font-family: var(--site-font) !important; }
+#main #integrated-system :is(h2, h3, p) { margin: 0 !important; }
+#integrated-system .system-intro { position: absolute; left: 59.45%; top: 2.6%; width: 36%; }
+#main #integrated-system .system-eyebrow {
+  font-size: 1.172cqw !important;
+  line-height: 1.367cqw !important;
+  font-weight: 700 !important;
+  letter-spacing: .205cqw;
+  text-transform: uppercase;
+  color: var(--system-teal);
+  margin-bottom: .586cqw !important;
+}
+#integrated-system .system-eyebrow::before { content: ""; display: block; width: 3.076cqw; height: .293cqw; background: var(--system-teal); margin-bottom: .781cqw; }
+#integrated-system .system-eyebrow > span { display: block; transform: scaleX(.835); transform-origin: left top; width: 119.76%; }
+#main #integrated-system #overview-title {
+  position: relative;
+  top: .39cqw;
+  font-size: 4.004cqw !important;
+  line-height: 3.613cqw !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+  color: var(--system-ink);
+  width: 133.333%;
+  transform: scaleX(.75);
+  transform-origin: left top;
+  margin-bottom: 1.074cqw !important;
+}
+#integrated-system :is(#overview-title, .system-summary, .system-domains h3, .system-domains p) > span { display: block; white-space: nowrap; }
+#main #integrated-system .system-summary {
+  font-size: 1.367cqw !important;
+  line-height: 1.66cqw !important;
+  font-weight: 400 !important;
+  color: var(--system-copy);
+  width: 107.527%;
+  transform: scaleX(.93);
+  transform-origin: left top;
+}
+#integrated-system .system-domains { list-style: none; padding: 0; margin: 0; }
+#integrated-system .system-domains li { position: absolute; display: grid; grid-template-columns: 3.17cqw 1fr; align-items: start; width: 20.2%; }
+#integrated-system .system-domains li:nth-child(1) { left: 4.1%; top: 43.6%; grid-template-columns: 3cqw 1fr; }
+#integrated-system .system-domains li:nth-child(2) { left: 27.1%; top: 44.05%; }
+#integrated-system .system-domains li:nth-child(3) { left: 50.65%; top: 43.7%; }
+#integrated-system .system-domains li:nth-child(4) { left: 74.75%; top: 44.7%; }
+#integrated-system .system-domains li > div { min-width: 0; padding-top: .55cqw; }
+#main #integrated-system .system-number { color: var(--system-teal); font-size: 2.344cqw; line-height: 1.1; font-weight: 800; letter-spacing: -.07cqw; transform: scaleX(.74); transform-origin: left top; }
+#main #integrated-system .system-domains h3 {
+  font-size: 1.367cqw !important;
+  line-height: 1.367cqw !important;
+  font-weight: 800 !important;
+  letter-spacing: -.018cqw !important;
+  text-transform: uppercase;
+  color: var(--system-ink);
+  white-space: nowrap;
+  transform: scaleX(.76);
+  transform-origin: left top;
+  width: 131.58%;
+  margin-bottom: .39cqw !important;
+}
+#integrated-system .system-recovery-label > span { transform: scaleX(.86); white-space: nowrap; }
+#main #integrated-system .system-domains p {
+  font-size: 1.074cqw !important;
+  line-height: 1.221cqw !important;
+  color: var(--system-copy);
+  width: 119.05%;
+  transform: scaleX(.84);
+  transform-origin: left top;
+}
+#main #integrated-system .system-recovery-label {
+  position: absolute;
+  left: 26.9%;
+  top: 61.8%;
+  width: 45.55%;
+  height: 4.85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--system-ink);
+  font-size: 1.367cqw !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: .195cqw;
+  text-transform: uppercase;
+}
+#integrated-system .system-targets { position: absolute; left: 15.9%; right: 18.5%; top: 87.2%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: center; }
+#integrated-system .system-targets a { text-decoration: none; color: var(--system-copy); }
+#integrated-system .system-targets strong { display: block; font-size: 1.465cqw; line-height: 1.7cqw; font-weight: 700; text-transform: uppercase; color: var(--system-ink); margin-bottom: .342cqw; transform: scaleX(.8); }
+#integrated-system .system-targets a > span { display: block; font-size: 1.074cqw; line-height: 1.27cqw; width: 105.263%; margin-left: -2.632%; transform: scaleX(.95); }
+#integrated-system .system-explore { position: absolute; left: 81.9%; top: 90.4%; display: flex; align-items: center; gap: .88cqw; color: var(--system-teal); text-decoration: none; text-transform: uppercase; font-size: 1.465cqw; line-height: 1.8cqw; font-weight: 700; letter-spacing: .146cqw; }
+#integrated-system .system-explore span { font-family: "DM Sans", sans-serif !important; font-weight: 400; font-size: 1.95cqw; }
+#integrated-system :is(.system-targets a, .system-explore):hover { color: var(--system-ink); text-decoration: underline; text-underline-offset: .2em; }
+
+/* Reflow the same live text on narrow screens instead of shrinking annotations. */
+@media (max-width: 900px) {
+  #integrated-system .system-composition { aspect-ratio: auto; display: flex; flex-direction: column; padding-bottom: 40px; }
+  #integrated-system .system-intro { position: static; order: -2; width: auto; margin: 40px var(--insights-gutter) 24px; }
+  #main #integrated-system .system-eyebrow { font-size: 12px !important; line-height: 18px !important; letter-spacing: 2px; margin-bottom: 14px !important; }
+  #integrated-system .system-eyebrow::before { width: 42px; height: 3px; margin-bottom: 14px; }
+  #integrated-system .system-eyebrow > span { transform: none; width: auto; }
+  #main #integrated-system #overview-title { top: auto; font-size: clamp(29px, 4.4vw, 42px) !important; line-height: 1.1 !important; letter-spacing: -.02em !important; transform: none; width: auto; margin-bottom: 18px !important; }
+  #main #integrated-system .system-summary { font-size: 17px !important; line-height: 1.55 !important; width: auto; transform: none; }
+  #integrated-system :is(#overview-title, .system-summary, .system-domains h3, .system-domains p) > span { display: inline; white-space: normal; }
+  #integrated-system .system-artwork { position: relative; inset: auto; order: -1; aspect-ratio: 16 / 9; width: 100%; z-index: auto; }
+  #integrated-system .system-domains { margin: 28px var(--insights-gutter); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  #integrated-system .system-domains li { position: static; width: auto; grid-template-columns: 36px 1fr; padding-top: 14px; border-top: 1px solid #c7dce0; }
+  #integrated-system .system-domains li:nth-child(1) { grid-template-columns: 36px 1fr; }
+  #integrated-system .system-domains li > div { padding: 0; }
+  #main #integrated-system .system-number { font-size: 28px; line-height: 1; transform: none; letter-spacing: -1px; }
+  #main #integrated-system .system-domains h3 { font-size: 19px !important; line-height: 1.2 !important; letter-spacing: 0 !important; transform: none; width: auto; white-space: normal; margin-bottom: 8px !important; }
+  #main #integrated-system .system-domains p { font-size: 16px !important; line-height: 1.45 !important; width: auto; transform: none; }
+  #main #integrated-system .system-recovery-label { position: static; width: auto; height: auto; margin: 6px var(--insights-gutter) 20px !important; padding: 14px; border-radius: 32px; background: #dfedf0; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 1.5px; text-align: center; }
+  #integrated-system .system-recovery-label > span { transform: none; white-space: normal; }
+  #integrated-system .system-targets { position: static; margin: 0 var(--insights-gutter); gap: 20px; }
+  #integrated-system .system-targets strong { font-size: 21px; line-height: 1.2; margin-bottom: 8px; transform: none; }
+  #integrated-system .system-targets a > span { font-size: 15px; line-height: 1.4; width: auto; margin: 0; transform: none; }
+  #integrated-system .system-desktop-break { display: none; }
+  #integrated-system .system-explore { position: static; width: fit-content; margin: 30px var(--insights-gutter) 0 auto; font-size: 17px; line-height: 24px; gap: 12px; letter-spacing: 2px; }
+  #integrated-system .system-explore span { font-size: 25px; }
+}
+@media (max-width: 560px) {
+  #integrated-system .system-domains { grid-template-columns: 1fr; }
+  #integrated-system .system-targets { grid-template-columns: 1fr; text-align: left; gap: 18px; }
+}

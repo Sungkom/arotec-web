@@ -1,0 +1,54 @@
+/* Supplied cycling scene, separate science illustrations and live HTML labels. */
+.exb-regulation-content { position:relative; isolation:isolate; width:calc(100% + var(--exb-detail-left) + var(--exb-detail-right)); margin-left:calc(-1 * var(--exb-detail-left)); padding-block:3.5vw 4vw; min-height:56.25vw; background:#fff; }
+.exb-regulation-art { position:absolute; inset:0; z-index:-1; overflow:hidden; }
+.exb-regulation-art img { display:block; width:100%; height:100%; object-fit:cover; }
+.exb-regulation-heading { margin-left:30%; margin-right:var(--exb-detail-right); text-align:center; }
+html body.exercise-editorial-page main#main .exb-regulation-heading h2 { font-size:clamp(30px,2.65vw,52px) !important; }
+html body.exercise-editorial-page main#main .exb-regulation-heading .exb-subtitle { font-size:clamp(18px,1.55vw,30px) !important; }
+html body.exercise-editorial-page main#main .exb-regulation-heading > p:last-child { font-size:clamp(15px,1.1vw,22px) !important; }
+.exb-regulation-structure { display:grid; grid-template-columns:.52fr 2.5fr .98fr; gap:1.2vw; align-items:center; margin:2.2vw var(--exb-detail-right) 0 28%; }
+html body.exercise-editorial-page main#main .exb-regulation-source { display:flex; flex-direction:column; gap:12px; font-size:clamp(13px,1.08vw,21px) !important; font-weight:700; line-height:1.25 !important; }
+.exb-regulation-source .ph { align-self:flex-end; font-size:24px; }
+.exb-regulation-pathways { display:grid; gap:1.4vw; padding:0; list-style:none; }
+.exb-regulation-pathways > li { display:grid; grid-template-columns:.85fr 1.35fr; align-items:center; gap:1.1vw; min-width:0; }
+.exb-regulation-cell { display:block; width:100%; height:auto; border-radius:50%; }
+.exb-regulation-copy { min-width:0; padding:8px; background:rgba(255,255,255,.88); }
+html body.exercise-editorial-page main#main .exb-regulation-copy h3 { display:flex; align-items:center; gap:.7vw; padding-bottom:.65vw; border-bottom:1px solid #879cb2; font-size:clamp(14px,1.2vw,23px) !important; }
+.exb-regulation-copy .exb-number { flex-shrink:0; margin:0; font-size:clamp(24px,2vw,38px); }
+.exb-regulation-copy ul { list-style:none; padding:.6vw 0 0; }
+html body.exercise-editorial-page main#main .exb-regulation-copy li { font-size:clamp(13px,1.04vw,20px) !important; line-height:1.45 !important; margin:0; }
+.exb-regulation-copy li + li { padding-top:.2vw; }
+.exb-regulation-result { display:flex; align-items:center; gap:.6vw; margin:0; min-width:0; }
+.exb-regulation-result .ph { flex-shrink:0; color:#17658b; font-size:clamp(18px,1.5vw,28px); }
+.exb-regulation-result img { display:block; width:calc(100% - 2.1vw); height:auto; border-radius:50%; }
+
+@media (max-width:1199px) {
+  .exb-regulation-content { display:flex; flex-direction:column; min-height:0; padding:32px 0; }
+  .exb-regulation-heading { order:0; margin-inline:var(--exb-detail-left) var(--exb-detail-right); text-align:left; }
+  .exb-regulation-art { position:relative; inset:auto; z-index:0; order:1; aspect-ratio:16/7; margin:24px 0; }
+  .exb-regulation-art img { object-fit:cover; object-position:center; }
+  .exb-regulation-structure { order:2; grid-template-columns:1fr; gap:28px; margin:0 var(--exb-detail-right) 0 var(--exb-detail-left); }
+  html body.exercise-editorial-page main#main .exb-regulation-source { align-items:center; font-size:18px !important; }
+  .exb-regulation-source .ph { align-self:center; transform:rotate(90deg); }
+  .exb-regulation-pathways { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+  .exb-regulation-pathways > li { display:flex; flex-direction:column; gap:18px; }
+  .exb-regulation-cell { width:180px; max-width:75%; }
+  .exb-regulation-copy { padding:0; width:100%; background:transparent; }
+  html body.exercise-editorial-page main#main .exb-regulation-copy h3 { gap:12px; min-height:3.75em; padding-bottom:12px; font-size:18px !important; }
+  .exb-regulation-copy .exb-number { font-size:28px; }
+  .exb-regulation-copy ul { padding-top:12px; }
+  html body.exercise-editorial-page main#main .exb-regulation-copy li { font-size:16px !important; line-height:1.5 !important; }
+  .exb-regulation-copy li + li { padding-top:5px; }
+  .exb-regulation-result { flex-direction:column; gap:18px; }
+  .exb-regulation-result .ph { transform:rotate(90deg); font-size:24px; }
+  .exb-regulation-result img { width:240px; max-width:75%; }
+}
+@media (max-width:599px) {
+  .exb-regulation-content { padding-block:28px 32px; }
+  html body.exercise-editorial-page main#main .exb-regulation-heading h2 { font-size:30px !important; }
+  html body.exercise-editorial-page main#main .exb-regulation-heading .exb-subtitle { font-size:21px !important; }
+  html body.exercise-editorial-page main#main .exb-regulation-heading > p:last-child { font-size:16px !important; }
+  .exb-regulation-pathways { grid-template-columns:1fr; gap:32px; }
+  .exb-regulation-cell { width:200px; }
+  html body.exercise-editorial-page main#main .exb-regulation-copy h3 { min-height:0; }
+}

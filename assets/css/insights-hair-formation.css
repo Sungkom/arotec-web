@@ -1,0 +1,86 @@
+/* Reference 5.png: selectable text and SVG callouts over clean 5.1 artwork.
+   Coordinates follow the 2048 x 1152 reference; the clean art is enlarged
+   about its center to align with the reference crop. */
+#main #hair-biology {
+  --site-font: "Insights Condensed", "DM Sans", sans-serif;
+  --arotec-font-family: var(--site-font);
+  --hair-ink: #06132f;
+  --hair-copy: #354b75;
+  --hair-teal: #408f98;
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+#hair-biology .hair-composition { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: clip; isolation: isolate; }
+#hair-biology .hair-artwork { position: absolute; inset: 0; overflow: hidden; z-index: -1; }
+#hair-biology .hair-artwork img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2175); transform-origin: center; }
+#hair-biology .hair-connectors { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#hair-biology .hair-connectors g { stroke-linecap: round; stroke-linejoin: round; }
+#hair-biology .hair-connector-halo { stroke: #fff; stroke-width: 5; stroke-opacity: .8; }
+#hair-biology .hair-connector-lines { stroke: #4995a1; stroke-width: 2.5; }
+#hair-biology .hair-connector-points { fill: #fff; stroke: #4995a1; stroke-width: 3; }
+#main #hair-biology :is(h2, h3, p, li, span) { font-family: var(--site-font) !important; }
+#main #hair-biology :is(h2, h3, p) { margin: 0 !important; }
+#hair-biology .hair-intro { position: absolute; left: 3.955%; top: 3.472%; width: 37%; }
+#main #hair-biology .hair-eyebrow { font-size: 1.27cqw !important; line-height: 1.465cqw !important; font-weight: 700 !important; letter-spacing: .195cqw; text-transform: uppercase; color: var(--hair-teal); margin-bottom: .293cqw !important; }
+#hair-biology .hair-eyebrow::before { content: ""; display: block; width: 3.32cqw; height: .293cqw; margin-bottom: .732cqw; background: var(--hair-teal); }
+#hair-biology .hair-eyebrow > span { display: block; width: 119.05%; transform: scaleX(.84); transform-origin: left top; }
+#main #hair-biology #hair-title { position: relative; top: .195cqw; font-size: 4.981cqw !important; line-height: 4.102cqw !important; font-weight: 900 !important; letter-spacing: 0 !important; text-transform: uppercase; color: var(--hair-ink); margin-bottom: .928cqw !important; }
+#hair-biology :is(#hair-title, .hair-summary, .hair-description) > span { display: block; white-space: nowrap; }
+#hair-biology #hair-title > span { width: max-content; transform: scaleX(.701); transform-origin: left top; }
+#hair-biology #hair-title > span + span { transform: scaleX(.716); }
+#main #hair-biology .hair-summary { font-size: 1.465cqw !important; line-height: 1.724cqw !important; color: var(--hair-copy); width: 106.724%; transform: scaleX(.937); transform-origin: left top; }
+#hair-biology .hair-processes { padding: 0; margin: 0; list-style: none; }
+#hair-biology .hair-process { position: absolute; display: grid; align-items: start; grid-template-columns: 4.297cqw minmax(0, 1fr); }
+#hair-biology .hair-cycling { left: 8.887%; top: 39.41%; width: 28%; }
+#hair-biology .hair-matrix { left: 61.23%; top: 67.101%; width: 31%; grid-template-columns: 4.98cqw minmax(0, 1fr); }
+#hair-biology .hair-fiber { left: 70.752%; top: 38.194%; width: 28%; grid-template-columns: 4.541cqw minmax(0, 1fr); }
+#main #hair-biology .hair-number { color: var(--hair-teal); font-size: 3.613cqw; line-height: 1; font-weight: 800; letter-spacing: -.049cqw; transform: scaleX(.78); transform-origin: left top; }
+#hair-biology .hair-process-copy { min-width: 0; padding-top: .293cqw; }
+#main #hair-biology .hair-process h3 { font-size: 2.051cqw !important; line-height: 2.148cqw !important; font-weight: 800 !important; letter-spacing: 0 !important; text-transform: uppercase; white-space: nowrap; color: var(--hair-ink); width: 140.449%; transform: scaleX(.712); transform-origin: left top; }
+#main #hair-biology .hair-matrix h3 { font-size: 1.953cqw !important; line-height: 2.051cqw !important; width: 144.092%; transform: scaleX(.694); }
+#main #hair-biology .hair-fiber h3 { font-size: 1.953cqw !important; line-height: 2.051cqw !important; width: 140.252%; transform: scaleX(.713); }
+#main #hair-biology .hair-caption { font-size: 1.172cqw !important; line-height: 1.367cqw !important; font-weight: 700 !important; letter-spacing: .146cqw; color: var(--hair-copy); text-transform: uppercase; white-space: nowrap; width: 115.607%; transform: scaleX(.865); transform-origin: left top; margin-bottom: .684cqw !important; }
+#main #hair-biology .hair-description { font-size: 1.27cqw !important; line-height: 1.465cqw !important; color: var(--hair-copy); width: 110.865%; transform: scaleX(.902); transform-origin: left top; }
+#main #hair-biology .hair-matrix .hair-description { width: 114.155%; transform: scaleX(.876); }
+#main #hair-biology .hair-fiber .hair-description { width: 108.46%; transform: scaleX(.922); }
+#main #hair-biology .hair-keywords { font-size: .977cqw !important; line-height: 1.172cqw !important; font-weight: 600 !important; letter-spacing: .024cqw; color: var(--hair-copy); text-transform: uppercase; white-space: nowrap; width: 126.422%; transform: scaleX(.791); transform-origin: left top; margin-top: .83cqw !important; }
+#main #hair-biology .hair-matrix .hair-caption { width: 117.371%; transform: scaleX(.852); }
+#main #hair-biology .hair-fiber .hair-caption { width: 115.875%; transform: scaleX(.863); margin-bottom: .928cqw !important; }
+#main #hair-biology .hair-matrix .hair-keywords { width: 117.233%; transform: scaleX(.853); margin-top: .684cqw !important; }
+#main #hair-biology .hair-fiber .hair-keywords { width: 129.534%; transform: scaleX(.772); margin-top: 1.172cqw !important; }
+#hair-biology .hair-cycle { position: absolute; left: 74.707%; top: 4.427%; width: 23.242%; height: 26%; }
+#main #hair-biology #hair-cycle-title { position: absolute; left: 10.6%; font-size: 1.416cqw !important; line-height: 1.66cqw !important; font-weight: 700 !important; letter-spacing: .195cqw !important; text-transform: uppercase; color: var(--hair-ink); white-space: nowrap; transform: scaleX(.797); transform-origin: left top; }
+#hair-biology #hair-cycle-title::before { content: ""; display: block; width: 3.968cqw; height: .293cqw; margin-left: -.613cqw; margin-bottom: .439cqw; background: var(--hair-teal); }
+#hair-biology .hair-cycle-art { display: none; }
+#hair-biology .hair-cycle ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; list-style: none; padding: 0; margin: 0; position: absolute; left: -6%; top: 13.184cqw; width: 107%; text-align: center; }
+#main #hair-biology .hair-cycle li { font-size: 1.074cqw !important; line-height: 1.465cqw !important; font-weight: 700 !important; letter-spacing: .073cqw; text-transform: uppercase; color: var(--hair-copy); transform: scaleX(.84); }
+
+@media (max-width: 900px) {
+  #hair-biology .hair-composition { aspect-ratio: auto; display: flex; flex-direction: column; padding-bottom: 40px; }
+  #hair-biology .hair-intro { position: static; order: -1; width: auto; margin: 40px var(--insights-gutter) 24px; }
+  #main #hair-biology .hair-eyebrow { font-size: 12px !important; line-height: 18px !important; letter-spacing: 2px; margin-bottom: 14px !important; }
+  #hair-biology .hair-eyebrow::before { width: 42px; height: 3px; margin-bottom: 14px; }
+  #hair-biology .hair-eyebrow > span { width: auto; transform: none; }
+  #main #hair-biology #hair-title { top: auto; font-size: clamp(30px, 4.5vw, 44px) !important; line-height: 1.1 !important; letter-spacing: -.02em !important; margin-bottom: 18px !important; }
+  #hair-biology :is(#hair-title, .hair-summary, .hair-description) > span { display: inline; white-space: normal; }
+  #hair-biology #hair-title > span { width: auto; transform: none; }
+  #main #hair-biology .hair-summary { font-size: 17px !important; line-height: 1.55 !important; width: auto; transform: none; }
+  #hair-biology .hair-artwork { position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; z-index: auto; }
+  #hair-biology .hair-connectors { display: none; }
+  #hair-biology .hair-cycle { position: static; width: auto; height: auto; margin: 28px var(--insights-gutter) 0; }
+  #main #hair-biology #hair-cycle-title { position: static; font-size: 17px !important; line-height: 1.4 !important; letter-spacing: 2px !important; text-align: center; transform: none; }
+  #hair-biology #hair-cycle-title::before { width: 42px; height: 3px; margin: 0 auto 14px; }
+  #hair-biology .hair-cycle-art { display: block; position: relative; overflow: hidden; aspect-ratio: 470 / 218; max-width: 470px; margin: 12px auto 0; }
+  #hair-biology .hair-cycle-art img { position: absolute; width: 530.52%; max-width: none; height: auto; left: -372.92%; top: -98.75%; }
+  #hair-biology .hair-cycle ol { position: static; width: auto; max-width: 470px; margin: 8px auto 0; }
+  #main #hair-biology .hair-cycle li { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: 1px; transform: none; }
+  #hair-biology .hair-processes { display: grid; grid-template-columns: 1fr; gap: 28px; margin: 28px var(--insights-gutter) 0; }
+  #hair-biology .hair-process { position: static; grid-template-columns: 44px minmax(0, 1fr); width: auto; padding-top: 18px; border-top: 1px solid #c7dce0; }
+  #main #hair-biology .hair-number { font-size: 32px; line-height: 1; letter-spacing: -1px; transform: none; }
+  #hair-biology .hair-process-copy { padding: 0; }
+  #main #hair-biology .hair-process h3 { font-size: 23px !important; line-height: 1.2 !important; width: auto; transform: none; white-space: normal; margin-bottom: 6px !important; }
+  #main #hair-biology .hair-process .hair-caption { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: 1.2px; width: auto; transform: none; white-space: normal; margin-bottom: 14px !important; }
+  #main #hair-biology .hair-process .hair-description { font-size: 16px !important; line-height: 1.5 !important; width: auto; transform: none; }
+  #main #hair-biology .hair-process .hair-keywords { font-size: 13px !important; line-height: 1.6 !important; letter-spacing: .6px; white-space: normal; width: auto; transform: none; margin-top: 16px !important; }
+}

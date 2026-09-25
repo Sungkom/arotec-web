@@ -1,0 +1,141 @@
+/* Match index.html's shell-scoped footer without moving it into the render mount. */
+body.exercise-editorial-page #site-footer-shell {
+  --arotec-nav-ink: #113568;
+  --arotec-brand-width: 106px;
+  --arotec-brand-height: 80px;
+  --arotec-logo-width: 99px;
+  --arotec-logo-height: 61px;
+  color: var(--arotec-nav-ink);
+  font-family: var(--site-font);
+  line-height: 1.6;
+}
+
+body.exercise-editorial-page #site-footer-shell,
+body.exercise-editorial-page #site-footer-shell * {
+  box-sizing: border-box;
+}
+
+body.exercise-editorial-page #site-footer-shell a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.exercise-editorial-page #site-footer-shell button,
+body.exercise-editorial-page #site-footer-shell input {
+  font: inherit;
+}
+
+body.exercise-editorial-page #site-footer-shell button {
+  cursor: pointer;
+}
+
+body.exercise-editorial-page #site-footer-shell img {
+  display: block;
+  max-width: 100%;
+}
+
+body.exercise-editorial-page #site-footer-shell .brand {
+  width: var(--arotec-brand-width) !important;
+  min-width: var(--arotec-brand-width) !important;
+  min-height: var(--arotec-brand-height) !important;
+  display: inline-flex;
+  align-self: center !important;
+  align-items: center;
+  justify-content: center !important;
+  padding: 2px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.exercise-editorial-page #site-footer-shell .brand-logo {
+  width: var(--arotec-logo-width) !important;
+  height: var(--arotec-logo-height) !important;
+  display: block;
+  aspect-ratio: 1092 / 680 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  filter: none !important;
+}
+
+body.exercise-editorial-page #site-footer-shell .circle-button {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(17, 53, 104, 0.3) !important;
+  border-radius: 999px;
+  color: var(--arotec-nav-ink) !important;
+  background: rgba(255, 255, 255, 0.46) !important;
+  box-shadow: none !important;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+body.exercise-editorial-page #site-footer-shell .circle-button:hover,
+body.exercise-editorial-page #site-footer-shell .circle-button:focus-visible {
+  border-color: rgba(11, 99, 199, 0.52) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  transform: translateY(-2px);
+}
+
+body.exercise-editorial-page #site-footer-shell .circle-button:focus-visible {
+  outline: 2px solid rgba(157, 220, 255, 0.82);
+  outline-offset: 3px;
+}
+
+body.exercise-editorial-page #site-footer-shell .icon-svg {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 1280px) {
+  body.exercise-editorial-page #site-footer-shell {
+    --arotec-brand-width: 90px;
+    --arotec-brand-height: 71px;
+    --arotec-logo-width: 87px;
+    --arotec-logo-height: 54px;
+  }
+}
+
+@media (max-width: 1060px) {
+  body.exercise-editorial-page #site-footer-shell .circle-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  body.exercise-editorial-page #site-footer-shell .icon-svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (max-width: 760px) {
+  body.exercise-editorial-page #site-footer-shell {
+    --arotec-brand-width: 88px;
+    --arotec-brand-height: 62px;
+    --arotec-logo-width: 84px;
+    --arotec-logo-height: 53px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.exercise-editorial-page #site-footer-shell *,
+  body.exercise-editorial-page #site-footer-shell *::before,
+  body.exercise-editorial-page #site-footer-shell *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

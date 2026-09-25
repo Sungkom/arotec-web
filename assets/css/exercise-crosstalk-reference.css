@@ -1,0 +1,63 @@
+/* Supplied inter-organ artwork with accessible labels in the site's main font. */
+html body.exercise-systemic-page main#main #crosstalk.esh-crosstalk-reference { padding: 0; margin: 0; scroll-margin-top: 0; color: #071748; }
+.esh-crosstalk-scene { position: relative; isolation: isolate; container-type: inline-size; width: 100%; aspect-ratio: 16 / 9; overflow: clip; background: #fff; }
+.esh-crosstalk-backdrop { position: absolute; z-index: -1; width: 121.75%; max-width: none; height: auto; left: -10.875%; top: -10.875%; }
+html body.exercise-systemic-page main#main #crosstalk :is(h2,h3,p,li) { margin: 0 !important; padding: 0; color: #071748; font-family: var(--site-font) !important; font-style: normal; }
+.esh-crosstalk-copy { position: absolute; left: 6.4%; top: 17.2%; width: 25.8%; }
+html body.exercise-systemic-page main#main #crosstalk #crosstalk-title {
+  --site-type-h2: clamp(44px,3.85cqw,98px); --site-line-h2: 1.17; --site-letter-h2: -.05em;
+  --arotec-display-size: var(--site-type-h2); --arotec-display-line-height: var(--site-line-h2); --arotec-display-letter-spacing: var(--site-letter-h2); --arotec-display-weight: 700;
+  max-width: none; font-size: var(--site-type-h2) !important; line-height: var(--site-line-h2) !important; font-weight: 700 !important; letter-spacing: var(--site-letter-h2) !important; margin-bottom: .75cqw !important;
+}
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-subtitle { font-size: clamp(24px,1.98cqw,50px) !important; line-height: 1.12 !important; font-weight: 600 !important; letter-spacing: -.04em !important; }
+.esh-crosstalk-prose { margin-top: 3.2cqw; max-width: 90%; }
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-prose p { font-size: clamp(18px,1.35cqw,34px) !important; line-height: 1.28 !important; font-weight: 400 !important; letter-spacing: -.025em !important; color: #354b84; }
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-prose p + p { margin-top: 1.5cqw !important; }
+.esh-crosstalk-group { position: absolute; }
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-group h3 { font-size: clamp(16px,1.14cqw,30px) !important; line-height: 1.16 !important; font-weight: 700 !important; letter-spacing: -.04em !important; }
+#crosstalk .esh-crosstalk-group ul { margin: .4cqw 0 0; padding-left: 1.25cqw; }
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-group li { font-size: clamp(16px,1.2cqw,31px) !important; line-height: 1.27 !important; font-weight: 400 !important; letter-spacing: -.035em !important; }
+.esh-crosstalk-brain { left: 42.85%; top: 5%; width: 14%; }
+.esh-crosstalk-heart { left: 82.25%; top: 12.5%; width: 17%; }
+.esh-crosstalk-bone { left: 87.6%; top: 41.6%; width: 12%; }
+.esh-crosstalk-liver { left: 32.4%; top: 41%; width: 15%; }
+.esh-crosstalk-adipose { left: 33.1%; top: 71.9%; width: 18%; }
+.esh-crosstalk-pancreas { left: 55.4%; top: 89.2%; width: 21%; }
+.esh-crosstalk-immune { left: 82.6%; top: 78.1%; width: 17%; }
+html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-muscle-label { position: absolute; left: 57.4%; top: 67.7%; width: 10.5%; text-align: center; font-size: clamp(14px,1cqw,26px) !important; line-height: 1.16 !important; font-weight: 700 !important; letter-spacing: .025em !important; }
+.esh-crosstalk-mobile-art { display: none; }
+@media (width < 1500px) { .esh-crosstalk-copy-break { display: none; } }
+@media (min-width:1280px) and (width < 1500px) {
+  .esh-crosstalk-copy { top: 15.5%; }
+  .esh-crosstalk-prose { margin-top: 2cqw; max-width: 95%; }
+  .esh-crosstalk-liver { left: 31.9%; width: 15.5%; }
+  .esh-crosstalk-brain { left: 41.6%; width: 15%; }
+  .esh-crosstalk-bone { left: 87.4%; width: 12.3%; }
+  .esh-crosstalk-immune { left: 82.3%; width: 17.4%; }
+  .esh-crosstalk-pancreas { top: 88.9%; width: 23%; }
+}
+@media (width < 1280px) {
+  .esh-crosstalk-scene { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; aspect-ratio: auto; padding: 48px 28px; }
+  .esh-crosstalk-backdrop { display: none; }
+  .esh-crosstalk-copy { position: static; grid-column: 1 / -1; width: 100%; max-width: 760px; }
+  html body.exercise-systemic-page main#main #crosstalk #crosstalk-title { --site-type-h2: 48px; --site-line-h2: 1.15; --site-letter-h2: -.04em; margin-bottom: 20px !important; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-subtitle { font-size: 24px !important; line-height: 32px !important; letter-spacing: normal !important; }
+  .esh-crosstalk-prose { max-width: none; margin-top: 24px; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-prose p { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-prose p + p { margin-top: 20px !important; }
+  .esh-crosstalk-mobile-art { display: block; grid-column: 1 / -1; width: min(100%,780px); justify-self: center; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-muscle-label { position: static; grid-column: 1 / -1; width: 100%; font-size: 18px !important; line-height: 26px !important; letter-spacing: .025em !important; }
+  .esh-crosstalk-group { position: static; width: 100%; border-top: 2px solid #9152b4; padding-top: 20px; }
+  .esh-crosstalk-heart,.esh-crosstalk-adipose { border-color: #cd2944; }
+  .esh-crosstalk-bone { border-color: #28969f; }
+  .esh-crosstalk-immune { border-color: #237ece; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-group h3 { font-size: 21px !important; line-height: 28px !important; letter-spacing: -.025em !important; }
+  #crosstalk .esh-crosstalk-group ul { margin: 14px 0 0; padding-left: 22px; }
+  html body.exercise-systemic-page main#main #crosstalk .esh-crosstalk-group li { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  .esh-crosstalk-group br { display: none; }
+}
+@media (max-width:767px) {
+  .esh-crosstalk-scene { grid-template-columns: minmax(0,1fr); padding: 40px 24px; gap: 28px; }
+  html body.exercise-systemic-page main#main #crosstalk #crosstalk-title { --site-type-h2: 34px; --site-letter-h2: -.05em; }
+  .esh-crosstalk-subtitle br { display: none; }
+}

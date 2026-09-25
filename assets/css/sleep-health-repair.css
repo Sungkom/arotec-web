@@ -1,0 +1,97 @@
+/* Supplied clean artwork and clipped source leader lines; all labels stay live HTML. */
+@layer sleep-repair-reference {
+  html body #biological-restoration :is(p,h3,.sh-number) {
+    font-family:"Sleep Roboto Condensed",sans-serif!important;
+    letter-spacing:0!important;
+    margin:0!important;
+  }
+  html body #biological-restoration #repair-title {
+    font-family:var(--site-font)!important;
+    font-size:3.65cqw!important;
+    font-weight:var(--arotec-display-weight)!important;
+    line-height:1.06!important;
+    letter-spacing:-.02em!important;
+    text-transform:none!important;
+    margin:0!important;
+    width:max-content!important;
+    max-width:none!important;
+    white-space:nowrap!important;
+    text-wrap:nowrap!important;
+  }
+  html body #biological-restoration .sh-intro > p {
+    font-size:1.7578125cqw!important;
+    font-weight:400!important;
+    line-height:1.05555556!important;
+    color:#e4e8f0!important;
+  }
+  html body #biological-restoration .sh-number {
+    font-size:2.734375cqw!important;
+    font-weight:700!important;
+    line-height:1!important;
+    color:#adf1f6!important;
+  }
+  html body #biological-restoration h3 {
+    font-size:1.66015625cqw!important;
+    font-weight:700!important;
+    line-height:.95!important;
+    color:#f7f7f9!important;
+    text-transform:uppercase!important;
+  }
+  html body #biological-restoration .sh-repair-list p {
+    font-size:1.220703125cqw!important;
+    font-weight:400!important;
+    line-height:1.2!important;
+    color:#dee3ec!important;
+  }
+  html body #biological-restoration .sh-repair-metabolic h3 { font-size:1.5625cqw!important; }
+}
+#biological-restoration { container-type:inline-size; color:#f7f7f9; }
+#biological-restoration .sh-scene { display:block; min-height:0; height:auto; aspect-ratio:3154 / 1774; }
+#biological-restoration .sh-art { position:absolute; inset:auto; left:50%; top:50%; width:121.7501585%; max-width:none; height:auto; transform:translate(-50%,-50%); }
+#biological-restoration .sh-intro { position:absolute; inset:6.1% auto auto 5.15%; width:68%; max-width:none; margin:0; padding:0; }
+#biological-restoration .sh-intro > p { position:absolute; top:4.15cqw; left:0; max-width:none; white-space:nowrap; transform:scaleX(1.055); transform-origin:left top; }
+#biological-restoration .sh-repair-list { position:absolute; inset:0; display:block; margin:0; padding:0; }
+#biological-restoration .sh-repair-list > li { position:absolute; margin:0; padding:0; width:max-content; }
+#biological-restoration .sh-repair-heading { position:relative; height:2.85cqw; }
+#biological-restoration .sh-number { position:absolute; top:0; left:0; }
+#biological-restoration h3 { position:absolute; top:.64cqw; left:3.6cqw; width:max-content; white-space:nowrap; transform:scaleX(.8); transform-origin:left top; }
+#biological-restoration .sh-repair-list p { white-space:nowrap; transform:scaleX(.9); transform-origin:left top; }
+#biological-restoration .sh-repair-neural { left:20.22%; top:24.45%; }
+#biological-restoration .sh-repair-glymphatic { left:74.61%; top:35.55%; }
+#biological-restoration .sh-repair-glymphatic .sh-repair-heading { height:4.2cqw; }
+#biological-restoration .sh-repair-glymphatic h3 { top:.36cqw; left:3.95cqw; }
+#biological-restoration .sh-repair-autonomic { left:5.18%; top:49.28%; }
+#biological-restoration .sh-repair-metabolic { left:65.16%; top:66.56%; }
+#biological-restoration .sh-repair-metabolic p { transform:scaleX(.86); }
+#biological-restoration .sh-repair-immune { left:5.18%; top:80.72%; }
+#biological-restoration .sh-repair-leaders { position:absolute; inset:0; pointer-events:none; }
+#biological-restoration .sh-repair-leaders img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:fill; }
+/* These polygons crop actual supplied image pixels around each leader, not redrawn paths. */
+#biological-restoration .sh-leader-1 { clip-path:polygon(44.63% 26.56%,52.59% 26.56%,61.14% 30.38%,61.14% 32.12%,60.06% 32.12%,52.2% 28.21%,44.63% 28.21%); }
+#biological-restoration .sh-leader-2 { clip-path:polygon(74.12% 38.63%,74.32% 40.02%,66.6% 47.31%,57.08% 47.31%,57.08% 45.66%,66.11% 45.66%,73.73% 38.89%); }
+#biological-restoration .sh-leader-3 { clip-path:polygon(33.01% 52%,41.31% 52.08%,48.83% 55.99%,48.83% 57.73%,47.71% 57.81%,41.11% 53.82%,33.01% 53.56%); }
+#biological-restoration .sh-leader-4 { clip-path:polygon(46.29% 68.4%,64.46% 68.4%,64.46% 70.23%,47.31% 71.7%,46.29% 71.7%); }
+#biological-restoration .sh-leader-5 { clip-path:polygon(36.47% 80.56%,42.53% 80.56%,42.53% 85.5%,36.47% 85.5%); }
+
+@media(max-width:1199px) {
+  #biological-restoration .sh-scene { display:flex; flex-direction:column; aspect-ratio:auto; }
+  #biological-restoration .sh-intro { position:static; order:-1; display:grid; gap:20px; width:auto; margin:0 24px; padding:32px 0 28px; }
+  #biological-restoration .sh-intro > p { position:static; white-space:normal; transform:none; }
+  #biological-restoration .sh-art { position:static; order:0; width:100%; height:auto; aspect-ratio:16/9; transform:none; }
+  #biological-restoration .sh-repair-leaders { display:none; }
+  #biological-restoration .sh-repair-break { display:none; }
+  #biological-restoration .sh-repair-list { position:static; order:1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; margin:32px 24px; padding:0; }
+  #biological-restoration .sh-repair-list > li { position:static; width:auto; }
+  #biological-restoration .sh-repair-heading, #biological-restoration .sh-repair-glymphatic .sh-repair-heading { display:flex; align-items:baseline; gap:16px; height:auto; margin-bottom:12px; }
+  #biological-restoration .sh-number { position:static; flex-shrink:0; }
+  #biological-restoration h3 { position:static; width:auto; white-space:normal; transform:none; }
+  #biological-restoration .sh-repair-list p { white-space:normal; transform:none; }
+  @layer sleep-repair-reference {
+    html body #biological-restoration #repair-title { font-size:clamp(30px,4.5vw,52px)!important; line-height:1.1!important; width:auto!important; max-width:100%!important; white-space:normal!important; text-wrap:wrap!important; }
+    html body #biological-restoration .sh-intro > p { font-size:18px!important; line-height:1.5!important; }
+    html body #biological-restoration .sh-number { font-size:38px!important; }
+    html body #biological-restoration h3, html body #biological-restoration .sh-repair-metabolic h3 { font-size:23px!important; line-height:1.2!important; }
+    html body #biological-restoration .sh-repair-list p { font-size:18px!important; line-height:1.5!important; }
+  }
+}
+@media(max-width:700px) { #biological-restoration .sh-repair-list { grid-template-columns:1fr; } }

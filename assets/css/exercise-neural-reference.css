@@ -1,0 +1,87 @@
+/* Original neural artwork and native site-font labels, aligned to the reference. */
+html body.exercise-systemic-page main#main #neural.esh-neural-reference { padding: 0; margin: 0; scroll-margin-top: 0; color: #071748; }
+.esh-neural-scene { position: relative; isolation: isolate; container-type: inline-size; width: 100%; aspect-ratio: 16 / 9; overflow: clip; background: #fff; }
+.esh-neural-backdrop { position: absolute; z-index: -1; width: 121.75%; max-width: none; height: auto; left: -10.875%; top: -10.875%; }
+html body.exercise-systemic-page main#main #neural :is(h2,h3,p,li) { margin: 0 !important; padding: 0; color: #071748; font-family: var(--site-font) !important; font-style: normal; }
+.esh-neural-copy { position: absolute; left: 3.45%; top: 14%; width: 29%; }
+html body.exercise-systemic-page main#main #neural #neural-title {
+  --site-type-h2: clamp(32px,2.7cqw,70px); --site-line-h2: 1.3; --site-letter-h2: -.05em;
+  --arotec-display-size: var(--site-type-h2); --arotec-display-line-height: var(--site-line-h2); --arotec-display-letter-spacing: var(--site-letter-h2); --arotec-display-weight: 700;
+  max-width: none; font-size: var(--site-type-h2) !important; line-height: var(--site-line-h2) !important; font-weight: 700 !important; letter-spacing: var(--site-letter-h2) !important; margin-bottom: 1.35cqw !important;
+}
+html body.exercise-systemic-page main#main #neural .esh-neural-subtitle { font-size: clamp(20px,1.35cqw,34px) !important; line-height: 1.25 !important; font-weight: 600 !important; letter-spacing: -.04em !important; }
+.esh-neural-prose { margin-top: 2.3cqw; }
+html body.exercise-systemic-page main#main #neural .esh-neural-prose p { font-size: clamp(18px,1.35cqw,34px) !important; line-height: 1.3 !important; font-weight: 400 !important; letter-spacing: -.025em !important; color: #354b84; }
+html body.exercise-systemic-page main#main #neural .esh-neural-prose p + p { margin-top: 2cqw !important; }
+.esh-neural-reference-afferent, .esh-neural-reference-efferent { position: absolute; top: 8.15%; height: 50.7%; padding-top: 1.05cqw; text-align: center; }
+.esh-neural-reference-afferent { left: 33.25%; width: 15.9%; }
+.esh-neural-reference-efferent { left: 80.67%; width: 16.94%; }
+html body.exercise-systemic-page main#main #neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) h3 { font-size: clamp(16px,1.42cqw,36px) !important; line-height: 1.2 !important; font-weight: 700 !important; letter-spacing: -.05em !important; }
+#neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) ul { list-style: none; margin: 0; padding: 0; }
+html body.exercise-systemic-page main#main #neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) li { position: absolute; left: 50%; text-align: left; font-size: clamp(16px,1.27cqw,32px) !important; line-height: 1.2 !important; font-weight: 400 !important; letter-spacing: -.035em !important; }
+.esh-neural-reference-afferent li:nth-child(1) { top: 21.5%; }
+.esh-neural-reference-afferent li:nth-child(2) { top: 49.2%; }
+.esh-neural-reference-afferent li:nth-child(3) { top: 76.9%; }
+html body.exercise-systemic-page main#main #neural .esh-neural-reference-efferent li { left: 67.5%; }
+.esh-neural-reference-efferent li:nth-child(1) { top: 25.5%; }
+.esh-neural-reference-efferent li:nth-child(2) { top: 53%; }
+.esh-neural-reference-efferent li:nth-child(3) { top: 78.4%; }
+.esh-neural-reference-cns { position: absolute; left: 50.7%; top: 7.5%; width: 30.6%; text-align: center; }
+html body.exercise-systemic-page main#main #neural .esh-neural-reference-cns h3 { font-size: clamp(20px,1.6cqw,42px) !important; line-height: 1.2 !important; font-weight: 700 !important; letter-spacing: -.05em !important; margin-bottom: .35cqw !important; }
+html body.exercise-systemic-page main#main #neural .esh-neural-reference-cns p { font-size: clamp(14px,1.05cqw,27px) !important; line-height: 1.25 !important; font-weight: 400 !important; letter-spacing: -.035em !important; }
+.esh-neural-reference-sensory { position: absolute; left: 42.38%; top: 63.2%; width: 47.63%; height: 29%; padding-top: .6cqw; }
+html body.exercise-systemic-page main#main #neural .esh-neural-reference-sensory h3 { font-size: clamp(16px,1.36cqw,35px) !important; line-height: 1.2 !important; font-weight: 700 !important; letter-spacing: -.045em !important; text-align: center; }
+#neural .esh-neural-sensory-list { position: absolute; left: 29.5%; top: 28%; width: 29%; margin: 0; padding-left: 1.3cqw; }
+html body.exercise-systemic-page main#main #neural .esh-neural-sensory-list li { font-size: clamp(16px,1.13cqw,29px) !important; line-height: 1.9 !important; font-weight: 400 !important; letter-spacing: -.04em !important; }
+.esh-neural-sensory-connector { position: absolute; left: 55.26%; top: 26.02%; width: 14.25%; height: 61.36%; object-fit: fill; }
+#neural .esh-neural-sensory-results { position: absolute; left: 69.5%; top: 19.5%; width: 27.8%; height: 73%; list-style: none; margin: 0; padding: 0; display: grid; grid-template-rows: 1fr .9fr 1fr; gap: 4.5%; }
+html body.exercise-systemic-page main#main #neural .esh-neural-sensory-results li { display: grid; place-content: center; text-align: center; border: 2px solid #76b6fa; border-radius: .7cqw; font-size: clamp(15px,1.12cqw,29px) !important; line-height: 1.12 !important; font-weight: 400 !important; letter-spacing: -.04em !important; }
+.esh-neural-mobile-icon, .esh-neural-mobile-brain, .esh-neural-mobile-portrait { display: none; }
+@media (min-width:1280px) and (width < 1500px) {
+  .esh-neural-copy { top: 11%; }
+  .esh-neural-prose { margin-top: 1.8cqw; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-prose p { line-height: 1.3 !important; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-prose p + p { margin-top: 1.5cqw !important; }
+  #neural .esh-neural-sensory-list { left: 28%; width: 26%; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-sensory-list li { line-height: 1.4 !important; }
+}
+@media (width < 1280px) {
+  .esh-neural-scene { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; aspect-ratio: auto; padding: 48px 28px; }
+  .esh-neural-backdrop { display: none; }
+  .esh-neural-copy { position: static; grid-column: 1 / -1; width: 100%; max-width: 760px; }
+  html body.exercise-systemic-page main#main #neural #neural-title { --site-type-h2: 48px; --site-line-h2: 1.15; --site-letter-h2: -.04em; margin-bottom: 20px !important; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-subtitle { font-size: 24px !important; line-height: 32px !important; letter-spacing: normal !important; }
+  .esh-neural-prose { margin-top: 24px; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-prose p { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-prose p + p { margin-top: 20px !important; }
+  .esh-neural-reference-afferent,.esh-neural-reference-efferent { position: relative; inset: auto; width: 100%; height: auto; padding: 24px; border: 1.5px solid #76b6fa; border-radius: 14px; }
+  .esh-neural-reference-afferent { grid-column: 1; grid-row: 2; }
+  .esh-neural-reference-efferent { grid-column: 2; grid-row: 2; }
+  html body.exercise-systemic-page main#main #neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) h3 { font-size: 20px !important; letter-spacing: -.025em !important; margin-bottom: 24px !important; }
+  #neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) ul { display: grid; gap: 20px; }
+  html body.exercise-systemic-page main#main #neural :is(.esh-neural-reference-afferent,.esh-neural-reference-efferent) li { position: static; display: flex; gap: 16px; align-items: center; font-size: 18px !important; line-height: 24px !important; letter-spacing: normal !important; }
+  .esh-neural-mobile-icon { display: block; flex: 0 0 76px; width: 76px; height: 76px; object-fit: contain; }
+  .esh-neural-reference-cns { position: static; grid-column: 1 / -1; width: min(100%,620px); justify-self: center; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-reference-cns h3 { font-size: 26px !important; margin-bottom: 10px !important; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-reference-cns p { font-size: 18px !important; line-height: 26px !important; letter-spacing: normal !important; }
+  .esh-neural-mobile-brain { display: block; margin-top: 18px; }
+  .esh-neural-reference-sensory { position: relative; inset: auto; grid-column: 1 / -1; width: 100%; height: auto; display: grid; grid-template-columns: 160px 1fr; gap: 24px; padding: 24px; border: 1.5px solid #76b6fa; border-radius: 14px; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-reference-sensory h3 { grid-column: 1 / -1; font-size: 21px !important; line-height: 28px !important; letter-spacing: -.025em !important; }
+  .esh-neural-mobile-portrait { display: block; align-self: center; }
+  #neural .esh-neural-sensory-list { position: static; width: auto; padding-left: 22px; align-self: center; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-sensory-list li { font-size: 18px !important; line-height: 28px !important; letter-spacing: normal !important; }
+  .esh-neural-sensory-connector { display: none; }
+  #neural .esh-neural-sensory-results { position: static; grid-column: 1 / -1; width: 100%; height: auto; grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: auto; gap: 12px; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-sensory-results li { font-size: 18px !important; line-height: 24px !important; letter-spacing: normal !important; padding: 14px 10px; border-radius: 10px; }
+}
+@media (max-width:767px) {
+  .esh-neural-scene { grid-template-columns: 1fr; padding: 40px 24px; gap: 28px; }
+  html body.exercise-systemic-page main#main #neural #neural-title { --site-type-h2: 34px; --site-letter-h2: -.05em; }
+  .esh-neural-reference-afferent,.esh-neural-reference-efferent { grid-column: 1; grid-row: auto; padding: 22px; }
+  .esh-neural-reference-cns { grid-row: 3; }
+  .esh-neural-reference-efferent { grid-row: 4; }
+  .esh-neural-reference-sensory { grid-template-columns: 1fr; padding: 22px; gap: 22px; }
+  html body.exercise-systemic-page main#main #neural .esh-neural-reference-sensory h3 { overflow-wrap: anywhere; }
+  .esh-neural-mobile-portrait { width: 180px; justify-self: center; }
+  #neural .esh-neural-sensory-results { grid-template-columns: 1fr; }
+}

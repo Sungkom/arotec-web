@@ -1,0 +1,73 @@
+/* Reference 4.png: native type and SVG callouts over its clean 4.1 artwork.
+   The reference uses a centered ~1.2175x crop. All positions below are based
+   on its 2048 x 1152 composition. Local font loaded by the overview CSS. */
+#main #scalp-microenvironment {
+  --site-font: "Insights Condensed", "DM Sans", sans-serif;
+  --arotec-font-family: var(--site-font);
+  --scalp-ink: #06132f;
+  --scalp-copy: #354b75;
+  --scalp-teal: #408f98;
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+#scalp-microenvironment .scalp-composition { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: clip; isolation: isolate; }
+#scalp-microenvironment .scalp-artwork { position: absolute; inset: 0; overflow: hidden; z-index: -1; }
+#scalp-microenvironment .scalp-artwork img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2175); transform-origin: center; }
+#scalp-microenvironment .scalp-connectors { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#scalp-microenvironment .scalp-connectors g { stroke-linecap: round; stroke-linejoin: round; }
+#scalp-microenvironment .scalp-connector-halo { stroke: #fff; stroke-width: 5; stroke-opacity: .8; }
+#scalp-microenvironment .scalp-connector-lines { stroke: #4995a1; stroke-width: 2.5; }
+#scalp-microenvironment .scalp-connector-points { fill: #fff; stroke: #4995a1; stroke-width: 3; }
+#main #scalp-microenvironment :is(h2, h3, p, li, span) { font-family: var(--site-font) !important; }
+#main #scalp-microenvironment :is(h2, h3, p) { margin: 0 !important; }
+#scalp-microenvironment .scalp-intro { position: absolute; left: 68.164%; top: 2.691%; width: 30%; }
+#main #scalp-microenvironment .scalp-eyebrow { font-size: 1.27cqw !important; line-height: 1.465cqw !important; font-weight: 700 !important; letter-spacing: .195cqw; text-transform: uppercase; color: var(--scalp-teal); margin-bottom: .391cqw !important; }
+#scalp-microenvironment .scalp-eyebrow::before { content: ""; display: block; width: 2.881cqw; height: .293cqw; margin-bottom: .781cqw; background: var(--scalp-teal); }
+#scalp-microenvironment .scalp-eyebrow > span { display: block; width: 119.05%; transform: scaleX(.84); transform-origin: left top; }
+#main #scalp-microenvironment #scalp-title { font-size: 4.297cqw !important; line-height: 3.711cqw !important; font-weight: 900 !important; letter-spacing: 0 !important; text-transform: uppercase; color: var(--scalp-ink); margin-bottom: .732cqw !important; }
+#scalp-microenvironment :is(#scalp-title, .scalp-summary, .scalp-process h3, .scalp-description, .scalp-keywords) > span { display: block; white-space: nowrap; }
+#scalp-microenvironment #scalp-title > span { width: max-content; transform: scaleX(.71); transform-origin: left top; }
+#scalp-microenvironment #scalp-title > span + span { transform: scaleX(.715); }
+#main #scalp-microenvironment .scalp-summary { font-size: 1.465cqw !important; line-height: 1.709cqw !important; color: var(--scalp-copy); width: 109.29%; transform: scaleX(.915); transform-origin: left top; }
+#scalp-microenvironment .scalp-processes { padding: 0; margin: 0; list-style: none; }
+#scalp-microenvironment .scalp-process { position: absolute; display: grid; align-items: start; grid-template-columns: 3.223cqw minmax(0, 1fr); }
+#scalp-microenvironment .scalp-barrier { left: 3.32%; top: 29.08%; width: 20%; }
+#scalp-microenvironment .scalp-circulation { left: 33.984%; top: 59.722%; width: 23%; grid-template-columns: 3.809cqw minmax(0, 1fr); }
+#scalp-microenvironment .scalp-immune { left: 78.76%; top: 55.122%; width: 20.2%; grid-template-columns: 3.662cqw minmax(0, 1fr); }
+#main #scalp-microenvironment .scalp-number { color: var(--scalp-teal); font-size: 3.125cqw; line-height: 1; font-weight: 800; letter-spacing: -.049cqw; transform: scaleX(.7); transform-origin: left top; }
+#scalp-microenvironment .scalp-process-copy { min-width: 0; padding-top: .293cqw; }
+#main #scalp-microenvironment .scalp-process h3 { font-size: 1.758cqw !important; line-height: 1.855cqw !important; font-weight: 800 !important; letter-spacing: 0 !important; text-transform: uppercase; white-space: nowrap; color: var(--scalp-ink); width: 128.205%; transform: scaleX(.78); transform-origin: left top; }
+#main #scalp-microenvironment .scalp-circulation h3 { position: relative; top: -.098cqw; line-height: 1.66cqw !important; width: 131.579%; transform: scaleX(.76); }
+#main #scalp-microenvironment .scalp-immune h3 { line-height: 1.66cqw !important; width: 136.986%; transform: scaleX(.73); }
+#main #scalp-microenvironment .scalp-caption { font-size: 1.074cqw !important; line-height: 1.318cqw !important; font-weight: 700 !important; letter-spacing: .08cqw; color: var(--scalp-copy); text-transform: uppercase; white-space: nowrap; width: 117.647%; transform: scaleX(.85); transform-origin: left top; margin-bottom: .488cqw !important; }
+#main #scalp-microenvironment .scalp-description { font-size: 1.172cqw !important; line-height: 1.343cqw !important; color: var(--scalp-copy); width: 120.482%; transform: scaleX(.83); transform-origin: left top; }
+#main #scalp-microenvironment .scalp-circulation .scalp-caption { width: 111.111%; transform: scaleX(.9); margin-bottom: .391cqw !important; }
+#main #scalp-microenvironment .scalp-immune .scalp-caption { width: 126.582%; transform: scaleX(.79); }
+#main #scalp-microenvironment .scalp-circulation .scalp-description { line-height: 1.294cqw !important; width: 114.286%; transform: scaleX(.875); }
+#main #scalp-microenvironment .scalp-immune .scalp-description { width: 129.87%; transform: scaleX(.77); }
+#main #scalp-microenvironment .scalp-keywords { font-size: .977cqw !important; line-height: 1.172cqw !important; font-weight: 600 !important; letter-spacing: .024cqw; color: var(--scalp-copy); text-transform: uppercase; width: 117.647%; transform: scaleX(.85); transform-origin: left top; margin-top: .391cqw !important; }
+#main #scalp-microenvironment :is(.scalp-circulation, .scalp-immune) .scalp-keywords { margin-top: .586cqw !important; }
+#main #scalp-microenvironment .scalp-immune .scalp-keywords { width: 121.951%; transform: scaleX(.82); }
+
+@media (max-width: 900px) {
+  #scalp-microenvironment .scalp-composition { aspect-ratio: auto; display: flex; flex-direction: column; padding-bottom: 40px; }
+  #scalp-microenvironment .scalp-intro { position: static; order: -1; width: auto; margin: 40px var(--insights-gutter) 24px; }
+  #main #scalp-microenvironment .scalp-eyebrow { font-size: 12px !important; line-height: 18px !important; letter-spacing: 2px; margin-bottom: 14px !important; }
+  #scalp-microenvironment .scalp-eyebrow::before { width: 42px; height: 3px; margin-bottom: 14px; }
+  #scalp-microenvironment .scalp-eyebrow > span { width: auto; transform: none; }
+  #main #scalp-microenvironment #scalp-title { font-size: clamp(30px, 4.5vw, 44px) !important; line-height: 1.1 !important; letter-spacing: -.02em !important; margin-bottom: 18px !important; }
+  #scalp-microenvironment :is(#scalp-title, .scalp-summary, .scalp-process h3, .scalp-description, .scalp-keywords) > span { display: inline; white-space: normal; }
+  #scalp-microenvironment #scalp-title > span { width: auto; transform: none; }
+  #main #scalp-microenvironment .scalp-summary { font-size: 17px !important; line-height: 1.55 !important; width: auto; transform: none; }
+  #scalp-microenvironment .scalp-artwork { position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; z-index: auto; }
+  #scalp-microenvironment .scalp-connectors { display: none; }
+  #scalp-microenvironment .scalp-processes { display: grid; grid-template-columns: 1fr; gap: 28px; margin: 28px var(--insights-gutter) 0; }
+  #scalp-microenvironment .scalp-process { position: static; grid-template-columns: 44px minmax(0, 1fr); width: auto; padding-top: 18px; border-top: 1px solid #c7dce0; }
+  #main #scalp-microenvironment .scalp-number { font-size: 32px; line-height: 1; letter-spacing: -1px; transform: none; }
+  #scalp-microenvironment .scalp-process-copy { padding: 0; }
+  #main #scalp-microenvironment .scalp-process h3 { top: auto; font-size: 23px !important; line-height: 1.2 !important; width: auto; transform: none; white-space: normal; margin-bottom: 6px !important; }
+  #main #scalp-microenvironment .scalp-process .scalp-caption { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: 1.2px; width: auto; transform: none; white-space: normal; margin-bottom: 14px !important; }
+  #main #scalp-microenvironment .scalp-process .scalp-description { font-size: 16px !important; line-height: 1.5 !important; width: auto; transform: none; }
+  #main #scalp-microenvironment .scalp-process .scalp-keywords { font-size: 13px !important; line-height: 1.6 !important; letter-spacing: .6px; white-space: normal; width: auto; transform: none; margin-top: 16px !important; }
+}

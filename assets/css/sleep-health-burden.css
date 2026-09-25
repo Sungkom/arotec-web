@@ -1,0 +1,119 @@
+/* Supplied photo, source curve pixels and icons; all copy remains editable. */
+@layer sleep-burden-reference {
+  html body #biological-burden :is(h3,p) { font-family:"Sleep Roboto Condensed",sans-serif!important; letter-spacing:0!important; margin:0!important; color:#0a1c40!important; }
+  html body #biological-burden #burden-title { font-family:var(--site-font)!important; font-size:3.515625cqw!important; font-weight:var(--arotec-display-weight)!important; line-height:1.05!important; letter-spacing:-.025em!important; text-transform:none!important; white-space:nowrap!important; text-wrap:nowrap!important; margin:0!important; color:#020e29!important; }
+  html body #biological-burden h3 { font-weight:700!important; text-transform:uppercase!important; line-height:1!important; }
+  html body #biological-burden p { font-weight:400!important; line-height:1.07!important; }
+  html body #biological-burden .sh-intro p { font-size:1.513671875cqw!important; line-height:1.129032!important; }
+  html body #biological-burden .sh-load-intro h3 { font-size:1.806640625cqw!important; line-height:.891892!important; }
+  html body #biological-burden .sh-load-intro p { font-size:1.220703125cqw!important; line-height:1.08!important; }
+  html body #biological-burden .sh-load-copy h3 { font-size:2.83203125cqw!important; font-weight:900!important; }
+  html body #biological-burden .sh-load-copy p { font-size:1.318359375cqw!important; line-height:1.037037!important; }
+  html body #biological-burden .sh-load-copy .sh-equation { font-size:1.220703125cqw!important; font-weight:700!important; }
+  html body #biological-burden .sh-load-caption { font-size:1.171875cqw!important; font-style:italic!important; color:#254c77!important; }
+  html body #biological-burden .sh-systems h3 { font-size:1.171875cqw!important; line-height:1!important; }
+  html body #biological-burden .sh-system-circadian h3 { font-size:1.123046875cqw!important; font-weight:400!important; }
+  html body #biological-burden .sh-systems li:not(.sh-system-circadian) h3 { margin-top:.4cqw!important; }
+  html body #biological-burden .sh-systems p { font-size:.9765625cqw!important; line-height:1.05!important; color:#35527e!important; margin-top:.32cqw!important; }
+  html body #biological-burden .sh-risk-heading { font-size:1.7578125cqw!important; line-height:.95!important; border:0!important; padding:0!important; }
+  html body #biological-burden .sh-risks h3 { font-size:1.26953125cqw!important; line-height:.94!important; }
+  html body #biological-burden .sh-risk-aging h3 { font-size:1.171875cqw!important; }
+  html body #biological-burden .sh-risks p { font-size:1.07421875cqw!important; line-height:1!important; color:#3c547d!important; }
+}
+#biological-burden { container-type:inline-size; }
+#biological-burden .sh-scene { display:block; min-height:0; height:auto; aspect-ratio:3154 / 1774; }
+#biological-burden .sh-art { position:absolute; inset:0; width:100%; height:100%; object-fit:fill; }
+#biological-burden .sh-burden-text-backdrop { position:absolute; inset:0; pointer-events:none; }
+#biological-burden .sh-burden-text-backdrop::before, #biological-burden .sh-burden-text-backdrop::after { content:""; position:absolute; }
+#biological-burden .sh-burden-text-backdrop::before { left:41.504%; top:69.097%; width:32.471%; height:7.813%; background:#fff; filter:blur(1.953125cqw); opacity:.95; }
+/* Text-contrast scrim measured from the poster; the supplied photograph is unchanged. */
+#biological-burden .sh-burden-text-backdrop::after { left:84.375%; top:37.326%; width:8.789%; height:48.611%; background:#fff; filter:blur(2.686cqw); opacity:.98; }
+#biological-burden .sh-intro { position:absolute; inset:4.85% auto auto 30.27%; width:45%; max-width:none; margin:0; padding:0; }
+#biological-burden .sh-intro p { position:absolute; top:7.62cqw; left:0; width:max-content; max-width:none; white-space:nowrap; transform:scaleX(.958); transform-origin:left top; }
+#biological-burden .sh-burden-detail { position:absolute; inset:0; padding:0; }
+#biological-burden .sh-load-intro { position:absolute; left:28.37%; top:33.25%; margin:0; max-width:none; }
+#biological-burden .sh-load-intro h3 { width:max-content; transform:scaleX(.759); transform-origin:left top; }
+#biological-burden .sh-load-intro p { position:absolute; top:3.72cqw; left:0; width:max-content; white-space:nowrap; transform:scaleX(.94); transform-origin:left top; }
+#biological-burden .sh-load-copy { position:absolute; inset:32.2% auto auto 41.98%; width:32%; max-width:none; margin:0; padding:0; }
+#biological-burden .sh-load-copy h3 { width:max-content; white-space:nowrap; transform:scaleX(.752); transform-origin:left top; }
+#biological-burden .sh-load-copy p { position:absolute; left:0; top:3.02cqw; max-width:none; width:max-content; white-space:nowrap; transform:scaleX(.91); transform-origin:left top; }
+#biological-burden .sh-load-copy .sh-equation { top:7.72cqw; transform:scaleX(.80); }
+#biological-burden .sh-load-caption { position:absolute; left:47.56%; top:57%; width:max-content; padding:0; transform:rotate(-11deg) scaleX(.82); transform-origin:left center; }
+#biological-burden .sh-systems { position:absolute; inset:0; display:block; margin:0; padding:0; }
+#biological-burden .sh-systems li { position:absolute; width:7.2%; text-align:center; }
+#biological-burden .sh-systems img { display:block; position:relative; width:4.34369cqw; height:4.34369cqw; margin:0 auto; border-radius:0; }
+#biological-burden .sh-systems h3 { position:relative; left:50%; width:max-content; white-space:nowrap; margin:0; transform:translateX(-50%) scaleX(.8); }
+#biological-burden .sh-systems p { position:relative; left:50%; width:max-content; white-space:nowrap; transform:translateX(-50%) scaleX(.8); }
+#biological-burden .sh-system-circadian { left:30.64223%; top:62.00676%; }
+#biological-burden .sh-system-circadian img { width:5.26316cqw; height:5.26316cqw; }
+#biological-burden .sh-system-circadian h3 { top:.28cqw; }
+#biological-burden .sh-system-neural { left:39.82105%; top:62.79594%; }
+#biological-burden .sh-system-endocrine { left:46.57438%; top:62.79594%; }
+#biological-burden .sh-system-immune { left:53.29601%; top:62.17587%; }
+#biological-burden .sh-system-metabolic { left:59.79569%; top:60.93574%; }
+#biological-burden .sh-system-cardiovascular { left:66.67584%; top:59.41375%; }
+#biological-burden .sh-system-cardiovascular img { width:4.72416cqw; height:4.72416cqw; }
+#biological-burden .sh-risk-heading { position:absolute; left:76.82%; top:31.87%; width:max-content; transform:scaleX(.76); transform-origin:left top; }
+#biological-burden .sh-risks { position:absolute; inset:0; display:block; margin:0; padding:0; }
+#biological-burden .sh-risks li { position:absolute; left:76.69626%; width:22%; min-height:6.4cqw; }
+#biological-burden .sh-risks img { position:absolute; top:0; left:0; width:6.15092cqw; height:6.15092cqw; margin:0; border-radius:0; }
+#biological-burden .sh-risks h3 { position:absolute; top:.45cqw; left:7.12cqw; width:max-content; white-space:nowrap; transform:scaleX(.76); transform-origin:left top; }
+#biological-burden .sh-risks p { position:absolute; top:3.1cqw; left:7.12cqw; width:max-content; white-space:nowrap; transform:scaleX(.87); transform-origin:left top; }
+#biological-burden .sh-risk-neuro { left:76.72796%; top:39.90981%; }
+#biological-burden .sh-risk-cardio { top:52.25479%; }
+#biological-burden .sh-risk-immune { top:64.54340%; }
+#biological-burden .sh-risk-aging { left:76.66455%; top:77.00113%; }
+#biological-burden .sh-risk-aging img { width:6.0241cqw; height:6.0241cqw; }
+#biological-burden .sh-risk-cardio h3 { top:1.05cqw; }
+#biological-burden .sh-risk-cardio p { top:2.45cqw; }
+#biological-burden .sh-risk-immune h3 { top:.67cqw; }
+#biological-burden .sh-risk-immune p { top:3.23cqw; }
+#biological-burden .sh-risk-aging h3 { top:1.15cqw; transform:scaleX(.74); }
+#biological-burden .sh-risk-aging p { top:2.62cqw; }
+#biological-burden .sh-burden-connectors { position:absolute; inset:0; pointer-events:none; }
+#biological-burden .sh-burden-connectors img { position:absolute; inset:0; width:100%; height:100%; object-fit:fill; }
+#biological-burden .sh-burden-connectors img:not(.sh-burden-arrow) { mix-blend-mode:lighten; }
+/* Tight source-image clips retain the original curve, glow and dotted connectors. */
+#biological-burden .sh-burden-curve { clip-path:polygon(33.95% 60.75%,43.1% 59.9%,50.1% 59.25%,56.7% 57.5%,63.4% 54.4%,69.9% 48.8%,75.3% 42.7%,76.35% 41.6%,76.2% 44.3%,75.5% 44.2%,70.9% 51.3%,64.2% 56.55%,57.25% 59.35%,50.65% 61.15%,43.7% 61.85%,33.95% 62.15%); }
+#biological-burden .sh-burden-arrow { clip-path:polygon(37.6% 37.6%,40.27% 37.6%,40.27% 37.03%,41.18% 38.45%,40.27% 39.8%,40.27% 39.07%,37.6% 39.07%); }
+#biological-burden .sh-burden-stem-1 { clip-path:inset(61.05% 56.42% 36.9% 43.3%); }
+#biological-burden .sh-burden-stem-2 { clip-path:inset(60.05% 49.65% 36.9% 50.08%); }
+#biological-burden .sh-burden-stem-3 { clip-path:inset(58.55% 42.95% 37.7% 56.77%); }
+#biological-burden .sh-burden-stem-4 { clip-path:inset(55.42% 36.28% 39.02% 63.43%); }
+#biological-burden .sh-burden-stem-5 { clip-path:inset(50.3% 29.42% 40.55% 70.17%); }
+
+@media(max-width:1199px) {
+  #biological-burden .sh-scene { display:flex; flex-direction:column; aspect-ratio:auto; }
+  #biological-burden .sh-intro { position:static; order:-1; display:grid; gap:20px; width:auto; margin:0 24px; padding:32px 0 28px; }
+  #biological-burden .sh-art { position:static; width:100%; height:auto; aspect-ratio:3154/1774; order:0; }
+  #biological-burden .sh-burden-connectors, #biological-burden .sh-burden-break, #biological-burden .sh-burden-text-backdrop { display:none; }
+  #biological-burden .sh-burden-detail { position:static; order:1; display:grid; gap:28px; margin:28px 24px; padding:0; }
+  #biological-burden .sh-intro p, #biological-burden .sh-load-intro, #biological-burden .sh-load-copy, #biological-burden .sh-load-copy p, #biological-burden .sh-load-intro p, #biological-burden .sh-load-caption, #biological-burden .sh-risk-heading { position:static; width:auto; max-width:none; margin:0; padding:0; transform:none; white-space:normal; }
+  #biological-burden .sh-load-intro, #biological-burden .sh-load-copy { display:grid; gap:12px; }
+  #biological-burden .sh-load-copy { order:0; }
+  #biological-burden .sh-load-intro h3, #biological-burden .sh-load-copy h3 { width:auto; white-space:normal; transform:none; }
+  #biological-burden .sh-systems { position:static; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 20px; }
+  #biological-burden .sh-systems li { position:static; width:auto; }
+  #biological-burden .sh-systems img, #biological-burden .sh-system-cardiovascular img, #biological-burden .sh-system-circadian img { width:84px; height:84px; margin:0 auto 12px; }
+  #biological-burden .sh-systems h3, #biological-burden .sh-systems p { position:static; width:auto; white-space:normal; transform:none; }
+  #biological-burden .sh-risks { position:static; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+  #biological-burden .sh-risks li { position:relative; left:auto; top:auto; width:auto; min-height:0; padding-left:102px; }
+  #biological-burden .sh-risks img { width:84px; height:84px; }
+  #biological-burden .sh-risks h3, #biological-burden .sh-risks p { position:static; width:auto; white-space:normal; transform:none; }
+  @layer sleep-burden-reference {
+    html body #biological-burden #burden-title { font-size:clamp(30px,4.5vw,52px)!important; line-height:1.1!important; white-space:normal!important; text-wrap:wrap!important; }
+    html body #biological-burden .sh-intro p, html body #biological-burden .sh-load-intro p, html body #biological-burden .sh-load-copy p { font-size:18px!important; line-height:1.5!important; }
+    html body #biological-burden .sh-load-intro h3, html body #biological-burden .sh-load-copy h3, html body #biological-burden .sh-risk-heading { font-size:25px!important; line-height:1.2!important; }
+    html body #biological-burden .sh-load-copy .sh-equation, html body #biological-burden .sh-load-caption { font-size:17px!important; line-height:1.4!important; }
+    html body #biological-burden .sh-systems h3 { font-size:20px!important; line-height:1.2!important; margin:0 0 8px!important; }
+    html body #biological-burden .sh-systems p, html body #biological-burden .sh-risks p { font-size:16px!important; line-height:1.4!important; margin:0!important; }
+    html body #biological-burden .sh-risks h3, html body #biological-burden .sh-risk-aging h3 { font-size:21px!important; line-height:1.2!important; margin:0 0 8px!important; }
+  }
+}
+@media(max-width:700px) {
+  #biological-burden .sh-systems { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #biological-burden .sh-risks { grid-template-columns:1fr; }
+}
+@media(max-width:380px) {
+  #biological-burden .sh-systems { grid-template-columns:1fr; }
+}
