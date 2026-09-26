@@ -50,11 +50,11 @@ html body.ss-page main#main .ss3 .ss-kicker{margin-bottom:3.1cqw!important}
 html body.ss-page main#main .ss3 .ss-copy>.ss-eyebrow{width:115%;margin-top:0!important}
 html body.ss-page main#main .ss3 .ss-copy>p:not(.ss-kicker,.ss-eyebrow){font-size:1.62cqw!important;margin-top:2cqw!important}
 html body.ss-page main#main .ss-dimension-note{border-top:1px solid #8998b1;padding-top:1.7cqw;max-width:85%}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label){position:absolute;text-align:center;font-weight:600;line-height:1.2}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label) strong{display:block;font-size:3cqw!important}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label) span{display:block;font-size:1.45cqw!important}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label){position:absolute;text-align:center;font-weight:600;line-height:1.2}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label) strong{display:block;font-size:3cqw!important}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label) span{display:block;font-size:1.45cqw!important}
 html body.ss-page main#main .ss-lfi-label{top:22%;left:58%;color:#b64b08}
-html body.ss-page main#main .ss-sgi-label{top:57%;left:86%;color:#0053b2}
+html body.ss-page main#main .ss-pgi-label{top:57%;left:82%;right:1%;color:#0088b1}
 html body.ss-page main#main .ss-dimension-question{position:absolute;top:21.3%;left:75.1%;width:21%;font-size:1.27cqw!important}
 html body.ss-page main#main .ss-dimension-question::after{content:"";display:block;width:3.2cqw;height:1px;background:#425578;margin-top:1cqw}
 html body.ss-page main#main :is(.ss4,.ss5) .ss-copy{top:12.3%;width:40%}
@@ -67,8 +67,13 @@ html body.ss-page main#main .ss-reading{position:absolute;left:4.2%;right:4.2%;t
 html body.ss-page main#main .ss-reading h3{font-size:1.95cqw!important}
 html body.ss-page main#main .ss-reading p{font-size:1.38cqw!important;line-height:1.35!important}
 html body.ss-page main#main .ss4 .ss-reading h3{border-right:1px solid #8998b1;padding:.6cqw 0}
-html body.ss-page main#main .ss5 .ss-copy{width:41%}
+html body.ss-page main#main .ss4 .ss-copy{width:47%}
+html body.ss-page main#main .ss4 h2{font-size:3.7cqw!important}
+html body.ss-page main#main .ss4 .ss-copy>p:not(.ss-kicker){max-width:80%}
+html body.ss-page main#main .ss5 .ss-copy{width:44.5%}
+html body.ss-page main#main .ss5 h2{font-size:4.15cqw!important}
 html body.ss-page main#main .ss5 .ss-copy>p:not(.ss-kicker){max-width:95%;font-size:1.67cqw!important}
+html body.ss-page main#main .ss5 .ss-levels h3{color:#00a0c5}
 html body.ss-page main#main .ss5 .ss-levels{left:14%;right:14%;top:69.2%}
 html body.ss-page main#main .ss5 .ss-levels h3{font-size:1.7cqw!important}
 html body.ss-page main#main .ss5 .ss-reading{top:82.7%;display:block;border:0;padding-top:0}
@@ -79,7 +84,7 @@ html body.ss-page main#main .ss6 .ss-copy{top:26.3%;width:34%}
 html body.ss-page main#main .ss6 .ss-copy h2{font-size:4.2cqw!important}
 html body.ss-page main#main .ss6 .ss-copy .ss-lead{font-size:1.8cqw!important;font-weight:500!important;margin-top:1.4cqw!important}
 html body.ss-page main#main .ss6 .ss-copy>p:not(.ss-lead){font-size:1.67cqw!important;margin-top:1.65cqw!important;width:84%}
-html body.ss-page main#main .ss-protocol{position:absolute;top:64%;left:34.8%;right:1.4%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1cqw;list-style:none;text-align:center}
+html body.ss-page main#main .ss-protocol{position:absolute;top:64%;left:29.5%;right:1.4%;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:1cqw;list-style:none;text-align:center}
 html body.ss-page main#main .ss-protocol h3{font-size:1.4cqw!important}
 html body.ss-page main#main .ss-protocol p{font-size:1.28cqw!important}
 html body.ss-page main#main .ss-conditions{position:absolute;left:4.2%;right:4.2%;top:80%;text-align:center}
@@ -89,8 +94,11 @@ html body.ss-page main#main .ss-conditions p{font-size:1.28cqw!important;margin-
 html body.ss-page main#main .ss7 .ss-copy{top:11%;width:30%}
 html body.ss-page main#main .ss7 h2{margin-top:4.2cqw!important}
 html body.ss-page main#main .ss7 .ss-copy>p:not(.ss-kicker){font-size:1.83cqw!important}
-html body.ss-page main#main .ss7 .ss-copy>p.ss-delta{font-size:1.7cqw!important;border-top:1px solid #8998b1;padding-top:1.5cqw;margin-top:3.9cqw!important}
-html body.ss-page main#main .ss-equation{position:absolute;left:38.2%;right:10%;top:11.5%}
+html body.ss-page main#main .ss7 .ss-delta{border-top:1px solid #8998b1;padding-top:1.5cqw;margin-top:3.5cqw}
+html body.ss-page main#main .ss-formula sub{font-size:.65em;line-height:0;vertical-align:sub}
+html body.ss-page main#main .ss-delta .ss-formula{display:flex;align-items:center;justify-content:flex-start;gap:.5cqw;font-size:1.55cqw;line-height:1.35;white-space:nowrap}
+html body.ss-page main#main .ss-delta .ss-control-correction{margin-top:2.1cqw;font-size:1.7cqw}
+html body.ss-page main#main .ss-equation{position:absolute;left:38.2%;right:4.2%;top:11.5%}
 html body.ss-page main#main .ss-equation h3{font-size:3.2cqw!important;line-height:1.1!important;color:var(--ss-orange)}
 html body.ss-page main#main .ss-equation h3 span{display:block;font-size:1.9cqw!important}
 html body.ss-page main#main .ss-equation h3::after{content:"";height:3px;background:currentColor;position:absolute;left:17%;right:0;top:2cqw}
@@ -99,11 +107,17 @@ html body.ss-page main#main .ss-fraction{display:flex;flex-direction:column;text
 html body.ss-page main#main .ss-fraction>span:first-child{border-bottom:2px solid;padding:0 .1cqw .4cqw}
 html body.ss-page main#main .ss-fraction>span:last-child{padding-top:.2cqw}
 html body.ss-page main#main .ss-equation p{text-align:center;font-size:1.6cqw!important;margin-top:1cqw!important}
-html body.ss-page main#main .ss-equation-sgi{top:47.5%}
-html body.ss-page main#main .ss-equation-sgi h3{color:var(--ss-ink)}
-html body.ss-page main#main .ss-equation-sgi .ss-formula{font-size:1.98cqw;gap:.5cqw;margin-top:3.6cqw}
+html body.ss-page main#main .ss-equation-pgi{top:45%}
+html body.ss-page main#main .ss-equation-pgi h3{color:#00a0c5}
+html body.ss-page main#main .ss-equation-pgi .ss-formula{font-size:2.05cqw;gap:.6cqw;margin-top:1.4cqw}
+html body.ss-page main#main .ss-equation-pgi .ss-prediction{font-size:2.35cqw;margin-top:1.6cqw}
+html body.ss-page main#main .ss-equation-pgi p{font-size:1.35cqw!important;margin-top:1.3cqw!important}
+html body.ss-page main#main .ss-clip{display:flex;align-items:center;gap:.65cqw;position:relative;padding:.4cqw .85cqw;border-inline:2px solid}
+html body.ss-page main#main .ss-clip::before,html body.ss-page main#main .ss-clip::after{content:"";position:absolute;top:0;bottom:0;width:.55cqw;border-block:2px solid}
+html body.ss-page main#main .ss-clip::before{left:0}
+html body.ss-page main#main .ss-clip::after{right:0}
 html body.ss-page main#main .ss-bracket{font-size:4.8cqw!important;font-weight:300}
-html body.ss-page main#main .ss-interpret{position:absolute;left:4.2%;right:4.2%;top:80.7%;border-top:1px solid #8998b1;padding-top:1.4cqw}
+html body.ss-page main#main .ss-interpret{position:absolute;left:4.2%;right:4.2%;top:83.3%;border-top:1px solid #8998b1;padding-top:1.1cqw}
 html body.ss-page main#main .ss-interpret h3{letter-spacing:.09em!important;font-size:1.5cqw!important}
 html body.ss-page main#main .ss-interpret p{font-size:1.38cqw!important}
 html body.ss-page main#main .ss-return{width:calc(100% - var(--arotec-content-left,0px) - var(--arotec-content-right,0px));max-width:1672px;margin:0 auto 60px}
@@ -118,7 +132,8 @@ html body.ss-page main#main :is(.ss-sheet,.ss-return){width:calc(100% - 40px);ma
 html body.ss-page main#main .ss-canvas{aspect-ratio:auto;display:flex;flex-direction:column;padding:28px;gap:24px;background:#edf5fd}
 html body.ss-page main#main .ss-art{position:relative;inset:auto;width:100%;height:auto;z-index:auto;order:2;object-fit:cover;border-radius:0}
 html body.ss-page main#main :is(.ss1,.ss2,.ss3,.ss4,.ss5,.ss6,.ss7) .ss-copy{position:static;order:1;width:100%}
-html body.ss-page main#main :is(h1,h2),html body.ss-page main#main :is(.ss1,.ss2,.ss6) :is(h1,h2){font-size:clamp(32px,4.5vw,48px)!important;line-height:1.1!important}
+html body.ss-page main#main :is(h1,h2),html body.ss-page main#main :is(.ss1,.ss2,.ss4,.ss5,.ss6) :is(h1,h2){font-size:clamp(32px,4.5vw,48px)!important;line-height:1.1!important}
+html body.ss-page main#main .ss6 .ss-copy h2{font-size:clamp(32px,4.5vw,48px)!important;line-height:1.1!important}
 html body.ss-page main#main p,html body.ss-page main#main :is(.ss1,.ss2,.ss3,.ss4,.ss5,.ss6,.ss7) .ss-copy>p:not(.ss-kicker,.ss-eyebrow){font-size:18px!important;line-height:1.5!important;width:auto;max-width:none;margin-top:18px!important}
 html body.ss-page main#main .ss1 .ss-copy>p.ss-lead{font-size:24px!important}
 html body.ss-page main#main h3{font-size:20px!important}
@@ -140,9 +155,9 @@ html body.ss-page main#main .ss-droplet-labels{order:3;display:grid;grid-templat
 html body.ss-page main#main .ss-droplet-labels span{position:static;transform:none;font-size:18px!important}
 html body.ss-page main#main .ss-subjective{position:static;writing-mode:initial;order:4;border:0;padding:0;font-size:12px!important;text-align:center}
 html body.ss-page main#main .ss-dimension-note{padding-top:20px;max-width:none}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label){position:static;order:3;display:flex;align-items:baseline;gap:18px;justify-content:center}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label) strong{font-size:32px!important}
-html body.ss-page main#main :is(.ss-lfi-label,.ss-sgi-label) span{font-size:18px!important}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label){position:static;order:3;display:flex;align-items:baseline;gap:18px;justify-content:center}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label) strong{font-size:32px!important}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label) span{font-size:18px!important}
 html body.ss-page main#main .ss-dimension-question{position:static;width:auto;order:4;font-size:18px!important}
 html body.ss-page main#main .ss-dimension-question::after{width:50px;margin-top:16px}
 html body.ss-page main#main :is(.ss4,.ss5) .ss-levels{position:static;order:3;gap:18px}
@@ -160,15 +175,20 @@ html body.ss-page main#main .ss-conditions{position:static;order:4;border-top:1p
 html body.ss-page main#main .ss-conditions h3{font-size:20px!important;margin-bottom:14px!important}
 html body.ss-page main#main .ss-conditions p{font-size:16px!important;line-height:1.5!important;margin-top:12px!important}
 html body.ss-page main#main .ss7 h2{margin-top:0!important}
-html body.ss-page main#main .ss7 .ss-copy>p.ss-delta{font-size:18px!important;margin-top:24px!important;padding-top:20px}
+html body.ss-page main#main .ss7 .ss-delta{margin-top:24px;padding-top:20px}
+html body.ss-page main#main .ss-delta .ss-formula{font-size:clamp(14px,2.5vw,24px);gap:6px;white-space:normal}
+html body.ss-page main#main .ss-delta .ss-control-correction{margin-top:24px;font-size:clamp(16px,2.7vw,24px)}
+html body.ss-page main#main .ss-clip{gap:8px;padding:8px 10px}
+html body.ss-page main#main .ss-clip::before,html body.ss-page main#main .ss-clip::after{width:6px}
 html body.ss-page main#main .ss-equation{position:static;order:3}
 html body.ss-page main#main .ss-equation h3{font-size:32px!important}
 html body.ss-page main#main .ss-equation h3 span{font-size:20px!important}
 html body.ss-page main#main .ss-equation h3::after{display:none}
 html body.ss-page main#main .ss-equation .ss-formula{font-size:clamp(14px,2.5vw,24px);gap:8px;margin-top:24px}
-html body.ss-page main#main .ss-equation-sgi .ss-formula{font-size:clamp(13px,2.4vw,23px);gap:4px}
+html body.ss-page main#main .ss-equation-pgi .ss-formula{font-size:clamp(16px,2.5vw,24px);gap:6px;margin-top:24px}
+html body.ss-page main#main .ss-equation-pgi .ss-prediction{font-size:clamp(16px,2.5vw,24px)}
 html body.ss-page main#main .ss-bracket{font-size:50px!important}
-html body.ss-page main#main .ss-equation p{font-size:17px!important;margin-top:16px!important}
+html body.ss-page main#main .ss-equation p,html body.ss-page main#main .ss-equation-pgi p{font-size:17px!important;margin-top:16px!important}
 html body.ss-page main#main .ss-interpret{position:static;order:4;padding-top:20px}
 html body.ss-page main#main .ss-interpret h3{font-size:18px!important;margin-bottom:12px!important}
 html body.ss-page main#main .ss-interpret p{font-size:17px!important;line-height:1.5!important}
@@ -176,7 +196,8 @@ html body.ss-page main#main .ss-interpret p{font-size:17px!important;line-height
 @media(max-width:599px){
 html body.ss-page main#main :is(.ss-sheet,.ss-return){width:calc(100% - 32px)}
 html body.ss-page main#main .ss-canvas{padding:20px 16px;gap:22px}
-html body.ss-page main#main :is(h1,h2),html body.ss-page main#main :is(.ss1,.ss2,.ss6) :is(h1,h2){font-size:32px!important}
+html body.ss-page main#main :is(h1,h2),html body.ss-page main#main :is(.ss1,.ss2,.ss4,.ss5,.ss6) :is(h1,h2){font-size:32px!important}
+html body.ss-page main#main .ss6 .ss-copy h2{font-size:32px!important}
 html body.ss-page main#main .ss-factors ul{grid-template-columns:repeat(3,minmax(0,1fr))}
 html body.ss-page main#main .ss-climates{grid-template-columns:1fr}
 html body.ss-page main#main .ss-climates>div{border-top:1px solid #cedfe9;padding-top:16px}
@@ -185,8 +206,10 @@ html body.ss-page main#main .ss-levels{grid-template-columns:1fr;text-align:left
 html body.ss-page main#main .ss-levels li{display:flex;gap:20px;align-items:center;border-top:1px solid #cedfe9;padding:14px 0}
 html body.ss-page main#main .ss-levels p{font-size:17px!important}
 html body.ss-page main#main .ss-protocol{grid-template-columns:1fr;text-align:left}
+html body.ss-page main#main :is(.ss-lfi-label,.ss-pgi-label){flex-direction:column;align-items:center;gap:6px}
 html body.ss-page main#main .ss-protocol li{border-top:1px solid #cedfe9;padding-top:14px}
 html body.ss-page main#main .ss-equation .ss-formula{flex-wrap:wrap;font-size:15px}
-html body.ss-page main#main .ss-equation-sgi .ss-formula{font-size:13px;gap:3px}
+html body.ss-page main#main .ss-equation-pgi .ss-formula{font-size:16px;gap:6px}
+html body.ss-page main#main .ss-equation-pgi .ss-prediction{font-size:clamp(13px,4vw,18px)}
 html body.ss-page main#main .ss-equation .ss-formula>strong{flex-basis:100%;text-align:center;margin-bottom:8px}
 }
