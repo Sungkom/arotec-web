@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/vendor/phosphor-icons/regular/style.css">
     <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20260911-toolbar-removed-v1">
     <link rel="stylesheet" href="assets/css/home-research-focus.css?v=20260910-white-reference-v4">
-    <link rel="stylesheet" href="assets/css/home-framework-tree.css?v=20260918-tree-v3">
+    <link rel="stylesheet" href="assets/css/home-framework-tree.css?v=20260926-framework-effects-v2">
     <link rel="stylesheet" href="assets/css/home-framework-icons.css?v=20260918-tree-v3">
     <link rel="stylesheet" href="assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
     <link rel="stylesheet" href="assets/css/site-typography.css?v=20260916-platform-font-v1"><script src="assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
@@ -176,9 +176,23 @@
       <section class="fw-tree" id="research-solutions" aria-labelledby="research-solutions-title" lang="en" data-preserve-case>
         <div class="fw-tree-shell">
           <div class="fw-tree-canvas">
-            <div class="fw-artwork"><img class="fw-botanical-art" src="assets/images/framework-tree/framework-botanical-scaffold.webp" width="1831" height="859" loading="lazy" decoding="async" alt="Ten research seedlings merge through their roots into a thriving tree of science solutions and products."></div>
+            <button class="fw-motion-toggle" type="button"><span class="fw-motion-symbol" aria-hidden="true"></span><span class="fw-motion-label">Pause effects</span></button>
+            <div class="fw-artwork">
+              <img class="fw-botanical-art" src="assets/images/framework-tree/framework-botanical-scaffold.webp" width="1831" height="859" loading="lazy" decoding="async" alt="Ten research seedlings merge through their roots into a thriving tree of science solutions and products.">
+              <svg class="fw-energy-network" viewBox="0 0 1831 859" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <path id="fw-energy-upper" pathLength="100" d="M590 428 C740 421 740 503 837 503 H986 C1088 503 1084 436 1164 452 C1240 463 1264 510 1264 574" />
+                  <path id="fw-energy-lower" pathLength="100" d="M590 572 C746 586 747 503 837 503 H986 C1097 503 1054 567 1131 600 C1155 612 1140 672 1200 686 C1260 702 1264 639 1264 574" />
+                  <path id="fw-energy-root" pathLength="100" d="M469 358 C529 358 526 420 527 535 V650 C527 708 578 712 611 712 H1190 C1255 712 1265 687 1265 621 V360" />
+                </defs>
+                <g class="fw-energy-tracks"><use href="#fw-energy-upper"/><use href="#fw-energy-lower"/><use href="#fw-energy-root"/></g>
+                <g class="fw-energy-pulses"><use href="#fw-energy-upper"/><use href="#fw-energy-lower"/><use href="#fw-energy-root"/></g>
+                <g class="fw-energy-sparks"><circle cx="838" cy="503" r="9"/><circle cx="988" cy="503" r="7"/><circle cx="1265" cy="574" r="10"/></g>
+                <g class="fw-energy-dust"><circle cx="1190" cy="296" r="3"/><circle cx="1360" cy="316" r="4"/><circle cx="1428" cy="434" r="3"/><circle cx="1098" cy="412" r="3"/><circle cx="1460" cy="564" r="4"/><circle cx="431" cy="397" r="3"/><circle cx="654" cy="536" r="4"/><circle cx="410" cy="599" r="3"/></g>
+              </svg>
+            </div>
             <header class="fw-masthead">
-              <h2 class="fw-text fw-title" id="research-solutions-title"><span class="fw-brand">A&amp;S</span> Science-to-Solution Framework</h2>
+              <h2 class="fw-text fw-title" id="research-solutions-title"><span class="fw-brand">A&amp;S</span> <span class="fw-title-line">Science-to-Solution Framework</span></h2>
               <p class="fw-text fw-subtitle">From science platform to solutions &amp; products</p>
             </header>
             <section class="fw-stage fw-stage--science" aria-labelledby="fw-science-title">
@@ -243,10 +257,10 @@
       </section>
     </template>
 
-  <script src="assets/js/site.min.js?v=20260918-topics-flow-v5" defer></script>
+  <script src="assets/js/site.min.js?v=20260925-applied-products-countdown-v1" defer></script>
   <script src="assets/js/home-biology-experience.js?v=20260911-toolbar-removed-v1" defer></script>
   <script src="assets/js/home-header.js?v=20260904-hero-logo-align-v3" defer></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="script.js?v=20260911-biology-reference-v1" defer></script>
+  <script src="script.js?v=20260926-framework-effects-v2" defer></script>
 </body>
 </html>

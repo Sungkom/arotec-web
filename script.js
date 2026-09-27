@@ -9,6 +9,8 @@
   let resizeObserver = null;
   let revealObserver = null;
   let frameId = 0;
+  let frameworkMotionCleanup = null;
+  let frameworkMotionPaused = false;
 
   /* ================================================================
      Section mounting: keep the infographic after Biology of Experience
@@ -23,6 +25,7 @@
     biologySection.insertAdjacentElement("afterend", template.content.firstElementChild.cloneNode(true));
     hydrateIcons();
     setupRevealAnimation();
+    setupFrameworkMotion();
     setupTopicHighlighting();
     setupConnectorObservers();
     scheduleConnectorUpdate();
@@ -46,7 +49,24 @@
     const section = document.getElementById("research-solutions");
     if (!section) return;
 
-    const animatedItems = section.querySelectorAll("[data-research-animate]");
+    // Enhance the botanical framework after every template mount, including
+    // language changes. Individual translate preserves the artwork coordinates.
+    const frameworkGroups = [
+      [".fw-masthead", 0],
+      [".fw-stage-heading", 90],
+      [".fw-seed", 35],
+      [".fw-translation-step", 65],
+      [".fw-outcome", 55],
+      [".fw-journey", 0]
+    ];
+    frameworkGroups.forEach(([selector, stagger]) => {
+      section.querySelectorAll(selector).forEach((item, index) => {
+        item.classList.add("fw-reveal");
+        item.style.setProperty("--fw-reveal-delay", `${index * stagger}ms`);
+      });
+    });
+
+    const animatedItems = section.querySelectorAll("[data-research-animate], .fw-reveal");
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
       animatedItems.forEach((item) => item.classList.add("is-visible"));
       scheduleConnectorUpdate();
@@ -62,7 +82,80 @@
       });
     }, { rootMargin: "0px 0px -8%", threshold: 0.12 });
 
+    section.classList.add("fw-effects-ready");
     animatedItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  // Keep ambient effects responsive to visibility, user preferences and the
+  // pause button. All motion itself is CSS, including the SVG light trails.
+  function setupFrameworkMotion() {
+    frameworkMotionCleanup?.();
+    const section = document.getElementById("research-solutions");
+    const canvas = section?.querySelector(".fw-tree-canvas");
+    const toggle = section?.querySelector(".fw-motion-toggle");
+    if (!canvas || !toggle) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    let inView = !("IntersectionObserver" in window);
+    let pointerFrame = 0;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    const clearPointer = () => {
+      window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = 0;
+      section.classList.remove("fw-pointer-active");
+    };
+    const syncMotion = () => {
+      const running = inView && !document.hidden && !reducedMotion.matches && !frameworkMotionPaused;
+      section.classList.toggle("fw-motion-running", running);
+      section.classList.toggle("fw-motion-paused", frameworkMotionPaused);
+      toggle.querySelector(".fw-motion-label").textContent = frameworkMotionPaused ? "Resume effects" : "Pause effects";
+      if (!running || !finePointer.matches) clearPointer();
+    };
+    const toggleMotion = () => {
+      frameworkMotionPaused = !frameworkMotionPaused;
+      syncMotion();
+    };
+    const movePointer = (event) => {
+      if (!finePointer.matches || !section.classList.contains("fw-motion-running")) return;
+      const rect = canvas.getBoundingClientRect();
+      pointerX = event.clientX - rect.left;
+      pointerY = event.clientY - rect.top;
+      if (pointerFrame) return;
+      pointerFrame = window.requestAnimationFrame(() => {
+        pointerFrame = 0;
+        canvas.style.setProperty("--fw-pointer-x", `${pointerX}px`);
+        canvas.style.setProperty("--fw-pointer-y", `${pointerY}px`);
+        section.classList.add("fw-pointer-active");
+      });
+    };
+    const observer = "IntersectionObserver" in window ? new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      syncMotion();
+    }, { threshold: 0 }) : null;
+
+    section.classList.add("fw-motion-ready");
+    toggle.addEventListener("click", toggleMotion);
+    canvas.addEventListener("pointermove", movePointer, { passive: true });
+    canvas.addEventListener("pointerleave", clearPointer);
+    document.addEventListener("visibilitychange", syncMotion);
+    reducedMotion.addEventListener("change", syncMotion);
+    finePointer.addEventListener("change", syncMotion);
+    observer?.observe(section);
+    syncMotion();
+
+    frameworkMotionCleanup = () => {
+      observer?.disconnect();
+      clearPointer();
+      toggle.removeEventListener("click", toggleMotion);
+      canvas.removeEventListener("pointermove", movePointer);
+      canvas.removeEventListener("pointerleave", clearPointer);
+      document.removeEventListener("visibilitychange", syncMotion);
+      reducedMotion.removeEventListener("change", syncMotion);
+      finePointer.removeEventListener("change", syncMotion);
+    };
   }
 
   /* ================================================================
