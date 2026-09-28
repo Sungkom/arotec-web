@@ -1,0 +1,307 @@
+/* Supplied ingredient artwork, with the main site's DM Sans and content gutters. */
+/* Ingredient layouts set their own display rules; hidden panels must stay collapsed. */
+html body.brs-page main#main#main > :is(#chromagen, #cortiva, #melacor, #meraxyl, #morphagen, #olfactiva, #trevion)[data-ingredient-panel][hidden] {
+  display: none !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-name {
+  color: inherit;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: none !important;
+  text-decoration: none;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-name:hover,
+html body.brs-page main#main#main #ingredient-systems .bri-name[aria-expanded="true"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-name:focus-visible {
+  outline: 3px solid #075991;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card.is-active {
+  border-color: #4a83a4;
+}
+/* Keep the overview's anchor stable while earlier sections enter the viewport. */
+html body.brs-page main#main#main > section:has(~ #ingredient-systems.bri-section) {
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+}
+html body.brs-page main#main#main #ingredient-systems.bri-section {
+  --bri-ink: #071b48;
+  --bri-blue: #174f77;
+  /* The page shell narrows these tokens; restore the main website's values. */
+  --arotec-display-size: 72px;
+  --arotec-display-line-height: 80px;
+  --arotec-display-letter-spacing: -1.44px;
+  --arotec-supporting-size: 24px;
+  --arotec-supporting-line-height: 32px;
+  display: block !important;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: 108px 0 76px !important;
+  overflow: hidden;
+  background: #d7eff9 url("../images/bio-responsive-scents/ingredients-20260928/background.png") center / cover no-repeat;
+  color: var(--bri-ink);
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif) !important;
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  scroll-margin-top: 76px;
+}
+html body.brs-page main#main#main #ingredient-systems :is(h2,h3,p) {
+  margin: 0 !important;
+  padding: 0;
+  color: inherit !important;
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif) !important;
+  text-transform: none !important;
+  text-shadow: none;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-frame {
+  position: relative;
+  margin-inline: auto;
+  padding-inline: var(--arotec-content-left, 150px) var(--arotec-content-right, 150px);
+}
+html body.brs-page main#main#main #ingredient-systems .bri-bubble {
+  position: absolute;
+  z-index: -1;
+  left: 55.5%;
+  top: -1vw;
+  width: 24.5%;
+  height: auto;
+  pointer-events: none;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-header {
+  position: relative;
+  min-height: 260px;
+  margin-bottom: 30px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-kicker {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: .28em !important;
+  color: #1a608b !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-title {
+  margin-top: 15px !important;
+  font-size: var(--arotec-display-size, 72px) !important;
+  line-height: var(--arotec-display-line-height, 80px) !important;
+  font-weight: var(--arotec-display-weight, 700) !important;
+  letter-spacing: var(--arotec-display-letter-spacing, -1.44px) !important;
+  text-wrap: balance;
+  width: max-content;
+  max-width: 100%;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-subtitle {
+  margin-top: 5px !important;
+  font-size: var(--arotec-supporting-size, 24px) !important;
+  line-height: var(--arotec-supporting-line-height, 32px) !important;
+  font-weight: var(--arotec-supporting-weight, 500) !important;
+  letter-spacing: -.02em !important;
+  color: var(--bri-blue) !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-mission {
+  margin-top: 18px !important;
+  padding-left: 54px;
+  position: relative;
+  font-size: 11px !important;
+  line-height: 17px !important;
+  font-weight: 500 !important;
+  letter-spacing: .2em !important;
+  color: #427590 !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-mission::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 36px;
+  border-top: 2px solid #81a7ba;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-note {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 134px;
+  color: #4b7e99;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-note p {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: .23em !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-note p + p {
+  margin-top: 22px !important;
+  padding-top: 24px;
+  position: relative;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-note p + p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  border-top: 1px solid #7ca2b6;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 228px);
+  gap: 12px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-width: 0;
+  padding: 28px 24px 18px;
+  border: 1.5px solid #fffffff0;
+  border-radius: 22px;
+  background: #e9f7ff38;
+  box-shadow: inset 0 0 22px #ffffff35;
+  backdrop-filter: blur(7px);
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(26px, 1.92vw, 36px) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.035em !important;
+  white-space: nowrap;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card sup {
+  font-size: .42em !important;
+  line-height: 0 !important;
+  vertical-align: super;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-category {
+  position: relative;
+  z-index: 1;
+  margin-top: 4px !important;
+  color: var(--bri-blue) !important;
+  font-size: 17px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -.02em !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-slogan {
+  position: relative;
+  z-index: 1;
+  margin-top: 11px !important;
+  color: #316687 !important;
+  font-size: 10px !important;
+  line-height: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: .2em !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-art {
+  position: absolute;
+  z-index: 0;
+  right: -15px;
+  bottom: -8px;
+  width: 59%;
+  height: auto;
+  pointer-events: none;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card--meraxyl .bri-art,
+html body.brs-page main#main#main #ingredient-systems .bri-card--morphagen .bri-art { width: 58%; right: -12px; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--trevion .bri-art { width: 56%; bottom: -20px; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--chromagen .bri-art { width: 61%; right: -15px; bottom: -10px; }
+html body.brs-page main#main#main #ingredient-systems .bri-details {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 36px;
+  padding: 7px 16px;
+  border: 1px solid #4a83a4;
+  border-radius: 999px;
+  background: #effaffde;
+  box-shadow: inset 0 0 0 2px #ffffffb3;
+  color: #123e63;
+  text-decoration: none;
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif);
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  transition: background-color .18s, color .18s;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-details .ph { font-size: 19px; }
+html body.brs-page main#main#main #ingredient-systems .bri-details:hover { background: #164f78; color: white; }
+html body.brs-page main#main#main #ingredient-systems .bri-details:focus-visible { outline: 3px solid #075991; outline-offset: 4px; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured {
+  grid-row: 1 / 3;
+  padding: 100px 26px 66px;
+  border-radius: 27px;
+  border-width: 2px;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured h3 { font-size: clamp(42px, 3.35vw, 62px) !important; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-category { font-size: 26px !important; line-height: 34px !important; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-slogan { margin-top: 25px !important; font-size: 14px !important; line-height: 24px !important; letter-spacing: .23em !important; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-art { width: 98%; right: -66px; bottom: -3px; }
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 26px; bottom: 65px; min-height: 48px; padding-inline: 24px; font-size: 13px !important; }
+@media (max-width: 1439px) and (min-width: 1200px) {
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: 1.25fr repeat(3, minmax(0, 1fr)); }
+  html body.brs-page main#main#main #ingredient-systems .bri-card { padding-inline: 16px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card h3 { font-size: 25px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-category { font-size: 14px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-details { left: 16px; padding-inline: 11px; gap: 8px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured h3 { font-size: 40px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-category { font-size: 21px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 16px; padding-inline: 16px; }
+}
+@media (max-width: 1199px) {
+  html body.brs-page main#main#main #ingredient-systems.bri-section { padding-block: 70px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-frame { padding-inline: 28px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-header { min-height: 0; margin-bottom: 32px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-title { font-size: 64px !important; line-height: 1.08 !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-subtitle { max-width: 670px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-note { display: none; }
+  html body.brs-page main#main#main #ingredient-systems .bri-bubble { left: auto; right: 2%; top: 20px; width: 31%; opacity: .8; }
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: 350px repeat(2,228px); }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured { grid-row: auto; grid-column: 1 / -1; padding: 48px 32px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured h3 { font-size: 56px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-art { width: 400px; right: 3%; bottom: -48px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 32px; bottom: 30px; }
+}
+@media (max-width: 850px) {
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: 350px repeat(3,228px); }
+  html body.brs-page main#main#main #ingredient-systems .bri-bubble { opacity: .45; }
+}
+@media (max-width: 599px) {
+  html body.brs-page main#main#main #ingredient-systems.bri-section { padding-block: 48px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-frame { padding-inline: 20px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-kicker { max-width: 280px; font-size: 9px !important; line-height: 18px !important; letter-spacing: .19em !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-title { font-size: clamp(34px, 10.7vw, 54px) !important; line-height: 1.08 !important; letter-spacing: -.035em !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-subtitle { margin-top: 14px !important; font-size: 19px !important; line-height: 27px !important; max-width: 350px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-mission { font-size: 9px !important; padding-left: 42px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-mission::before { width: 28px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-bubble { display: none; }
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: minmax(0,1fr); grid-template-rows: 420px; grid-auto-rows: 244px; gap: 14px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card { padding: 28px 24px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card h3 { font-size: 32px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-category { font-size: 17px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-details { min-height: 44px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured { padding-top: 50px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured h3 { font-size: 48px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-category { font-size: 23px !important; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-art { width: 360px; right: -82px; bottom: -10px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 24px; bottom: 34px; }
+}

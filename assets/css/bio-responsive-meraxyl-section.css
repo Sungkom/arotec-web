@@ -1,0 +1,264 @@
+/* Meraxyl: source artwork, shared DM Sans typography and foreground gutters. */
+html:has(#meraxyl:target), html:has(#meraxyl :target) { scroll-behavior:auto; }
+html body.brs-page main#main#main #meraxyl {
+  --mxs-ink:#082854; --mxs-blue:#27618a; --mxs-teal:#087b8e;
+  width:100%; max-width:none; margin:0 !important; padding:0 !important;
+  background:#def4fc; color:var(--mxs-ink);
+  font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important;
+}
+html body.brs-page main#main#main #meraxyl *,
+html body.brs-page main#main#main #meraxyl *::before,
+html body.brs-page main#main#main #meraxyl *::after { box-sizing:border-box; }
+html body.brs-page main#main#main #meraxyl :is(p,h2,h3,h4,h5,ul,ol,figure) {
+  margin:0; padding:0; color:inherit; font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important;
+  text-transform:none !important; text-shadow:none; text-indent:0;
+}
+html body.brs-page main#main#main #meraxyl :is(p,li,figcaption) {
+  font-size:var(--arotec-body-size,18px) !important; line-height:var(--arotec-body-line-height,28px) !important;
+  font-weight:400; letter-spacing:0;
+}
+html body.brs-page main#main#main #meraxyl :is(h2,h3,h4,h5) {
+  color:inherit !important; font-weight:var(--arotec-display-weight,700) !important;
+  line-height:1.18 !important; letter-spacing:-.025em !important;
+}
+html body.brs-page main#main#main #meraxyl :is(ul,ol) { list-style:none; }
+html body.brs-page main#main#main #meraxyl sup { font-size:.5em !important; line-height:0 !important; vertical-align:super; }
+html body.brs-page main#main#main #meraxyl .ph { font-family:Phosphor !important; font-style:normal; }
+html body.brs-page main#main#main #meraxyl,
+html body.brs-page main#main#main #meraxyl [id] { scroll-margin-top:12px; }
+html body.brs-page main#main#main #meraxyl a:focus-visible { outline:3px solid #087b8e; outline-offset:5px; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter {
+  padding:42px 0; background:url('../images/bio-responsive-scents/meraxyl-20260928/background.png') center / cover no-repeat;
+}
+html body.brs-page main#main#main #meraxyl .mxs-frame {
+  container-type:inline-size; display:grid; grid-template-columns:minmax(0,.27fr) minmax(0,.73fr);
+  gap:24px; width:calc(100% - 48px); max-width:none; margin:0 24px;
+}
+html body.brs-page main#main#main #meraxyl .mxs-frame > *,
+html body.brs-page main#main#main #meraxyl .mxs-content > * { min-width:0; }
+html body.brs-page main#main#main #meraxyl .mxs-rail {
+  display:flex; flex-direction:column; padding:30px 28px 24px;
+  border:2px solid #fff; border-radius:28px; background:#e8f7ff85;
+  box-shadow:inset 0 0 30px #ffffff87,0 8px 24px #41acc515;
+}
+html body.brs-page main#main#main #meraxyl .mxs-eyebrow { font-size:12px !important; line-height:1.6 !important; letter-spacing:.2em; color:#076b91; font-weight:500; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter-number { display:flex; gap:14px; align-items:center; margin-bottom:45px; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter-number > span { flex:1; border-top:1px solid #26afc4; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-title { font-size:clamp(30px,2.75cqw,48px) !important; white-space:nowrap; }
+html body.brs-page main#main#main #meraxyl .mxs-accent { display:block; width:72px; height:4px; border-radius:4px; background:#1cacc1; margin:24px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-benefit { font-size:clamp(27px,2.3cqw,36px) !important; line-height:1.18 !important; font-weight:700 !important; letter-spacing:-.02em; margin-bottom:20px; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-subtitle { font-size:var(--arotec-supporting-size,24px) !important; line-height:var(--arotec-supporting-line-height,32px) !important; color:#176e92; }
+html body.brs-page main#main#main #meraxyl .mxs-description { color:#35638b; margin-bottom:34px; }
+html body.brs-page main#main#main #meraxyl .mxs-steps { margin-bottom:32px; }
+html body.brs-page main#main#main #meraxyl .mxs-steps ol { display:grid; gap:24px; margin-top:18px; }
+html body.brs-page main#main#main #meraxyl .mxs-steps li { display:grid; grid-template-columns:36px minmax(0,1fr); gap:14px; position:relative; }
+html body.brs-page main#main#main #meraxyl .mxs-step-number { display:grid; place-items:center; width:36px; height:36px; border:1px solid #70d2e1; border-radius:50%; background:#a8ecf4; color:#034b6e; box-shadow:inset 0 0 8px white,0 3px 6px #208daa24; font-size:23px; font-weight:700; }
+html body.brs-page main#main#main #meraxyl .mxs-steps a { color:var(--mxs-ink); text-decoration:none; }
+html body.brs-page main#main#main #meraxyl .mxs-steps strong { display:block; font-size:18px; line-height:1.4; }
+html body.brs-page main#main#main #meraxyl .mxs-steps a > span { display:block; font-size:16px; line-height:1.5; color:#35638b; margin-top:5px; }
+html body.brs-page main#main#main #meraxyl .mxs-steps a:hover strong { text-decoration:underline; text-underline-offset:4px; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-footer { margin-top:auto; padding:18px 10px; border:1px solid white; border-radius:18px; background:#e8f8ffc2; text-align:center; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-footer .mxs-eyebrow { font-size:10px !important; margin-bottom:8px; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-footer > p:last-child { font-size:20px !important; font-weight:700; color:#064d70; }
+html body.brs-page main#main#main #meraxyl .mxs-rail-footer .ph { vertical-align:middle; }
+html body.brs-page main#main#main #meraxyl .mxs-content { display:flex; flex-direction:column; gap:20px; }
+html body.brs-page main#main#main #meraxyl .mxs-panel { padding:12px; border:2px solid #fff; border-radius:26px; background:#effaff9c; box-shadow:0 6px 16px #2cbde421; }
+html body.brs-page main#main#main #meraxyl .mxs-panel-label { display:flex; align-items:center; gap:14px; padding:4px 8px 14px; color:#09658c; }
+html body.brs-page main#main#main #meraxyl .mxs-panel-label > p { font-size:11px !important; line-height:1.5 !important; letter-spacing:.18em; font-weight:500; }
+html body.brs-page main#main#main #meraxyl .mxs-panel-label > span:not(.mxs-label-brand) { min-width:12px; flex:1; border-top:1px solid #76cadb; }
+html body.brs-page main#main#main #meraxyl .mxs-label-brand { font-size:10px; letter-spacing:.15em; white-space:nowrap; }
+html body.brs-page main#main#main #meraxyl .mxs-panel-inner { padding:22px 18px; border:1px solid #fff; border-radius:19px; background:#ffffff73; }
+html body.brs-page main#main#main #meraxyl .mxs-system .mxs-panel-inner { padding:16px 9px 9px; }
+html body.brs-page main#main#main #meraxyl .mxs-system-heading { padding:0 12px 16px; }
+html body.brs-page main#main#main #meraxyl .mxs-system-heading h3 { font-size:clamp(40px,4.2cqw,64px) !important; margin-bottom:4px; }
+html body.brs-page main#main#main #meraxyl .mxs-system-heading p { color:#376e98; }
+html body.brs-page main#main#main #meraxyl .mxs-system-heading .mxs-lead { font-size:var(--arotec-supporting-size,24px) !important; line-height:var(--arotec-supporting-line-height,32px) !important; margin-bottom:6px; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredients { display:grid; gap:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredients li { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.12fr) minmax(0,.8fr); gap:24px; align-items:center; padding:10px; border:1px solid #fff; border-radius:17px; background:#f8fdff57; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy h4 { font-size:clamp(24px,2.35cqw,36px) !important; margin-bottom:4px; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy p { color:#37668c; font-size:16px !important; line-height:1.5 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy .mxs-tags { font-size:19px !important; color:#146a91; }
+html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy .mxs-accent { width:54px; height:3px; margin:15px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-art { display:block; position:relative; overflow:hidden; width:100%; min-width:0; align-self:center; }
+html body.brs-page main#main#main #meraxyl .mxs-art > img {
+  position:absolute !important; display:block; width:var(--mxs-image-width) !important; max-width:none !important; height:auto !important;
+  left:var(--mxs-image-left) !important; top:var(--mxs-image-top) !important; margin:0 !important; padding:0 !important; border:0 !important;
+  border-radius:0 !important; transform:none !important; object-fit:fill;
+}
+html body.brs-page main#main#main #meraxyl .mxs-botanical { border-radius:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-structure { max-width:210px; justify-self:center; }
+html body.brs-page main#main#main #meraxyl .mxs-panel-title { font-size:clamp(25px,2.4cqw,36px) !important; margin-bottom:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-support { flex:1; }
+html body.brs-page main#main#main #meraxyl .mxs-support-grid { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:22px; }
+html body.brs-page main#main#main #meraxyl .mxs-checklist { display:grid; gap:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-checklist li { display:flex; gap:12px; align-items:flex-start; }
+html body.brs-page main#main#main #meraxyl .mxs-checklist .ph { font-size:28px; flex-shrink:0; color:#198b87; margin-top:1px; }
+html body.brs-page main#main#main #meraxyl .mxs-nature-note { display:grid; grid-template-columns:1fr .9fr; align-items:center; gap:14px; border-left:1px solid #99dbea; padding-left:18px; }
+html body.brs-page main#main#main #meraxyl .mxs-nature-note p { color:#1c6a8f; font-size:16px !important; line-height:1.5 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-nature-note .mxs-eyebrow { font-size:11px !important; line-height:1.9 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-nature-note .mxs-accent { width:40px; margin:16px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter-links { display:flex; flex-wrap:wrap; gap:10px; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter-links a { display:inline-flex; align-items:center; gap:15px; border:1px solid #85cddb; padding:10px 18px; border-radius:25px; background:#effcff; color:#145c79; font-size:14px; font-weight:500; text-decoration:none; }
+html body.brs-page main#main#main #meraxyl .mxs-chapter-links a:hover { background:#cff4f7; }
+html body.brs-page main#main#main #meraxyl .mxs-pathways { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway { display:flex; flex-direction:column; border:1px solid white; border-radius:18px; padding:7px; background:#ffffff85; min-width:0; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-heading { display:flex; align-items:center; gap:12px; padding:12px; background:#138e9e; color:white; border-radius:13px; box-shadow:inset 0 0 18px #87dbe178; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-heading > span { display:grid; place-items:center; flex-shrink:0; width:40px; height:40px; background:#b8f4f9; border:1px solid white; border-radius:50%; color:#074a69; font-size:23px; font-weight:700; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-heading h4 { font-size:18px !important; letter-spacing:0 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-body { padding:18px 10px 12px; flex:1; display:flex; flex-direction:column; }
+html body.brs-page main#main#main #meraxyl .mxs-compound { display:grid; grid-template-columns:1fr 1.15fr; gap:14px; align-items:center; min-height:132px; padding-bottom:16px; border-bottom:1px dotted #74c9e7; margin-bottom:14px; }
+html body.brs-page main#main#main #meraxyl .mxs-compound h5 { font-size:26px !important; }
+html body.brs-page main#main#main #meraxyl .mxs-compound .mxs-structure { max-width:178px; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway:first-child .mxs-compound .mxs-structure { max-width:120px; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway:last-child .mxs-channel { clip-path:polygon(0 27%,38% 27%,45% 0,100% 0,100% 100%,20% 100%,17% 93%,0 93%); }
+html body.brs-page main#main#main #meraxyl .mxs-agonists p { font-size:16px !important; line-height:1.5 !important; color:#285c8b; }
+html body.brs-page main#main#main #meraxyl .mxs-agonists strong { font-size:18px; color:#0b2b5c; }
+html body.brs-page main#main#main #meraxyl .mxs-agonist-icons { display:flex; align-items:center; gap:8px; height:72px; padding-top:8px; max-width:260px; }
+html body.brs-page main#main#main #meraxyl .mxs-agonist-icons > .mxs-art { max-width:55px; }
+html body.brs-page main#main#main #meraxyl .mxs-agonist-icons--signals > .mxs-art { max-width:164px; }
+html body.brs-page main#main#main #meraxyl .mxs-modulator { padding:10px 12px; background:#dff6f9; border-radius:13px; font-size:15px !important; line-height:1.4 !important; color:#0f566f; margin-top:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-modulator strong { color:#086756; }
+html body.brs-page main#main#main #meraxyl .mxs-channel-figure { margin-top:auto; padding:16px 0 12px; }
+html body.brs-page main#main#main #meraxyl .mxs-channel-figure figcaption { display:flex; justify-content:space-between; gap:10px; font-size:13px !important; line-height:1.4 !important; padding:4px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-results { display:grid; gap:8px; background:#cceaf8; padding:12px; border-radius:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-results li { display:flex; gap:8px; align-items:center; font-size:15px !important; line-height:1.4 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-results .ph { color:#078c86; font-size:24px; flex-shrink:0; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-footer { padding:12px 6px 6px; border-radius:13px; background:#078b99; color:white; text-align:center; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-footer h5 { font-size:16px !important; line-height:1.4 !important; letter-spacing:0 !important; padding:0 5px 10px; }
+html body.brs-page main#main#main #meraxyl .mxs-pathway-footer p { background:#edfaff; border-radius:10px; color:#234e77; padding:9px; font-size:13px !important; line-height:1.4 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-synergy .mxs-checklist li { font-size:16px !important; line-height:1.5 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-exposome .mxs-panel-inner > p,
+html body.brs-page main#main#main #meraxyl .mxs-modulation .mxs-panel-inner > p { color:#286481; }
+html body.brs-page main#main#main #meraxyl .mxs-stressors { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:26px; padding:14px 35px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-stressors li { font-size:16px !important; line-height:1.4 !important; text-align:center; font-weight:500; }
+html body.brs-page main#main#main #meraxyl .mxs-stressors .mxs-art { max-width:112px; margin:0 auto 5px; }
+html body.brs-page main#main#main #meraxyl .mxs-flow-arrow { text-align:center; line-height:1; font-size:25px; color:#266495; margin:8px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-epidermis { display:grid; grid-template-columns:1fr 3fr; border:1px solid white; border-radius:15px; overflow:hidden; background:#f4f4fc; align-items:stretch; }
+html body.brs-page main#main#main #meraxyl .mxs-epidermis > div:first-child { padding:24px 16px; align-self:center; }
+html body.brs-page main#main#main #meraxyl .mxs-epidermis h4 { font-size:22px !important; }
+html body.brs-page main#main#main #meraxyl .mxs-epidermis p { font-size:14px !important; }
+html body.brs-page main#main#main #meraxyl .mxs-receptors { position:relative; isolation:isolate; overflow:hidden; display:flex; flex-direction:column; align-items:center; gap:8px; padding:16px; background:#ffe6eb; }
+html body.brs-page main#main#main #meraxyl .mxs-epidermis-art { position:absolute; z-index:-1; width:100%; top:50%; left:0; transform:translateY(-50%); }
+html body.brs-page main#main#main #meraxyl .mxs-receptors > div { display:flex; justify-content:center; gap:35px; width:100%; }
+html body.brs-page main#main#main #meraxyl .mxs-receptors :is(div > span,strong) { border:1px solid #89cfee; border-radius:8px; background:#e0f6ffed; padding:8px 22px; font-weight:500; color:#10538b; }
+html body.brs-page main#main#main #meraxyl .mxs-receptors .ph { color:#006af2; }
+html body.brs-page main#main#main #meraxyl .mxs-between { margin:-15px auto; color:#138499; font-size:28px; line-height:1; }
+html body.brs-page main#main#main #meraxyl .mxs-modulation-flow { display:grid; grid-template-columns:.85fr .55fr .8fr .3fr 1fr .3fr 1fr .3fr 1.2fr; align-items:end; gap:8px; margin:22px 0; }
+html body.brs-page main#main#main #meraxyl .mxs-active { text-align:center; font-size:19px; color:#086153; }
+html body.brs-page main#main#main #meraxyl .mxs-leaf { max-width:100px; margin:4px auto 0; }
+html body.brs-page main#main#main #meraxyl .mxs-inhibitor { align-self:center; margin-top:34px; }
+html body.brs-page main#main#main #meraxyl .mxs-signal { display:flex; align-items:center; justify-content:center; gap:5px; background:#e2f4ff; border:1px solid #8dc9ea; color:#134d82; padding:12px 8px; border-radius:8px; white-space:nowrap; font-size:18px; }
+html body.brs-page main#main#main #meraxyl .mxs-signal > .ph { color:#006af2; }
+html body.brs-page main#main#main #meraxyl .mxs-signal--alpha { background:#ffe9ec; border-color:#ffadb8; font-weight:700; }
+html body.brs-page main#main#main #meraxyl .mxs-signal--alpha > .ph { color:#eb2f42; }
+html body.brs-page main#main#main #meraxyl .mxs-horizontal-arrow { align-self:end; font-size:22px; margin-bottom:11px; }
+html body.brs-page main#main#main #meraxyl .mxs-calcium { display:grid; justify-items:center; gap:8px; }
+html body.brs-page main#main#main #meraxyl .mxs-receptor-name { padding:8px 12px; background:#e2f4ff; border:1px solid #8dc9ea; border-radius:8px; font-size:15px; }
+html body.brs-page main#main#main #meraxyl .mxs-calcium > .mxs-signal { width:100%; }
+html body.brs-page main#main#main #meraxyl .mxs-mast-cell { align-self:center; }
+html body.brs-page main#main#main #meraxyl .mxs-mast-cell figcaption { font-size:12px !important; line-height:1.3 !important; text-align:center; }
+html body.brs-page main#main#main #meraxyl .mxs-effector { padding:12px; border:1px solid #c0def2; border-radius:10px; background:#effaff; }
+html body.brs-page main#main#main #meraxyl .mxs-effector-link { width:96%; margin:-16px 0 6px; text-align:center; font-size:23px; line-height:1; color:#266495; }
+html body.brs-page main#main#main #meraxyl .mxs-effector h4 { font-size:14px !important; letter-spacing:.08em !important; text-align:center; margin-bottom:10px; }
+html body.brs-page main#main#main #meraxyl .mxs-effector ul { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-effector li,
+html body.brs-page main#main#main #meraxyl .mxs-outcomes li { display:flex; justify-content:center; align-items:center; gap:6px; padding:8px; border:1px solid #a1d9ed; border-radius:7px; background:#def3ff; font-size:14px !important; line-height:1.4 !important; text-align:center; }
+html body.brs-page main#main#main #meraxyl .mxs-effector .ph,
+html body.brs-page main#main#main #meraxyl .mxs-outcomes .ph { font-size:23px; color:#0876ed; flex-shrink:0; }
+html body.brs-page main#main#main #meraxyl .mxs-outcomes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+html body.brs-page main#main#main #meraxyl .mxs-outcomes li { border-color:#9fdcb6; background:#e1f8e9; }
+html body.brs-page main#main#main #meraxyl .mxs-comfort { padding:18px 22px; border-radius:18px; background:#117b7c; box-shadow:inset 0 0 26px #59c5c288; color:white; margin-top:18px; }
+html body.brs-page main#main#main #meraxyl .mxs-comfort h4 { font-size:23px !important; text-align:center; margin-bottom:18px; }
+html body.brs-page main#main#main #meraxyl .mxs-comfort .mxs-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:24px; }
+html body.brs-page main#main#main #meraxyl .mxs-comfort .mxs-checklist li { font-size:15px !important; line-height:1.5 !important; }
+html body.brs-page main#main#main #meraxyl .mxs-comfort .mxs-checklist .ph { color:white; font-size:24px; }
+html body.brs-page main#main#main #meraxyl .mxs-sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+
+@media (min-width:1200px) {
+  html body.brs-page main#main#main #meraxyl .mxs-frame { width:calc(100% - var(--arotec-content-left,150px) - var(--arotec-content-right,150px)); margin-left:var(--arotec-content-left,150px); margin-right:var(--arotec-content-right,150px); }
+}
+@media (min-width:1100px) and (max-width:1499px) {
+  html body.brs-page main#main#main #meraxyl .mxs-rail { padding:26px 20px 22px; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-title { font-size:30px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-ingredients li { gap:16px; grid-template-columns:minmax(0,.95fr) minmax(0,1.2fr) minmax(0,.7fr); }
+  html body.brs-page main#main#main #meraxyl .mxs-label-brand { display:none; }
+  html body.brs-page main#main#main #meraxyl .mxs-support-grid { grid-template-columns:1.3fr 1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-nature-note { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-molecule-art { max-width:90px; margin:auto; }
+  html body.brs-page main#main#main #meraxyl .mxs-nature-note .mxs-eyebrow { display:none; }
+  html body.brs-page main#main#main #meraxyl .mxs-modulation-flow { gap:5px; }
+  html body.brs-page main#main#main #meraxyl .mxs-signal { font-size:15px; padding:10px 6px; }
+  html body.brs-page main#main#main #meraxyl .mxs-receptor-name { font-size:13px; padding:7px; }
+}
+@media (max-width:1099px) {
+  html body.brs-page main#main#main #meraxyl .mxs-frame { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail { display:grid; grid-template-columns:1fr 1fr; column-gap:32px; align-items:start; }
+  html body.brs-page main#main#main #meraxyl .mxs-chapter-number,
+  html body.brs-page main#main#main #meraxyl .mxs-rail-title { grid-column:1 / -1; }
+  html body.brs-page main#main#main #meraxyl .mxs-chapter-number { margin-bottom:22px; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-title { font-size:42px !important; margin-bottom:20px; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail > .mxs-accent { display:none; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-benefit { grid-column:1; font-size:30px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-subtitle { grid-column:1; }
+  html body.brs-page main#main#main #meraxyl .mxs-description { grid-column:2; grid-row:3 / span 2; margin:0; }
+  html body.brs-page main#main#main #meraxyl .mxs-steps { grid-column:1 / -1; margin:24px 0; }
+  html body.brs-page main#main#main #meraxyl .mxs-steps ol { grid-template-columns:1fr 1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-footer { grid-column:1 / -1; width:100%; }
+}
+@media (max-width:699px) {
+  html body.brs-page main#main#main #meraxyl .mxs-chapter { padding:24px 0; }
+  html body.brs-page main#main#main #meraxyl .mxs-frame { width:calc(100% - 40px); margin-inline:20px; gap:20px; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail { display:flex; padding:26px 22px; border-radius:22px; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-title { font-size:34px !important; margin:0; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail > .mxs-accent { display:block; margin:20px 0; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-benefit { font-size:28px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-rail-subtitle { font-size:22px !important; line-height:30px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-description { margin:0; }
+  html body.brs-page main#main#main #meraxyl .mxs-steps ol { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-label-brand { display:none; }
+  html body.brs-page main#main#main #meraxyl .mxs-panel { padding:8px; border-radius:20px; }
+  html body.brs-page main#main#main #meraxyl .mxs-panel-label { padding:5px 6px 12px; }
+  html body.brs-page main#main#main #meraxyl .mxs-panel-label > p { font-size:10px !important; letter-spacing:.12em; }
+  html body.brs-page main#main#main #meraxyl .mxs-panel-inner { padding:18px 12px; border-radius:15px; }
+  html body.brs-page main#main#main #meraxyl .mxs-system-heading { padding:0 4px 18px; }
+  html body.brs-page main#main#main #meraxyl .mxs-system-heading h3 { font-size:40px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-system-heading .mxs-lead { font-size:22px !important; line-height:30px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-ingredients li { grid-template-columns:minmax(0,1fr) minmax(0,.5fr); gap:16px; padding:12px; }
+  html body.brs-page main#main#main #meraxyl .mxs-botanical { grid-column:1 / -1; }
+  html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy h4 { font-size:25px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy .mxs-tags { font-size:16px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-ingredient-copy p { font-size:16px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-support-grid { grid-template-columns:1fr; gap:24px; }
+  html body.brs-page main#main#main #meraxyl .mxs-nature-note { border-left:0; border-top:1px solid #99dbea; padding:18px 0 0; grid-template-columns:.85fr 1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-molecule-art { max-width:120px; margin:auto; }
+  html body.brs-page main#main#main #meraxyl .mxs-panel-title { font-size:25px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-pathways { grid-template-columns:1fr; gap:20px; }
+  html body.brs-page main#main#main #meraxyl .mxs-pathway-body { padding-inline:9px; }
+  html body.brs-page main#main#main #meraxyl .mxs-stressors { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px 10px; padding:18px 0 0; }
+  html body.brs-page main#main#main #meraxyl .mxs-stressors .mxs-art { max-width:80px; }
+  html body.brs-page main#main#main #meraxyl .mxs-stressors li { font-size:14px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-epidermis { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-epidermis > div:first-child { padding:14px; text-align:center; }
+  html body.brs-page main#main#main #meraxyl .mxs-receptors { padding:14px 10px; }
+  html body.brs-page main#main#main #meraxyl .mxs-receptors > div { gap:12px; }
+  html body.brs-page main#main#main #meraxyl .mxs-receptors :is(div > span,strong) { padding:8px 12px; font-size:15px; }
+  html body.brs-page main#main#main #meraxyl .mxs-modulation-flow { display:flex; flex-direction:column; align-items:center; gap:12px; }
+  html body.brs-page main#main#main #meraxyl .mxs-active { width:110px; }
+  html body.brs-page main#main#main #meraxyl .mxs-inhibitor { width:65px; align-self:center; transform:rotate(90deg); margin:8px 0; }
+  html body.brs-page main#main#main #meraxyl .mxs-signal { min-width:150px; }
+  html body.brs-page main#main#main #meraxyl .mxs-horizontal-arrow { align-self:center; margin:0; transform:rotate(90deg); }
+  html body.brs-page main#main#main #meraxyl .mxs-mast-cell { width:170px; }
+  html body.brs-page main#main#main #meraxyl .mxs-mast-cell figcaption { font-size:14px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-effector ul { grid-template-columns:1fr; gap:8px; }
+  html body.brs-page main#main#main #meraxyl .mxs-effector-link { width:100%; margin:0 0 12px; }
+  html body.brs-page main#main#main #meraxyl .mxs-outcomes { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  html body.brs-page main#main#main #meraxyl .mxs-comfort { padding:20px 14px; }
+  html body.brs-page main#main#main #meraxyl .mxs-comfort h4 { font-size:22px !important; }
+  html body.brs-page main#main#main #meraxyl .mxs-comfort .mxs-checklist { grid-template-columns:1fr; }
+}
+@media (max-width:359px) {
+  html body.brs-page main#main#main #meraxyl .mxs-compound,
+  html body.brs-page main#main#main #meraxyl .mxs-ingredients li { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #meraxyl .mxs-compound .mxs-structure,
+  html body.brs-page main#main#main #meraxyl .mxs-ingredients .mxs-structure { max-width:145px; margin-inline:auto; }
+}

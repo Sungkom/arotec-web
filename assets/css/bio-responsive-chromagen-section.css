@@ -1,0 +1,308 @@
+/* Chromagen reference artwork is split into a background, image crops, and live text. */
+html body.brs-page main#main#main #chromagen.brs-chromagen--layered {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #e8f3ef;
+  color: #073c28;
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif) !important;
+  scroll-margin-top: 12px;
+}
+
+html body.brs-page main#main#main #chromagen .cg-layer-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  width: calc(100% - 48px);
+  max-width: none;
+  margin: 0 24px !important;
+  padding: 0 !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-poster {
+  position: relative;
+  container-type: inline-size;
+  isolation: isolate;
+  display: block;
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 1086 / 1448;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #e8f3ef;
+  box-shadow: none;
+  scroll-margin-top: 12px;
+}
+
+html body.brs-page main#main#main #chromagen :is(p, h2, h3, h4, figure) {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-indent: 0 !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-backdrop {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: fill;
+  opacity: 1;
+  filter: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Coordinates remain in the original 1086 by 1448 reference space. */
+html body.brs-page main#main#main #chromagen .cg-at {
+  position: absolute !important;
+  inset: auto;
+  left: calc(var(--x, 0) / 1086 * 100%) !important;
+  top: calc(var(--y, 0) / 1448 * 100%) !important;
+  width: calc(var(--w, 0) / 1086 * 100%) !important;
+  height: calc(var(--h, 0) / 1448 * 100%) !important;
+  min-width: 0;
+  max-width: none;
+  min-height: 0;
+  max-height: none;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none;
+}
+
+html body.brs-page main#main#main #chromagen .cg-text {
+  display: block;
+  color: var(--color, #073c28) !important;
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif) !important;
+  font-size: calc(var(--fs, 24) * var(--font-scale, .84) * 100cqw / 1086) !important;
+  font-style: normal;
+  font-weight: var(--weight, 400) !important;
+  line-height: var(--lh, 1.15) !important;
+  letter-spacing: calc(var(--spacing, 0) * 100cqw / 1086) !important;
+  text-align: left;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  transform: none !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-brand {
+  --font-scale: 1;
+  font-weight: var(--arotec-display-weight, 700) !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-sans {
+  --font-scale: 1;
+}
+
+html body.brs-page main#main#main #chromagen .cg-body {
+  color: var(--color, #15262a) !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-inhibits {
+  color: #f21813 !important;
+  font-style: normal !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-stimulates {
+  color: #00652c !important;
+  font-style: normal !important;
+}
+
+html body.brs-page main#main#main #chromagen [data-asset="chromgen-camp"] > img {
+  filter: contrast(1.25);
+}
+
+html body.brs-page main#main#main #chromagen .cg-center {
+  text-align: center !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-text sub {
+  position: static;
+  font-size: .65em !important;
+  line-height: 0 !important;
+  vertical-align: sub;
+}
+
+html body.brs-page main#main#main #chromagen .cg-text sup {
+  position: static;
+  font-size: .45em !important;
+  line-height: 0 !important;
+  vertical-align: super;
+}
+
+html body.brs-page main#main#main #chromagen .cg-crop {
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+html body.brs-page main#main#main #chromagen .cg-crop > img {
+  position: absolute !important;
+  inset: auto;
+  display: block;
+  left: calc(-1 * var(--sx, 0) / var(--sw) * 100%) !important;
+  top: calc(-1 * var(--sy, 0) / var(--sh) * 100%) !important;
+  width: calc(1086 / var(--sw) * 100%) !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  opacity: 1;
+  object-fit: fill;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-circle {
+  border-radius: 50%;
+}
+
+html body.brs-page main#main#main #chromagen :is(.cg-molecule, .cg-arrow) {
+  mix-blend-mode: multiply;
+}
+
+html body.brs-page main#main#main #chromagen :is(.cg-molecule, .cg-arrow) > img {
+  filter: grayscale(1) contrast(1.65);
+}
+
+html body.brs-page main#main#main #chromagen .cg-arrow > img {
+  filter: contrast(1.25);
+}
+
+html body.brs-page main#main#main #chromagen .cg-rule {
+  border: 0;
+  border-left: 1px solid rgba(67, 124, 106, .35);
+}
+
+html body.brs-page main#main#main #chromagen .cg-rule--horizontal {
+  border-left: 0;
+  border-top: 1px solid rgba(67, 124, 106, .35);
+}
+
+html body.brs-page main#main#main #chromagen .cg-node {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #245843;
+  border-radius: calc(8 * 100cqw / 1086);
+  background: linear-gradient(110deg, rgba(255, 255, 255, .85), rgba(231, 249, 243, .66));
+  box-shadow: 0 calc(3 * 100cqw / 1086) calc(9 * 100cqw / 1086) rgba(17, 85, 62, .13);
+  text-align: center;
+}
+
+html body.brs-page main#main#main #chromagen .cg-node.cg-node--green {
+  border-color: #42915b;
+  background: linear-gradient(110deg, rgba(255, 255, 255, .92), rgba(192, 234, 204, .77));
+}
+
+html body.brs-page main#main#main #chromagen .cg-node-label {
+  display: block;
+  transform: none;
+  white-space: nowrap;
+}
+
+html body.brs-page main#main#main #chromagen .cg-up {
+  display: inline-block;
+  margin-left: calc(8 * 100cqw / 1086);
+  color: #08666b;
+  font-weight: 700 !important;
+}
+
+html body.brs-page main#main#main #chromagen .cg-legacy-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  scroll-margin-top: 12px;
+}
+
+@media (min-width: 1200px) {
+  html body.brs-page main#main#main #chromagen.brs-chromagen--layered {
+    overflow: clip;
+  }
+
+  html body.brs-page main#main#main #chromagen .cg-layer-stack {
+    width: calc(100% - var(--arotec-content-left, 150px) - var(--arotec-content-right, 150px));
+    margin-left: var(--arotec-content-left, 150px) !important;
+    margin-right: var(--arotec-content-right, 150px) !important;
+  }
+
+  html body.brs-page main#main#main #chromagen .cg-poster {
+    overflow: visible;
+  }
+
+  html body.brs-page main#main#main #chromagen .cg-backdrop {
+    mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+  }
+
+  /* The supplied landscape art fills the desktop gutters without stretching
+     its bubbles or moving the glass panels and foreground content. */
+  html body.brs-page main#main#main #chromagen .cg-poster::before,
+  html body.brs-page main#main#main #chromagen .cg-poster::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    z-index: -1;
+    background-image: linear-gradient(rgba(210, 236, 219, .65), rgba(210, 236, 219, .65)),
+      url("../images/bio-responsive-scents/chromagen-20260927/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, auto 100%;
+    filter: blur(4px);
+    pointer-events: none;
+  }
+
+  html body.brs-page main#main#main #chromagen .cg-poster::before {
+    right: 96%;
+    width: calc(var(--arotec-content-left, 150px) + 4% + 8px);
+    background-position: left center;
+  }
+
+  html body.brs-page main#main#main #chromagen .cg-poster::after {
+    left: 96%;
+    width: calc(var(--arotec-content-right, 150px) + 4% + 8px);
+    background-position: right center;
+  }
+}
+
+/* Preserve the artwork proportions on small screens, including all live text. */
+@media (max-width: 599px) {
+  html body.brs-page main#main#main #chromagen .cg-layer-stack {
+    width: 100%;
+    margin-inline: 0 !important;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body.brs-page main#main#main #chromagen *,
+  html body.brs-page main#main#main #chromagen *::before,
+  html body.brs-page main#main#main #chromagen *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

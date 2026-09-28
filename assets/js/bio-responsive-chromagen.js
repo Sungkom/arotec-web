@@ -1,0 +1,47 @@
+/* Resolve Chromgen deep links after the shared fonts and page layout settle. */
+(() => {
+  const root = document.getElementById('chromagen');
+  if (!root) return;
+  let activeCleanup;
+
+  const alignHash = () => {
+    activeCleanup?.();
+    const hash = location.hash;
+    if (!/^#(?:chromgen|chromagen(?:-ingredients|-benefits|-pathway)?)$/.test(hash)) return;
+    const events = ['pointerdown', 'wheel', 'touchstart', 'keydown'];
+    let observer, settleTimer, stopTimer, cancelled = false;
+    const cleanup = () => {
+      cancelled = true;
+      observer?.disconnect();
+      clearTimeout(settleTimer);
+      clearTimeout(stopTimer);
+      removeEventListener('load', align);
+      events.forEach(event => removeEventListener(event, cleanup));
+      if (activeCleanup === cleanup) activeCleanup = undefined;
+    };
+    const align = async () => {
+      if (document.fonts) await document.fonts.ready;
+      if (cancelled || location.hash !== hash) return cleanup();
+      const schedule = () => {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(() => {
+          if (cancelled || location.hash !== hash) return cleanup();
+          const target = document.getElementById(hash.slice(1));
+          target?.scrollIntoView({ block: 'start', behavior: 'instant' });
+        }, 150);
+      };
+      if ('ResizeObserver' in window) {
+        observer = new ResizeObserver(schedule);
+        observer.observe(document.getElementById('main') || root);
+      }
+      schedule();
+      stopTimer = setTimeout(cleanup, 3000);
+    };
+    activeCleanup = cleanup;
+    events.forEach(event => addEventListener(event, cleanup, { once: true, passive: true }));
+    if (document.readyState === 'complete') align();
+    else addEventListener('load', align, { once: true });
+  };
+  addEventListener('hashchange', alignHash);
+  alignHash();
+})();

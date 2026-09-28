@@ -1,0 +1,314 @@
+/* September 28 supplied artwork; shared website typography and foreground gutters. */
+html body.brs-page main#main#main #bioactive-compounds.bcp-section {
+  --bcp-ink: #103e66;
+  --bcp-secondary: #36638e;
+  --arotec-display-size: 72px;
+  --arotec-display-line-height: 80px;
+  --arotec-display-letter-spacing: -1.44px;
+  --arotec-supporting-size: 24px;
+  --arotec-supporting-line-height: 32px;
+  position: relative;
+  isolation: isolate;
+  display: block !important;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: 76px 0 72px !important;
+  color: var(--bcp-ink);
+  background: #d6eaff url("../images/bio-responsive-scents/bioactive-20260928/background.png") center / cover no-repeat;
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+  scroll-margin-top: 76px;
+}
+html body.brs-page main#main#main #bioactive-compounds :is(h2,h3,h4,p,ol) {
+  margin: 0 !important;
+  padding: 0;
+  color: inherit !important;
+  font-family: var(--arotec-font-family, "DM Sans", sans-serif) !important;
+  text-transform: none !important;
+  text-shadow: none;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-frame {
+  position: relative;
+  padding-inline: var(--arotec-content-left, 150px) var(--arotec-content-right, 150px);
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero {
+  position: relative;
+  padding-block: 34px;
+  margin-bottom: 34px;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -30px;
+  border: 1px solid #fffffff2;
+  border-radius: 24px;
+  background: #f0f8ff42;
+  box-shadow: inset 0 0 24px #ffffff42, 0 6px 32px #1a64a009;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero-copy { max-width: 900px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-eyebrow {
+  margin-bottom: 18px !important;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: .25em !important;
+}
+/* Use the same layer as the pre-existing section-specific heading rule. */
+@layer arotec-display-headings.spec {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-title {
+    margin: 0 0 16px !important;
+    font-size: var(--arotec-display-size) !important;
+    line-height: var(--arotec-display-line-height) !important;
+    font-weight: var(--arotec-display-weight, 700) !important;
+    letter-spacing: var(--arotec-display-letter-spacing) !important;
+    text-wrap: balance;
+  }
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-lead {
+  margin-bottom: 12px !important;
+  color: var(--bcp-secondary) !important;
+  font-size: var(--arotec-supporting-size) !important;
+  line-height: var(--arotec-supporting-line-height) !important;
+  font-weight: var(--arotec-supporting-weight, 500) !important;
+  letter-spacing: normal !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-description {
+  max-width: 710px;
+  color: var(--bcp-secondary) !important;
+  font-size: var(--arotec-body-size, 18px) !important;
+  line-height: var(--arotec-body-line-height, 28px) !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-science-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: 1px solid #ffffffd9;
+  border-radius: 999px;
+  box-shadow: inset 0 0 12px #c6e6ffa6, 0 2px 6px #10457514;
+  background: #477ea8;
+  color: #fff;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-science-link:hover { background: #235c8b; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-science-link:focus-visible { outline: 3px solid #123f68; outline-offset: 4px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero-note {
+  position: absolute;
+  right: 0;
+  top: 52px;
+  display: grid;
+  gap: 76px;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero-note p {
+  font-size: 10px !important;
+  line-height: 18px !important;
+  letter-spacing: .15em !important;
+  color: #50749a !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero-note p:first-child::after,
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1px;
+  margin-top: 20px;
+  background: #7797b4;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-hero-note span { letter-spacing: 0; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading { text-align: center; margin-bottom: 20px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading h3 {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-weight: 500 !important;
+  letter-spacing: .025em !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px !important;
+  color: #52749b !important;
+  font-size: 10px !important;
+  line-height: 18px !important;
+  letter-spacing: .2em !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p::before,
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 1px;
+  background: #8fbbd6;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: 18px 12px 15px;
+  border: 1px solid #fffffff2;
+  border-radius: 18px;
+  background: #f4faff52;
+  box-shadow: inset 0 0 20px #ffffff29;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-number {
+  color: #426f96;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope .bcp-number { position: absolute; left: 16px; top: 12px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope p { font-size: 18px !important; line-height: 24px !important; text-align: center; }
+/* Source assets are never stretched: the window and original image share a scale. */
+html body.brs-page main#main#main #bioactive-compounds .bcp-image-window {
+  display: block;
+  position: relative;
+  aspect-ratio: var(--bcp-ratio);
+  overflow: hidden;
+  flex: none;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-image-window > img {
+  position: absolute;
+  display: block;
+  width: var(--bcp-image-width) !important;
+  max-width: none !important;
+  height: auto !important;
+  left: var(--bcp-image-left);
+  top: var(--bcp-image-top);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope-icon {
+  width: 66px;
+  margin: 4px auto 12px;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope li:nth-child(4) .bcp-scope-icon { width: 52px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-scope li:nth-child(5) .bcp-scope-icon { width: 38px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-subheading--candidates { margin-top: 34px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-candidates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  gap: 10px 22px;
+  list-style: none;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-candidate {
+  display: grid;
+  grid-template-columns: 25px 108px minmax(0, 1fr) 132px;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  min-height: 82px;
+  padding: 9px 16px;
+  border: 1px solid #fffffff2;
+  border-radius: 15px;
+  background: #edf7ff66;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 108px; border-radius: 9px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-candidate-copy { min-width: 0; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-candidate h4 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: -.025em !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-candidate-copy p {
+  margin-top: 3px !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  color: #476d95 !important;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-structure {
+  width: min(100%, calc(var(--bcp-source-width) * 1px));
+  height: auto;
+  max-width: 100%;
+  justify-self: center;
+  filter: contrast(2);
+  mix-blend-mode: multiply;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note {
+  position: absolute;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: .14em;
+  color: #577fa2;
+  pointer-events: none;
+}
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note--left { top: 240px; left: 42px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note--right { top: 620px; right: 34px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note--bottom { bottom: 90px; left: 30px; max-width: 100px; font-size: 9px; }
+html body.brs-page main#main#main #bioactive-compounds .bcp-margin-note--bottom-right { bottom: 240px; right: 26px; max-width: 104px; }
+@media (max-width: 1599px) {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-hero-copy { max-width: 84%; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate { grid-template-columns: 22px 94px minmax(0,1fr) 116px; gap: 12px; padding-inline: 12px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 94px; }
+}
+@media (max-width: 1399px) {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate { grid-template-columns: 20px 78px minmax(0,1fr) 96px; gap: 10px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 78px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate h4 { font-size: 16px !important; line-height: 22px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate-copy p { font-size: 13px !important; line-height: 19px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope { gap: 16px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope p { font-size: 16px !important; line-height: 22px !important; }
+}
+@media (max-width: 1199px) {
+  html body.brs-page main#main#main #bioactive-compounds.bcp-section { --arotec-display-size: 64px; --arotec-display-line-height: 1.08; padding-block: 60px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-frame { padding-inline: 28px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-hero::before { inset-inline: -12px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-hero-copy { max-width: 850px; }
+  html body.brs-page main#main#main #bioactive-compounds :is(.bcp-margin-note,.bcp-hero-note) { display: none; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope { gap: 12px; }
+}
+@media (max-width: 850px) {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidates { grid-template-columns: minmax(0,1fr); grid-template-rows: none; grid-auto-flow: row; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate { grid-template-columns: 25px 108px minmax(0,1fr) 132px; gap: 16px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 108px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate h4 { font-size: 18px !important; line-height: 24px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate-copy p { font-size: 15px !important; line-height: 22px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 599px) {
+  html body.brs-page main#main#main #bioactive-compounds.bcp-section { --arotec-display-size: clamp(34px, 10vw, 48px); --arotec-display-line-height: 1.08; --arotec-display-letter-spacing: -.8px; --arotec-supporting-size: 22px; --arotec-supporting-line-height: 30px; padding-block: 40px !important; background-position: 58% center; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-frame { padding-inline: 20px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-hero { padding-block: 26px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-hero::before { inset-inline: -8px; background: #edf7ff99; border-radius: 18px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-eyebrow { font-size: 10px !important; letter-spacing: .16em !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-description { font-size: 16px !important; line-height: 26px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-subheading h3 { font-size: 22px !important; line-height: 29px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p { gap: 8px; font-size: 9px !important; letter-spacing: .1em !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p::before,
+  html body.brs-page main#main#main #bioactive-compounds .bcp-subheading p::after { width: 20px; flex-shrink: 0; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-scope > li:last-child { grid-column: 1 / -1; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate { grid-template-columns: 18px 66px minmax(0,1fr) 74px; gap: 8px; padding: 10px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 66px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-structure { width: min(100%, calc(var(--bcp-source-width) * .8px)); }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-number { font-size: 14px !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate h4 { font-size: 14px !important; line-height: 20px !important; overflow-wrap: anywhere !important; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate-copy p { font-size: 12px !important; line-height: 18px !important; }
+}
+@media (max-width: 359px) {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-candidate { grid-template-columns: 16px 50px minmax(0,1fr) 58px; gap: 6px; padding: 8px; }
+  html body.brs-page main#main#main #bioactive-compounds .bcp-photo { width: 50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.brs-page main#main#main #bioactive-compounds .bcp-science-link { transition: none; }
+}

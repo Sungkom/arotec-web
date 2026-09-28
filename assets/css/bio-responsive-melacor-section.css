@@ -1,0 +1,262 @@
+/* Melacor: supplied 28 September art with shared Arotec typography and gutters. */
+html body.brs-page main#main#main #melacor { --ml-ink:#092d5d; width:100%; max-width:none; padding:0 !important; margin:0 !important; background:#dff3ff; color:var(--ml-ink); font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important; }
+html body.brs-page main#main#main #melacor *, html body.brs-page main#main#main #melacor *::before, html body.brs-page main#main#main #melacor *::after { box-sizing:border-box; }
+html body.brs-page main#main#main #melacor :is(p,h2,h3,h4,h5,ul,ol,figure) { padding:0; margin:0; font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important; color:inherit; text-transform:none !important; text-shadow:none; text-indent:0; }
+html body.brs-page main#main#main #melacor :is(p,li,figcaption) { font-size:var(--arotec-body-size,18px) !important; line-height:var(--arotec-body-line-height,28px) !important; letter-spacing:0 !important; font-weight:400; }
+html body.brs-page main#main#main #melacor :is(h2,h3,h4,h5) { color:var(--ml-ink) !important; font-weight:var(--arotec-display-weight,700) !important; line-height:1.15 !important; letter-spacing:-.025em !important; }
+html body.brs-page main#main#main #melacor :is(ul,ol) { list-style:none; }
+html body.brs-page main#main#main #melacor sup { font-size:.43em !important; line-height:0 !important; vertical-align:super; }
+html body.brs-page main#main#main #melacor .ph { font-family:Phosphor !important; }
+html body.brs-page main#main#main #melacor, html body.brs-page main#main#main #melacor [id] { scroll-margin-top:32px; }
+html body.brs-page main#main#main #melacor a:focus-visible, html body.brs-page main#main#main #melacor [tabindex]:focus-visible { outline:3px solid #1288b9; outline-offset:4px; }
+html body.brs-page main#main#main #melacor .ml-chapter { padding:42px 0; background:#dff3ff url('../images/bio-responsive-scents/melacor-20260928/background.png') center / cover no-repeat; }
+html body.brs-page main#main#main #melacor .ml-frame { container-type:inline-size; display:grid; grid-template-columns:minmax(0,.27fr) minmax(0,.73fr); gap:24px; width:calc(100% - 48px); margin:0 24px; max-width:none; }
+html body.brs-page main#main#main #melacor .ml-frame > * { min-width:0; }
+html body.brs-page main#main#main #melacor .ml-rail, html body.brs-page main#main#main #melacor .ml-panel { border:2px solid #ffffffdf; border-radius:26px; background:linear-gradient(125deg,#ffffff59,#d8efff45 48%,#edfaff8f); box-shadow:inset 5px 5px 14px #ffffff6b,0 6px 22px #64b1d016; }
+html body.brs-page main#main#main #melacor .ml-rail { padding:30px 24px; display:flex; flex-direction:column; position:relative; color:var(--ml-ink); }
+html body.brs-page main#main#main #melacor .ml-rail::before { content:""; position:absolute; inset:8px; border:1px solid #ffffff69; border-radius:20px; pointer-events:none; }
+html body.brs-page main#main#main #melacor .ml-eyebrow { font-size:13px !important; line-height:1.6 !important; letter-spacing:.16em !important; font-weight:500 !important; text-transform:uppercase !important; color:#095386 !important; }
+html body.brs-page main#main#main #melacor .ml-chapter-number { display:flex; gap:16px; align-items:center; margin-bottom:36px; }
+html body.brs-page main#main#main #melacor .ml-chapter-number > span { flex:1; border-top:1px solid #51b5d3; }
+html body.brs-page main#main#main #melacor .ml-rail-title { font-size:clamp(32px,2.85cqw,48px) !important; margin:0 !important; }
+html body.brs-page main#main#main #melacor .ml-accent { display:block; width:84px; height:5px; border-radius:4px; background:linear-gradient(90deg,#19c7e8,#65e5db); margin:22px 0; }
+html body.brs-page main#main#main #melacor .ml-rail-benefit { font-size:clamp(28px,2.35cqw,40px) !important; line-height:1.16 !important; font-weight:700 !important; margin-bottom:18px; }
+html body.brs-page main#main#main #melacor .ml-rail-subtitle { font-size:var(--arotec-supporting-size,24px) !important; line-height:var(--arotec-supporting-line-height,32px) !important; font-weight:500 !important; color:#237db1 !important; margin-bottom:22px; }
+html body.brs-page main#main#main #melacor .ml-description { color:#205680 !important; margin-bottom:28px; }
+html body.brs-page main#main#main #melacor .ml-rail nav { margin-bottom:26px; }
+html body.brs-page main#main#main #melacor .ml-steps { display:grid; gap:24px; margin-top:16px; }
+html body.brs-page main#main#main #melacor .ml-steps li { display:grid; grid-template-columns:40px minmax(0,1fr); align-items:start; gap:14px; position:relative; }
+html body.brs-page main#main#main #melacor .ml-steps li:not(:last-child)::after { content:""; position:absolute; top:40px; bottom:-24px; left:20px; border-left:1px solid #3d799f; }
+html body.brs-page main#main#main #melacor .ml-step-number { display:grid; place-items:center; background:radial-gradient(circle at 32% 22%,#ffffffea,#8ee8f4 65%,#dbffff); color:#06426b; border:1px solid #fff; box-shadow:0 3px 8px #2b8db738,inset 2px 2px 5px #fff; border-radius:50%; width:40px; height:40px; font-size:24px; font-weight:700 !important; }
+html body.brs-page main#main#main #melacor .ml-steps a, html body.brs-page main#main#main #melacor .ml-rail-footer a { color:inherit; text-decoration:none; }
+html body.brs-page main#main#main #melacor .ml-steps strong { display:block; font-size:19px; line-height:1.35; font-weight:700 !important; }
+html body.brs-page main#main#main #melacor .ml-steps a > span { display:block; font-size:15px; line-height:1.5; color:#27648c; margin-top:5px; }
+html body.brs-page main#main#main #melacor .ml-steps a:hover strong, html body.brs-page main#main#main #melacor .ml-rail-footer a:hover { text-decoration:underline; text-underline-offset:4px; }
+html body.brs-page main#main#main #melacor .ml-rail-footer { margin-top:auto; border:1px solid white; background:#ffffff4f; box-shadow:inset 2px 3px 12px #fff7; border-radius:20px; padding:18px 12px; text-align:center; }
+html body.brs-page main#main#main #melacor .ml-rail-footer > .ml-eyebrow { font-size:10px !important; margin-bottom:8px; }
+html body.brs-page main#main#main #melacor .ml-rail-footer > p:last-child { font-size:20px !important; line-height:1.45 !important; font-weight:700 !important; }
+html body.brs-page main#main#main #melacor .ml-rail-footer .ph { vertical-align:middle; margin-inline:3px; }
+html body.brs-page main#main#main #melacor .ml-research { margin-top:100px; text-align:center; font-size:10px !important; }
+html body.brs-page main#main#main #melacor .ml-content { display:flex; flex-direction:column; gap:18px; }
+html body.brs-page main#main#main #melacor .ml-panel { padding:16px; }
+html body.brs-page main#main#main #melacor .ml-section-kicker { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+html body.brs-page main#main#main #melacor .ml-section-kicker::after { content:""; height:1px; flex:1; min-width:20px; background:#75b9d4; }
+html body.brs-page main#main#main #melacor .ml-section-kicker > span { font-size:9px; letter-spacing:.09em; margin-left:auto; order:2; }
+html body.brs-page main#main#main #melacor .ml-system-heading { text-align:center; padding:0 12px 14px; }
+html body.brs-page main#main#main #melacor .ml-system-heading > h3 { font-size:clamp(38px,3.8cqw,58px) !important; margin:0 0 2px !important; }
+html body.brs-page main#main#main #melacor .ml-system-heading > p { color:#1c638e !important; }
+html body.brs-page main#main#main #melacor .ml-ingredient-caption { background:#ffffff38; border:1px solid white; box-shadow:inset 2px 3px 6px #fff9; padding:8px 16px; font-size:13px !important; font-weight:500 !important; letter-spacing:.12em !important; text-align:center; text-transform:uppercase !important; border-radius:30px; margin:0 auto 10px !important; max-width:90%; }
+html body.brs-page main#main#main #melacor .ml-ingredients { display:grid; gap:8px; }
+html body.brs-page main#main#main #melacor .ml-ingredients li { display:grid; grid-template-columns:132px minmax(0,1fr) 86px; align-items:center; gap:25px; padding:8px 22px; border:1px solid #ffffffe3; border-radius:14px; background:#ffffff26; }
+html body.brs-page main#main#main #melacor .ml-ingredient-copy h5 { font-size:clamp(21px,2.05cqw,30px) !important; margin-bottom:4px; }
+html body.brs-page main#main#main #melacor .ml-ingredient-copy p { color:#19507c !important; }
+html body.brs-page main#main#main #melacor .ml-art { display:block; position:relative; overflow:hidden; min-width:0; width:100%; align-self:center; }
+html body.brs-page main#main#main #melacor .ml-art > img { position:absolute !important; display:block; width:var(--ml-image-width) !important; max-width:none !important; height:auto !important; left:var(--ml-image-left) !important; top:var(--ml-image-top) !important; margin:0 !important; padding:0 !important; border:0 !important; border-radius:0 !important; transform:none !important; object-fit:fill; }
+html body.brs-page main#main#main #melacor .ml-botanical, html body.brs-page main#main#main #melacor .ml-skin { border-radius:8px; }
+html body.brs-page main#main#main #melacor .ml-molecule { max-height:80px; border-radius:8px; }
+html body.brs-page main#main#main #melacor .ml-support { flex:1; }
+html body.brs-page main#main#main #melacor .ml-support-grid { display:grid; grid-template-columns:1.1fr 1fr; align-items:center; gap:16px; margin-top:16px; }
+html body.brs-page main#main#main #melacor .ml-support h4 { font-size:28px !important; margin:0 0 14px !important; }
+html body.brs-page main#main#main #melacor .ml-checklist { display:grid; gap:10px; }
+html body.brs-page main#main#main #melacor .ml-checklist li { display:flex; gap:10px; align-items:flex-start; color:#184770; font-size:16px !important; line-height:1.45 !important; }
+html body.brs-page main#main#main #melacor .ml-checklist .ph { color:#287da1; font-size:25px; flex-shrink:0; margin-top:1px; }
+html body.brs-page main#main#main #melacor .ml-chapter-caption { text-align:center; font-size:10px !important; }
+html body.brs-page main#main#main #melacor .ml-chapter-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+html body.brs-page main#main#main #melacor .ml-chapter-links > a { display:inline-flex; align-items:center; gap:22px; padding:10px 18px; border:1px solid #fff; border-radius:30px; color:#125278; font-size:14px; text-decoration:none; background:#ffffff78; box-shadow:inset 2px 3px 6px #fff8; }
+html body.brs-page main#main#main #melacor .ml-chapter-links > a:hover { background:#f0fcff; }
+html body.brs-page main#main#main #melacor .ml-panel-heading { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:12px; }
+html body.brs-page main#main#main #melacor .ml-badge { display:grid; place-items:center; width:35px; height:35px; background:radial-gradient(circle at 30% 20%,#ffffff,#9de9f2 70%,#e1ffff); color:#074868; border:1px solid white; border-radius:50%; font-size:21px; font-weight:700 !important; flex-shrink:0; }
+html body.brs-page main#main#main #melacor .ml-panel-heading h4 { flex:1; font-size:clamp(18px,1.65cqw,24px) !important; text-transform:uppercase !important; letter-spacing:0 !important; margin:0 !important; }
+html body.brs-page main#main#main #melacor .ml-panel-heading > p { flex-basis:100%; color:#2b739b !important; font-size:13px !important; line-height:1.4 !important; margin-left:47px; margin-top:-5px; }
+html body.brs-page main#main#main #melacor .ml-diagram-scroll { overflow-x:auto; overscroll-behavior-inline:contain; border:1px solid white; border-radius:16px; scrollbar-color:#49a6ca #e3f7fb; }
+html body.brs-page main#main#main #melacor .ml-diagram { min-width:780px; }
+html body.brs-page main#main#main #melacor .ml-mechanism-description { font-size:15px !important; line-height:1.5 !important; color:#2c668a !important; padding:12px 4px 0; }
+html body.brs-page main#main#main #melacor .ml-mechanism-summary > h4 { font-size:20px !important; margin:0 0 18px !important; }
+html body.brs-page main#main#main #melacor .ml-mechanism-summary .ml-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+html body.brs-page main#main#main #melacor .ml-summary { background:#bce9f055; border:1px solid #ffffffbf; color:#12577a !important; border-radius:10px; padding:10px !important; margin-top:16px; text-align:center; font-size:15px !important; line-height:1.5 !important; font-weight:500 !important; }
+html body.brs-page main#main#main #melacor .ml-complex { font-size:12px !important; line-height:1.5 !important; text-align:center; margin-top:12px; color:#1e5c82 !important; }
+html body.brs-page main#main#main #melacor .ml-science-title { font-size:clamp(24px,2.4cqw,34px) !important; margin:14px 6px 12px !important; text-transform:uppercase !important; }
+html body.brs-page main#main#main #melacor .ml-science-title > span { font-weight:400; }
+html body.brs-page main#main#main #melacor .ml-efficacy { display:grid; grid-template-columns:.9fr 1.2fr; gap:26px; align-items:center; }
+html body.brs-page main#main#main #melacor .ml-efficacy > h4 { font-size:26px !important; margin:0 !important; padding-right:20px; border-right:1px solid #69abc5; }
+html body.brs-page main#main#main #melacor .ml-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (min-width:1200px) { html body.brs-page main#main#main #melacor .ml-frame { width:calc(100% - var(--arotec-content-left,150px) - var(--arotec-content-right,150px)); margin-left:var(--arotec-content-left,150px); margin-right:var(--arotec-content-right,150px); } }
+@media (max-width:1399px) { html body.brs-page main#main#main #melacor .ml-rail { padding:26px 20px; } html body.brs-page main#main#main #melacor .ml-ingredients li { grid-template-columns:105px minmax(0,1fr) 70px; gap:16px; padding:8px 12px; } html body.brs-page main#main#main #melacor .ml-support-grid { grid-template-columns:1fr; } html body.brs-page main#main#main #melacor .ml-support .ml-skin { max-width:420px; justify-self:end; } }
+@media (max-width:1099px) { html body.brs-page main#main#main #melacor .ml-frame { grid-template-columns:1fr; } html body.brs-page main#main#main #melacor .ml-rail { padding:30px; } html body.brs-page main#main#main #melacor .ml-rail-title { font-size:42px !important; } html body.brs-page main#main#main #melacor .ml-rail-benefit { font-size:34px !important; } html body.brs-page main#main#main #melacor .ml-description { max-width:800px; } html body.brs-page main#main#main #melacor .ml-steps { grid-template-columns:repeat(3,minmax(0,1fr)); } html body.brs-page main#main#main #melacor .ml-steps li::after { display:none; } html body.brs-page main#main#main #melacor .ml-rail-footer { margin-top:6px; align-self:flex-start; min-width:260px; } html body.brs-page main#main#main #melacor .ml-research { margin-top:28px; text-align:left; } html body.brs-page main#main#main #melacor .ml-support-grid { grid-template-columns:1.1fr 1fr; } html body.brs-page main#main#main #melacor .ml-diagram { min-width:760px; } }
+@media (max-width:699px) { html body.brs-page main#main#main #melacor .ml-chapter { padding:28px 0; background-position:center; } html body.brs-page main#main#main #melacor .ml-frame { width:calc(100% - 40px); margin-inline:20px; gap:18px; } html body.brs-page main#main#main #melacor .ml-rail { padding:28px 22px; border-radius:24px; } html body.brs-page main#main#main #melacor .ml-chapter-number { margin-bottom:26px; } html body.brs-page main#main#main #melacor .ml-rail-title { font-size:34px !important; } html body.brs-page main#main#main #melacor .ml-rail-benefit { font-size:30px !important; } html body.brs-page main#main#main #melacor .ml-rail-subtitle { font-size:24px !important; line-height:32px !important; } html body.brs-page main#main#main #melacor .ml-steps { grid-template-columns:1fr; gap:22px; } html body.brs-page main#main#main #melacor .ml-steps li:not(:last-child)::after { display:block; bottom:-22px; } html body.brs-page main#main#main #melacor .ml-rail-footer { min-width:0; width:100%; } html body.brs-page main#main#main #melacor .ml-panel { padding:14px; border-radius:20px; } html body.brs-page main#main#main #melacor .ml-section-kicker > span { display:none; } html body.brs-page main#main#main #melacor .ml-section-kicker { font-size:11px !important; } html body.brs-page main#main#main #melacor .ml-ingredients li { grid-template-columns:68px minmax(0,1fr); gap:12px; padding:12px 10px; } html body.brs-page main#main#main #melacor .ml-ingredient-copy h5 { font-size:22px !important; overflow-wrap:anywhere; } html body.brs-page main#main#main #melacor .ml-ingredient-copy p { font-size:15px !important; line-height:1.4 !important; } html body.brs-page main#main#main #melacor .ml-molecule { grid-column:1; width:68px; margin-top:-3px; } html body.brs-page main#main#main #melacor .ml-ingredient-copy { grid-column:2; grid-row:1 / span 2; } html body.brs-page main#main#main #melacor .ml-system-heading { padding:4px 0 14px; } html body.brs-page main#main#main #melacor .ml-system-heading > p { font-size:16px !important; line-height:1.5 !important; } html body.brs-page main#main#main #melacor .ml-ingredient-caption { max-width:100%; font-size:11px !important; line-height:1.5 !important; } html body.brs-page main#main#main #melacor .ml-support-grid { grid-template-columns:1fr; gap:20px; } html body.brs-page main#main#main #melacor .ml-mechanism-summary .ml-checklist { grid-template-columns:1fr; } html body.brs-page main#main#main #melacor .ml-efficacy { grid-template-columns:1fr; gap:18px; } html body.brs-page main#main#main #melacor .ml-efficacy > h4 { border:0; padding:0; } html body.brs-page main#main#main #melacor .ml-chapter-links > a { width:100%; justify-content:space-between; } html body.brs-page main#main#main #melacor .ml-science-title { font-size:24px !important; } }
+
+/* Melacor 04: the 28 September reference, with live website typography. */
+html body.brs-page main#main#main #melacor .ml-benefits-new {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+html body.brs-page main#main#main #melacor .ml-benefits-new-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 0 9px;
+}
+html body.brs-page main#main#main #melacor .ml-benefits-new-heading::after {
+  content: "";
+  flex: 1 1 50px;
+  min-width: 35px;
+  height: 1px;
+  background: linear-gradient(90deg,#31aacf90,#31aacf30);
+}
+html body.brs-page main#main#main #melacor .ml-benefits-new-heading h3 {
+  flex: 0 1 auto;
+  margin: 0 !important;
+  color: #073871 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  align-items: stretch;
+  gap: 18px 14px;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-card {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  min-width: 0;
+  min-height: 290px;
+  padding: 28px 18px 20px;
+  scroll-margin-top: 110px;
+  background: linear-gradient(132deg,rgba(255,255,255,.39),rgba(229,248,255,.27) 43%,rgba(220,241,254,.46));
+  border: 2px solid rgba(255,255,255,.89);
+  border-radius: 24px;
+  box-shadow: inset 5px 5px 13px rgba(255,255,255,.45),0 8px 24px rgba(41,119,162,.055);
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-body {
+  display: grid;
+  grid-template-columns: 82px minmax(0,1fr);
+  align-items: start;
+  gap: 11px;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-orb {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-copy {
+  padding-top: 14px;
+  min-width: 0;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-copy h4 {
+  margin: 0 0 13px !important;
+  color: #043c66 !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.23 !important;
+  letter-spacing: -.035em !important;
+  text-wrap: balance;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-copy p {
+  margin: 0 !important;
+  color: #153f66 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: auto 0 0 !important;
+  padding-top: 16px;
+  border-top: 1px solid rgba(30,137,179,.39);
+  color: #074c69 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.65 !important;
+  letter-spacing: .105em !important;
+  text-transform: uppercase !important;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-category > span:first-child {
+  color: #007d78;
+  font-size: 15px;
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-footer {
+  margin-top: 6px;
+  padding: 20px 24px;
+  border: 2px solid rgba(255,255,255,.84);
+  border-radius: 24px;
+  background: linear-gradient(115deg,rgba(242,253,255,.44),rgba(218,242,255,.3));
+}
+html body.brs-page main#main#main #melacor .ml-benefit-glass-footer p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 9px 15px;
+  margin: 0 !important;
+  color: #073e68 !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  letter-spacing: .16em !important;
+  text-align: center;
+  text-transform: uppercase !important;
+}
+@container (max-width:1190px) {
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-body {
+    grid-template-columns: 90px minmax(0,1fr);
+    gap: 14px;
+  }
+}
+@media (max-width:1490px) {
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:699px) {
+  html body.brs-page main#main#main #melacor .ml-benefits-new {
+    gap: 18px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefits-new-heading {
+    padding: 0;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefits-new-heading h3 {
+    font-size: 15px !important;
+    letter-spacing: .075em !important;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefits-new-heading::after {
+    display: none;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-grid {
+    grid-template-columns: minmax(0,1fr);
+    gap: 16px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-card {
+    min-height: 260px;
+    padding: 24px 18px 18px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-body {
+    grid-template-columns: 78px minmax(0,1fr);
+    gap: 14px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-copy {
+    padding-top: 8px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-footer {
+    padding: 18px 15px;
+  }
+  html body.brs-page main#main#main #melacor .ml-benefit-glass-footer p {
+    gap: 8px 10px;
+    font-size: 10px !important;
+    letter-spacing: .09em !important;
+  }
+}
+

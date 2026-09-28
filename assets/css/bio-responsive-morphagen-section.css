@@ -1,0 +1,234 @@
+/* Morphagen: supplied artwork, shared Arotec typography and foreground gutters. */
+html:has(#morphagen:target), html:has(#morphagen :target) { scroll-behavior:auto; }
+html body.brs-page main#main#main #morphagen {
+  --mgs-ink:#092451; --mgs-blue:#226692; --mgs-teal:#168879;
+  width:100%; max-width:none; margin:0 !important; padding:0 !important;
+  background:#e0f3fb; color:var(--mgs-ink);
+  font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important;
+}
+html body.brs-page main#main#main #morphagen *,
+html body.brs-page main#main#main #morphagen *::before,
+html body.brs-page main#main#main #morphagen *::after { box-sizing:border-box; }
+html body.brs-page main#main#main #morphagen :is(p,h2,h3,h4,h5,ul,ol,figure) {
+  margin:0 !important; padding:0; color:inherit;
+  font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important;
+  text-transform:none !important; text-shadow:none; text-indent:0;
+}
+html body.brs-page main#main#main #morphagen :is(p,li,figcaption) {
+  font-size:var(--arotec-body-size,18px) !important; line-height:var(--arotec-body-line-height,28px) !important;
+  font-weight:400; letter-spacing:0;
+}
+html body.brs-page main#main#main #morphagen :is(h2,h3,h4,h5) {
+  color:inherit !important; font-weight:var(--arotec-display-weight,700) !important;
+  line-height:1.2 !important; letter-spacing:-.025em !important; overflow-wrap:break-word;
+}
+html body.brs-page main#main#main #morphagen :is(ul,ol) { list-style:none; }
+html body.brs-page main#main#main #morphagen sup { font-size:.45em !important; line-height:0 !important; vertical-align:super; letter-spacing:0; }
+html body.brs-page main#main#main #morphagen .ph { font-family:Phosphor !important; font-style:normal; }
+html body.brs-page main#main#main #morphagen,
+html body.brs-page main#main#main #morphagen [id] { scroll-margin-top:16px; }
+html body.brs-page main#main#main #morphagen :is(a,[tabindex]):focus-visible { outline:3px solid #087b8e; outline-offset:5px; }
+html body.brs-page main#main#main #morphagen .mgs-chapter {
+  padding:42px 0; background:url('../images/bio-responsive-scents/morphagen-20260928/background.png') center / cover no-repeat;
+}
+html body.brs-page main#main#main #morphagen .mgs-frame {
+  container-type:inline-size; display:grid; grid-template-columns:minmax(0,.27fr) minmax(0,.73fr);
+  gap:24px; width:calc(100% - 48px); max-width:none; margin:0 24px;
+}
+html body.brs-page main#main#main #morphagen .mgs-frame > *,
+html body.brs-page main#main#main #morphagen .mgs-content > * { min-width:0; }
+html body.brs-page main#main#main #morphagen .mgs-rail {
+  display:flex; flex-direction:column; padding:30px 28px 24px; min-width:0;
+  border:2px solid #fff; border-radius:28px; background:#eaf7ffb5;
+  box-shadow:inset 0 0 30px #ffffff87,0 8px 24px #41acc515;
+}
+html body.brs-page main#main#main #morphagen .mgs-eyebrow { font-size:12px !important; line-height:1.6 !important; letter-spacing:.17em !important; color:#226692; font-weight:500 !important; text-transform:uppercase !important; }
+html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-eyebrow { margin-bottom:32px !important; }
+html body.brs-page main#main#main #morphagen .mgs-rail-title { font-size:clamp(30px,2.65cqw,44px) !important; }
+html body.brs-page main#main#main #morphagen .mgs-accent { display:block; flex:none; width:72px; height:4px; border-radius:4px; background:#27b5e4; margin:24px 0; }
+html body.brs-page main#main#main #morphagen .mgs-rail-benefit { font-size:clamp(26px,2.1cqw,34px) !important; line-height:1.22 !important; font-weight:700 !important; letter-spacing:-.025em; margin-bottom:18px !important; }
+html body.brs-page main#main#main #morphagen .mgs-subtitle { font-size:var(--arotec-supporting-size,24px) !important; line-height:var(--arotec-supporting-line-height,32px) !important; font-weight:var(--arotec-supporting-weight,500) !important; color:#24769b; margin-bottom:20px !important; }
+html body.brs-page main#main#main #morphagen .mgs-description { color:#315d84; margin-bottom:28px !important; }
+html body.brs-page main#main#main #morphagen .mgs-steps { display:grid; gap:24px; margin:6px 0 28px !important; }
+html body.brs-page main#main#main #morphagen .mgs-steps li { display:grid; grid-template-columns:38px minmax(0,1fr); gap:14px; align-items:start; }
+html body.brs-page main#main#main #morphagen .mgs-step,
+html body.brs-page main#main#main #morphagen .mgs-badge { display:grid; place-items:center; flex:none; width:38px; height:38px; border:1px solid white; border-radius:50%; background:#bcecf8; box-shadow:inset 0 0 12px white,0 3px 7px #2693b327; color:#075b87; font-size:23px; font-weight:700; line-height:1; }
+html body.brs-page main#main#main #morphagen .mgs-steps a { color:var(--mgs-ink); text-decoration:none; }
+html body.brs-page main#main#main #morphagen .mgs-steps strong { display:block; font-size:18px; line-height:1.4; }
+html body.brs-page main#main#main #morphagen .mgs-steps p { font-size:16px !important; line-height:1.5 !important; color:#315d84; margin-top:5px !important; }
+html body.brs-page main#main#main #morphagen .mgs-steps a:hover strong { text-decoration:underline; text-underline-offset:4px; }
+html body.brs-page main#main#main #morphagen .mgs-rail-art { display:block; width:100%; max-width:240px; margin:22px auto; }
+html body.brs-page main#main#main #morphagen .mgs-follicle-art { width:100%; max-width:300px; margin:24px auto; border-radius:18px; }
+html body.brs-page main#main#main #morphagen .mgs-rail-footer { margin-top:auto; padding:18px 8px 0; border-top:1px solid #9bcddf; }
+html body.brs-page main#main#main #morphagen .mgs-rail-footer p { font-size:12px !important; line-height:1.8 !important; letter-spacing:.13em; color:#27658b; }
+html body.brs-page main#main#main #morphagen .mgs-button { display:inline-flex; justify-content:center; align-items:center; align-self:flex-start; gap:18px; padding:12px 22px; max-width:100%; border:1px solid #77d5f1; border-radius:30px; background:#087fb9; box-shadow:inset 0 0 15px #48b9eb70; color:#fff; text-decoration:none; font-size:16px; font-weight:500; line-height:1.4; }
+html body.brs-page main#main#main #morphagen .mgs-button:hover { background:#056895; }
+html body.brs-page main#main#main #morphagen .mgs-button .ph { font-size:23px; }
+html body.brs-page main#main#main #morphagen .mgs-content { display:flex; flex-direction:column; gap:20px; }
+html body.brs-page main#main#main #morphagen .mgs-panel { padding:22px; border:2px solid #fff; border-radius:26px; background:#effaffad; box-shadow:inset 0 0 25px #ffffff70,0 6px 16px #2cbde41a; }
+html body.brs-page main#main#main #morphagen .mgs-content.mgs-panel { padding:24px; gap:24px; }
+html body.brs-page main#main#main #morphagen .mgs-label { display:flex; align-items:center; gap:16px; color:#246b99; margin-bottom:20px; }
+html body.brs-page main#main#main #morphagen .mgs-label :is(p,h3) { font-size:11px !important; line-height:1.6 !important; font-weight:500 !important; letter-spacing:.15em !important; }
+html body.brs-page main#main#main #morphagen .mgs-label > span { flex:1; border-top:1px solid #71b4da; min-width:15px; }
+html body.brs-page main#main#main #morphagen .mgs-system-heading { text-align:center; margin-bottom:20px; }
+html body.brs-page main#main#main #morphagen .mgs-system-heading h3 { font-size:clamp(42px,4cqw,64px) !important; margin-bottom:8px !important; }
+html body.brs-page main#main#main #morphagen .mgs-system-heading p { font-size:12px !important; line-height:1.6 !important; letter-spacing:.14em; color:#246b99; }
+html body.brs-page main#main#main #morphagen .mgs-caption { padding:10px 16px !important; border:1px solid white; border-radius:24px; background:#c5eee7b8; color:#073f4b !important; font-size:18px !important; font-weight:700 !important; line-height:1.4 !important; text-align:center; margin-bottom:18px !important; }
+html body.brs-page main#main#main #morphagen .mgs-ingredient-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+html body.brs-page main#main#main #morphagen .mgs-ingredients { display:grid; align-content:start; gap:12px; }
+html body.brs-page main#main#main #morphagen .mgs-ingredient { display:grid; grid-template-columns:76px minmax(0,1fr) 72px; align-items:center; gap:12px; padding:12px; border:1px solid white; border-radius:18px; background:#f7fcff96; }
+html body.brs-page main#main#main #morphagen .mgs-ingredient-copy { min-width:0; }
+html body.brs-page main#main#main #morphagen .mgs-ingredient-copy h4 { font-size:21px !important; line-height:1.25 !important; overflow-wrap:anywhere; margin-bottom:6px !important; }
+html body.brs-page main#main#main #morphagen .mgs-ingredient-copy p { font-size:16px !important; line-height:1.5 !important; color:#315f86; }
+html body.brs-page main#main#main #morphagen .mgs-art { display:block; position:relative; overflow:hidden; width:100%; min-width:0; align-self:center; }
+html body.brs-page main#main#main #morphagen .mgs-art > img { position:absolute !important; display:block; width:var(--mgs-image-width) !important; max-width:none !important; height:auto !important; left:var(--mgs-image-left) !important; top:var(--mgs-image-top) !important; margin:0 !important; padding:0 !important; border:0 !important; border-radius:0 !important; transform:none !important; object-fit:fill; }
+html body.brs-page main#main#main #morphagen .mgs-circle { border-radius:50%; }
+html body.brs-page main#main#main #morphagen .mgs-chemistry { justify-self:center; max-width:90px; }
+html body.brs-page main#main#main #morphagen .mgs-checklist { display:grid; gap:10px; }
+html body.brs-page main#main#main #morphagen .mgs-checklist li { display:flex; align-items:flex-start; gap:10px; min-width:0; }
+html body.brs-page main#main#main #morphagen .mgs-checklist .ph { font-size:25px; line-height:1.12; flex:none; color:var(--mgs-teal); margin-top:1px; }
+html body.brs-page main#main#main #morphagen .mgs-support-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+html body.brs-page main#main#main #morphagen .mgs-support-grid > * + * { border-left:1px solid #91c9d9; padding-left:22px; }
+html body.brs-page main#main#main #morphagen .mgs-panel-title { font-size:clamp(28px,2.6cqw,36px) !important; margin-bottom:20px !important; }
+html body.brs-page main#main#main #morphagen .mgs-section-title { font-size:32px !important; margin-bottom:12px !important; }
+html body.brs-page main#main#main #morphagen .mgs-intro { margin-bottom:24px; }
+html body.brs-page main#main#main #morphagen .mgs-intro p { color:#31658b; }
+html body.brs-page main#main#main #morphagen .mgs-pathways { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+html body.brs-page main#main#main #morphagen .mgs-pathway { min-width:0; display:flex; flex-direction:column; padding:14px; border:1px solid white; border-radius:20px; background:#f7fcffb8; box-shadow:0 4px 12px #79bdd31a; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-heading { display:flex; align-items:flex-start; gap:12px; padding-bottom:13px; border-bottom:1px solid #fff; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-heading > div { min-width:0; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-heading h4 { font-size:21px !important; margin-bottom:5px !important; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-heading p { font-size:13px !important; line-height:1.5 !important; color:#1e6587; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-body { display:grid; grid-template-columns:84px minmax(0,1fr); align-items:center; gap:14px; padding:16px 0; flex:1; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-body .mgs-checklist li { font-size:16px !important; line-height:1.5 !important; gap:8px; }
+html body.brs-page main#main#main #morphagen .mgs-pathway-body .mgs-checklist .ph { font-size:21px; }
+html body.brs-page main#main#main #morphagen .mgs-outcome { padding:6px 10px !important; border-radius:15px; background:#c6eaf0; color:#135d74 !important; text-align:center; font-size:12px !important; line-height:1.5 !important; font-weight:500 !important; letter-spacing:.08em; }
+html body.brs-page main#main#main #morphagen .mgs-pathway--wide { grid-column:1 / -1; }
+html body.brs-page main#main#main #morphagen .mgs-pathway--wide .mgs-checklist { grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:18px; }
+html body.brs-page main#main#main #morphagen .mgs-synergy { border:1px solid white; border-radius:22px; padding:20px; background:#e9f8ffbf; }
+html body.brs-page main#main#main #morphagen .mgs-synergy p { color:#255d84; font-size:16px !important; line-height:1.6 !important; }
+html body.brs-page main#main#main #morphagen .mgs-stressors { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:20px 14px; padding-top:14px !important; }
+html body.brs-page main#main#main #morphagen .mgs-stressors li { min-width:0; text-align:center; }
+html body.brs-page main#main#main #morphagen .mgs-stressors .mgs-art { max-width:96px; margin:0 auto 7px; }
+html body.brs-page main#main#main #morphagen .mgs-stressors p { font-size:15px !important; line-height:1.4 !important; }
+html body.brs-page main#main#main #morphagen .mgs-ros { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px; padding:16px 18px; margin-top:22px; border-top:1px solid #acd5e4; }
+html body.brs-page main#main#main #morphagen .mgs-ros .mgs-art { width:70px; flex:none; }
+html body.brs-page main#main#main #morphagen .mgs-ros h4 { font-size:30px !important; }
+html body.brs-page main#main#main #morphagen .mgs-ros p { font-size:16px !important; color:#a92939; }
+html body.brs-page main#main#main #morphagen .mgs-diagram-scroll { width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; padding:4px 0 12px; scrollbar-color:#7cb8d3 #e6f5fb; scrollbar-width:thin; }
+html body.brs-page main#main#main #morphagen .mgs-diagram { position:relative; container-type:inline-size; width:100%; min-width:800px; }
+html body.brs-page main#main#main #morphagen .mgs-diagram-label { position:absolute; display:flex; align-items:center; justify-content:center; padding:2px 3px; border-radius:7px; background:#e8f7ff; color:#092451; text-align:center; font-family:var(--arotec-font-family,"DM Sans",sans-serif) !important; font-size:clamp(12px,1.7cqw,18px) !important; line-height:1.1 !important; font-weight:400 !important; }
+html body.brs-page main#main#main #morphagen .mgs-diagram-label--green { background:#dbf8ec; }
+html body.brs-page main#main#main #morphagen .mgs-diagram-label:last-child { font-size:clamp(10px,1.15cqw,13px) !important; }
+html body.brs-page main#main#main #morphagen .mgs-diagram-label sup { align-self:center; transform:translateY(-.45em); }
+html body.brs-page main#main#main #morphagen .mgs-diagram-caption { padding-top:14px !important; color:#315f86 !important; }
+html body.brs-page main#main#main #morphagen .mgs-scroll-hint { display:none; font-size:13px !important; line-height:1.5 !important; color:#315f86 !important; }
+html body.brs-page main#main#main #morphagen .mgs-result { display:grid; grid-template-columns:90px minmax(0,1fr) auto; align-items:center; gap:20px; padding:20px; border:1px solid white; border-radius:24px; background:#edf9ffd1; }
+html body.brs-page main#main#main #morphagen .mgs-result h4 { font-size:24px !important; margin-bottom:7px !important; }
+html body.brs-page main#main#main #morphagen .mgs-result p { color:#315f86; font-size:16px !important; line-height:1.5 !important; }
+html body.brs-page main#main#main #morphagen .mgs-benefits { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+html body.brs-page main#main#main #morphagen .mgs-benefit { display:flex; flex-direction:column; position:relative; min-width:0; padding:26px 22px; border:1px solid white; border-radius:22px; background:#f2faffad; }
+html body.brs-page main#main#main #morphagen .mgs-benefit > .mgs-art { width:100px; align-self:flex-start; margin:0 0 18px; }
+html body.brs-page main#main#main #morphagen .mgs-benefit-number { position:absolute; top:17px; right:19px; font-size:18px; line-height:1; color:#4d92bc; }
+html body.brs-page main#main#main #morphagen .mgs-benefit h4 { font-size:24px !important; line-height:1.25 !important; margin-bottom:12px !important; }
+html body.brs-page main#main#main #morphagen .mgs-benefit p { color:#315f86; }
+html body.brs-page main#main#main #morphagen .mgs-benefit-themes { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 24px; padding:22px !important; border:1px solid white; border-radius:20px; background:#e9f8ffb8; }
+html body.brs-page main#main#main #morphagen .mgs-benefit-themes li { font-size:13px !important; line-height:1.5 !important; letter-spacing:.12em; color:#226692; }
+html body.brs-page main#main#main #morphagen .mgs-benefit-themes ul { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 22px; }
+html body.brs-page main#main#main #morphagen .mgs-benefit-themes p { font-size:13px !important; line-height:1.5 !important; color:#226692; }
+html body.brs-page main#main#main #morphagen .mgs-detail-link { display:inline-flex; align-items:center; gap:12px; align-self:flex-start; color:#156a96; font-size:16px; font-weight:500; text-decoration:none; text-underline-offset:4px; }
+html body.brs-page main#main#main #morphagen .mgs-detail-link:hover { text-decoration:underline; }
+@media (min-width:1200px) {
+  html body.brs-page main#main#main #morphagen .mgs-frame { width:calc(100% - var(--arotec-content-left,150px) - var(--arotec-content-right,150px)); margin-left:var(--arotec-content-left,150px); margin-right:var(--arotec-content-right,150px); }
+}
+@container (max-width:1050px) {
+  html body.brs-page main#main#main #morphagen .mgs-rail { padding:26px 20px 22px; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-title { font-size:30px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-columns { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient { grid-template-columns:72px minmax(0,1fr) 78px; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-body { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-body > .mgs-art { max-width:84px; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway--wide .mgs-pathway-body { grid-template-columns:84px minmax(0,1fr); }
+  html body.brs-page main#main#main #morphagen .mgs-pathway--wide .mgs-checklist { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-benefits { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  html body.brs-page main#main#main #morphagen .mgs-result { grid-template-columns:80px minmax(0,1fr); }
+  html body.brs-page main#main#main #morphagen .mgs-result .mgs-button { grid-column:2; justify-self:start; }
+  html body.brs-page main#main#main #morphagen .mgs-scroll-hint { display:block; }
+}
+@media (max-width:1099px) {
+  html body.brs-page main#main#main #morphagen .mgs-frame { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-rail { display:grid; grid-template-columns:1fr 1fr; column-gap:32px; align-items:start; }
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-eyebrow,
+  html body.brs-page main#main#main #morphagen .mgs-rail-title { grid-column:1 / -1; }
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-eyebrow { margin-bottom:22px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-title { font-size:42px !important; margin-bottom:24px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-accent { display:none; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-benefit,
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-subtitle { grid-column:1; }
+  html body.brs-page main#main#main #morphagen .mgs-description { grid-column:2; grid-row:3 / span 2; }
+  html body.brs-page main#main#main #morphagen .mgs-steps { grid-column:1; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-art { grid-column:2; grid-row:5 / span 2; max-width:210px; }
+  html body.brs-page main#main#main #morphagen .mgs-follicle-art { grid-column:1; grid-row:4 / span 2; max-width:115px; margin:16px auto; }
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-button { grid-column:1; justify-self:start; }
+  html body.brs-page main#main#main #morphagen .mgs-rail:has(.mgs-follicle-art) > .mgs-button { grid-column:2; grid-row:5; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-footer { grid-column:1 / -1; margin-top:24px; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-columns { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient { grid-template-columns:60px minmax(0,1fr) 60px; gap:10px; }
+}
+@media (max-width:799px) {
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-columns { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient { grid-template-columns:76px minmax(0,1fr) 72px; }
+}
+@media (max-width:699px) {
+  html body.brs-page main#main#main #morphagen .mgs-chapter { padding:24px 0; }
+  html body.brs-page main#main#main #morphagen .mgs-frame { width:calc(100% - 40px); margin-inline:20px; gap:20px; }
+  html body.brs-page main#main#main #morphagen .mgs-rail { display:flex; padding:26px 22px; border-radius:22px; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-title { font-size:34px !important; margin-bottom:0 !important; }
+  html body.brs-page main#main#main #morphagen .mgs-rail > .mgs-accent { display:block; margin:20px 0; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-benefit { font-size:28px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-subtitle { font-size:22px !important; line-height:30px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-art { max-width:200px; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-footer { width:100%; }
+  html body.brs-page main#main#main #morphagen .mgs-panel { padding:18px 12px; border-radius:20px; }
+  html body.brs-page main#main#main #morphagen .mgs-content.mgs-panel { padding:18px 12px; gap:20px; }
+  html body.brs-page main#main#main #morphagen .mgs-label { gap:10px; }
+  html body.brs-page main#main#main #morphagen .mgs-label :is(p,h3) { font-size:10px !important; letter-spacing:.12em !important; }
+  html body.brs-page main#main#main #morphagen .mgs-system-heading h3 { font-size:40px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-system-heading p { font-size:11px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-caption { font-size:16px !important; padding:10px 12px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient { grid-template-columns:60px minmax(0,1fr) 58px; gap:9px; padding:10px; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-copy h4 { font-size:18px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-copy p { font-size:14px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-support-grid { grid-template-columns:1fr; gap:10px; }
+  html body.brs-page main#main#main #morphagen .mgs-support-grid > * + * { border-left:0; padding-left:0; }
+  html body.brs-page main#main#main #morphagen .mgs-panel-title { font-size:26px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-section-title { font-size:28px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-pathways { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway--wide { grid-column:auto; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-body,
+  html body.brs-page main#main#main #morphagen .mgs-pathway--wide .mgs-pathway-body { grid-template-columns:68px minmax(0,1fr); gap:12px; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-heading h4 { font-size:20px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-stressors { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px 10px; }
+  html body.brs-page main#main#main #morphagen .mgs-stressors p { font-size:14px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-stressors .mgs-art { max-width:80px; }
+  html body.brs-page main#main#main #morphagen .mgs-ros { gap:10px; padding-inline:0; }
+  html body.brs-page main#main#main #morphagen .mgs-ros p { flex-basis:100%; text-align:center; }
+  html body.brs-page main#main#main #morphagen .mgs-result { grid-template-columns:68px minmax(0,1fr); gap:15px; padding:18px 14px; }
+  html body.brs-page main#main#main #morphagen .mgs-result h4 { font-size:22px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-result .mgs-button { grid-column:1 / -1; }
+  html body.brs-page main#main#main #morphagen .mgs-benefits { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-benefit { padding:24px; }
+  html body.brs-page main#main#main #morphagen .mgs-benefit > .mgs-art { width:100px; }
+  html body.brs-page main#main#main #morphagen .mgs-benefit-themes { gap:12px 18px; padding:20px 14px !important; }
+}
+@media (max-width:379px) {
+  html body.brs-page main#main#main #morphagen .mgs-rail { padding-inline:18px; }
+  html body.brs-page main#main#main #morphagen .mgs-rail-title { font-size:30px !important; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient { grid-template-columns:56px minmax(0,1fr); }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient > .mgs-art:last-child { grid-column:1; grid-row:2; width:56px; }
+  html body.brs-page main#main#main #morphagen .mgs-ingredient-copy { grid-column:2; grid-row:1 / span 2; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-body,
+  html body.brs-page main#main#main #morphagen .mgs-pathway--wide .mgs-pathway-body { grid-template-columns:1fr; }
+  html body.brs-page main#main#main #morphagen .mgs-pathway-body > .mgs-art { max-width:80px; }
+}
+@media (prefers-reduced-motion:reduce) { html body.brs-page main#main#main #morphagen * { scroll-behavior:auto !important; } }
