@@ -1,0 +1,274 @@
+/* September 2026 source artwork; foreground follows the shared home gutters. */
+body.dsw-reference-page {
+  --dsw-ink: #05294e;
+  --dsw-gutter: 6%;
+  color: var(--dsw-ink);
+  background: #fff;
+}
+@media (min-width: 1200px) {
+  body.dsw-reference-page { --dsw-gutter: var(--arotec-content-left, 150px); }
+}
+.dsw-reference-page #main {
+  margin: 0;
+  padding: var(--dsw-header-height, 110px) 0 0;
+  color: var(--dsw-ink);
+}
+#main .dsw-frame { margin-inline: var(--dsw-gutter); }
+#main .dsw-panel { position: relative; isolation: isolate; overflow: clip; width: 100%; box-sizing: border-box; }
+#main .dsw-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+#main .dsw-panel p, #main .dsw-panel dl, #main .dsw-panel figure { margin: 0; }
+body.dsw-reference-page #main :is(h1,h2,h3) { color: inherit; text-transform: none; }
+body.dsw-reference-page #main .dsw-display {
+  --arotec-display-size: clamp(34px, 5.8vw, 72px);
+  --arotec-display-line-height: 1.11;
+  width: 100% !important;
+  max-width: none !important;
+  font-size: var(--arotec-display-size) !important;
+  line-height: 1.11 !important;
+  font-weight: var(--arotec-display-weight) !important;
+  letter-spacing: -.02em !important;
+  margin: 0 0 12px !important;
+}
+body.dsw-reference-page #main .dsw-heading {
+  font-size: clamp(25px, 3.1vw, 40px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.02em !important;
+  margin: 0 0 28px !important;
+}
+#main .dsw-hero { aspect-ratio: 3840 / 2025; display: flex; align-items: flex-end; color: #fff; }
+@media (min-width: 901px) {
+  /* Fill the first desktop screen below the shared navigation. */
+  #main .dsw-hero {
+    aspect-ratio: auto;
+    min-height: calc(100vh - var(--dsw-header-height, 110px));
+    min-height: calc(100svh - var(--dsw-header-height, 110px));
+  }
+  #main .dsw-hero .dsw-backdrop { object-position: center 15%; }
+}
+#main .dsw-hero .dsw-frame { width: calc(100% - var(--dsw-gutter) * 2); text-align: center; padding-block: 24px 34px; }
+#main .dsw-japanese { font-size: clamp(18px, 2vw, 30px); font-weight: 700; letter-spacing: .16em; margin-bottom: 18px; }
+#main .dsw-hero .dsw-subtitle { font-size: var(--arotec-supporting-size); line-height: var(--arotec-supporting-line-height); font-weight: 500; }
+#main .dsw-hero .dsw-introduction { font-size: var(--arotec-body-size); line-height: var(--arotec-body-line-height); margin-top: 28px; }
+#main .dsw-origin-facts { min-height: 540px; aspect-ratio: 3840 / 1609; }
+#main .dsw-origin-facts .dsw-frame { padding-block: 42px; }
+#main .dsw-differences { width: 47%; }
+#main .dsw-differences .dsw-heading { font-size: clamp(25px, 2.2vw, 34px) !important; padding-bottom: 16px; border-bottom: 1px solid #8192a5; }
+#main .dsw-fact-list { display: grid; gap: 20px; list-style: none; margin: 0; padding: 0; }
+#main .dsw-fact-list li { display: flex; gap: 22px; align-items: center; font-size: 20px; line-height: 1.35; }
+#main .dsw-fact-list .ph { flex: 0 0 54px; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: #04294f; color: #fff; font-size: 34px; }
+#main .dsw-map { position: absolute; inset: 0 0 0 50%; }
+#main .dsw-map-label { position: absolute; font-size: 20px; font-weight: 600; line-height: 1.2; }
+#main .dsw-map-japan { left: 7%; top: 24%; font-size: 30px; }
+#main .dsw-map-kochi { left: 48%; top: 34%; }
+#main .dsw-map-cape { left: 74%; top: 61%; }
+#main .dsw-upwelling { aspect-ratio: 3840 / 1293; color: #fff; }
+#main .dsw-zone { position: absolute; left: 43%; width: 22%; font-size: 22px; line-height: 1.3; }
+#main .dsw-zone strong { display: block; font-weight: 600; }
+#main .dsw-zone span { display: block; font-size: 18px; margin-top: 4px; }
+#main .dsw-zone-surface { top: 40%; }
+#main .dsw-zone-deep { top: 79%; }
+#main .dsw-upwelling-stat { position: absolute; left: 69%; right: var(--dsw-gutter); top: 32%; border-left: 1px solid #9ccadf; padding-left: 24px; font-size: 25px; line-height: 1.22; color: #05294e; }
+#main .dsw-upwelling-stat p:first-child { white-space: nowrap; font-size: 20px; }
+#main .dsw-upwelling-stat strong { font-size: clamp(48px, 5.5vw, 90px); line-height: 1.1; font-weight: 700; }
+#main .dsw-upwelling-stat strong span { font-size: .55em; }
+#main .dsw-history { padding-block: 38px 28px; }
+#main .dsw-history .dsw-heading { display: flex; align-items: center; gap: 24px; justify-content: center; text-align: center; }
+#main .dsw-history .dsw-heading::before, #main .dsw-history .dsw-heading::after { content: ""; height: 1px; flex: 1; background: #9ba9ba; }
+#main .dsw-history-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+#main .dsw-history-list li { position: relative; text-align: center; display: flex; flex-direction: column; }
+#main .dsw-history-list li:not(:last-child)::after { content: ""; position: absolute; top: 0; bottom: 0; right: -14px; border-right: 1px solid #d2dae4; }
+#main .dsw-history-list li:last-child { border: 0; padding-right: 0; }
+body.dsw-reference-page #main .dsw-history-list h3 { font-size: 40px !important; line-height: 1.15 !important; margin: 0 0 8px !important; }
+#main .dsw-history-list p { font-size: 18px; line-height: 1.35; min-height: 74px; margin-bottom: 18px; }
+#main .dsw-history-list img { width: 100%; height: auto; aspect-ratio: 1.75; object-fit: contain; margin-top: auto; }
+#main .dsw-ribbon { min-height: 165px; aspect-ratio: 3840 / 568; display: grid; align-items: center; color: #fff; text-align: center; }
+#main .dsw-ribbon p { font-size: clamp(26px, 2.7vw, 40px); line-height: 1.3; }
+#main .dsw-depth-scene { aspect-ratio: 941 / 1105; color: #fff; }
+#main .dsw-depth-intro { position: absolute; top: 3%; left: var(--dsw-gutter); right: var(--dsw-gutter); color: #05294e; }
+#main .dsw-depth-intro .dsw-subtitle { color: #096bcc; font-size: 24px; line-height: 1.33; font-weight: 700; margin-bottom: 18px; }
+#main .dsw-depth-intro .dsw-description { width: 47%; max-width: 650px; font-size: 20px; line-height: 1.42; }
+#main .dsw-depth-levels { position: absolute; inset: 0; }
+#main .dsw-depth-level { position: absolute; left: var(--dsw-gutter); width: calc(35% - var(--dsw-gutter)); padding-right: 24px; }
+#main .dsw-depth-level dt { font-size: clamp(24px, 2.5vw, 36px); line-height: 1.1; font-weight: 700; }
+#main .dsw-depth-level dt { --arotec-body-size: clamp(24px, 2.5vw, 36px); --arotec-body-line-height: 1.1; font-weight: 700 !important; }
+#main .dsw-depth-level dt span { display: block; font-size: 22px; line-height: 1.25; margin-top: 4px; font-weight: 500; }
+#main .dsw-depth-level dd { font-size: 18px; line-height: 1.35; margin: 8px 0 0; }
+#main .dsw-depth-level dd { --arotec-body-size: 18px; --arotec-body-line-height: 1.35; }
+#main .dsw-level-sea { top: 34.4%; }
+#main .dsw-level-surface { top: 40.3%; }
+#main .dsw-level-thermocline { top: 52.9%; }
+#main .dsw-level-thermocline dt { font-size: 22px; color: #54e1f3; }
+#main .dsw-level-thermocline dt { --arotec-body-size: 22px; }
+#main .dsw-level-thermocline dt span { color: #fff; font-size: 20px; }
+#main .dsw-level-deep { top: 64.5%; }
+#main .dsw-level-intake { top: 78.3%; }
+#main .dsw-level-seabed { top: 94.1%; }
+#main .dsw-level-seabed dt { font-size: 24px; }
+#main .dsw-level-seabed dt { --arotec-body-size: 24px; }
+/* Diagram rules are semantic depth guides, separate from the supplied scene. */
+#main .dsw-depth-scale { position: absolute; top: 35.5%; bottom: 2.8%; left: 35%; width: 38%; border-left: 1px solid #d4f7ff; }
+#main .dsw-depth-guide { position: absolute; left: 0; width: 100%; border-top: 1px dashed #c0dfea; }
+#main .dsw-depth-guide::before { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #fff; left: -5px; top: -5px; }
+#main .dsw-guide-surface { top: 0; }
+#main .dsw-guide-thermocline { top: 25.8%; }
+#main .dsw-guide-deep { top: 44%; }
+#main .dsw-guide-intake { top: 69.5%; }
+#main .dsw-guide-intake-end { top: 75.2%; width: 93%; }
+#main .dsw-guide-seabed { top: 100%; width: 32%; }
+#main .dsw-comparison { padding-block: 36px 40px; }
+#main .dsw-comparison .dsw-heading { text-align: center; }
+#main .dsw-comparison table { table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0; font-size: 18px; line-height: 1.35; }
+#main .dsw-comparison col:first-child, #main .dsw-comparison col:last-child { width: 40%; }
+#main .dsw-comparison col:nth-child(2) { width: 20%; }
+#main .dsw-comparison th, #main .dsw-comparison td { padding: 22px 26px; text-align: left; border-bottom: 1px solid #dbe2ea; border-right: 1px solid #dbe2ea; vertical-align: middle; }
+#main .dsw-comparison td:first-child { border-left: 1px solid #dbe2ea; }
+#main .dsw-comparison thead th { text-align: center; background: #083e76; color: #fff; padding: 14px 18px; font-weight: 600; }
+#main .dsw-comparison thead th:first-child { border-radius: 12px 12px 0 0; }
+#main .dsw-comparison thead th:last-child { background: #479ee1; border-radius: 12px 12px 0 0; }
+#main .dsw-comparison thead .dsw-characteristic-heading { border: 0; background: #fff; }
+#main .dsw-comparison th small { font-size: .85em; font-weight: 400; }
+#main .dsw-comparison tbody th { background: #f5f8fb; font-size: 16px; font-weight: 500; padding-inline: 20px; }
+#main .dsw-characteristic { display: flex; align-items: center; gap: 16px; }
+#main .dsw-characteristic .ph { font-size: 30px; flex: 0 0 48px; width: 48px; height: 48px; border: 1px solid #083e76; border-radius: 50%; display: grid; place-items: center; }
+#main .dsw-closing { background: #052f60; color: #fff; padding-block: 42px; text-align: center; }
+body.dsw-reference-page #main .dsw-closing h2 { font-size: 30px !important; line-height: 1.3 !important; margin: 0 0 12px !important; }
+#main .dsw-closing p { font-size: 20px; line-height: 1.4; }
+/* Keep shared typography from flattening the reference's supporting hierarchy. */
+#main .dsw-japanese { --arotec-body-size: clamp(18px, 2.9vw, 36px); --arotec-body-line-height: 1.35; }
+#main .dsw-subtitle { --arotec-body-size: var(--arotec-supporting-size); --arotec-body-line-height: var(--arotec-supporting-line-height); }
+#main .dsw-fact-list li { --arotec-body-size: 20px; --arotec-body-line-height: 1.35; }
+#main .dsw-zone { --arotec-body-size: 22px; --arotec-body-line-height: 1.3; }
+#main .dsw-upwelling-stat { --arotec-body-size: 25px; --arotec-body-line-height: 1.22; }
+#main .dsw-upwelling-stat p:first-child { --arotec-body-size: 20px; }
+#main .dsw-history-list p { --arotec-body-size: 18px; --arotec-body-line-height: 1.35; }
+#main .dsw-ribbon p { --arotec-body-size: clamp(26px, 2.7vw, 40px); --arotec-body-line-height: 1.3; }
+#main .dsw-depth-intro .dsw-description { --arotec-body-size: 20px; --arotec-body-line-height: 1.42; }
+#main .dsw-closing p { --arotec-body-size: 20px; --arotec-body-line-height: 1.4; }
+#main .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (min-width: 901px) and (max-width: 1399px) {
+  #main .dsw-depth-level dd { --arotec-body-size: 16px; }
+  #main .dsw-upwelling-stat { top: 28%; --arotec-body-size: 22px; }
+  #main .dsw-upwelling-stat p:first-child { white-space: normal; --arotec-body-size: 18px; }
+  #main .dsw-upwelling-stat strong { display: inline-block; font-size: 56px; }
+  #main .dsw-comparison tbody th { font-size: 14px; padding-inline: 12px; }
+  #main .dsw-characteristic { gap: 10px; }
+  #main .dsw-characteristic .ph { flex-basis: 40px; width: 40px; height: 40px; font-size: 26px; }
+}
+@media (min-width: 1800px) {
+  #main .dsw-hero .dsw-frame { padding-bottom: 52px; }
+  #main .dsw-origin-facts .dsw-frame { padding-block: 70px; }
+  #main .dsw-fact-list { gap: 30px; }
+  #main .dsw-fact-list li { font-size: 24px; }
+  #main .dsw-depth-intro .dsw-description { font-size: 24px; }
+  #main .dsw-depth-level dd { font-size: 22px; }
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #main .dsw-origin-facts { min-height: 420px; }
+  #main .dsw-origin-facts .dsw-frame { padding-block: 24px; }
+  #main .dsw-fact-list { gap: 12px; }
+  #main .dsw-fact-list li { font-size: 17px; gap: 15px; }
+  #main .dsw-fact-list li { --arotec-body-size: 17px; }
+  #main .dsw-fact-list .ph { flex-basis: 42px; width: 42px; height: 42px; font-size: 27px; }
+  #main .dsw-upwelling { min-height: 340px; }
+  #main .dsw-zone { font-size: 20px; }
+  #main .dsw-zone span { font-size: 16px; }
+  #main .dsw-upwelling-stat { font-size: 20px; padding-left: 16px; }
+  #main .dsw-upwelling-stat { --arotec-body-size: 20px; }
+  #main .dsw-upwelling-stat p:first-child { font-size: 17px; }
+  #main .dsw-depth-intro .dsw-description { font-size: 17px; }
+  #main .dsw-depth-intro .dsw-description { --arotec-body-size: 17px; }
+  #main .dsw-depth-level dt { font-size: 26px; }
+  #main .dsw-depth-level dt { --arotec-body-size: 26px; }
+  #main .dsw-depth-level dt span { font-size: 18px; }
+  #main .dsw-depth-level dd { font-size: 16px; }
+  #main .dsw-depth-level dd { --arotec-body-size: 16px; }
+  #main .dsw-history-list p { --arotec-body-size: 15px; min-height: 60px; }
+  body.dsw-reference-page #main .dsw-history-list h3 { font-size: 34px !important; }
+  #main .dsw-comparison table { font-size: 16px; }
+  #main .dsw-comparison :is(td,th) { padding: 16px; }
+}
+@media (max-width: 900px) {
+  body.dsw-reference-page #main .dsw-display { --arotec-display-size: clamp(30px, 7.2vw, 48px); --arotec-display-line-height: 1.12; }
+  #main .dsw-hero .dsw-subtitle { --arotec-body-size: 18px; --arotec-body-line-height: 1.4; }
+  #main .dsw-hero .dsw-introduction { --arotec-body-size: 15px; --arotec-body-line-height: 1.45; }
+  #main .dsw-japanese { --arotec-body-size: 16px; }
+  #main .dsw-fact-list li { --arotec-body-size: 17px; }
+  #main .dsw-zone { --arotec-body-size: 17px; }
+  #main .dsw-upwelling-stat, #main .dsw-upwelling-stat p:first-child { --arotec-body-size: 22px; }
+  #main .dsw-history-list p { --arotec-body-size: 17px; }
+  #main .dsw-ribbon p { --arotec-body-size: 26px; }
+  #main .dsw-depth-intro .dsw-subtitle { --arotec-body-size: 18px; --arotec-body-line-height: 1.33; }
+  #main .dsw-depth-intro .dsw-description { --arotec-body-size: 15px; --arotec-body-line-height: 1.45; }
+  #main .dsw-closing p { --arotec-body-size: 17px; }
+  body.dsw-reference-page #main .dsw-display { font-size: clamp(30px, 7.2vw, 48px) !important; line-height: 1.12 !important; }
+  #main .dsw-hero { aspect-ratio: auto; min-height: 540px; }
+  #main .dsw-hero .dsw-backdrop { object-position: 50% 0; }
+  #main .dsw-hero .dsw-frame { padding-block: 240px 30px; }
+  #main .dsw-japanese { font-size: 16px; letter-spacing: .1em; margin-bottom: 14px; }
+  #main .dsw-hero .dsw-subtitle { font-size: 18px; line-height: 1.4; }
+  #main .dsw-hero .dsw-introduction { font-size: 15px; line-height: 1.45; margin-top: 20px; }
+  #main .dsw-introduction br { display: none; }
+  #main .dsw-origin-facts { min-height: 0; aspect-ratio: auto; padding-bottom: 75%; }
+  #main .dsw-origin-facts > .dsw-backdrop { height: auto; width: 195%; max-width: none; top: auto; bottom: 0; left: -94%; }
+  #main .dsw-origin-facts .dsw-frame { padding-block: 32px 12px; }
+  #main .dsw-differences { width: 100%; }
+  #main .dsw-fact-list { gap: 16px; }
+  #main .dsw-fact-list li { font-size: 17px; gap: 16px; }
+  #main .dsw-fact-list .ph { flex-basis: 44px; width: 44px; height: 44px; font-size: 28px; }
+  #main .dsw-map { inset: auto 0 0; height: 75vw; }
+  #main .dsw-map-label { font-size: 15px; }
+  #main .dsw-map-japan { left: 9%; top: 17%; font-size: 24px; }
+  #main .dsw-map-kochi { left: 47%; top: 29%; }
+  #main .dsw-map-cape { left: 74%; top: 57%; font-size: 13px; }
+  #main .dsw-upwelling { aspect-ratio: auto; padding-top: 66%; background: #052c55; }
+  #main .dsw-upwelling .dsw-backdrop { height: auto; width: 150%; max-width: none; object-fit: contain; object-position: left top; }
+  #main .dsw-zone { left: 45%; width: 51%; font-size: 17px; }
+  #main .dsw-zone span { font-size: 14px; }
+  #main .dsw-zone-surface { top: 22vw; }
+  #main .dsw-zone-deep { top: 45vw; }
+  #main .dsw-upwelling-stat { position: relative; inset: auto; margin: 0 var(--dsw-gutter); border: 0; padding: 18px 0 30px; color: #fff; font-size: 22px; text-align: center; }
+  #main .dsw-upwelling-stat p:first-child { font-size: 22px; }
+  #main .dsw-upwelling-stat strong { font-size: 64px; }
+  #main .dsw-history { padding-block: 32px; }
+  #main .dsw-history .dsw-heading { gap: 12px; }
+  #main .dsw-history-list { grid-template-columns: 1fr; gap: 28px; }
+  #main .dsw-history-list li { padding: 0 0 28px; border-right: 0; border-bottom: 1px solid #d2dae4; }
+  #main .dsw-history-list li::after { display: none; }
+  #main .dsw-history-list p { min-height: 0; max-width: 300px; align-self: center; font-size: 17px; }
+  #main .dsw-history-list img { max-width: 520px; align-self: center; }
+  #main .dsw-ribbon { aspect-ratio: auto; min-height: 155px; }
+  #main .dsw-ribbon p { font-size: 26px; }
+  #main .dsw-depth-scene { aspect-ratio: auto; background: #03274d; padding-bottom: 32px; }
+  #main .dsw-depth-scene > .dsw-backdrop { width: 100%; height: 680px; object-fit: cover; object-position: 63% top; }
+  #main .dsw-depth-intro { position: relative; inset: auto; padding-top: 30px; margin-inline: var(--dsw-gutter); min-height: 650px; }
+  #main .dsw-depth-intro .dsw-subtitle { font-size: 18px; margin: 12px 0; }
+  #main .dsw-depth-intro .dsw-description { width: 100%; max-width: 410px; font-size: 15px; line-height: 1.45; background: rgba(242,250,255,.9); padding: 12px; }
+  #main .dsw-depth-levels { position: relative; inset: auto; margin-inline: var(--dsw-gutter); border-left: 1px solid #7baec4; }
+  #main .dsw-depth-level { position: relative; inset: auto; width: auto; padding: 20px 0 20px 24px; border-top: 1px solid #416079; }
+  #main .dsw-depth-level:first-child { border-top: 0; }
+  #main .dsw-depth-level dt { font-size: 29px; }
+  #main .dsw-depth-level dt { --arotec-body-size: 29px; }
+  #main .dsw-depth-level dt span { font-size: 20px; }
+  #main .dsw-depth-level dd { font-size: 16px; line-height: 1.45; }
+  #main .dsw-depth-level dd { --arotec-body-size: 16px; --arotec-body-line-height: 1.45; }
+  #main .dsw-level-thermocline dt { font-size: 22px; }
+  #main .dsw-level-thermocline dt { --arotec-body-size: 22px; }
+  #main .dsw-depth-scale { display: none; }
+  #main .dsw-comparison { padding-block: 32px; }
+  #main .dsw-comparison table { font-size: 14px; line-height: 1.4; }
+  #main .dsw-comparison col:first-child, #main .dsw-comparison col:last-child { width: 35%; }
+  #main .dsw-comparison col:nth-child(2) { width: 30%; }
+  #main .dsw-comparison :is(th,td) { padding: 14px 8px; }
+  #main .dsw-comparison thead th { font-size: 13px; padding: 12px 6px; }
+  #main .dsw-comparison th small { display: block; }
+  #main .dsw-comparison tbody th { font-size: 12px; padding: 12px 4px; overflow-wrap: anywhere; }
+  #main .dsw-characteristic { flex-direction: column; gap: 8px; text-align: center; }
+  #main .dsw-characteristic .ph { flex-basis: 36px; width: 36px; height: 36px; font-size: 24px; }
+  #main .dsw-closing { padding-block: 32px; }
+  body.dsw-reference-page #main .dsw-closing h2 { font-size: 26px !important; }
+  #main .dsw-closing p { font-size: 17px; }
+}
+@media (max-width: 380px) {
+  #main .dsw-comparison table { font-size: 13px; }
+  #main .dsw-comparison tbody th { font-size: 11px; }
+}
