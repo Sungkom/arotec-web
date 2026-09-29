@@ -1,0 +1,151 @@
+/* Match the framed Applied Solutions layout while retaining the scent artwork,
+   font families, copy, icon journeys and shared navigation. */
+body.sc-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+
+.sc-main {
+  --sc-gutter: clamp(24px, 4.8cqw, 76px);
+  --sc-title-size: clamp(32px, 3.5cqw, 56px);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+
+.sc-main .sc-scene {
+  min-height: 42cqw;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8fbff;
+  box-shadow: 0 12px 42px #698fc014;
+}
+
+.sc-main .sc-scene[id],
+.sc-main .sc-heading[id] {
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+
+.sc-main .sc-copy {
+  position: relative;
+  margin-left: var(--sc-gutter);
+  width: 32%;
+  padding: 4cqw 0;
+}
+
+.sc-main .sc-scene-2 {
+  --sc-title-size: clamp(36px, 4.2cqw, 68px);
+  display: block;
+  min-height: 42cqw;
+}
+.sc-main .sc-scene-2 .sc-copy { width: 29%; padding-block: 4cqw; }
+.sc-main .sc-narrow { --sc-title-size: clamp(32px, 3.2cqw, 52px); }
+.sc-main .sc-narrow .sc-copy { width: 25.5%; }
+.sc-main .sc-scene-8 .sc-copy { width: 27%; }
+.sc-main .sc-scene-5 .sc-copy { width: 26%; }
+.sc-main .sc-scene-6 .sc-copy,
+.sc-main .sc-scene-7 .sc-copy { width: 27%; }
+.sc-main .sc-scene-5,
+.sc-main .sc-scene-6 { --sc-title-size: clamp(32px, 3.2cqw, 52px); }
+
+@media (min-width: 1000px) {
+  /* Left anchoring retains the white panel when longer copy makes a card taller. */
+  .sc-main .sc-backdrop { object-position: left center; }
+  .sc-main .sc-scene-2 .sc-backdrop { object-position: left bottom; }
+  html body.sc-page #main#main .sc-heading { margin-bottom: 1.5cqw !important; }
+  html body.sc-page #main#main .sc-copy > p { font-size: clamp(15px, 1.25cqw, 20px) !important; }
+  html body.sc-page #main#main .sc-copy > .sc-lead {
+    font-size: clamp(20px, 1.75cqw, 28px) !important;
+    margin-bottom: 1.4cqw;
+  }
+  html body.sc-page #main#main .sc-copy > .sc-note { margin-top: 1.8cqw; }
+  .sc-main .sc-steps,
+  .sc-main .sc-scene-2 .sc-steps { gap: 1.1cqw; margin-top: 2cqw; }
+  .sc-main .sc-icon { width: 4.5cqw; height: 4.5cqw; }
+  html body.sc-page #main#main .sc-steps > li { gap: .65cqw; }
+  html body.sc-page #main#main .sc-step-label { font-size: clamp(9px, .78cqw, 13px) !important; }
+  html body.sc-page #main#main .sc-step-arrow { right: -1.1cqw; top: 1.5cqw; font-size: 1.5cqw !important; }
+  .sc-main .sc-scene-5 .sc-steps { width: 100%; }
+  html body.sc-page #main#main .sc-scene-5 .sc-note { width: 100%; }
+}
+
+/* Keep the icon labels readable in the narrower desktop panels. */
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .sc-main { --sc-gutter: 28px; }
+  .sc-main .sc-scene-2 { --sc-title-size: 36px; }
+  .sc-main .sc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
+  .sc-main .sc-scene-2 .sc-steps,
+  .sc-main .sc-scene-7 .sc-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 16px; }
+  .sc-main .sc-icon { width: 44px; height: 44px; }
+  html body.sc-page #main#main .sc-step-arrow { top: 14px; right: -20px; font-size: 18px !important; }
+  .sc-main .sc-scene:not(.sc-scene-2):not(.sc-scene-7) .sc-steps > li:nth-child(2n) .sc-step-arrow { display: none; }
+  .sc-main .sc-scene-2 .sc-steps > li:nth-child(3n) .sc-step-arrow,
+  .sc-main .sc-scene-7 .sc-steps > li:nth-child(3n) .sc-step-arrow { display: none; }
+}
+
+@media (width < 1000px) {
+  .sc-main {
+    --sc-gutter: 28px;
+    width: calc(100% - 40px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px);
+  }
+  .sc-main .sc-scene,
+  .sc-main .sc-scene-2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: 24px;
+  }
+  .sc-main,
+  .sc-main .sc-scene { --sc-title-size: clamp(34px, 5.7vw, 56px); }
+  .sc-main .sc-picture { position: relative; inset: auto; height: auto; z-index: auto; }
+  .sc-main .sc-backdrop { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center bottom; }
+  .sc-main .sc-scene-4 .sc-backdrop { object-position: center 30%; }
+  /* Keep the focal details of the supplied wide mobile artwork visible. */
+  .sc-main .sc-scene-2 .sc-backdrop { object-position: 70% center; }
+  .sc-main .sc-scene-3 .sc-backdrop { object-position: 80% center; }
+  .sc-main .sc-scene-5 .sc-backdrop { object-position: 75% center; }
+  .sc-main .sc-scene-6 .sc-backdrop { object-position: 90% center; }
+  .sc-main .sc-scene-7 .sc-backdrop { object-position: right center; }
+  .sc-main .sc-copy,
+  .sc-main .sc-scene .sc-copy,
+  .sc-main .sc-narrow .sc-copy,
+  .sc-main .sc-scene-2 .sc-copy,
+  .sc-main .sc-scene-8 .sc-copy { width: auto; margin: 0; padding: 28px var(--sc-gutter) 36px; }
+  .sc-main .sc-reference-break { display: none; }
+  html body.sc-page #main#main .sc-heading { margin-bottom: 20px !important; }
+  html body.sc-page #main#main .sc-copy > p { font-size: 17px !important; }
+  html body.sc-page #main#main .sc-copy > .sc-lead { font-size: 23px !important; margin-bottom: 18px; }
+  html body.sc-page #main#main .sc-copy > .sc-note { margin-top: 24px; }
+  .sc-main .sc-steps { gap: 24px; margin-top: 24px; }
+  .sc-main .sc-icon { width: 56px; height: 56px; }
+  html body.sc-page #main#main .sc-steps > li { gap: 8px; }
+  html body.sc-page #main#main .sc-step-label { font-size: 12px !important; }
+  html body.sc-page #main#main .sc-step-arrow { top: 17px; right: -24px; font-size: 22px !important; }
+}
+
+@media (max-width: 699px) {
+  .sc-main .sc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+  .sc-main .sc-scene-2 .sc-steps,
+  .sc-main .sc-scene-7 .sc-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sc-main .sc-scene:not(.sc-scene-2):not(.sc-scene-7) .sc-steps > li:nth-child(2n) .sc-step-arrow { display: none; }
+  .sc-main .sc-scene-2 .sc-steps > li:nth-child(3n) .sc-step-arrow,
+  .sc-main .sc-scene-7 .sc-steps > li:nth-child(3n) .sc-step-arrow { display: none; }
+  html body.sc-page #main#main .sc-step-arrow { right: -20px; font-size: 20px !important; }
+}
+
+@media (max-width: 599px) {
+  .sc-main { --sc-gutter: 22px; width: calc(100% - 28px); padding-bottom: 16px; }
+  .sc-main,
+  .sc-main .sc-scene { --sc-title-size: clamp(30px, 8.2vw, 46px); }
+  .sc-main .sc-scene { border-radius: 20px; margin-bottom: 20px; }
+  .sc-main .sc-backdrop { aspect-ratio: 1.3; }
+  html body.sc-page #main#main .sc-copy > p { font-size: 16px !important; }
+  html body.sc-page #main#main .sc-copy > .sc-lead { font-size: 21px !important; }
+  html body.sc-page #main#main .sc-step-label { font-size: 11px !important; }
+}

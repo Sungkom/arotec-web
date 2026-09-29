@@ -1,0 +1,159 @@
+/* Framed layout shared visually with Applied Solutions.
+   The original page retains its artwork, typefaces, copy and icon sequences. */
+body.sb-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+
+.sb-main {
+  --sb-gutter: clamp(24px, 4.8cqw, 76px);
+  --sb-heading-size: clamp(34px, 3.85cqw, 62px);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+
+.sb-main .sb-scene {
+  min-height: 42cqw;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8fbff;
+  box-shadow: 0 12px 42px #698fc014;
+}
+
+.sb-main .sb-scene[id],
+.sb-main .sb-heading[id],
+.sb-main .sb-legacy-anchor {
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+
+.sb-main .sb-copy {
+  position: relative;
+  top: auto;
+  left: var(--sb-gutter);
+  width: 44%;
+  padding: 3.6cqw 0;
+  transform: none;
+}
+
+.sb-main .sb-scene-1 {
+  --sb-heading-size: clamp(36px, 4.2cqw, 68px);
+  height: auto;
+  min-height: 42cqw;
+}
+
+.sb-main .sb-scene-3 { min-height: 46cqw; }
+.sb-main .sb-scene-6 { min-height: 50cqw; }
+
+@media (min-width: 1000px) {
+  html body.sb-page #main#main .sb-heading { margin-bottom: 1.4cqw !important; }
+  html body.sb-page #main#main .sb-copy > .sb-body {
+    font-size: clamp(15px, 1.4cqw, 23px) !important;
+    margin-bottom: 1.2cqw;
+  }
+  html body.sb-page #main#main .sb-copy > .sb-lead {
+    font-size: clamp(20px, 1.95cqw, 32px) !important;
+    margin-bottom: 1.1cqw;
+  }
+
+  .sb-main .sb-steps { gap: 1cqw; margin-top: 1.8cqw; }
+  html body.sb-page #main#main .sb-steps > li { gap: .65cqw; font-size: clamp(9px, .9cqw, 14px) !important; }
+  .sb-main .sb-icon { width: 4.5cqw; height: 4.5cqw; }
+  html body.sb-page #main#main .sb-icon > .ph { font-size: clamp(25px, 2.8cqw, 45px) !important; }
+  html body.sb-page #main#main .sb-steps > li:not(:last-child)::after { right: -1cqw; top: 1.55cqw; font-size: 1.4cqw !important; }
+  html body.sb-page #main#main .sb-scene-7 .sb-steps > li:not(:last-child)::after { width: 1.5cqw; right: -1.25cqw; top: 2.25cqw; }
+
+  .sb-main .sb-comparison { grid-template-columns: minmax(0, 1fr) 2.2cqw minmax(0, 1fr); gap: .8cqw; margin-top: 1.8cqw; }
+  .sb-main .sb-compare-card { padding: 1.2cqw 1cqw; }
+  html body.sb-page #main#main .sb-compare-card h3 { font-size: clamp(12px, 1.05cqw, 17px) !important; margin-bottom: 1cqw !important; }
+  .sb-main .sb-compare-list { gap: .8cqw; }
+  html body.sb-page #main#main .sb-compare-list > li { gap: .65cqw; font-size: clamp(12px, 1.1cqw, 18px) !important; }
+  .sb-main .sb-compare-list .sb-icon { width: 3cqw; height: 3cqw; }
+  html body.sb-page #main#main .sb-compare-list .sb-icon > .ph { font-size: 2cqw !important; }
+  .sb-main .sb-versus { font-size: clamp(16px, 1.55cqw, 25px); gap: .65cqw; }
+  .sb-main .sb-versus::before, .sb-main .sb-versus::after { height: 3cqw; }
+
+  .sb-main .sb-cards { gap: .85cqw; margin-top: 1.8cqw; }
+  .sb-main .sb-card { padding: 1.2cqw .8cqw; }
+  html body.sb-page #main#main .sb-card h3 { font-size: clamp(12px, 1.05cqw, 17px) !important; margin-bottom: .8cqw !important; }
+  .sb-main .sb-card .sb-icon { width: 4.5cqw; height: 4.5cqw; margin-bottom: .9cqw; }
+  html body.sb-page #main#main .sb-card p { font-size: clamp(12px, 1.1cqw, 18px) !important; margin: 0; }
+  .sb-main .sb-cards-4 .sb-card { padding: 1cqw .6cqw; }
+  html body.sb-page #main#main .sb-cards-4 .sb-card h3 { font-size: clamp(10px, .94cqw, 15px) !important; }
+  .sb-main .sb-cards-4 .sb-card .sb-icon { width: 3.6cqw; height: 3.6cqw; margin-bottom: .8cqw; }
+  html body.sb-page #main#main .sb-cards-4 .sb-icon > .ph { font-size: 2.25cqw !important; }
+  html body.sb-page #main#main .sb-cards-4 .sb-card p { font-size: clamp(12px, 1cqw, 16px) !important; }
+
+  .sb-main .sb-feature-cards { gap: .85cqw; margin-top: 1.8cqw; }
+  .sb-main .sb-feature-card { gap: .8cqw; padding: 1cqw; }
+  .sb-main .sb-feature-card .sb-icon { width: 4.6cqw; height: 4.6cqw; }
+  html body.sb-page #main#main .sb-feature-card .sb-icon > .ph { font-size: 2.9cqw !important; }
+  html body.sb-page #main#main .sb-feature-card h3 { font-size: clamp(14px, 1.25cqw, 20px) !important; margin-bottom: .5cqw !important; }
+  html body.sb-page #main#main .sb-feature-card p { font-size: clamp(12px, 1.05cqw, 17px) !important; margin: 0; }
+  .sb-main .sb-scene-6 .sb-cards { margin-top: .85cqw; }
+  .sb-main .sb-scene-6 .sb-card .sb-icon { width: 2.6cqw; height: 2.6cqw; margin-bottom: .6cqw; }
+  html body.sb-page #main#main .sb-scene-6 .sb-card .sb-icon > .ph { font-size: 2.4cqw !important; }
+}
+
+/* Dense sections stay in normal flow so no comparison or card is clipped. */
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .sb-main { --sb-gutter: 28px; --sb-heading-size: 34px; }
+  .sb-main .sb-scene-1 { --sb-heading-size: 36px; }
+  .sb-main .sb-copy { width: 46%; }
+}
+
+@media (width < 1000px) {
+  .sb-main {
+    --sb-gutter: 28px;
+    --sb-heading-size: clamp(34px, 5.7vw, 56px);
+    width: calc(100% - 40px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px);
+  }
+  .sb-main .sb-scene,
+  .sb-main .sb-scene-1 {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: 24px;
+  }
+  .sb-main .sb-scene-1 { --sb-heading-size: clamp(34px, 5.7vw, 56px); }
+  .sb-main .sb-picture { position: relative; inset: auto; height: auto; z-index: auto; }
+  .sb-main .sb-backdrop { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+  /* Keep the focal details of the supplied wide artwork inside small frames. */
+  .sb-main .sb-scene-1 .sb-backdrop { object-position: 75% center; }
+  .sb-main .sb-scene-2 .sb-backdrop { object-position: 80% center; }
+  .sb-main .sb-scene-3 .sb-backdrop { object-position: 65% center; }
+  .sb-main .sb-scene-4 .sb-backdrop { object-position: 90% center; }
+  .sb-main .sb-scene-5 .sb-backdrop { object-position: 85% center; }
+  .sb-main .sb-scene-6 .sb-backdrop { object-position: right center; }
+  .sb-main .sb-scene-7 .sb-backdrop { object-position: 75% center; }
+  .sb-main .sb-copy { inset: auto; width: auto; padding: 28px var(--sb-gutter) 36px; transform: none; }
+  html body.sb-page #main#main .sb-heading { margin-bottom: 20px !important; }
+  html body.sb-page #main#main .sb-copy > .sb-body { font-size: 17px !important; margin-bottom: 18px; }
+  html body.sb-page #main#main .sb-copy > .sb-lead { font-size: 23px !important; margin-bottom: 18px; }
+  .sb-main .sb-steps { margin-top: 24px; }
+  .sb-main .sb-steps .sb-icon { width: 56px; height: 56px; }
+  html body.sb-page #main#main .sb-steps .sb-icon > .ph { font-size: 32px !important; }
+  html body.sb-page #main#main .sb-steps > li:not(:last-child)::after { top: 17px; }
+  html body.sb-page #main#main .sb-scene-7 .sb-steps > li:not(:last-child)::after { top: 28px; }
+}
+
+@media (max-width: 599px) {
+  .sb-main { --sb-gutter: 22px; width: calc(100% - 28px); padding-bottom: 16px; }
+  .sb-main, .sb-main .sb-scene-1 { --sb-heading-size: clamp(30px, 8.2vw, 46px); }
+  .sb-main .sb-scene { border-radius: 20px; margin-bottom: 20px; }
+  .sb-main .sb-backdrop { aspect-ratio: 1.3; }
+  html body.sb-page #main#main .sb-copy > .sb-body { font-size: 16px !important; }
+  html body.sb-page #main#main .sb-copy > .sb-lead { font-size: 21px !important; }
+}
+
+@media (max-width: 359px) {
+  .sb-main .sb-steps { column-gap: 10px; }
+  html body.sb-page #main#main .sb-steps > li:not(:last-child)::after { right: -10px; font-size: 18px !important; }
+  html body.sb-page #main#main .sb-scene-7 .sb-steps > li:not(:last-child)::after { right: -10px; width: 10px; }
+}

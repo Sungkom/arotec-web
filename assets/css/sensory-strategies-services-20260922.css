@@ -127,7 +127,7 @@ html body.sv-page #main#main .sv-outcomes p { font-size: clamp(10px, .88vw, 18px
   html body.sv-page #main#main .sv-scene-2 .sv-card h3 { font-size: clamp(14px, min(1.36vw, 2.3svh), 27px) !important; }
   html body.sv-page #main#main .sv-scene-2 .sv-card p { font-size: clamp(12px, min(1.08vw, 1.95svh), 21px) !important; }
 }
-@media (max-width: 999px) {
+@media (width < 1000px) {
   .sv-main { --sv-gutter: 32px; --sv-title: clamp(36px, 5.5vw, 56px); --sv-card-min: 0px; }
   .sv-main .sv-scene { min-height: 0; display: flex; flex-direction: column; background: #faf9f6; }
   .sv-picture { position: relative; inset: auto; z-index: auto; order: 0; }

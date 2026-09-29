@@ -1,0 +1,155 @@
+/* Match the framed Applied Solutions layout, retaining the feeling page's
+   artwork, typography, icon journeys and shared navigation. */
+body.sf-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+
+.sf-main {
+  --sf-gutter: clamp(24px, 4.8cqw, 76px);
+  --sf-heading-size: clamp(32px, 3.5cqw, 56px);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+
+body.sf-page #main .sf-scene {
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+}
+
+.sf-main .sf-scene {
+  min-height: 42cqw;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8fbff;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+
+.sf-main .sf-copy {
+  left: var(--sf-gutter);
+  width: 32%;
+  padding: 4cqw 0;
+}
+
+.sf-main .sf-right .sf-copy {
+  left: 66%;
+  width: calc(34% - var(--sf-gutter));
+}
+
+.sf-main .sf-first {
+  --sf-heading-size: clamp(36px, 4.2cqw, 68px);
+  min-height: 34cqw;
+}
+
+.sf-main .sf-first .sf-copy { padding-block: 4.2cqw; }
+.sf-main .sf-right,
+.sf-main .sf-impressions,
+.sf-main .sf-atmosphere,
+.sf-main .sf-felt { --sf-heading-size: clamp(32px, 3.2cqw, 52px); }
+
+html body.sf-page #main#main .sf-heading { margin-bottom: 1.5cqw !important; }
+html body.sf-page #main#main .sf-copy > p {
+  font-size: clamp(15px, 1.4cqw, 23px) !important;
+  margin-bottom: 1.3cqw;
+}
+html body.sf-page #main#main .sf-copy > .sf-lead {
+  font-size: clamp(21px, 2.1cqw, 34px) !important;
+  margin: 0 0 1.8cqw;
+}
+html body.sf-page #main#main .sf-body:last-child { margin-bottom: 0; }
+
+.sf-main .sf-steps { gap: 1.2cqw; margin-top: 2.2cqw; }
+.sf-main .sf-icon { width: 4.7cqw; height: 4.7cqw; }
+html body.sf-page #main#main .sf-steps > li {
+  gap: .65cqw;
+  font-size: clamp(10px, .94cqw, 15px) !important;
+}
+html body.sf-page #main#main .sf-icon > .ph { font-size: clamp(25px, 2.85cqw, 46px) !important; }
+html body.sf-page #main#main .sf-steps > li:not(:last-child)::after {
+  top: 1.6cqw;
+  right: -1.2cqw;
+  font-size: clamp(17px, 1.5cqw, 24px) !important;
+}
+
+/* These two artworks have a narrower white panel around the icon journey. */
+@media (min-width: 1000px) {
+  .sf-main .sf-impressions .sf-copy,
+  .sf-main .sf-felt .sf-copy { width: 30%; }
+}
+
+/* Longer copy sets the card height at narrow desktop widths. */
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .sf-main { --sf-gutter: 28px; }
+  .sf-main .sf-copy { width: 33%; }
+  .sf-main .sf-right .sf-copy { width: calc(34% - var(--sf-gutter)); }
+  .sf-main .sf-first { --sf-heading-size: 36px; }
+  .sf-main .sf-first .sf-copy { padding-block: 36px; }
+  .sf-main .sf-icon { width: 44px; height: 44px; }
+  html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { top: 14px; }
+}
+
+/* Keep the supplied mobile artwork and copy in one framed card. */
+@media (width < 1000px) {
+  .sf-main {
+    --sf-gutter: 28px;
+    width: calc(100% - 40px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px);
+  }
+  .sf-main .sf-scene,
+  .sf-main .sf-first {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: 24px;
+  }
+  .sf-main,
+  .sf-main .sf-first,
+  .sf-main .sf-right,
+  .sf-main .sf-impressions,
+  .sf-main .sf-atmosphere,
+  .sf-main .sf-felt { --sf-heading-size: clamp(34px, 5.7vw, 56px); }
+  .sf-main .sf-picture { position: relative; inset: auto; height: auto; z-index: auto; }
+  .sf-main .sf-backdrop { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+  /* Keep the subjects visible when the landscape artwork fills a narrow card. */
+  .sf-main .sf-first .sf-backdrop,
+  .sf-main .sf-impressions .sf-backdrop,
+  .sf-main .sf-atmosphere .sf-backdrop,
+  .sf-main .sf-felt .sf-backdrop { object-position: right center; }
+  .sf-main .sf-memory .sf-backdrop,
+  .sf-main .sf-choice .sf-backdrop { object-position: left center; }
+  .sf-main .sf-copy,
+  .sf-main .sf-right .sf-copy,
+  .sf-main .sf-first .sf-copy { position: relative; left: auto; width: auto; padding: 28px var(--sf-gutter) 36px; }
+  html body.sf-page #main#main .sf-heading { margin-bottom: 20px !important; }
+  html body.sf-page #main#main .sf-copy > p { font-size: 17px !important; margin-bottom: 18px; }
+  html body.sf-page #main#main .sf-copy > .sf-lead { font-size: 23px !important; margin: 0 0 18px; }
+  .sf-main .sf-copy-break { display: none; }
+  .sf-main .sf-steps { gap: 28px; margin-top: 24px; }
+  .sf-main .sf-icon { width: 56px; height: 56px; }
+  html body.sf-page #main#main .sf-steps > li { gap: 8px; font-size: 12px !important; }
+  html body.sf-page #main#main .sf-icon > .ph { font-size: 32px !important; }
+  html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { top: 17px; right: -25px; font-size: 22px !important; }
+}
+
+@media (max-width: 599px) {
+  .sf-main { --sf-gutter: 22px; width: calc(100% - 28px); padding-bottom: 16px; }
+  .sf-main .sf-scene { border-radius: 20px; margin-bottom: 20px; }
+  .sf-main,
+  .sf-main .sf-first,
+  .sf-main .sf-right,
+  .sf-main .sf-impressions,
+  .sf-main .sf-atmosphere,
+  .sf-main .sf-felt { --sf-heading-size: clamp(30px, 8.2vw, 46px); }
+  .sf-main .sf-backdrop { aspect-ratio: 1.3; }
+  html body.sf-page #main#main .sf-copy > p { font-size: 16px !important; }
+  html body.sf-page #main#main .sf-copy > .sf-lead { font-size: 21px !important; }
+  .sf-main .sf-steps { gap: 26px 20px; }
+  html body.sf-page #main#main .sf-steps > li:not(:last-child)::after { right: -18px; font-size: 20px !important; }
+}

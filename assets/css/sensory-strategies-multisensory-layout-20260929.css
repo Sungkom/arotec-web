@@ -1,0 +1,141 @@
+/* Applied Solutions framing, retaining this page's artwork and icon sprites. */
+body.ms-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+
+.ms-main {
+  --ms-gutter: clamp(24px, 4.8cqw, 76px);
+  --ms-title-size: clamp(32px, 3.5cqw, 56px);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+
+.ms-main .ms-scene {
+  min-height: 42cqw;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8fbff;
+  box-shadow: 0 12px 42px #698fc014;
+}
+
+.ms-main .ms-scene[id],
+.ms-main .ms-heading[id] {
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+
+.ms-main .ms-copy {
+  position: relative;
+  width: 32%;
+  margin-left: var(--ms-gutter);
+  padding: 4cqw 0;
+}
+
+.ms-main .ms-hero {
+  --ms-title-size: clamp(36px, 3.9cqw, 64px);
+  display: block;
+  min-height: 42cqw;
+}
+.ms-main .ms-hero .ms-copy { width: 34%; padding-block: 4cqw; }
+.ms-main .ms-story { --ms-title-size: clamp(32px, 3.35cqw, 54px); }
+.ms-main .ms-story .ms-copy { width: 33%; }
+.ms-main .ms-touch { --ms-title-size: clamp(30px, 3.2cqw, 52px); }
+.ms-main .ms-touch .ms-copy { width: 28%; }
+.ms-main .ms-texture { --ms-title-size: clamp(30px, 3.2cqw, 52px); }
+.ms-main .ms-temperature { --ms-title-size: clamp(28px, 2.8cqw, 44px); }
+
+@media (min-width: 1000px) {
+  /* Preserve the lit wall behind the copy when a card grows taller. */
+  .ms-main .ms-backdrop,
+  .ms-main .ms-hero .ms-backdrop { object-position: left center; }
+  .ms-main .ms-touch .ms-picture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f8fbffc7 0%, #f8fbffb3 34%, #f8fbff00 47%);
+  }
+  html body.ms-page #main#main .ms-heading { margin-bottom: 1.5cqw !important; }
+  html body.ms-page #main#main .ms-copy > .ms-eyebrow {
+    font-size: clamp(11px, 1.08cqw, 17px) !important;
+    margin-bottom: 1.4cqw;
+  }
+  html body.ms-page #main#main .ms-lead,
+  html body.ms-page #main#main .ms-touch .ms-lead {
+    font-size: clamp(20px, 1.75cqw, 28px) !important;
+    margin-bottom: 1.4cqw;
+  }
+  html body.ms-page #main#main .ms-body,
+  html body.ms-page #main#main .ms-touch .ms-body {
+    font-size: clamp(15px, 1.25cqw, 20px) !important;
+  }
+  .ms-main .ms-features { margin-top: 2cqw; }
+  .ms-main .ms-features > li { padding-inline: .4cqw; gap: .65cqw; }
+  .ms-main .ms-icon { width: 4.7cqw; height: 4.7cqw; }
+  html body.ms-page #main#main .ms-label { font-size: clamp(10px, .9cqw, 14px) !important; }
+  .ms-main .ms-taste .ms-features > li + li::before {
+    right: calc(100% - .55cqw);
+    top: 2.35cqw;
+    width: 1.1cqw;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .ms-main { --ms-gutter: 28px; }
+  .ms-main .ms-hero { --ms-title-size: 36px; }
+  .ms-main .ms-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 16px; }
+  .ms-main .ms-features > li:nth-child(3) { border-left: 0; }
+  .ms-main .ms-icon { width: 48px; height: 48px; }
+  .ms-main .ms-taste .ms-features > li + li::before { display: none; }
+}
+
+@media (width < 1000px) {
+  .ms-main {
+    --ms-gutter: 28px;
+    width: calc(100% - 40px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px);
+  }
+  .ms-main .ms-scene,
+  .ms-main .ms-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: 24px;
+  }
+  .ms-main,
+  .ms-main .ms-scene { --ms-title-size: clamp(34px, 5.7vw, 56px); }
+  .ms-main .ms-picture { position: relative; inset: auto; height: auto; z-index: auto; }
+  .ms-main .ms-backdrop { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: right center; }
+  .ms-main .ms-copy,
+  .ms-main .ms-scene .ms-copy,
+  .ms-main .ms-hero .ms-copy { width: auto; margin: 0; padding: 28px var(--ms-gutter) 36px; }
+  html body.ms-page #main#main .ms-copy > .ms-eyebrow { font-size: 11px !important; margin-bottom: 20px; }
+  html body.ms-page #main#main .ms-heading { margin-bottom: 20px !important; }
+  html body.ms-page #main#main .ms-lead { font-size: 23px !important; margin-bottom: 18px; }
+  html body.ms-page #main#main .ms-body { font-size: 17px !important; line-height: 1.5 !important; }
+  .ms-main .ms-features { gap: 24px; margin-top: 24px; }
+  .ms-main .ms-features > li { gap: 8px; padding: 0; }
+  .ms-main .ms-icon { width: 56px; height: 56px; }
+  html body.ms-page #main#main .ms-label { font-size: 12px !important; }
+}
+
+@media (max-width: 699px) {
+  .ms-main .ms-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+  .ms-main .ms-features > li:nth-child(3) { border-left: 0; }
+}
+
+@media (max-width: 599px) {
+  .ms-main { --ms-gutter: 22px; width: calc(100% - 28px); padding-bottom: 16px; }
+  .ms-main,
+  .ms-main .ms-scene { --ms-title-size: clamp(30px, 8.2vw, 46px); }
+  .ms-main .ms-scene { border-radius: 20px; margin-bottom: 20px; }
+  .ms-main .ms-backdrop { aspect-ratio: 1.3; }
+  html body.ms-page #main#main .ms-lead { font-size: 21px !important; }
+  html body.ms-page #main#main .ms-body { font-size: 16px !important; }
+  html body.ms-page #main#main .ms-label { font-size: 11px !important; }
+}

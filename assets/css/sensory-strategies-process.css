@@ -74,7 +74,7 @@ html body.sensory-process-page main#main .spc-map-group h3 { font-size:clamp(16p
   html body.sensory-process-page main#main .spc-description { font-size:16px !important; }
 }
 /* Reflow text and labels instead of shrinking an entire slide on mobile. */
-@media (max-width:1199px) {
+@media (width < 1200px) {
   html body.sensory-process-page main#main { --spc-gutter:32px; }
   .spc-section { display:flex; flex-direction:column; aspect-ratio:auto; padding:60px 0 40px; border-bottom:1px solid #e9e2d7; }
   .spc-section .spc-copy { position:relative; order:0; inset:auto; width:auto; margin:0 var(--spc-gutter) 24px !important; }
@@ -91,6 +91,9 @@ html body.sensory-process-page main#main .spc-map-group h3 { font-size:clamp(16p
   .spc-audit .spc-art img { top:-15%; }
   .spc-map .spc-art img { top:-65%; }
   .spc-gains .spc-art img,.spc-value .spc-art img { top:-25%; }
+  /* The supplied mobile diagrams include labels: show the complete artwork. */
+  .spc-section .spc-art-mobile { display:block; aspect-ratio:16/9; }
+  .spc-section .spc-art-mobile img { position:static; width:100%; max-width:100%; height:auto; object-fit:contain; }
   .spc-nodes { order:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 22px; margin:24px var(--spc-gutter) !important; }
   .spc-node { position:static; width:auto; transform:none; }
   .spc-node > .ph,.spc-node.compact > .ph { font-size:36px !important; margin-bottom:12px !important; }

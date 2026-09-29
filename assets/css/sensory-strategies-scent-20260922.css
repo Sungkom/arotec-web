@@ -71,7 +71,7 @@ html body.sc-page #main#main .sc-copy > .sc-note { margin-top: 3vw; }
   .sc-scene-8 .sc-copy { width: calc(33% - var(--sc-gutter)); }
   .sc-narrow { --sc-title-size: clamp(28px, 2.65vw, 42px); }
 }
-@media (max-width: 999px) {
+@media (width < 1000px) {
   .sc-main { --sc-gutter: 32px; --sc-title-size: clamp(36px, 5.2vw, 54px); }
   .sc-main .sc-scene { display: flex; flex-direction: column; min-height: 0; background: #f7f3eb; }
   .sc-picture { position: relative; inset: auto; z-index: auto; }

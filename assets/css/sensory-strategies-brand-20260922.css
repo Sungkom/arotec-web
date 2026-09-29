@@ -106,7 +106,7 @@ html body.sb-page #main#main .sb-scene-6 .sb-card .sb-icon > .ph { font-size: 2.
   .sb-copy { width: calc(52% - var(--sb-gutter)); }
   .sb-scene-3 .sb-copy, .sb-scene-5 .sb-copy, .sb-scene-6 .sb-copy { padding-top: 7vw; }
 }
-@media (max-width: 999px) {
+@media (width < 1000px) {
   .sb-main { --sb-gutter: 32px; --sb-heading-size: clamp(36px, 5.4vw, 56px); }
   .sb-main .sb-scene { display: flex; flex-direction: column; min-height: 0; }
   .sb-picture { position: relative; z-index: auto; inset: auto; height: min(125vw, 600px); }

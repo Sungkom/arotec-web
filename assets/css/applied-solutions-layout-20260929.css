@@ -1,0 +1,196 @@
+/* September 29 reference: framed artwork and compact editorial sections.
+   The original page owns the font families, copy, links and button appearance. */
+body.as-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+body.as-page #main .as-scene { content-visibility: visible !important; contain-intrinsic-size: none !important; }
+.as-main {
+  --as-gutter: clamp(24px, 4.8cqw, 76px);
+  --as-heading-size: clamp(36px, 4.2cqw, 68px);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+.as-main .as-scene {
+  min-height: 40cqw;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8fbff;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+.as-main .as-backdrop { object-fit: cover; }
+/* Select alternate artwork without changing desktop positioning or mobile flex order. */
+.as-main .as-responsive-backdrop { display: contents; }
+.as-main .as-copy { top: 3.6cqw; left: var(--as-gutter); right: auto; width: 43%; }
+html body.as-page #main#main .as-heading { margin-bottom: 1.25cqw !important; }
+html body.as-page #main#main p { font-size: clamp(15px, 1.4cqw, 23px) !important; margin-bottom: 1.2cqw; }
+html body.as-page #main#main .as-lead { font-size: clamp(20px, 1.95cqw, 32px) !important; margin-bottom: 1.1cqw; }
+html body.as-page #main#main .as-eyebrow { font-size: clamp(11px, 1.08cqw, 17px) !important; margin-bottom: 1.4cqw; }
+/* Position only: the shared pill, type, hover and focus treatment stay intact. */
+html body.as-page #main#main .ss-more { right: 3cqw; bottom: 2cqw; }
+.as-main .as-feeling { --as-heading-size: clamp(36px, 4.2cqw, 68px); height: auto; min-height: 34cqw; }
+.as-main .as-feeling .as-copy { top: 4.2cqw; left: 62.5%; width: 33%; transform: none; }
+.as-feeling .as-backdrop { object-position: center 12%; }
+html body.as-page #main#main .as-feeling .as-heading { margin-bottom: 1.8cqw !important; }
+html body.as-page #main#main .as-feeling p { font-size: clamp(15px, 1.4cqw, 23px) !important; }
+html body.as-page #main#main .as-opening { margin-top: 1.5cqw; }
+.as-main .as-brand { min-height: 40cqw; }
+.as-brand .as-backdrop { object-position: center 50%; }
+.as-main .as-brand .as-copy { width: 44%; }
+.as-senses { gap: 1cqw; margin-top: 1.8cqw; }
+.as-senses li { gap: .55cqw; }
+.as-icon { width: 5.3cqw; height: 5.3cqw; color: #687da5; border-color: #c1d1eb; }
+.as-icon .ph { font-size: 3.2cqw; color: #303f6b; }
+.as-senses li > span:last-child { font-size: clamp(10px, .94cqw, 15px); }
+.as-senses li:not(:last-child)::after { content: none; }
+.as-main .as-scent { --as-heading-size: clamp(34px, 3.9cqw, 63px); min-height: 42cqw; }
+.as-main .as-scent .as-copy { top: 4cqw; left: 4cqw; width: 32%; }
+.as-scent .as-backdrop { object-position: center; }
+html body.as-page #main#main .as-scent .as-lead { font-size: clamp(18px, 1.75cqw, 28px) !important; margin: 1.1cqw 0 1.4cqw; }
+html body.as-page #main#main .as-scent p { font-size: clamp(13px, 1.25cqw, 20px) !important; }
+.as-emotions { gap: 1cqw; margin-top: 2cqw; }
+.as-emotions .as-icon { width: 4.7cqw; height: 4.7cqw; border-color: #e5b997; }
+.as-emotions .as-icon .ph { font-size: 3cqw; color: #d8793e; }
+.as-emotions li > span:last-child { font-size: clamp(9px, .78cqw, 13px); }
+html body.as-page #main#main .as-scent-closing { margin-top: 1.8cqw; }
+.as-main .as-multisensory { min-height: 34cqw; }
+.as-main .as-multisensory .as-copy {
+  inset: 0 auto 0 0;
+  width: 50%;
+  padding: 3.2cqw var(--as-gutter);
+  padding-right: 3.4cqw;
+  border-radius: 0 14% 23% 0 / 0 42% 58% 0;
+  background: #f8fbfff5;
+}
+.as-multisensory .as-backdrop { object-position: center 53%; }
+.as-scent-label { top: 3cqw; right: 3cqw; font-size: clamp(12px, 1.2cqw, 19px); }
+.as-main .as-value { --as-heading-size: clamp(34px, 3.85cqw, 62px); min-height: 46cqw; }
+.as-value .as-backdrop { height: 71%; object-position: center 42%; }
+.as-main .as-value .as-copy { top: 3cqw; width: 50%; padding: 0 12px 8px 0; border-radius: 0 0 36px 0; background: #f8fbffde; }
+html body.as-page #main#main .as-value .as-eyebrow { margin-bottom: 1.1cqw; }
+html body.as-page #main#main .as-value .as-lead { font-size: clamp(19px, 1.9cqw, 30px) !important; }
+html body.as-page #main#main .as-value .as-copy > p:last-child { font-size: clamp(13px, 1.25cqw, 20px) !important; }
+.as-benefits { top: 65%; left: var(--as-gutter); right: var(--as-gutter); gap: 1.9cqw; text-align: left; }
+html body.as-page #main#main .as-benefits h3 { font-size: clamp(11px, 1.04cqw, 17px) !important; margin-bottom: .6cqw !important; }
+html body.as-page #main#main .as-benefits p { font-size: clamp(11px, 1cqw, 16px) !important; margin: 0; }
+.as-value-chain { left: 9%; right: 9%; bottom: 6cqw; gap: 3cqw; }
+html body.as-page #main#main .as-value-chain li { font-size: clamp(11px, 1.12cqw, 18px) !important; }
+.as-value-chain li:not(:last-child)::after { right: -2cqw; }
+html body.as-page #main#main .as-value .ss-more { bottom: 1.4cqw; }
+.as-main .as-strategy { --as-heading-size: clamp(34px, 3.85cqw, 62px); min-height: 49cqw; }
+.as-strategy .as-backdrop { width: 120%; max-width: none; left: -16%; object-fit: cover; object-position: center; }
+.as-main .as-strategy .as-copy { top: 3.5cqw; width: 47%; }
+html body.as-page #main#main .as-strategy .as-eyebrow { font-size: clamp(11px, 1.08cqw, 17px) !important; margin-bottom: 1.1cqw; }
+html body.as-page #main#main .as-strategy .as-heading { margin-bottom: 1.1cqw !important; }
+html body.as-page #main#main .as-strategy .as-lead { font-size: clamp(19px, 1.9cqw, 30px) !important; }
+html body.as-page #main#main .as-strategy .as-copy > p:last-child { font-size: clamp(14px, 1.25cqw, 20px) !important; }
+.as-strategy-map { left: 5.5%; top: 48%; width: 47%; height: 36%; }
+.as-strategy-map article { top: 4%; }
+.as-strategy-map article > .ph { font-size: clamp(26px, 3.1cqw, 50px); margin-bottom: .65cqw; }
+html body.as-page #main#main .as-strategy-map h3 { font-size: clamp(10px, .94cqw, 15px) !important; margin-bottom: .5cqw !important; }
+html body.as-page #main#main .as-strategy-map p { font-size: clamp(10px, .9cqw, 15px) !important; margin: 0; }
+html body.as-page #main#main .as-strategy-closing { left: var(--as-gutter); bottom: 3cqw; width: 51%; font-size: clamp(15px, 1.4cqw, 22px) !important; }
+.as-main .as-services { padding-bottom: 6cqw; min-height: 0; }
+.as-services-hero { height: 24cqw; object-fit: cover; }
+.as-main .as-services .as-copy { position: relative; inset: auto; width: 50%; min-height: 21cqw; margin-left: var(--as-gutter); padding-top: 3.8cqw; }
+html body.as-page #main#main .as-services .as-heading { margin-bottom: 1.3cqw !important; }
+html body.as-page #main#main .as-services .as-copy > p { font-size: clamp(14px, 1.35cqw, 22px) !important; }
+.as-service-grid { margin: 0 3cqw; gap: 1.5cqw; }
+.as-service-grid > article { border-color: #e5edf6; border-radius: 1.3cqw; }
+.as-service-grid > article > img { aspect-ratio: 2.45; }
+.as-service-copy { padding: 2.4cqw 1.6cqw 2cqw; }
+.as-service-copy > .as-icon { width: 4.8cqw; height: 4.8cqw; }
+.as-service-copy > .as-icon .ph { font-size: 2.8cqw; }
+html body.as-page #main#main .as-service-copy h3 { font-size: clamp(16px, 1.6cqw, 26px) !important; margin-bottom: .65cqw !important; }
+html body.as-page #main#main .as-service-copy > p { font-size: clamp(12px, 1.05cqw, 17px) !important; min-height: 3em; margin-bottom: 1.4cqw; }
+.as-service-copy li { gap: .8cqw; padding: .5cqw 0; font-size: clamp(11px, 1cqw, 16px); border-color: #edf1f7; }
+html body.as-page #main#main .as-service-copy li { font-size: clamp(11px, 1cqw, 16px) !important; }
+
+@media (min-width: 1000px) {
+  /* Let the text set a minimum card height at narrower desktop sizes and zoom. */
+  .as-main .as-feeling .as-copy { position: relative; top: auto; padding-top: 4.2cqw; padding-bottom: 8cqw; }
+  .as-main .as-brand .as-copy { position: relative; top: auto; padding-block: 3.6cqw; }
+  .as-main .as-scent .as-copy { position: relative; top: auto; padding-block: 4cqw; }
+  .as-main .as-multisensory .as-copy { position: relative; min-height: 34cqw; }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .as-main .as-value { min-height: 530px; }
+  .as-value .as-backdrop { height: 72%; }
+  .as-benefits { top: 64%; gap: 12px; }
+  .as-value-chain { bottom: 76px; }
+  .as-main .as-strategy { min-height: 610px; }
+  .as-strategy-map { top: 51%; }
+  .as-main .as-services .as-copy { min-height: 255px; }
+  .as-services-hero { height: 275px; }
+}
+
+/* Stack content naturally on tablets and phones; no text overlays on small photos. */
+@media (width < 1000px) {
+  .as-main { width: calc(100% - 40px); --as-gutter: 28px; padding-top: calc(var(--detail-header-space, 72px) + 20px); }
+  .as-main .as-scene { display: flex; min-height: 0; height: auto; margin-bottom: 24px; padding-bottom: 92px; border-radius: 24px; }
+  .as-main, .as-main .as-feeling, .as-main .as-scent, .as-main .as-value, .as-main .as-strategy { --as-heading-size: clamp(34px, 5.7vw, 56px); }
+  .as-main .as-backdrop { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 16 / 8; object-fit: cover; }
+  .as-main .as-copy, .as-main .as-feeling .as-copy, .as-main .as-brand .as-copy, .as-main .as-scent .as-copy, .as-main .as-multisensory .as-copy, .as-main .as-value .as-copy, .as-main .as-strategy .as-copy, .as-main .as-services .as-copy {
+    position: relative; inset: auto; width: auto; min-height: 0; margin: 0; padding: 28px var(--as-gutter) 0; transform: none; border-radius: 0; background: none;
+  }
+  html body.as-page #main#main .as-heading, html body.as-page #main#main .as-feeling .as-heading, html body.as-page #main#main .as-strategy .as-heading { margin-bottom: 20px !important; }
+  html body.as-page #main#main p, html body.as-page #main#main .as-feeling p, html body.as-page #main#main .as-scent p, html body.as-page #main#main .as-value .as-copy > p:last-child, html body.as-page #main#main .as-strategy .as-copy > p:last-child, html body.as-page #main#main .as-services .as-copy > p { font-size: 17px !important; line-height: 1.5 !important; margin-bottom: 18px; }
+  html body.as-page #main#main .as-lead, html body.as-page #main#main .as-scent .as-lead, html body.as-page #main#main .as-value .as-lead, html body.as-page #main#main .as-strategy .as-lead { font-size: 23px !important; margin: 0 0 18px; }
+  html body.as-page #main#main .as-eyebrow, html body.as-page #main#main .as-strategy .as-eyebrow { font-size: 12px !important; margin-bottom: 16px; }
+  html body.as-page #main#main .as-opening { margin-top: 22px; }
+  html body.as-page #main#main .ss-more, html body.as-page #main#main .as-value .ss-more { bottom: 24px; right: var(--as-gutter); }
+  .as-senses { gap: 18px; margin-top: 24px; }
+  .as-senses li { gap: 8px; }
+  .as-icon, .as-emotions .as-icon { width: 56px; height: 56px; }
+  .as-icon .ph, .as-emotions .as-icon .ph { font-size: 32px; }
+  .as-senses li > span:last-child, .as-emotions li > span:last-child { font-size: 11px; }
+  html body.as-page #main#main .as-scent-closing { margin-top: 24px; }
+  .as-scent-label { top: 20px; right: 20px; font-size: 14px; }
+  .as-main .as-value .as-backdrop { aspect-ratio: 16 / 7; }
+  .as-benefits { position: relative; inset: auto; margin: 24px var(--as-gutter); gap: 24px; text-align: left; }
+  html body.as-page #main#main .as-benefits h3 { font-size: 14px !important; margin-bottom: 8px !important; }
+  html body.as-page #main#main .as-benefits p { font-size: 15px !important; margin: 0; }
+  .as-value-chain { position: relative; inset: auto; gap: 24px; margin: 18px var(--as-gutter) 0; }
+  html body.as-page #main#main .as-value-chain li { font-size: 12px !important; }
+  .as-value-chain li:not(:last-child)::after { right: -22px; }
+  .as-strategy-map { position: relative; inset: auto; width: calc(100% - 56px); height: auto; margin: 18px auto 0; }
+  .as-strategy-map article > .ph { font-size: 32px; margin-bottom: 8px; }
+  html body.as-page #main#main .as-strategy-map h3 { font-size: 12px !important; margin-bottom: 8px !important; }
+  html body.as-page #main#main .as-strategy-map p { font-size: 12px !important; margin: 0; }
+  html body.as-page #main#main .as-strategy-closing { position: relative; inset: auto; width: auto; margin: 24px var(--as-gutter) 0; font-size: 20px !important; }
+  .as-services-hero { position: relative; height: auto; aspect-ratio: 16 / 5; object-fit: cover; object-position: right; }
+  .as-service-grid { margin: 16px var(--as-gutter) 0; gap: 22px; }
+  .as-service-grid > article { border-radius: 16px; }
+  .as-service-copy { padding: 38px 20px 24px; }
+  .as-service-copy > .as-icon { width: 56px; height: 56px; }
+  .as-service-copy > .as-icon .ph { font-size: 32px; }
+  html body.as-page #main#main .as-service-copy h3 { font-size: 24px !important; margin-bottom: 12px !important; }
+  html body.as-page #main#main .as-service-copy > p { font-size: 15px !important; margin-bottom: 18px; }
+  .as-service-copy li { gap: 10px; font-size: 14px; padding: 8px 0; }
+  html body.as-page #main#main .as-service-copy li { font-size: 14px !important; }
+}
+@media (max-width: 599px) {
+  .as-main { width: calc(100% - 28px); --as-gutter: 22px; padding-bottom: 16px; }
+  .as-main .as-scene { border-radius: 20px; margin-bottom: 20px; }
+  .as-main, .as-main .as-feeling, .as-main .as-scent, .as-main .as-value, .as-main .as-strategy { --as-heading-size: clamp(30px, 8.2vw, 46px); }
+  .as-main .as-feeling .as-backdrop { aspect-ratio: 1.3; object-fit: cover; object-position: left; }
+  .as-main .as-brand .as-backdrop, .as-main .as-scent .as-backdrop { aspect-ratio: 1.4; object-position: right; }
+  .as-main .as-strategy .as-backdrop { aspect-ratio: 1.45; object-position: right; }
+  .as-main .as-multisensory .as-backdrop { aspect-ratio: 1.6; object-position: right; }
+  html body.as-page #main#main p, html body.as-page #main#main .as-feeling p, html body.as-page #main#main .as-scent p, html body.as-page #main#main .as-value .as-copy > p:last-child, html body.as-page #main#main .as-strategy .as-copy > p:last-child, html body.as-page #main#main .as-services .as-copy > p { font-size: 16px !important; }
+  html body.as-page #main#main .as-lead, html body.as-page #main#main .as-scent .as-lead, html body.as-page #main#main .as-value .as-lead, html body.as-page #main#main .as-strategy .as-lead { font-size: 21px !important; }
+  .as-senses { gap: 22px 12px; }
+  .as-emotions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .as-value-chain li:not(:last-child)::after { right: 50%; }
+  .as-strategy-map { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: auto; margin: 16px var(--as-gutter) 0; gap: 12px; }
+  .as-strategy-map article, .as-strategy-map .as-intent, .as-strategy-map .as-expression, .as-strategy-map .as-response, .as-strategy-map .as-result { position: relative; inset: auto; padding: 20px 10px; border-color: #e0e7f1; }
+  .as-strategy-map .as-result { display: flex; flex-direction: column; justify-content: center; }
+  html body.as-page #main#main .as-strategy-map h3 { font-size: 11px !important; }
+  .as-services-hero { aspect-ratio: 2.1; }
+  .as-service-grid { grid-template-columns: 1fr; }
+}
