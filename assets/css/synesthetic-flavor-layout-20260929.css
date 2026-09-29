@@ -1,0 +1,277 @@
+/* Match the centered, rounded section frames on Applied Solutions.
+   Keep the original desktop artwork and its live text in the same proportions. */
+body.sfl-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+
+body.sfl-page #main {
+  --sfl-gutter: clamp(24px, 4.8cqw, 76px);
+  --arotec-content-left: var(--sfl-gutter);
+  --arotec-content-right: var(--sfl-gutter);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-top: calc(var(--sfl-header-height, 112px) + 24px);
+  padding-bottom: 48px;
+  overflow: visible;
+}
+
+body.sfl-page #main > section {
+  height: auto;
+  min-height: 0;
+  margin: 0 0 2.4cqw;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: calc(var(--sfl-anchor-margin, 0px) + 24px);
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+}
+
+@media (min-width: 1024px) {
+  body.sfl-page #main > #taste { height: auto; }
+  body.sfl-page #main #taste > .sfl-source { height: auto; aspect-ratio: 16 / 9; }
+  body.sfl-page #main .sfl-editorial {
+    left: max(var(--sfl-gutter), var(--sfl-editorial-left));
+    width: calc(min(var(--sfl-editorial-right), calc(100% - var(--sfl-gutter))) - max(var(--sfl-gutter), var(--sfl-editorial-left)));
+  }
+  body.sfl-page #main .sfl-source[data-reference="culture"] > .sfl-editorial:last-child,
+  body.sfl-page #main .sfl-source[data-reference="offerings"] > .sfl-editorial:nth-of-type(2) {
+    left: auto;
+    right: 3cqw;
+    width: 154px;
+  }
+  body.sfl-page #main .sfl-source[data-reference="science"] .sfl-source-title {
+    max-width: calc(100% - 20px);
+  }
+}
+
+/* Use the existing reading layout on phones and tablets: image, then copy.
+   Its breakpoint follows the page's two existing accessible content layouts. */
+@media (width < 1024px) {
+  body.sfl-page #main {
+    width: calc(100% - 40px);
+    --sfl-gutter: 28px;
+    padding-top: calc(var(--sfl-header-height, 72px) + 20px);
+  }
+  body.sfl-page #main > section {
+    margin-bottom: 24px;
+    border-radius: 24px;
+    scroll-margin-top: calc(var(--sfl-anchor-margin, 0px) + 20px);
+  }
+  body.sfl-page #main .sfl-scene { display: flex; flex-direction: column; align-items: stretch; }
+  body.sfl-page #main .sfl-scene > .sfl-art {
+    position: relative;
+    inset: auto;
+    order: 0;
+    z-index: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    object-position: right center;
+  }
+  body.sfl-page #main .sfl-scene .sfl-copy {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 28px var(--sfl-gutter) 32px;
+  }
+  html body.sfl-page #main#main :is(h1, h2) {
+    --arotec-display-size: clamp(40px, 6vw, 64px);
+    --arotec-display-line-height: 1.111111;
+    font-size: var(--arotec-display-size) !important;
+    font-weight: var(--arotec-display-weight) !important;
+    line-height: var(--arotec-display-line-height) !important;
+    margin-bottom: 20px !important;
+  }
+  html body.sfl-page #main#main p { font-size: 17px !important; line-height: 1.5 !important; margin-bottom: 18px; }
+  html body.sfl-page #main#main .sfl-lead { font-size: 23px !important; line-height: 1.4 !important; }
+  html body.sfl-page #main#main .sfl-eyebrow { font-size: 12px !important; margin-bottom: 16px; }
+  body.sfl-page #main .sfl-button { display: flex; margin: 24px 0 0 auto; }
+  .sfl-expertise { gap: 18px; margin-top: 24px; }
+  .sfl-expertise > div { max-width: none; }
+  .sfl-expertise span { font-size: 12px; }
+  .sfl-expertise .sfl-original-icon { width: 56px; }
+  .sfl-feelings { gap: 24px 12px; }
+  .sfl-feelings span { font-size: 12px; }
+  .sfl-sensory, .sfl-functional, .sfl-offerings { padding: 28px var(--sfl-gutter) 32px; }
+  .sfl-sensory-top, .sfl-functional-top { display: flex; flex-direction: column; gap: 28px; align-items: stretch; }
+  .sfl-sensory .sfl-copy, .sfl-functional .sfl-copy { width: auto; margin: 0; padding: 0; }
+  .sfl-sensory-figure { width: 100%; }
+  .sfl-sensory-figure figcaption { font-size: clamp(12px, 2vw, 20px); }
+  .sfl-sensory-figure figcaption span { font-size: clamp(6px, 1vw, 10px); }
+  .sfl-senses { justify-content: start; flex-wrap: wrap; gap: 8px; }
+  .sfl-sense { min-width: 80px; flex: 1 0 21%; }
+  html body.sfl-page #main#main .sfl-sense-status { display: block; min-height: 105px; margin: 20px 0 0; font-size: 15px !important; }
+  .sfl-sense-status strong { display: block; margin-bottom: 6px; }
+  .sfl-functional figure { height: auto; width: 100%; }
+  .sfl-functional figure .sfl-art { height: auto; object-fit: contain; }
+  .sfl-functional-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; margin-top: 24px; }
+  .sfl-functional-list strong { font-size: 15px; }
+  .sfl-functional-list span { font-size: 14px; }
+  html body.sfl-page #main#main .sfl-functional-note { font-size: 15px !important; margin-bottom: 0; }
+  .sfl-partner-details { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
+  .sfl-partner-features { padding-right: 0; }
+  .sfl-approach { padding: 24px 0 0; border-left: 0; border-top: 1px solid #c3c7cf; }
+  .sfl-approach > span, .sfl-approach > strong { display: block; }
+  .sfl-offerings-head { display: block; margin-bottom: 28px; }
+  .sfl-offer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .sfl-offer, .sfl-offer:nth-child(odd) { padding: 24px 18px 0; border: 1px solid #e5edf6; border-radius: 16px; }
+  .sfl-offer:nth-child(2n) { border-right: 1px solid #e5edf6; }
+  html body.sfl-page #main#main .sfl-offer h3 { font-size: 24px !important; min-height: 0; }
+  html body.sfl-page #main#main .sfl-offer p { font-size: 15px !important; }
+}
+
+@media (max-width: 599px) {
+  body.sfl-page #main { width: calc(100% - 28px); --sfl-gutter: 22px; padding-bottom: 16px; }
+  body.sfl-page #main > section { margin-bottom: 20px; border-radius: 20px; }
+  body.sfl-page #main .sfl-scene > .sfl-art { aspect-ratio: 1.3; }
+  html body.sfl-page #main#main :is(h1, h2) {
+    --arotec-display-size: clamp(36px, 9.5vw, 48px);
+    font-size: var(--arotec-display-size) !important;
+  }
+  html body.sfl-page #main#main p { font-size: 16px !important; }
+  html body.sfl-page #main#main .sfl-lead { font-size: 21px !important; }
+  .sfl-expertise { gap: 12px; }
+  .sfl-expertise span { font-size: 11px; }
+  .sfl-feelings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sfl-feelings--wellbeing { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sfl-offer-grid { grid-template-columns: 1fr; }
+}
+
+/* Dedicated artwork for the phone/tablet reading layout. Show the complete
+   supplied compositions; the desktop .sfl-source artwork stays independent. */
+@media (width < 1024px) {
+  body.sfl-page #main .sfl-scene > .sfl-art {
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  body.sfl-page #main .sfl-sensory-figure > .sfl-art {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  body.sfl-page #main .sfl-sensory-figure figcaption {
+    position: static;
+    width: auto;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  body.sfl-page #main .sfl-sensory-figure figcaption span { font-size: 10px; }
+  body.sfl-page #main .sfl-offer-art--mobile {
+    aspect-ratio: 1114 / 673;
+    background-size: contain;
+    background-position: center;
+  }
+  .sfl-offer-art--beverage { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-beverage.webp"); }
+  .sfl-offer-art--dairy-plant-based { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-dairy-plant-based.webp"); }
+  .sfl-offer-art--savory { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-savory.webp"); }
+  .sfl-offer-art--bakery-confectionery { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-bakery-confectionery.webp"); }
+  .sfl-offer-art--extracts { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-extracts.webp"); }
+  .sfl-offer-art--functional-ingredients { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-functional-ingredients.webp"); }
+  .sfl-offer-art--applied-products { background-image: url("../images/synesthetic-flavor/20260929/mobile/offer-applied-products.webp"); }
+}
+
+/* One size per heading level. Desktop headings must not inherit the
+   per-box --sfl-fit scale used to fit the reference artwork's body copy. */
+@media (min-width: 1024px) {
+  body.sfl-page #main {
+    --sfl-heading-size: clamp(48px, 5vw, var(--arotec-display-size));
+    --sfl-subheading-size: clamp(14px, 1.388889vw, 24px);
+  }
+
+  body.sfl-page #main .sfl-source .sfl-text:is([aria-level="1"], [aria-level="2"]) {
+    font-size: var(--sfl-heading-size) !important;
+    font-weight: var(--arotec-display-weight) !important;
+    line-height: 1.111111 !important;
+    letter-spacing: var(--arotec-display-letter-spacing) !important;
+  }
+
+  body.sfl-page #main .sfl-source .sfl-text[aria-level="3"],
+  body.sfl-page #main .sfl-source .sfl-source-title:not([role="heading"]) {
+    font-size: var(--sfl-subheading-size) !important;
+    line-height: 1.1 !important;
+  }
+
+  body.sfl-page #main .sfl-source :is([role="heading"], .sfl-source-title) .sfl-line {
+    white-space: normal;
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="culture"] .sfl-source-title {
+    top: 6% !important;
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="memory"] .sfl-source-title {
+    top: 6% !important;
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="about"] .sfl-source-title {
+    top: 1.5% !important;
+    width: 100% !important;
+  }
+
+  /* Give narrow copy columns and longer titles a full-width display row.
+     Reserve that row without stretching or cropping the artwork. */
+  body.sfl-page #main :is(#science, #applications, #emotion, #partner) {
+    background: #faf8f3;
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="science"], [data-reference="applications"], [data-reference="emotion"], [data-reference="partner"]) {
+    --sfl-title-padding: clamp(24px, 2.5vw, 40px);
+    --sfl-title-space: calc(var(--sfl-heading-size) * 2.222222 + var(--sfl-title-padding) * 2);
+    margin-top: var(--sfl-title-space);
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="applications"], [data-reference="partner"]) {
+    --sfl-title-space: calc(var(--sfl-heading-size) * 1.111111 + var(--sfl-title-padding) * 2);
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="science"], [data-reference="applications"], [data-reference="emotion"], [data-reference="partner"]) .sfl-source-title[role="heading"] {
+    top: calc(var(--sfl-title-padding) - var(--sfl-title-space)) !important;
+    width: calc(100cqw - var(--sfl-gutter) * 2) !important;
+    max-width: none;
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="applications"], [data-reference="emotion"]) .sfl-source-title .sfl-line {
+    display: inline;
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="applications"], [data-reference="emotion"]) .sfl-source-title .sfl-line:not(:last-child)::after {
+    content: " ";
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="emotion"] .sfl-source-title .sfl-line:nth-child(2)::after {
+    content: "";
+    display: block;
+  }
+
+  body.sfl-page #main .sfl-source:is([data-reference="science"], [data-reference="applications"]) > .sfl-editorial > .sfl-source-title ~ * {
+    translate: 0 -10cqw;
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="emotion"] > .sfl-editorial > .sfl-source-title ~ * {
+    translate: 0 -25cqw;
+  }
+
+  body.sfl-page #main .sfl-source[data-reference="partner"] > .sfl-editorial > .sfl-source-title ~ * {
+    translate: 0 -8cqw;
+  }
+
+  /* Give every offering title the same available width beside its icon,
+     including the longer Food Ingredients and Confectionery labels. */
+  body.sfl-page #main .sfl-source-offer .sfl-text[aria-level="3"] {
+    width: 18% !important;
+  }
+}
+
+@media (width < 1024px) {
+  html body.sfl-page #main#main h3 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+}

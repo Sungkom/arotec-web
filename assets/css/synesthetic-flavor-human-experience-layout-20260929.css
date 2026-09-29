@@ -1,0 +1,103 @@
+/* Match the centered section frames and page backdrop on Applied Solutions. */
+body.he-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+html body.he-page main#main.he-main {
+  --he-gutter: clamp(24px, 4.8cqw, 76px);
+  --arotec-content-left: var(--he-gutter);
+  --arotec-content-right: var(--he-gutter);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin: 0 auto;
+  padding-top: calc(var(--he-header-space, 112px) + 24px) !important;
+  padding-bottom: 48px;
+  overflow: visible;
+}
+body.he-page #main > .he-scene {
+  margin: 0 0 2.4cqw;
+  border: 0;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #f8f5ef;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: 24px;
+}
+
+/* Preserve the 16:9 artwork and label coordinates on larger screens. */
+@media (min-width: 1200px) {
+  body.he-page #main .he-scene > .he-copy {
+    left: var(--he-gutter);
+    width: calc(35.5% - var(--he-gutter));
+  }
+  body.he-page #main .he-copy > :is(h1, h2) {
+    --arotec-display-size: clamp(36px, 4.2cqw, 68px);
+    margin-bottom: 1.25cqw !important;
+  }
+  html body.he-page main#main .he-copy > p { font-size: clamp(15px, 1.4cqw, 23px) !important; margin-bottom: 1.2cqw; }
+  html body.he-page main#main .he-copy > .he-lead {
+    --arotec-supporting-size: clamp(20px, 1.95cqw, 32px);
+    font-size: var(--arotec-supporting-size) !important;
+    margin-bottom: 1.4cqw;
+  }
+  /* Leave a clear gap between the sensory list and the integration column. */
+  body.he-page #main .he-connection .he-senses { max-width: calc(27.4cqw - var(--he-gutter)); }
+}
+
+/* The existing tablet breakpoint keeps the artwork's small labels readable. */
+@media (max-width: 1199px) {
+  html body.he-page main#main.he-main { --he-gutter: 28px; }
+  body.he-page #main > .he-scene { padding: 0 0 32px; }
+  body.he-page #main .he-scene-art {
+    order: 0;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: right center;
+  }
+  body.he-page #main .he-copy {
+    order: 1;
+    position: static;
+    width: 100%;
+    max-width: none;
+    padding: 28px var(--he-gutter) 0;
+  }
+  body.he-page #main .he-copy > :is(h1, h2) {
+    --arotec-display-size: clamp(34px, 5.7vw, 56px);
+    --arotec-display-line-height: 1.08;
+    margin-bottom: 20px !important;
+  }
+  html body.he-page main#main .he-copy > p { font-size: 17px !important; line-height: 1.5 !important; margin-bottom: 18px; }
+  html body.he-page main#main .he-copy > .he-lead {
+    --arotec-supporting-size: 23px;
+    font-size: 23px !important;
+    margin-bottom: 18px;
+  }
+  body.he-page #main .he-labels { order: 2; gap: 24px; padding: 24px var(--he-gutter) 0 !important; }
+  body.he-page #main .he-integration { order: 2; padding: 28px var(--he-gutter) 0; }
+  body.he-page #main .he-sense-key { order: 3; padding: 28px var(--he-gutter) 0 !important; }
+  body.he-page #main .he-elements { order: 2; padding: 28px var(--he-gutter) 0 !important; }
+  body.he-page #main .he-equation { order: 3; padding: 24px var(--he-gutter) 0; }
+  html body.he-page main#main .he-integration p { font-size: 17px !important; line-height: 1.5 !important; }
+  html body.he-page main#main .he-equation p { font-size: 17px !important; }
+  html body.he-page main#main .he-equation .he-equation-result { font-size: 26px !important; }
+}
+@media (width < 1000px) {
+  html body.he-page main#main.he-main {
+    width: calc(100% - 40px);
+    padding-top: calc(var(--he-header-space, 72px) + 20px) !important;
+  }
+  body.he-page #main > .he-scene { margin-bottom: 24px; border-radius: 24px; scroll-margin-top: 20px; }
+}
+@media (max-width: 599px) {
+  html body.he-page main#main.he-main { width: calc(100% - 28px); --he-gutter: 22px; padding-bottom: 16px; }
+  body.he-page #main > .he-scene { margin-bottom: 20px; border-radius: 20px; }
+  body.he-page #main .he-copy > :is(h1, h2) { --arotec-display-size: clamp(30px, 8.2vw, 46px); }
+  html body.he-page main#main .he-copy > p, html body.he-page main#main .he-integration p { font-size: 16px !important; }
+  html body.he-page main#main .he-copy > .he-lead { --arotec-supporting-size: 21px; font-size: 21px !important; }
+  body.he-page #main .he-labels { gap: 24px 18px; }
+  html body.he-page main#main .he-equation p { font-size: 16px !important; }
+  html body.he-page main#main .he-equation .he-equation-result { font-size: 23px !important; }
+}

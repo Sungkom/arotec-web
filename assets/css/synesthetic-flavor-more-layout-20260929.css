@@ -1,0 +1,193 @@
+/* Match Applied Solutions' centered frame, section spacing and responsive gutters. */
+body.sm-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+html body.sm-page main#main.sm-main {
+  --sm-gutter: clamp(24px, 4.8cqw, 76px);
+  --sm-heading-size: clamp(36px, 4.2cqw, 68px);
+  --arotec-content-left: var(--sm-gutter);
+  --arotec-content-right: var(--sm-gutter);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin: 0 auto;
+  padding: calc(var(--detail-header-space, 112px) + 24px) 0 48px !important;
+  background: transparent;
+  overflow: visible;
+}
+body.sm-page #main > .sm-section {
+  margin: 0 0 2.4cqw;
+  padding-bottom: 3.6cqw;
+  border: 0;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+body.sm-page #main .sm-container {
+  width: calc(100% - 2 * var(--sm-gutter));
+  max-width: none;
+  margin-inline: auto;
+}
+html body.sm-page main#main :is(h1, .sm-display) {
+  --arotec-display-size: var(--sm-heading-size);
+  --arotec-display-line-height: 1.08;
+  font-size: var(--sm-heading-size) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 1.5cqw !important;
+}
+html body.sm-page main#main p {
+  font-size: clamp(15px, 1.4cqw, 23px) !important;
+  margin-bottom: 1.2cqw;
+}
+html body.sm-page main#main h3 {
+  font-size: clamp(18px, 1.65cqw, 26px) !important;
+}
+html body.sm-page main#main .sm-subtitle {
+  font-size: clamp(25px, 2.6cqw, 40px) !important;
+  margin-bottom: 1.6cqw !important;
+}
+html body.sm-page main#main .sm-lead {
+  font-size: clamp(20px, 1.95cqw, 32px) !important;
+  line-height: 1.35 !important;
+}
+html body.sm-page main#main :is(.sm-ingredient-grid, .sm-quality, .sm-products) p {
+  font-size: clamp(14px, 1.12cqw, 18px) !important;
+  margin: 0;
+}
+html body.sm-page main#main :is(.sm-value-chain, .sm-development, .sm-process) p {
+  font-size: clamp(14px, 1.2cqw, 19px) !important;
+  margin: 0;
+}
+body.sm-page #main :is(.sm-ingredient-grid, .sm-value-chain, .sm-development) article > div,
+body.sm-page #main .sm-quality > div { min-width: 0; }
+body.sm-page #main .sm-innovation { min-height: 0; padding-top: 3.6cqw; }
+body.sm-page #main .sm-ingredient-grid { margin-top: 2cqw; }
+body.sm-page #main .sm-ingredient-grid article { gap: 1.1cqw; padding-block: 1.8cqw; }
+body.sm-page #main .sm-ingredient-grid .sm-icon { width: 4cqw; height: 4cqw; }
+body.sm-page #main .sm-ingredient-grid .sm-icon .ph { font-size: 2.6cqw; }
+body.sm-page #main .sm-quality {
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 14px 18px;
+  padding-block: 1.8cqw;
+}
+body.sm-page #main .sm-quality .sm-icon { width: 52px; }
+body.sm-page #main .sm-quality ul {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 0;
+  border: 0;
+}
+body.sm-page #main .sm-quality li + li { margin: 0; }
+body.sm-page #main .sm-story { min-height: 45cqw; padding: 3.6cqw 0 3cqw; }
+body.sm-page #main .sm-story-copy { max-width: none; }
+body.sm-page #main .sm-story-copy > p { max-width: none; }
+html body.sm-page main#main .sm-story-copy .sm-eyebrow { margin-top: 2cqw !important; }
+body.sm-page #main :is(.sm-value-chain, .sm-development) { padding-top: 2cqw; }
+body.sm-page #main :is(.sm-value-chain, .sm-development) article { gap: 1.2cqw; padding-inline: 1.7cqw; }
+body.sm-page #main :is(.sm-value-chain, .sm-development) article:first-child { padding-left: 0; }
+body.sm-page #main :is(.sm-value-chain, .sm-development) article:last-child { padding-right: 0; }
+body.sm-page #main .sm-value-chain .sm-icon { width: 4cqw; height: 4cqw; }
+body.sm-page #main .sm-value-chain .sm-icon .ph { font-size: 3.1cqw; }
+body.sm-page #main .sm-formula { margin-block: 2.6cqw 1.5cqw; border-radius: 16px; }
+body.sm-page #main .sm-products { gap: 2.4cqw; }
+body.sm-page #main .sm-process { gap: 2.2cqw; margin-top: 1cqw; }
+body.sm-page #main .sm-process .sm-icon { width: 7.5cqw; height: 7.5cqw; margin-bottom: 1.5cqw; }
+body.sm-page #main .sm-process .sm-icon .ph { font-size: 3.8cqw; }
+body.sm-page #main .sm-step-arrow { right: -2.2cqw; top: 2.5cqw; width: 2.2cqw; font-size: 2cqw; }
+
+/* The top-right artwork is a crop of the same composite used by the product row. */
+@media (min-width: 1101px) {
+  body.sm-page #main .sm-value .sm-story > .sm-scene {
+    left: 14%;
+    right: auto;
+    mask-image: linear-gradient(to right, transparent, #000 12%);
+  }
+  body.sm-page #main .sm-tailored-art { top: 9cqw; bottom: auto; height: 18cqw; }
+  body.sm-page #main .sm-tailored-art img { top: -7.5cqw; }
+}
+@media (min-width: 1101px) and (max-width: 1399px) {
+  body.sm-page #main .sm-innovation > .sm-scene {
+    left: 4%;
+    right: auto;
+    mask-image: linear-gradient(to right, transparent, #000 12%);
+  }
+  body.sm-page #main .sm-ingredient-grid article { flex-direction: column; gap: 14px; }
+  body.sm-page #main :is(.sm-value-chain, .sm-development) article { display: block; }
+  body.sm-page #main :is(.sm-value-chain, .sm-development) .sm-icon { margin-bottom: 16px; }
+  body.sm-page #main .sm-formula > span { flex-direction: column; text-align: center; }
+}
+@media (max-width: 1100px) {
+  html body.sm-page main#main.sm-main {
+    --sm-gutter: 28px;
+    --sm-heading-size: clamp(34px, 5.7vw, 56px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px) !important;
+  }
+  body.sm-page #main > .sm-section { margin-bottom: 24px; padding-bottom: 32px; border-radius: 24px; }
+  body.sm-page #main .sm-innovation { padding-top: 0; }
+  body.sm-page #main .sm-story { padding: 0; }
+  body.sm-page #main .sm-innovation > .sm-container,
+  body.sm-page #main .sm-story > .sm-container { padding-top: 28px; }
+  html body.sm-page main#main :is(h1, .sm-display) { margin-bottom: 20px !important; }
+  html body.sm-page main#main p { font-size: 17px !important; margin-bottom: 18px; }
+  html body.sm-page main#main .sm-lead { font-size: 23px !important; }
+  html body.sm-page main#main .sm-subtitle { font-size: clamp(28px, 3.5vw, 36px) !important; margin-bottom: 20px !important; }
+  html body.sm-page main#main .sm-story-copy .sm-eyebrow { margin-top: 28px !important; }
+  body.sm-page #main .sm-ingredient-grid { margin-top: 24px; }
+  body.sm-page #main .sm-ingredient-grid article { gap: 16px; padding-block: 24px; }
+  body.sm-page #main .sm-ingredient-grid .sm-icon { width: 48px; height: 48px; }
+  body.sm-page #main .sm-ingredient-grid .sm-icon .ph { font-size: 30px; }
+  body.sm-page #main .sm-quality { padding-block: 24px; }
+  html body.sm-page main#main :is(.sm-ingredient-grid, .sm-quality, .sm-products) p { font-size: 15px !important; margin: 0; }
+  html body.sm-page main#main :is(.sm-value-chain, .sm-development, .sm-process) p { font-size: 16px !important; margin: 0; }
+  body.sm-page #main :is(.sm-value-chain, .sm-development) { padding-top: 28px; }
+  body.sm-page #main :is(.sm-value-chain, .sm-development) article { padding-inline: 20px; gap: 18px; }
+  body.sm-page #main .sm-development article:nth-child(3) { padding-left: 0; }
+  body.sm-page #main .sm-value-chain .sm-icon { width: 50px; height: 54px; }
+  body.sm-page #main .sm-value-chain .sm-icon .ph { font-size: 38px; }
+  body.sm-page #main .sm-formula { margin-block: 28px 24px; padding-inline: 16px; }
+  body.sm-page #main .sm-formula > span { min-width: 0; }
+  body.sm-page #main .sm-products { gap: 32px; }
+  body.sm-page #main .sm-process { gap: 32px 24px; margin-top: 28px; }
+  body.sm-page #main .sm-process .sm-icon { width: 88px; height: 88px; margin-bottom: 18px; }
+  body.sm-page #main .sm-process .sm-icon .ph { font-size: 44px; }
+}
+@media (max-width: 999px) {
+  html body.sm-page main#main.sm-main { width: calc(100% - 40px); }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  body.sm-page #main .sm-ingredient-grid article { flex-direction: column; }
+  body.sm-page #main .sm-development article { display: block; }
+  body.sm-page #main .sm-formula { gap: 6px; }
+  body.sm-page #main .sm-formula > span { font-size: 12px; }
+  body.sm-page #main .sm-formula > .ph { font-size: 15px; }
+}
+@media (max-width: 599px) {
+  html body.sm-page main#main.sm-main {
+    --sm-gutter: 22px;
+    --sm-heading-size: clamp(30px, 8.2vw, 46px);
+    width: calc(100% - 28px);
+    padding-bottom: 16px !important;
+  }
+  body.sm-page #main > .sm-section { margin-bottom: 20px; border-radius: 20px; }
+  body.sm-page #main .sm-innovation > .sm-scene { height: auto; aspect-ratio: 1.25; }
+  html body.sm-page main#main p { font-size: 16px !important; }
+  html body.sm-page main#main .sm-lead { font-size: 21px !important; }
+  html body.sm-page main#main .sm-subtitle { font-size: 28px !important; }
+  body.sm-page #main .sm-quality { grid-template-columns: 44px minmax(0, 1fr); gap: 16px; }
+  body.sm-page #main .sm-quality .sm-icon { width: 44px; }
+  body.sm-page #main .sm-quality ul { display: grid; }
+  body.sm-page #main :is(.sm-value-chain, .sm-development) article,
+  body.sm-page #main .sm-development article:nth-child(3) { padding: 24px 0; }
+  body.sm-page #main .sm-formula { padding: 26px 18px; }
+  body.sm-page #main .sm-products { gap: 26px 18px; }
+  html body.sm-page main#main .sm-products h3 { font-size: 18px !important; }
+  html body.sm-page main#main .sm-products p { font-size: 14px !important; }
+  body.sm-page #main .sm-process { gap: 0; margin-top: 18px; }
+  body.sm-page #main .sm-process li { grid-template-columns: 62px minmax(0, 1fr); gap: 0 16px; }
+  body.sm-page #main .sm-process .sm-icon { width: 62px; height: 62px; margin: 0; }
+  body.sm-page #main .sm-process .sm-icon .ph { font-size: 32px; }
+  html body.sm-page main#main .sm-process h3 { font-size: 18px !important; }
+}

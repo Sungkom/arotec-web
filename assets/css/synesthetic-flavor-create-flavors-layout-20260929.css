@@ -1,0 +1,125 @@
+/* Use the centered page and rounded section frames from Applied Solutions. */
+body.cf-page {
+  background: #eaf2ff url("../images/sensory-strategies/20260929/page-background.webp") center top / 100% 100% no-repeat;
+}
+html body.cf-page main#main.cf-main {
+  --cf-gutter: clamp(24px, 4.8cqw, 76px);
+  --cf-heading-size: clamp(36px, 4.2cqw, 68px);
+  --arotec-content-left: var(--cf-gutter);
+  --arotec-content-right: var(--cf-gutter);
+  container-type: inline-size;
+  width: min(90%, 1600px);
+  margin: 0 auto;
+  padding-top: calc(var(--detail-header-space, 112px) + 24px) !important;
+  padding-bottom: 48px;
+  overflow: visible;
+}
+body.cf-page #main > .cf-scene {
+  margin: 0 0 2.4cqw;
+  border: 0;
+  border-radius: clamp(20px, 2.6cqw, 40px);
+  overflow: hidden;
+  box-shadow: 0 12px 42px #698fc014;
+  scroll-margin-top: calc(var(--detail-header-space, 112px) + 24px);
+}
+html body.cf-page main#main .cf-frame {
+  width: calc(100% - 2 * var(--cf-gutter));
+  max-width: none;
+  margin-inline: auto;
+}
+body.cf-page #main .cf-scene .cf-stage { min-height: 0; }
+body.cf-page #main .cf-scene .cf-stage-copy {
+  margin-left: var(--cf-gutter);
+  width: calc(var(--cf-copy-right, 48%) - var(--cf-gutter));
+  padding: 3.6cqw 0 3cqw;
+}
+body.cf-page #main .cf-process .cf-stage-copy { --cf-copy-right: 57%; }
+body.cf-page #main .cf-science .cf-stage-copy { --cf-copy-right: 42%; }
+body.cf-page #main .cf-finale .cf-stage-copy { --cf-copy-right: 52%; }
+html body.cf-page main#main .cf-scene .cf-stage-copy :is(h1, h2) {
+  --arotec-display-size: var(--cf-heading-size);
+  margin-bottom: 1.25cqw !important;
+}
+html body.cf-page main#main .cf-stage-copy p { font-size: clamp(15px, 1.4cqw, 23px) !important; }
+html body.cf-page main#main .cf-scene .cf-lead {
+  --arotec-supporting-size: clamp(20px, 1.95cqw, 32px);
+  font-size: var(--arotec-supporting-size) !important;
+}
+body.cf-page #main .cf-intro { margin-top: 1.8cqw; max-width: none; }
+html body.cf-page main#main .cf-journey li { font-size: clamp(12px, 1.08cqw, 18px) !important; }
+body.cf-page #main .cf-wellbeing-copy {
+  padding-left: 0;
+  margin-left: var(--cf-gutter);
+  width: calc(54% - var(--cf-gutter));
+}
+
+/* Give seven-step descriptions room to wrap on narrower desktop screens. */
+@media (min-width: 1001px) and (max-width: 1199px) {
+  body.cf-page #main .cf-pillars article { flex-direction: column; gap: 18px; }
+  html body.cf-page main#main .cf-steps,
+  html body.cf-page main#main .cf-outcomes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    padding-block: 32px 40px;
+  }
+  body.cf-page #main .cf-steps li:nth-child(4) .cf-arrow,
+  body.cf-page #main .cf-outcomes li:nth-child(4) > .cf-arrow { display: none; }
+  body.cf-page #main .cf-wellbeing-copy { display: block; }
+  html body.cf-page main#main .cf-wellbeing h3 { margin-bottom: 16px !important; }
+}
+
+/* Keep the existing mobile artwork breakpoint, with images above the copy. */
+@media (max-width: 1000px) {
+  html body.cf-page main#main.cf-main {
+    --cf-gutter: 28px;
+    --cf-heading-size: clamp(34px, 5.7vw, 56px);
+    width: calc(100% - 40px);
+    padding-top: calc(var(--detail-header-space, 72px) + 20px) !important;
+  }
+  body.cf-page #main > .cf-scene { margin-bottom: 24px; border-radius: 24px; }
+  body.cf-page #main .cf-scene .cf-stage-copy {
+    order: 1;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 28px var(--cf-gutter) 0;
+  }
+  body.cf-page #main .cf-stage .cf-stage-art { order: 0; margin: 0; height: auto; }
+  body.cf-page #main .cf-hero .cf-stage-art { aspect-ratio: 5 / 3; }
+  body.cf-page #main .cf-process .cf-stage-art { aspect-ratio: 2; }
+  body.cf-page #main .cf-science .cf-stage-art { aspect-ratio: 5 / 2; }
+  body.cf-page #main .cf-finale .cf-stage-art { aspect-ratio: 6 / 5; }
+  html body.cf-page main#main .cf-scene .cf-stage-copy :is(h1, h2) { margin-bottom: 20px !important; }
+  html body.cf-page main#main .cf-stage-copy p { font-size: 17px !important; line-height: 1.5 !important; }
+  html body.cf-page main#main .cf-scene .cf-lead { --arotec-supporting-size: 23px; font-size: 23px !important; }
+  body.cf-page #main .cf-intro { margin-top: 22px; }
+  body.cf-page #main .cf-pillars { padding-top: 28px; }
+  html body.cf-page main#main .cf-journey { padding-block: 32px; }
+  html body.cf-page main#main .cf-journey li { font-size: 14px !important; }
+  html body.cf-page main#main .cf-steps,
+  html body.cf-page main#main .cf-outcomes { padding-block: 28px 32px; }
+  body.cf-page #main .cf-science-pillars { margin-top: 28px; }
+  body.cf-page #main .cf-science-copy { padding: 28px var(--cf-gutter) 0; }
+  html body.cf-page main#main .cf-transition { padding: 24px var(--cf-gutter); }
+  body.cf-page #main .cf-wellbeing-copy { order: 1; width: auto; margin: 0; padding: 28px var(--cf-gutter) 32px; }
+  body.cf-page #main .cf-wellbeing > .cf-stage-art { order: 0; height: auto; aspect-ratio: 2.7; }
+}
+@media (max-width: 599px) {
+  html body.cf-page main#main.cf-main {
+    --cf-gutter: 22px;
+    --cf-heading-size: clamp(30px, 8.2vw, 46px);
+    width: calc(100% - 28px);
+    padding-bottom: 16px;
+  }
+  body.cf-page #main > .cf-scene { margin-bottom: 20px; border-radius: 20px; }
+  html body.cf-page main#main .cf-stage-copy p { font-size: 16px !important; }
+  html body.cf-page main#main .cf-scene .cf-lead { --arotec-supporting-size: 21px; font-size: 21px !important; }
+  html body.cf-page main#main .cf-journey { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; }
+  html body.cf-page main#main .cf-journey li { font-size: clamp(12px, 3.6vw, 14px) !important; }
+  body.cf-page #main .cf-journey li:last-child { grid-column: 1 / -1; max-width: 160px; justify-self: center; }
+}
+@media (max-width: 380px) {
+  body.cf-page #main .cf-pillars article { flex-direction: column; gap: 16px; }
+  html body.cf-page main#main .cf-outcomes { grid-template-columns: 1fr; }
+  body.cf-page #main .cf-outcomes li { max-width: 250px; margin-inline: auto; }
+}
