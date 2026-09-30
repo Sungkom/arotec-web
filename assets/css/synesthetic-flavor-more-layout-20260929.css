@@ -29,6 +29,9 @@ body.sm-page #main .sm-container {
   max-width: none;
   margin-inline: auto;
 }
+/* Keep the image's containing block and flex order when selecting alternate artwork. */
+body.sm-page #main .sm-responsive-scene { display: contents; }
+body.sm-page #main .sm-innovation > .sm-responsive-scene > .sm-scene { object-position: center top; }
 html body.sm-page main#main :is(h1, .sm-display) {
   --arotec-display-size: var(--sm-heading-size);
   --arotec-display-line-height: 1.08;
@@ -100,7 +103,7 @@ body.sm-page #main .sm-step-arrow { right: -2.2cqw; top: 2.5cqw; width: 2.2cqw; 
 
 /* The top-right artwork is a crop of the same composite used by the product row. */
 @media (min-width: 1101px) {
-  body.sm-page #main .sm-value .sm-story > .sm-scene {
+  body.sm-page #main .sm-value .sm-story > .sm-responsive-scene > .sm-scene {
     left: 14%;
     right: auto;
     mask-image: linear-gradient(to right, transparent, #000 12%);
@@ -109,7 +112,7 @@ body.sm-page #main .sm-step-arrow { right: -2.2cqw; top: 2.5cqw; width: 2.2cqw; 
   body.sm-page #main .sm-tailored-art img { top: -7.5cqw; }
 }
 @media (min-width: 1101px) and (max-width: 1399px) {
-  body.sm-page #main .sm-innovation > .sm-scene {
+  body.sm-page #main .sm-innovation > .sm-responsive-scene > .sm-scene {
     left: 4%;
     right: auto;
     mask-image: linear-gradient(to right, transparent, #000 12%);
@@ -120,6 +123,18 @@ body.sm-page #main .sm-step-arrow { right: -2.2cqw; top: 2.5cqw; width: 2.2cqw; 
   body.sm-page #main .sm-formula > span { flex-direction: column; text-align: center; }
 }
 @media (max-width: 1100px) {
+  html body.sm-page main#main .sm-responsive-scene > .sm-scene {
+    display: block;
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    order: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+  }
   html body.sm-page main#main.sm-main {
     --sm-gutter: 28px;
     --sm-heading-size: clamp(34px, 5.7vw, 56px);
