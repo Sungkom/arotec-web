@@ -8,6 +8,12 @@ html body.gcp-page main#main {
 }
 
 html body.gcp-page main#main #global-perspective {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --gcp-accent: #b8dcec;
+  --gcp-line: rgba(190, 218, 239, .3);
   position: relative;
   isolation: isolate;
   display: grid;
@@ -17,7 +23,7 @@ html body.gcp-page main#main #global-perspective {
   max-width: none;
   margin: 0 !important;
   padding: clamp(24px, 4vh, 64px) 0;
-  background: #edf5fc url("../images/global-capability-and-people/global-perspective-background-20260908.png") 70% 35% / cover no-repeat;
+  background: #020d1f url("../images/global-capability-and-people/global-perspective-background-20260930.png") 70% 35% / cover no-repeat;
 }
 
 html body.gcp-page main#main #global-perspective::before {
@@ -26,7 +32,7 @@ html body.gcp-page main#main #global-perspective::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(244, 249, 255, .96) 0%, rgba(244, 249, 255, .88) 28%, rgba(244, 249, 255, .56) 45%, rgba(244, 249, 255, 0) 65%);
+  background: linear-gradient(90deg, rgba(2, 13, 31, .82) 0%, rgba(2, 13, 31, .72) 38%, rgba(2, 13, 31, .36) 52%, rgba(2, 13, 31, 0) 68%);
 }
 
 html body.gcp-page main#main #global-perspective > .gcp-hero-inner {
@@ -99,17 +105,181 @@ html body.gcp-page main#main #global-perspective .wwa-copy {
     --gcp-hero-image-height: clamp(240px, 48vw, 480px);
     min-height: 0;
     padding: 40px 0 calc(var(--gcp-hero-image-height) + 32px);
-    background-color: #f4f9ff;
+    background-color: #020d1f;
     background-size: auto var(--gcp-hero-image-height);
     background-position: 85% bottom;
   }
 
   html body.gcp-page main#main #global-perspective::before {
-    background: linear-gradient(to bottom, #f4f9ff 0%, #f4f9ff calc(100% - var(--gcp-hero-image-height)), rgba(244, 249, 255, 0) calc(100% - var(--gcp-hero-image-height) + 40px));
+    background: linear-gradient(to bottom, #020d1f 0%, #020d1f calc(100% - var(--gcp-hero-image-height)), rgba(2, 13, 31, 0) calc(100% - var(--gcp-hero-image-height) + 40px));
   }
 
   html body.gcp-page main#main #global-perspective .wwa-copy {
     width: 100%;
+  }
+}
+
+/* Local Insight: keep the copy in the supplied artwork's dark left column. */
+html body.gcp-page main#main #local-insight {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --gcp-accent: #b8dcec;
+  --gcp-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 20%),
+    url("../images/global-capability-and-people/local-insight-background-20260930.png");
+  background-position: center top;
+  background-size: 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+html body.gcp-page main#main #local-insight > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+@media (min-width: 992px) {
+  html body.gcp-page main#main #local-insight .wwa-copy {
+    grid-column: 1 / 6;
+    max-width: calc(41.08vw - max(40px, var(--arotec-content-left)) - 24px);
+  }
+}
+@media (max-width: 991px) {
+  html body.gcp-page main#main #local-insight {
+    /* The four city panels occupy the rightmost 985px of the 1672px artwork. */
+    --gcp-local-image-height: min(600px, calc(100vw * 941 / 985));
+    background-image:
+      linear-gradient(to bottom, #020d1f, rgba(2, 13, 31, 0) 10%),
+      url("../images/global-capability-and-people/local-insight-background-20260930.png");
+    background-position: right bottom;
+    background-size: 100% var(--gcp-local-image-height), auto var(--gcp-local-image-height);
+  }
+  html body.gcp-page main#main #local-insight > .wwa-grid {
+    min-height: 0;
+    padding-bottom: calc(var(--gcp-local-image-height) + 32px);
+  }
+}
+
+/* Global Expert Network: supplied map and port artwork behind the section. */
+html body.gcp-page main#main #global-expert-network {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --gcp-accent: #b8dcec;
+  --gcp-text: #dbe6ef;
+  --gcp-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    linear-gradient(90deg, rgba(2, 13, 31, .65) 0%, rgba(2, 13, 31, .45) 38%, rgba(2, 13, 31, 0) 62%),
+    url("../images/global-capability-and-people/global-expert-network-background-20260930.png");
+  background-position: center top;
+  background-size: 100% calc(100vw * 1024 / 1536), 100% calc(100vw * 1024 / 1536), 100% auto;
+  background-repeat: no-repeat;
+}
+html body.gcp-page main#main #global-expert-network > .wwa-grid {
+  min-height: max(800px, calc(100vw * 1024 / 1536));
+}
+html body.gcp-page main#main #global-expert-network .gcp-icon {
+  background: rgba(2, 13, 31, .82);
+}
+@media (max-width: 991px) {
+  html body.gcp-page main#main #global-expert-network {
+    --gcp-network-image-height: clamp(320px, 55vw, 520px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/global-capability-and-people/global-expert-network-background-20260930.png");
+    background-position: right top;
+    background-size: 100% var(--gcp-network-image-height), auto var(--gcp-network-image-height);
+  }
+  html body.gcp-page main#main #global-expert-network > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--gcp-network-image-height) + 32px);
+  }
+}
+
+/* One Company, Four Cities: preserve the supplied Pacific map and city labels. */
+html body.gcp-page main#main #one-company-four-cities {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --gcp-accent: #b8dcec;
+  --gcp-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 20%),
+    url("../images/global-capability-and-people/one-company-four-cities-background-20260930.png");
+  background-position: center top;
+  background-size: 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+html body.gcp-page main#main #one-company-four-cities > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+@media (min-width: 992px) {
+  html body.gcp-page main#main #one-company-four-cities .wwa-copy {
+    grid-column: 1 / 6;
+    max-width: calc(40vw - max(40px, var(--arotec-content-left)) - 24px);
+  }
+  html body.gcp-page main#main #one-company-four-cities h2 {
+    width: 540px;
+    max-width: none;
+  }
+}
+@media (max-width: 991px) {
+  html body.gcp-page main#main #one-company-four-cities {
+    /* Keep all four city names in view by showing the rightmost 1120px. */
+    --gcp-cities-image-height: min(520px, calc(100vw * 941 / 1120));
+    background-image:
+      linear-gradient(to bottom, #020d1f, rgba(2, 13, 31, 0) 10%),
+      url("../images/global-capability-and-people/one-company-four-cities-background-20260930.png");
+    background-position: right bottom;
+    background-size: 100% var(--gcp-cities-image-height), auto var(--gcp-cities-image-height);
+  }
+  html body.gcp-page main#main #one-company-four-cities > .wwa-grid {
+    min-height: 0;
+    padding-bottom: calc(var(--gcp-cities-image-height) + 32px);
+  }
+}
+
+/* Trust, Ethics & Responsibility: supplied quality and compliance artwork. */
+html body.gcp-page main#main #trust-ethics-responsibility {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --gcp-accent: #b8dcec;
+  --gcp-text: #dbe6ef;
+  --gcp-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 40%),
+    linear-gradient(90deg, rgba(2, 13, 31, .7) 0%, rgba(2, 13, 31, .6) 42%, rgba(2, 13, 31, 0) 63%),
+    url("../images/global-capability-and-people/trust-ethics-responsibility-background-20260930.png");
+  background-position: center top;
+  background-size: 100% calc(100vw * 941 / 1672), 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+html body.gcp-page main#main #trust-ethics-responsibility > .wwa-grid {
+  min-height: max(800px, 56.25vw);
+}
+html body.gcp-page main#main #trust-ethics-responsibility .gcp-icon {
+  background: rgba(2, 13, 31, .82);
+}
+@media (max-width: 991px) {
+  html body.gcp-page main#main #trust-ethics-responsibility {
+    --gcp-trust-image-height: clamp(320px, 55vw, 520px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 75%, #020d1f),
+      url("../images/global-capability-and-people/trust-ethics-responsibility-background-20260930.png");
+    background-position: right top;
+    background-size: 100% var(--gcp-trust-image-height), auto var(--gcp-trust-image-height);
+  }
+  html body.gcp-page main#main #trust-ethics-responsibility > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--gcp-trust-image-height) + 32px);
   }
 }
 
