@@ -1,0 +1,223 @@
+/* Reference composition: live content over the supplied, text-free Earth artwork. */
+html body.wwd-page main#main #what-defines-us {
+  --wwd-font: "WWA Roboto Condensed", "Arial Narrow", sans-serif;
+  --wwd-unit: min(1.15px, calc(100vw / 1672), calc((100svh - var(--wwd-header-offset, 112px)) / 941));
+  --wwd-gutter: clamp(28px, 3.05vw, 64px);
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #eef2f7;
+  --sfc-blue: #6ebfff;
+  --sfc-line: rgba(156, 197, 232, .38);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: calc(100svh - var(--wwd-header-offset, 112px));
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: #020b17 url("../images/who-we-are-details/what-defines-us-earth-20260930.png") center / cover no-repeat;
+  scroll-margin-top: 0;
+}
+#what-defines-us::before,
+#what-defines-us::after { content: none !important; }
+
+#what-defines-us .wwd-defines-main {
+  display: flex;
+  align-items: flex-end;
+  min-height: 0;
+  padding: calc(24 * var(--wwd-unit)) var(--wwd-gutter) calc(28 * var(--wwd-unit));
+}
+#what-defines-us .wwd-defines-content {
+  width: min(49vw, calc(765 * var(--wwd-unit)));
+  min-width: 0;
+}
+
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.wwd-page main#main #what-defines-us #what-defines-us-title {
+    margin: 0 !important;
+    max-width: none !important;
+    font-family: var(--wwd-font) !important;
+    font-size: calc(88 * var(--wwd-unit)) !important;
+    font-weight: 700 !important;
+    line-height: 1.03 !important;
+    letter-spacing: .005em !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+  }
+}
+html body.wwd-page main#main #what-defines-us :is(p, h3) {
+  font-family: var(--wwd-font) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0;
+  margin: 0 !important;
+}
+html body.wwd-page main#main #what-defines-us .wwd-defines-lead {
+  margin-top: calc(16 * var(--wwd-unit)) !important;
+  font-size: clamp(16px, calc(27 * var(--wwd-unit)), 31px) !important;
+  line-height: 1.25 !important;
+  letter-spacing: .22em !important;
+  color: #65b8f4 !important;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+html body.wwd-page main#main #what-defines-us .wwd-defines-body {
+  max-width: max(350px, calc(465 * var(--wwd-unit)));
+  margin-top: calc(25 * var(--wwd-unit)) !important;
+  color: #f4f5f8 !important;
+  font-size: clamp(16px, calc(23 * var(--wwd-unit)), 26px) !important;
+  line-height: 1.4 !important;
+}
+
+#what-defines-us .wwd-pillars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: calc(32 * var(--wwd-unit)) 0 0;
+}
+#what-defines-us .wwd-pillars > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(10 * var(--wwd-unit));
+  padding: 0 calc(14 * var(--wwd-unit));
+  text-align: center;
+  min-width: 0;
+}
+#what-defines-us .wwd-pillars > li:first-child { padding-left: 0; }
+#what-defines-us .wwd-pillars > li + li { border-left: 1px solid var(--sfc-line); }
+html body.wwd-page main#main #what-defines-us .wwd-pillars .wwa-icon {
+  flex: none;
+  width: calc(58 * var(--wwd-unit));
+  height: calc(58 * var(--wwd-unit));
+  padding: 0;
+  margin: 0 0 calc(5 * var(--wwd-unit));
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #7ac7ff;
+}
+html body.wwd-page main#main #what-defines-us .wwa-icon i,
+html body.wwd-page main#main #what-defines-us .wwa-icon i::before {
+  font-family: "Phosphor-Thin" !important;
+  font-weight: 400 !important;
+  font-size: calc(58 * var(--wwd-unit)) !important;
+  line-height: 1 !important;
+}
+html body.wwd-page main#main #what-defines-us .wwd-pillar-title {
+  color: #fff !important;
+  font-size: clamp(11px, calc(16 * var(--wwd-unit)), 18px) !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase;
+}
+html body.wwd-page main#main #what-defines-us .wwd-pillar-copy {
+  color: #edf2f7 !important;
+  font-size: clamp(12px, calc(14 * var(--wwd-unit)), 16px) !important;
+  line-height: 1.4 !important;
+}
+
+#what-defines-us .wwd-facts {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.125fr) minmax(0, 1.07fr);
+  gap: 0;
+  margin: 0;
+  padding: calc(30 * var(--wwd-unit)) var(--wwd-gutter);
+  border-top: 1px solid rgba(158, 193, 222, .12);
+  background: rgba(2, 11, 24, .76);
+}
+#what-defines-us .wwd-fact {
+  display: grid;
+  grid-template-columns: calc(88 * var(--wwd-unit)) minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: calc(9 * var(--wwd-unit));
+  row-gap: calc(8 * var(--wwd-unit));
+  align-content: start;
+  border: 0;
+  border-radius: 0;
+  padding: 0 calc(14 * var(--wwd-unit)) 0 calc(24 * var(--wwd-unit));
+  background: none;
+}
+#what-defines-us .wwd-fact:first-child { padding-left: 0; }
+#what-defines-us .wwd-fact:last-child { padding-right: 0; }
+#what-defines-us .wwd-fact + .wwd-fact { border-left: 1px solid var(--sfc-line); }
+html body.wwd-page main#main #what-defines-us .wwd-fact .wwa-icon {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  width: calc(88 * var(--wwd-unit));
+  height: calc(88 * var(--wwd-unit));
+  margin: 0;
+  border: 1px solid rgba(166, 209, 246, .35);
+  border-radius: 50%;
+  color: #8ed0ff;
+  background: rgba(61, 107, 157, .16);
+  box-shadow: inset 0 0 12px rgba(151, 197, 246, .38), 0 0 13px rgba(103, 166, 231, .08);
+}
+#what-defines-us .wwd-fact > :not(.wwa-icon) { grid-column: 2; }
+html body.wwd-page main#main #what-defines-us .wwd-fact-label {
+  color: #62b6f6 !important;
+  font-size: clamp(13px, calc(22 * var(--wwd-unit)), 25px) !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+}
+html body.wwd-page main#main #what-defines-us .wwd-fact h3 {
+  color: #fff !important;
+  font-size: clamp(15px, calc(24 * var(--wwd-unit)), 27px) !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+  overflow-wrap: normal;
+}
+html body.wwd-page main#main #what-defines-us .wwd-fact-copy {
+  color: #f1f4f8 !important;
+  font-size: clamp(13px, calc(17 * var(--wwd-unit)), 20px) !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 1199px) {
+  #what-defines-us .wwd-desktop-break { display: none; }
+  html body.wwd-page main#main #what-defines-us {
+    --wwd-unit: .8px;
+    --wwd-gutter: 32px;
+    height: auto;
+    background-position: right top;
+    background-size: auto 520px;
+  }
+  #what-defines-us .wwd-defines-main { padding-top: 280px; }
+  #what-defines-us .wwd-defines-content { width: min(720px, 100%); }
+  #what-defines-us .wwd-defines-body { max-width: 560px; }
+  #what-defines-us .wwd-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
+  #what-defines-us .wwd-fact { padding: 0 20px; }
+  #what-defines-us .wwd-fact:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 767px) {
+  html body.wwd-page main#main #what-defines-us {
+    --wwd-unit: .75px;
+    --wwd-gutter: 24px;
+    background-size: auto 300px;
+  }
+  #what-defines-us .wwd-defines-main { padding-top: 310px; padding-bottom: 32px; }
+  html body.wwd-page main#main #what-defines-us .wwd-defines-lead { white-space: normal; font-size: 17px !important; letter-spacing: .1em !important; }
+  html body.wwd-page main#main #what-defines-us .wwd-defines-body { max-width: none; font-size: 18px !important; }
+  #what-defines-us .wwd-pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; margin-top: 28px; }
+  #what-defines-us .wwd-pillars > li { padding-inline: 14px; }
+  #what-defines-us .wwd-pillars > li:nth-child(odd) { border-left: 0; }
+  html body.wwd-page main#main #what-defines-us .wwd-pillar-title { font-size: 15px !important; }
+  html body.wwd-page main#main #what-defines-us .wwd-pillar-copy { font-size: 14px !important; }
+  #what-defines-us .wwd-facts { grid-template-columns: minmax(0, 1fr); padding-block: 28px; }
+  #what-defines-us .wwd-fact { padding: 0; border-left: 0 !important; }
+  #what-defines-us .wwd-fact + .wwd-fact { border-top: 1px solid var(--sfc-line); padding-top: 24px; }
+  html body.wwd-page main#main #what-defines-us .wwd-fact-copy { font-size: 16px !important; }
+}
+@layer arotec-mobile-main-headings {
+  @media (max-width: 767px) {
+    html body.wwd-page main#main #what-defines-us #what-defines-us-title {
+      font-size: clamp(32px, 8.8vw, 48px) !important;
+      line-height: 1.08 !important;
+      letter-spacing: 0 !important;
+    }
+  }
+}
+/* Very short desktop windows retain readable content and normal scrolling. */
+@media (min-width: 1200px) and (max-height: 620px) {
+  html body.wwd-page main#main #what-defines-us { --wwd-unit: .65px; height: auto; min-height: 550px; }
+  #what-defines-us .wwd-defines-main { padding-top: 24px; }
+}
