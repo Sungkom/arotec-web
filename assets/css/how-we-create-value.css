@@ -518,6 +518,86 @@ html body.hwcv-page main#main #strategic-development .hwcv-strategy-tags li {
   --hwcv-line: rgba(37, 100, 163, 0.2);
 }
 
+/* From Insight to Implementation: supplied research artwork behind live copy. */
+html body.hwcv-page main#main #from-insight-to-implementation {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --hwcv-accent: #b8dcec;
+  --hwcv-text: #dbe6ef;
+  --hwcv-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(90deg, rgba(2, 13, 31, .5), rgba(2, 13, 31, .5) 48%, rgba(2, 13, 31, 0) 62%),
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    url("../images/how-we-create-value/from-insight-to-implementation-background-20260930.png");
+  background-position: center top;
+  background-size: 100% 100%, 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+
+html body.hwcv-page main#main #from-insight-to-implementation > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+
+html body.hwcv-page main#main #from-insight-to-implementation .hwcv-step-index {
+  background: #020d1f;
+}
+
+@media (max-width: 991px) {
+  html body.hwcv-page main#main #from-insight-to-implementation {
+    --hwcv-implementation-art-height: clamp(320px, 50vw, 460px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/how-we-create-value/from-insight-to-implementation-background-20260930.png");
+    background-size: 100% var(--hwcv-implementation-art-height), auto var(--hwcv-implementation-art-height);
+    background-position: right top;
+  }
+  html body.hwcv-page main#main #from-insight-to-implementation > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--hwcv-implementation-art-height) + 32px);
+  }
+}
+
+/* Innovation Through Evidence: supplied laboratory artwork behind live copy. */
+html body.hwcv-page main#main #innovation-through-evidence {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  --hwcv-accent: #b8dcec;
+  --hwcv-text: #dbe6ef;
+  --hwcv-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(90deg, rgba(2, 13, 31, .65), rgba(2, 13, 31, .65) 48%, rgba(2, 13, 31, 0) 62%),
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    url("../images/how-we-create-value/innovation-through-evidence-background-20260930.png");
+  background-position: center top;
+  background-size: 100% 100%, 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+
+html body.hwcv-page main#main #innovation-through-evidence > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+
+@media (max-width: 991px) {
+  html body.hwcv-page main#main #innovation-through-evidence {
+    --hwcv-innovation-art-height: clamp(320px, 50vw, 460px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/how-we-create-value/innovation-through-evidence-background-20260930.png");
+    background-size: 100% var(--hwcv-innovation-art-height), auto var(--hwcv-innovation-art-height);
+    background-position: right top;
+  }
+  html body.hwcv-page main#main #innovation-through-evidence > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--hwcv-innovation-art-height) + 32px);
+  }
+}
+
 .hwcv-page .wwa-copy,
 .hwcv-page .wwa-visual {
   min-width: 0;
