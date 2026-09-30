@@ -1,16 +1,58 @@
-/* Updated leadership copy, with portraits and signature at 70% scale. */
+/* Leadership artwork and signature refinements. */
+html body.wwa-page main#main#main #science-with-purpose.lrf-background-section {
+  --lrf-scene-image: url("../images/leadership-responsibility-and-future/science-with-purpose-background-20260930.png");
+  --lrf-scene-color: #0a1c33;
+  --lrf-art-height: 56.25vw;
+  background-position: center top;
+}
+
+html body.wwa-page main#main #science-with-purpose .wwa-more:focus-visible {
+  outline-color: #a7c8ff;
+}
+
+html body.wwa-page main#main#main #building-what-matters-next.lrf-background-section {
+  --lrf-scene-image: url("../images/leadership-responsibility-and-future/building-what-matters-next-background-20260930.png");
+  --lrf-scene-color: #031020;
+  --lrf-art-height: 56.25vw;
+  background-position: center top;
+}
+
+html body.wwa-page main#main#main #building-what-matters-next .lrf-capabilities {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 24px;
+}
+
+html body.wwa-page main#main#main #building-what-matters-next .lrf-capabilities li:nth-child(odd) {
+  border-left: 0;
+}
+
+html body.wwa-page main#main#main #quality-without-compromise.lrf-background-section {
+  --lrf-scene-image: url("../images/leadership-responsibility-and-future/quality-without-compromise-background-20260930.png");
+  --lrf-scene-color: #031020;
+  --lrf-art-height: 56.279904vw;
+  background-position: center top;
+}
+
+html body.wwa-page main#main#main #responsible-innovation.lrf-background-section {
+  --lrf-scene-image: url("../images/leadership-responsibility-and-future/responsible-innovation-background-20260930.png");
+  --lrf-scene-color: #031020;
+  --lrf-art-height: 56.279904vw;
+  background-position: center top;
+}
+
 html body.wwa-page main#main#main #founder-vision.lrf-background-section {
-  --lrf-refined-image: url("../images/leadership-responsibility-and-future/founder-vision-background-sep08.jpg");
+  --lrf-refined-image: url("../images/leadership-responsibility-and-future/founder-vision-background-20260930.png");
   --lrf-refined-position: right top;
   --lrf-refined-size: contain;
   --lrf-refined-color: #130f0b;
-  --lrf-refined-art-height: 66.671875vw;
+  --lrf-refined-art-height: 66.666667vw;
 }
 
 html body.wwa-page main#main#main #scientific-foundation.lrf-background-section {
-  --lrf-refined-image: url("../images/leadership-responsibility-and-future/scientific-foundation-background.jpg");
+  --lrf-refined-image: url("../images/leadership-responsibility-and-future/scientific-foundation-background-20260930.png");
+  --lrf-refined-position: center top;
   --lrf-refined-color: #09223a;
-  --lrf-refined-art-height: 36.7578125vw;
+  --lrf-refined-art-height: 56.284353vw;
 }
 
 html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section {
@@ -40,6 +82,12 @@ html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).l
   z-index: 1;
 }
 
+html body.wwa-page main#main#main #scientific-foundation.lrf-background-section::after {
+  transform: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
 html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section > .wwa-grid {
   position: relative;
   z-index: 2;
@@ -63,6 +111,46 @@ html body.wwa-page main#main#main #scientific-foundation .lrf-credentials span {
   margin-inline: 0.35em;
 }
 
+/* Fill the desktop viewport below the header; keep the portrait's face in view. */
+@media (min-width: 1101px) {
+  html body.wwa-page main#main#main #building-what-matters-next.lrf-background-section::before {
+    background: linear-gradient(90deg, rgba(3, 16, 32, .72), rgba(3, 16, 32, .6) 46%, rgba(3, 16, 32, .2) 60%, transparent 74%);
+  }
+
+  html body.wwa-page main#main#main #scientific-foundation.lrf-background-section::before {
+    background: linear-gradient(90deg, rgba(9, 34, 58, .6), rgba(9, 34, 58, .5) 45%, rgba(9, 34, 58, .1) 60%, transparent 72%);
+  }
+
+  html body.wwa-page main#main#main #founder-vision.lrf-background-section::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .44), rgba(0, 0, 0, .5) 44%, rgba(0, 0, 0, .2) 56%, transparent 68%);
+  }
+
+  html body.wwa-page main#main#main #founder-vision.lrf-background-section::after {
+    background-size: cover;
+    background-position: right top;
+    transform: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  html body.wwa-page main#main#main #founder-vision.lrf-background-section > .wwa-grid {
+    min-height: calc(100svh - var(--lrf-founder-header-height, 110.6px) - 1px);
+    padding-block: clamp(24px, 4svh, 48px);
+  }
+
+  html body.wwa-page main#main#main #founder-vision-title {
+    --arotec-display-size: clamp(52px, 4.7vw, 72px);
+    --arotec-display-line-height: 1.12;
+  }
+}
+
+/* Match the compact desktop header in synesthetic-flavor-shell.css. */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  html body.wwa-page main#main#main #founder-vision.lrf-background-section {
+    --lrf-founder-header-height: 99.56px;
+  }
+}
+
 @media (max-width: 1100px) {
   html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section::after {
     inset: 0 0 auto;
@@ -74,5 +162,13 @@ html body.wwa-page main#main#main #scientific-foundation .lrf-credentials span {
 
   html body.wwa-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section > .wwa-grid {
     padding-top: calc(var(--lrf-refined-art-height) * 0.7 + 24px) !important;
+  }
+
+  html body.wwa-page main#main#main #scientific-foundation.lrf-background-section {
+    --lrf-art-height: var(--lrf-refined-art-height);
+  }
+
+  html body.wwa-page main#main#main #scientific-foundation.lrf-background-section > .wwa-grid {
+    padding-top: calc(var(--lrf-refined-art-height) + 24px) !important;
   }
 }
