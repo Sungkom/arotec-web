@@ -396,7 +396,7 @@ html body.wwd-page main#main .wwd-values li {
   }
 }
 
-/* What Defines Us: supplied laboratory panorama, scoped to this detail hero. */
+/* What Defines Us: supplied Earth artwork, scoped to this detail hero. */
 html body.wwd-page main#main#main #what-defines-us {
   --wwd-defines-art-height: max(620px, 36.7578125vw);
   position: relative;
@@ -412,7 +412,7 @@ html body.wwd-page main#main#main #what-defines-us::before {
   pointer-events: none;
   background:
     linear-gradient(90deg, rgba(245, 250, 255, .96) 0%, rgba(245, 250, 255, .9) 36%, rgba(245, 250, 255, .28) 55%, rgba(245, 250, 255, 0) 72%),
-    url("../images/who-we-are-details/what-defines-us-laboratory-20260911.png") center top / cover no-repeat;
+    url("../images/who-we-are-details/what-defines-us-earth-20260930.png") center top / cover no-repeat;
 }
 html body.wwd-page main#main#main #what-defines-us::after {
   content: "";
@@ -439,7 +439,7 @@ html body.wwd-page main#main#main #what-defines-us .wwd-defines-visual-space {
     margin-inline: calc((100% - 100vw) / 2);
     background:
       linear-gradient(to bottom, #f2f8ff 0%, rgba(242, 248, 255, 0) 12%, rgba(242, 248, 255, 0) 86%, #f2f8ff 100%),
-      url("../images/who-we-are-details/what-defines-us-laboratory-20260911.png") 68% center / cover no-repeat;
+      url("../images/who-we-are-details/what-defines-us-earth-20260930.png") 68% center / cover no-repeat;
   }
 }
 

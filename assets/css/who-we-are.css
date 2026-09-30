@@ -560,8 +560,36 @@ html body.wwa-page main#main .wwa-more:focus-visible {
   }
 }
 body.wwa-page {
+  /* Own the shared About theme: the cultures page no longer supplies it. */
+  --sfc-ink: #09264d;
+  --sfc-ink-soft: #264a73;
+  --sfc-blue: #1277d5;
+  --sfc-line: rgba(32, 122, 202, .2);
+  --sfc-paper: #f8fbff;
+  --sfc-shell: min(1320px, calc(100vw - 120px));
   --sfc-sans: "DM Sans", sans-serif;
+  margin: 0;
+  overflow-x: clip;
+  color: var(--sfc-ink);
+  background: var(--sfc-paper);
   font-family: var(--sfc-sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+html:has(body.wwa-page) {
+  scroll-padding-top: 112px;
+}
+.wwa-page *,
+.wwa-page *::before,
+.wwa-page *::after {
+  box-sizing: border-box;
+}
+body.wwa-page #site-shell {
+  min-height: calc(var(--arotec-utility-height, 30.6px) + var(--arotec-main-height, 80px));
+}
+.wwa-page .sfc-shell {
+  width: var(--sfc-shell);
+  margin-inline: auto;
 }
 .wwa-page .wwa-main {
   position: relative;
@@ -709,6 +737,9 @@ html body.wwa-page main#main .wwa-capability-label {
   }
 }
 @media (max-width: 1199px) {
+  body.wwa-page {
+    --sfc-shell: min(1120px, calc(100vw - 80px));
+  }
   .wwa-page .wwa-grid {
     gap: 28px;
     padding-block: 60px 48px;
@@ -722,6 +753,12 @@ html body.wwa-page main#main .wwa-capability-label {
   }
 }
 @media (max-width: 991px) {
+  html:has(body.wwa-page) {
+    scroll-padding-top: 92px;
+  }
+  body.wwa-page #site-shell {
+    min-height: var(--arotec-main-height, 74px);
+  }
   .wwa-page .sfc-shell {
     width: calc(100% - 48px);
   }
