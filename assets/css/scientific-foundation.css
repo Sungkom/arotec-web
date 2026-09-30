@@ -100,6 +100,114 @@ html body.sfnd-page main#main #science-at-our-core .sfnd-core-closing {
   html body.sfnd-page main#main #science-at-our-core { padding-bottom: 48px; }
 }
 
+/* Multidisciplinary Science: supplied laboratory artwork behind live copy. */
+html body.sfnd-page main#main #multidisciplinary-science {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    url("../images/scientific-foundation/multidisciplinary-science-laboratory-20260930.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html body.sfnd-page main#main #multidisciplinary-science > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+
+@media (max-width: 991px) {
+  html body.sfnd-page main#main #multidisciplinary-science {
+    --sfnd-multidisciplinary-art-height: clamp(320px, 50vw, 460px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 65%, #020d1f),
+      url("../images/scientific-foundation/multidisciplinary-science-laboratory-20260930.png");
+    background-size: 100% var(--sfnd-multidisciplinary-art-height), auto var(--sfnd-multidisciplinary-art-height);
+    background-position: right top;
+  }
+  html body.sfnd-page main#main #multidisciplinary-science > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--sfnd-multidisciplinary-art-height) + 32px);
+  }
+}
+
+/* Neuro Skincare: supplied skin and neural artwork behind live copy. */
+html body.sfnd-page main#main #neuro-skincare {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    url("../images/scientific-foundation/neuro-skincare-background-20260930.png");
+  background-position: center top;
+  /* Keep the embedded diagram labels visible when the copy makes the section taller. */
+  background-size: 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+
+html body.sfnd-page main#main #neuro-skincare > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+
+@media (max-width: 991px) {
+  html body.sfnd-page main#main #neuro-skincare {
+    --sfnd-neuro-art-height: clamp(320px, 50vw, 460px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 65%, #020d1f),
+      url("../images/scientific-foundation/neuro-skincare-background-20260930.png");
+    background-size: 100% var(--sfnd-neuro-art-height), auto var(--sfnd-neuro-art-height);
+    background-position: right top;
+  }
+  html body.sfnd-page main#main #neuro-skincare > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--sfnd-neuro-art-height) + 32px);
+  }
+}
+
+/* Olfactory Science: supplied scent and neural artwork behind live copy. */
+html body.sfnd-page main#main #olfactory-science {
+  --sfc-ink: #fff;
+  --sfc-ink-soft: #dbe6ef;
+  --sfc-blue: #b8dcec;
+  --sfc-line: rgba(190, 218, 239, .3);
+  background-color: #020d1f;
+  background-image:
+    linear-gradient(90deg, rgba(2, 13, 31, .75), rgba(2, 13, 31, .75) 48%, rgba(2, 13, 31, 0) 62%),
+    linear-gradient(to top, #020d1f, rgba(2, 13, 31, 0) 30%),
+    url("../images/scientific-foundation/olfactory-science-background-20260930.png");
+  background-position: center top;
+  background-size: 100% 100%, 100% calc(100vw * 941 / 1672), 100% auto;
+  background-repeat: no-repeat;
+}
+
+html body.sfnd-page main#main #olfactory-science > .wwa-grid {
+  min-height: max(720px, 56.25vw);
+}
+
+html body.sfnd-page main#main #olfactory-science .sfnd-annotations > div {
+  background: rgba(2, 13, 31, .82);
+}
+
+@media (max-width: 991px) {
+  html body.sfnd-page main#main #olfactory-science {
+    --sfnd-olfactory-art-height: clamp(320px, 50vw, 460px);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 65%, #020d1f),
+      url("../images/scientific-foundation/olfactory-science-background-20260930.png");
+    background-size: 100% var(--sfnd-olfactory-art-height), auto var(--sfnd-olfactory-art-height);
+    background-position: right top;
+  }
+  html body.sfnd-page main#main #olfactory-science > .wwa-grid {
+    min-height: 0;
+    padding-top: calc(var(--sfnd-olfactory-art-height) + 32px);
+  }
+}
+
 html body.sfnd-page main#main .wwa-body + .wwa-body {
   margin-top: 20px;
 }
