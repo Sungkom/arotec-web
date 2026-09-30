@@ -125,6 +125,7 @@ body.sfl-page #main > section {
 }
 
 @media (max-width: 599px) {
+  body.sfl-page #main > :is(#culture, #science, #memory, #partner, #offerings) .sfl-eyebrow { display: none; }
   body.sfl-page #main { width: calc(100% - 28px); --sfl-gutter: 22px; padding-bottom: 16px; }
   body.sfl-page #main > section { margin-bottom: 20px; border-radius: 20px; }
   body.sfl-page #main .sfl-scene > .sfl-art { aspect-ratio: 1.3; }
