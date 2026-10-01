@@ -27,8 +27,8 @@
       value.textContent = String(days).padStart(2, "0");
       unit.textContent = days === 1 ? "DAY" : "DAYS";
       timer.setAttribute("aria-label", `${days} ${days === 1 ? "day" : "days"} remaining`);
-      intro.textContent = days === 0 ? "The countdown is complete" : "You are early";
-      message.textContent = days === 0 ? "Stay tuned!" : "We’re almost ready!";
+      intro.textContent = days === 0 ? "The wait is over." : "Almost there.";
+      message.textContent = days === 0 ? "Stay tuned!" : "Stay curious.";
       previousDays = days;
     }
     if (remaining === 0) clearInterval(interval);
