@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Scented Condensed";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html body.sws-page {
+  background: #031c30;
+}
+
+html body.sws-page main#main.sws-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: var(--detail-header-space, 112px) 0 0;
+}
+
+/* The existing shell measures its header. The artwork fills the remaining
+   desktop viewport; cover preserves its proportions without stretching. */
+html body.sws-page main#main .sws-hero {
+  position: relative;
+  isolation: isolate;
+  container-type: size;
+  width: 100%;
+  height: calc(100vh - var(--detail-header-space, 112px));
+  height: calc(100svh - var(--detail-header-space, 112px));
+  min-height: 440px;
+  overflow: hidden;
+  background: #031c30;
+  color: #f4f4f0;
+}
+
+html body.sws-page main#main .sws-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+html body.sws-page main#main .sws-labels {
+  position: absolute;
+  top: 9.1%;
+  right: 15%;
+  left: 15%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+html body.sws-page main#main .sws-hero p,
+html body.sws-page main#main .sws-hero h1 {
+  margin: 0;
+  color: inherit;
+  font-family: "Scented Condensed", "Arial Narrow", sans-serif !important;
+  font-style: normal;
+  text-transform: uppercase !important;
+}
+
+html body.sws-page main#main .sws-labels p {
+  font-size: clamp(12px, 1.03cqw, 27px) !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .14em !important;
+}
+
+html body.sws-page main#main .sws-copy {
+  position: absolute;
+  top: 35.1%;
+  left: 15.2%;
+  width: 40%;
+}
+
+/* Scope the poster typography separately from shared editorial headings. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.sws-page main#main #sws-title {
+    margin: 0 !important;
+    color: #f4f4f0 !important;
+    font-family: "Scented Condensed", "Arial Narrow", sans-serif !important;
+    font-size: clamp(32px, min(3.9cqw, 8.6cqh), 100px) !important;
+    font-weight: 400 !important;
+    line-height: 1.02 !important;
+    letter-spacing: .014em !important;
+    text-transform: uppercase !important;
+    transform: scaleX(.91);
+    transform-origin: left center;
+  }
+}
+
+html body.sws-page main#main .sws-intro {
+  margin-top: 1.5cqw;
+  font-size: clamp(17px, min(1.65cqw, 3.6cqh), 42px) !important;
+  font-weight: 300 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .17em !important;
+}
+
+html body.sws-page main#main .sws-announcement {
+  margin-top: min(2.5cqw, 5.4cqh);
+}
+
+html body.sws-page main#main .sws-announcement::before {
+  content: "";
+  display: block;
+  width: 5.35cqw;
+  height: 2px;
+  margin-bottom: 1cqw;
+  background: #9ca57a;
+}
+
+html body.sws-page main#main .sws-announcement p {
+  font-size: clamp(17px, min(1.65cqw, 3.6cqh), 42px) !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .115em !important;
+}
+
+html body.sws-page main#main .sws-announcement .sws-curious {
+  margin-top: 1.2cqw;
+  color: #a5b27d;
+  font-weight: 300 !important;
+  letter-spacing: .18em !important;
+}
+
+@media (min-width: 761px) and (max-aspect-ratio: 3/2) {
+  html body.sws-page main#main .sws-background { object-position: 60% center; }
+  html body.sws-page main#main .sws-copy { left: 8%; width: 47%; }
+  html body.sws-page main#main .sws-labels { left: 8%; right: 8%; }
+}
+
+/* Keep the same artwork, readable live copy, and complete bottle on phones. */
+@media (max-width: 760px) {
+  html body.sws-page main#main .sws-hero {
+    height: auto;
+    min-height: calc(100svh - var(--detail-header-space, 90px));
+    container-type: inline-size;
+    padding: 32px 7% 78cqw;
+  }
+  html body.sws-page main#main .sws-background {
+    top: auto;
+    bottom: 0;
+    height: 86cqw;
+    object-position: 75% center;
+  }
+  html body.sws-page main#main .sws-labels {
+    position: relative;
+    inset: auto;
+    align-items: start;
+    gap: 18px;
+  }
+  html body.sws-page main#main .sws-labels p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    letter-spacing: .12em !important;
+  }
+  html body.sws-page main#main .sws-labels p:last-child { text-align: right; }
+  html body.sws-page main#main .sws-copy {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-top: 42px;
+  }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.sws-page main#main #sws-title {
+      font-size: clamp(31px, 7.8vw, 54px) !important;
+      line-height: 1.05 !important;
+    }
+  }
+  html body.sws-page main#main .sws-intro {
+    margin-top: 18px;
+    font-size: clamp(16px, 3.9vw, 24px) !important;
+    line-height: 1.4 !important;
+    letter-spacing: .14em !important;
+  }
+  html body.sws-page main#main .sws-announcement { margin-top: 30px; }
+  html body.sws-page main#main .sws-announcement::before { width: 56px; margin-bottom: 15px; }
+  html body.sws-page main#main .sws-announcement p {
+    font-size: clamp(16px, 3.9vw, 24px) !important;
+    line-height: 1.4 !important;
+  }
+  html body.sws-page main#main .sws-announcement .sws-curious { margin-top: 16px; }
+}

@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Bespoke Sans";
+  src: url("../fonts/DMSans-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bespoke Sans";
+  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bespoke Sans";
+  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+html body.bespoke-page { background: #d9e6e9; }
+
+html body.bespoke-page main#main.bespoke-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: var(--detail-header-space, 112px) 0 0;
+}
+
+/* Fill the desktop viewport below the shared header. Cover keeps the artwork
+   proportional, while live type remains independent of the raster image. */
+html body.bespoke-page main#main .bespoke-hero {
+  position: relative;
+  isolation: isolate;
+  container-type: size;
+  width: 100%;
+  height: calc(100vh - var(--detail-header-space, 112px));
+  height: calc(100svh - var(--detail-header-space, 112px));
+  min-height: 440px;
+  overflow: hidden;
+  background: #d9e6e9;
+  color: #071c3e;
+}
+
+html body.bespoke-page main#main .bespoke-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+html body.bespoke-page main#main .bespoke-hero p {
+  margin: 0;
+  color: inherit;
+  font-family: "Bespoke Sans", "DM Sans", sans-serif !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+html body.bespoke-page main#main .bespoke-copy {
+  position: absolute;
+  top: 24.8%;
+  left: 16.85%;
+  width: 35%;
+}
+
+html body.bespoke-page main#main .bespoke-hero .bespoke-eyebrow {
+  color: #183052;
+  font-size: clamp(10px, min(.88cqw, 1.9cqh), 23px) !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .29em !important;
+  text-transform: uppercase !important;
+}
+
+/* The same important layer as the site's display specification lets this
+   page retain the reference's light uppercase heading. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.bespoke-page main#main #bespoke-title {
+    margin: 1.15cqw 0 0 !important;
+    color: #071c3e !important;
+    font-family: "Bespoke Sans", "DM Sans", sans-serif !important;
+    font-size: clamp(42px, min(4.8cqw, 10.3cqh), 123px) !important;
+    font-weight: 300 !important;
+    line-height: 1.035 !important;
+    letter-spacing: -.025em !important;
+    text-transform: uppercase !important;
+    transform: scaleX(1.1);
+    transform-origin: left center;
+  }
+}
+
+html body.bespoke-page main#main .bespoke-hero .bespoke-intro {
+  margin-top: .65cqw;
+  color: #253e67;
+  font-size: clamp(14px, min(1.32cqw, 2.85cqh), 34px) !important;
+  line-height: 1.42 !important;
+  letter-spacing: .015em !important;
+}
+
+html body.bespoke-page main#main .bespoke-announcement {
+  position: absolute;
+  top: 69.3%;
+  left: 16.85%;
+  width: 40%;
+}
+
+html body.bespoke-page main#main .bespoke-announcement p {
+  font-size: clamp(17px, min(1.84cqw, 3.95cqh), 47px) !important;
+  line-height: 1.25 !important;
+  letter-spacing: .005em !important;
+}
+
+html body.bespoke-page main#main .bespoke-announcement .bespoke-early {
+  margin-bottom: .2cqw;
+  font-size: clamp(20px, min(2.08cqw, 4.45cqh), 53px) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  transform: scaleX(1.1);
+  transform-origin: left center;
+}
+
+html body.bespoke-page .nav-sublink[aria-current="page"],
+html body.bespoke-page .mobile-nav-sublink[aria-current="page"] {
+  color: #15547c;
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+
+@media (min-width: 761px) and (max-aspect-ratio: 3/2) {
+  html body.bespoke-page main#main .bespoke-copy,
+  html body.bespoke-page main#main .bespoke-announcement { left: 8%; width: 44%; }
+  html body.bespoke-page main#main .bespoke-background { object-position: 58% center; }
+}
+
+@media (max-width: 760px) {
+  html body.bespoke-page main#main .bespoke-hero {
+    height: auto;
+    min-height: calc(100svh - var(--detail-header-space, 75px));
+    container-type: inline-size;
+    padding: 42px 7% 88vw;
+  }
+  html body.bespoke-page main#main .bespoke-background {
+    top: auto;
+    bottom: 0;
+    height: 86vw;
+    object-position: 75% center;
+  }
+  html body.bespoke-page main#main .bespoke-copy,
+  html body.bespoke-page main#main .bespoke-announcement {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+  html body.bespoke-page main#main .bespoke-hero .bespoke-eyebrow {
+    font-size: 10px !important;
+    letter-spacing: .22em !important;
+  }
+  @layer arotec-display-headings.spec.request-20260910 {
+    html body.bespoke-page main#main #bespoke-title {
+      margin-top: 18px !important;
+      font-size: clamp(44px, 12vw, 76px) !important;
+      line-height: 1.02 !important;
+      transform: none;
+    }
+  }
+  html body.bespoke-page main#main .bespoke-hero .bespoke-intro {
+    margin-top: 20px;
+    font-size: clamp(14px, 3.6vw, 19px) !important;
+    line-height: 1.55 !important;
+  }
+  html body.bespoke-page main#main .bespoke-hero .bespoke-intro br,
+  html body.bespoke-page main#main .bespoke-announcement br { display: none; }
+  html body.bespoke-page main#main .bespoke-announcement { margin-top: 38px; }
+  html body.bespoke-page main#main .bespoke-announcement p {
+    font-size: clamp(17px, 4.2vw, 23px) !important;
+    line-height: 1.5 !important;
+  }
+  html body.bespoke-page main#main .bespoke-announcement .bespoke-early {
+    margin-bottom: 7px;
+    font-size: clamp(21px, 5.4vw, 29px) !important;
+  }
+}

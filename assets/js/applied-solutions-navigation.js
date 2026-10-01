@@ -5,14 +5,19 @@
   const source = document.currentScript;
   if (!source || !source.src) return;
   const destination = new URL("../../pages/applied-solutions-overview.html", source.src).href;
+  const supplementsDestination = new URL("../../pages/health-wellness-scented-supplements.html", source.src).href;
+  const isSupplementsPage = window.location.pathname === new URL(supplementsDestination).pathname;
   const surfaces = ".site-header nav, .commerce-header nav, .mobile-panel nav, #site-shell header nav";
   const sync = () => {
     document.querySelectorAll(surfaces).forEach((nav) => {
       nav.querySelectorAll("a, button").forEach((item) => {
-        if (item.dataset.asOverviewLink === "true") return;
+        if (item.dataset.asOverviewLink === "true" || item.dataset.asSupplementsLink === "true") return;
         const label = item.cloneNode(true);
         label.querySelectorAll("svg, i, [aria-hidden='true'], .sr-only").forEach((node) => node.remove());
-        if (label.textContent.replace(/\s+/g, " ").trim().toLowerCase() !== "applied solutions") return;
+        const text = label.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+        const isOverview = text === "applied solutions" || item.getAttribute("href") === "#applied";
+        const isSupplements = text === "health & wellness : scented supplements";
+        if (!isOverview && !isSupplements) return;
         let link = item;
         if (item.tagName !== "A") {
           link = document.createElement("a");
@@ -22,9 +27,15 @@
           while (item.firstChild) link.append(item.firstChild);
           item.replaceWith(link);
         }
-        link.setAttribute("href", destination);
-        link.dataset.asOverviewLink = "true";
-        if (window.location.pathname === new URL(destination).pathname) link.setAttribute("aria-current", "page");
+        const target = isOverview ? destination : supplementsDestination;
+        link.setAttribute("href", target);
+        if (isOverview) link.dataset.asOverviewLink = "true";
+        else link.dataset.asSupplementsLink = "true";
+        if (window.location.pathname === new URL(target).pathname) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page");
+        }
+        if (isOverview && isSupplementsPage) link.classList.add("active");
       });
     });
   };

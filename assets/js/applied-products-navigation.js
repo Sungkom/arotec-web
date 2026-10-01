@@ -4,7 +4,8 @@
   document.documentElement.setAttribute('data-ap-products-navigation', 'ready');
   const productsUrl = new URL('../../pages/applied-products.html', document.currentScript.src).href;
   const countdownUrl = new URL('../../applied-products-countdown.html', document.currentScript.src).href;
-  const countdownLabels = new Set(['Vagus spa', 'Vagus scent bulb', 'Neuro-cosmetic', 'Bespoke Services']);
+  const bespokeUrl = new URL('../../pages/bespoke-services.html', document.currentScript.src).href;
+  const countdownLabels = new Set(['Vagus spa', 'Vagus scent bulb', 'Neuro-cosmetic']);
   const directLinks = new WeakSet();
 
   // Keep the dedicated page destination, but leave the trigger, chevron and
@@ -13,7 +14,15 @@
   const connect = () => {
     shell.querySelectorAll('.site-header nav a, .commerce-header nav a, .mobile-panel nav a').forEach(link => {
       if (link.closest('.nav-submenu, .mobile-nav-submenu')) {
-        if (countdownLabels.has(link.textContent.trim())) link.href = countdownUrl;
+        const label = link.textContent.trim();
+        if (label === 'Bespoke Services') {
+          link.href = bespokeUrl;
+          const isCurrent = location.pathname === new URL(bespokeUrl).pathname;
+          link.classList.toggle('active', isCurrent);
+          if (isCurrent) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        }
+        else if (countdownLabels.has(label)) link.href = countdownUrl;
         return;
       }
       const href = link.getAttribute('href') || '';
