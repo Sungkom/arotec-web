@@ -402,9 +402,10 @@ html body.wwd-page main#main #our-mission {
 }
 @media (max-width: 991px) {
   html body.wwd-page main#main #our-mission {
-    --wwd-mission-art-height: clamp(230px, 48vw, 440px);
-    background-size: auto var(--wwd-mission-art-height);
-    background-position: right top;
+    /* Keep the complete 1672 x 941 artwork within the viewport. */
+    --wwd-mission-art-height: calc(100vw * 941 / 1672);
+    background-size: 100% auto;
+    background-position: center top;
   }
   html body.wwd-page main#main #our-mission > .wwa-grid {
     padding-top: calc(var(--wwd-mission-art-height) + 32px);

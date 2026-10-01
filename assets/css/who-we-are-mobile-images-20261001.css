@@ -1,0 +1,46 @@
+/* Alternate artwork follows the overview's tablet and phone layout. */
+@media (max-width: 991px) {
+  html body.wwa-page main#main.wwa-overview-main #who-we-are.wwa-hero--flight {
+    --wwa-flight-art-height: calc(100vw * 9 / 16);
+    background-image:
+      linear-gradient(to bottom, rgba(3, 20, 40, 0) 70%, #031428),
+      url("../images/who-we-are/20261001/mobile/who-we-are-1600.webp");
+    background-size: 100% var(--wwa-flight-art-height), 100% auto;
+    background-position: center top;
+  }
+
+  html body.wwa-page main#main.wwa-overview-main #who-we-are.wwa-hero--flight::after {
+    content: none;
+  }
+
+  html body.wwa-page main#main.wwa-overview-main #who-we-are .wwa-flight-content {
+    padding-top: calc(var(--wwa-flight-art-height) + 32px);
+  }
+
+  html body.wwa-page main#main.wwa-overview-main #how-we-create-value {
+    --wwa-value-art-height: calc(100vw * 941 / 1672);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/who-we-are/20261001/mobile/how-we-create-value-1600.webp");
+    background-size: 100% var(--wwa-value-art-height), 100% auto;
+    background-position: center top;
+  }
+
+  html body.wwa-page main#main.wwa-overview-main #global-capability {
+    --wwa-global-art-height: calc(100vw * 941 / 1672);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/who-we-are/20261001/mobile/global-capability-1600.webp");
+    background-size: 100% var(--wwa-global-art-height), 100% auto;
+    background-position: center top;
+  }
+
+  html body.wwa-page main#main.wwa-overview-main #leadership-responsibility {
+    --wwa-leadership-art-height: calc(100vw * 941 / 1672);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/who-we-are/20261001/mobile/leadership-responsibility-1600.webp");
+    background-size: 100% var(--wwa-leadership-art-height), 100% auto;
+    background-position: center top;
+  }
+}

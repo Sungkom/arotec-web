@@ -1,0 +1,38 @@
+/* Responsive sources share the existing desktop image positioning. */
+html body.gcp-page main#main .gcp-responsive-art {
+  display: contents;
+}
+
+@media (max-width: 991px) {
+  html body.gcp-page main#main #global-perspective {
+    --gcp-hero-image-height: calc(100vw * 900 / 1600);
+    background-image: url("../images/global-capability-and-people/20261001/mobile/global-perspective-1600.webp");
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+
+  html body.gcp-page main#main #global-expert-network {
+    --gcp-network-image-height: calc(100vw * 1024 / 1536);
+    background-image: url("../images/global-capability-and-people/20261001/mobile/global-expert-network-1536.webp");
+    background-size: 100% auto;
+    background-position: center top;
+  }
+
+  html body.gcp-page main#main #trust-ethics-responsibility {
+    --gcp-trust-image-height: calc(100vw * 900 / 1600);
+    background-image: url("../images/global-capability-and-people/20261001/mobile/trust-ethics-responsibility-1600.webp");
+    background-size: 100% auto;
+    background-position: center top;
+  }
+
+  html body.gcp-page main#main :is(.gcp-team-art, .gcp-people-art) {
+    height: auto;
+  }
+
+  html body.gcp-page main#main .gcp-responsive-art img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}

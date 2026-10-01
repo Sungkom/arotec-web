@@ -1,0 +1,32 @@
+/* Alternate artwork follows the existing tablet/phone reading layout. */
+body.hwcv-page #main .hwcv-responsive-art { display: contents; }
+
+@media (max-width: 991px) {
+  html body.hwcv-page main#main :is(.hwcv-services-art, .hwcv-strategy-art, .hwcv-impact-art, .hwcv-supply-art) {
+    height: auto;
+  }
+  html body.hwcv-page main#main .hwcv-responsive-art > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  html body.hwcv-page main#main #from-insight-to-implementation {
+    --hwcv-implementation-art-height: calc(100vw * 941 / 1672);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/how-we-create-value/20261001/mobile/from-insight-to-implementation-1600.webp");
+    background-size: 100% var(--hwcv-implementation-art-height), 100% auto;
+    background-position: center top;
+  }
+  html body.hwcv-page main#main #innovation-through-evidence {
+    --hwcv-innovation-art-height: calc(100vw * 941 / 1672);
+    background-image:
+      linear-gradient(to bottom, rgba(2, 13, 31, 0) 70%, #020d1f),
+      url("../images/how-we-create-value/20261001/mobile/innovation-through-evidence-1600.webp");
+    background-size: 100% var(--hwcv-innovation-art-height), 100% auto;
+    background-position: center top;
+  }
+}

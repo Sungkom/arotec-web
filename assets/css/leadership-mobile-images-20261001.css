@@ -1,0 +1,52 @@
+/* Match this page's existing tablet layout and preserve each image's proportions. */
+@media (max-width: 1100px) {
+  html body.lrf-page main#main#main :is(#founder-vision, #scientific-foundation, #responsible-innovation, #quality-without-compromise, #building-what-matters-next, #science-with-purpose).lrf-background-section {
+    --lrf-art-height: calc(100vw * 900 / 1600);
+    background-size: 100% auto;
+    background-position: center top;
+  }
+
+  html body.lrf-page main#main#main #founder-vision.lrf-background-section {
+    --lrf-refined-image: url("../images/leadership-responsibility-and-future/20261001/mobile/founder-vision-1600.webp");
+    --lrf-art-height: calc(100vw * 1067 / 1600);
+  }
+
+  html body.lrf-page main#main#main #scientific-foundation.lrf-background-section {
+    --lrf-refined-image: url("../images/leadership-responsibility-and-future/20261001/mobile/scientific-foundation-1600.webp");
+    --lrf-art-height: calc(100vw * 901 / 1600);
+  }
+
+  html body.lrf-page main#main#main #responsible-innovation.lrf-background-section {
+    --lrf-scene-image: url("../images/leadership-responsibility-and-future/20261001/mobile/responsible-innovation-1600.webp");
+  }
+
+  html body.lrf-page main#main#main #quality-without-compromise.lrf-background-section {
+    --lrf-scene-image: url("../images/leadership-responsibility-and-future/20261001/mobile/quality-without-compromise-1600.webp");
+  }
+
+  html body.lrf-page main#main#main #building-what-matters-next.lrf-background-section {
+    --lrf-scene-image: url("../images/leadership-responsibility-and-future/20261001/mobile/building-what-matters-next-1600.webp");
+  }
+
+  html body.lrf-page main#main#main #science-with-purpose.lrf-background-section {
+    --lrf-scene-image: url("../images/leadership-responsibility-and-future/20261001/mobile/science-with-purpose-1600.webp");
+  }
+
+  html body.lrf-page main#main#main :is(#founder-vision, #scientific-foundation).lrf-background-section::after {
+    height: var(--lrf-art-height);
+    background-image: var(--lrf-refined-image);
+    background-size: 100% auto;
+    background-position: center top;
+    transform: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  html body.lrf-page main#main#main .lrf-background-section::before {
+    content: none;
+  }
+
+  html body.lrf-page main#main#main :is(#founder-vision, #scientific-foundation, #responsible-innovation, #quality-without-compromise, #building-what-matters-next, #science-with-purpose).lrf-background-section > .wwa-grid {
+    padding-top: calc(var(--lrf-art-height) + 24px) !important;
+  }
+}
