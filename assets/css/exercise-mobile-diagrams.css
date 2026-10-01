@@ -1,0 +1,143 @@
+/* Text-free versions of the seven supplied MB diagrams, with selectable labels. */
+@font-face {
+  font-family: "Exercise Diagram";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.esh-mobile-diagram { display: none; }
+
+@media (width < 1280px) {
+  .exercise-systemic-page :is(.esh-context-scene,.esh-acute-scene,.esh-peripheral-scene,.esh-neural-scene,.esh-neurochemical-scene,.esh-crosstalk-scene,.esh-cellular-scene) > :not(header):not(.esh-mobile-diagram) { display: none !important; }
+  html body.exercise-systemic-page main#main .esh-section .esh-mobile-diagram {
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: calc(100% + 56px);
+    max-width: none;
+    margin: 0 -28px;
+    scroll-margin-top: 110px;
+  }
+  .esh-mobile-diagram-actions { padding: 14px 28px 0; }
+  .esh-mobile-diagram-open, .esh-mobile-diagram-transcript > summary {
+    color: #173654;
+    font: 500 14px/1.4 var(--site-font, sans-serif);
+    text-transform: none;
+    letter-spacing: normal;
+    cursor: pointer;
+    min-height: 44px;
+  }
+  .esh-mobile-diagram-open {
+    background: #fff;
+    border: 1px solid #b8c9d9;
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+  .esh-mobile-diagram-open span { margin-left: 12px; }
+  .esh-mobile-diagram-transcript { margin-top: 8px; }
+  .esh-mobile-diagram-transcript > summary { padding-block: 12px; }
+  .esh-mobile-diagram-text { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: 760px; padding-block: 12px; }
+  html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-text :is(h3,p,li) {
+    font-family: var(--site-font, sans-serif) !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important;
+    color: #173654;
+    margin: 0 !important;
+    padding: 0;
+  }
+  .esh-mobile-diagram-text h3 { font-weight: 700; }
+  .esh-mobile-diagram-text ul { padding-left: 1.2em; margin: 6px 0 0; }
+  .esh-mobile-diagram-text br { display: none; }
+  .esh-mobile-diagram-open:focus-visible, .esh-mobile-diagram-transcript summary:focus-visible,
+  .esh-diagram-dialog button:focus-visible, .esh-diagram-dialog-viewport:focus-visible { outline: 3px solid #527eaa; outline-offset: 3px; }
+}
+@media (width < 768px) {
+  html body.exercise-systemic-page main#main .esh-section .esh-mobile-diagram { width: calc(100% + 48px); margin-inline: -24px; }
+  .esh-mobile-diagram-actions { padding-inline: 24px; }
+  .esh-mobile-diagram-text { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* The canvas controls both the fitted preview and the enlarged dialog. */
+.esh-mobile-diagram-canvas {
+  position: relative;
+  container-type: inline-size;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 1672 / 941;
+  background: #fff;
+  color: #0b1746;
+  text-align: left;
+}
+.esh-mobile-diagram-canvas > picture,
+.esh-mobile-diagram-canvas > picture > img { display: block; width: 100%; height: 100%; margin: 0; }
+.esh-mobile-diagram-canvas > picture > img { object-fit: contain; }
+.esh-mobile-diagram-canvas .esh-map-label { position: absolute; z-index: 1; text-align: var(--label-align,left); }
+.esh-mobile-diagram-canvas .esh-map-label :is(h3,p,li,ul),
+#esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label :is(h3,p,li,ul),
+html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label :is(h3,p,li,ul) {
+  position: static;
+  font-family: "Exercise Diagram", "Arial Narrow", sans-serif !important;
+  font-size: calc(var(--fs,26) / 20.48 * 1cqw) !important;
+  font-weight: var(--label-weight,400) !important;
+  line-height: var(--label-leading,1.15) !important;
+  letter-spacing: -.025em !important;
+  color: #0b1746 !important;
+  text-transform: none !important;
+  white-space: normal !important;
+  text-align: var(--label-align,left) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto;
+  max-width: none;
+  min-height: 0;
+}
+.esh-mobile-diagram-canvas .esh-map-label h3,
+#esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label h3,
+html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label h3 {
+  font-size: calc(var(--hfs,30) / 20.48 * 1cqw) !important;
+  font-weight: 750 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.03em !important;
+}
+.esh-mobile-diagram-canvas .esh-map-label h3 + :is(ul,p),
+#esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label h3 + :is(ul,p),
+html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label h3 + :is(ul,p) { margin-top: calc(var(--label-gap,.5) * 1cqw) !important; }
+.esh-mobile-diagram-canvas .esh-map-label ul,
+#esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label ul,
+html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label ul { list-style: disc outside; padding-left: 1em !important; }
+.esh-mobile-diagram-canvas .esh-map-label br { display: initial !important; }
+.esh-mobile-diagram-canvas .esh-map-label li::marker { color: #0b1746; }
+.esh-mobile-diagram-canvas .esh-map-label-white { background: rgb(255 255 255 / .94); border-radius: .45cqw; padding-block: .18cqw; }
+.esh-mobile-diagram-canvas .esh-map-label-purple { background: linear-gradient(#f8edff,#d5adfa); border: .09cqw solid #ba80ec; border-radius: 1cqw; padding-block: .15cqw; }
+.esh-mobile-diagram-canvas .esh-map-label-marker::before { content: ''; position: absolute; width: .34cqw; height: .34cqw; border-radius: 50%; background: var(--marker-color); left: -.68cqw; top: .48cqw; }
+.esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul),
+#esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul),
+html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul) {
+  width: 117.647% !important;
+  transform: scaleX(.85);
+  transform-origin: left top;
+}
+
+body.esh-diagram-is-open { overflow: hidden; }
+.esh-diagram-dialog {
+  width: min(1240px, calc(100vw - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #c7d6e3;
+  border-radius: 8px;
+  color: #173654;
+  background: #fff;
+}
+.esh-diagram-dialog::backdrop { background: rgb(7 27 70 / .7); }
+.esh-diagram-dialog-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 12px; border-bottom: 1px solid #dce5ed; }
+body.exercise-systemic-page #esh-mobile-diagram-dialog h2.esh-diagram-dialog-title { flex: 1 0 100%; font: 600 17px/1.35 var(--site-font,sans-serif) !important; letter-spacing: normal !important; margin: 0 0 4px !important; }
+.esh-diagram-dialog-toolbar button { background: #fff; color: #173654; border: 1px solid #b8c9d9; border-radius: 4px; padding: 10px 12px; min-height: 44px; font: 500 14px/1.3 var(--site-font,sans-serif); cursor: pointer; }
+.esh-diagram-dialog-toolbar button[aria-pressed="true"] { color: #fff; background: #173654; border-color: #173654; }
+.esh-diagram-dialog-toolbar button:last-child { margin-left: auto; }
+.esh-diagram-dialog-viewport { overflow: auto; max-height: calc(100dvh - 164px); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.esh-diagram-dialog-canvas { box-sizing: border-box; }
+@media (min-width:1280px) { .esh-diagram-dialog { display: none; } }
