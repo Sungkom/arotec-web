@@ -86,7 +86,8 @@ html body.nss-page #brain-skin-axis .nss-axis-signoff { position: absolute; left
   #brain-skin-axis .nss-axis-icons img { width: 62px; height: 58px; }
   html body.nss-page #brain-skin-axis .nss-axis-icons span { font-size: 13px !important; line-height: 1.4 !important; letter-spacing: -.25px; }
   #brain-skin-axis .nss-axis-process-arrow { top: auto; right: calc(50% - 16px); bottom: -31px; transform: rotate(90deg); font-size: 30px; }
-  html body.nss-page #brain-skin-axis .nss-axis-signoff { font-size: 17px !important; line-height: 1.5 !important; text-align: center; }
+  /* Match the desktop selector so the signoff stays below the reflowed cards. */
+  html body.nss-page #brain-skin-axis .nss-axis-signoff { position: relative; inset: auto; font-size: 17px !important; line-height: 1.5 !important; text-align: center; }
 }
 @media (max-width: 600px) {
   #brain-skin-axis .nss-axis-heading { margin-left: 0; padding-top: 170px; }
