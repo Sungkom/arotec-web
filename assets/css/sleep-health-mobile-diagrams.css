@@ -1,0 +1,66 @@
+/* Loaded first: scoped important text rules precede the legacy reference layers. */
+@layer sleep-health-mobile;
+@font-face { font-family:"Sleep Health Diagram"; src:url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype"); font-weight:100 900; font-display:swap; }
+.shm-mobile-diagram { display:none; }
+@media (width < 1200px) {
+  body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions) > :not(.shm-mobile-diagram) { display:none!important; }
+  body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions) { padding:0 0 24px; }
+  body.sleep-health-page #main .shm-mobile-diagram { display:block; width:100%; max-width:none; margin:0; background:#fff; color:#173654; }
+  .shm-mobile-diagram-actions { padding:14px 24px 0; }
+  .shm-mobile-diagram-open, .shm-mobile-diagram-transcript > summary { color:#173654; font:500 14px/1.4 var(--site-font,sans-serif); text-transform:none; letter-spacing:normal; cursor:pointer; min-height:44px; }
+  .shm-mobile-diagram-open { background:#fff; border:1px solid #b8c9d9; border-radius:4px; padding:10px 16px; }
+  .shm-mobile-diagram-open i { margin-left:12px; }
+  .shm-mobile-diagram-transcript { margin-top:8px; }
+  .shm-mobile-diagram-transcript > summary { padding-block:12px; }
+  .shm-mobile-diagram-text { max-width:1000px; padding-block:12px; }
+  .shm-mobile-diagram-text ul, .shm-mobile-diagram-text ol { padding-left:1.25em; margin-block:16px; list-style:disc; }
+  .shm-mobile-diagram-text > div > ol { list-style:none; padding-left:0; }
+  .shm-mobile-diagram-text br { display:none; }
+  .shm-mobile-diagram-text dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+  .shm-burden-text header { margin-bottom:24px; }
+  .shm-burden-text .shm-burden-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; list-style:none; padding:0; }
+  .shm-burden-grid img { display:block; width:80px; height:80px; object-fit:contain; margin:0 0 12px; }
+  .shm-mobile-diagram-open:focus-visible, .shm-mobile-diagram-transcript summary:focus-visible,
+  .shm-diagram-dialog button:focus-visible, .shm-diagram-dialog-viewport:focus-visible { outline:3px solid #527eaa; outline-offset:3px; }
+  @layer sleep-health-mobile {
+    html body.sleep-health-page #main .shm-mobile-diagram-text :is(h2,h3,p,li,a,strong,span,dt,dd) {
+      position:static!important; font-family:var(--site-font,sans-serif)!important; font-size:16px!important;
+      line-height:1.6!important; letter-spacing:normal!important; color:#173654!important;
+      text-transform:none!important; margin:0 0 12px!important; padding:0!important; white-space:normal!important; font-weight:400!important;
+    }
+    html body.sleep-health-page #main .shm-mobile-diagram-text h2 { font-size:clamp(28px,4vw,44px)!important; line-height:1.15!important; font-weight:600!important; }
+    html body.sleep-health-page #main .shm-mobile-diagram-text h3 { font-size:20px!important; line-height:1.3!important; margin-top:24px!important; font-weight:600!important; }
+    html body.sleep-health-page #main .shm-mobile-diagram-text :is(dt,strong) { font-weight:600!important; }
+    html body.sleep-health-page #main .shm-burden-grid h3 { margin-top:0!important; }
+  }
+}
+@media (width < 600px) {
+  .shm-mobile-diagram-text dl, .shm-burden-text .shm-burden-grid { grid-template-columns:1fr; }
+}
+.shm-mobile-diagram-canvas { position:relative; container-type:inline-size; isolation:isolate; width:100%; aspect-ratio:1672/941; background:#fff; text-align:left; }
+.shm-mobile-diagram-canvas > picture, .shm-mobile-diagram-canvas > picture > img { display:block; width:100%; height:100%; margin:0; }
+.shm-mobile-diagram-canvas > picture > img { object-fit:contain; }
+.shm-mobile-diagram-canvas .shm-map-label { position:absolute; z-index:1; text-align:var(--label-align,left); }
+@layer sleep-health-mobile {
+  .shm-mobile-diagram-canvas .shm-map-label > :is(h2,h3,p) {
+    position:static!important; font-family:"Sleep Health Diagram","Arial Narrow",sans-serif!important;
+    font-size:calc(var(--fs)/20.48*1cqw)!important; font-weight:var(--label-weight)!important;
+    line-height:1.02!important; letter-spacing:-.02em!important; color:var(--label-color)!important;
+    text-transform:none!important; white-space:nowrap!important; text-align:var(--label-align,left)!important;
+    margin:0!important; padding:0!important; width:var(--label-width)!important; max-width:none!important; min-height:0!important;
+    transform:scaleX(var(--label-scale)); transform-origin:left top; text-wrap:nowrap!important;
+  }
+  .shm-mobile-diagram-canvas .shm-map-label br { display:initial!important; }
+  .shm-mobile-diagram-canvas .shm-map-title > h2 { line-height:.94!important; }
+}
+body.shm-diagram-is-open { overflow:hidden; }
+.shm-diagram-dialog { width:min(1240px,calc(100vw - 24px)); max-width:none; max-height:calc(100dvh - 24px); margin:auto; padding:0; border:1px solid #c7d6e3; border-radius:8px; color:#173654; background:#fff; }
+.shm-diagram-dialog::backdrop { background:rgb(7 27 70 / .7); }
+.shm-diagram-dialog-toolbar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:12px; border-bottom:1px solid #dce5ed; }
+body.sleep-health-page #shm-mobile-diagram-dialog h2.shm-diagram-dialog-title { flex:1 0 100%; font:600 17px/1.35 var(--site-font,sans-serif)!important; letter-spacing:normal!important; margin:0 0 4px!important; }
+.shm-diagram-dialog-toolbar button { background:#fff; color:#173654; border:1px solid #b8c9d9; border-radius:4px; padding:10px 12px; min-height:44px; font:500 14px/1.3 var(--site-font,sans-serif); cursor:pointer; }
+.shm-diagram-dialog-toolbar button[aria-pressed="true"] { color:#fff; background:#173654; border-color:#173654; }
+.shm-diagram-dialog-toolbar button:last-child { margin-left:auto; }
+.shm-diagram-dialog-viewport { overflow:auto; max-height:calc(100dvh - 164px); overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+.shm-diagram-dialog-canvas { box-sizing:border-box; }
+@media (min-width:1200px) { .shm-diagram-dialog { display:none; } }

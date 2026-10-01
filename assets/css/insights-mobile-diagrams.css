@@ -1,0 +1,72 @@
+/* Mobile/tablet-only compositions from the supplied MB references. */
+@font-face {
+  font-family: "Sleep Diagram";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+.isb-mobile-diagram { display: none; }
+@media (width < 1280px) {
+  body.insights-sleep-page #main .insights-section > :not(.isb-mobile-diagram) { display: none !important; }
+  body.insights-sleep-page #main .insights-section { padding: 0 0 24px; }
+  body.insights-sleep-page #main .isb-mobile-diagram { display: block; width: 100%; max-width: none; margin: 0; }
+  .isb-mobile-diagram-actions { padding: 14px 24px 0; }
+  .isb-mobile-diagram-open, .isb-mobile-diagram-transcript > summary {
+    color: #173654; font: 500 14px/1.4 var(--site-font,sans-serif); text-transform: none;
+    letter-spacing: normal; cursor: pointer; min-height: 44px;
+  }
+  .isb-mobile-diagram-open { background: #fff; border: 1px solid #b8c9d9; border-radius: 4px; padding: 10px 16px; }
+  .isb-mobile-diagram-open i { margin-left: 12px; }
+  .isb-mobile-diagram-transcript { margin-top: 8px; }
+  .isb-mobile-diagram-transcript > summary { padding-block: 12px; }
+  .isb-mobile-diagram-text { max-width: 900px; padding-block: 12px; }
+  html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-mobile-diagram-text :is(h2,h3,p,li,a,strong,span) {
+    position: static; font-family: var(--site-font,sans-serif) !important; font-size: 16px !important;
+    line-height: 1.6 !important; letter-spacing: normal !important; color: #173654;
+    text-transform: none; margin: 0 0 12px !important; padding: 0; white-space: normal;
+  }
+  html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-mobile-diagram-text h3 { font-size: 20px !important; margin-top: 24px !important; }
+  .isb-mobile-diagram-text ul, .isb-mobile-diagram-text ol { padding-left: 1.25em; margin-block: 16px; }
+  .isb-mobile-diagram-text > div > ol { list-style: none; padding-left: 0; }
+  .isb-mobile-diagram-text a, .isb-mobile-diagram-text strong { display: block; }
+  .isb-mobile-diagram-text header { margin-bottom: 24px; }
+  .isb-mobile-diagram-text br { display: none; }
+  .isb-mobile-diagram-open:focus-visible, .isb-mobile-diagram-transcript summary:focus-visible,
+  .isb-diagram-dialog button:focus-visible, .isb-diagram-dialog-viewport:focus-visible { outline: 3px solid #527eaa; outline-offset: 3px; }
+}
+.isb-mobile-diagram-canvas { position: relative; container-type: inline-size; isolation: isolate; width: 100%; aspect-ratio: 1672 / 941; background: #fff; color: #081329; text-align: left; }
+.isb-mobile-diagram-canvas > picture, .isb-mobile-diagram-canvas > picture > img { display: block; width: 100%; height: 100%; margin: 0; }
+.isb-mobile-diagram-canvas > picture > img { object-fit: contain; }
+.isb-mobile-diagram-canvas .isb-map-label { position: absolute; z-index: 1; text-align: var(--label-align,left); }
+.isb-mobile-diagram-canvas .isb-map-label > :is(h2,h3,p),
+#isb-mobile-diagram-dialog .isb-map-label > :is(h2,h3,p),
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-label > :is(h2,h3,p) {
+  position: static; font-family: "Sleep Diagram","Arial Narrow",sans-serif !important;
+  font-size: calc(var(--fs) / 20.48 * 1cqw) !important; font-weight: var(--label-weight) !important;
+  line-height: 1.02 !important; letter-spacing: -.025em !important; color: #07132e !important;
+  text-transform: none !important; white-space: nowrap !important; text-align: var(--label-align,left) !important;
+  margin: 0 !important; padding: 0 !important; width: 125% !important; max-width: none; min-height: 0;
+  transform: scaleX(.8); transform-origin: left top; text-wrap: nowrap;
+}
+.isb-mobile-diagram-canvas .isb-map-label br { display: initial !important; }
+.isb-mobile-diagram-canvas .isb-map-title > h2,
+#isb-mobile-diagram-dialog .isb-map-title > h2,
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-title > h2 { width: 119.048% !important; transform: scaleX(.84); line-height: .94 !important; }
+.isb-mobile-diagram-canvas .isb-map-number > p,
+#isb-mobile-diagram-dialog .isb-map-number > p,
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-number > p { color: #3d8d94 !important; }
+.isb-mobile-diagram-canvas .isb-map-caption > p,
+#isb-mobile-diagram-dialog .isb-map-caption > p,
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-caption > p { letter-spacing: .14em !important; color: #1c3159 !important; }
+body.isb-diagram-is-open { overflow: hidden; }
+.isb-diagram-dialog { width: min(1240px,calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); margin: auto; padding: 0; border: 1px solid #c7d6e3; border-radius: 8px; color: #173654; background: #fff; }
+.isb-diagram-dialog::backdrop { background: rgb(7 27 70 / .7); }
+.isb-diagram-dialog-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 12px; border-bottom: 1px solid #dce5ed; }
+body.insights-sleep-page #isb-mobile-diagram-dialog h2.isb-diagram-dialog-title { flex: 1 0 100%; font: 600 17px/1.35 var(--site-font,sans-serif) !important; letter-spacing: normal !important; margin: 0 0 4px !important; }
+.isb-diagram-dialog-toolbar button { background: #fff; color: #173654; border: 1px solid #b8c9d9; border-radius: 4px; padding: 10px 12px; min-height: 44px; font: 500 14px/1.3 var(--site-font,sans-serif); cursor: pointer; }
+.isb-diagram-dialog-toolbar button[aria-pressed="true"] { color: #fff; background: #173654; border-color: #173654; }
+.isb-diagram-dialog-toolbar button:last-child { margin-left: auto; }
+.isb-diagram-dialog-viewport { overflow: auto; max-height: calc(100dvh - 164px); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.isb-diagram-dialog-canvas { box-sizing: border-box; }
+@media (min-width: 1280px) { .isb-diagram-dialog { display: none; } }
