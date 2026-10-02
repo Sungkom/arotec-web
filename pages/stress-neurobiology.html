@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url=stress-atc.html">
+    <link rel="canonical" href="stress-atc.html">
+    <script>window.location.replace("stress-atc.html");</script>
+    <meta name="description" content="An interactive scientific infographic tracing stress from adaptive response through chronic dysregulation, disease vulnerability, cognitive decline, and neurodegeneration.">
+    <meta name="theme-color" content="#071d55">
+    <title>Stress Neurobiology | Arotec</title>
+    <script>const stressCaptureQuery = new URLSearchParams(location.search); const stressCaptureSection = stressCaptureQuery.get("capture"); if (["01", "02", "03", "04", "05", "06"].includes(stressCaptureSection)) document.documentElement.classList.add(`stress-capture-${stressCaptureSection}`);</script>
+    <link rel="icon" href="../assets/images/arotec-scientist-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../assets/css/content-protection.css?v=20261002">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.min.css?v=20260910-closed-panel-shadow-v1">
+    <link rel="stylesheet" href="../assets/css/header-theme.css?v=20260715">
+    <link rel="stylesheet" href="../assets/css/stress-neurobiology.css?v=20260811-v16">
+    <link rel="stylesheet" href="../assets/css/infographic-navigation.css?v=20260811-stress-navigation-v17">
+    <link rel="stylesheet" href="../assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="../assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
+    <link rel="stylesheet" href="../assets/css/site-typography.css?v=20260910-typography-complete-v5"><script src="../assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
+    <script defer src="../assets/js/content-protection.js?v=20261002"></script>
+</head>
+  <body class="stress-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="stress-scroll-progress" aria-hidden="true"><span data-stress-progress></span></div>
+
+    <header class="site-header stress-site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Arotec home">
+          <img class="brand-logo" src="../assets/images/arotec-scientist-logo.png" width="250" height="229" alt="Arotec Scientist" decoding="async">
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="../index.html#customized">Customized for you</a>
+          <a class="nav-link" href="../index.html#applied">Applied Solutions</a>
+          <a class="nav-link" href="../index.html#products">Applied Products</a>
+          <a class="nav-link" href="../index.html#platform">Platform</a>
+          <a class="nav-link" href="../index.html#about">Who We Are</a>
+          <a class="nav-link" href="../index.html#insights">Insights</a>
+          <a class="nav-link" href="../index.html#partners">Partners</a>
+          <a class="nav-link" href="../index.html#join">Join Us</a>
+        </nav>
+        <div class="header-actions">
+          <a class="pill-button contact-pill" href="members.html">Get In touch</a>
+          <a class="circle-button" href="../index.html" aria-label="Back to home">A&amp;S</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="stress-progress-nav" data-stress-nav aria-label="Stress neurobiology infographic sections">
+      <a href="#stress-stages"><span>01</span>Stress stages</a>
+      <a href="#acute-chronic"><span>02</span>Acute to chronic</a>
+      <a href="#dysregulatory-systems"><span>03</span>Core systems</a>
+      <a href="#clinical-outcomes"><span>04</span>Clinical outcomes</a>
+      <a href="#cognitive-vulnerability"><span>05</span>Cognitive risk</a>
+      <a href="#neurodegeneration"><span>06</span>Neurodegeneration</a>
+    </nav>
+
+    <svg class="sn-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <marker id="sn-arrow-navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#071d55"/></marker>
+        <marker id="sn-arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#4b5260"/></marker>
+        <marker id="sn-arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#14752c"/></marker>
+        <marker id="sn-arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#e7970b"/></marker>
+        <marker id="sn-arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#bf080d"/></marker>
+        <marker id="sn-arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#532092"/></marker>
+        <symbol id="sn-i-balance" viewBox="0 0 64 64"><path d="M32 10v42M19 54h26M12 18h40M18 18 9 38h18L18 18Zm28 0-9 20h18L46 18Z"/></symbol>
+        <symbol id="sn-i-shield" viewBox="0 0 64 64"><path d="M32 7 52 15v15c0 13-8 22-20 27C20 52 12 43 12 30V15l20-8Z"/><path d="M32 14v34M18 26h28M21 38h22"/></symbol>
+        <symbol id="sn-i-cycle" viewBox="0 0 64 64"><path d="M49 25a20 20 0 0 0-35-5l-3 5M15 38a20 20 0 0 0 35 5l3-5"/><path d="m10 15 1 10 10-1M54 48l-1-10-10 1"/></symbol>
+        <symbol id="sn-i-battery" viewBox="0 0 64 64"><rect x="8" y="18" width="45" height="28" rx="4"/><path d="M53 27h4v10h-4M14 24h10v16H14z"/></symbol>
+        <symbol id="sn-i-cloud" viewBox="0 0 64 64"><path d="M16 39a11 11 0 0 1 3-21 15 15 0 0 1 28 6 8 8 0 0 1 1 15H16Z"/><path d="m30 25-7 12h8l-3 12 13-17h-9l4-7"/></symbol>
+        <symbol id="sn-i-plant" viewBox="0 0 64 64"><path d="M32 54V27M31 35C18 35 11 28 11 15c13 0 20 7 20 20ZM33 29C33 17 40 10 52 10c0 12-7 19-19 19Z"/><path d="M18 54h28"/></symbol>
+        <symbol id="sn-i-brain" viewBox="0 0 64 64"><path d="M30 12c-5-6-14-1-13 6-8 1-9 12-3 16-4 7 2 14 9 12 1 7 10 8 14 3 6 3 13-2 11-9 7-4 5-15-2-17 2-7-7-14-14-11-3-5-10-3-10 3Z"/><path d="M32 15v35M20 23c6-1 9 2 9 7M17 37c5-3 10-1 12 4M44 23c-6-1-9 2-9 7M47 37c-5-3-10-1-12 4"/></symbol>
+        <symbol id="sn-i-heart" viewBox="0 0 64 64"><path d="M32 53S8 39 8 22c0-13 17-18 24-6 7-12 24-7 24 6 0 17-24 31-24 31Z"/><path d="M12 31h11l5-10 7 20 6-11h11"/></symbol>
+        <symbol id="sn-i-neuron" viewBox="0 0 64 64"><circle cx="32" cy="32" r="9"/><path d="M24 25 14 15m18 8V8m8 18 13-8M24 39 11 49m21-8v15m8-17 13 9M17 31H5m54 0H47"/><circle cx="12" cy="13" r="2"/><circle cx="54" cy="17" r="2"/><circle cx="54" cy="49" r="2"/></symbol>
+        <symbol id="sn-i-mito" viewBox="0 0 64 64"><path d="M10 36c3-18 22-28 39-19 17 9 2 31-13 34C23 54 8 49 10 36Z"/><path d="M17 36c4-2 4-9 9-10 6-1 5 8 11 7 6-1 4-10 11-9M18 43c6-2 7 4 13 3 7-1 5-8 11-8 4 0 5 4 8 4"/></symbol>
+        <symbol id="sn-i-flame" viewBox="0 0 64 64"><path d="M36 6c3 13-9 16-3 27 3-8 10-7 12-16 9 10 12 20 7 30-7 14-33 14-40 0-6-13 2-25 12-34-1 9 2 14 6 16-2-11 2-17 6-23Z"/></symbol>
+        <symbol id="sn-i-moon" viewBox="0 0 64 64"><path d="M49 43A23 23 0 0 1 22 10a23 23 0 1 0 27 33Z"/><path d="M46 12h9l-9 10h9M38 5h6l-6 7h6"/></symbol>
+        <symbol id="sn-i-bottle" viewBox="0 0 64 64"><path d="M25 8h14M27 8v11l-5 7v28h20V26l-5-7V8M22 34h20"/><circle cx="32" cy="43" r="4"/></symbol>
+        <symbol id="sn-i-head" viewBox="0 0 64 64"><path d="M45 54v-9c8-5 10-18 5-27C44 7 25 7 18 18c-6 9-4 21 4 27v9"/><path d="M20 54h27M24 25c3-8 16-10 21-3 4 6 0 15-7 15H27M30 22v16M39 19v18"/></symbol>
+        <symbol id="sn-i-cross" viewBox="0 0 64 64"><path d="M32 7 53 15v15c0 13-9 22-21 27C20 52 11 43 11 30V15l21-8Z"/><path d="M27 19h10v9h9v10h-9v9H27v-9h-9V28h9Z"/></symbol>
+        <symbol id="sn-i-chart" viewBox="0 0 64 64"><rect x="10" y="8" width="40" height="48" rx="5"/><path d="M18 44h7V32h7v12h7V22h7M52 20h5v16h-5"/></symbol>
+        <symbol id="sn-i-synapse" viewBox="0 0 64 64"><path d="M18 12v18c0 8 6 12 14 12s14-4 14-12V12M13 12h10M41 12h10"/><circle cx="24" cy="30" r="2"/><circle cx="32" cy="34" r="2"/><circle cx="40" cy="28" r="2"/><path d="M19 52c8-6 18-6 26 0"/></symbol>
+        <symbol id="sn-i-amyloid" viewBox="0 0 64 64"><circle cx="18" cy="32" r="8"/><circle cx="29" cy="21" r="8"/><circle cx="41" cy="25" r="8"/><circle cx="46" cy="38" r="8"/><circle cx="31" cy="42" r="8"/></symbol>
+        <symbol id="sn-i-tau" viewBox="0 0 64 64"><path d="M7 20c12 9 21-7 31 3s14-4 20 3M8 31c10-8 17 9 27 0s16 8 22 2M9 44c12 6 18-8 28 0s15-3 20 1"/></symbol>
+      </defs>
+    </svg>
+
+    <main id="main" class="stress-story">
+      <section id="stress-stages" class="stress-section section-stages" data-stress-section aria-labelledby="stress-stages-title">
+        <div class="stress-stage-scroll" data-native-stage-scroll>
+          <section id="four-stages-of-stress" class="stress-stage stress-stage-01" data-native-stage data-fit-check aria-labelledby="stress-stages-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/01-four-stages-stress.jpg" alt="" aria-hidden="true">
+
+            <svg class="connector-layer connector-layer-back connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" aria-hidden="true">
+              <path class="native-group-bracket adaptive" d="M118 225V216Q118 211 123 211H741Q746 211 746 216V225"/>
+              <path class="native-group-bracket distress" d="M750 225V216Q750 211 755 211H1406Q1411 211 1411 216V225"/>
+            </svg>
+
+            <div class="content-layer">
+              <header class="native-opening-title" data-fit-check>
+                <h1 id="stress-stages-title" data-fit-check>The four stages of ‘stress’</h1>
+                <p class="native-opening-subtitle" data-fit-check>(A logical progression simplified)</p>
+                <p class="native-opening-note" data-fit-check>Adapted from Selye’s General Adaptation Syndrome (GAS), simplified for educational purposes — not a clinical diagnostic model.</p>
+              </header>
+
+              <div class="native-group-labels" aria-hidden="true">
+                <span class="native-adaptive-label" data-fit-check>Homeostasis &amp; adaptive response</span>
+                <span class="native-distress-label" data-fit-check>Distress predominance</span>
+              </div>
+
+              <div class="stress-stage-columns">
+                <article class="stress-stage-panel native-stage-normal" data-native-panel="1" data-fit-check tabindex="0">
+                  <h2 data-fit-check><span>1.</span> Normal</h2>
+                  <p class="native-stage-parenthetical" data-fit-check>(Homeostasis)</p>
+                  <img class="native-stage-icon balance-icon" src="../assets/stress-neurobiology/crops/section-01/balance.png?v=2" width="96" height="86" alt="Balance scales">
+                  <ul data-fit-check><li>Stable internal environment</li><li>Normal stress response</li><li>Recovery capacity intact</li></ul>
+                </article>
+                <article class="stress-stage-panel native-stage-acute" data-native-panel="2" data-fit-check tabindex="0">
+                  <h2 data-fit-check><span>2.</span> Acute phase</h2>
+                  <p class="native-stage-parenthetical" data-fit-check>(Resistance)</p>
+                  <img class="native-stage-icon shield-icon" src="../assets/stress-neurobiology/crops/section-01/shield.png?v=2" width="88" height="88" alt="Protective shield">
+                  <ul data-fit-check><li>Stress response activated</li><li>Adaptive mechanisms mobilized</li><li>Temporary increase<br>in stress hormones</li></ul>
+                </article>
+                <article class="stress-stage-panel native-stage-compensatory" data-native-panel="3" data-fit-check tabindex="0">
+                  <h2 data-fit-check><span>3.</span> Compensatory phase</h2>
+                  <p class="native-stage-parenthetical" data-fit-check>(Attempted Adaptation)</p>
+                  <img class="native-stage-icon circular-icon" src="../assets/stress-neurobiology/crops/section-01/circular-response.png?v=2" width="88" height="84" alt="Circular response arrows">
+                  <ul data-fit-check><li>Continued stress exposure</li><li>Physiological wear and tear</li><li>Adaptation becoming insufficient</li><li>Energy resources declining</li></ul>
+                </article>
+                <article class="stress-stage-panel native-stage-exhaustion" data-native-panel="4" data-fit-check tabindex="0">
+                  <h2 data-fit-check><span>4.</span> Exhaustion phase</h2>
+                  <p class="native-stage-parenthetical" data-fit-check>(Failed Adaptation)</p>
+                  <img class="native-stage-icon battery-icon" src="../assets/stress-neurobiology/crops/section-01/depleted-battery.png?v=2" width="116" height="82" alt="Depleted battery">
+                  <ul data-fit-check><li>System resources depleted</li><li>Dysregulation of stress systems</li><li>Reduced resilience</li><li>Increased risk of dysfunction<br>and disease</li></ul>
+                  <p class="native-stage-note" data-fit-check><strong>Note:</strong> individual responses vary —<br>chronic stress may lead to persistently<br>elevated or low cortisol.</p>
+                </article>
+              </div>
+
+              <div class="native-stage-axis-labels" aria-hidden="true">
+                <span data-fit-check><b>Balance</b><small>Healthy range</small></span>
+                <span data-fit-check><b>Activation</b><small>Adaptive response</small></span>
+                <span data-fit-check><b>Compensation</b><small>Warning range</small></span>
+                <span data-fit-check><b>Exhaustion</b><small>Risk range</small></span>
+              </div>
+
+              <div id="cortisol-caption" class="native-stage-legend" data-fit-check>
+                <div class="native-legend-main" data-fit-check>
+                  <span data-fit-check><svg class="connector-svg" viewBox="0 0 52 22" aria-hidden="true"><path class="legend-line-solid" d="M3 11H49"/></svg><span>Cortisol level<small>(physiological stress response)</small></span></span>
+                  <span data-fit-check><svg class="connector-svg" viewBox="0 0 52 22" aria-hidden="true"><path class="legend-line-dashed" d="M3 11H49"/></svg><span>Baseline<small>(Homeostasis)</small></span></span>
+                  <span data-fit-check><svg class="connector-svg" viewBox="0 0 52 22" aria-hidden="true"><path class="legend-line-stress" d="M3 11H43"/><path class="legend-arrowhead-stress" d="m43 5 9 6-9 6Z"/></svg><span>Stress exposure<small>(Acute / Chronic)</small></span></span>
+                  <span data-fit-check><svg class="connector-svg" viewBox="0 0 52 28" aria-hidden="true"><path class="legend-line-response" d="M26 26V7"/><path class="legend-arrowhead-response" d="m19 8 7-8 7 8Z"/></svg><span>Physiological response<small>(Activation)</small></span></span>
+                </div>
+                <aside class="native-variability-note" data-fit-check><strong>Individual variability:</strong> not everyone follows the same sequence, timing, or endpoint.</aside>
+              </div>
+            </div>
+
+            <svg class="connector-layer connector-layer-front connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" role="img" aria-labelledby="native-cortisol-title native-cortisol-desc">
+              <title id="native-cortisol-title">Cortisol response over time</title>
+              <desc id="native-cortisol-desc">Cortisol oscillates near baseline, rises after stress onset, remains elevated during activation, then declines during compensation and exhaustion with possible persistently elevated or low trajectories.</desc>
+              <defs>
+                <linearGradient id="native-cortisol-area" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#11275f" stop-opacity=".07"/><stop offset="1" stop-color="#bf080d" stop-opacity=".015"/></linearGradient>
+                <marker id="native-arrow-navy" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 11 5.5 0 11Z" fill="#071d55"/></marker>
+                <marker id="native-arrow-red" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 11 5.5 0 11Z" fill="#bf080d"/></marker>
+                <marker id="native-arrow-amber" viewBox="0 0 10 10" markerWidth="13" markerHeight="13" refX="5" refY="1" orient="0" markerUnits="userSpaceOnUse"><path d="M0 10 5 0 10 10Z" fill="#e7970b"/></marker>
+              </defs>
+
+              <g class="native-graph-zones" aria-hidden="true"><rect class="native-graph-zone zone-1" x="100" y="405" width="328" height="398"/><rect class="native-graph-zone zone-2" x="428" y="405" width="328" height="398"/><rect class="native-graph-zone zone-3" x="756" y="405" width="328" height="398"/><rect class="native-graph-zone zone-4" x="1084" y="405" width="328" height="398"/></g>
+              <path class="native-cortisol-area" d="M100 698C130 730 142 667 177 698S229 666 261 698 311 667 344 698C374 720 397 714 423 698 470 642 520 629 584 637 670 645 735 680 806 703 890 734 980 767 1086 774 1160 783 1220 794 1306 792V803H100Z"/>
+              <path class="native-axis" d="M100 803V405" marker-end="url(#native-arrow-navy)"/>
+              <path class="native-axis" d="M100 803H1458" marker-end="url(#native-arrow-navy)"/>
+              <path class="native-baseline" d="M100 698H1290"/>
+              <path class="native-cortisol-curve" data-native-draw pathLength="1" d="M100 698C130 730 142 667 177 698S229 666 261 698 311 667 344 698C374 720 397 714 423 698 470 642 520 629 584 637 670 645 735 680 806 703 890 734 980 767 1086 774 1160 783 1220 794 1306 792"/>
+              <path class="native-outcome-high" d="M1086 756C1154 731 1206 672 1290 669"/>
+              <path class="native-outcome-low" d="M1122 775C1184 783 1236 742 1290 741"/>
+              <path class="native-stress-arrow" data-native-draw pathLength="1" d="M380 640 423 681" marker-end="url(#native-arrow-red)"/>
+              <g class="native-response-arrows" aria-hidden="true"><path d="M484 632V590" marker-end="url(#native-arrow-amber)"/><path d="M541 611V589" marker-end="url(#native-arrow-amber)"/><path d="M601 603V586" marker-end="url(#native-arrow-amber)"/><path d="M660 618V593" marker-end="url(#native-arrow-amber)"/></g>
+              <path class="native-sustained-bracket" d="M747 669V649H1198V669"/>
+
+              <g class="native-graph-copy">
+                <text x="12" y="517"><tspan x="12">Cortisol</tspan><tspan x="18" dy="28">(Total)</tspan></text>
+                <text class="native-time-label" x="724" y="874">Time</text>
+                <text class="native-stress-copy" x="333" y="610"><tspan x="333">Stress</tspan><tspan x="333" dy="23">Onset</tspan></text>
+                <text class="native-sustained-copy" x="810" y="630">Sustained / Repeated Exposure</text>
+                <text class="native-high-copy" x="1307" y="674"><tspan x="1307">Persistently</tspan><tspan x="1307" dy="24">Elevated</tspan></text>
+                <text class="native-low-copy" x="1307" y="738"><tspan x="1307">Persistently</tspan><tspan x="1307" dy="24">Low</tspan></text>
+                <text class="native-baseline-copy" x="1430" y="664"><tspan x="1430">Baseline</tspan><tspan x="1413" dy="24">(Homeostasis)</tspan></text>
+              </g>
+            </svg>
+          </section>
+        </div>
+      </section>
+
+      <section id="acute-chronic" class="stress-section section-transition" data-stress-section aria-labelledby="acute-chronic-title">
+        <div class="stress-stage-scroll" data-native-stage-scroll>
+          <section id="acute-chronic-transition" class="stress-stage stress-stage-02" data-native-stage data-fit-check aria-labelledby="acute-chronic-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/02-acute-chronic-transition.jpg" alt="" aria-hidden="true">
+
+            <svg class="connector-layer connector-layer-back connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="transition-arrow-navy" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 14 7 0 14Z" fill="#071d55"/></marker>
+                <marker id="transition-arrow-green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 14 7 0 14Z" fill="#08752a"/></marker>
+                <marker id="transition-arrow-red" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 14 7 0 14Z" fill="#b8080d"/></marker>
+              </defs>
+              <path class="native-recurrence-loop" d="M1348 790H1379Q1398 790 1398 771V194Q1398 173 1378 173H1091" marker-end="url(#transition-arrow-red)"/>
+            </svg>
+
+            <div class="content-layer">
+              <header class="transition-opening-title" data-fit-check>
+                <h2 id="acute-chronic-title" data-fit-check>Acute-to-chronic stress<br>and disease vulnerability</h2>
+              </header>
+
+              <article class="native-exposure-card" data-node="stress-exposure" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/stress-exposure.png?v=1" width="106" height="94" alt="Storm cloud and lightning">
+                <div data-fit-check><h3>Stress Exposure</h3><p>Psychological <b>•</b> Physical <b>•</b> Social</p></div>
+              </article>
+
+              <div class="native-transition-frame" data-node="transition-frame" data-fit-check>
+                <h3 data-fit-check>1. Acute-to-chronic stress transition</h3>
+              </div>
+
+              <div class="native-decision-diamond" data-node="recovery-decision" data-fit-check tabindex="0">
+                <span>Was<br>recovery<br>complete?</span>
+              </div>
+
+              <button class="native-route-label native-route-yes" type="button" data-route-control="green" aria-label="Highlight the complete recovery route">Yes</button>
+              <button class="native-route-label native-route-no" type="button" data-route-control="red" aria-label="Highlight the incomplete recovery route">No</button>
+
+              <article class="native-transition-card native-green-card native-acute-card" data-node="acute-response" data-route-node="green" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/acute-response.png?v=1" width="70" height="91" alt="Green lightning bolt">
+                <div data-fit-check><h4>A. Acute Stress Response</h4><p>Rapid activation → Adaptive response</p></div>
+              </article>
+
+              <article class="native-transition-card native-green-card native-recovery-card" data-node="recovery-homeostasis" data-route-node="green" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/recovery-homeostasis.png?v=1" width="79" height="94" alt="Person in a resilient stance">
+                <div data-fit-check><h4>B. Recovery &amp; Homeostasis</h4><p>Stress offset → Recovery →<br>Return to baseline</p></div>
+              </article>
+
+              <article class="native-transition-card native-green-card native-healthy-card" data-node="healthy-endpoint" data-route-node="green" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/healthy-endpoint.png?v=1" width="101" height="105" alt="Healthy green plant">
+                <div data-fit-check><h4>Healthy Endpoint</h4><p>Resilience (Homeostasis Restored)</p></div>
+              </article>
+
+              <article class="native-transition-card native-red-card native-repeated-card" data-node="repeated-stress" data-route-node="red" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/repeated-stress.png?v=1" width="91" height="92" alt="Red recurrence arrows">
+                <div data-fit-check><h4>C. Repeated Stress /<br>Incomplete Recovery</h4><p>Recurrence or incomplete recovery</p></div>
+              </article>
+
+              <article class="native-transition-card native-red-card native-load-card" data-node="load-accumulation" data-route-node="red" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/load-accumulation.png?v=1" width="80" height="84" alt="Increasing allostatic load chart">
+                <div data-fit-check><h4>D. Load Accumulation</h4><p>Accumulated allostatic load →<br>Reduced reserve &amp; resilience</p></div>
+              </article>
+
+              <article class="native-transition-card native-red-card native-persistent-card" data-node="persistent-dysregulation" data-route-node="red" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-02/persistent-dysregulation.png?v=1" width="98" height="91" alt="Red storm cloud">
+                <div data-fit-check><h4>E. Persistent Dysregulation</h4><p>HPA/ANS activation → Allostatic overload →<br>Neurobiological dysregulation</p></div>
+              </article>
+
+              <article class="native-chronic-endpoint" data-node="chronic-endpoint" data-route-node="red" data-fit-check tabindex="0">
+                <h4>Chronic Endpoint</h4><p>Persistent Dysregulation</p>
+              </article>
+
+              <p class="native-recurrence-label" data-fit-check>Recurrence /<br>Incomplete<br>Recovery</p>
+            </div>
+
+            <svg class="connector-layer connector-layer-front connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" aria-hidden="true">
+              <path class="native-transition-arrow navy native-top-arrow" data-anchor-from="stress-exposure" data-anchor-to="transition-frame" data-axis="vertical" data-cross-axis="762" marker-end="url(#transition-arrow-navy)"/>
+              <path class="native-transition-arrow-glint" d="M762 264V317"/>
+              <path class="native-transition-arrow navy native-header-decision-arrow" d="M762 367V385" marker-end="url(#transition-arrow-navy)"/>
+              <path class="native-transition-arrow green native-route-connector" data-route-connector="green" data-anchor-from="recovery-decision" data-anchor-to="acute-response" data-axis="horizontal" data-cross-axis="454" marker-end="url(#transition-arrow-green)"/>
+              <path class="native-transition-arrow red native-route-connector" data-route-connector="red" data-anchor-from="recovery-decision" data-anchor-to="repeated-stress" data-axis="horizontal" data-cross-axis="454" marker-end="url(#transition-arrow-red)"/>
+              <path class="native-transition-arrow green native-route-connector" data-route-connector="green" data-anchor-from="acute-response" data-anchor-to="recovery-homeostasis" data-axis="vertical" data-cross-axis="334" marker-end="url(#transition-arrow-green)"/>
+              <path class="native-transition-arrow green native-route-connector" data-route-connector="green" data-anchor-from="recovery-homeostasis" data-anchor-to="healthy-endpoint" data-axis="vertical" data-cross-axis="334" marker-end="url(#transition-arrow-green)"/>
+              <path class="native-transition-arrow red native-route-connector" data-route-connector="red" data-anchor-from="repeated-stress" data-anchor-to="load-accumulation" data-axis="vertical" data-cross-axis="1128" marker-end="url(#transition-arrow-red)"/>
+              <path class="native-transition-arrow red native-route-connector" data-route-connector="red" data-anchor-from="load-accumulation" data-anchor-to="persistent-dysregulation" data-axis="vertical" data-cross-axis="1128" marker-end="url(#transition-arrow-red)"/>
+              <path class="native-transition-arrow red native-route-connector" data-route-connector="red" data-anchor-from="persistent-dysregulation" data-anchor-to="chronic-endpoint" data-axis="vertical" data-cross-axis="1128" marker-end="url(#transition-arrow-red)"/>
+            </svg>
+          </section>
+        </div>
+      </section>
+
+      <section id="dysregulatory-systems" class="stress-section section-systems" data-stress-section aria-labelledby="systems-title">
+        <div class="stress-stage-scroll" data-native-stage-scroll>
+          <section id="core-dysregulatory-systems" class="stress-stage stress-stage-03" data-native-stage data-fit-check aria-labelledby="systems-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/03-core-dysregulatory-systems.jpg" alt="" aria-hidden="true">
+
+            <svg class="connector-layer connector-layer-back connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="systems-arrow-grey" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 14 7 0 14Z" fill="#4b5260"/></marker>
+                <marker id="systems-arrow-red" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 14 7 0 14Z" fill="#b8080d"/></marker>
+              </defs>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="hpa ans" pathLength="1" d="M640 215H867" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="hpa neurotransmitter" pathLength="1" d="M361 317V397" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="ans neuroinflammation" pathLength="1" d="M1088 317V397" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="neurotransmitter neuroinflammation" pathLength="1" d="M640 532H867" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="hpa neuroinflammation" pathLength="1" d="M642 291 865 464" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+              <path class="native-reciprocal-path" data-native-system-draw data-systems="ans neurotransmitter" pathLength="1" d="M865 291 642 464" marker-start="url(#systems-arrow-grey)" marker-end="url(#systems-arrow-grey)"/>
+            </svg>
+
+            <div class="content-layer">
+              <div class="native-systems-frame" aria-hidden="true"><div></div></div>
+              <header class="native-systems-title"><h2 id="systems-title" data-fit-check>2. Core dysregulatory systems</h2></header>
+              <p class="native-systems-subtitle" data-fit-check>Chronic Stress–Induced Dysregulation Across Multiple Systems</p>
+
+              <article class="native-system-card native-hpa-card" data-system-node="hpa" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-03/hpa-brain.png?v=1" width="96" height="84" alt="Brain representing HPA axis regulation">
+                <span class="native-system-number" aria-hidden="true">1</span>
+                <h3 data-fit-check>HPA Axis<br>Dysregulation</h3>
+                <ul data-fit-check><li>Impaired feedback</li><li>Blunted cortisol rhythm</li></ul>
+              </article>
+
+              <article class="native-system-card native-ans-card" data-system-node="ans" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-03/ans-heart.png?v=2" width="82" height="91" alt="Heart rhythm representing autonomic activation">
+                <span class="native-system-number" aria-hidden="true">2</span>
+                <h3 data-fit-check>ANS (SAM–ANS)<br>Overactivation</h3>
+                <ul data-fit-check><li>Sympathetic dominance</li><li>Reduced parasympathetic tone</li></ul>
+              </article>
+
+              <article class="native-system-card native-neurotransmitter-card" data-system-node="neurotransmitter" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-03/neurotransmitter-neuron.png?v=1" width="94" height="95" alt="Teal neurotransmitter neuron">
+                <span class="native-system-number" aria-hidden="true">3</span>
+                <h3 data-fit-check>Neurotransmitter<br>Dysregulation</h3>
+                <ul data-fit-check><li>NE, 5-HT, DA imbalance</li><li>Glutamate–GABA imbalance</li></ul>
+              </article>
+
+              <article class="native-system-card native-neuroinflammation-card" data-system-node="neuroinflammation" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-03/neuroinflammatory-neuron.png?v=1" width="92" height="94" alt="Red neuroinflammatory neuron">
+                <span class="native-system-number" aria-hidden="true">4</span>
+                <h3 data-fit-check>Neuroinflammation<br><small>&amp; Impaired Neuroplasticity</small></h3>
+                <ul data-fit-check><li>Microglial activation</li><li>BDNF ↓, reduced plasticity</li></ul>
+              </article>
+
+              <p class="native-reciprocal-label" data-fit-check>Reciprocal<br>Interactions</p>
+
+                <article class="native-amplifier-card" data-amplifier-control data-fit-check tabindex="0">
+                  <svg class="native-amplifier-border" viewBox="0 0 690 190" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="688" height="188" rx="26"/></svg>
+                  <img src="../assets/stress-neurobiology/crops/section-03/mitochondria.png?v=1" width="108" height="111" alt="Mitochondrion representing oxidative and metabolic dysfunction">
+                <span class="native-system-number" aria-hidden="true">5</span>
+                <h3 data-fit-check>Oxidative &amp; Metabolic Dysfunction<small>(Foundation &amp; Amplifier)</small></h3>
+                <ul data-fit-check><li>Oxidative stress (ROS ↑)</li><li>Mitochondrial dysfunction &amp; metabolic inflexibility</li></ul>
+              </article>
+
+              <div class="native-systems-legend" data-fit-check>
+                <span><svg class="connector-svg" viewBox="0 0 82 30" aria-hidden="true"><path class="native-legend-amplifier-line" d="M3 15H68"/><path class="native-legend-amplifier-head" d="m68 6 14 9-14 9Z"/></svg><b>Amplifies / Drives</b></span>
+                <span><svg class="connector-svg" viewBox="0 0 82 30" aria-hidden="true"><path class="native-legend-reciprocal-line" d="M13 15H69"/><path class="native-legend-reciprocal-head" d="m13 6-13 9 13 9Zm56 0 13 9-13 9Z"/></svg><b>Reciprocal Interactions</b></span>
+                <span><i aria-hidden="true"></i><b>Foundation &amp; Amplifier<br>Linking All Systems</b></span>
+              </div>
+
+              <p class="native-systems-summary" data-fit-check>Oxidative &amp; metabolic dysfunction is the central driver that amplifies and links all core dysregulatory systems.</p>
+            </div>
+
+            <svg class="connector-layer connector-layer-front connector-svg" viewBox="0 0 1536 1024" preserveAspectRatio="none" aria-hidden="true">
+              <path class="native-amplifier-arrow" data-native-system-draw pathLength="1" d="M449 402V318" marker-end="url(#systems-arrow-red)"/>
+              <path class="native-amplifier-arrow" data-native-system-draw pathLength="1" d="M1167 402V318" marker-end="url(#systems-arrow-red)"/>
+              <path class="native-amplifier-arrow" data-native-system-draw pathLength="1" d="M424 727H360V579" marker-end="url(#systems-arrow-red)"/>
+              <path class="native-amplifier-arrow" data-native-system-draw pathLength="1" d="M1114 727H1168V579" marker-end="url(#systems-arrow-red)"/>
+              <path class="native-amplifier-arrow" data-native-system-draw pathLength="1" d="M753 614V545" marker-end="url(#systems-arrow-red)"/>
+            </svg>
+          </section>
+        </div>
+      </section>
+
+      <section id="clinical-outcomes" class="stress-section section-outcomes" data-stress-section aria-labelledby="outcomes-native-title">
+        <div class="stress-stage-scroll">
+          <section id="disease-clinical-outcomes" class="stress-stage stress-stage-04" data-native-stage data-fit-check aria-labelledby="outcomes-native-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/04-disease-clinical-outcomes.jpg" width="1535" height="504" alt="" aria-hidden="true">
+
+            <svg class="native-outcome-connectors connector-svg" viewBox="0 0 1535 504" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="outcome-purple-arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z"/></marker>
+                <marker id="outcome-feedback-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker>
+              </defs>
+              <path class="native-outcome-side-arrow" data-native-outcome-draw data-outcome-connector="mental" pathLength="1" d="M586 208H626" marker-start="url(#outcome-purple-arrow)" marker-end="url(#outcome-purple-arrow)"/>
+              <path class="native-outcome-side-arrow" data-native-outcome-draw data-outcome-connector="systemic" pathLength="1" d="M911 208H949" marker-start="url(#outcome-purple-arrow)" marker-end="url(#outcome-purple-arrow)"/>
+            </svg>
+
+            <div class="content-layer">
+              <header class="native-outcomes-header"><h2 id="outcomes-native-title" data-fit-check>3. Disease Vulnerability &amp; Clinical Outcomes</h2></header>
+
+              <section class="native-outcome-group native-mental-group" aria-labelledby="mental-native-title" data-fit-check>
+                <h3 id="mental-native-title" data-fit-check>A. Mental &amp; Neuropsychiatric Disorders</h3>
+                <div class="native-clinical-grid">
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="mental" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/mood-anxiety.png?v=1" width="69" height="70" alt="Mood and anxiety disorders"><h4 data-fit-check>Mood &amp;<br>Anxiety<br>Disorders</h4><span class="native-evidence-badge strong">Strong</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="mental" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/ptsd-stress.png?v=1" width="68" height="72" alt="PTSD and stress-related disorders"><h4 data-fit-check>PTSD /<br>Stress-Related<br>Disorders</h4><span class="native-evidence-badge strong">Strong</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="mental" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/sleep-disorders.png?v=1" width="79" height="72" alt="Sleep disorders"><h4 data-fit-check>Sleep<br>Disorders</h4><span class="native-evidence-badge moderate">Moderate</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="mental" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/substance-use.png?v=1" width="53" height="72" alt="Substance-use disorders"><h4 data-fit-check>Substance-Use<br>Disorders</h4><span class="native-evidence-badge emerging">Emerging</span></article>
+                </div>
+              </section>
+
+              <article class="native-mechanisms-card" data-fit-check>
+                <h3 data-fit-check>Connecting Mechanisms</h3>
+                <ul>
+                  <li style="--row:0"><img src="../assets/stress-neurobiology/crops/section-04/chronic-inflammation.png?v=1" width="34" height="34" alt=""><span>Chronic Inflammation</span></li>
+                  <li style="--row:1"><img src="../assets/stress-neurobiology/crops/section-04/hpa-dysregulation.png?v=1" width="35" height="35" alt=""><span>HPA Axis Dysregulation</span></li>
+                  <li style="--row:2"><img src="../assets/stress-neurobiology/crops/section-04/neuroimmune-interactions.png?v=1" width="38" height="35" alt=""><span>Neuroimmune Interactions</span></li>
+                  <li style="--row:3"><img src="../assets/stress-neurobiology/crops/section-04/autonomic-imbalance.png?v=1" width="37" height="28" alt=""><span>Autonomic Imbalance</span></li>
+                  <li style="--row:4"><img src="../assets/stress-neurobiology/crops/section-04/oxidative-metabolic.png?v=1" width="38" height="34" alt=""><span>Oxidative &amp; Metabolic<br>Stress</span></li>
+                </ul>
+              </article>
+
+              <section class="native-outcome-group native-systemic-group" aria-labelledby="systemic-native-title" data-fit-check>
+                <h3 id="systemic-native-title" data-fit-check>B. Systemic &amp; Metabolic Vulnerability</h3>
+                <div class="native-clinical-grid">
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="systemic" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/cardiovascular.png?v=1" width="77" height="72" alt="Cardiovascular disease"><h4 data-fit-check>Cardiovascular<br>Disease</h4><span class="native-evidence-badge strong blue">Strong</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="systemic" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/metabolic-dysfunction.png?v=1" width="61" height="79" alt="Metabolic dysfunction"><h4 data-fit-check>Metabolic<br>Dysfunction</h4><span class="native-evidence-badge strong blue">Strong</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="systemic" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/immune-inflammatory.png?v=1" width="71" height="73" alt="Immune and inflammatory dysregulation"><h4 data-fit-check>Immune /<br>Inflammatory<br>Dysregulation</h4><span class="native-evidence-badge moderate">Moderate</span></article>
+                  <article class="native-clinical-card" data-clinical-card data-outcome-side="systemic" data-fit-check tabindex="0"><img src="../assets/stress-neurobiology/crops/section-04/cognitive-risk.png?v=1" width="73" height="76" alt="Cognitive risk factors"><h4 data-fit-check>Cognitive<br>Risk Factors</h4><span class="native-evidence-badge emerging">Emerging</span></article>
+                </div>
+              </section>
+
+              <article class="native-feedback-card" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-04/feedback-loop.png?v=1" width="84" height="75" alt="Circular feedback loop">
+                <div class="native-feedback-copy">
+                  <h3 data-fit-check>C. Stress Sensitization &amp; Feedback Loops (All Levels)</h3>
+                  <p data-fit-check><span>Repeated / Prolonged Stress</span><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 7H25" marker-end="url(#outcome-feedback-arrow)"/></svg><span>Accumulating Allostatic Load</span><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 7H25" marker-end="url(#outcome-feedback-arrow)"/></svg><span>Persistent Neurobiological Change</span><br><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 7H25" marker-end="url(#outcome-feedback-arrow)"/></svg><span>Amplifies Vulnerability in Both Mental and Systemic Domains</span></p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <div class="section-canvas outcomes-canvas">
+          <header class="color-band purple-band"><h2 id="outcomes-title">3. Disease vulnerability &amp; clinical outcomes</h2></header>
+          <div class="outcomes-layout reveal-item">
+            <svg class="outcome-connectors connector-svg" viewBox="0 0 1440 380" preserveAspectRatio="none" aria-hidden="true"><path class="draw-line purple" data-draw pathLength="1" d="M532 183h70" marker-start="url(#sn-arrow-purple)" marker-end="url(#sn-arrow-purple)"/><path class="draw-line purple" data-draw pathLength="1" d="M838 183h70" marker-start="url(#sn-arrow-purple)" marker-end="url(#sn-arrow-purple)"/></svg>
+            <section class="outcome-group mental-group" aria-labelledby="mental-title">
+              <h3 id="mental-title">A. Mental &amp; Neuropsychiatric Disorders</h3>
+              <div class="outcome-card-grid">
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-head"/></svg><h4>Mood &amp;<br>Anxiety Disorders</h4><span class="evidence strong">Strong</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-cloud"/></svg><h4>PTSD /<br>Stress-Related Disorders</h4><span class="evidence strong">Strong</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-moon"/></svg><h4>Sleep<br>Disorders</h4><span class="evidence moderate">Moderate</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-bottle"/></svg><h4>Substance-Use<br>Disorders</h4><span class="evidence emerging">Emerging</span></article>
+              </div>
+            </section>
+            <article class="mechanisms-card">
+              <h3>Connecting Mechanisms</h3>
+              <ul><li><svg aria-hidden="true"><use href="#sn-i-flame"/></svg>Chronic Inflammation</li><li><svg aria-hidden="true"><use href="#sn-i-brain"/></svg>HPA Axis Dysregulation</li><li><svg aria-hidden="true"><use href="#sn-i-neuron"/></svg>Neuroimmune Interactions</li><li><span class="mini-reciprocal">↔</span>Autonomic Imbalance</li><li><svg aria-hidden="true"><use href="#sn-i-mito"/></svg>Oxidative &amp; Metabolic Stress</li></ul>
+            </article>
+            <section class="outcome-group systemic-group" aria-labelledby="systemic-title">
+              <h3 id="systemic-title">B. Systemic &amp; Metabolic Vulnerability</h3>
+              <div class="outcome-card-grid">
+                <article class="outcome-card"><svg class="red-icon" aria-hidden="true"><use href="#sn-i-heart"/></svg><h4>Cardiovascular<br>Disease</h4><span class="evidence strong blue">Strong</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-chart"/></svg><h4>Metabolic<br>Dysfunction</h4><span class="evidence strong blue">Strong</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-cross"/></svg><h4>Immune / Inflammatory<br>Dysregulation</h4><span class="evidence moderate">Moderate</span></article>
+                <article class="outcome-card"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><h4>Cognitive<br>Risk Factors</h4><span class="evidence emerging">Emerging</span></article>
+              </div>
+            </section>
+          </div>
+          <article class="feedback-card reveal-item"><svg aria-hidden="true"><use href="#sn-i-cycle"/></svg><div><h3>C. Stress Sensitization &amp; Feedback Loops (All Levels)</h3><p>Repeated / Prolonged Stress <b>→</b> Accumulating Allostatic Load <b>→</b> Persistent Neurobiological Change<br><b>→</b> Amplifies Vulnerability in Both Mental and Systemic Domains</p></div></article>
+        </div>
+      </section>
+
+      <section id="cognitive-vulnerability" class="stress-section section-cognitive" data-stress-section aria-labelledby="cognitive-native-title">
+        <div class="stress-stage-scroll">
+          <section id="progressive-cognitive-vulnerability" class="stress-stage stress-stage-05" data-native-stage data-fit-check aria-labelledby="cognitive-native-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/05-progressive-cognitive-vulnerability.jpg" width="1535" height="244" alt="" aria-hidden="true">
+
+            <svg class="native-cognitive-connectors connector-svg" viewBox="0 0 1535 244" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="cognitive-navy-arrow" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker>
+                <marker id="cognitive-teal-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker>
+              </defs>
+              <path class="native-cognitive-progress" data-cognitive-draw data-links="0 1" pathLength="1" d="M381 116H421" marker-end="url(#cognitive-navy-arrow)"/>
+              <path class="native-cognitive-progress" data-cognitive-draw data-links="1 2" pathLength="1" d="M751 116H789" marker-end="url(#cognitive-navy-arrow)"/>
+              <path class="native-cognitive-progress" data-cognitive-draw data-links="2 3" pathLength="1" d="M1109 116H1147" marker-end="url(#cognitive-navy-arrow)"/>
+              <g class="native-heterogeneous-route">
+                <path d="M249 207H1274"/>
+                <path d="M249 207V184" marker-end="url(#cognitive-teal-arrow)"/>
+                <path d="M1274 207V184" marker-end="url(#cognitive-teal-arrow)"/>
+              </g>
+            </svg>
+
+            <div class="content-layer">
+              <header class="native-cognitive-header"><h2 id="cognitive-native-title" data-fit-check>4. Progressive Cognitive Vulnerability</h2></header>
+
+              <article class="native-cognitive-card" data-cognitive-card data-cognitive-index="0" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-05/brain-teal.png?v=1" width="81" height="81" alt="Teal brain">
+                <h3 data-fit-check><span>Cognitive<br>Vulnerability</span><small>(Increased Risk)</small></h3>
+              </article>
+              <article class="native-cognitive-card" data-cognitive-card data-cognitive-index="1" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-05/brain-teal.png?v=1" width="81" height="81" alt="Teal brain">
+                <h3 data-fit-check><span>Subjective<br>Cognitive Decline<br>(SCD)</span><small>(Not all progress)</small></h3>
+              </article>
+              <article class="native-cognitive-card" data-cognitive-card data-cognitive-index="2" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-05/brain-teal.png?v=1" width="81" height="81" alt="Teal brain">
+                <h3 data-fit-check><span>Mild Cognitive<br>Impairment (MCI)</span><small>(Increased Risk)</small></h3>
+              </article>
+              <article class="native-cognitive-card risk" data-cognitive-card data-cognitive-index="3" data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-05/brain-red.png?v=1" width="81" height="81" alt="Red brain">
+                <h3 data-fit-check><span>Increased<br>Dementia Risk</span><small>(e.g., Alzheimer’s)</small></h3>
+              </article>
+
+              <p class="native-trajectory-caption" data-fit-check>Heterogeneous trajectories; not inevitable</p>
+            </div>
+          </section>
+        </div>
+        <div class="section-canvas cognitive-canvas">
+          <header class="color-band teal-band"><h2 id="cognitive-title">4. Progressive cognitive vulnerability</h2></header>
+          <div class="cognitive-sequence">
+            <article class="cognitive-card reveal-item" style="--delay:0ms"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><h3>Cognitive<br>Vulnerability<br><small>(Increased Risk)</small></h3></article><span class="sequence-arrow reveal-item" aria-hidden="true">→</span>
+            <article class="cognitive-card reveal-item" style="--delay:100ms"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><h3>Subjective<br>Cognitive Decline<br>(SCD)<small>(Not all progress)</small></h3></article><span class="sequence-arrow reveal-item" aria-hidden="true">→</span>
+            <article class="cognitive-card reveal-item" style="--delay:200ms"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><h3>Mild Cognitive<br>Impairment (MCI)<br><small>(Increased Risk)</small></h3></article><span class="sequence-arrow reveal-item" aria-hidden="true">→</span>
+            <article class="cognitive-card risk-card reveal-item" style="--delay:300ms"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><h3>Increased<br>Dementia Risk<br><small>(e.g., Alzheimer’s)</small></h3></article>
+          </div>
+          <div class="trajectory-note reveal-item"><span>Heterogeneous trajectories; not inevitable</span></div>
+        </div>
+      </section>
+
+      <section id="neurodegeneration" class="stress-section section-neuro" data-stress-section aria-labelledby="neuro-native-title">
+        <div class="stress-stage-scroll">
+          <section id="neurodegenerative-processes" class="stress-stage stress-stage-06" data-native-stage data-fit-check aria-labelledby="neuro-native-title">
+            <img class="reference-overlay" src="../assets/stress-neurobiology/references/06-neurodegenerative-processes.jpg" width="1535" height="282" alt="" aria-hidden="true">
+
+            <svg class="native-neuro-connectors connector-svg" viewBox="0 0 1535 282" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="neuro-navy-arrow" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker>
+              </defs>
+              <path class="native-neuro-progress" data-neuro-draw data-neuro-arrow="0" pathLength="1" d="M852 111H883" marker-end="url(#neuro-navy-arrow)"/>
+              <path class="native-neuro-progress" data-neuro-draw data-neuro-arrow="1" pathLength="1" d="M1181 111H1214" marker-end="url(#neuro-navy-arrow)"/>
+            </svg>
+
+            <div class="content-layer">
+              <header class="native-neuro-header"><h2 id="neuro-native-title" data-fit-check>5. Neurodegenerative Processes</h2></header>
+
+              <div class="native-neuro-processes" aria-label="Biological processes contributing to neurodegeneration">
+                <article class="native-neuro-process process-amyloid" data-neuro-process data-fit-check tabindex="0">
+                  <img src="../assets/stress-neurobiology/crops/section-06/amyloid-beta.png?v=1" width="75" height="63" alt="Amyloid beta accumulation">
+                  <h3 data-fit-check>Amyloid-&beta;<br>Accumulation</h3>
+                </article>
+                <span class="native-neuro-plus plus-1" aria-hidden="true">+</span>
+                <article class="native-neuro-process process-tau" data-neuro-process data-fit-check tabindex="0">
+                  <img src="../assets/stress-neurobiology/crops/section-06/tau-pathology.png?v=1" width="87" height="63" alt="Tau pathology">
+                  <h3 data-fit-check>Tau<br>Pathology</h3>
+                </article>
+                <span class="native-neuro-plus plus-2" aria-hidden="true">+</span>
+                <article class="native-neuro-process process-microglial" data-neuro-process data-fit-check tabindex="0">
+                  <img src="../assets/stress-neurobiology/crops/section-06/microglial-dysregulation.png?v=1" width="78" height="68" alt="Microglial dysregulation">
+                  <h3 data-fit-check>Microglial<br>Dysregulation</h3>
+                </article>
+                <span class="native-neuro-plus plus-3" aria-hidden="true">+</span>
+                <article class="native-neuro-process process-synaptic" data-neuro-process data-fit-check tabindex="0">
+                  <img src="../assets/stress-neurobiology/crops/section-06/synaptic-dysfunction.png?v=1" width="68" height="63" alt="Synaptic dysfunction">
+                  <h3 data-fit-check>Synaptic<br>Dysfunction</h3>
+                </article>
+                <span class="native-neuro-plus plus-4" aria-hidden="true">+</span>
+                <article class="native-neuro-process process-mitochondrial" data-neuro-process data-fit-check tabindex="0">
+                  <img src="../assets/stress-neurobiology/crops/section-06/mitochondrial-dysfunction.png?v=1" width="83" height="60" alt="Mitochondrial dysfunction">
+                  <h3 data-fit-check>Mitochondrial<br>Dysfunction</h3>
+                </article>
+              </div>
+
+              <article class="native-neuro-result" data-neuro-result data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-06/neurodegeneration-brain.png?v=1" width="82" height="93" alt="Brain affected by neurodegeneration">
+                <div>
+                  <h3 data-fit-check>Neurodegeneration</h3>
+                  <ul data-fit-check><li>Neuronal Loss</li><li>Network Dysfunction</li><li>Brain Atrophy</li></ul>
+                </div>
+              </article>
+
+              <article class="native-dementia-result" data-neuro-dementia data-fit-check tabindex="0">
+                <img src="../assets/stress-neurobiology/crops/section-06/dementia-head.png?v=1" width="83" height="96" alt="Head and brain representing dementia">
+                <h3 data-fit-check>Dementia /<br><span>Alzheimer&rsquo;s Disease</span><br>&amp; Other Dementias</h3>
+              </article>
+
+              <aside class="native-neuro-legend" aria-label="Legend" data-fit-check>
+                <strong>Legend:</strong>
+                <button class="native-legend-item legend-progression" type="button" data-neuro-legend="progression">
+                  <svg class="connector-svg" viewBox="0 0 43 24" aria-hidden="true"><defs><marker id="legend-neuro-navy" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker></defs><path d="M2 12H39" marker-end="url(#legend-neuro-navy)"/></svg>
+                  <span>Progression</span>
+                </button>
+                <button class="native-legend-item legend-reciprocal" type="button" data-neuro-legend="reciprocal">
+                  <svg class="connector-svg" viewBox="0 0 45 24" aria-hidden="true"><defs><marker id="legend-neuro-purple" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z"/></marker></defs><path d="M5 12H40" marker-start="url(#legend-neuro-purple)" marker-end="url(#legend-neuro-purple)"/></svg>
+                  <span>Reciprocal Influence<br>(Connecting Mechanisms)</span>
+                </button>
+                <button class="native-legend-item legend-loop" type="button" data-neuro-legend="loop">
+                  <svg class="connector-svg" viewBox="0 0 44 44" aria-hidden="true"><defs><marker id="legend-neuro-loop" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5.6" markerHeight="5.6" orient="auto"><path d="M0 0 10 5 0 10Z"/></marker></defs><path d="M8 22A14 14 0 0 1 35 17" marker-end="url(#legend-neuro-loop)"/><path d="M36 23A14 14 0 0 1 9 28" marker-end="url(#legend-neuro-loop)"/></svg>
+                  <span>Self-Reinforcing Loop<br>(Stress Sensitization)</span>
+                </button>
+                <span class="native-strength-label">Strength of Association with Stress:</span>
+                <span class="native-neuro-badge strong">Strong</span>
+                <span class="native-neuro-badge moderate">Moderate</span>
+                <span class="native-neuro-badge emerging">Emerging</span>
+              </aside>
+            </div>
+          </section>
+        </div>
+        <div class="section-canvas neuro-canvas" aria-hidden="true">
+          <header class="color-band orange-band"><h2 id="neuro-title">5. Neurodegenerative processes</h2></header>
+          <div class="neuro-flow reveal-item">
+            <article class="factor-card"><svg aria-hidden="true"><use href="#sn-i-amyloid"/></svg><h3>Amyloid-β<br>Accumulation</h3></article><span class="plus">+</span>
+            <article class="factor-card"><svg aria-hidden="true"><use href="#sn-i-tau"/></svg><h3>Tau<br>Pathology</h3></article><span class="plus">+</span>
+            <article class="factor-card"><svg class="red-icon" aria-hidden="true"><use href="#sn-i-neuron"/></svg><h3>Microglial<br>Dysregulation</h3></article><span class="plus">+</span>
+            <article class="factor-card"><svg class="green-icon" aria-hidden="true"><use href="#sn-i-synapse"/></svg><h3>Synaptic<br>Dysfunction</h3></article><span class="plus">+</span>
+            <article class="factor-card"><svg class="orange-icon" aria-hidden="true"><use href="#sn-i-mito"/></svg><h3>Mitochondrial<br>Dysfunction</h3></article>
+            <span class="flow-arrow">→</span>
+            <article class="neuro-box"><svg aria-hidden="true"><use href="#sn-i-brain"/></svg><div><h3>Neurodegeneration</h3><ul><li>Neuronal Loss</li><li>Network Dysfunction</li><li>Brain Atrophy</li></ul></div></article>
+            <span class="flow-arrow">→</span>
+            <article class="dementia-box"><svg aria-hidden="true"><use href="#sn-i-head"/></svg><h3>Dementia /<br>Alzheimer’s Disease<br>&amp; Other Dementias</h3></article>
+          </div>
+          <div class="neuro-legend reveal-item"><strong>Legend:</strong><span><i class="navy-arrow"></i>Progression</span><span><i class="purple-reciprocal"></i>Reciprocal Influence<br>(Connecting Mechanisms)</span><span><i class="loop-symbol">↻</i>Self-Reinforcing Loop<br>(Stress Sensitization)</span><span class="strength-label">Strength of Association with Stress:</span><span class="evidence strong">Strong</span><span class="evidence moderate">Moderate</span><span class="evidence emerging">Emerging</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="stress-footer exposome-footer">
+      <div>
+        <a href="../index.html"><img src="../assets/images/arotec-scientist-logo.png" width="250" height="229" alt="Arotec Scientist"></a>
+        <p>Science for adaptive health, wellbeing and longevity.</p>
+        <a class="footer-contact" href="members.html">Get in touch</a>
+      </div>
+    </footer>
+    <button class="stress-back-top" data-stress-top type="button" aria-label="Back to top">Top</button>
+    <script src="../assets/js/stress-neurobiology.js?v=20260811-v9" defer></script>
+    <script src="../assets/js/static-page-navigation.js?v=20260925-applied-products-countdown-v1" defer></script>
+  </body>
+</html>

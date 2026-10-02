@@ -15,7 +15,8 @@
     const destinations = {
       '#applied': 'index.html#applied',
       '#products': 'pages/applied-products.html',
-      '#platform': 'pages/platform.html'
+      '#platform': 'pages/platform.html',
+      '#insights': 'pages/insights.html'
     };
     for (const link of shell.querySelectorAll('#searchResults a[href^="#"]')) {
       const destination = destinations[link.getAttribute('href')];

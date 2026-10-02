@@ -22,7 +22,24 @@
       return;
     }
 
-    const scale = Math.min(window.innerWidth / 1536, window.innerHeight / 1024);
+    // Fit the fixed-coordinate artwork inside its parent content area. Read
+    // parent space and outer margins, never the shell width written below,
+    // so repeated resize events cannot progressively shrink the canvas.
+    const parent = shell.parentElement;
+    const parentStyle = parent ? window.getComputedStyle(parent) : null;
+    const shellStyle = window.getComputedStyle(shell);
+    const pixels = value => Number.parseFloat(value) || 0;
+    const parentWidth = Math.max(1,
+      (parent?.clientWidth || window.innerWidth)
+      - pixels(parentStyle?.paddingLeft) - pixels(parentStyle?.paddingRight)
+      - pixels(shellStyle.marginLeft) - pixels(shellStyle.marginRight)
+    );
+    const rootStyle = window.getComputedStyle(document.documentElement);
+    const foregroundInset = shellStyle.getPropertyValue("--arotec-foreground-measure").trim() === "1"
+      ? pixels(rootStyle.getPropertyValue("--arotec-content-left")) + pixels(rootStyle.getPropertyValue("--arotec-content-right"))
+      : 0;
+    const availableWidth = Math.max(1, Math.min(parentWidth, window.innerWidth - foregroundInset));
+    const scale = Math.min(availableWidth / 1536, window.innerHeight / 1024);
     stage.style.transform = `scale(${scale})`;
     shell.style.width = `${1536 * scale}px`;
     shell.style.height = `${1024 * scale}px`;

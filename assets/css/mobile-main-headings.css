@@ -3128,3 +3128,120 @@
     }
   }
 }
+
+/* Additional local page headings; existing published page rules remain intact. */
+@layer arotec-mobile-main-headings {
+  @media (max-width: 767px) {
+    /* deep-sea-water.html */
+    body[data-main-heading-page="deep-sea-water"] #origin-title,
+    body[data-main-heading-page="deep-sea-water"] #depth-title {
+      --main-heading-desktop-size: 72px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(79.92px * 0.6) !important;
+      letter-spacing: calc(-1.44px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+    body[data-main-heading-page="deep-sea-water"] div.dsw-differences > h2.dsw-heading:nth-child(1),
+    body[data-main-heading-page="deep-sea-water"] div.dsw-panel.dsw-history > div.dsw-frame:nth-child(1) > h2.dsw-heading:nth-child(1),
+    body[data-main-heading-page="deep-sea-water"] #comparison-title {
+      --main-heading-desktop-size: 40px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(47.2px * 0.6) !important;
+      letter-spacing: calc(-0.8px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+    body[data-main-heading-page="deep-sea-water"] div.dsw-panel.dsw-closing > div.dsw-frame:nth-child(1) > h2:nth-child(1) {
+      --main-heading-desktop-size: 30px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(39px * 0.6) !important;
+      letter-spacing: calc(-0.96px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+
+    /* pages/applied-solutions-overview.html */
+    body[data-main-heading-page="pages--applied-solutions-overview"] #aso-title {
+      --main-heading-desktop-size: 72px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(80px * 0.6) !important;
+      letter-spacing: calc(-1.44px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+
+    /* pages/brain-skin-neurocutaneous-loop.html */
+    body[data-main-heading-page="pages--brain-skin-neurocutaneous-loop"] h1 {
+      --main-heading-desktop-size: 72px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(80px * 0.6) !important;
+      letter-spacing: calc(-1.44px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+
+    /* sleep-human-beauty/index.html */
+    body[data-main-heading-page="sleep-human-beauty--index"] #shb-hero-title,
+    body[data-main-heading-page="sleep-human-beauty--index"] strong,
+    body[data-main-heading-page="sleep-human-beauty--index"] #hair-scalp-title,
+    body[data-main-heading-page="sleep-human-beauty--index"] #integrated-title,
+    body[data-main-heading-page="sleep-human-beauty--index"] #skin-title,
+    body[data-main-heading-page="sleep-human-beauty--index"] #shb-closing-title {
+      --main-heading-desktop-size: 72px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(80px * 0.6) !important;
+      letter-spacing: calc(-1.44px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+
+    /* synesthetic-flavor/index.html */
+    body[data-main-heading-page="synesthetic-flavor--index"] #hero-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #hero-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #science-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #science-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #culture-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #culture-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #multisensory-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #multisensory-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #equation-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #equation-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #memory-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #memory-title > em:nth-child(1),
+    body[data-main-heading-page="synesthetic-flavor--index"] #wellbeing-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #wellbeing-title > em:nth-child(2),
+    body[data-main-heading-page="synesthetic-flavor--index"] #better-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] em:nth-child(3),
+    body[data-main-heading-page="synesthetic-flavor--index"] #emotion-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] em:nth-child(4),
+    body[data-main-heading-page="synesthetic-flavor--index"] #partnership-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #partnership-title > em:nth-child(1),
+    body[data-main-heading-page="synesthetic-flavor--index"] #offerings-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #offerings-title > em:nth-child(1),
+    body[data-main-heading-page="synesthetic-flavor--index"] #contact-title,
+    body[data-main-heading-page="synesthetic-flavor--index"] #contact-title > em:nth-child(2) {
+      --main-heading-desktop-size: 72px;
+      --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
+      font-size: var(--main-heading-mobile-size) !important;
+      line-height: calc(80px * 0.6) !important;
+      letter-spacing: calc(-1.44px * 0.6) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      max-width: 100% !important;
+    }
+
+  }
+}

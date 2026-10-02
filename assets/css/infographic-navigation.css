@@ -1,4 +1,4 @@
-/* Shared navigation and type treatment for the Exposome and ADI infographic pages. */
+/* Shared navigation and type treatment for the scientific infographic pages. */
 
 .exposome-hybrid-page,
 .adi-hybrid-page {
@@ -60,9 +60,10 @@ html {
   padding-top: clamp(68px, 8vw, 96px);
 }
 
-/* Match the Neuro-Skin Care section-navigation pills on both infographic pages. */
+/* Match the Neuro-Skin Care section-navigation pills across infographic pages. */
 .ex-progress-nav,
-.adi-progress-nav {
+.adi-progress-nav,
+.stress-progress-nav {
   position: sticky;
   top: 94px;
   right: auto;
@@ -89,12 +90,16 @@ html {
 }
 
 .ex-progress-nav::-webkit-scrollbar,
-.adi-progress-nav::-webkit-scrollbar {
+.adi-progress-nav::-webkit-scrollbar,
+.stress-progress-nav::-webkit-scrollbar {
   display: none;
 }
 
 .ex-progress-nav a,
-.adi-progress-nav a {
+.adi-progress-nav a,
+.stress-progress-nav a,
+.stress-progress-nav a:hover,
+.stress-progress-nav a:focus-visible {
   position: relative;
   display: inline-flex;
   flex: 0 0 auto;
@@ -125,7 +130,8 @@ html {
 }
 
 .ex-progress-nav a::after,
-.adi-progress-nav a::after {
+.adi-progress-nav a::after,
+.stress-progress-nav a::after {
   content: "";
   position: absolute;
   right: 12px;
@@ -140,7 +146,8 @@ html {
 }
 
 .ex-progress-nav a span,
-.adi-progress-nav a span {
+.adi-progress-nav a span,
+.stress-progress-nav a span {
   display: inline;
   min-width: 0;
   margin-right: 5px;
@@ -150,12 +157,33 @@ html {
   font-weight: 800;
 }
 
+/* The stress page previously rendered these spans as compact navigation dots.
+   Reset those dot-only properties so its labels match the shared pill menu. */
+.stress-progress-nav a span,
+.stress-progress-nav a:hover span,
+.stress-progress-nav a:focus-visible span,
+.stress-progress-nav a.is-active span {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  color: #0d9c96;
+  background: transparent;
+  font-size: inherit;
+  transform: none;
+}
+
 .ex-progress-nav a:hover,
 .ex-progress-nav a:focus-visible,
 .ex-progress-nav a.is-active,
 .adi-progress-nav a:hover,
 .adi-progress-nav a:focus-visible,
-.adi-progress-nav a.is-active {
+.adi-progress-nav a.is-active,
+.stress-progress-nav a:hover,
+.stress-progress-nav a:focus-visible,
+.stress-progress-nav a.is-active {
+  width: auto;
   border-color: rgba(18, 100, 190, 0.24);
   color: #1264be;
   background: #ffffff;
@@ -167,7 +195,10 @@ html {
 .ex-progress-nav a.is-active::after,
 .adi-progress-nav a:hover::after,
 .adi-progress-nav a:focus-visible::after,
-.adi-progress-nav a.is-active::after {
+.adi-progress-nav a.is-active::after,
+.stress-progress-nav a:hover::after,
+.stress-progress-nav a:focus-visible::after,
+.stress-progress-nav a.is-active::after {
   transform: scaleX(1);
 }
 
@@ -208,7 +239,8 @@ html {
   }
 
   .ex-progress-nav,
-  .adi-progress-nav {
+  .adi-progress-nav,
+  .stress-progress-nav {
     top: 88px;
     justify-content: flex-start;
   }
@@ -225,14 +257,18 @@ html {
   }
 
   .ex-progress-nav,
-  .adi-progress-nav {
+  .adi-progress-nav,
+  .stress-progress-nav {
     top: 68px;
     justify-content: flex-start;
     padding-inline: 14px;
   }
 
   .ex-progress-nav a,
-  .adi-progress-nav a {
+  .adi-progress-nav a,
+  .stress-progress-nav a,
+  .stress-progress-nav a:hover,
+  .stress-progress-nav a:focus-visible {
     min-height: 32px;
     padding: 7px 10px;
     font-size: 0.72rem;
@@ -263,7 +299,9 @@ html {
   .exposome-infographic-body .exposome-site-header,
   .exposome-infographic-body .ex-progress-nav,
   .ex-progress-nav a,
-  .ex-progress-nav a::after {
+  .ex-progress-nav a::after,
+  .stress-progress-nav a,
+  .stress-progress-nav a::after {
     transition: none;
   }
 }

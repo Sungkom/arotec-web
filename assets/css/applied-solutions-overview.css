@@ -1,0 +1,286 @@
+html body.aso-page {
+  --aso-ink: #102665;
+  --aso-muted: #7b879c;
+  background: #e8e4e1;
+}
+html body.aso-page main#main#main.aso-main {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: var(--detail-header-space, 112px) 0 0 !important;
+  color: var(--aso-ink);
+  font-family: var(--site-font, "DM Sans", sans-serif);
+}
+html body.aso-page main#main#main .aso-stage {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 32 / 15;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #e8e4e1;
+}
+html body.aso-page main#main#main .aso-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+html body.aso-page main#main#main .aso-heading {
+  position: absolute;
+  left: 20.4%;
+  top: 18.7%;
+  width: 70%;
+}
+html body.aso-page main#main#main .aso-rule {
+  display: block;
+  width: clamp(22px, 1.55vw, 40px);
+  height: 1px;
+  margin: .55vw 0 .65vw;
+  background: #537e81;
+}
+html body.aso-page main#main#main .aso-heading p {
+  margin: 0;
+  color: var(--aso-muted);
+  font-size: clamp(11px, .83vw, 21px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: .15em !important;
+  text-transform: uppercase;
+}
+html body.aso-page main#main#main .aso-areas,
+html body.aso-page main#main#main .aso-areas > ul {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+}
+html body.aso-page main#main#main .aso-node {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: var(--aso-ink);
+  pointer-events: auto;
+}
+html body.aso-page main#main#main .aso-node--sensory {
+  left: 22.25%;
+  top: 42.8%;
+  --aso-leader-height: 4.9vw;
+}
+html body.aso-page main#main#main .aso-node--flavors {
+  left: 39.35%;
+  top: 33.1%;
+  --aso-leader-height: 5.45vw;
+}
+html body.aso-page main#main#main .aso-node--ingredients {
+  left: 53.85%;
+  top: 40.2%;
+  --aso-leader-height: 4.1vw;
+}
+html body.aso-page main#main#main .aso-node--supplements {
+  left: 70.15%;
+  top: 45.9%;
+  --aso-leader-height: 4.6vw;
+}
+html body.aso-page main#main#main .aso-explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .4em;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: .65vw 0 0;
+  padding: 0 0 .3vw;
+  border: 0;
+  border-bottom: 1px solid #576d82;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--aso-ink) !important;
+  font-family: var(--site-font, "DM Sans", sans-serif) !important;
+  font-size: clamp(11px, .83vw, 21px) !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+html body.aso-page main#main#main .aso-explore i {
+  font-size: 1.15em;
+  line-height: 1;
+}
+html body.aso-page main#main#main .aso-explore:hover {
+  color: #007a89 !important;
+  border-color: currentColor;
+}
+html body.aso-page main#main#main .aso-explore:focus-visible,
+html body.aso-page .aso-dialog-close:focus-visible {
+  outline: 2px solid #007a89;
+  outline-offset: 6px;
+}
+html body.aso-page main#main#main .aso-leader {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: var(--aso-leader-height);
+  margin: .45vw 0 0 1.9vw;
+  background: #263e79;
+  pointer-events: none;
+}
+html body.aso-page main#main#main .aso-leader::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: clamp(4px, .25vw, 6px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #123583;
+  transform: translate(-50%, 50%);
+}
+html body.aso-page .aso-dialog {
+  box-sizing: border-box;
+  width: min(520px, calc(100vw - 40px));
+  padding: 36px;
+  border: 1px solid #cbd5df;
+  border-radius: 18px;
+  background: #faf9f7;
+  color: #102665;
+  font-family: var(--site-font, "DM Sans", sans-serif);
+}
+html body.aso-page .aso-dialog::backdrop {
+  background: rgba(12, 26, 48, .45);
+}
+html body.aso-page .aso-dialog p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+html body.aso-page .aso-dialog .aso-dialog-eyebrow {
+  margin-top: 0;
+  color: #66768a;
+  font-size: 12px !important;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+html body.aso-page .aso-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #102665;
+  cursor: pointer;
+}
+@layer arotec-display-headings.spec {
+  html body.aso-page main#main#main #aso-title {
+    margin: 0 !important;
+    color: #0d2265 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(24px, 1.72vw, 44px) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: .045em !important;
+    text-transform: uppercase !important;
+  }
+  html body.aso-page main#main#main .aso-node h2 {
+    margin: 0 !important;
+    color: #102665 !important;
+    font-family: var(--site-font, "DM Sans", sans-serif) !important;
+    font-size: clamp(12px, 1.03vw, 26px) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: .02em !important;
+    text-transform: uppercase !important;
+  }
+  html body.aso-page #aso-dialog-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 18px !important;
+  }
+}
+@media (max-width: 900px) {
+  html body.aso-page main#main#main .aso-stage {
+    box-sizing: border-box;
+    aspect-ratio: auto;
+    padding: 42px 24px 260px;
+  }
+  html body.aso-page main#main#main .aso-background {
+    top: auto;
+    bottom: 0;
+    height: 300px !important;
+    object-position: center bottom;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%);
+    mask-image: linear-gradient(to bottom, transparent, #000 22%);
+  }
+  html body.aso-page main#main#main .aso-heading {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+  html body.aso-page main#main#main .aso-rule {
+    margin-block: 14px;
+  }
+  html body.aso-page main#main#main .aso-heading p {
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+    letter-spacing: .1em !important;
+  }
+  html body.aso-page main#main#main .aso-heading br {
+    display: none;
+  }
+  html body.aso-page main#main#main .aso-areas,
+  html body.aso-page main#main#main .aso-areas > ul {
+    position: relative;
+    inset: auto;
+  }
+  html body.aso-page main#main#main .aso-areas {
+    margin-top: 34px;
+  }
+  html body.aso-page main#main#main .aso-areas > ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
+  html body.aso-page main#main#main .aso-node {
+    position: static;
+    min-width: 0;
+  }
+  html body.aso-page main#main#main .aso-explore {
+    margin-top: 12px;
+    padding-bottom: 6px;
+    font-size: 12px !important;
+  }
+  html body.aso-page main#main#main .aso-leader {
+    display: none;
+  }
+  @layer arotec-display-headings.spec {
+    html body.aso-page main#main#main #aso-title {
+      max-width: 650px;
+      font-size: clamp(26px, 4vw, 36px) !important;
+      line-height: 1.25 !important;
+    }
+    html body.aso-page main#main#main .aso-node h2 {
+      font-size: 16px !important;
+      line-height: 1.4 !important;
+    }
+  }
+}

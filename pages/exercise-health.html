@@ -4,46 +4,7 @@
 <meta http-equiv="refresh" content="0; url=../exercise-health.html">
 <link rel="canonical" href="../exercise-health.html">
 <title>Exercise × Systemic Health | Arotec</title>
-<script>
-(() => {
-  'use strict';
-  // Preserve published deep links while the redesigned article lives at the root.
-  const legacyFragments = {
-  "home": "context",
-  "hero-title": "context",
-  "science": "peripheral",
-  "science-title": "peripheral",
-  "peripheral-groups": "peripheral",
-  "peripheral-tip": "peripheral",
-  "cross-left-tip": "crosstalk",
-  "neural-pathways": "neural",
-  "neural-tip": "neural",
-  "cross-right-tip": "crosstalk",
-  "neurochemical-responses": "neurochemical",
-  "sensory-tip": "neurochemical",
-  "inter-organ-axes": "crosstalk",
-  "intracellular-title": "cellular",
-  "intracellular-pathways": "cellular",
-  "pathways": "context",
-  "pathways-title": "context",
-  "modifiers-title": "context",
-  "contextual-modifiers": "context",
-  "response-modifiers": "context",
-  "exercise-modalities": "context",
-  "physiological-sensors": "sensors",
-  "acute-responses": "acute",
-  "outcomes": "acute",
-  "outcomes-title": "acute",
-  "acute-outcomes": "acute"
-};
-  const destination = new URL('../exercise-health.html', window.location.href);
-  destination.search = window.location.search;
-  let fragment = window.location.hash.slice(1);
-  try { fragment = decodeURIComponent(fragment); } catch (_) { /* Keep malformed or unknown fragments unchanged. */ }
-  destination.hash = Object.prototype.hasOwnProperty.call(legacyFragments, fragment)
-    ? legacyFragments[fragment]
-    : window.location.hash;
-  window.location.replace(destination.href);
-})();
-</script>
+<script>window.location.replace('../exercise-health.html' + window.location.search + window.location.hash);</script>
+<link rel="stylesheet" href="../assets/css/content-protection.css?v=20261002">
+  <script defer src="../assets/js/content-protection.js?v=20261002"></script>
 </head><body><p><a href="../exercise-health.html">Continue to Exercise × Systemic Health</a></p></body></html>

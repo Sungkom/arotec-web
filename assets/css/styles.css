@@ -917,15 +917,17 @@ body[data-page="home"] .hero .pill-button {
   z-index: 100;
   width: min(380px, 86vw);
   overflow-y: auto;
+  visibility: hidden;
   transform: translateX(100%);
   background: rgba(8, 17, 30, 0.98);
   border-left: 1px solid rgba(255, 255, 255, 0.13);
-  box-shadow: var(--shadow);
-  transition: transform 220ms ease;
+  box-shadow: none;
+  transition: transform 220ms ease, visibility 220ms ease;
   padding: 22px;
 }
 
 body.menu-open .mobile-panel {
+  visibility: visible;
   transform: translateX(0);
 }
 
@@ -3341,7 +3343,8 @@ li {
   }
 }
 
-.mobile-panel {
+/* Only an open drawer casts a shadow; closed drawers must not shade the page edge. */
+body.menu-open .mobile-panel {
   box-shadow: -28px 0 80px rgba(0, 0, 0, 0.34);
 }
 
@@ -4544,4 +4547,16 @@ body.storytelling-ready .story-section-frame.is-story-visible svg line {
     clip-path: none !important;
     transition: none !important;
   }
+}
+
+/* Platform opens its submenu without navigating away from the current page. */
+#site-shell button.nav-link {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
 }

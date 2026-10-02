@@ -1,26 +1,41 @@
 (() => {
   const header = document.querySelector(".site-header, .commerce-header");
   if (!header || document.querySelector("[data-static-mobile-panel]")) return;
+  header.querySelectorAll("a").forEach((link) => {
+    if (/^get\s+in\s+touch$/i.test(link.textContent.trim())) link.href = "get-in-touch.html";
+  });
 
   const links = [
-    ["customized.html", "Customized for you"],
+    [new URL("../../uniquely-yours.html", document.currentScript.src).href, "Uniquely Yours"],
     ["applied-solutions.html", "Applied Solutions"],
-    ["products.html", "Applied Products"],
+    ["applied-products.html", "Applied Products"],
     ["platform.html", "Platform"],
     ["who-we-are.html", "Who We Are"],
     ["insights.html", "Insights"],
     ["partners.html", "Partners"],
+    ["partners.html#b2b", "CO-CREATION"],
     ["join-us.html", "Join Us"],
   ];
+  const productsCountdownUrl = new URL("../../applied-products-countdown.html", document.currentScript.src).href;
   const dropdownMenus = {
     "Applied Solutions": {
       ariaLabel: "Applied solution areas",
       href: "applied-solutions.html",
       items: [
-        ["sensory-strategies", "Sensory Strategies"],
+        ["sensory-strategies", "Sensory Strategies", "applied-solutions.html"],
         ["synesthetic-flavors", "Synesthetic Flavors", "synesthetic-flavor.html"],
-        ["bio-responsive-scents", "Bio-Responsive Scents"],
-        ["health-wellness-scented-supplements", "Health & Wellness : Scented Supplements"],
+        ["bio-responsive-scents", "Bio-Responsive Ingredients", "bio-responsive-scents.html"],
+        ["health-wellness-scented-supplements", "Health & Wellness : Scented Supplements", "health-wellness-scented-supplements.html"],
+      ],
+    },
+    "Applied Products": {
+      ariaLabel: "Applied product areas",
+      href: "applied-products.html",
+      items: [
+        ["vagus-spa", "Vagus spa", productsCountdownUrl],
+        ["vagus-scent-bulb", "Vagus scent bulb", productsCountdownUrl],
+        ["neuro-cosmetic", "Neuro-cosmetic", productsCountdownUrl],
+        ["customized-for-you", "Bespoke Services", "bespoke-services.html"],
       ],
     },
     Insights: {
@@ -30,20 +45,24 @@
         ["exercise-beauty", "Exercise x Beauty"],
         ["exercise-health", "Exercise x Health", "exercise-health.html"],
         ["sleep-beauty", "Sleep x Beauty"],
-        ["sleep-health", "Sleep x Health"],
+        ["sleep-health", "Sleep x Health", "sleep-health.html"],
       ],
     },
     Platform: {
       ariaLabel: "Platform modules",
       href: "platform.html",
       items: [
-        ["travion", "Travion™"],
-        ["meraxyl", "Meraxyl™"],
-        ["melacor", "Melacor™"],
-        ["cortiva", "Cortiva™"],
-        ["morphagen", "Morphagen™"],
-        ["chromagen", "Chromagen™"],
-        ["olfactiva", "Olfactiva™"],
+        ["piper-longum", "Piper Longum", "platform.html"],
+      ],
+    },
+    Partners: {
+      ariaLabel: "Partner topics",
+      href: "partners.html",
+      items: [
+        ["deep-sea-water", "Deep Sea Water"],
+        ["water-activator", "Water Activator", "water-activator.html"],
+        ["sakae", "Sakae", "sakae.html"],
+        ["kobayashi", "Kobayashi"],
       ],
     },
   };
@@ -52,6 +71,19 @@
     .join("");
 
   const desktopNav = header.querySelector(".desktop-nav, .commerce-nav");
+  if (desktopNav) {
+    const existingLinks = Array.from(desktopNav.querySelectorAll(":scope > a"));
+    const fallbackClass = existingLinks[0]?.className || "nav-link";
+    const normalizedLinks = links.map(([href, label]) => {
+      const existing = existingLinks.find((link) => link.textContent.trim() === label);
+      const link = existing || document.createElement("a");
+      link.className = existing?.className || fallbackClass;
+      link.href = href;
+      link.textContent = label;
+      return link;
+    });
+    desktopNav.replaceChildren(...normalizedLinks);
+  }
   Object.entries(dropdownMenus).forEach(([label, menu]) => {
     const desktopLink = Array.from(desktopNav?.children || [])
       .find((item) => item.matches("a") && item.textContent.trim() === label);
@@ -72,6 +104,13 @@
     actions = document.createElement("div");
     actions.className = "header-actions";
     header.querySelector("nav")?.after(actions);
+  }
+
+  const languageSelect = actions.querySelector(".language-select");
+  const searchButton = actions.querySelector("#searchButton, [aria-label='Search']");
+  if (languageSelect && searchButton) {
+    actions.insertBefore(searchButton, languageSelect);
+    actions.append(languageSelect);
   }
 
   const toggle = document.createElement("button");
@@ -108,7 +147,7 @@
           : `<a class="nav-link" href="${href}">${label}</a>`;
       }).join("")}
     </nav>
-    <a class="pill-button" href="members.html">Get In touch</a>
+    <a class="pill-button" href="get-in-touch.html">Get In touch</a>
   `;
   document.body.append(scrim, panel);
 
@@ -131,4 +170,35 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") close();
   });
+})();
+
+;(() => {
+  if (document.getElementById('applied-products-navigation-script')) return;
+  const script = document.createElement('script');
+  script.id = 'applied-products-navigation-script';
+  script.src = new URL('applied-products-navigation.js?v=20261001-bespoke-services-v1', document.currentScript.src).href;
+  script.defer = true;
+  document.head.append(script);
+})();
+
+;(() => {
+  if (document.querySelector('script[data-applied-solutions-navigation]')) return;
+  const source = document.currentScript;
+  if (!source || !source.src) return;
+  const script = document.createElement('script');
+  script.src = new URL('./applied-solutions-navigation.js?v=20261001-scented-supplements-v1', source.src).href;
+  script.dataset.appliedSolutionsNavigation = 'true';
+  script.defer = true;
+  document.head.append(script);
+})();
+
+;(() => {
+  if (document.querySelector('script[data-kobayashi-navigation]')) return;
+  const source = document.currentScript;
+  if (!source || !source.src) return;
+  const script = document.createElement('script');
+  script.src = new URL('./kobayashi-navigation.js?v=20260909-v1', source.src).href;
+  script.dataset.kobayashiNavigation = 'true';
+  script.defer = true;
+  document.head.append(script);
 })();

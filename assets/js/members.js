@@ -2,6 +2,7 @@
   const languageMeta = {
     en: { htmlLang: "en", formValue: "en" },
     ja: { htmlLang: "ja", formValue: "ja" },
+    "zh-CN": { htmlLang: "zh-CN", formValue: "zh-CN" },
     zh: { htmlLang: "zh-Hant", formValue: "zh-Hant" },
     th: { htmlLang: "th", formValue: "th" }
   };
@@ -41,7 +42,7 @@
         "This email is already registered": "อีเมลนี้ลงทะเบียนแล้ว",
         "Invalid JSON": "ข้อมูลไม่ถูกต้อง"
       },
-      options: { th: "ไทย", zh: "ไต้หวัน", ja: "ญี่ปุ่น", en: "อังกฤษ" }
+      options: { th: "ไทย", zh: "ไต้หวัน", ja: "ญี่ปุ่น", "zh-CN": "จีนตัวย่อ (จีนแผ่นดินใหญ่)", en: "อังกฤษ" }
     },
     zh: {
       titleText: "會員註冊 | Arotec Science for Life",
@@ -77,7 +78,43 @@
         "This email is already registered": "此電子郵件已註冊",
         "Invalid JSON": "資料格式不正確"
       },
-      options: { th: "泰文", zh: "繁體中文", ja: "日文", en: "英文" }
+      options: { th: "泰文", zh: "繁體中文", ja: "日文", "zh-CN": "簡體中文（中國大陸）", en: "英文" }
+    },
+    "zh-CN": {
+      titleText: "会员注册 | Arotec Science for Life",
+      skip: "跳至内容",
+      navHome: "首页",
+      navMembers: "Get In touch",
+      eyebrow: "Arotec 会员",
+      title: "会员数据库",
+      lead: "将会员、客户及对 Arotec 服务感兴趣者的信息存储在本机 SQLite 数据库中。",
+      infoTitle: "存储的信息",
+      infoLead: "此表单用于收集联系与会员服务所需的基本信息。",
+      infoItem1: "姓名、电子邮箱、电话",
+      infoItem2: "语言、公司与健康目标",
+      infoItem3: "隐私与营销同意状态",
+      fullName: "姓名",
+      email: "电子邮箱",
+      phone: "电话",
+      preferredLanguage: "语言",
+      company: "公司",
+      jobTitle: "职位",
+      wellnessGoal: "目标 / 兴趣",
+      privacyConsent: "同意存储信息，以便联系与提供会员服务",
+      marketingConsent: "订阅 Arotec 最新资讯与优惠",
+      saveButton: "保存会员",
+      saving: "正在保存信息...",
+      success: "保存成功，会员编号",
+      fileHelp: " 请通过 server.py 打开网站，例如 http://127.0.0.1:8000/pages/members.html",
+      fallbackError: "无法保存信息",
+      errors: {
+        "Full name and email are required": "请填写姓名和电子邮箱",
+        "Email is invalid": "电子邮箱格式不正确",
+        "Privacy consent is required": "请同意存储信息",
+        "This email is already registered": "此电子邮箱已注册",
+        "Invalid JSON": "数据格式不正确"
+      },
+      options: { th: "泰语", zh: "繁体中文", ja: "日语", "zh-CN": "简体中文（中国大陆）", en: "英语" }
     },
     ja: {
       titleText: "会員登録 | Arotec Science for Life",
@@ -113,7 +150,7 @@
         "This email is already registered": "このメールはすでに登録されています",
         "Invalid JSON": "データ形式が正しくありません"
       },
-      options: { th: "タイ語", zh: "繁体字中国語", ja: "日本語", en: "英語" }
+      options: { th: "タイ語", zh: "繁体字中国語", ja: "日本語", "zh-CN": "簡体字中国語（中国本土）", en: "英語" }
     },
     en: {
       titleText: "Member Registration | Arotec Science for Life",
@@ -149,7 +186,7 @@
         "This email is already registered": "This email is already registered",
         "Invalid JSON": "Invalid data format"
       },
-      options: { th: "Thai", zh: "Traditional Chinese", ja: "Japanese", en: "English" }
+      options: { th: "Thai", zh: "Traditional Chinese", ja: "Japanese", "zh-CN": "Simplified Chinese (Mainland China)", en: "English" }
     }
   };
 

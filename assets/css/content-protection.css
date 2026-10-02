@@ -1,0 +1,31 @@
+/* Only interaction properties change; no layout, appearance, or content rules. */
+html.arotec-copy-protected body {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+}
+
+/* Explicit inheritance keeps contenteditable=false islands protected while
+   allowing a nested editable control to establish its own editing boundary. */
+html.arotec-copy-protected body * {
+  -webkit-user-select: inherit !important;
+  user-select: inherit !important;
+  -webkit-touch-callout: inherit !important;
+  -webkit-user-drag: inherit !important;
+}
+
+html.arotec-copy-protected body [contenteditable="false" i] {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+}
+
+html.arotec-copy-protected body:is([data-allow-copy], [contenteditable=""], [contenteditable="true" i], [contenteditable="plaintext-only" i]),
+html.arotec-copy-protected body :is(input, textarea, select, [data-allow-copy], [contenteditable=""], [contenteditable="true" i], [contenteditable="plaintext-only" i]) {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+  -webkit-user-drag: auto !important;
+}
