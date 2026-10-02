@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="style.css?v=20260810-product-card-icons-v24">
   <link rel="stylesheet" href="assets/css/site-navigation.min.css?v=20260910-closed-panel-shadow-v1">
     <link rel="stylesheet" href="assets/vendor/phosphor-icons/regular/style.css">
-    <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20260911-toolbar-removed-v1">
-    <link rel="stylesheet" href="assets/css/home-research-focus.css?v=20260910-white-reference-v4">
-    <link rel="stylesheet" href="assets/css/home-framework-tree.css?v=20260926-framework-effects-v2">
+    <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20260927-section-spacing-v9">
+    <link rel="stylesheet" href="assets/css/home-research-focus.css?v=20260927-section-spacing-v5">
+    <link rel="stylesheet" href="assets/css/home-framework-tree.css?v=20260927-desktop-fit-v4">
     <link rel="stylesheet" href="assets/css/home-framework-icons.css?v=20260918-tree-v3">
     <link rel="stylesheet" href="assets/css/site-content-spacing.css?v=20260914-foreground-150-both-v5"><script src="assets/js/site-content-spacing.js?v=20260914-foreground-150-both-v5" defer></script>
     <link rel="stylesheet" href="assets/css/site-typography.css?v=20260916-platform-font-v1"><script src="assets/js/site-typography.js?v=20260910-typography-complete-v5" defer></script>
@@ -32,13 +32,16 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <div id="site-shell"></div>
 
-    <!-- Biology: all native text uses the original 1448 × 1131 reference coordinates. -->
+    <!-- Biology: desktop uses the supplied panorama; compact screens retain the detailed portrait diagram. -->
     <template id="biology-experience-template">
-      <section class="biology-experience" id="biology-experience" aria-labelledby="wellbeing-title" lang="en" data-active-stage="0">
+      <section class="biology-experience biology-wide" id="biology-experience" aria-labelledby="wellbeing-title" lang="en" data-active-stage="0">
         <div class="biology-viewport" role="region" aria-label="Biology of Human Experience diagram" tabindex="0">
           <div class="biology-canvas">
             <div class="biology-artwork">
-              <img class="biology-art" src="assets/images/biology-human-experience-art.webp" width="1419" height="1108" loading="lazy" decoding="async" alt="Nine colored radial forms connected in a continuous curve, with a returning feedback loop.">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="assets/images/biology-human-experience-desktop-20260927.jpg" width="2560" height="1200">
+                <img class="biology-art" src="assets/images/biology-human-experience-art.webp" width="1419" height="1108" loading="lazy" decoding="async" alt="Nine colored radial forms connected in a continuous curve, with a returning feedback loop.">
+              </picture>
               <div class="biology-nodes" aria-hidden="true">
                 <span class="biology-node" data-biology-node="0" style="--stage-color:#256b32;left:33.218232%;top:31.741821%"></span>
                 <span class="biology-node" data-biology-node="1" style="--stage-color:#087d86;left:41.298343%;top:36.339523%"></span>
@@ -258,7 +261,7 @@
       </section>
     </template>
 
-  <script src="assets/js/site.min.js?v=20260925-applied-products-countdown-v1" defer></script>
+  <script src="assets/js/site.min.js?v=20261001-bespoke-services-v1" defer></script>
   <script src="assets/js/home-biology-experience.js?v=20260911-toolbar-removed-v1" defer></script>
   <script src="assets/js/home-header.js?v=20260904-hero-logo-align-v3" defer></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>

@@ -180,10 +180,10 @@
       max-width: 100% !important;
     }
     body[data-main-heading-page="index"] #wellbeing-title {
-      --main-heading-desktop-size: 37.7901px;
+      --main-heading-desktop-size: 46px;
       --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
       font-size: var(--main-heading-mobile-size) !important;
-      line-height: calc(45.663px * 0.6) !important;
+      line-height: calc(55.2px * 0.6) !important;
       letter-spacing: normal !important;
       white-space: normal !important;
       overflow-wrap: anywhere !important;
@@ -191,21 +191,21 @@
     }
     body[data-main-heading-page="index"] #research-solutions-title,
     body[data-main-heading-page="index"] span.fw-title-line {
-      --main-heading-desktop-size: 21.66px;
+      --main-heading-desktop-size: 26.752px;
       --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
       font-size: var(--main-heading-mobile-size) !important;
-      line-height: calc(24.909px * 0.6) !important;
+      line-height: calc(30.7648px * 0.6) !important;
       letter-spacing: normal !important;
       white-space: normal !important;
       overflow-wrap: anywhere !important;
       max-width: 100% !important;
     }
     body[data-main-heading-page="index"] span.fw-brand {
-      --main-heading-desktop-size: 38.76px;
+      --main-heading-desktop-size: 47.872px;
       --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
       font-size: var(--main-heading-mobile-size) !important;
-      line-height: calc(40.698px * 0.6) !important;
-      letter-spacing: calc(-1.938px * 0.6) !important;
+      line-height: calc(50.2656px * 0.6) !important;
+      letter-spacing: calc(-2.3936px * 0.6) !important;
       white-space: normal !important;
       overflow-wrap: anywhere !important;
       max-width: 100% !important;

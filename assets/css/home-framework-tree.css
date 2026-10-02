@@ -1,9 +1,10 @@
 /* Native text and CSS icons share the botanical reference's coordinates.
    Canvas is the 1700 × 1000 content crop of the 2560 × 1200 reference. */
 #research-solutions.fw-tree {
+  --fw-section-padding: clamp(12px, 1vw, 20px);
   display: block;
   margin: 0;
-  padding: clamp(24px, 3vw, 56px) 0;
+  padding: var(--fw-section-padding) 0;
   background: #fff;
   color: #081a35;
   scroll-margin-top: 112px;
@@ -54,9 +55,31 @@
   #research-solutions .fw-outcome .fw-icon { font-size: 2.8cqw; }
 }
 
+/* Let the existing artwork extend into the full-width backdrop while keeping
+   the image, energy paths and live labels on the same fitted desktop plane. */
+@media (min-width: 1001px) {
+  #research-solutions.fw-tree { min-height: 0; overflow: hidden; }
+  #research-solutions .fw-tree-shell { width: 100%; }
+  #research-solutions .fw-tree-canvas {
+    width: min(calc(100% - 32px), calc((100svh - 112px - var(--fw-section-padding) - var(--fw-section-padding)) * 1.7));
+    margin-inline: auto;
+  }
+  /* A short desktop window can have a smaller diagram than its viewport width
+     suggests. Fit typography to the actual canvas, including the outcome rings. */
+  @container (max-width: 1000px) {
+    #research-solutions .fw-title { --fw-size: clamp(16px, 2.1cqw, 21px); }
+    #research-solutions .fw-subtitle { --fw-size: clamp(10px, 1.3cqw, 13px); }
+    #research-solutions .fw-seed,
+    #research-solutions .fw-step-label { --fw-size: clamp(10px, 1.1cqw, 11px); }
+    #research-solutions .fw-outcome { gap: .2cqw; padding: .35cqw; }
+    #research-solutions .fw-outcome .fw-icon { font-size: 2.8cqw; }
+    #research-solutions .fw-outcome-label { --fw-size: clamp(9px, 1.05cqw, 10.5px); --fw-leading: 1.05; }
+  }
+}
+
 /* Stack readable stages on compact screens, with the botanical overview intact. */
 @media (max-width: 1000px) {
-  #research-solutions.fw-tree { padding: 36px 0; scroll-margin-top: 96px; }
+  #research-solutions.fw-tree { padding: 20px 0; scroll-margin-top: 96px; }
   #research-solutions .fw-tree-shell { width: calc(100% - 40px); overflow: visible; }
   #research-solutions .fw-tree-canvas { display: grid; aspect-ratio: auto; gap: 28px; }
   #research-solutions .fw-masthead { position: static; width: 100%; grid-row: 1; }
