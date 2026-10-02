@@ -11,7 +11,7 @@
         if (item.dataset.kobayashiRoute === "true") return;
         const label = item.cloneNode(true);
         label.querySelectorAll("svg, i, [aria-hidden='true'], .sr-only").forEach((node) => node.remove());
-        if (!/^kobayashi(?:\s|$)/i.test(label.textContent.replace(/\s+/g, " ").trim())) return;
+        if (item.dataset.arotecNavKey !== "kobayashi" && !/^kobayashi(?:\s|$)/i.test(label.textContent.replace(/\s+/g, " ").trim())) return;
         let link = item;
         if (item.tagName !== "A") {
           link = document.createElement("a");

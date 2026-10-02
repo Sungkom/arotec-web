@@ -9,13 +9,13 @@
  function newKey() { const bytes = new Uint8Array(16); crypto.getRandomValues(bytes); return Array.from(bytes, (n) => n.toString(16).padStart(2,"0")).join(""); }
  function el(tag, className, text) { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; }
  function icon(name) { const node = el("i", "ph ph-" + name); node.setAttribute("aria-hidden","true"); return node; }
- function message(text, error) { status.textContent = text; status.classList.toggle("is-error", Boolean(error)); }
+ function message(text, error) { if(window.ArotecForms)window.ArotecForms.message(status,text,Boolean(error));else status.textContent = text; status.classList.toggle("is-error", Boolean(error)); }
  function syncGeneral() { select.disabled = general.checked; select.required = !general.checked; }
  function showBackground() { background.hidden=false; backgroundNext.setAttribute("aria-expanded","true"); }
  // A country/region is saved in the existing current_location field.
  const regionCodes="AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW".split(" ");
  const regionNames=typeof Intl.DisplayNames==="function"?new Intl.DisplayNames(["en"],{type:"region"}):null;
- regionCodes.map((code)=>regionNames?regionNames.of(code):code).sort((a,b)=>a.localeCompare(b,"en")).forEach((name)=>form.elements.current_location.add(new Option(name,name)));
+ regionCodes.map((code)=>({code,name:regionNames?regionNames.of(code):code})).sort((a,b)=>a.name.localeCompare(b.name,"en")).forEach(({code,name})=>{const option=new Option(name,name);option.dataset.arotecRegion=code;option.setAttribute("data-arotec-i18n-ignore","");form.elements.current_location.add(option);});
  document.querySelectorAll(".ju-steps li:not(:last-child)").forEach((step)=>{const arrow=icon("caret-right");arrow.classList.add("ju-step-arrow");step.append(arrow);});
  function apply(job) {
   general.checked = !job;
@@ -27,6 +27,8 @@
  }
  function details(job) {
   selectedJob = job;
+  ["ju-job-dialog-title","ju-job-dialog-meta","ju-job-dialog-description"].forEach(id=>$(id).setAttribute("data-user-content",""));
+  $("ju-job-dialog-requirements").toggleAttribute("data-user-content",Boolean(job.requirements));
   $("ju-job-dialog-title").textContent = job.title;
   $("ju-job-dialog-meta").textContent = [job.department,job.location,job.employment_type,job.experience].filter(Boolean).join(" / ");
   $("ju-job-dialog-description").textContent = job.description;
@@ -40,10 +42,10 @@
    const card=el("article","ju-job"), heading=el("div","ju-job-header"), glyph=el("span","ju-icon");
    glyph.append(icon(/fragrance|perfume/i.test(job.department+" "+job.title)?"spray-bottle":/sensory/i.test(job.department+" "+job.title)?"head-circuit":"flask"));
    const copy=el("div"),locationLine=el("p","ju-job-location");locationLine.append(icon("map-pin"),document.createTextNode(job.location));copy.append(el("h3","",job.title),locationLine);
-   const tags=el("div","ju-tags"); [job.employment_type,job.experience].filter(Boolean).forEach((text)=>tags.append(el("span","",text))); copy.append(tags); heading.append(glyph,copy);
+   copy.setAttribute("data-user-content","");const tags=el("div","ju-tags"); [job.employment_type,job.experience].filter(Boolean).forEach((text)=>tags.append(el("span","",text))); copy.append(tags); heading.append(glyph,copy);
    const actions=el("div","ju-job-actions"), view=el("button","ju-button ju-button--outline","View details"), applyButton=el("button","ju-button","Apply now");
    view.type=applyButton.type="button"; view.addEventListener("click",()=>details(job)); applyButton.disabled=!accepting; applyButton.addEventListener("click",()=>apply(job));
-   actions.append(view,applyButton); card.append(heading,el("p","ju-job-summary",job.summary),actions); jobsRoot.append(card);
+   actions.append(view,applyButton); const summary=el("p","ju-job-summary",job.summary);summary.setAttribute("data-user-content","");card.append(heading,summary,actions); jobsRoot.append(card);
   });
   $("ju-all-jobs").hidden=showAll || jobs.length<=3;
  }
@@ -57,7 +59,7 @@
    const priority=(job)=>{const index=referenceOrder.indexOf(job.title);return index<0?referenceOrder.length:index;};
    jobs=data.jobs.sort((a,b)=>priority(a)-priority(b)); accepting=Boolean(data.accepting_applications) && secure;
    select.replaceChildren(new Option("Select a position",""));
-   jobs.forEach((job)=>select.add(new Option(job.title+" / "+job.location,job.id)));
+   jobs.forEach((job)=>{const option=new Option(job.title+" / "+job.location,job.id);option.setAttribute("data-user-content","");select.add(option);});
    jobsStatus.textContent=jobs.length?"":"There are no published positions at the moment. You can still join our talent network.";
    jobsStatus.classList.remove("is-error"); renderJobs(); submit.disabled=!accepting;
    if(!secure) message("Please use the HTTPS version of this website before entering or submitting personal information.",true);
@@ -69,10 +71,10 @@
  }
  function validateFile(input) {
   const file=input.files[0], limit=(input.name==="resume"?10:20)*1024*1024;
-  input.setCustomValidity("");
+  window.ArotecForms?.clearValidity(input);input.setCustomValidity("");
   const info=document.querySelector('[data-file-info="'+input.name+'"]');
-  info.textContent=file?file.name+" ("+(file.size/1024/1024).toFixed(2)+" MB)":"";
-  if(file && (!/\.pdf$/i.test(file.name) || file.size>limit || !file.size)) input.setCustomValidity("Choose a non-empty PDF no larger than "+(input.name==="resume"?10:20)+" MB.");
+  info.setAttribute("data-user-content","");info.textContent=file?file.name+" ("+(file.size/1024/1024).toFixed(2)+" MB)":"";
+  if(file && (!/\.pdf$/i.test(file.name) || file.size>limit || !file.size)) (window.ArotecForms?window.ArotecForms.setValidity(input,"u_6266b4fce5d0e7594adb73b0",{limit:input.name==="resume"?10:20},"Choose a non-empty PDF no larger than "+(input.name==="resume"?10:20)+" MB."):input.setCustomValidity("Choose a non-empty PDF no larger than "+(input.name==="resume"?10:20)+" MB."));
  }
  form.querySelectorAll('input[type="file"]').forEach((input)=>input.addEventListener("change",()=>{validateFile(input);input.reportValidity();}));
  general.addEventListener("change",syncGeneral);

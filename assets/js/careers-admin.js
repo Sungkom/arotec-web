@@ -6,7 +6,8 @@
  const jobFields=["title","department","location","employment_type","experience","summary","description","requirements","status"];
  let token="",jobs=[],editingJob=null,application=null,page=1,idleTimer=null,applicationsRequest=0;
  function node(tag,cls,text){const element=document.createElement(tag);if(cls)element.className=cls;if(text!==undefined)element.textContent=text;return element;}
- function message(id,text,error=false){const target=$(id);target.textContent=text;target.classList.toggle("is-error",error);}
+ function dataNode(tag,text){const element=node(tag,"",text);element.setAttribute("data-user-content","");return element;}
+ function message(id,text,error=false){const target=$(id);if(window.ArotecForms)window.ArotecForms.message(target,text,error);else target.textContent=text;target.classList.toggle("is-error",error);}
  function date(value){const parsed=new Date(value);return Number.isNaN(parsed.getTime())?value:parsed.toLocaleString();}
  function badge(status){return node("span","ca-badge ca-badge--"+status,labels[status]||status);}
  function logout(reason=""){
@@ -39,6 +40,7 @@
   $("ca-preview-location").textContent=value("location")||"Work location";
   $("ca-preview-summary").textContent=value("summary")||"A short summary of the role will appear here.";
   $("ca-preview-tags").replaceChildren();[value("employment_type"),value("experience")].filter(Boolean).forEach((text)=>$("ca-preview-tags").append(node("span","",text)));
+  [ ["ca-preview-title","title"],["ca-preview-location","location"],["ca-preview-summary","summary"] ].forEach(([id,field])=>$(id).toggleAttribute("data-user-content",Boolean(value(field))));$("ca-preview-tags").setAttribute("data-user-content","");
   const role=value("department")+" "+value("title");
   $("ca-preview-icon").className="ph ph-"+(/fragrance|perfume/i.test(role)?"spray-bottle":/sensory/i.test(role)?"head-circuit":"flask");
   $("ca-publication-help").textContent=status==="published"?"Saving will make this position visible on Join Us and available in the application form.":status==="closed"?"Saving will hide this position from new applicants. Existing applications will remain available.":"Saving a draft keeps this position private until you publish it.";
@@ -52,7 +54,7 @@
    const card=node("article","ca-job"),edit=node("button","ca-button ca-secondary","Edit position");edit.type="button";
    edit.addEventListener("click",()=>{editor(job);jobForm.scrollIntoView({block:"start"});});
    const state=node("div");state.append(badge(job.status));
-   card.append(node("h3","",job.title),node("p","",[job.location,job.employment_type,job.experience].filter(Boolean).join(" / ")),state,edit);$("ca-jobs-list").append(card);
+   card.append(dataNode("h3",job.title),dataNode("p",[job.location,job.employment_type,job.experience].filter(Boolean).join(" / ")),state,edit);$("ca-jobs-list").append(card);
   });
  }
  async function loadJobs(){const data=await api("/jobs");jobs=data.jobs;renderJobs();}
@@ -63,10 +65,10 @@
   const pages=Math.max(1,Math.ceil(data.total/25));if(requestedPage>pages){page=pages;return loadApplications();}
   $("ca-apps-list").replaceChildren();
   data.applications.forEach((item)=>{
-   const row=node("tr"),person=node("td");person.append(node("strong","",item.full_name),node("small","",item.email),node("small","",item.reference));
+   const row=node("tr"),person=node("td");person.setAttribute("data-user-content","");person.append(node("strong","",item.full_name),node("small","",item.email),node("small","",item.reference));
    const state=node("td");state.append(badge(item.status));const actions=node("td"),open=node("button","ca-button ca-secondary","Open");open.type="button";
    open.setAttribute("aria-label","Open application from "+item.full_name);open.addEventListener("click",()=>showApplication(item.id).catch((error)=>message("ca-message",error.message,true)));actions.append(open);
-   row.append(person,node("td","",item.job_title),node("td","",date(item.created_at)),state,actions);$("ca-apps-list").append(row);
+   row.append(person,dataNode("td",item.job_title),dataNode("td",date(item.created_at)),state,actions);$("ca-apps-list").append(row);
   });
   $("ca-empty-apps").hidden=Boolean(data.applications.length);
   $("ca-page-label").textContent="Page "+requestedPage+" of "+pages+" / "+data.total+" applications";
@@ -84,17 +86,18 @@
  async function showApplication(id){
   const data=await api("/applications/"+id);application=data.application;
   $("ca-app-reference").textContent=application.reference;$("ca-app-dialog-title").textContent=application.full_name;
+  $("ca-app-reference").setAttribute("data-user-content","");$("ca-app-dialog-title").setAttribute("data-user-content","");
   const fields=[
-   ["Application type",application.job_id?"Position application":"Open application / General talent pool"],
+   ["Application type",application.job_id?"Position application":"Open application / General talent pool",true],
    ["Position",application.job_title],["Email",application.email],["Mobile",application.phone],
-   ["Current country / location",application.current_location],["Preferred locations",application.preferred_locations.join(", ")||"Not specified"],
-   ["Current / most recent role",application.current_role||"Not specified"],
-   ["Professional background",application.professional_background||"Not supplied"],
-   ["Profile URL",application.profile_url||"Not supplied"],
-   ["Recruitment consent",application.privacy_consent?"Given":"Not given"],["Future opportunities consent",application.future_consent?"Opted in":"Not opted in"],
+   ["Current country / location",application.current_location],["Preferred locations",application.preferred_locations.join(", ")||"Not specified",!application.preferred_locations.length],
+   ["Current / most recent role",application.current_role||"Not specified",!application.current_role],
+   ["Professional background",application.professional_background||"Not supplied",!application.professional_background],
+   ["Profile URL",application.profile_url||"Not supplied",!application.profile_url],
+   ["Recruitment consent",application.privacy_consent?"Given":"Not given",true],["Future opportunities consent",application.future_consent?"Opted in":"Not opted in",true],
    ["Consent version",application.consent_version],["Submitted",date(application.created_at)]
   ];
-  $("ca-app-info").replaceChildren();fields.forEach(([label,value])=>$("ca-app-info").append(node("dt","",label),node("dd","",value)));
+  $("ca-app-info").replaceChildren();fields.forEach(([label,value,authored])=>{const dd=node("dd","",value);dd.setAttribute(authored?"data-arotec-authored":"data-user-content",authored?"fallback":"");$("ca-app-info").append(node("dt","",label),dd);});
   $("ca-app-files").replaceChildren();application.files.forEach((file)=>{
    const button=node("button","ca-button ca-secondary",(file.kind==="resume"?"Resume / CV":"Portfolio / Supporting document")+" / "+file.filename+" ("+(file.size_bytes/1024/1024).toFixed(2)+" MB)");
    button.type="button";button.addEventListener("click",()=>downloadFile(id,file,button));$("ca-app-files").append(button);
@@ -144,7 +147,7 @@
   }catch(error){message("ca-detail-message",error.message,true);}finally{button.disabled=false;}
  });
  $("ca-delete-app").addEventListener("click",async()=>{
-  if(!application||!confirm("Permanently delete this application and all submitted documents? This cannot be undone."))return;
+  if(!application||!(window.ArotecForms?window.ArotecForms.confirm("u_b8a84c91c0d290bc551943b3",{},"Permanently delete this application and all submitted documents? This cannot be undone."):confirm("Permanently delete this application and all submitted documents? This cannot be undone.")))return;
   const button=$("ca-delete-app");button.disabled=true;
   try{await api("/applications/"+application.id,{method:"DELETE"});dialog.close();application=null;page=1;await loadApplications();message("ca-message","Application and documents deleted.");}
   catch(error){message("ca-detail-message",error.message,true);}finally{button.disabled=false;}

@@ -22,12 +22,53 @@
   }
   // Preserve the reference line breaks in DM Sans. Fit the live text inside
   // its assigned box without changing the supplied background's size.
+  const restoreReferenceCopy = probe => {
+    const id = probe.getAttribute('data-arotec-i18n-bound');
+    const source = id && window.ArotecI18n?.getMessage(id, 'en');
+    if (!source) return false;
+    const slots = new Map();
+    probe.querySelectorAll('[data-arotec-i18n-slot]').forEach(node => {
+      const marker = node.getAttribute('data-arotec-i18n-slot');
+      if (marker.startsWith(`${id}:`)) slots.set(marker.slice(id.length + 1), node);
+    });
+    const fragment = document.createDocumentFragment(), stack = [fragment];
+    let offset = 0;
+    for (const match of source.matchAll(/<(\/?)(\d+)(\/?)>/g)) {
+      stack.at(-1).append(document.createTextNode(source.slice(offset, match.index)));
+      if (match[1]) stack.pop();
+      else {
+        const node = slots.get(match[2]);
+        if (!node) return false;
+        stack.at(-1).append(node);
+        if (!match[3]) { node.replaceChildren(); stack.push(node); }
+      }
+      offset = match.index + match[0].length;
+    }
+    stack.at(-1).append(document.createTextNode(source.slice(offset)));
+    probe.replaceChildren(fragment);
+    return true;
+  };
+  const referenceWidth = box => {
+    // Measure the original English composition, including its inline styles.
+    // A saved translated locale must not change the reference font scale.
+    const probe = box.cloneNode(true);
+    if (!restoreReferenceCopy(probe)) {
+      probe.querySelectorAll('[data-arotec-i18n-bound]').forEach(restoreReferenceCopy);
+    }
+    probe.setAttribute('data-arotec-i18n-ignore', '');
+    probe.setAttribute('aria-hidden', 'true');
+    probe.style.visibility = 'hidden';
+    probe.style.pointerEvents = 'none';
+    box.parentNode.append(probe);
+    try { return Math.max(...[...probe.querySelectorAll('.sfl-line')].map(line => line.scrollWidth)); }
+    finally { probe.remove(); }
+  };
   const fitReferenceText = () => {
     const boxes = [...document.querySelectorAll('.sfl-source [data-sfl-fit]')]
       .filter(box => box.clientWidth > 0);
     boxes.forEach(box => box.style.setProperty('--sfl-fit', '1'));
     const sizes = boxes.map(box => {
-      const widest = Math.max(...[...box.querySelectorAll('.sfl-line')].map(line => line.scrollWidth));
+      const widest = referenceWidth(box);
       return Math.min(1, box.clientWidth / Math.max(1, widest));
     });
     boxes.forEach((box, index) => box.style.setProperty('--sfl-fit', String(sizes[index])));
@@ -63,6 +104,15 @@
     compositions.forEach(composition => compositionObserver.observe(composition));
     document.fonts.ready.then(scheduleFit);
     window.addEventListener('resize', scheduleFit, { passive:true });
+    let renderedLocale;
+    document.addEventListener('arotec:i18n-ready', event => {
+      // The measurement probe can cause another observer pass; only a new
+      // rendered locale needs another fit, avoiding an observer feedback loop.
+      if (event.detail?.locale !== renderedLocale) {
+        renderedLocale = event.detail?.locale;
+        scheduleFit();
+      }
+    });
   }
   // Resolve section links after the shared header has established its height.
   const alignCurrentSection = () => {

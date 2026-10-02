@@ -10,6 +10,7 @@
   const shell = document.getElementById("site-shell");
   const footerShell = document.getElementById("site-footer-shell");
   const shellOnly = body.hasAttribute("data-shell-only");
+  const wiredNewsletterForms = new WeakSet();
   let heroSlideTimer = null;
   let heroParallaxCleanup = null;
   let sectionRevealCleanup = null;
@@ -57,6 +58,7 @@
   ];
 
   const languageMeta = {
+    "zh-CN": { label: "简体中文", htmlLang: "zh-CN" },
     en: { label: "EN", htmlLang: "en" },
     ja: { label: "日本語", htmlLang: "ja" },
     zh: { label: "繁中", htmlLang: "zh-Hant" },
@@ -1519,7 +1521,7 @@
 
   function routeHref(id) {
     const route = routes.find((item) => item.id === id);
-    if (route?.section) {
+    if (route?.section && id !== "insights") {
       return pageId === "home" ? `#${route.section}` : `${root}index.html#${route.section}`;
     }
     return route ? `${root}${route.path}` : `${root}index.html`;
@@ -1535,7 +1537,7 @@
 
   function submenuLinks(items, page, className) {
     return items
-      .map((item) => `<a class="${className}" href="${item.href ? `${root}${item.href}` : `${root}pages/${page}.html#${item.id}`}">${item.label}</a>`)
+      .map((item) => `<a data-arotec-nav-key="${item.id}" class="${className}" href="${item.href ? `${root}${item.href}` : `${root}pages/${page}.html#${item.id}`}">${item.label}</a>`)
       .join("");
   }
 
@@ -1555,7 +1557,7 @@
             : route.id === "platform"
               ? { items: platformMenuItems, page: "platform", label: "Platform modules" }
               : null;
-        const link = `<a class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
+        const link = `<a data-arotec-nav-key="${route.id}" class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
         if (!dropdown) return link;
         if (mobile) {
           return `<div class="mobile-nav-group">${link}<div class="mobile-nav-submenu" aria-label="${dropdown.label}">${submenuLinks(dropdown.items, dropdown.page, "mobile-nav-sublink")}</div></div>`;
@@ -1606,9 +1608,9 @@
           <button class="circle-button" id="menuClose" type="button" title="${text.common.closeMenu}" aria-label="${text.common.closeMenu}">${icons.close}</button>
         </div>
         <nav class="mobile-nav" aria-label="Mobile primary navigation">
-          <a class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
+          <a data-arotec-nav-key="home" class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
           ${navLinks(text, { mobile: true })}
-          <a class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
+          <a data-arotec-nav-key="contact" class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
         </nav>
         <div class="mobile-language" aria-label="Language">${chips}</div>
         <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact}</a>
@@ -2819,10 +2821,14 @@
       event.currentTarget.reset();
     });
 
-    document.getElementById("newsletterForm")?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      event.currentTarget.reset();
-    });
+    const newsletterForm = document.getElementById("newsletterForm");
+    if (newsletterForm && !wiredNewsletterForms.has(newsletterForm)) {
+      newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.currentTarget.reset();
+      });
+      wiredNewsletterForms.add(newsletterForm);
+    }
 
     document.onkeydown = (event) => {
       if (event.key === "Escape") {
@@ -2846,17 +2852,47 @@
     window.requestAnimationFrame(() => target.scrollIntoView({ block: "start", behavior: "instant" }));
   }
 
+  function retainNewsletter() {
+    const form = document.getElementById("newsletterForm") || footerShell?.querySelector("#newsletterForm");
+    if (!form) return () => {};
+    const active = form.contains(document.activeElement) ? document.activeElement : null;
+    const selection = active && typeof active.selectionStart === "number"
+      ? [active.selectionStart, active.selectionEnd, active.selectionDirection] : null;
+    return (text) => {
+      const replacement = footerShell?.querySelector("#newsletterForm") || shell.querySelector("#newsletterForm");
+      if (!replacement || replacement === form) return;
+      const input = form.querySelector('input[type="email"]');
+      const button = form.querySelector('button[type="submit"]');
+      input?.setAttribute("placeholder", text.common.emailPlaceholder);
+      input?.setAttribute("aria-label", text.common.emailPlaceholder);
+      button?.setAttribute("title", text.common.subscribe);
+      button?.setAttribute("aria-label", text.common.subscribe);
+      replacement.replaceWith(form);
+      // Detail pages reattach their footer shell after the native render event.
+      // Keep the same live controls and restore focus only if no one moved it.
+      if (active) window.requestAnimationFrame(() => {
+        if (!active.isConnected || (document.activeElement !== document.body && document.activeElement !== active)) return;
+        active.focus({ preventScroll: true });
+        if (selection) active.setSelectionRange(...selection);
+      });
+    };
+  }
+
   function render(lang) {
-    const text = copy[lang] || copy.th;
+    const restoreNewsletter = retainNewsletter();
+    const contentLang = window.ArotecI18n?.isPageManaged() ? "en" : lang;
+    const text = copy[contentLang] || copy.th;
     document.documentElement.lang = languageMeta[lang]?.htmlLang || "th";
     if (shellOnly) {
       shell.innerHTML = `${renderHeader(text, lang)}${renderSearch(text)}`;
       if (footerShell) footerShell.innerHTML = renderFooter(text);
+      restoreNewsletter(text);
       wireEvents(text, lang);
       return;
     }
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
-    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
+    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, contentLang)}${renderFooter(text)}${renderSearch(text)}`;
+    restoreNewsletter(text);
     wireEvents(text, lang);
     scrollToCurrentHash();
     setupHeroSlideshow();
@@ -2886,6 +2922,9 @@
     window.addEventListener("load", () => setTimeout(inject, 0), { once: true });
   }
 
+  const localizationRenderer = { id: "site", render };
+  if (window.ArotecI18n) window.ArotecI18n.registerRenderer(localizationRenderer);
+  else (window.AROTEC_I18N_RENDERERS ||= []).push(localizationRenderer);
   loadNotoFonts();
   const savedLanguage = localStorage.getItem("as-site-language");
   const defaultLanguage = languageMeta[body.dataset.defaultLanguage] ? body.dataset.defaultLanguage : "th";

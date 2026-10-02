@@ -87,12 +87,19 @@
       .replace(/'/g, "&#039;");
   }
 
+  function apiUrl(path) {
+    if (window.location.hostname.toLowerCase() === "sungkom.github.io") {
+      return `https://arotec-web.onrender.com${path}`;
+    }
+    return path;
+  }
+
   async function api(path, options = {}) {
     if (!apiAvailable) {
       throw new Error("กรุณาเปิดเว็บผ่าน server.py เช่น http://127.0.0.1:8000/pages/customized.html");
     }
     const headers = { "Content-Type": "application/json", ...(options.headers || {}) };
-    const response = await fetch(path, { ...options, headers });
+    const response = await fetch(apiUrl(path), { ...options, headers });
     const data = await response.json().catch(() => ({}));
     if (!response.ok || data.ok === false) {
       throw new Error(data.error || `Request failed: ${response.status}`);
@@ -200,8 +207,8 @@
           <span class="product-object ${productObjectType(product)}" data-label="A&S"></span>
         </div>
         <div class="shop-product-body">
-          <h3>${escapeHtml(product.name)}</h3>
-          <p>${escapeHtml(product.subtitle || product.description || product.category)}</p>
+          <h3 data-user-content>${escapeHtml(product.name)}</h3>
+          <p ${fallbackProducts.includes(product) ? 'data-arotec-authored-fallback' : 'data-user-content'}>${escapeHtml(product.subtitle || product.description || product.category)}</p>
           <div class="product-price-row">
             <strong>${baht(product.price)}</strong>
             <button type="button" data-add-cart="${product.id}" aria-label="Add ${escapeHtml(product.name)} to cart">
@@ -219,7 +226,7 @@
       products = data.products || [];
     } catch (error) {
       products = fallbackProducts;
-      selectors.formulaStatus.textContent = error.message;
+      if (window.ArotecForms) window.ArotecForms.message(selectors.formulaStatus, error.message, true); else selectors.formulaStatus.textContent = error.message;
     }
     renderProducts();
   }
@@ -255,7 +262,7 @@
     selectors.cartItems.innerHTML = [...cart.values()].map((item) => `
       <article class="cart-item">
         <div>
-          <h3>${escapeHtml(item.product.name)}</h3>
+          <h3 data-user-content>${escapeHtml(item.product.name)}</h3>
           <p>${baht(item.product.price)} × ${item.quantity}</p>
         </div>
         <div class="cart-qty">
@@ -286,7 +293,7 @@
       });
       selectors.formulaStatus.textContent = `บันทึกสูตรแล้ว: ${data.formula.formula_code}`;
     } catch (error) {
-      selectors.formulaStatus.textContent = error.message;
+      if (window.ArotecForms) window.ArotecForms.message(selectors.formulaStatus, error.message, true); else selectors.formulaStatus.textContent = error.message;
     }
   }
 
@@ -323,7 +330,7 @@
       renderCart();
       await loadProducts();
     } catch (error) {
-      selectors.checkoutStatus.textContent = error.message;
+      if (window.ArotecForms) window.ArotecForms.message(selectors.checkoutStatus, error.message, true); else selectors.checkoutStatus.textContent = error.message;
     }
   }
 
@@ -352,7 +359,7 @@
         <thead><tr>${headers.map((head) => `<th>${escapeHtml(head.label)}</th>`).join("")}</tr></thead>
         <tbody>
           ${rows.map((row) => `
-            <tr>${headers.map((head) => `<td>${head.render ? head.render(row) : escapeHtml(row[head.key])}</td>`).join("")}</tr>
+            <tr>${headers.map((head) => `<td ${head.authored ? `data-arotec-authored="${head.authored}"` : "data-user-content"}>${head.render ? head.render(row) : escapeHtml(row[head.key])}</td>`).join("")}</tr>
           `).join("")}
         </tbody>
       </table>
@@ -374,7 +381,7 @@
       selectors.adminWorkspace.hidden = false;
       selectors.adminStatus.textContent = "";
     } catch (error) {
-      selectors.adminStatus.textContent = error.message;
+      if (window.ArotecForms) window.ArotecForms.message(selectors.adminStatus, error.message, true); else selectors.adminStatus.textContent = error.message;
     }
   }
 
@@ -385,9 +392,9 @@
         { label: "Name", key: "name" },
         { label: "Price", render: (row) => baht(row.price) },
         { label: "Stock", key: "stock_qty" },
-        { label: "Status", render: (row) => Number(row.active) === 0 || row.active === false ? "Inactive" : "Active" },
+        { label: "Status", authored: "status", render: (row) => Number(row.active) === 0 || row.active === false ? "Inactive" : "Active" },
         {
-          label: "Action",
+          label: "Action", authored: "action",
           render: (row) => `<button type="button" data-edit-product="${row.id}">Edit</button> <button type="button" data-delete-product="${row.id}">Close</button>`
         }
       ],
@@ -414,7 +421,7 @@
       [
         { label: "Formula", key: "formula_code" },
         { label: "Name", key: "formula_name" },
-        { label: "Axis", render: (row) => `Skin ${row.skin_state}%<br>Axis ${row.skin_axis}%<br>Exposome ${row.exposome}%` },
+        { label: "Axis", authored: "axis", render: (row) => `Skin ${row.skin_state}%<br>Axis ${row.skin_axis}%<br>Exposome ${row.exposome}%` },
         { label: "Package", key: "package_size" },
         { label: "Customer", render: (row) => `${escapeHtml(row.customer_name || "-")}<br>${escapeHtml(row.customer_email || "")}` },
         { label: "Date", key: "created_at" }
@@ -466,7 +473,7 @@
       await loadAdminData();
       await loadProducts();
     } catch (error) {
-      selectors.adminStatus.textContent = error.message;
+      if (window.ArotecForms) window.ArotecForms.message(selectors.adminStatus, error.message, true); else selectors.adminStatus.textContent = error.message;
     }
   }
 
@@ -519,7 +526,7 @@
         const product = (data.products || []).find((item) => Number(item.id) === Number(editId));
         if (product) fillProductForm(product);
       }
-      if (deleteId && window.confirm("ปิดการขายสินค้านี้?")) {
+      if (deleteId && (window.ArotecForms ? window.ArotecForms.confirm("u_52222aac2b371125c4aa1146", {}, "ปิดการขายสินค้านี้?") : window.confirm("ปิดการขายสินค้านี้?"))) {
         await adminFetch(`/api/admin/products/${deleteId}`, { method: "DELETE" });
         await loadAdminData();
         await loadProducts();

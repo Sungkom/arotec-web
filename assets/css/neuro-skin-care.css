@@ -1294,7 +1294,7 @@ body.neuro-page {
   border: 1px dashed #99abc0;
   border-radius: 50%;
   color: var(--neuro-navy);
-  content: "Skin Axis";
+  content: var(--arotec-label-skin-axis, "Skin Axis");
   font-size: 0.7rem;
   font-weight: 800;
 }
@@ -4265,7 +4265,7 @@ body.neuro-page {
   inset: 56px 45px;
   display: grid;
   place-items: center;
-  content: "Skin";
+  content: var(--arotec-label-skin, "Skin");
   color: #1e4a2c;
   font-size: var(--font-item-title);
   font-weight: 800;

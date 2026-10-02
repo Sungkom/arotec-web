@@ -15,18 +15,18 @@
     shell.querySelectorAll('.site-header nav a, .commerce-header nav a, .mobile-panel nav a').forEach(link => {
       if (link.closest('.nav-submenu, .mobile-nav-submenu')) {
         const label = link.textContent.trim();
-        if (label === 'Bespoke Services') {
+        if (link.dataset.arotecNavKey === 'customized-for-you' || label === 'Bespoke Services') {
           link.href = bespokeUrl;
           const isCurrent = location.pathname === new URL(bespokeUrl).pathname;
           link.classList.toggle('active', isCurrent);
           if (isCurrent) link.setAttribute('aria-current', 'page');
           else link.removeAttribute('aria-current');
         }
-        else if (countdownLabels.has(label)) link.href = countdownUrl;
+        else if (['vagus-spa', 'vagus-scent-bulb', 'neuro-cosmetic'].includes(link.dataset.arotecNavKey) || countdownLabels.has(label)) link.href = countdownUrl;
         return;
       }
       const href = link.getAttribute('href') || '';
-      const isProducts = link.textContent.trim() === 'Applied Products'
+      const isProducts = link.dataset.arotecNavKey === 'products' || link.textContent.trim() === 'Applied Products'
         || /(?:^|\/)(?:index\.html)?#products$/.test(href)
         || /(?:^|\/)(?:applied-)?products\.html(?:[?#].*)?$/.test(href);
       if (!isProducts) return;

@@ -256,6 +256,13 @@ html body.wwa-page main#main #who-we-are .wwa-flight-nav a:focus-visible {
   #who-we-are .wwa-flight-nav a { transition: none; }
 }
 
+/* Localized overview labels keep their authored font and fit each icon column. */
+html:not([lang="en"]) body.wwa-page main#main.wwa-overview-main #who-we-are .wwa-flight-nav span {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 /* Scientific Foundation: original chart artwork with live copy and links.
    The desktop foreground uses the same website gutters as the overview. */
 html body.wwa-page #scientific-foundation.wwa-science {

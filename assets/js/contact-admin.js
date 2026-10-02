@@ -7,7 +7,7 @@
  const topics={"new_project":"Start a new project","improve_product":"Develop or improve a product","sensory_strategy":"Sensory strategy & consulting","find_solution":"Find a solution","co_creation":"Co-creation & innovation","partnership":"Business & strategic partnership"};
  let token="",generation=0,page=1,selected=null,idle=null,listRun=0,detailRun=0;
  const element=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
- const message=(id,text,error=false)=>{const node=$(id);node.textContent=text;node.classList.toggle("is-error",error);};
+ const message=(id,text,error=false)=>{const node=$(id);if(window.ArotecForms)window.ArotecForms.message(node,text,error);else node.textContent=text;node.classList.toggle("is-error",error);};
  const date=value=>{const time=new Date(value);return Number.isNaN(time.getTime())?value:time.toLocaleString();};
  function logout(reason=""){
   token="";generation++;listRun++;detailRun++;selected=null;clearTimeout(idle);login.reset();form.reset();
@@ -33,7 +33,7 @@
   $("ct-inquiries").replaceChildren();
   data.inquiries.forEach(item=>{
    const row=element("tr"),person=element("td"),company=element("td"),status=element("td"),action=element("td");
-   person.append(element("strong","",item.first_name+" "+item.last_name),element("small","",item.email),element("small","",item.reference));
+   person.setAttribute("data-user-content","");company.setAttribute("data-user-content","");person.append(element("strong","",item.first_name+" "+item.last_name),element("small","",item.email),element("small","",item.reference));
    company.append(element("strong","",item.company),element("small","",item.area_of_interest));status.append(badge(item.status));
    const button=element("button","ca-button ca-secondary","Open");button.type="button";button.setAttribute("aria-label","Open inquiry "+item.reference);
    button.addEventListener("click",()=>openInquiry(item.id).catch(error=>message("ct-message",error.message,true)));action.append(button);
@@ -46,11 +46,12 @@
  }
  function renderInquiry(item){
   selected=item;$("ct-reference").textContent=item.reference;$("ct-dialog-title").textContent=item.first_name+" "+item.last_name;
-  const fields=[["First name",item.first_name],["Last name",item.last_name],["Company",item.company],["Job title",item.job_title||"Not supplied"],
-   ["Email",item.email],["Country / Region",item.country],["Area of interest",item.area_of_interest],["How we can help",topics[item.help_topic]||item.help_topic],
-   ["Message",item.message||"Not supplied"],["Consent to respond",item.privacy_consent?"Yes":"No"],["Consent version",item.consent_version],
+  $("ct-reference").setAttribute("data-user-content","");$("ct-dialog-title").setAttribute("data-user-content","");
+  const fields=[["First name",item.first_name],["Last name",item.last_name],["Company",item.company],["Job title",item.job_title||"Not supplied",!item.job_title],
+   ["Email",item.email],["Country / Region",item.country],["Area of interest",item.area_of_interest],["How we can help",topics[item.help_topic]||item.help_topic,Boolean(topics[item.help_topic])],
+   ["Message",item.message||"Not supplied",!item.message],["Consent to respond",item.privacy_consent?"Yes":"No",true],["Consent version",item.consent_version],
    ["Submitted",date(item.created_at)],["Last updated",date(item.updated_at)]];
-  $("ct-info").replaceChildren();fields.forEach(([label,value])=>$("ct-info").append(element("dt","",label),element("dd","",value)));
+  $("ct-info").replaceChildren();fields.forEach(([label,value,authored])=>{const dd=element("dd","",value);dd.setAttribute(authored?"data-arotec-authored":"data-user-content",authored?"fallback":"");$("ct-info").append(element("dt","",label),dd);});
   $("ct-reply").href="mailto:"+encodeURIComponent(item.email)+"?subject="+encodeURIComponent("Your Arotec inquiry "+item.reference);
   form.elements.status.value=item.status;form.elements.admin_notes.value=item.admin_notes;
  }
@@ -81,7 +82,7 @@
   }catch(error){message("ct-detail-message",error.message,true);}finally{$("ct-save").disabled=false;}
  });
  $("ct-delete").addEventListener("click",async()=>{
-  if(!selected||!confirm("Permanently delete inquiry "+selected.reference+"? This cannot be undone."))return;
+  if(!selected||!(window.ArotecForms?window.ArotecForms.confirm("u_8e8747880bf566718e866116",{reference:selected.reference},"Permanently delete inquiry "+selected.reference+"? This cannot be undone."):confirm("Permanently delete inquiry "+selected.reference+"? This cannot be undone.")))return;
   const id=selected.id;$("ct-delete").disabled=true;
   try{await api("/"+id,{method:"DELETE"});dialog.close();selected=null;page=1;await loadList();message("ct-message","Inquiry deleted.");}
   catch(error){message("ct-detail-message",error.message,true);}finally{$("ct-delete").disabled=false;}

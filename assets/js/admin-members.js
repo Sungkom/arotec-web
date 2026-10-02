@@ -23,7 +23,7 @@
 
   function setLoginStatus(message, isError = false) {
     if (!loginStatus) return;
-    loginStatus.textContent = message;
+    if (window.ArotecForms) window.ArotecForms.message(loginStatus, message, isError); else loginStatus.textContent = message;
     loginStatus.style.color = isError ? "#f5a3c7" : "var(--aqua)";
   }
 
@@ -43,19 +43,35 @@
     }
   }
 
+  const dateFormatters = new Map();
   function formatDate(value) {
     if (!value) return "-";
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return value;
-    return new Intl.DateTimeFormat("th-TH", {
-      dateStyle: "medium",
-      timeStyle: "short"
-    }).format(date);
+    const selected = window.ArotecI18n?.currentLocale || "th";
+    const language = selected === "zh" ? "zh-Hant" : selected;
+    if (!dateFormatters.has(language)) dateFormatters.set(language, new Intl.DateTimeFormat(language, {
+      dateStyle: "medium", timeStyle: "short"
+    }));
+    return dateFormatters.get(language).format(date);
   }
 
-  function cell(text) {
+  function dateCell(value) {
+    const td = cell(formatDate(value));
+    if (value) td.dataset.arotecDate = value;
+    return td;
+  }
+  document.addEventListener("arotec:i18n-ready", () => {
+    tableBody?.querySelectorAll("td[data-arotec-date]").forEach(td => {
+      const text = formatDate(td.dataset.arotecDate);
+      if (td.textContent !== text) td.textContent = text;
+    });
+  });
+
+  function cell(text, authored = false) {
     const td = document.createElement("td");
     td.textContent = text || "-";
+    td.setAttribute(authored ? "data-arotec-authored" : "data-user-content", authored ? "boolean" : "");
     return td;
   }
 
@@ -82,7 +98,7 @@
     visibleMembers.forEach((member) => {
       const tr = document.createElement("tr");
       tr.append(
-        cell(formatDate(member.created_at)),
+        dateCell(member.created_at),
         cell(member.member_code),
         cell(member.full_name),
         cell(member.email),
@@ -91,7 +107,7 @@
         cell(member.company),
         cell(member.job_title),
         cell(member.wellness_goal),
-        cell(member.marketing_consent ? "Yes" : "No")
+        cell(member.marketing_consent ? "Yes" : "No", true)
       );
       tableBody.appendChild(tr);
     });

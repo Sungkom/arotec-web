@@ -5,7 +5,7 @@
  const base="../api/contact";
  let ready=false,sending=false,submissionKey="";
  const secure=location.protocol==="https:"||["localhost","127.0.0.1","[::1]"].includes(location.hostname);
- function message(text,state=""){feedback.textContent=text;feedback.classList.toggle("is-error",state==="error");feedback.classList.toggle("is-success",state==="success");}
+ function message(text,state=""){if(window.ArotecForms)window.ArotecForms.message(feedback,text,state==="error");else feedback.textContent=text;feedback.classList.toggle("is-error",state==="error");feedback.classList.toggle("is-success",state==="success");}
  function key(){return Array.from(crypto.getRandomValues(new Uint8Array(16)),byte=>byte.toString(16).padStart(2,"0")).join("");}
  async function responseData(response){
   let data;try{data=await response.json();}catch{throw new Error("The inquiry service is unavailable. Open this page through the website server, not a local file.");}

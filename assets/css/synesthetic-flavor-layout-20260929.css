@@ -276,3 +276,32 @@ body.sfl-page #main > section {
     line-height: 1.2 !important;
   }
 }
+
+/* Localized icon captions wrap inside their original columns.
+   Measurement clones keep the source white-space rule so font fitting is unchanged. */
+@media (min-width: 1024px) {
+  html:not([lang="en"]) body.sfl-page #main .sfl-source[data-reference="about"]
+  .sfl-text:is(
+    [data-arotec-i18n-bound="u_aa89d8815b73bf9ca7df5bd7"],
+    [data-arotec-i18n-bound="u_b8265474e2bb7d61849ed887"],
+    [data-arotec-i18n-bound="u_d2bbe4992e038b9b9c676893"],
+    [data-arotec-i18n-bound="u_6d63fed29eddd5666068cad4"],
+    [data-arotec-i18n-bound="u_72fbcf124a849e681da9cf65"],
+    [data-arotec-i18n-bound="u_4422b8b186cc857734648736"]
+  ):not([data-arotec-i18n-ignore]) {
+    top: 74.8% !important;
+  }
+
+  html:not([lang="en"]) body.sfl-page #main .sfl-source[data-reference="about"]
+  .sfl-text:is(
+    [data-arotec-i18n-bound="u_aa89d8815b73bf9ca7df5bd7"],
+    [data-arotec-i18n-bound="u_b8265474e2bb7d61849ed887"],
+    [data-arotec-i18n-bound="u_d2bbe4992e038b9b9c676893"],
+    [data-arotec-i18n-bound="u_6d63fed29eddd5666068cad4"],
+    [data-arotec-i18n-bound="u_72fbcf124a849e681da9cf65"],
+    [data-arotec-i18n-bound="u_4422b8b186cc857734648736"]
+  ):not([data-arotec-i18n-ignore]) > .sfl-line {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

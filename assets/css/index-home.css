@@ -1464,7 +1464,7 @@ body[data-page="home"] .concept .concept-item h3 {
 }
 
 body[data-page="home"] .concept .concept-item h3::before {
-  content: "A&S SCIENCE";
+  content: var(--arotec-label-science, "A&S SCIENCE");
   display: block;
   margin-bottom: clamp(9px, 0.8vw, 13px);
   font-size: clamp(0.58rem, 0.62vw, 0.7rem);

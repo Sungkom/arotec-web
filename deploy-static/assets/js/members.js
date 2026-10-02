@@ -1,5 +1,6 @@
 (() => {
   const languageMeta = {
+    "zh-CN": { label: "简体中文", htmlLang: "zh-CN", formValue: "zh-CN" },
     en: { htmlLang: "en", formValue: "en" },
     ja: { htmlLang: "ja", formValue: "ja" },
     zh: { htmlLang: "zh-Hant", formValue: "zh-Hant" },
@@ -157,27 +158,34 @@
   const status = document.getElementById("memberStatus");
   const languageSelect = document.getElementById("memberLanguageSelect");
   const preferredLanguage = document.getElementById("preferred_language");
+  if (preferredLanguage && !Array.from(preferredLanguage.options).some(option => option.value === "zh-CN")) {
+    const option = new Option("Simplified Chinese", "zh-CN");
+    option.dataset.arotecLocaleOption = "zh-Hans";
+    option.setAttribute("data-arotec-i18n-ignore", "");
+    preferredLanguage.add(option);
+  }
   let currentLang = "th";
 
   function getSavedLanguage() {
-    const saved = localStorage.getItem("as-site-language");
+    const stored = localStorage.getItem("as-site-language");
+const saved = stored === "zh-Hant" ? "zh" : stored;
     return languageMeta[saved] ? saved : "th";
   }
 
   function setStatus(message, isError = false) {
     if (!status) return;
-    status.textContent = message;
+    if (window.ArotecForms) window.ArotecForms.message(status, message, isError); else status.textContent = message;
     status.style.color = isError ? "#f5a3c7" : "var(--aqua)";
   }
 
   function translateError(message) {
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     return text.errors[message] || message || text.fallbackError;
   }
 
   function renderLanguage(lang, syncPreferredLanguage = false) {
     currentLang = languageMeta[lang] ? lang : "th";
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     document.documentElement.lang = languageMeta[currentLang].htmlLang;
     document.title = text.titleText;
 
@@ -197,20 +205,28 @@
     }
   }
 
+  const localizationRenderer = { id: "members", render: lang => renderLanguage(lang, false) };
+  if (window.ArotecI18n) window.ArotecI18n.registerRenderer(localizationRenderer);
+  else (window.AROTEC_I18N_RENDERERS ||= []).push(localizationRenderer);
   renderLanguage(getSavedLanguage(), true);
 
   languageSelect?.addEventListener("change", (event) => {
     const nextLang = event.target.value;
     localStorage.setItem("as-site-language", nextLang);
-    setStatus("");
-    renderLanguage(nextLang, true);
+    if (event.detail?.source !== "arotec-i18n") setStatus("");
+    renderLanguage(nextLang, event.detail?.source !== "arotec-i18n");
+  });
+
+  document.addEventListener("arotec:languagechange", event => {
+    const nextLang = event.detail?.lang || event.detail?.language;
+    if (languageMeta[nextLang]) renderLanguage(nextLang, false);
   });
 
   if (!form || !status) return;
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     const data = new FormData(form);
     const payload = {
       full_name: data.get("full_name"),

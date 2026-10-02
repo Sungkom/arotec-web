@@ -18,7 +18,7 @@
       '#platform': 'pages/platform.html',
       '#insights': 'pages/insights.html'
     };
-    for (const link of shell.querySelectorAll('#searchResults a[href^="#"]')) {
+    for (const link of shell.querySelectorAll('#searchResults a[href^="#"], a[href="#insights"]')) {
       const destination = destinations[link.getAttribute('href')];
       if (destination) link.setAttribute('href', root + destination);
     }

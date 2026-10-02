@@ -199,7 +199,7 @@ html body #biology-experience.biology-experience .biology-attribution p {
   #biology-experience.biology-wide .biology-outcomes { left:43%;top:79%;transform:rotate(10deg); }
   #biology-experience.biology-wide .biology-feedback > span { display:none; }
   #biology-experience.biology-wide .biology-feedback::after {
-    content:"FEEDBACK LOOP";position:absolute;left:43%;top:93%;
+    content:attr(aria-label);text-transform:uppercase;position:absolute;left:43%;top:93%;
     color:#6d819b;font-size:clamp(9px,.63cqw,12px);letter-spacing:.24em;
   }
   #biology-experience.biology-wide .biology-attribution { left:21%;top:74%;width:17%;height:auto;padding-top:12px; }

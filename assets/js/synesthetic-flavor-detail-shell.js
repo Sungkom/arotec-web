@@ -1,9 +1,15 @@
 (() => {
   "use strict";
+  // Retain the original nodes: forms and their listeners/values survive a shell
+  // render even while an asynchronous submission is in progress.
+  let main = document.querySelector("main[data-home-detail]");
+  let footer = document.getElementById("site-footer-shell");
+  let resizeObserver, classObserver, resizeUpdate = () => {};
+  window.addEventListener("resize", () => resizeUpdate(), { passive: true });
   const mount = () => {
     const shell = document.getElementById("site-shell");
-    const main = document.querySelector("main[data-home-detail]");
-    const footer = document.getElementById("site-footer-shell");
+    main ||= document.querySelector("main[data-home-detail]");
+    footer ||= document.getElementById("site-footer-shell");
     if (!shell || !main || !footer) return;
     shell.append(main, footer);
 
@@ -20,13 +26,16 @@
       const overlay = position === "fixed" || position === "absolute";
       main.style.setProperty("--detail-header-space", overlay ? header.offsetHeight + "px" : "0px");
     };
+    resizeUpdate = update;
+    resizeObserver?.disconnect();
+    classObserver?.disconnect();
     update();
-    if ("ResizeObserver" in window) new ResizeObserver(update).observe(header);
-    const observer = new MutationObserver(update);
-    observer.observe(header, { attributes: true, attributeFilter: ["class"] });
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    window.addEventListener("resize", update, { passive: true });
+    if ("ResizeObserver" in window) { resizeObserver = new ResizeObserver(update); resizeObserver.observe(header); }
+    classObserver = new MutationObserver(update);
+    classObserver.observe(header, { attributes: true, attributeFilter: ["class"] });
+    classObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
   };
+  document.addEventListener("arotec:languagechange", () => queueMicrotask(mount));
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount, { once: true });
   else mount();
 })();

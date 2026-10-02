@@ -3,6 +3,7 @@
   const pageId = body.dataset.page || "home";
   const root = body.dataset.root || "";
   const shell = document.getElementById("site-shell");
+  const wiredNewsletterForms = new WeakSet();
   let heroSlideTimer = null;
   let heroParallaxCleanup = null;
   let sectionRevealCleanup = null;
@@ -24,6 +25,7 @@
   const languageMeta = {
     en: { label: "EN", htmlLang: "en" },
     ja: { label: "日本語", htmlLang: "ja" },
+    "zh-CN": { label: "简体中文", htmlLang: "zh-CN" },
     zh: { label: "繁中", htmlLang: "zh-Hant" },
     th: { label: "ไทย", htmlLang: "th" }
   };
@@ -1475,7 +1477,7 @@
   function navLinks(text) {
     return routes
       .filter((route) => route.nav)
-      .map((route) => `<a class="nav-link${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}>${text.nav[route.id]}</a>`)
+      .map((route) => `<a data-arotec-nav-key="${route.id}" class="nav-link${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}>${text.nav[route.id]}</a>`)
       .join("");
   }
 
@@ -1511,9 +1513,9 @@
           <button class="circle-button" id="menuClose" type="button" title="${text.common.closeMenu}" aria-label="${text.common.closeMenu}">${icons.close}</button>
         </div>
         <nav class="mobile-nav" aria-label="Mobile primary navigation">
-          <a class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
+          <a data-arotec-nav-key="home" class="nav-link${activeClass("home")}" href="${routeHref("home")}"${activeAria("home")}>${text.nav.home}</a>
           ${navLinks(text)}
-          <a class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
+          <a data-arotec-nav-key="contact" class="nav-link${activeClass("contact")}" href="${routeHref("contact")}"${activeAria("contact")}>${text.nav.contact}</a>
         </nav>
         <div class="mobile-language" aria-label="Language">${chips}</div>
         <a class="pill-button" href="${routeHref("contact")}">${text.nav.contact}</a>
@@ -2643,10 +2645,14 @@
       event.currentTarget.reset();
     });
 
-    document.getElementById("newsletterForm")?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      event.currentTarget.reset();
-    });
+    const newsletterForm = document.getElementById("newsletterForm");
+    if (newsletterForm && !wiredNewsletterForms.has(newsletterForm)) {
+      newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.currentTarget.reset();
+      });
+      wiredNewsletterForms.add(newsletterForm);
+    }
 
     document.onkeydown = (event) => {
       if (event.key === "Escape") {
@@ -2663,11 +2669,38 @@
     window.requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
   }
 
+  function retainNewsletter() {
+    const form = document.getElementById("newsletterForm");
+    if (!form) return () => {};
+    const active = form.contains(document.activeElement) ? document.activeElement : null;
+    const selection = active && typeof active.selectionStart === "number"
+      ? [active.selectionStart, active.selectionEnd, active.selectionDirection] : null;
+    return (text) => {
+      const replacement = shell.querySelector("#newsletterForm");
+      if (!replacement || replacement === form) return;
+      const input = form.querySelector('input[type="email"]');
+      const button = form.querySelector('button[type="submit"]');
+      input?.setAttribute("placeholder", text.common.emailPlaceholder);
+      input?.setAttribute("aria-label", text.common.emailPlaceholder);
+      button?.setAttribute("title", text.common.subscribe);
+      button?.setAttribute("aria-label", text.common.subscribe);
+      replacement.replaceWith(form);
+      if (active) window.requestAnimationFrame(() => {
+        if (!active.isConnected || (document.activeElement !== document.body && document.activeElement !== active)) return;
+        active.focus({ preventScroll: true });
+        if (selection) active.setSelectionRange(...selection);
+      });
+    };
+  }
+
   function render(lang) {
-    const text = copy[lang] || copy.th;
+    const restoreNewsletter = retainNewsletter();
+    const contentLang = window.ArotecI18n?.isPageManaged() ? "en" : lang;
+    const text = copy[contentLang] || copy.th;
     document.documentElement.lang = languageMeta[lang]?.htmlLang || "th";
     document.title = `${text.nav[pageId] || text.brand.title} | Arotec ${text.brand.subtitle}`;
-    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, lang)}${renderFooter(text)}${renderSearch(text)}`;
+    shell.innerHTML = `${renderHeader(text, lang)}${renderPage(text, contentLang)}${renderFooter(text)}${renderSearch(text)}`;
+    restoreNewsletter(text);
     wireEvents(text, lang);
     setupHeroSlideshow();
     setupHeroParallax();
@@ -2696,6 +2729,9 @@
     window.addEventListener("load", () => setTimeout(inject, 0), { once: true });
   }
 
+  const localizationRenderer = { id: "site", render };
+  if (window.ArotecI18n) window.ArotecI18n.registerRenderer(localizationRenderer);
+  else (window.AROTEC_I18N_RENDERERS ||= []).push(localizationRenderer);
   loadNotoFonts();
   const savedLanguage = localStorage.getItem("as-site-language");
   render(languageMeta[savedLanguage] ? savedLanguage : "th");

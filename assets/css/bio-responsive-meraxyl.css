@@ -32,7 +32,7 @@ html body.mx-page main#main#main .mx-pathway a strong { display:block; font-size
 html body.mx-page main#main#main .mx-pathway a > span { display:block; margin-top:.5cqw; font-size:1.03cqw; line-height:1.5; color:#c1d8e8; }
 html body.mx-page main#main#main .mx-sidebar-callout { margin-top:auto; padding:1.3cqw 1.9cqw; border-radius:1.35cqw; background:#07516acc; }
 html body.mx-page main#main#main .mx-sidebar-callout > span { display:block; margin-bottom:.5cqw; font-size:.78cqw; text-transform:uppercase; letter-spacing:.25em; }
-html body.mx-page main#main#main .mx-sidebar-callout > strong { display:flex; align-items:center; gap:.65cqw; font-size:1.65cqw; font-weight:600; line-height:1.2; white-space:nowrap; }
+html body.mx-page main#main#main .mx-sidebar-callout > strong { display:flex; align-items:center; gap:.65cqw; font-size:1.65cqw; font-weight:600; line-height:1.2; white-space:normal; }
 html body.mx-page main#main#main .mx-sidebar-callout .ph { font-size:2cqw; }
 html body.mx-page main#main#main .mx-section-label { display:flex; align-items:center; gap:1cqw; min-height:3.3cqw; padding-inline:.7cqw; }
 html body.mx-page main#main#main .mx-section-label > span { height:1px; background:#8eafbe; flex:1; min-width:1cqw; }

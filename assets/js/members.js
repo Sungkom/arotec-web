@@ -198,7 +198,8 @@
   let currentLang = "th";
 
   function getSavedLanguage() {
-    const saved = localStorage.getItem("as-site-language");
+    const stored = localStorage.getItem("as-site-language");
+const saved = stored === "zh-Hant" ? "zh" : stored;
     return languageMeta[saved] ? saved : "th";
   }
 
@@ -213,12 +214,12 @@
 
   function setStatus(message, isError = false) {
     if (!status) return;
-    status.textContent = message;
+    if (window.ArotecForms) window.ArotecForms.message(status, message, isError); else status.textContent = message;
     status.style.color = isError ? "#f5a3c7" : "var(--aqua)";
   }
 
   function translateError(message) {
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     return text.errors[message] || message || text.fallbackError;
   }
 
@@ -250,7 +251,7 @@
 
   function renderLanguage(lang, syncPreferredLanguage = false) {
     currentLang = languageMeta[lang] ? lang : "th";
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     document.documentElement.lang = languageMeta[currentLang].htmlLang;
     document.title = text.titleText;
 
@@ -270,13 +271,16 @@
     }
   }
 
+  const localizationRenderer = { id: "members", render: lang => renderLanguage(lang, false) };
+  if (window.ArotecI18n) window.ArotecI18n.registerRenderer(localizationRenderer);
+  else (window.AROTEC_I18N_RENDERERS ||= []).push(localizationRenderer);
   renderLanguage(getSavedLanguage(), true);
 
   function handleLanguageChange(event) {
     const nextLang = getLanguageFromEvent(event);
     localStorage.setItem("as-site-language", nextLang);
-    setStatus("");
-    renderLanguage(nextLang, true);
+    if (event.detail?.source !== "arotec-i18n") setStatus("");
+    renderLanguage(nextLang, event.detail?.source !== "arotec-i18n");
   }
 
   languageSelect?.addEventListener("change", handleLanguageChange);
@@ -287,7 +291,7 @@
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const text = copy[currentLang] || copy.th;
+    const text = copy[window.ArotecI18n?.isPageManaged() ? "en" : currentLang] || copy.th;
     const data = new FormData(form);
     const payload = {
       full_name: data.get("full_name"),

@@ -15,8 +15,8 @@
         const label = item.cloneNode(true);
         label.querySelectorAll("svg, i, [aria-hidden='true'], .sr-only").forEach((node) => node.remove());
         const text = label.textContent.replace(/\s+/g, " ").trim().toLowerCase();
-        const isOverview = text === "applied solutions" || item.getAttribute("href") === "#applied";
-        const isSupplements = text === "health & wellness : scented supplements";
+        const isOverview = item.dataset.arotecNavKey === "applied" || text === "applied solutions" || item.getAttribute("href") === "#applied";
+        const isSupplements = item.dataset.arotecNavKey === "health-wellness-scented-supplements" || text === "health & wellness : scented supplements";
         if (!isOverview && !isSupplements) return;
         let link = item;
         if (item.tagName !== "A") {
