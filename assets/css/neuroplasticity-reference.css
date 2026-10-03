@@ -393,3 +393,28 @@ html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption
   html body.np26-page main#main#main #mechanisms .np26-domain li { font-size:12px !important; }
   html body.np26-page main#main#main #mechanisms .np26-integrated-brain figcaption { font-size:19px !important; }
 }
+
+/* Let translated labels use their existing type within the reference scene. */
+@media (width > 900px) {
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive {
+    display:grid;
+    grid-template-rows:minmax(3.9cqw,auto) auto;
+    row-gap:.75cqw;
+  }
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive > h3 {
+    width:calc(100% + 3cqw);
+    white-space:normal !important;
+    align-self:start;
+  }
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive ul { position:relative; }
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive li:nth-child(1) { top:0; }
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive li:nth-child(2) { top:5cqw; }
+  html body.np26-page main#main#main #functional-impacts .np26-cognitive li:nth-child(3) { top:11.25cqw; }
+}
+@media (width > 1100px) {
+  html body.np26-page main#main#main #mechanisms .np26-condition-feedback {
+    top:-11.88cqw;
+    transform:translateY(-100%);
+  }
+  html body.np26-page main#main#main #mechanisms .np26-condition-feedback span { white-space:normal; }
+}

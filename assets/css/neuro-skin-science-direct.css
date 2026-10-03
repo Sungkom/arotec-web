@@ -68,3 +68,20 @@ html body.nss-page #direct-skin-impact .nss-direct-explore { display: inline-fle
 @media (prefers-reduced-motion: reduce) {
   #direct-skin-impact .nss-direct-explore img { transition: none; }
 }
+
+/* Complete translated captions determine card height; source artwork and
+   five-stage sequence remain in their existing desktop columns. */
+@media (min-width: 1101px) {
+  #direct-skin-impact .nss-direct-canvas { aspect-ratio: auto; padding-top: 3.02734375cqw; padding-bottom: 1.7cqw; }
+  #direct-skin-impact .nss-direct-heading { position: relative; inset: auto; margin-inline: 3.90625cqw 3.173828125cqw; margin-bottom: 1.75cqw; }
+  html body.nss-page #direct-skin-impact h2,
+  html body.nss-page #direct-skin-impact .nss-direct-heading > p { white-space: normal; overflow-wrap: break-word; }
+  #direct-skin-impact .nss-direct-cards { display: grid; grid-template-columns: 389fr 376fr 366fr 375fr 399fr; gap: .9cqw; margin-inline: 1.708984375cqw 1.66015625cqw; }
+  #direct-skin-impact .nss-direct-card { position: relative; inset: auto; width: auto; height: auto; min-height: 38.037109375cqw; padding-bottom: 1.5cqw; }
+  #direct-skin-impact .nss-direct-picture { position: relative; top: auto; margin-top: .439453125cqw; max-width: calc(100% - .8cqw); }
+  #direct-skin-impact .nss-direct-number { position: relative; inset: auto; transform: none; margin: .537109375cqw auto .7cqw; }
+  html body.nss-page #direct-skin-impact .nss-direct-card h3 { position: relative; inset: auto; margin-inline: .65cqw !important; white-space: normal; overflow-wrap: break-word; }
+  html body.nss-page #direct-skin-impact .nss-direct-card > p,
+  html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p { position: relative; inset: auto; margin: .75cqw .65cqw 0; overflow-wrap: break-word; }
+  #direct-skin-impact .nss-direct-action { position: relative; inset: auto; margin-top: 1.2cqw; }
+}

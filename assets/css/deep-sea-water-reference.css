@@ -272,3 +272,8 @@ body.dsw-reference-page #main .dsw-closing h2 { font-size: 30px !important; line
   #main .dsw-comparison table { font-size: 13px; }
   #main .dsw-comparison tbody th { font-size: 11px; }
 }
+
+/* Place the mobile surface caption in clear water between the existing arrows. */
+@media (max-width:900px) {
+  body.dsw-reference-page #main #origin .dsw-zone-surface { left:70%;width:28%;top:calc(18vw - 12px); }
+}

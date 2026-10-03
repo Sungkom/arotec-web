@@ -85,3 +85,12 @@ html body.exercise-systemic-page main#main #neural .esh-neural-sensory-results l
   .esh-neural-mobile-portrait { width: 180px; justify-self: center; }
   #neural .esh-neural-sensory-results { grid-template-columns: 1fr; }
 }
+
+/* Reserve room for wrapped sensory bullets within the original desktop panel. */
+@media (width >= 1280px) {
+  html body.exercise-systemic-page main#main #neural .esh-neural-sensory-list {
+    left: 27%;
+    top: 20%;
+    width: 32%;
+  }
+}

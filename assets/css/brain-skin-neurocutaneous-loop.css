@@ -199,3 +199,35 @@ body.brain-skin-loop-page {
   body.brain-skin-loop-page { background: #fff; }
   .overlay-hint { display: none; }
 }
+
+/* Reserve the left stressor title above its artwork and keep transmitters
+   within the original gap above the autonomic pathway card. */
+body.brain-skin-loop-page .stressor-cluster-left h2 {
+  width: 450px;
+  left: 0;
+  top: auto;
+  bottom: 159px;
+  text-align: left;
+}
+body.brain-skin-loop-page .dopamine-list {
+  left: 300px;
+  width: 230px;
+  column-count: 2;
+  column-gap: 10px;
+  column-fill: balance;
+}
+body.brain-skin-loop-page .stressor-cluster-right h2 {
+  width: 450px;
+  right: 0;
+  top: auto;
+  bottom: 159px;
+  text-align: right;
+}
+
+/* Keep both complete annotations clear of the original diagonal and return arrows. */
+body.brain-skin-loop-page .dna-damage {
+  top: 276px;
+}
+body.brain-skin-loop-page .immune-suppression {
+  top: 430px;
+}

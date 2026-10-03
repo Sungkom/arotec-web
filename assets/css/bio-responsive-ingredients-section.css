@@ -155,7 +155,7 @@ html body.brs-page main#main#main #ingredient-systems .bri-note p + p::before {
 html body.brs-page main#main#main #ingredient-systems .bri-grid {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(2, 228px);
+  grid-template-rows: repeat(2, minmax(228px, auto));
   gap: 12px;
 }
 html body.brs-page main#main#main #ingredient-systems .bri-card {
@@ -275,14 +275,14 @@ html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-d
   html body.brs-page main#main#main #ingredient-systems .bri-subtitle { max-width: 670px; }
   html body.brs-page main#main#main #ingredient-systems .bri-note { display: none; }
   html body.brs-page main#main#main #ingredient-systems .bri-bubble { left: auto; right: 2%; top: 20px; width: 31%; opacity: .8; }
-  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: 350px repeat(2,228px); }
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: minmax(350px,auto) repeat(2,minmax(228px,auto)); }
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured { grid-row: auto; grid-column: 1 / -1; padding: 48px 32px; }
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured h3 { font-size: 56px !important; }
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-art { width: 400px; right: 3%; bottom: -48px; }
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 32px; bottom: 30px; }
 }
 @media (max-width: 850px) {
-  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: 350px repeat(3,228px); }
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: minmax(350px,auto) repeat(3,minmax(228px,auto)); }
   html body.brs-page main#main#main #ingredient-systems .bri-bubble { opacity: .45; }
 }
 @media (max-width: 599px) {
@@ -294,7 +294,7 @@ html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-d
   html body.brs-page main#main#main #ingredient-systems .bri-mission { font-size: 9px !important; padding-left: 42px; }
   html body.brs-page main#main#main #ingredient-systems .bri-mission::before { width: 28px; }
   html body.brs-page main#main#main #ingredient-systems .bri-bubble { display: none; }
-  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: minmax(0,1fr); grid-template-rows: 420px; grid-auto-rows: 244px; gap: 14px; }
+  html body.brs-page main#main#main #ingredient-systems .bri-grid { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(420px,auto); grid-auto-rows: minmax(244px,auto); gap: 14px; }
   html body.brs-page main#main#main #ingredient-systems .bri-card { padding: 28px 24px; }
   html body.brs-page main#main#main #ingredient-systems .bri-card h3 { font-size: 32px !important; }
   html body.brs-page main#main#main #ingredient-systems .bri-category { font-size: 17px !important; }
@@ -305,3 +305,31 @@ html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-d
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-art { width: 360px; right: -82px; bottom: -10px; }
   html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-details { left: 24px; bottom: 34px; }
 }
+/* Translated card copy reserves a left column beside the original artwork.
+   Rows retain their original minimum height and grow with complete copy. */
+html body.brs-page main#main#main #ingredient-systems .bri-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card :is(.bri-category, .bri-slogan) {
+  min-width: min-content;
+  max-width: 40%;
+  overflow-wrap: normal;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured :is(.bri-category, .bri-slogan) {
+  max-width: 45%;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card .bri-slogan {
+  margin-bottom: 20px !important;
+}
+html body.brs-page main#main#main #ingredient-systems .bri-card .bri-details {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Give the featured slogan more room beside the existing flower contours. */
+html body.brs-page main#main#main #ingredient-systems .bri-card--featured .bri-slogan { max-width:40%; }

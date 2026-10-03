@@ -190,3 +190,5 @@
     height: 60px;
   }
 }
+/* Reserve native arrow space for complete Japanese and Chinese language names. */
+#site-shell .language-select { min-width: 82px; }

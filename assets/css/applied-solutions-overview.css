@@ -216,8 +216,8 @@ html body.aso-page .aso-dialog-close {
     margin: 0 0 18px !important;
   }
 }
-/* Keep the shared display typography in normal flow above the hotspots.
-   The lower scene retains the illustration's original 32:15 coordinates. */
+/* Let translated labels determine the scene height. Guide-line endpoints keep
+   their coordinates within the bottom-pinned illustration as labels wrap. */
 @media (width > 900px) {
   html body.aso-page main#main#main .aso-stage {
     aspect-ratio: auto;
@@ -237,24 +237,52 @@ html body.aso-page .aso-dialog-close {
   html body.aso-page main#main#main .aso-areas {
     position: relative;
     inset: auto;
-    height: 31.359375vw;
+    height: auto;
     margin-top: clamp(24px, 2vw, 40px);
   }
+  html body.aso-page main#main#main .aso-areas > ul {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: 17.1vw 14.5vw 16.3vw minmax(0, 1fr);
+    margin-left: 22.25vw;
+    padding-bottom: 16.8vw;
+  }
+  html body.aso-page main#main#main .aso-node {
+    box-sizing: border-box;
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: auto;
+    padding-right: 16px;
+  }
   html body.aso-page main#main#main .aso-node--sensory {
-    top: 4.546875vw;
-    width: calc(17.1vw - 16px);
+    padding-top: 4.546875vw;
+    padding-bottom: 1.25vw;
   }
   html body.aso-page main#main#main .aso-node--flavors {
-    top: 0;
-    width: calc(14.5vw - 16px);
+    padding-bottom: 5vw;
   }
   html body.aso-page main#main#main .aso-node--ingredients {
-    top: 3.328125vw;
-    width: calc(16.3vw - 16px);
+    padding-top: 3.328125vw;
+    padding-bottom: 3.1vw;
   }
   html body.aso-page main#main#main .aso-node--supplements {
-    top: 6vw;
-    width: calc(29.85vw - 24px);
+    padding-top: 6vw;
+    padding-right: 24px;
+  }
+  html body.aso-page main#main#main .aso-explore {
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+  html body.aso-page main#main#main .aso-leader {
+    flex: 1 0 auto;
+    align-self: flex-start;
+    height: auto;
+    min-height: calc(6vw + 24px);
   }
 }
 
@@ -285,9 +313,6 @@ html body.aso-page .aso-dialog-close {
     font-size: 12px !important;
     line-height: 1.7 !important;
     letter-spacing: .1em !important;
-  }
-  html body.aso-page main#main#main .aso-heading br {
-    display: none;
   }
   html body.aso-page main#main#main .aso-areas,
   html body.aso-page main#main#main .aso-areas > ul {

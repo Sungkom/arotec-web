@@ -817,3 +817,12 @@ html body.nst-page main#main#main #neurophysiological-modulation #modulation-tit
  html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation { top: calc(42.703349cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 10.167464cqw; }
  html body.nst-page main#main#main #neurophysiological-modulation .nmr-footer { top: calc(53.349282cqw + var(--nmr-title-space) + var(--nmr-title-space)); height: 2.033493cqw; }
 }
+
+/* Keep the disease-system caption clear of the preceding step badge while
+   preserving its vertical gap above the original disease-card row. */
+@media (width >= 1024px) {
+  html body.nst-page main#main#main #neurophysiological-modulation .nmr-dysregulation-heading p {
+    position: relative;
+    left: 3.8cqw;
+  }
+}

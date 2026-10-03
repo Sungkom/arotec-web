@@ -101,3 +101,11 @@ html body.nss-page #brain-skin-axis .nss-axis-signoff { position: absolute; left
 @media (max-width: 360px) {
   #brain-skin-axis .nss-axis-icons--signals, #brain-skin-axis .nss-axis-icons--cells, #brain-skin-axis .nss-axis-icons--functions { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
+
+/* Scientific subcaptions wrap inside their input/output panels. Their type,
+   artwork and the surrounding brain-skin diagram keep their original values. */
+@media (min-width: 1101px) {
+  html body.nss-page #brain-skin-axis dd { white-space: normal; overflow-wrap: break-word; }
+  #brain-skin-axis .nss-axis-panel { height: auto; min-height: 21.9cqw; }
+  #brain-skin-axis .nss-axis-panel dl { height: auto; min-height: 16.3cqw; row-gap: .4cqw; }
+}

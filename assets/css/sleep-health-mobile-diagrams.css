@@ -64,3 +64,15 @@ body.sleep-health-page #shm-mobile-diagram-dialog h2.shm-diagram-dialog-title { 
 .shm-diagram-dialog-viewport { overflow:auto; max-height:calc(100dvh - 164px); overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
 .shm-diagram-dialog-canvas { box-sizing:border-box; }
 @media (min-width:1200px) { .shm-diagram-dialog { display:none; } }
+
+/* This authored right-hand rail is identified by its unchanged source scene
+   and coordinates, so the same correction survives the readable/Fit clone.
+   Complete longer orexin labels wrap inside the edge, with small vertical
+   reservations before and after; diagram scale and every font remain intact. */
+@media (width < 1200px) {
+  .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:84.5703125%"] { translate: 0 .6cqw; }
+  .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:84.5703125%"][style*="top:28.125%"] { translate: 0 -.4cqw; }
+  @layer sleep-health-mobile {
+    .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:84.5703125%"][style*="top:28.125%"] > p { white-space: normal !important; text-wrap: wrap !important; overflow-wrap: break-word; width: 100% !important; }
+  }
+}

@@ -85,3 +85,43 @@ html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 
   html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(6) > p,
   html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 20px !important; }
 }
+
+/* Preserve the desktop 01 -> 03 / 06 <- 04 causal order while allowing every
+   heading and paragraph to occupy its own row inside the white card. */
+@media (min-width: 1101px) {
+  #skin-barrier-disruption .nss-sb-canvas { aspect-ratio: auto; display: grid; grid-template-columns: 440fr 1503fr; gap: 1.05cqw; padding: .25cqw 0 1.7cqw; }
+  #skin-barrier-disruption .nss-sb-heading { position: relative; inset: auto; grid-column: 1 / -1; margin-bottom: 1.8cqw; }
+  html body.nss-page #skin-barrier-disruption h2 { white-space: normal; overflow-wrap: break-word; }
+  #skin-barrier-disruption .nss-sb-context { position: relative; inset: auto; width: auto; height: auto; min-height: 47.55859375cqw; margin-left: 2cqw; padding: 1.72cqw 1.05cqw 10cqw; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context h3 { position: relative; inset: auto; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context > p { position: relative; inset: auto; margin-top: 1.5cqw; }
+  #skin-barrier-disruption .nss-sb-effects { position: relative; inset: auto; margin-top: 1.5cqw; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-effects span { white-space: normal; }
+  #skin-barrier-disruption .nss-sb-cascade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: 'one two three' 'six five four'; gap: 1cqw; margin-right: 2cqw; }
+  #skin-barrier-disruption .nss-sb-card { position: relative; inset: auto; width: auto; height: auto; min-height: calc(var(--h) / 20.48 * 1cqw); padding-bottom: 1.1cqw; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(1) { grid-area: one; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(2) { grid-area: two; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(3) { grid-area: three; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(4) { grid-area: four; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(5) { grid-area: five; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(6) { grid-area: six; }
+  #skin-barrier-disruption .nss-sb-picture { position: relative; inset: auto; width: calc(100% - .8cqw); margin: .4cqw auto 0; }
+  #skin-barrier-disruption .nss-sb-number,
+  #skin-barrier-disruption .nss-sb-card--core .nss-sb-number { position: relative; inset: auto; display: block; margin: -.6cqw auto .25cqw; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card h3,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { position: relative; inset: auto; margin-inline: 1cqw !important; white-space: normal; overflow-wrap: break-word; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { position: relative; inset: auto; margin: .55cqw 1cqw 0; overflow-wrap: break-word; }
+  #skin-barrier-disruption .nss-sb-core-label { position: relative; inset: auto; width: auto; margin: .3cqw 1cqw; }
+  #skin-barrier-disruption .nss-sb-arrow { left: calc(100% - 1cqw); }
+  #skin-barrier-disruption .nss-sb-card:nth-child(n+4) .nss-sb-arrow { left: -2cqw; }
+  #skin-barrier-disruption .nss-sb-turn { left: calc(100% - 1cqw); }
+}
+
+/* The source panel already contains its 04 badge: the live badge stays on that
+   same illustration position, with caption ink reserved below it. */
+@media (min-width: 1101px) {
+  #skin-barrier-disruption .nss-sb-card--core .nss-sb-number { position: absolute; left: 48.2%; top: 10.84921875cqw; transform: translateX(-50%); margin: 0; }
+  #skin-barrier-disruption .nss-sb-core-label { margin-top: 1.7cqw; padding-block: 3px; }
+}

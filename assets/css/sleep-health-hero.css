@@ -117,3 +117,13 @@
     html body #sleep-health .sh-pillars li { font-size:16px!important; line-height:1.3!important; }
   }
 }
+
+/* Long translated poster copy must finish before the five restoration domains.
+   Keep the original heading/copy anchors, fonts, authored breaks and art scale;
+   the scene can grow while complete benefits wrap into their own final row. */
+@media (min-width: 1200px) {
+  #sleep-health .sh-scene { aspect-ratio: auto; min-height: 56.246036778694cqw; padding-top: 20.389188332276cqw; padding-bottom: 3.402885225111cqw; }
+  #sleep-health .sh-intro { top: 5.146512365250cqw; }
+  #sleep-health .sh-hero-copy { position: relative; inset: auto; margin-left: 4.2%; }
+  #sleep-health .sh-pillars { position: relative; inset: auto; flex-wrap: wrap; justify-content: flex-start; gap: 1cqw 2cqw; margin: 3cqw 11.4% 0; }
+}

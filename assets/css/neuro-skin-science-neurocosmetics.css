@@ -87,3 +87,34 @@ html body.nss-page #neurocosmetics .nss-nc-explore span { font-family: 'Roboto C
 @media (max-width: 360px) {
   html body.nss-page #neurocosmetics h2 { font-size: 33px !important; letter-spacing: -1.5px !important; }
 }
+
+/* Keep the reference illustration at its original scale. Translated mechanism
+   copy wraps in its own columns; the diagram moves down as one intact scene,
+   including its nucleus/cell labels, outcome captions and callout. */
+@media (min-width: 1101px) {
+  #neurocosmetics .nss-nc-canvas { aspect-ratio: auto; min-height: 61.2333206252cqw; }
+  #neurocosmetics .nss-nc-heading { top: 3.1715592833cqw; }
+  html body.nss-page #neurocosmetics .nss-nc-mechanisms-title { top: 17.179279451cqw; }
+  #neurocosmetics .nss-nc-mechanisms { top: 20.7380480366cqw; }
+  html body.nss-page #neurocosmetics .nss-nc-mechanisms p { white-space: normal; overflow-wrap: break-word; }
+  #neurocosmetics .nss-nc-visual { inset: 5cqw 0 auto; height: 56.2333206252cqw; }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(1) { top: 33.0041936714cqw; }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(2) { top: 40.9330918795cqw; }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(3) { top: 48.8619900877cqw; }
+  html body.nss-page #neurocosmetics .nss-nc-outcomes span { white-space: normal; overflow-wrap: break-word; }
+  #neurocosmetics .nss-nc-callout { top: 52.98529049cqw; height: 5.6626953869cqw; }
+  #neurocosmetics .nss-nc-explore { bottom: 2.6429660694cqw; }
+}
+
+/* Blend only the decorative top edge into the original white heading area;
+   all scientific illustration features below this short fade remain opaque. */
+@media (min-width: 1101px) {
+  #neurocosmetics .nss-nc-visual { mask-image: linear-gradient(to bottom, transparent, #000 3cqw); }
+}
+
+/* Size the canvas by its own width: cqw on a container's own min-height refers
+   to an ancestor/viewport and adds unintended space at the shared gutters.
+   The source height1475 plus its 5% vertical reservation equals1606.15. */
+@media (min-width: 1101px) {
+  #neurocosmetics .nss-nc-canvas { aspect-ratio: 2623 / 1606.15; min-height: 0; }
+}

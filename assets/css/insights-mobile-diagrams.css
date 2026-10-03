@@ -70,3 +70,13 @@ body.insights-sleep-page #isb-mobile-diagram-dialog h2.isb-diagram-dialog-title 
 .isb-diagram-dialog-viewport { overflow: auto; max-height: calc(100dvh - 164px); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .isb-diagram-dialog-canvas { box-sizing: border-box; }
 @media (min-width: 1280px) { .isb-diagram-dialog { display: none; } }
+
+/* Keep the translated scalp title within its original diagram text column.
+   The same picture selector covers the authored enlarged canvas without IDs. */
+@media (width < 1280px) {
+  html body.insights-sleep-page main#main #scalp-microenvironment .isb-mobile-diagram-canvas .isb-map-title > h2,
+  html body.insights-sleep-page #isb-mobile-diagram-dialog .isb-mobile-diagram-canvas:has(> picture > source[srcset*="/scalp-"]) .isb-map-title > h2 {
+    white-space: normal !important;
+    text-wrap: wrap;
+  }
+}

@@ -238,3 +238,30 @@ html body.nss-page #neurocutaneous-feedback :is(.nss-fb-subtitle,.nss-fb-perspec
   html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 { align-items: flex-start; font-size: 17px !important; }
   html body.nss-page #neurocutaneous-feedback .nss-fb-lane h3 small { font-size: 14px !important; }
 }
+
+/* Retain the existing connector diagram while allowing longer live labels to
+   grow inside their boxes. Extra vertical space keeps the five pathways and
+   lower neuroimmune branch separated without scaling any text. */
+@media (min-width: 1101px) {
+  #neurocutaneous-feedback .nss-feedback-canvas { aspect-ratio: 2623 / 1700; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-flow > li { height: auto; min-height: calc(var(--node-h) / 20.48 * 1cqw); }
+  #neurocutaneous-feedback .nss-fb-neuroimmune { position: absolute; display: grid; left: 53.5%; top: 75.65%; width: 17.5%; row-gap: .35cqw; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-neuroimmune > p { position: relative; inset: auto; height: auto; min-height: 1.9cqw; }
+  #neurocutaneous-feedback .nss-fb-cell-label,
+  #neurocutaneous-feedback .nss-fb-substance { width: 100%; }
+  #neurocutaneous-feedback .nss-fb-histamine { width: 60%; }
+  #neurocutaneous-feedback .nss-fb-neuroimmune > .ph { display: block; visibility: visible; }
+  html body.nss-page #neurocutaneous-feedback .nss-fb-mediators { left: 73%; max-width: 26%; }
+}
+
+/* Reserve ink clearance under the complete Japanese perspective paragraph.
+   Keep the original numbered sidebar sequence and all diagram coordinates. */
+@media (min-width: 1101px) {
+  #neurocutaneous-feedback .nss-fb-perspective-list { top: calc(307 / 20.48 * 1cqw); }
+}
+
+/* Keep the brain-function caption to the left of the existing return connector.
+   Allow the complete words to wrap without changing type or diagram artwork. */
+@media (min-width: 1101px) {
+  #neurocutaneous-feedback .nss-fb-brain-functions { width: 8.5cqw; white-space: normal; }
+}

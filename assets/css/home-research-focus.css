@@ -87,9 +87,9 @@ body[data-page="home"] #research-focus {
 }
 
 #research-focus .research-focus-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 0.45vw;
   min-width: 0;
   min-height: 4.34vw;
@@ -120,7 +120,9 @@ body[data-page="home"] #research-focus {
   color: var(--research-blue) !important;
   font: 400 clamp(10px, 1.055vw, 22px) / 1.15 "DM Sans", Arial, sans-serif !important;
   letter-spacing: -0.05em !important;
-  text-wrap: nowrap;
+  white-space: normal;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 #research-focus .research-focus-arrow {
@@ -269,5 +271,34 @@ body[data-page="home"] #research-focus {
 @media (prefers-reduced-motion: reduce) {
   #research-focus .research-focus-card {
     transition: none;
+  }
+}
+
+/* Keep the caption at the original clear-space position. Taller translations
+   grow the navigation and white section downward instead of lifting the
+   caption onto the unchanged hand illustration. The original position follows
+   the 959/1706 scene, 5.9% bottom inset, two 4.34vw rows and existing gaps. */
+@media (min-width: 1101px) {
+  body[data-page="home"] #research-focus {
+    aspect-ratio: auto;
+    padding-top: calc(42.2763071512vw - clamp(13.75px, 1.1vw, 22.5px));
+    padding-bottom: 3.3166471278vw;
+    background-position: center top;
+    background-size: 100% auto;
+  }
+  #research-focus .research-focus-navigation {
+    position: relative;
+    inset: auto;
+    margin-inline: 8.3%;
+  }
+}
+
+/* Shared desktop gutters already position this foreground via a layered
+   important left/right rule. Relative flow uses that same width once, without
+   adding a second margin or letting the final card extend off the viewport. */
+@media (min-width: 1200px) {
+  #research-focus .research-focus-navigation {
+    margin-inline: 0;
+    width: calc(100% - var(--arotec-content-left) - var(--arotec-content-right));
   }
 }

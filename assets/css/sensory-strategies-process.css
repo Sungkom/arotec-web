@@ -129,3 +129,20 @@ html body.sensory-process-page main#main .spc-map-group h3 { font-size:clamp(16p
   .spc-map-group h3::after { margin-left:0; }
 }
 
+
+/* Separate the two confirmed caption/leader contacts without changing their type or artwork. */
+@media (width >= 1200px) {
+  html body.sensory-process-page main#main #process-section-7 .spc-nodes > .spc-node:nth-child(1) > p {
+    width: 140%;
+    max-width: none;
+    position: relative;
+    left: -20%;
+    top: -.65vw;
+  }
+  html body.sensory-process-page main#main #process-section-8 .spc-nodes > .spc-node:nth-child(4) > p {
+    width: 110%;
+    max-width: none;
+    position: relative;
+    left: -5%;
+  }
+}

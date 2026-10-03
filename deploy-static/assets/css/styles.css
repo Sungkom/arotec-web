@@ -4401,3 +4401,6 @@ body.storytelling-ready .story-section-frame.is-story-visible svg line {
     transition: none !important;
   }
 }
+
+/* Reserve native arrow space for complete legacy language names. */
+.site-header .language-select {min-width:108px;}

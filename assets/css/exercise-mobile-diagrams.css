@@ -141,3 +141,19 @@ body.exercise-systemic-page #esh-mobile-diagram-dialog h2.esh-diagram-dialog-tit
 .esh-diagram-dialog-viewport { overflow: auto; max-height: calc(100dvh - 164px); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .esh-diagram-dialog-canvas { box-sizing: border-box; }
 @media (min-width:1280px) { .esh-diagram-dialog { display: none; } }
+
+/* Reserve the translated sensory list inside the original neural diagram panel.
+   Source-picture matching also covers the native enlarged canvas after IDs are removed. */
+@media (width < 1280px) {
+  body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) .esh-map-label:has(> ul) {
+    width:15% !important;
+    top:69% !important;
+  }
+}
+
+/* Keep the complete NF-kappaB adaptation caption inside its original blue panel. */
+@media (width < 1280px) {
+  body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/cellular-"]) .esh-map-label:nth-last-of-type(2) {
+    top: 75.65% !important;
+  }
+}
