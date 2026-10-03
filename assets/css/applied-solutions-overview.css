@@ -216,6 +216,48 @@ html body.aso-page .aso-dialog-close {
     margin: 0 0 18px !important;
   }
 }
+/* Keep the shared display typography in normal flow above the hotspots.
+   The lower scene retains the illustration's original 32:15 coordinates. */
+@media (width > 900px) {
+  html body.aso-page main#main#main .aso-stage {
+    aspect-ratio: auto;
+    padding-top: 8.765625vw;
+  }
+  html body.aso-page main#main#main .aso-background {
+    top: auto;
+    bottom: 0;
+    height: 46.875vw !important;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%);
+    mask-image: linear-gradient(to bottom, transparent, #000 22%);
+  }
+  html body.aso-page main#main#main .aso-heading {
+    position: relative;
+    top: auto;
+  }
+  html body.aso-page main#main#main .aso-areas {
+    position: relative;
+    inset: auto;
+    height: 31.359375vw;
+    margin-top: clamp(24px, 2vw, 40px);
+  }
+  html body.aso-page main#main#main .aso-node--sensory {
+    top: 4.546875vw;
+    width: calc(17.1vw - 16px);
+  }
+  html body.aso-page main#main#main .aso-node--flavors {
+    top: 0;
+    width: calc(14.5vw - 16px);
+  }
+  html body.aso-page main#main#main .aso-node--ingredients {
+    top: 3.328125vw;
+    width: calc(16.3vw - 16px);
+  }
+  html body.aso-page main#main#main .aso-node--supplements {
+    top: 6vw;
+    width: calc(29.85vw - 24px);
+  }
+}
+
 @media (max-width: 900px) {
   html body.aso-page main#main#main .aso-stage {
     box-sizing: border-box;
