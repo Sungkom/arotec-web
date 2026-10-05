@@ -1,0 +1,150 @@
+{
+  "canonicalBase": "https://sungkom.github.io/arotec-web/",
+  "locales": [
+    "th",
+    "en",
+    "ja",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "pilotPages": 20,
+  "policyPages": 5,
+  "files": [
+    {
+      "path": "en/Neuro-Skin-Science.html",
+      "bytes": 80722,
+      "sha256": "4aac6469c5dbf3064f03951f47b6885b0780046a80e10920fd93d6c8e6a4ccfc"
+    },
+    {
+      "path": "en/cookie-policy.html",
+      "bytes": 23516,
+      "sha256": "05eb833a4c96a5703fd21b7578bea6574f7183e445619b77705a42fc2c4c3018"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 63273,
+      "sha256": "c80fe56e2ee23d33b5c9b6469a73bb8a3b71b24ea0976856a0671d281c9ad81c"
+    },
+    {
+      "path": "en/pages/co-creation.html",
+      "bytes": 39351,
+      "sha256": "ecaf75193eca894842ef41331778a6878f71d71520bd65f3671d6bcb3e2f1f2f"
+    },
+    {
+      "path": "en/pages/get-in-touch.html",
+      "bytes": 40254,
+      "sha256": "0cf1d97626aa609920137a45d562401f284b17aad7ba103485d5265df1e5e92b"
+    },
+    {
+      "path": "ja/Neuro-Skin-Science.html",
+      "bytes": 85456,
+      "sha256": "958d8ad3e7cbb3548402ce7b1a8f307b3e5420f307472658a925bf1b0c038629"
+    },
+    {
+      "path": "ja/cookie-policy.html",
+      "bytes": 26555,
+      "sha256": "074d369bc7d4a151faa27faa758acd50c8072a41875e9c0d7f94f721becc4583"
+    },
+    {
+      "path": "ja/index.html",
+      "bytes": 66071,
+      "sha256": "39ccdf434a94a3a3b03ceeeaeb54307e05c3769e1f1055c8ef5520fd6d33aaf6"
+    },
+    {
+      "path": "ja/pages/co-creation.html",
+      "bytes": 42117,
+      "sha256": "b39bbddb8ba0ad729de12b4c826d65e18485c04546e8ca94e74ee540cbc6572d"
+    },
+    {
+      "path": "ja/pages/get-in-touch.html",
+      "bytes": 43108,
+      "sha256": "a5de437d6caa8bc64ec5ae04d020f4215a59ea1153125843b2b6007f3010affc"
+    },
+    {
+      "path": "languages.html",
+      "bytes": 3012,
+      "sha256": "e492fab7639441272a944cd47ce63c9646c23fbfbda961437c0194e6eef1d63c"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2189,
+      "sha256": "ba29c9216d7b7801deb6fa25c1e07e656fe8ec7cefce65583c65c749bfcd43b3"
+    },
+    {
+      "path": "th/Neuro-Skin-Science.html",
+      "bytes": 111116,
+      "sha256": "6ab9b3fb093e10dc6bbd0070bbcd007ea1beeebbbf6cdab0fdc1361824d0e8d0"
+    },
+    {
+      "path": "th/cookie-policy.html",
+      "bytes": 38513,
+      "sha256": "84028b5b9978f848a37719e039c869b35f4629edb80e6df9294ef0459dbe93e5"
+    },
+    {
+      "path": "th/index.html",
+      "bytes": 79045,
+      "sha256": "76ed04d8257d85bac5d87531898e277eeb57ce210cbc7f9aef67351855fec132"
+    },
+    {
+      "path": "th/pages/co-creation.html",
+      "bytes": 54605,
+      "sha256": "8aec7c8cdb633dda6c084f5638201530fad0ea6dee5432273050857f8aa3542b"
+    },
+    {
+      "path": "th/pages/get-in-touch.html",
+      "bytes": 53233,
+      "sha256": "6c32ca8b9b38c428432023e6bd4e32989cfd735d3f23fa9f68a1e671595c4d93"
+    },
+    {
+      "path": "zh-Hans/Neuro-Skin-Science.html",
+      "bytes": 79070,
+      "sha256": "03f8b2b60aa2a2e0c1bf50bb09dd0b717754883d9f1187fd776db5fa02435867"
+    },
+    {
+      "path": "zh-Hans/cookie-policy.html",
+      "bytes": 22773,
+      "sha256": "146461560d06b67dacc02c475759ab735cbb54b6e4c45c7006799cbffbccc174"
+    },
+    {
+      "path": "zh-Hans/index.html",
+      "bytes": 61734,
+      "sha256": "f165ce56ed5f5f5cf9e9cd3fc68894acb4847ab849b82e08de921dc3ee674db5"
+    },
+    {
+      "path": "zh-Hans/pages/co-creation.html",
+      "bytes": 38415,
+      "sha256": "a15bbe8fe30d7b6dd2285eb3b67138a54d770203eea180d38a1256c55359f39d"
+    },
+    {
+      "path": "zh-Hans/pages/get-in-touch.html",
+      "bytes": 39703,
+      "sha256": "d14c82d1b2eb8616bef3f75a0197d88f9c26e9b845f1e07bf9ec1a80a3672198"
+    },
+    {
+      "path": "zh-Hant/Neuro-Skin-Science.html",
+      "bytes": 79069,
+      "sha256": "1dee2fa8ed49502d0032b4193236f35231c51f7cf1b4b911d2d5eaaf911f9b47"
+    },
+    {
+      "path": "zh-Hant/cookie-policy.html",
+      "bytes": 22836,
+      "sha256": "445f13ef5ccec0b1adbd186795bf576662cf2ba08202ecfcf09b5310f48199a9"
+    },
+    {
+      "path": "zh-Hant/index.html",
+      "bytes": 61734,
+      "sha256": "8b2ea9ff9b6fd0f1906ae06ec1b2476a87e09b2f9c6da2ee7fe79b53053be52a"
+    },
+    {
+      "path": "zh-Hant/pages/co-creation.html",
+      "bytes": 38499,
+      "sha256": "eaa163f4831fd43c3bcceaa19ccf02e2f4d6b2595a2140d13895abb6d8299942"
+    },
+    {
+      "path": "zh-Hant/pages/get-in-touch.html",
+      "bytes": 39781,
+      "sha256": "9f1ee5eac27dfe49387950dedf3955a9cc5e42ca3b094e203f4f7f4822b38f7b"
+    }
+  ],
+  "originalDocumentsModified": false
+}

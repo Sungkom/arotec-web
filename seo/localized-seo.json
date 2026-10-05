@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "status": "local-review-draft",
+  "canonicalBase": "https://sungkom.github.io/arotec-web/",
+  "defaultLocale": "en",
+  "locales": {
+    "th": {
+      "catalogLocale": "th",
+      "htmlLang": "th",
+      "hreflang": "th",
+      "label": "ไทย"
+    },
+    "en": {
+      "catalogLocale": "en",
+      "htmlLang": "en",
+      "hreflang": "en",
+      "label": "English"
+    },
+    "ja": {
+      "catalogLocale": "ja",
+      "htmlLang": "ja",
+      "hreflang": "ja",
+      "label": "日本語"
+    },
+    "zh-Hans": {
+      "catalogLocale": "zh-CN",
+      "htmlLang": "zh-Hans",
+      "hreflang": "zh-Hans",
+      "label": "简体中文"
+    },
+    "zh-Hant": {
+      "catalogLocale": "zh",
+      "htmlLang": "zh-Hant",
+      "hreflang": "zh-Hant",
+      "label": "繁體中文"
+    }
+  },
+  "pages": {
+    "home": {
+      "sourcePath": "index.html",
+      "routePath": "index.html",
+      "localized": {
+        "th": {
+          "title": "Arotec | ประสาทวิทยาศาสตร์และเครื่องสำอางประสาทชีววิทยา",
+          "description": "สำรวจงานวิจัยของ Arotec ด้านประสาทวิทยาศาสตร์ การดูแลผิว การรับกลิ่น และประสาทสัมผัส พร้อมกรอบแนวคิดเชื่อมวิทยาศาสตร์สู่เครื่องสำอางประสาทชีววิทยาและโซลูชันต่าง ๆ"
+        },
+        "en": {
+          "title": "Arotec | Neuroscience, Neurocosmetics & Sensory Research",
+          "description": "Explore Arotec research in neuroscience, neuro skincare, olfaction and sensory experience, and its framework connecting science with neurocosmetics and other solutions."
+        },
+        "ja": {
+          "title": "Arotec | 神経科学・ニューロコスメティクス・感覚研究",
+          "description": "神経科学、ニューロスキンケア、嗅覚、感覚体験に関するArotecの研究分野と、科学をニューロコスメティクスなどのソリューションへつなぐフレームワークをご紹介します。"
+        },
+        "zh-Hans": {
+          "title": "Arotec | 神经科学、神经化妆品与感官研究",
+          "description": "了解 Arotec 在神经科学、神经护肤、嗅觉与感官体验方面的研究领域，以及连接科学、神经化妆品和其他解决方案的研究转化框架。"
+        },
+        "zh-Hant": {
+          "title": "Arotec | 神經科學、神經美容化妝品與感官研究",
+          "description": "了解 Arotec 在神經科學、神經護膚、嗅覺與感官體驗方面的研究領域，以及連結科學、神經美容化妝品與其他解決方案的研究轉化架構。"
+        }
+      },
+      "grounding": [
+        "The Biology of Human Experience",
+        "A&S Research Focus",
+        "Science-to-Solution Framework",
+        "Neuro Skincare",
+        "Neuro-Cosmetics"
+      ]
+    },
+    "neuroSkin": {
+      "sourcePath": "pages/Neuro-Skin-Science.html",
+      "routePath": "Neuro-Skin-Science.html",
+      "localized": {
+        "th": {
+          "title": "วิทยาศาสตร์สมอง–ผิวและการดูแลผิว | Arotec",
+          "description": "สำรวจแนวทางวิจัยของ Arotec เกี่ยวกับความสัมพันธ์ระหว่างสมองกับผิว ปัจจัยแวดล้อม ความเครียด และการส่งสัญญาณทางประสาท เพื่อทำความเข้าใจการดูแลผิวและเครื่องสำอางประสาทชีววิทยา"
+        },
+        "en": {
+          "title": "Neuro-Skin Science & the Brain–Skin Axis | Arotec",
+          "description": "Explore Arotec's research perspective on the brain–skin axis, personal exposome, stress and sensory signaling, and their relevance to neuro skincare and neurocosmetics."
+        },
+        "ja": {
+          "title": "脳と皮膚のつながりを探るニューロスキンサイエンス | Arotec",
+          "description": "脳と皮膚のつながり、個人のエクスポソーム、ストレス、感覚シグナルに関するArotecの研究視点と、ニューロスキンケアやニューロコスメティクスとの関わりをご紹介します。"
+        },
+        "zh-Hans": {
+          "title": "脑–皮肤轴与神经护肤科学 | Arotec",
+          "description": "探索 Arotec 对脑–皮肤轴、个人暴露组、压力与感官信号的研究视角，了解这些主题与神经护肤及神经化妆品的关联。"
+        },
+        "zh-Hant": {
+          "title": "腦–皮膚軸與神經護膚科學 | Arotec",
+          "description": "探索 Arotec 對腦–皮膚軸、個人暴露組、壓力與感官訊號的研究觀點，了解這些主題與神經護膚及神經美容化妝品的關聯。"
+        }
+      },
+      "grounding": [
+        "Where Skin Meets Sensory Neuroscience",
+        "Brain-Skin Axis",
+        "Personal Exposome",
+        "Neurocosmetics",
+        "Science of Brain–Skin Communication"
+      ]
+    },
+    "coCreation": {
+      "sourcePath": "pages/co-creation.html",
+      "routePath": "pages/co-creation.html",
+      "localized": {
+        "th": {
+          "title": "ร่วมสร้างสรรค์ผลิตภัณฑ์และ Neurocosmetics ODM | Arotec",
+          "description": "สำรวจบริการร่วมสร้างสรรค์ของ Arotec ทั้งการพัฒนาสูตรและต้นแบบผลิตภัณฑ์ดูแลผิว เครื่องสำอางประสาทชีววิทยา ODM กลิ่นหอม และประสบการณ์ประสาทสัมผัสเฉพาะแบรนด์"
+        },
+        "en": {
+          "title": "Neurocosmetics ODM & Co-Creation Services | Arotec",
+          "description": "Explore Arotec co-creation services for skincare and neurocosmetics ODM, bespoke formulation, prototypes, fragrance development and sensory experiences shaped around your brand."
+        },
+        "ja": {
+          "title": "ニューロコスメティクスODM・製品の共創 | Arotec",
+          "description": "スキンケアやニューロコスメティクスのODM、個別処方、試作、フレグランス開発、ブランドに合わせた感覚体験など、Arotecの共創サービスをご紹介します。"
+        },
+        "zh-Hans": {
+          "title": "神经化妆品 ODM 与产品共创服务 | Arotec",
+          "description": "了解 Arotec 的共创服务，包括护肤与神经化妆品 ODM、定制配方、产品原型、香氛开发，以及围绕品牌设计的感官体验。"
+        },
+        "zh-Hant": {
+          "title": "神經美容化妝品 ODM 與產品共創服務 | Arotec",
+          "description": "了解 Arotec 的共創服務，包括護膚與神經美容化妝品 ODM、客製化配方、產品原型、香氛開發，以及圍繞品牌設計的感官體驗。"
+        }
+      },
+      "grounding": [
+        "Product Development & ODM",
+        "Skincare · Neurocosmetics",
+        "Bespoke Formulation",
+        "Prototype to Production Coordination",
+        "Bespoke Sensory & Scent Design"
+      ]
+    },
+    "contact": {
+      "sourcePath": "pages/get-in-touch.html",
+      "routePath": "pages/get-in-touch.html",
+      "localized": {
+        "th": {
+          "title": "ติดต่อ Arotec | พัฒนาผลิตภัณฑ์และประสบการณ์ประสาทสัมผัส",
+          "description": "ติดต่อ Arotec ทางอีเมลเพื่อพูดคุยเกี่ยวกับการพัฒนาผลิตภัณฑ์ดูแลผิว กลิ่นหอม กลยุทธ์ประสาทสัมผัส และความร่วมมือ พร้อมดูข้อมูลสำนักงานในเอเชียและสหรัฐอเมริกา"
+        },
+        "en": {
+          "title": "Contact Arotec | Product Development & Sensory Projects",
+          "description": "Contact Arotec by email about skincare product development, fragrance, sensory strategy and collaboration. Find office information for Asia and the United States."
+        },
+        "ja": {
+          "title": "Arotecへのお問い合わせ | 製品開発・感覚体験のご相談",
+          "description": "スキンケア製品開発、フレグランス、感覚戦略、協業についてArotecへメールでご相談いただけます。アジアと米国の拠点情報も掲載しています。"
+        },
+        "zh-Hans": {
+          "title": "联系 Arotec | 产品开发与感官体验合作",
+          "description": "通过电子邮件联系 Arotec，讨论护肤产品开发、香氛、感官策略与合作，并查看亚洲和美国的办公地点信息。"
+        },
+        "zh-Hant": {
+          "title": "聯絡 Arotec | 產品開發與感官體驗合作",
+          "description": "透過電子郵件聯絡 Arotec，討論護膚產品開發、香氛、感官策略與合作，並查看亞洲和美國的辦公地點資訊。"
+        }
+      },
+      "grounding": [
+        "Develop or improve a product",
+        "Sensory strategy & consulting",
+        "Co-creation & innovation",
+        "Our locations",
+        "General inquiries: arotec@arotec-group.com"
+      ]
+    }
+  },
+  "strings": {
+    "en": {
+      "home": "Home",
+      "neuroSkin": "Neuro-Skin Science",
+      "coCreation": "Co-Creation",
+      "contact": "Get In Touch",
+      "primaryNavigation": "Primary navigation",
+      "languageNavigation": "Language selection",
+      "skipToContent": "Skip to content",
+      "currentLanguage": "Current language",
+      "cookiePolicy": "Cookie and browser-storage policy",
+      "storageSettings": "Storage settings",
+      "storageSettingsDescription": "Choose whether this browser remembers your language. Changes apply only to this browser.",
+      "rememberThisLanguage": "Remember this language for 180 days",
+      "useWithoutRemembering": "Use without remembering",
+      "savePreferences": "Save preferences",
+      "clearRememberedLanguage": "Clear remembered language",
+      "languageStorageExplanation": "If you choose to remember your language, this browser stores that choice for up to 180 days. You can clear it at any time.",
+      "closeStorageSettings": "Close storage settings",
+      "rememberedStatus": "Your language preference is saved in this browser.",
+      "notRememberedStatus": "Your language preference is not saved in this browser.",
+      "languageClearedStatus": "The remembered language has been cleared.",
+      "contactFormUnavailable": "This static preview cannot send form inquiries. Please contact Arotec by email at arotec@arotec-group.com.",
+      "emailContactAction": "Email Arotec",
+      "contactEmailLabel": "General inquiries",
+      "emailContactNote": "This link opens your email application. Your message is sent only when you send it there."
+    },
+    "th": {
+      "home": "หน้าแรก",
+      "neuroSkin": "วิทยาศาสตร์ประสาท–ผิวหนัง",
+      "coCreation": "ร่วมสร้างสรรค์",
+      "contact": "ติดต่อเรา",
+      "primaryNavigation": "เมนูหลัก",
+      "languageNavigation": "เลือกภาษา",
+      "skipToContent": "ข้ามไปยังเนื้อหา",
+      "currentLanguage": "ภาษาปัจจุบัน",
+      "cookiePolicy": "นโยบายคุกกี้และข้อมูลที่จัดเก็บในเบราว์เซอร์",
+      "storageSettings": "การตั้งค่าข้อมูลที่จัดเก็บ",
+      "storageSettingsDescription": "เลือกว่าจะให้เบราว์เซอร์นี้จดจำภาษาของคุณหรือไม่ การเปลี่ยนแปลงมีผลเฉพาะเบราว์เซอร์นี้",
+      "rememberThisLanguage": "จดจำภาษานี้ไว้ 180 วัน",
+      "useWithoutRemembering": "ใช้งานโดยไม่จดจำ",
+      "savePreferences": "บันทึกการตั้งค่า",
+      "clearRememberedLanguage": "ล้างภาษาที่จดจำไว้",
+      "languageStorageExplanation": "หากคุณเลือกให้จดจำภาษา เบราว์เซอร์นี้จะจัดเก็บตัวเลือกไว้สูงสุด 180 วัน คุณสามารถล้างข้อมูลนี้ได้ทุกเมื่อ",
+      "closeStorageSettings": "ปิดการตั้งค่าข้อมูลที่จัดเก็บ",
+      "rememberedStatus": "บันทึกภาษาที่คุณเลือกไว้ในเบราว์เซอร์นี้แล้ว",
+      "notRememberedStatus": "ไม่ได้บันทึกภาษาที่คุณเลือกไว้ในเบราว์เซอร์นี้",
+      "languageClearedStatus": "ล้างภาษาที่จดจำไว้แล้ว",
+      "contactFormUnavailable": "หน้าเว็บตัวอย่างแบบสแตติกนี้ไม่สามารถส่งแบบฟอร์มติดต่อได้ กรุณาติดต่อ Arotec ทางอีเมล arotec@arotec-group.com",
+      "emailContactAction": "ส่งอีเมลถึง Arotec",
+      "contactEmailLabel": "สอบถามทั่วไป",
+      "emailContactNote": "ลิงก์นี้จะเปิดแอปอีเมลของคุณ ข้อความจะถูกส่งเมื่อคุณกดส่งในแอปนั้นเท่านั้น"
+    },
+    "ja": {
+      "home": "ホーム",
+      "neuroSkin": "ニューロスキンサイエンス",
+      "coCreation": "共創",
+      "contact": "お問い合わせ",
+      "primaryNavigation": "メインナビゲーション",
+      "languageNavigation": "言語を選択",
+      "skipToContent": "本文へ移動",
+      "currentLanguage": "現在の言語",
+      "cookiePolicy": "Cookieとブラウザ保存データに関するポリシー",
+      "storageSettings": "保存データの設定",
+      "storageSettingsDescription": "このブラウザで言語を記憶するかどうかを選択できます。変更はこのブラウザにのみ適用されます。",
+      "rememberThisLanguage": "この言語を180日間記憶する",
+      "useWithoutRemembering": "記憶せずに使う",
+      "savePreferences": "設定を保存",
+      "clearRememberedLanguage": "記憶した言語を削除",
+      "languageStorageExplanation": "言語を記憶することを選択した場合、このブラウザはその選択を最長180日間保存します。いつでも削除できます。",
+      "closeStorageSettings": "保存データの設定を閉じる",
+      "rememberedStatus": "言語設定をこのブラウザに保存しました。",
+      "notRememberedStatus": "言語設定はこのブラウザに保存されていません。",
+      "languageClearedStatus": "記憶した言語を削除しました。",
+      "contactFormUnavailable": "この静的プレビューではお問い合わせフォームを送信できません。arotec@arotec-group.com 宛てにメールでArotecへお問い合わせください。",
+      "emailContactAction": "Arotecにメールを送る",
+      "contactEmailLabel": "一般のお問い合わせ",
+      "emailContactNote": "このリンクはメールアプリを開きます。メッセージはそのアプリで送信したときに送られます。"
+    },
+    "zh-Hans": {
+      "home": "首页",
+      "neuroSkin": "神经皮肤科学",
+      "coCreation": "共同创造",
+      "contact": "联系我们",
+      "primaryNavigation": "主导航",
+      "languageNavigation": "选择语言",
+      "skipToContent": "跳至内容",
+      "currentLanguage": "当前语言",
+      "cookiePolicy": "Cookie 与浏览器存储政策",
+      "storageSettings": "存储设置",
+      "storageSettingsDescription": "选择是否让此浏览器记住您的语言。更改仅适用于此浏览器。",
+      "rememberThisLanguage": "记住此语言 180 天",
+      "useWithoutRemembering": "使用但不记住",
+      "savePreferences": "保存偏好设置",
+      "clearRememberedLanguage": "清除已记住的语言",
+      "languageStorageExplanation": "如果您选择记住语言，此浏览器将保存该选择最多 180 天。您可以随时清除。",
+      "closeStorageSettings": "关闭存储设置",
+      "rememberedStatus": "您的语言偏好已保存在此浏览器中。",
+      "notRememberedStatus": "您的语言偏好未保存在此浏览器中。",
+      "languageClearedStatus": "已清除记住的语言。",
+      "contactFormUnavailable": "此静态预览无法发送联系表单。请通过 arotec@arotec-group.com 发送电子邮件联系 Arotec。",
+      "emailContactAction": "发送邮件给 Arotec",
+      "contactEmailLabel": "一般咨询",
+      "emailContactNote": "此链接会打开您的邮件应用。只有在该应用中发送邮件，您的消息才会发出。"
+    },
+    "zh-Hant": {
+      "home": "首頁",
+      "neuroSkin": "神經皮膚科學",
+      "coCreation": "共同創造",
+      "contact": "聯絡我們",
+      "primaryNavigation": "主導覽",
+      "languageNavigation": "選擇語言",
+      "skipToContent": "跳至內容",
+      "currentLanguage": "目前語言",
+      "cookiePolicy": "Cookie 與瀏覽器儲存政策",
+      "storageSettings": "儲存設定",
+      "storageSettingsDescription": "選擇是否讓此瀏覽器記住您的語言。變更僅適用於此瀏覽器。",
+      "rememberThisLanguage": "記住此語言 180 天",
+      "useWithoutRemembering": "使用但不記住",
+      "savePreferences": "儲存偏好設定",
+      "clearRememberedLanguage": "清除已記住的語言",
+      "languageStorageExplanation": "如果您選擇記住語言，此瀏覽器將儲存該選擇最多 180 天。您可以隨時清除。",
+      "closeStorageSettings": "關閉儲存設定",
+      "rememberedStatus": "您的語言偏好已儲存在此瀏覽器中。",
+      "notRememberedStatus": "您的語言偏好未儲存在此瀏覽器中。",
+      "languageClearedStatus": "已清除記住的語言。",
+      "contactFormUnavailable": "此靜態預覽無法送出聯絡表單。請透過 arotec@arotec-group.com 寄送電子郵件聯絡 Arotec。",
+      "emailContactAction": "寄送郵件給 Arotec",
+      "contactEmailLabel": "一般詢問",
+      "emailContactNote": "此連結會開啟您的郵件應用程式。只有在該應用程式中寄出郵件，您的訊息才會送出。"
+    }
+  },
+  "ownerReview": [
+    "Confirm the final legal entity/controller and privacy contact before publishing a cookie/browser-storage policy. Existing contact details are factual source copy, not independent verification.",
+    "Confirm the public service scope and terminology in each language, especially neurocosmetics ODM and the Japanese/Chinese/Thai technical terms. No certification, treatment efficacy, production capacity or delivery guarantee has been added.",
+    "Contact metadata promises only an email route. The source form's same-origin inquiry service must not be represented as functional on the static Pages pilot.",
+    "The 180-day language-storage strings describe the proposed pilot preference feature and must be used only when matching expiry/clear behavior is implemented and tested.",
+    "arotec-group.com is a future domain only. Do not change canonicalBase or add CNAME/DNS until a separate reviewed migration."
+  ],
+  "routingNotes": [
+    "Generate exactly one absolute self canonical per localized route using canonicalBase + locale + '/' + routePath.",
+    "Use all five locale alternates reciprocally for each page, plus x-default mapped to the en route.",
+    "Root Neuro-Skin-Science.html is only a redirect. Use pages/Neuro-Skin-Science.html as the substantive generation source for localized Neuro-Skin-Science.html.",
+    "Localized metadata overrides must remain authoritative after shared-shell/localization scripts run; do not reuse the source catalog's generic website-concept title/description.",
+    "Use real anchor links for language changes and pilot internal navigation so the 20 routes work with JavaScript disabled."
+  ],
+  "sourceEvidence": [
+    {
+      "path": "index.html",
+      "bytes": 29318,
+      "sha256": "703434d7f833e5fedee8238c68cdffa1b5af95ce6c12c717dcde247933e769dd"
+    },
+    {
+      "path": "Neuro-Skin-Science.html",
+      "bytes": 1729,
+      "sha256": "98536f253db6c09ad047533e8d09b1b2c7eb9b3c1c5b9c6955e359c4ff13dacb",
+      "role": "redirect-only"
+    },
+    {
+      "path": "pages/Neuro-Skin-Science.html",
+      "bytes": 52349,
+      "sha256": "3f03e0ceb17d4e283c5cd6d0ff7c9c930c7017a38e73275e915a2c19f21bb627"
+    },
+    {
+      "path": "pages/co-creation.html",
+      "bytes": 14679,
+      "sha256": "58880a6c8ef11c47c8983c9d29756c36929e560a8f55cc514027a1b77fcbf78c"
+    },
+    {
+      "path": "pages/get-in-touch.html",
+      "bytes": 14356,
+      "sha256": "2e327b1fcf9a59496f0f0896964fd30f9e785be4d608607fe542befb25fbd8c3"
+    }
+  ]
+}

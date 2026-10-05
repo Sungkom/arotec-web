@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-owner-review-and-runtime-validation-required",
+  "effectiveDraftDate": "2026-10-05",
+  "publicBaseUrl": "https://sungkom.github.io/arotec-web/",
+  "plainTextOnly": true,
+  "scope": {
+    "localizedContentPages": 20,
+    "localizedPolicyPages": 5,
+    "neutralLanguageChooserPages": 1,
+    "totalPages": 26,
+    "locales": ["th", "en", "ja", "zh-Hans", "zh-Hant"],
+    "pageFamilies": ["homepage", "Neuro-Skin Science", "Co-Creation", "Get In Touch", "cookie and browser-storage policy", "neutral language chooser"],
+    "legacyRoutesAndMemberAdminExcluded": true,
+    "explicitLocaleUrlAlwaysWins": true,
+    "policyFilenameRecommendation": "cookies.html"
+  },
+  "implementationContract": {
+    "storageType": "localStorage",
+    "key": "arotec-storage-preferences-v1",
+    "version": 1,
+    "maximumValidityDays": 180,
+    "defaultOptionalEnabled": false,
+    "initialRecordOnlyAfterExplicitSaveOrDecline": true,
+    "enabledLanguageNavigationRenewsRecord": true,
+    "renewal": "An unmodified primary click on a normal language link, while remembering is enabled, updates the remembered locale and starts a new validity period of up to 180 days.",
+    "recordContent": ["version: 1", "rememberLanguage: boolean", "locale: route locale when enabled or null when off", "savedAt: epoch milliseconds", "expiresAt: epoch milliseconds"],
+    "offRecordHasNoRememberedLocale": true,
+    "withdrawal": "Persist a bounded off-choice record with no remembered locale using the same key. If saving it fails, attempt removal of this key and verify remembering is off. If storage is inaccessible, do not claim deletion or a persistent off choice.",
+    "invalidOrExpired": "Ignore and remove the record when the preference is next checked; optional storage defaults off.",
+    "storageUnavailable": "Pages and explicit language links remain usable; the choice cannot be remembered between page visits.",
+    "legacyLanguageKey": "as-site-language",
+    "legacyLanguageKeyCodeExpiry": "No built-in expiry found in legacy source; legacy runtimes are omitted from the new pilot."
+  },
+  "verifiedSourceFindings": {
+    "storageAuditScope": "433 tracked authored root/assets/pages HTML, JS and CSS files; legacy pilot resource closure of 59 resources. Browser and server response cookies were not established by source inspection alone.",
+    "noRecognizedAnalyticsOrIframeSourceInAuditedScope": true,
+    "googleFonts": "Existing public source requests fonts.googleapis.com and fonts.gstatic.com; some local font files also exist. Pilot font requests must be verified against the generated pages.",
+    "legacyLucide": "Legacy homepage references unpkg.com for Lucide. This external script is not described as necessary storage and must be omitted or localized in the new pilot.",
+    "publishedContact": "arotec@arotec-group.com",
+    "publishedContactVerification": "Existing source contains this mailto address; deliverability and designation as privacy contact are not verified.",
+    "ownerReviewRequired": ["Legal controller name and address", "Privacy contact designation", "Relevant jurisdictions and legal basis", "Hosting and font-provider request logging and retention", "Any actual server or provider cookies discovered in runtime verification"]
+  },
+  "locales": {
+    "en": {
+      "title": "Cookie and browser-storage policy | Arotec",
+      "description": "Draft information about optional remembered-language storage and external font requests on Arotec’s five-language pilot pages, with controls to keep storage off or clear a choice.",
+      "heading": "Cookie and browser-storage policy",
+      "dateLabel": "Draft effective date: 5 October 2026",
+      "intro": "This draft explains browser storage used by the new localized Arotec pilot pages. Remembering your language is optional and starts off. Please review the owner details and provider information listed below before publication.",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "Pages covered by this draft",
+          "paragraphs": [
+            "This policy covers the new homepage, Neuro-Skin Science, Co-Creation, Get In Touch and this policy page in Thai, English, Japanese, Simplified Chinese and Traditional Chinese: 25 localized pages, plus the neutral language chooser, making 26 pilot pages in total.",
+            "Other existing pages, member services and administration pages are outside this pilot policy. Older language-switching code uses the localStorage key as-site-language without a built-in expiry. That code is omitted from the new pilot pages; a previously stored legacy key may remain in your browser until you clear it."
+          ]
+        },
+        {
+          "id": "optional-language",
+          "heading": "Optional remembered language",
+          "paragraphs": [
+            "The pilot uses one first-party localStorage key, arotec-storage-preferences-v1, for an explicit language-storage choice. It does not need this record to display a page or follow a language link. The record contains version 1, whether remembering is enabled, a remembered locale only when enabled, and savedAt and expiresAt timestamps. It does not contain your name, contact-form message, password or payment-card details.",
+            "A record is first written when you explicitly save a choice or choose to use the pages without remembering. An off-choice record retains no remembered language and helps the pages respect your decision. While remembering is enabled, selecting another language with an ordinary language-link click updates the remembered locale and starts a new validity period of up to 180 days. A page URL that names a language always takes priority. Only the language-selection landing page may use a valid remembered language to choose a destination.",
+            "Each saved record is valid for at most 180 days from the latest saved choice or opted-in language-link update. localStorage has no automatic browser expiry: the pilot ignores and removes an invalid or expired record when it next checks the preference. Optional remembering then defaults off."
+          ]
+        },
+        {
+          "id": "choices",
+          "heading": "Change or clear your choice",
+          "paragraphs": [
+            "Use Storage settings to reopen the controls. The Remember this language for 180 days checkbox is off by default. Save preferences records your explicit selection; Use without remembering records an off choice. Opening, scrolling or closing the notice does not turn remembering on.",
+            "Clear remembered language records remembering as off with no saved locale, using the same key. If saving the off choice fails, the site attempts to remove its own preference key and verify that remembering is off. If removal cannot be confirmed because storage is inaccessible, remembering is off for the current page, but the previous saved preference may return after a reload or later visit. The site cannot promise deletion or a persistent off choice in that situation. Otherwise, future visits and reloads respect the valid saved choice or verified removal. The pages and language links still work when storage is blocked or unavailable.",
+            "You can also remove site storage using your browser settings. These controls manage this pilot’s own preference record; they cannot promise to remove storage set by other sites or inaccessible third parties."
+          ]
+        },
+        {
+          "id": "requests",
+          "heading": "Fonts and hosting requests",
+          "paragraphs": [
+            "The pilot does not enable optional analytics, marketing trackers or embedded media. Some fonts are provided by local files; where Google Fonts is used, loading a page requests font resources from fonts.googleapis.com and fonts.gstatic.com. The provider may receive the IP address and request information needed to serve those resources. A font request is different from this optional language-storage record.",
+            "GitHub Pages hosts the current pilot. Hosting and font providers may process or log requests under their own terms. Their exact logging, retention and any server-side cookie behavior require owner review and runtime verification; this draft does not claim that no cookies exist anywhere on the wider site."
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "Contact and review status",
+          "paragraphs": [
+            "The existing website publishes arotec@arotec-group.com as a contact email. The owner must confirm that it is the correct privacy contact, and supply the legal entity name and address before this draft is finalized. Email delivery has not been tested.",
+            "This is a factual implementation draft, not a guarantee of legal compliance. The owner must review applicable jurisdictions, lawful bases, provider arrangements and any additional storage found before publication."
+          ]
+        }
+      ],
+      "storageTable": {
+        "heading": "Storage used by the new pilot",
+        "columns": ["Key", "Type and provider", "Purpose", "Validity"],
+        "rows": [
+          ["arotec-storage-preferences-v1", "localStorage; this Arotec website (first party)", "Remember an explicit on/off language-storage choice; save a locale only when remembering is enabled", "Up to 180 days; invalid or expired records are removed when next checked"]
+        ]
+      },
+      "ownerReview": {
+        "heading": "Owner details to confirm before publication",
+        "items": ["Legal entity name and address", "Privacy contact: confirm arotec@arotec-group.com", "Applicable jurisdictions and lawful basis for each purpose", "Hosting and font-provider request processing, logs and retention", "Any additional browser or server storage found during runtime checks"]
+      },
+      "controls": {
+        "noticeTitle": "Language storage is optional",
+        "noticeBody": "These pages work without remembering a language. You can choose to remember your language for up to 180 days. No optional analytics or marketing trackers are enabled by this pilot.",
+        "settingsTitle": "Storage settings",
+        "rememberLabel": "Remember this language for 180 days",
+        "rememberHelp": "Off by default. A language named in the page URL always takes priority.",
+        "save": "Save preferences",
+        "decline": "Use without remembering",
+        "withdraw": "Clear remembered language",
+        "reopen": "Storage settings",
+        "close": "Close storage settings",
+        "policyLink": "Cookie and browser-storage policy",
+        "statusOn": "Remembered language is on for up to 180 days.",
+        "statusOff": "Remembered language is off.",
+        "storageUnavailable": "Browser storage is unavailable. These pages still work, but your choice cannot be remembered between visits.",
+        "expiredOrInvalid": "The previous record is invalid or expired. Remembered language is off."
+      }
+    },
+    "th": {
+      "title": "นโยบายคุกกี้และการจัดเก็บข้อมูลในเบราว์เซอร์ | Arotec",
+      "description": "ร่างข้อมูลการจดจำภาษาซึ่งเลือกเปิดได้ และการเรียกใช้ฟอนต์ภายนอกบนหน้านำร่อง Arotec ทั้งห้าภาษา พร้อมตัวเลือกปิดหรือล้างภาษาที่จดจำไว้",
+      "heading": "นโยบายคุกกี้และการจัดเก็บข้อมูลในเบราว์เซอร์",
+      "dateLabel": "วันที่มีผลของร่าง: 5 ตุลาคม 2569",
+      "intro": "ร่างนี้อธิบายการจัดเก็บข้อมูลในเบราว์เซอร์ของหน้านำร่อง Arotec ที่จัดทำใหม่ในหลายภาษา การจดจำภาษาเป็นตัวเลือกและปิดไว้ตั้งแต่เริ่มต้น เจ้าของเว็บไซต์ต้องตรวจสอบข้อมูลผู้รับผิดชอบและผู้ให้บริการที่ระบุด้านล่างก่อนเผยแพร่",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "หน้าที่อยู่ในขอบเขตของร่างนี้",
+          "paragraphs": [
+            "นโยบายนี้ครอบคลุมหน้าแรก Neuro-Skin Science, Co-Creation, Get In Touch และหน้านโยบายนี้ที่จัดทำใหม่ในภาษาไทย อังกฤษ ญี่ปุ่น จีนตัวย่อ และจีนตัวเต็ม รวม 25 หน้าตามภาษา และหน้ารวมสำหรับเลือกภาษาอีก 1 หน้า รวมชุดนำร่องทั้งหมด 26 หน้า",
+            "หน้าเดิมอื่น ๆ บริการสมาชิก และหน้าผู้ดูแลระบบอยู่นอกขอบเขตนโยบายสำหรับชุดนำร่องนี้ โค้ดสลับภาษาเดิมใช้คีย์ localStorage ชื่อ as-site-language โดยไม่กำหนดวันหมดอายุไว้ในโค้ด หน้านำร่องใหม่ไม่โหลดโค้ดนั้น แต่คีย์เดิมที่เคยบันทึกไว้อาจยังอยู่ในเบราว์เซอร์จนกว่าจะล้างข้อมูล"
+          ]
+        },
+        {
+          "id": "optional-language",
+          "heading": "ตัวเลือกการจดจำภาษา",
+          "paragraphs": [
+            "ชุดนำร่องใช้คีย์ localStorage ของเว็บไซต์นี้เพียงคีย์เดียว คือ arotec-storage-preferences-v1 เพื่อบันทึกตัวเลือกการจดจำภาษาที่ผู้ใช้เลือกอย่างชัดเจน การแสดงหน้าเว็บและการใช้ลิงก์ภาษาไม่ต้องอาศัยข้อมูลนี้ ระเบียนประกอบด้วยเวอร์ชัน 1 ตัวเลือกเปิดหรือปิด ภาษาที่จดจำเฉพาะเมื่อเปิดใช้ และเวลาที่บันทึกกับเวลาหมดอายุในฟิลด์ savedAt และ expiresAt ไม่บันทึกชื่อ ข้อความในแบบฟอร์มติดต่อ รหัสผ่าน หรือข้อมูลบัตรชำระเงิน",
+            "ระบบบันทึกระเบียนครั้งแรกเมื่อคุณกดบันทึกตัวเลือกหรือเลือกใช้งานโดยไม่จดจำอย่างชัดเจน ระเบียนตัวเลือกปิดไม่เก็บภาษาที่จดจำ และช่วยให้หน้าเว็บเคารพการเลือกของคุณ เมื่อเปิดการจดจำไว้ การคลิกลิงก์ภาษาแบบปกติเพื่อเปลี่ยนภาษาจะปรับภาษาที่จดจำและเริ่มระยะเวลาที่ใช้ได้รอบใหม่ไม่เกิน 180 วัน ภาษาที่ระบุใน URL ของหน้าเว็บมีลำดับความสำคัญเสมอ เฉพาะหน้ารวมสำหรับเลือกภาษาเท่านั้นที่อาจใช้ภาษาที่จดจำซึ่งยังใช้ได้เพื่อเลือกหน้าปลายทาง",
+            "ระเบียนแต่ละรายการใช้ได้ไม่เกิน 180 วันนับจากการบันทึกตัวเลือกหรือการคลิกลิงก์ภาษาครั้งล่าสุดขณะที่เปิดการจดจำ เบราว์เซอร์ไม่ได้ทำให้ localStorage หมดอายุโดยอัตโนมัติ ชุดนำร่องจะไม่ใช้และจะลบระเบียนที่ไม่ถูกต้องหรือหมดอายุเมื่อตรวจสอบตัวเลือกครั้งถัดไป จากนั้นการจดจำภาษาจะกลับเป็นปิด"
+          ]
+        },
+        {
+          "id": "choices",
+          "heading": "เปลี่ยนหรือล้างตัวเลือก",
+          "paragraphs": [
+            "เปิดตัวควบคุมได้อีกครั้งผ่าน การตั้งค่าข้อมูลที่จัดเก็บ ช่อง จดจำภาษานี้ไว้ 180 วัน ปิดไว้ตั้งแต่เริ่มต้น ปุ่ม บันทึกการตั้งค่า จะบันทึกสิ่งที่คุณเลือกอย่างชัดเจน ส่วน ใช้งานโดยไม่จดจำ จะบันทึกตัวเลือกปิด การเปิด การเลื่อนหน้า หรือการปิดข้อความแจ้งไม่ทำให้การจดจำภาษาเปิดใช้งาน",
+            "ล้างภาษาที่จดจำไว้ จะบันทึกตัวเลือกปิดโดยไม่เก็บภาษาไว้ด้วยคีย์เดิม หากบันทึกตัวเลือกปิดไม่สำเร็จ เว็บไซต์จะพยายามลบคีย์ตัวเลือกของตนเองและตรวจสอบว่าการจดจำปิดอยู่ หากยืนยันการลบไม่ได้เพราะไม่สามารถเข้าถึงการจัดเก็บ การจดจำจะปิดสำหรับหน้าปัจจุบัน แต่ตัวเลือกเดิมที่บันทึกไว้อาจกลับมาเมื่อโหลดหน้าใหม่หรือเข้าชมภายหลัง ในกรณีนี้เว็บไซต์ไม่สามารถรับประกันการลบหรือการคงตัวเลือกปิดไว้ข้ามการเข้าชมได้ ในกรณีอื่น การเข้าชมครั้งถัดไปและการโหลดหน้าใหม่จะเคารพตัวเลือกที่บันทึกไว้และยังใช้ได้หรือการลบที่ยืนยันแล้ว หน้าเว็บและลิงก์ภาษายังใช้งานได้แม้การจัดเก็บถูกปิดกั้นหรือไม่พร้อมใช้งาน",
+            "คุณล้างข้อมูลเว็บไซต์ผ่านการตั้งค่าของเบราว์เซอร์ได้เช่นกัน ตัวควบคุมเหล่านี้จัดการเฉพาะระเบียนตัวเลือกของชุดนำร่องนี้ และไม่สามารถรับประกันการลบข้อมูลที่เว็บไซต์อื่นหรือบุคคลที่สามซึ่งระบบเข้าไม่ถึงเป็นผู้บันทึก"
+          ]
+        },
+        {
+          "id": "requests",
+          "heading": "คำขอโหลดฟอนต์และบริการโฮสติ้ง",
+          "paragraphs": [
+            "ชุดนำร่องไม่ได้เปิดใช้ระบบวิเคราะห์ ตัวติดตามการตลาด หรือสื่อฝังตัวที่เป็นตัวเลือก ฟอนต์บางส่วนมาจากไฟล์ภายในเว็บไซต์ ในหน้าที่ใช้ Google Fonts การโหลดหน้าจะเรียกทรัพยากรฟอนต์จาก fonts.googleapis.com และ fonts.gstatic.com ผู้ให้บริการอาจได้รับที่อยู่ IP และข้อมูลคำขอที่ใช้เพื่อส่งทรัพยากรเหล่านั้น คำขอโหลดฟอนต์เป็นคนละส่วนกับระเบียนตัวเลือกการจดจำภาษา",
+            "ชุดนำร่องปัจจุบันใช้ GitHub Pages เป็นโฮสติ้ง ผู้ให้บริการโฮสติ้งและฟอนต์อาจประมวลผลหรือบันทึกคำขอตามข้อกำหนดของตน รายละเอียดการบันทึก ระยะเวลาเก็บข้อมูล และพฤติกรรมคุกกี้ฝั่งเซิร์ฟเวอร์ต้องผ่านการตรวจสอบของเจ้าของเว็บไซต์และการทดสอบขณะใช้งานจริง ร่างนี้ไม่ได้กล่าวอ้างว่าเว็บไซต์ส่วนอื่นทั้งหมดไม่มีคุกกี้"
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "การติดต่อและสถานะการตรวจสอบ",
+          "paragraphs": [
+            "เว็บไซต์เดิมแสดงอีเมลติดต่อ arotec@arotec-group.com เจ้าของเว็บไซต์ต้องยืนยันว่าเป็นช่องทางติดต่อด้านความเป็นส่วนตัวที่ถูกต้อง และให้ชื่อนิติบุคคลกับที่อยู่ก่อนจัดทำร่างฉบับสมบูรณ์ ยังไม่ได้ทดสอบการส่งอีเมลถึงที่อยู่นี้",
+            "เอกสารนี้เป็นร่างตามข้อเท็จจริงของการพัฒนา ไม่ใช่การรับประกันว่าปฏิบัติตามกฎหมายครบถ้วน เจ้าของเว็บไซต์ต้องตรวจสอบเขตอำนาจกฎหมายที่เกี่ยวข้อง ฐานทางกฎหมาย ข้อตกลงกับผู้ให้บริการ และการจัดเก็บข้อมูลเพิ่มเติมที่พบก่อนเผยแพร่"
+          ]
+        }
+      ],
+      "storageTable": {
+        "heading": "การจัดเก็บข้อมูลที่ใช้ในชุดนำร่องใหม่",
+        "columns": ["คีย์", "ประเภทและผู้ให้บริการ", "วัตถุประสงค์", "ระยะเวลาที่ใช้ได้"],
+        "rows": [
+          ["arotec-storage-preferences-v1", "localStorage ของเว็บไซต์ Arotec นี้", "จดจำตัวเลือกเปิดหรือปิดที่เลือกอย่างชัดเจน และเก็บภาษาเฉพาะเมื่อเปิดการจดจำ", "ไม่เกิน 180 วัน ระเบียนที่ไม่ถูกต้องหรือหมดอายุจะถูกลบเมื่อตรวจสอบครั้งถัดไป"]
+        ]
+      },
+      "ownerReview": {
+        "heading": "ข้อมูลที่เจ้าของเว็บไซต์ต้องยืนยันก่อนเผยแพร่",
+        "items": ["ชื่อนิติบุคคลและที่อยู่", "ยืนยันอีเมลติดต่อด้านความเป็นส่วนตัว arotec@arotec-group.com", "เขตอำนาจกฎหมายที่เกี่ยวข้องและฐานทางกฎหมายของแต่ละวัตถุประสงค์", "การประมวลผลคำขอ บันทึก และระยะเวลาเก็บข้อมูลของผู้ให้บริการโฮสติ้งและฟอนต์", "ข้อมูลในเบราว์เซอร์หรือฝั่งเซิร์ฟเวอร์เพิ่มเติมที่พบระหว่างการทดสอบขณะใช้งาน"]
+      },
+      "controls": {
+        "noticeTitle": "การจดจำภาษาเป็นตัวเลือก",
+        "noticeBody": "หน้าเว็บเหล่านี้ใช้งานได้โดยไม่ต้องจดจำภาษา คุณเลือกให้จดจำภาษาได้ไม่เกิน 180 วัน ชุดนำร่องนี้ไม่ได้เปิดใช้ระบบวิเคราะห์หรือตัวติดตามการตลาดที่เป็นตัวเลือก",
+        "settingsTitle": "การตั้งค่าข้อมูลที่จัดเก็บ",
+        "rememberLabel": "จดจำภาษานี้ไว้ 180 วัน",
+        "rememberHelp": "ปิดไว้ตั้งแต่เริ่มต้น ภาษาที่ระบุใน URL ของหน้ามีลำดับความสำคัญเสมอ",
+        "save": "บันทึกการตั้งค่า",
+        "decline": "ใช้งานโดยไม่จดจำ",
+        "withdraw": "ล้างภาษาที่จดจำไว้",
+        "reopen": "การตั้งค่าข้อมูลที่จัดเก็บ",
+        "close": "ปิดการตั้งค่าข้อมูลที่จัดเก็บ",
+        "policyLink": "นโยบายคุกกี้และข้อมูลที่จัดเก็บในเบราว์เซอร์",
+        "statusOn": "เปิดการจดจำภาษาแล้ว ใช้ได้ไม่เกิน 180 วัน",
+        "statusOff": "การจดจำภาษาปิดอยู่",
+        "storageUnavailable": "ไม่สามารถใช้การจัดเก็บข้อมูลในเบราว์เซอร์ได้ หน้าเว็บยังใช้งานได้ แต่ไม่สามารถจดจำตัวเลือกข้ามการเข้าชมได้",
+        "expiredOrInvalid": "ระเบียนเดิมไม่ถูกต้องหรือหมดอายุ การจดจำภาษาปิดอยู่"
+      }
+    },
+    "ja": {
+      "title": "Cookie とブラウザー保存の方針 | Arotec",
+      "description": "Arotec の5言語パイロットページにおける任意の言語記憶と外部フォントのリクエストについての草案。保存をオフにする、または記憶した言語を消去する操作を案内します。",
+      "heading": "Cookie とブラウザー保存の方針",
+      "dateLabel": "草案の適用日：2026年10月5日",
+      "intro": "この草案は、新しい多言語 Arotec パイロットページのブラウザー保存について説明します。言語の記憶は任意で、初期状態ではオフです。公開前に、運営者の情報と以下のサービス提供者の情報を確認する必要があります。",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "この草案の対象ページ",
+          "paragraphs": [
+            "対象は、新しいホーム、Neuro-Skin Science、Co-Creation、Get In Touch、およびこの方針の各ページです。タイ語、英語、日本語、簡体字中国語、繁体字中国語の25ページに、言語選択の入口ページを加えた合計26のパイロットページを対象とします。",
+            "その他の既存ページ、会員サービス、管理者ページは、このパイロット向け方針の対象外です。旧言語切替コードは、有効期限を組み込まずに localStorage の as-site-language キーを使用します。新しいパイロットページではそのコードを読み込みませんが、以前に保存された旧キーは、利用者が消去するまでブラウザーに残る場合があります。"
+          ]
+        },
+        {
+          "id": "optional-language",
+          "heading": "任意の言語記憶",
+          "paragraphs": [
+            "このパイロットでは、明示的な言語保存の選択のために、このサイト自身の localStorage キー arotec-storage-preferences-v1 を1つ使用します。ページの表示や言語リンクの利用に、この記録は必要ありません。記録にはバージョン1、記憶のオンまたはオフ、オンの場合のみ記憶する言語、savedAt と expiresAt の時刻が含まれます。氏名、問い合わせフォームの本文、パスワード、決済カード情報は含みません。",
+            "記録は、設定の保存または記憶せずに使うことを明示的に選んだ際に初めて書き込まれます。オフの記録には記憶する言語を残さず、選択を尊重するために使用します。記憶がオンの間に通常の言語リンクをクリックして別の言語を選ぶと、記憶する言語を更新し、最大180日の新しい有効期間が始まります。ページの URL に指定された言語が常に優先されます。有効な記憶済み言語を移動先の選択に利用できるのは、言語選択の入口ページだけです。",
+            "各記録の有効期間は、最後に設定を保存した時点、または記憶がオンの状態で言語リンクから更新した時点から最大180日です。localStorage はブラウザーによって自動的に期限切れにはなりません。無効または期限切れの記録は、次に設定を確認した際に使用せず消去します。その後、任意の言語記憶はオフになります。"
+          ]
+        },
+        {
+          "id": "choices",
+          "heading": "選択の変更と消去",
+          "paragraphs": [
+            "「保存データの設定」から操作を再び開けます。「この言語を180日間記憶する」のチェックボックスは初期状態でオフです。「設定を保存」は明示的な選択を保存し、「記憶せずに使う」はオフの選択を保存します。通知を開く、スクロールする、閉じるだけでは記憶はオンになりません。",
+            "「記憶した言語を削除」は、言語を残さず、同じキーにオフの選択を記録します。オフの保存に失敗した場合、サイトは自身の設定キーの削除を試み、記憶がオフであることを確認します。保存にアクセスできず削除を確認できない場合は、現在のページでは記憶をオフにしますが、再読み込みやその後の訪問で以前の保存済み設定が戻る場合があります。この場合、削除やオフ選択の継続を保証できません。それ以外の場合、以後の訪問と再読み込みでは、有効な保存済みの選択または確認済みの削除を尊重します。保存がブロックされている、または利用できない場合でも、ページと言語リンクは機能します。",
+            "ブラウザーの設定からサイトの保存データを消去することもできます。この操作が管理するのは、当パイロット自身の設定記録です。他のサイトやアクセスできない第三者が保存したデータの削除は保証できません。"
+          ]
+        },
+        {
+          "id": "requests",
+          "heading": "フォントとホスティングのリクエスト",
+          "paragraphs": [
+            "このパイロットでは、任意のアクセス解析、マーケティング用トラッカー、埋め込みメディアを有効にしません。一部のフォントはサイト内のファイルから提供されます。Google Fonts を使用する場合、ページの読み込み時に fonts.googleapis.com と fonts.gstatic.com へフォントのリソースを要求します。提供者は、それらを配信するために IP アドレスとリクエスト情報を受け取る場合があります。フォントのリクエストは、この任意の言語保存の記録とは別です。",
+            "現在のパイロットは GitHub Pages でホストされます。ホスティングとフォントの提供者は、それぞれの条件に従ってリクエストを処理または記録する場合があります。具体的なログ、保管期間、サーバー側の Cookie の動作については、運営者の確認と実行時の検証が必要です。この草案は、サイト全体のどこにも Cookie がないと主張するものではありません。"
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "連絡先と確認状況",
+          "paragraphs": [
+            "既存のサイトは連絡先として arotec@arotec-group.com を掲載しています。運営者は、このアドレスが適切なプライバシー窓口であることを確認し、草案を確定する前に法人名と所在地を提示する必要があります。このアドレスへのメール到達はテストしていません。",
+            "これは実装上の事実に基づく草案であり、法令遵守を保証するものではありません。公開前に、運営者は適用される法域、法的根拠、サービス提供者との取り決め、および追加で見つかった保存について確認する必要があります。"
+          ]
+        }
+      ],
+      "storageTable": {
+        "heading": "新しいパイロットで使用する保存",
+        "columns": ["キー", "種類と提供者", "目的", "有効期間"],
+        "rows": [
+          ["arotec-storage-preferences-v1", "localStorage、この Arotec サイト自身", "明示的な言語記憶のオン・オフを保持し、オンの場合だけ言語を保存", "最大180日。無効または期限切れの記録は次の確認時に消去"]
+        ]
+      },
+      "ownerReview": {
+        "heading": "公開前に運営者が確認する情報",
+        "items": ["法人名と所在地", "プライバシー窓口としての arotec@arotec-group.com の確認", "適用法域と目的ごとの法的根拠", "ホスティング・フォント提供者によるリクエスト処理、ログ、保管期間", "実行時の確認で見つかった追加のブラウザーまたはサーバーの保存"]
+      },
+      "controls": {
+        "noticeTitle": "言語の記憶は任意です",
+        "noticeBody": "言語を記憶しなくても、このページは利用できます。最大180日間、言語を記憶することを選べます。このパイロットは任意のアクセス解析やマーケティング用トラッカーを有効にしません。",
+        "settingsTitle": "保存データの設定",
+        "rememberLabel": "この言語を180日間記憶する",
+        "rememberHelp": "初期状態ではオフです。ページ URL の言語が常に優先されます。",
+        "save": "設定を保存",
+        "decline": "記憶せずに使う",
+        "withdraw": "記憶した言語を削除",
+        "reopen": "保存データの設定",
+        "close": "保存データの設定を閉じる",
+        "policyLink": "Cookieとブラウザ保存データに関するポリシー",
+        "statusOn": "言語記憶はオンです。有効期間は最大180日です。",
+        "statusOff": "言語記憶はオフです。",
+        "storageUnavailable": "ブラウザー保存を利用できません。ページは利用できますが、訪問間で選択を記憶できません。",
+        "expiredOrInvalid": "以前の記録は無効または期限切れです。言語記憶はオフです。"
+      }
+    },
+    "zh-Hans": {
+      "title": "Cookie 与浏览器存储政策 | Arotec",
+      "description": "介绍 Arotec 五种语言试点页面的可选语言记忆、外部字体请求，以及保持关闭或清除已记忆语言的控制方式。本政策为待审核草案。",
+      "heading": "Cookie 与浏览器存储政策",
+      "dateLabel": "草案生效日期：2026年10月5日",
+      "intro": "本草案说明新版 Arotec 多语言试点页面使用的浏览器存储。语言记忆为可选功能，默认关闭。发布前，网站所有者需要审核下方的责任主体与服务提供者信息。",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "本草案涵盖的页面",
+          "paragraphs": [
+            "本政策涵盖新建的首页、Neuro-Skin Science、Co-Creation、Get In Touch 和本政策页面，语言包括泰语、英语、日语、简体中文和繁体中文。这25个本地化页面加上独立的语言选择入口页，共计26个试点页面。",
+            "其他现有页面、会员服务和管理页面不属于本试点政策的范围。旧版语言切换代码使用 localStorage 键 as-site-language，代码中没有内置到期时间。新试点页面不加载该代码，但以前保存的旧键可能仍留在浏览器中，直到您清除它。"
+          ]
+        },
+        {
+          "id": "optional-language",
+          "heading": "可选的语言记忆",
+          "paragraphs": [
+            "试点使用一个本网站的第一方 localStorage 键 arotec-storage-preferences-v1，保存您明确作出的语言存储选择。显示页面或使用语言链接不需要这条记录。记录包含版本1、是否启用记忆、仅在启用时保存的语言，以及 savedAt 和 expiresAt 时间戳。它不包含姓名、联系表单内容、密码或支付卡信息。",
+            "当您明确保存选择或选择使用但不记住时，系统才首次写入记录。关闭记录不保留已记忆的语言，用于尊重您的选择。启用记忆后，通过普通语言链接点击选择另一种语言，会更新已记忆的语言，并开始新的有效期，最长180天。页面 URL 中明确指定的语言始终优先。只有语言选择入口页可以使用有效的已记忆语言来选择目标页面。",
+            "每条记录从最近一次保存选择或启用记忆时通过语言链接更新之日起，有效期最多为180天。localStorage 不会由浏览器自动到期：试点会在下次检查偏好时忽略并删除无效或过期记录，随后可选语言记忆恢复为关闭状态。"
+          ]
+        },
+        {
+          "id": "choices",
+          "heading": "修改或清除选择",
+          "paragraphs": [
+            "通过“存储设置”可重新打开控制选项。“记住此语言 180 天”复选框默认关闭。“保存偏好设置”会记录您的明确选择，“使用但不记住”会记录关闭选择。仅打开、滚动或关闭提示不会启用语言记忆。",
+            "“清除已记住的语言”会使用同一个键记录关闭选择，不再保存语言。如果保存关闭选择失败，网站会尝试删除自己的偏好键，并验证记忆已关闭。如果存储无法访问而不能确认删除，当前页面会关闭记忆，但之前保存的偏好可能在重新加载或之后的访问中恢复。在这种情况下，网站不能保证删除或持续保持关闭选择。在其他情况下，以后的访问和重新加载会遵守有效的已保存选择或已确认的删除。即使存储被阻止或不可用，页面和语言链接仍可使用。",
+            "您也可以通过浏览器设置删除网站存储。这些控制仅管理本试点自己的偏好记录，不能保证删除其他网站或无法访问的第三方设置的存储。"
+          ]
+        },
+        {
+          "id": "requests",
+          "heading": "字体与托管请求",
+          "paragraphs": [
+            "试点不启用可选分析工具、营销跟踪器或嵌入式媒体。部分字体来自网站本地文件；使用 Google Fonts 时，加载页面会向 fonts.googleapis.com 和 fonts.gstatic.com 请求字体资源。提供者可能收到用于提供这些资源的 IP 地址和请求信息。字体请求与可选语言存储记录是不同的事项。",
+            "当前试点由 GitHub Pages 托管。托管和字体提供者可能按各自条款处理或记录请求。具体日志、保留期限和服务器端 Cookie 行为需要网站所有者审核并进行运行时验证。本草案不声称整个网站的所有部分都没有 Cookie。"
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "联系方式与审核状态",
+          "paragraphs": [
+            "现有网站公布的联系邮箱为 arotec@arotec-group.com。网站所有者需要确认它是正确的隐私联系渠道，并在草案定稿前提供法律实体名称和地址。尚未测试该邮箱的邮件送达情况。",
+            "本文件是基于实现事实的草案，不是法律合规保证。发布前，网站所有者需审核适用法域、法律依据、服务提供者安排以及发现的其他存储。"
+          ]
+        }
+      ],
+      "storageTable": {
+        "heading": "新试点使用的存储",
+        "columns": ["键", "类型与提供者", "用途", "有效期"],
+        "rows": [
+          ["arotec-storage-preferences-v1", "localStorage；本 Arotec 网站（第一方）", "记住明确的语言存储开关选择；仅在启用记忆时保存语言", "最多180天；无效或过期记录在下次检查时删除"]
+        ]
+      },
+      "ownerReview": {
+        "heading": "发布前需由网站所有者确认的信息",
+        "items": ["法律实体名称与地址", "确认隐私联系邮箱 arotec@arotec-group.com", "适用法域及各项用途的法律依据", "托管和字体提供者的请求处理、日志与保留期限", "运行时检查中发现的其他浏览器或服务器存储"]
+      },
+      "controls": {
+        "noticeTitle": "语言记忆为可选功能",
+        "noticeBody": "不记忆语言也可以使用这些页面。您可选择记忆语言，最长180天。本试点不启用可选分析工具或营销跟踪器。",
+        "settingsTitle": "存储设置",
+        "rememberLabel": "记住此语言 180 天",
+        "rememberHelp": "默认关闭。页面 URL 指定的语言始终优先。",
+        "save": "保存偏好设置",
+        "decline": "使用但不记住",
+        "withdraw": "清除已记住的语言",
+        "reopen": "存储设置",
+        "close": "关闭存储设置",
+        "policyLink": "Cookie 与浏览器存储政策",
+        "statusOn": "语言记忆已启用，有效期最多180天。",
+        "statusOff": "语言记忆已关闭。",
+        "storageUnavailable": "浏览器存储不可用。页面仍可使用，但无法在访问之间记住选择。",
+        "expiredOrInvalid": "之前的记录无效或已过期。语言记忆已关闭。"
+      }
+    },
+    "zh-Hant": {
+      "title": "Cookie 與瀏覽器儲存政策 | Arotec",
+      "description": "介紹 Arotec 五種語言試點頁面的可選語言記憶、外部字型請求，以及保持關閉或清除已記憶語言的控制方式。本政策為待審核草案。",
+      "heading": "Cookie 與瀏覽器儲存政策",
+      "dateLabel": "草案生效日期：2026年10月5日",
+      "intro": "本草案說明新版 Arotec 多語言試點頁面使用的瀏覽器儲存。語言記憶為可選功能，預設關閉。發布前，網站所有者需要審核下方的責任主體與服務提供者資訊。",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "本草案涵蓋的頁面",
+          "paragraphs": [
+            "本政策涵蓋新建的首頁、Neuro-Skin Science、Co-Creation、Get In Touch 和本政策頁面，語言包括泰語、英語、日語、簡體中文和繁體中文。這25個在地化頁面加上獨立的語言選擇入口頁，共計26個試點頁面。",
+            "其他現有頁面、會員服務和管理頁面不屬於本試點政策的範圍。舊版語言切換程式碼使用 localStorage 鍵 as-site-language，程式碼中沒有內建到期時間。新試點頁面不載入該程式碼，但以前儲存的舊鍵可能仍留在瀏覽器中，直到您清除它。"
+          ]
+        },
+        {
+          "id": "optional-language",
+          "heading": "可選的語言記憶",
+          "paragraphs": [
+            "試點使用一個本網站的第一方 localStorage 鍵 arotec-storage-preferences-v1，儲存您明確作出的語言儲存選擇。顯示頁面或使用語言連結不需要這筆記錄。記錄包含版本1、是否啟用記憶、僅在啟用時儲存的語言，以及 savedAt 和 expiresAt 時間戳記。它不包含姓名、聯絡表單內容、密碼或付款卡資訊。",
+            "當您明確儲存選擇或選擇使用但不記住時，系統才首次寫入記錄。關閉記錄不保留已記憶的語言，用於尊重您的選擇。啟用記憶後，透過一般語言連結點擊選擇另一種語言，會更新已記憶的語言，並開始新的有效期，最長180天。頁面 URL 中明確指定的語言始終優先。只有語言選擇入口頁可以使用有效的已記憶語言來選擇目標頁面。",
+            "每筆記錄從最近一次儲存選擇或啟用記憶時透過語言連結更新之日起，有效期最多為180天。localStorage 不會由瀏覽器自動到期：試點會在下次檢查偏好時忽略並刪除無效或過期記錄，隨後可選語言記憶恢復為關閉狀態。"
+          ]
+        },
+        {
+          "id": "choices",
+          "heading": "修改或清除選擇",
+          "paragraphs": [
+            "透過「儲存設定」可重新開啟控制選項。「記住此語言 180 天」核取方塊預設關閉。「儲存偏好設定」會記錄您的明確選擇，「使用但不記住」會記錄關閉選擇。僅開啟、捲動或關閉提示不會啟用語言記憶。",
+            "「清除已記住的語言」會使用同一個鍵記錄關閉選擇，不再儲存語言。如果儲存關閉選擇失敗，網站會嘗試刪除自己的偏好鍵，並驗證記憶已關閉。如果儲存無法存取而不能確認刪除，目前頁面會關閉記憶，但之前儲存的偏好可能在重新載入或之後的造訪中恢復。在這種情況下，網站不能保證刪除或持續保持關閉選擇。在其他情況下，以後的造訪和重新載入會遵守有效的已儲存選擇或已確認的刪除。即使儲存遭封鎖或無法使用，頁面和語言連結仍可使用。",
+            "您也可以透過瀏覽器設定刪除網站儲存。這些控制僅管理本試點自己的偏好記錄，不能保證刪除其他網站或無法存取的第三方設定的儲存。"
+          ]
+        },
+        {
+          "id": "requests",
+          "heading": "字型與託管請求",
+          "paragraphs": [
+            "試點不啟用可選分析工具、行銷追蹤器或嵌入式媒體。部分字型來自網站本機檔案；使用 Google Fonts 時，載入頁面會向 fonts.googleapis.com 和 fonts.gstatic.com 請求字型資源。提供者可能收到用於提供這些資源的 IP 位址和請求資訊。字型請求與可選語言儲存記錄是不同的事項。",
+            "目前試點由 GitHub Pages 託管。託管和字型提供者可能按各自條款處理或記錄請求。具體日誌、保留期限和伺服器端 Cookie 行為需要網站所有者審核並進行執行時驗證。本草案不聲稱整個網站的所有部分都沒有 Cookie。"
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "聯絡方式與審核狀態",
+          "paragraphs": [
+            "現有網站公布的聯絡信箱為 arotec@arotec-group.com。網站所有者需要確認它是正確的隱私聯絡管道，並在草案定稿前提供法律實體名稱和地址。尚未測試該信箱的郵件送達情況。",
+            "本文件是基於實作事實的草案，不是法律合規保證。發布前，網站所有者需審核適用法域、法律依據、服務提供者安排以及發現的其他儲存。"
+          ]
+        }
+      ],
+      "storageTable": {
+        "heading": "新試點使用的儲存",
+        "columns": ["鍵", "類型與提供者", "用途", "有效期"],
+        "rows": [
+          ["arotec-storage-preferences-v1", "localStorage；本 Arotec 網站（第一方）", "記住明確的語言儲存開關選擇；僅在啟用記憶時儲存語言", "最多180天；無效或過期記錄在下次檢查時刪除"]
+        ]
+      },
+      "ownerReview": {
+        "heading": "發布前需由網站所有者確認的資訊",
+        "items": ["法律實體名稱與地址", "確認隱私聯絡信箱 arotec@arotec-group.com", "適用法域及各項用途的法律依據", "託管和字型提供者的請求處理、日誌與保留期限", "執行時檢查中發現的其他瀏覽器或伺服器儲存"]
+      },
+      "controls": {
+        "noticeTitle": "語言記憶為可選功能",
+        "noticeBody": "不記憶語言也可以使用這些頁面。您可選擇記憶語言，最長180天。本試點不啟用可選分析工具或行銷追蹤器。",
+        "settingsTitle": "儲存設定",
+        "rememberLabel": "記住此語言 180 天",
+        "rememberHelp": "預設關閉。頁面 URL 指定的語言始終優先。",
+        "save": "儲存偏好設定",
+        "decline": "使用但不記住",
+        "withdraw": "清除已記住的語言",
+        "reopen": "儲存設定",
+        "close": "關閉儲存設定",
+        "policyLink": "Cookie 與瀏覽器儲存政策",
+        "statusOn": "語言記憶已啟用，有效期最多180天。",
+        "statusOff": "語言記憶已關閉。",
+        "storageUnavailable": "瀏覽器儲存無法使用。頁面仍可使用，但無法在造訪之間記住選擇。",
+        "expiredOrInvalid": "先前的記錄無效或已過期。語言記憶已關閉。"
+      }
+    }
+  }
+}
