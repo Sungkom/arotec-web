@@ -77,19 +77,11 @@ html[lang="ja"] .vagus-countdown__message { font-size: .88cqw; }
     position: relative; min-height: 0; overflow: clip;
     container-type: size; container-name: vagus-viewport;
   }
-  /* Scale the complete composition uniformly at the artwork's original 16:5
-     ratio, keeping the live digits on their photographic tiles. */
+  /* Fit the entire 16:5 panorama inside the desktop viewport. Cover would
+     crop off the newly supplied side scenery and resemble the older image. */
   .vagus-launch {
-    position: absolute; width: max(100cqw, 320cqh);
+    position: absolute; width: min(100cqw, 320cqh);
     left: 50%; top: 50%; transform: translate(-50%, -50%);
-  }
-  /* On unusually tall/wide windows, fit the same proportional composition
-     inside the viewport so the logo and countdown remain fully visible. */
-  @container vagus-viewport (max-aspect-ratio: 5 / 3) {
-    .vagus-launch { width: 100cqw; }
-  }
-  @container vagus-viewport (min-aspect-ratio: 7 / 2) {
-    .vagus-launch { width: 320cqh; }
   }
 }
 @media (max-width: 1023px) {
