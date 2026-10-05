@@ -353,3 +353,17 @@
   #research-solutions .fw-title-line { background: none; color: CanvasText; }
   #research-solutions .fw-masthead::after { background: CanvasText; }
 }
+
+/* Keep translated outcome captions within the curved edge while preserving
+   their text, typography and icon sizes. */
+#research-solutions .fw-outcome-label {
+  width: 84%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+#research-solutions .fw-outcome-label br { display: none; }
+@media (min-width: 1001px) {
+  #research-solutions .fw-outcome { padding-bottom: 1.4cqw; }
+}
