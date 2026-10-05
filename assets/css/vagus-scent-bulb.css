@@ -77,12 +77,16 @@ html[lang="ja"] .vagus-countdown__message { font-size: .88cqw; }
     position: relative; min-height: 0; overflow: clip;
     container-type: size; container-name: vagus-viewport;
   }
-  /* Fit the entire 16:5 panorama inside the desktop viewport. Cover would
-     crop off the newly supplied side scenery and resemble the older image. */
+  /* Cover the area below the header without stretching the 16:5 photograph.
+     Favor the product/countdown and keep the branding inside the visible crop. */
   .vagus-launch {
-    position: absolute; width: min(100cqw, 320cqh);
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    position: absolute; width: max(100cqw, 320cqh);
+    left: 60%; top: 65%; transform: translate(-60%, -65%);
+    --vagus-brand-left: max(10.2%, calc(65cqw - 60vw + 24px));
+    --vagus-brand-top: max(3.2%, calc(30.46875cqw - 65cqh + 24px));
   }
+  .vagus-brand { top: var(--vagus-brand-top); }
+  .vagus-launch #vagus-title { top: calc(var(--vagus-brand-top) + 17.1%); }
 }
 @media (max-width: 1023px) {
   .vagus-screen { min-height: 0; }
