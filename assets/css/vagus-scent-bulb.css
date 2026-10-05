@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Vagus Display";
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vagus Sans";
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+.vagus-bulb-page { margin: 0; background: #073c42; }
+body.vagus-bulb-page[data-header-variant="home"] #site-shell > .site-header {
+  position: relative; inset: auto; transform: none;
+}
+.vagus-screen { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.vagus-bulb-page #main { margin: 0; padding: 0; min-width: 0; }
+.vagus-launch {
+  --vagus-brand-left: 10.2%;
+  --vagus-logo-width: 8cqw;
+  /* The transparent logo file has 75px of left padding in its 493px width. */
+  --vagus-logo-inset: calc(var(--vagus-logo-width) * 75 / 493);
+  position: relative; isolation: isolate; container-type: inline-size;
+  width: 100%; aspect-ratio: 16 / 5; overflow: hidden;
+  color: #fafafa; font-family: "Vagus Sans", Arial, sans-serif;
+}
+.vagus-launch__background { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; display: block; object-fit: cover; }
+/* The new panorama adds 640px on either side of the original 2560px scene.
+   Keep the overlays on that centered scene so the digits match the photo tiles. */
+.vagus-launch__content {
+  position: absolute; top: 0; left: 16.666667%; width: 66.666667%; height: 100%;
+  container-type: inline-size;
+}
+.vagus-brand { position: absolute; left: var(--vagus-brand-left); top: 3.2%; }
+.vagus-brand__logo { display: block; width: var(--vagus-logo-width); height: auto; }
+.vagus-brand__byline { margin: .4cqw 0 0 var(--vagus-logo-inset); color: inherit; font-size: .67cqw; font-weight: 400; line-height: 1.2; letter-spacing: .5em; white-space: nowrap; }
+.vagus-launch #vagus-title {
+  position: absolute; top: 20.3%; left: calc(var(--vagus-brand-left) + var(--vagus-logo-inset)); margin: 0;
+  color: inherit; font-family: "Vagus Display", "Arial Narrow", sans-serif;
+  font-size: 3.8cqw; font-weight: 800; line-height: .94; letter-spacing: -.035em;
+  transform: scaleX(.8); transform-origin: left top; white-space: nowrap;
+}
+.vagus-countdown { position: absolute; inset: 0; text-align: center; }
+.vagus-countdown__heading, .vagus-countdown__caption,
+.vagus-countdown__unit, .vagus-countdown__message, .vagus-countdown__fallback {
+  position: absolute; left: 71.75%; width: 16%; margin: 0; color: inherit; font-weight: 400; line-height: 1.2; white-space: nowrap;
+}
+.vagus-countdown__heading { top: 54%; font-size: 1.98cqw; letter-spacing: .055em; }
+.vagus-countdown__caption { top: 59.65%; font-size: .98cqw; letter-spacing: .18em; }
+/* The flip tiles are part of the supplied photograph; only live digits overlay them. */
+.vagus-countdown__digits { position: absolute; left: 71.75%; top: 63.15%; width: 16%; height: 11.9%; display: grid; grid-template-columns: repeat(3, 1fr); gap: .78cqw; }
+.vagus-countdown__digits span { display: grid; place-items: center; font-size: 4.1cqw; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.vagus-countdown__unit { top: 76.2%; font-size: 1.2cqw; letter-spacing: .25em; padding-left: .25em; }
+.vagus-countdown__rule { position: absolute; left: 78.7%; top: 80.1%; width: 2.1%; border-top: 1px solid #c8dbda; }
+.vagus-countdown__message { top: 81.8%; font-size: 1.03cqw; letter-spacing: .08em; }
+.vagus-countdown__fallback { top: 86%; font-size: .85cqw; white-space: normal; }
+/* CJK/Thai use their natural glyph spacing and enough height for native scripts. */
+html[lang="th"] .vagus-launch p { font-family: Tahoma, "Noto Sans Thai", sans-serif; }
+html[lang="ja"] .vagus-launch p { font-family: "Yu Gothic", "Meiryo", sans-serif; }
+html[lang="zh-CN"] .vagus-launch p { font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+html[lang="zh-Hant"] .vagus-launch p { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; }
+html:not([lang="en"]) .vagus-brand__byline { letter-spacing: .06em; line-height: 1.5; }
+html:not([lang="en"]) .vagus-countdown__heading { letter-spacing: .02em; line-height: 1.4; }
+html:not([lang="en"]) .vagus-countdown__caption { letter-spacing: .06em; line-height: 1.5; }
+html:not([lang="en"]) .vagus-countdown__unit { letter-spacing: 0; padding-left: 0; line-height: 1.5; }
+html:not([lang="en"]) .vagus-countdown__message { letter-spacing: 0; line-height: 1.5; white-space: normal; text-wrap: balance; }
+html[lang="ja"] .vagus-countdown__heading { font-size: 1.8cqw; }
+html[lang="ja"] .vagus-countdown__message { font-size: .88cqw; }
+.vagus-countdown:has(noscript p) .vagus-countdown__digits,
+.vagus-countdown:has(noscript p) .vagus-countdown__unit { visibility: hidden; }
+@media (min-width: 1024px) {
+  .vagus-screen { height: 100vh; height: 100dvh; min-height: 0; }
+  .vagus-bulb-page #main {
+    position: relative; min-height: 0; overflow: clip;
+    container-type: size; container-name: vagus-viewport;
+  }
+  /* Scale the complete composition uniformly at the artwork's original 16:5
+     ratio, keeping the live digits on their photographic tiles. */
+  .vagus-launch {
+    position: absolute; width: max(100cqw, 320cqh);
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+  }
+  /* On unusually tall/wide windows, fit the same proportional composition
+     inside the viewport so the logo and countdown remain fully visible. */
+  @container vagus-viewport (max-aspect-ratio: 5 / 3) {
+    .vagus-launch { width: 100cqw; }
+  }
+  @container vagus-viewport (min-aspect-ratio: 7 / 2) {
+    .vagus-launch { width: 320cqh; }
+  }
+}
+@media (max-width: 1023px) {
+  .vagus-screen { min-height: 0; }
+}
+@media (max-width: 767px) {
+  .vagus-launch { --vagus-brand-left: 2%; --vagus-logo-width: 29cqw; aspect-ratio: auto; height: 150cqw; min-height: 550px; }
+  .vagus-launch__background { top: auto; bottom: 0; height: 70cqw; object-fit: cover; object-position: 55.569892% center; }
+  .vagus-launch__content { display: contents; position: static; container-type: normal; }
+  .vagus-brand { top: 4%; }
+  .vagus-brand__byline { font-size: 2.5cqw; margin: 1cqw 0 0 var(--vagus-logo-inset); letter-spacing: .3em; }
+  .vagus-launch #vagus-title { top: 27%; font-size: 10.2cqw; }
+  .vagus-countdown { top: auto; bottom: 0; height: 70cqw; }
+  .vagus-countdown__heading, .vagus-countdown__caption,
+  .vagus-countdown__unit, .vagus-countdown__message, .vagus-countdown__fallback { left: 74.5%; width: 25%; }
+  .vagus-countdown__heading { font-size: 2.96cqw; }
+  .vagus-countdown__caption { font-size: 1.46cqw; }
+  .vagus-countdown__digits { left: 75.5733%; width: 23.8933%; gap: 1.165cqw; }
+  .vagus-countdown__digits span { font-size: 6.12cqw; }
+  .vagus-countdown__unit { font-size: 1.8cqw; }
+  .vagus-countdown__rule { left: 85.95%; width: 3.14%; }
+  .vagus-countdown__message { font-size: 1.5cqw; }
+  .vagus-countdown__fallback { font-size: 2cqw; }
+  html[lang="ja"] .vagus-countdown__heading { font-size: 2.7cqw; }
+  html[lang="ja"] .vagus-countdown__message { font-size: 1.3cqw; }
+}

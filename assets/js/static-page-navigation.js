@@ -17,6 +17,7 @@
     ["join-us.html", "Join Us"],
   ];
   const productsCountdownUrl = new URL("../../applied-products-countdown.html", document.currentScript.src).href;
+  const vagusScentBulbUrl = new URL("../../pages/vagus-scent-bulb.html", document.currentScript.src).href;
   const dropdownMenus = {
     "Applied Solutions": {
       ariaLabel: "Applied solution areas",
@@ -33,7 +34,7 @@
       href: "applied-products.html",
       items: [
         ["vagus-spa", "Vagus spa", productsCountdownUrl],
-        ["vagus-scent-bulb", "Vagus scent bulb", productsCountdownUrl],
+        ["vagus-scent-bulb", "Vagus scent bulb", vagusScentBulbUrl],
         ["neuro-cosmetic", "Neuro-cosmetic", productsCountdownUrl],
         ["customized-for-you", "Bespoke Services", "bespoke-services.html"],
       ],
@@ -176,7 +177,7 @@
   if (document.getElementById('applied-products-navigation-script')) return;
   const script = document.createElement('script');
   script.id = 'applied-products-navigation-script';
-  script.src = new URL('applied-products-navigation.js?v=20261001-bespoke-services-v1', document.currentScript.src).href;
+  script.src = new URL('applied-products-navigation.js?v=20261005-vagus-scent-bulb-v1', document.currentScript.src).href;
   script.defer = true;
   document.head.append(script);
 })();

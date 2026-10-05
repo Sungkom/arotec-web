@@ -4,8 +4,9 @@
   document.documentElement.setAttribute('data-ap-products-navigation', 'ready');
   const productsUrl = new URL('../../pages/applied-products.html', document.currentScript.src).href;
   const countdownUrl = new URL('../../applied-products-countdown.html', document.currentScript.src).href;
+  const vagusScentBulbUrl = new URL('../../pages/vagus-scent-bulb.html', document.currentScript.src).href;
   const bespokeUrl = new URL('../../pages/bespoke-services.html', document.currentScript.src).href;
-  const countdownLabels = new Set(['Vagus spa', 'Vagus scent bulb', 'Neuro-cosmetic']);
+  const countdownLabels = new Set(['Vagus spa', 'Neuro-cosmetic']);
   const directLinks = new WeakSet();
 
   // Keep the dedicated page destination, but leave the trigger, chevron and
@@ -22,7 +23,14 @@
           if (isCurrent) link.setAttribute('aria-current', 'page');
           else link.removeAttribute('aria-current');
         }
-        else if (['vagus-spa', 'vagus-scent-bulb', 'neuro-cosmetic'].includes(link.dataset.arotecNavKey) || countdownLabels.has(label)) link.href = countdownUrl;
+        else if (link.dataset.arotecNavKey === 'vagus-scent-bulb' || label === 'Vagus scent bulb') {
+          link.href = vagusScentBulbUrl;
+          const isCurrent = location.pathname === new URL(vagusScentBulbUrl).pathname;
+          link.classList.toggle('active', isCurrent);
+          if (isCurrent) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        }
+        else if (['vagus-spa', 'neuro-cosmetic'].includes(link.dataset.arotecNavKey) || countdownLabels.has(label)) link.href = countdownUrl;
         return;
       }
       const href = link.getAttribute('href') || '';
