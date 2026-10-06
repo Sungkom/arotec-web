@@ -1,0 +1,65 @@
+/* Load before authored stylesheets: important cascade layers reverse order.
+   Only source-owned text surfaces and generated text annotations are scoped.
+   No font or box geometry, image treatment or backdrop is changed here. */
+@layer arotec-text-colors {
+  :root { --arotec-text-navy: #113568; --arotec-text-white: #ffffff; }
+  [data-arotec-text-tone="navy"] { -webkit-text-fill-color: var(--arotec-text-navy) !important; }
+  [data-arotec-text-tone="white"] { -webkit-text-fill-color: var(--arotec-text-white) !important; }
+  [data-arotec-text-tone="navy"][data-arotec-text-mode="color-and-fill"] { color: var(--arotec-text-navy) !important; }
+  [data-arotec-text-tone="white"][data-arotec-text-mode="color-and-fill"] { color: var(--arotec-text-white) !important; }
+  input[data-arotec-text-tone]::placeholder,
+  textarea[data-arotec-text-tone]::placeholder { color: inherit !important; -webkit-text-fill-color: inherit !important; opacity: 1; }
+  [data-arotec-before-tone="navy"]::before,
+  [data-arotec-after-tone="navy"]::after { color: var(--arotec-text-navy) !important; -webkit-text-fill-color: var(--arotec-text-navy) !important; }
+  [data-arotec-before-tone="white"]::before,
+  [data-arotec-after-tone="white"]::after { color: var(--arotec-text-white) !important; -webkit-text-fill-color: var(--arotec-text-white) !important; }
+  [data-arotec-icon-paint="preserve"]::before,
+  [data-arotec-icon-paint="preserve"]::after { -webkit-text-fill-color: inherit !important; }
+  [data-arotec-icon-before="preserve"]::before,
+  [data-arotec-icon-after="preserve"]::after { -webkit-text-fill-color: currentColor !important; }
+
+  /* The shared navigation/footer and policy panel are authored white. Keep
+     link font paint navy through hover/focus without recoloring arrow SVGs. */
+  :is(.site-header,.site-footer,.nav-submenu,.mobile-panel,.search-panel,.pilot-footer,.pilot-policy-main) :is(a,button) {
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  :is(.site-header,.site-footer,.pilot-footer,.pilot-policy-main) :is(h1,h2,h3,h4,p,label,input,select,textarea,td,th,li) {
+    color: var(--arotec-text-navy) !important;
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  /* Shared shell exceptions have actual dark/plum backgrounds. Light native
+     controls and the selected white language chip remain navy. */
+  #site-shell .utility-nav :is(.nav-link,.nav-dropdown-trigger),
+  #site-shell .mobile-panel :is(a,button,h2,h3,p,label),
+  #site-shell .search-card :is(a,button,h2,p,span,label,input) {
+    -webkit-text-fill-color: var(--arotec-text-white) !important;
+  }
+  #site-shell .search-card .search-input::placeholder { color: var(--arotec-text-white) !important; -webkit-text-fill-color: var(--arotec-text-white) !important; }
+  #site-shell .mobile-panel :is(.pill-button,.contact-pill,.language-select,.language-chip.active),
+  #site-shell :is(.language-select,.language-select option) {
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  .arotec-storage :is(h2,p,label,.arotec-storage__policy,.arotec-storage__withdraw,.arotec-storage__close) {
+    color: var(--arotec-text-navy) !important;
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  .arotec-storage .arotec-storage__button,
+  :is(.ss-more,.brs-more,.dsw-section-more,.exb-link,.ci-submit,.sfl-button,.sfl-source-cta,.wwa-more) {
+    -webkit-text-fill-color: var(--arotec-text-white) !important;
+  }
+  #home-hero :is(.hero-title,.hero-reference-eyebrow,.hero-reference-support,.hero-reference-body),
+  #home-hero .hero-reference-cta > span {
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  #home-hero .hero-art-labels li,
+  .nss-hero-copy :is(h1,h2,p,li),
+  .vagus-launch :is(h1,p) { -webkit-text-fill-color: var(--arotec-text-white) !important; }
+  .vagus-countdown__digits span {
+    color: var(--arotec-text-navy) !important;
+    -webkit-text-fill-color: var(--arotec-text-navy) !important;
+  }
+  /* The only authored inline SVG chart labels are live text on this white
+     chart. Scope fill to text/tspan; paths, markers and scientific art retain
+     their existing paint and every type/position attribute remains intact. */
+  body.stress-page .native-graph-copy :is(text,tspan) { fill: var(--arotec-text-navy) !important; }
+}
