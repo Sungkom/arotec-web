@@ -640,3 +640,13 @@
   }
 }
 
+
+/* Let translated captions wrap within their own diagram panels. */
+@layer melacor-detail {
+  html body.ml-page main#main#main .ml-pathway .ml-efficacy h4,
+  html body.ml-page main#main#main .ml-pathway .ml-sidebar-callout strong {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    min-width: 0 !important;
+  }
+}

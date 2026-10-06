@@ -87,6 +87,8 @@
   /* These are source-specific painted areas, not an inference that any image
      is uniformly dark. The photograph still requires visual contrast review. */
   const SEMANTIC = Object.freeze([
+    { selector: '.ml-page .ml-benefits-sidebar', tone: 'white', reason: 'melacor-dark-benefits-sidebar' },
+    { selector: '.shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]), #neurobiology .sh-scene', tone: 'white', reason: 'sleep-neurobiology-dark-photo-labels' },
     { selector: '.vagus-countdown__digits', tone: 'white', reason: 'vagus-dark-photographic-digit-tiles' },
     { selector: '.vagus-launch', tone: 'white', reason: 'vagus-dark-image-area' },
     { selector: '#home-hero .hero-art-labels', tone: 'white', reason: 'home-art-labels-dark-image-area' },
@@ -189,7 +191,10 @@
         const image = child.localName === 'img' ? child : child.localName === 'picture' ? child.querySelector('img') : null;
         if (!image) continue;
         const s = css(image);
-        if (/^(absolute|fixed)$/.test(s.position) && s.display !== 'none' && s.visibility !== 'hidden') images.push(image.getBoundingClientRect());
+        // A normal-flow picture can still sit underneath absolutely positioned
+        // live labels (including the mobile diagram's enlarged clone). Its
+        // pixels cover the canvas color just as an absolute image would.
+        if (s.display !== 'none' && s.visibility !== 'hidden' && Number(s.opacity) > 0) images.push(image.getBoundingClientRect());
       }
       imageCache.set(parent, images);
     }

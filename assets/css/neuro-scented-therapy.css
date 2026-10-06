@@ -826,3 +826,29 @@ html body.nst-page main#main#main #neurophysiological-modulation #modulation-tit
     left: 3.8cqw;
   }
 }
+
+/* Separate the large introduction heading from its artwork without scaling text. */
+@media (min-width: 1024px) {
+  html body.nst-page main#main#main section#neuro-scent-introduction {
+    height: auto !important;
+    min-height: calc(100svh - var(--detail-header-space, 0px)) !important;
+  }
+  html body.nst-page main#main#main section#neuro-scent-introduction > .nst-introduction-copy:has(#neuro-scent-title) {
+    width: 48% !important;
+    max-width: 48% !important;
+    margin-inline: 4% 0 !important;
+  }
+  html body.nst-page main#main#main section#neuro-scent-introduction > .nst-introduction-art {
+    left: auto;
+    right: 0;
+    width: 48% !important;
+    object-position: 70% center;
+  }
+}
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.nst-page main#main#main #neuro-scent-introduction h1#neuro-scent-title > span {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    min-width: 0 !important;
+  }
+}

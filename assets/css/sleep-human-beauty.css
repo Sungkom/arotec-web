@@ -2351,3 +2351,40 @@ body.shb-page button {
     transform: none;
   }
 }
+
+/* Let the published typography and translated labels determine card height. */
+html body.shb-page #main :is(.shb-section--hair, .shb-section--systems, .shb-section--skin,
+  .shb-driver-panel, .shb-driver-grid, .shb-effects-layout, .shb-effect-card,
+  .shb-modulator-panel, .shb-lower-grid, .shb-outcome-grid, .shb-outcome-panel,
+  .shb-system-card, .shb-systems-flow, .shb-hub-panel, .shb-hub-grid) {
+  height: auto !important;
+  min-height: min-content;
+}
+html body.shb-page #main .shb-effects-layout { grid-template-columns: minmax(0, 1fr); }
+html body.shb-page #main .shb-effect-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+html body.shb-page #main .shb-effect-grid--hair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 700px) {
+  html body.shb-page #main .shb-effect-grid--hair { grid-template-columns: minmax(0, 1fr); }
+}
+html body.shb-page #main .shb-effect-card header { min-width: 0; }
+html body.shb-page #main .shb-modulator-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+html body.shb-page #main .shb-outcome-panel--recovery-tail { margin-top: 0; }
+html body.shb-page #main .shb-flow-scroll { overflow-x: auto; }
+html body.shb-page #main .shb-systems-flow {
+  min-width: 1188px;
+  grid-template-columns: 240px 16px 240px 16px minmax(420px, 1fr) 16px 240px;
+}
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.shb-page #main :is(.shb-effect-card, .shb-modulator-panel, .shb-system-card, .shb-hub-panel) :is(h3, h4) {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+}

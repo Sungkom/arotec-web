@@ -669,3 +669,12 @@ html body.asr-page main#main#main #ingredient-applications .asr-flow-visual > .a
     }
   }
 }
+
+/* Keep translated research headings inside the light copy column. */
+@layer arotec-display-headings.spec.request-20260910 {
+  html body.asr-page main#main#main #research-focus .asr-hero--focus h1#asr-title {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+  }
+}

@@ -3749,3 +3749,52 @@ button {
   opacity: 1;
   transform: none;
 }
+
+
+/* 2026-10-06: let legacy offer cards accommodate the shared type scale. */
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offering-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 16px;
+}
+
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card {
+  height: auto;
+  min-height: 525px;
+  grid-column-start: auto;
+}
+
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card h3,
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card > p {
+  flex: 0 0 auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card > p {
+  margin-bottom: 24px;
+}
+
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card > i {
+  flex: 0 0 1px;
+}
+
+body[data-main-heading-page="synesthetic-flavor--index"] .sf-offer-card > picture {
+  flex: 0 0 260px;
+  height: 260px;
+  min-height: 0;
+}
+
+@media (min-width: 561px) and (max-width: 1060px) {
+  body[data-main-heading-page="synesthetic-flavor--index"] .sf-offering-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  body[data-main-heading-page="synesthetic-flavor--index"] .sf-offering-grid {
+    grid-template-columns: none;
+    gap: 14px;
+  }
+}

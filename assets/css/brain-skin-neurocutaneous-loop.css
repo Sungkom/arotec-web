@@ -231,3 +231,8 @@ body.brain-skin-loop-page .dna-damage {
 body.brain-skin-loop-page .immune-suppression {
   top: 430px;
 }
+
+/* Let translated diagram labels determine the minimum card height. */
+.brain-skin-loop-page .pathway-card {
+  min-height: max-content;
+}

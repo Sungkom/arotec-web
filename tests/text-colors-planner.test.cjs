@@ -9,7 +9,7 @@ const assert = require('node:assert/strict');
 const source = path.resolve(process.argv[2] || path.join(__dirname, '../assets/js/text-colors.js'));
 const writes = [], mutationRecords = [], frames = new Map(), events = new Map();
 let frameId = 0, observerCallback;
-const rect = { x: 0, y: 0, width: 200, height: 50 };
+const rect = { x: 0, y: 0, left: 0, top: 0, right: 200, bottom: 50, width: 200, height: 50 };
 const typography = { fontFamily: '"DM Sans", sans-serif', fontSize: '16px', fontWeight: '400', fontStyle: 'normal', lineHeight: '24px', letterSpacing: '0.2px' };
 class Element {
   constructor(tag, options = {}) {
@@ -20,6 +20,7 @@ class Element {
     this.borderBottomWidth = options.borderWidth || '0px'; this.borderBottomColor = options.borderColor || 'rgba(0,0,0,0)'; this.visible = true;
     this.opacity = options.opacity || '1'; this.gradient = options.gradient || 'none'; this.serialize = false;
     this.pseudoBefore = options.pseudoBefore || null;
+    this.rect = options.rect || rect;
     this.values = new Map(); this.priorities = new Map(); this.attributes = new Map();
     this.style = {
       getPropertyValue: key => {
@@ -88,7 +89,8 @@ class Element {
   }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
   contains(other) { for (let p = other; p; p = p.parentElement) if (p === this) return true; return false; }
-  getBoundingClientRect() { return rect; }
+  get children() { return this.childNodes.filter(n => n.nodeType === 1); }
+  getBoundingClientRect() { return this.rect; }
   getClientRects() { return this.visible ? [rect] : []; }
 }
 const html = new Element('html', { background: 'rgb(255, 255, 255)' });
@@ -315,6 +317,46 @@ test('Vagus digits on the actual dark photographic flip tiles use white while a 
   assert.ok(digit.dataset.arotecTextReview.includes('vagus-dark-photographic-digit-tiles'));
   assert.equal(lightDigit.values.get('-webkit-text-fill-color'), '#113568');
   for (const [key,value] of Object.entries(typography)) assert.equal(computed(digit)[key], value);
+});
+
+test('normal-flow picture beneath absolute diagram labels covers its canvas background', () => {
+  const canvas = body.append(new Element('div', { background: 'rgb(255,255,255)' }));
+  canvas.dataset.textSurface = 'dark';
+  canvas.append(new Element('picture')).append(new Element('img'));
+  const label = canvas.append(new Element('p', { text: 'Dark photographic diagram label' }));
+  engine.refresh(canvas);
+  assert.equal(label.values.get('-webkit-text-fill-color'), '#ffffff');
+  assert.ok(label.dataset.arotecTextReview.includes('positioned-image'));
+});
+test('an opaque light text card above a normal-flow picture keeps navy paint', () => {
+  const canvas = body.append(new Element('div', { background: 'rgb(255,255,255)' }));
+  canvas.dataset.textSurface = 'dark';
+  canvas.append(new Element('picture')).append(new Element('img'));
+  const card = canvas.append(new Element('p', { text: 'Light readable explanation', background: 'rgb(255,255,255)', color: 'rgb(255,255,255)' }));
+  engine.refresh(canvas);
+  assert.equal(card.values.get('-webkit-text-fill-color'), '#113568');
+});
+test('normal-flow image elsewhere in the canvas does not change unrelated text paint', () => {
+  const canvas = body.append(new Element('div', { background: 'rgb(255,255,255)' }));
+  canvas.append(new Element('picture')).append(new Element('img', { rect: { x: 0, y: 100, left: 0, top: 100, right: 200, bottom: 150, width: 200, height: 50 } }));
+  const label = canvas.append(new Element('p', { text: 'Text above the image', color: 'rgb(255,255,255)' }));
+  engine.refresh(canvas);
+  assert.equal(label.values.get('-webkit-text-fill-color'), '#113568');
+  assert.equal(label.dataset.arotecTextReview, undefined);
+});
+
+test('Melacor benefits rail and translucent green callout use white while nearer light cards keep navy', () => {
+  const page = body.append(new Element('section')); page.className = 'ml-page';
+  const rail = page.append(new Element('aside', { gradient: 'linear-gradient(123deg, #002433 4%, #002e42 56%, #00534f 112%)' })); rail.className = 'ml-benefits-sidebar';
+  const title = rail.append(new Element('h2', { text: 'Long-Term Skin Benefits' }));
+  const support = rail.append(new Element('div', { gradient: 'linear-gradient(110deg, #00735e, #00765cdd)' }));
+  const callout = support.append(new Element('strong', { text: 'Six Benefit Directions' }));
+  const light = rail.append(new Element('p', { text: 'White card', background: 'rgb(255,255,255)' }));
+  engine.refresh(page);
+  assert.equal(title.values.get('-webkit-text-fill-color'), '#ffffff');
+  assert.equal(callout.values.get('-webkit-text-fill-color'), '#ffffff');
+  assert.equal(light.values.get('-webkit-text-fill-color'), '#113568');
+  assert.ok(title.dataset.arotecTextReview.includes('melacor-dark-benefits-sidebar'));
 });
 
 let failures = 0;
