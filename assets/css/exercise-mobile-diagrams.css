@@ -115,8 +115,10 @@ html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neur
 .esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul),
 #esh-mobile-diagram-dialog .esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul),
 html body.exercise-systemic-page main#main :is(#context,#acute,#peripheral,#neural,#neurochemical,#crosstalk,#cellular) .esh-mobile-diagram-canvas .esh-map-label > :is(h3,p,ul) {
-  width: 117.647% !important;
-  transform: scaleX(.85);
+  width: 100% !important;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  transform: none;
   transform-origin: left top;
 }
 
@@ -157,3 +159,23 @@ body.exercise-systemic-page #esh-mobile-diagram-dialog h2.esh-diagram-dialog-tit
     top: 75.65% !important;
   }
 }
+
+/* Natural glyph widths need real clearance between separate heading/list labels.
+   Source-picture selectors remain valid in the enlarged clones without IDs. */
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/context-"]) > .esh-map-label:nth-of-type(18) { top: 71.5% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/peripheral-"]) > .esh-map-label:nth-of-type(2) { top: 15% !important; width: 16% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/peripheral-"]) > .esh-map-label:nth-of-type(6) { top: 66% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:nth-of-type(5) { top: 5.2% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:nth-of-type(11) { left: 29% !important; top: 64% !important; width: 45.5% !important; --label-align: center !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:nth-of-type(12) { top: 74% !important; width: 19% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:is(:nth-of-type(2),:nth-of-type(3),:nth-of-type(4)) { width: 7.4% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:is(:nth-of-type(8),:nth-of-type(9),:nth-of-type(10)) { width: 6.5% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neural-"]) > .esh-map-label:is(:nth-of-type(13),:nth-of-type(14),:nth-of-type(15)) { left: 60.7% !important; width: 13.7% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neurochemical-"]) > .esh-map-label:nth-of-type(2) { top: 15.5% !important; width: 20% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neurochemical-"]) > .esh-map-label:nth-of-type(4) { width: 17% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neurochemical-"]) > .esh-map-label:nth-of-type(6) { width: 23% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/neurochemical-"]) > .esh-map-label:nth-of-type(7) { top: 57.5% !important; width: 20% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/crosstalk-"]) > .esh-map-label:nth-of-type(7) { left: 38% !important; width: 26% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/cellular-"]) > .esh-map-label:nth-of-type(2) { width: 9.5% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/cellular-"]) > .esh-map-label:nth-of-type(3) { top: 23.5% !important; width: 9.5% !important; }
+body.exercise-systemic-page .esh-mobile-diagram-canvas:has(> picture > source[srcset*="/cellular-"]) > .esh-map-label:nth-of-type(4) { top: 28% !important; width: 9.5% !important; }

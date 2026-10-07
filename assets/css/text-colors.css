@@ -1,3 +1,5 @@
+/* Shared language families load first; palette rules remain below. */
+@import url("./language-fonts.css?v=20261006-language-family-v1");
 /* Load before authored stylesheets: important cascade layers reverse order.
    Only source-owned text surfaces and generated text annotations are scoped.
    No font or box geometry, image treatment or backdrop is changed here. */

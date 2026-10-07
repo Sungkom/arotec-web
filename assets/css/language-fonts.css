@@ -1,0 +1,109 @@
+/* Every authored page imports this sheet before its component styles.
+   Important layer order is reversed: this family-only layer must come first.
+   It deliberately leaves size, weight, style, spacing, paint and artwork alone. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+/* Reuse the site's existing files, including pages without site-typography.css. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@layer arotec-language-fonts {
+  /* :lang() follows the nearest language annotation, including native-language
+     choices and untranslated foreign passages, and updates on language change. */
+  :where(:root, :lang(en)) {
+    --arotec-language-font: "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(:lang(th)) {
+    --arotec-language-font: "Noto Sans Thai", "DM Sans", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(:lang(ja)) {
+    --arotec-language-font: "Noto Sans JP", "DM Sans", "Noto Sans Thai", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(:lang(zh), :lang(zh-Hant), :lang(zh-TW), :lang(zh-HK), :lang(zh-MO)) {
+    --arotec-language-font: "Noto Sans TC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", sans-serif !important;
+  }
+  /* More specific Chinese variants must follow the generic zh match above. */
+  :where(:lang(zh-CN), :lang(zh-Hans), :lang(zh-SG)) {
+    --arotec-language-font: "Noto Sans SC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans TC", sans-serif !important;
+  }
+
+  /* Runtime language choices name their own language without a lang attribute. */
+  :where(.language-chip[data-lang-chip="en"], .language-chip[data-lang-chip="en"] *, #languageSelect option[value="en"]) {
+    --arotec-language-font: "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(.language-chip[data-lang-chip="th"], .language-chip[data-lang-chip="th"] *, #languageSelect option[value="th"]) {
+    --arotec-language-font: "Noto Sans Thai", "DM Sans", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(.language-chip[data-lang-chip="ja"], .language-chip[data-lang-chip="ja"] *, #languageSelect option[value="ja"]) {
+    --arotec-language-font: "Noto Sans JP", "DM Sans", "Noto Sans Thai", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  }
+  :where(.language-chip[data-lang-chip="zh"], .language-chip[data-lang-chip="zh"] *, #languageSelect option[value="zh"]) {
+    --arotec-language-font: "Noto Sans TC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", sans-serif !important;
+  }
+  :where(.language-chip[data-lang-chip="zh-CN"], .language-chip[data-lang-chip="zh-CN"] *, #languageSelect option[value="zh-CN"]) {
+    --arotec-language-font: "Noto Sans SC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans TC", sans-serif !important;
+  }
+
+  /* Set the aliases locally as legacy diagrams redefine these on sections. */
+  :where(*) {
+    --site-font: var(--arotec-language-font) !important;
+    --arotec-font-family: var(--arotec-language-font) !important;
+  }
+
+  /* These are icon glyph containers, not prose. SVG text remains in scope;
+     paths, images, embedded brand artwork and raster lettering are unchanged. */
+  :where(*):not(:is(
+    .ph, .ph-duotone, .ph-thin, .ph-light, .ph-bold, .ph-fill,
+    [class^="ph-"], [class*=" ph-"],
+    .fa, .fas, .far, .fal, .fat, .fad, .fab,
+    [class^="fa-"], [class*=" fa-"],
+    .bi, [class^="bi-"], [class*=" bi-"],
+    .material-icons, .material-icons-outlined, .material-icons-round,
+    .material-icons-sharp, .material-icons-two-tone,
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp,
+    [data-icon-font]
+  )) {
+    font-family: var(--arotec-language-font) !important;
+  }
+
+  /* Text controls and generated annotations follow their owner's language.
+     Authored ::before/::after icon glyph families are intentionally untouched. */
+  :where(input, textarea)::placeholder,
+  :where(input[type="file"])::file-selector-button,
+  #brain-skin-axis .css-arrow::before {
+    font-family: var(--arotec-language-font) !important;
+  }
+}

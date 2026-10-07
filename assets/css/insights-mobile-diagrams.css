@@ -46,11 +46,11 @@ html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#sk
   font-size: calc(var(--fs) / 20.48 * 1cqw) !important; font-weight: var(--label-weight) !important;
   line-height: 1.02 !important; letter-spacing: -.025em !important; color: #07132e !important;
   text-transform: none !important; white-space: normal !important; text-align: var(--label-align,left) !important;
-  margin: 0 !important; padding: 0 !important; width: 125% !important; max-width: none; min-height: 0;
-  transform: scaleX(.8); transform-origin: left top; text-wrap: wrap; overflow-wrap: anywhere;
+  margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none; min-height: 0;
+  transform: none; transform-origin: left top; text-wrap: wrap; overflow-wrap: anywhere;
 }
 /* Translations must stay inside the authored light text columns. Retain each
-   title's type size and horizontal treatment; allow its lines to reflow. */
+   title's type size and natural glyph proportions; allow its lines to reflow. */
 @media (min-width: 1280px) {
   #main :is(#integrated-system,#skin-resilience) { container-type: inline-size; }
   #main :is(#integrated-system,#skin-resilience) > .insights-separated-summary {
@@ -69,20 +69,20 @@ html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#sk
   html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology) :is(p,h3) > span {
     display: inline;
   }
-  #main #skin-biology #skin-title > span { width: 136.426%; }
-  #main #skin-biology #skin-title > span + span { width: 134.409%; }
-  #main #skin-resilience #skin-resilience-title > span { width: 137.552%; }
-  #main #skin-resilience #skin-resilience-title > span + span { width: 139.86%; }
-  #main #scalp-microenvironment #scalp-title > span { width: 140.846%; }
-  #main #scalp-microenvironment #scalp-title > span + span { width: 139.86%; }
-  #main #hair-biology #hair-title > span { width: 142.653%; }
-  #main #hair-biology #hair-title > span + span { width: 139.665%; }
+  #main #skin-biology #skin-title > span { width: 100%; }
+  #main #skin-biology #skin-title > span + span { width: 100%; }
+  #main #skin-resilience #skin-resilience-title > span { width: 100%; }
+  #main #skin-resilience #skin-resilience-title > span + span { width: 100%; }
+  #main #scalp-microenvironment #scalp-title > span { width: 100%; }
+  #main #scalp-microenvironment #scalp-title > span + span { width: 100%; }
+  #main #hair-biology #hair-title > span { width: 100%; }
+  #main #hair-biology #hair-title > span + span { width: 100%; }
   #main #skin-biology .skin-keywords li > span { flex-shrink: 1; min-width: 0; }
 }
 .isb-mobile-diagram-canvas .isb-map-label br { display: initial !important; }
 .isb-mobile-diagram-canvas .isb-map-title > h2,
 #isb-mobile-diagram-dialog .isb-map-title > h2,
-html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-title > h2 { width: 119.048% !important; transform: scaleX(.84); line-height: .94 !important; }
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-title > h2 { width: 100% !important; transform: none; line-height: .94 !important; }
 .isb-mobile-diagram-canvas .isb-map-number > p,
 #isb-mobile-diagram-dialog .isb-map-number > p,
 html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-number > p { color: #3d8d94 !important; }
@@ -108,5 +108,203 @@ body.insights-sleep-page #isb-mobile-diagram-dialog h2.isb-diagram-dialog-title 
   html body.insights-sleep-page #isb-mobile-diagram-dialog .isb-mobile-diagram-canvas:has(> picture > source[srcset*="/scalp-"]) .isb-map-title > h2 {
     white-space: normal !important;
     text-wrap: wrap;
+  }
+}
+
+/* Keep a diagram's two-digit identifier together with the per-language fonts.
+   The number keeps its original font size and position; only its box fits text. */
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology) :is(.system-number,.skin-number,.dermis-number,.scalp-number,.hair-number),
+html body.insights-sleep-page main#main :is(#integrated-system,#skin-biology,#skin-resilience,#scalp-microenvironment,#hair-biology,#beauty-outcomes) .isb-map-number > p,
+html body.insights-sleep-page #isb-mobile-diagram-dialog .isb-map-number > p {
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  width: max-content !important;
+}
+
+/* Keep adjacent outcome descriptions apart while their centers stay under the
+   same skin/scalp/hair illustrations. Longer text can use the next line. */
+@media (min-width: 1280px) {
+  #integrated-system .system-targets a {
+    box-sizing: border-box;
+    min-width: 0;
+    padding-inline: .65cqw;
+  }
+}
+
+/* Preserve natural text proportions. These selectors originally paired horizontal
+   compression with reciprocal widths; keep uniform artwork zoom and canvas sizing. */
+@media (min-width: 1280px) {
+  html body.insights-sleep-page main#main #integrated-system .system-eyebrow > span,
+  html body.insights-sleep-page main#main #integrated-system #overview-title,
+  html body.insights-sleep-page main#main #integrated-system .system-summary,
+  html body.insights-sleep-page main#main #integrated-system .system-number,
+  html body.insights-sleep-page main#main #integrated-system .system-domains h3,
+  html body.insights-sleep-page main#main #integrated-system .system-recovery-label > span,
+  html body.insights-sleep-page main#main #integrated-system .system-domains p,
+  html body.insights-sleep-page main#main #integrated-system .system-targets strong,
+  html body.insights-sleep-page main#main #integrated-system .system-targets a > span,
+  html body.insights-sleep-page main#main #skin-biology .skin-eyebrow > span,
+  html body.insights-sleep-page main#main #skin-biology #skin-title > span,
+  html body.insights-sleep-page main#main #skin-biology #skin-title > span + span,
+  html body.insights-sleep-page main#main #skin-biology .skin-summary,
+  html body.insights-sleep-page main#main #skin-biology .skin-number,
+  html body.insights-sleep-page main#main #skin-biology .skin-process h3,
+  html body.insights-sleep-page main#main #skin-biology .skin-process-description,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-eyebrow > span,
+  html body.insights-sleep-page main#main #skin-resilience #skin-resilience-title > span,
+  html body.insights-sleep-page main#main #skin-resilience #skin-resilience-title > span + span,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-summary,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-number,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-process h3,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-inflammation h3,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-pigment h3,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-description,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-pigment .dermis-description,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-keywords,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-inflammation .dermis-keywords,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-eyebrow > span,
+  html body.insights-sleep-page main#main #scalp-microenvironment #scalp-title > span,
+  html body.insights-sleep-page main#main #scalp-microenvironment #scalp-title > span + span,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-summary,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-number,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-process h3,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-circulation h3,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-immune h3,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-caption,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-description,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-circulation .scalp-caption,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-immune .scalp-caption,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-circulation .scalp-description,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-immune .scalp-description,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-keywords,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-immune .scalp-keywords,
+  html body.insights-sleep-page main#main #hair-biology .hair-eyebrow > span,
+  html body.insights-sleep-page main#main #hair-biology #hair-title > span,
+  html body.insights-sleep-page main#main #hair-biology #hair-title > span + span,
+  html body.insights-sleep-page main#main #hair-biology .hair-summary,
+  html body.insights-sleep-page main#main #hair-biology .hair-number,
+  html body.insights-sleep-page main#main #hair-biology .hair-process h3,
+  html body.insights-sleep-page main#main #hair-biology .hair-matrix h3,
+  html body.insights-sleep-page main#main #hair-biology .hair-fiber h3,
+  html body.insights-sleep-page main#main #hair-biology .hair-caption,
+  html body.insights-sleep-page main#main #hair-biology .hair-description,
+  html body.insights-sleep-page main#main #hair-biology .hair-matrix .hair-description,
+  html body.insights-sleep-page main#main #hair-biology .hair-fiber .hair-description,
+  html body.insights-sleep-page main#main #hair-biology .hair-keywords,
+  html body.insights-sleep-page main#main #hair-biology .hair-matrix .hair-caption,
+  html body.insights-sleep-page main#main #hair-biology .hair-fiber .hair-caption,
+  html body.insights-sleep-page main#main #hair-biology .hair-matrix .hair-keywords,
+  html body.insights-sleep-page main#main #hair-biology .hair-fiber .hair-keywords,
+  html body.insights-sleep-page main#main #hair-biology #hair-cycle-title,
+  html body.insights-sleep-page main#main #hair-biology .hair-cycle li {
+    transform: none !important;
+    width: auto !important;
+    max-width: 100%;
+  }
+  html body.insights-sleep-page main#main #integrated-system .system-targets a > span { margin-inline: 0; }
+}
+
+@media (min-width: 1280px) {
+  html body.insights-sleep-page main#main #integrated-system .system-domains li,
+  html body.insights-sleep-page main#main #skin-biology .skin-process,
+  html body.insights-sleep-page main#main #skin-resilience .dermis-process,
+  html body.insights-sleep-page main#main #scalp-microenvironment .scalp-process,
+  html body.insights-sleep-page main#main #hair-biology .hair-process {
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: .65cqw;
+  }
+}
+
+/* Natural-width headings need local room rather than compressed glyphs. */
+.isb-mobile-diagram-canvas .isb-map-title > h2 {
+  text-wrap: balance;
+}
+.isb-mobile-diagram-canvas:has(> picture > source[srcset*="/dermis-"]) > .isb-map-title {
+  top: 6% !important;
+}
+.isb-mobile-diagram-canvas:has(> picture > source[srcset*="/scalp-"]) > .isb-map-heading[data-isb-number="02"] {
+  min-width: 21cqw;
+}
+
+/* Give the long desktop resilience title its own light band. Anchor the existing
+   callouts and connectors to the unchanged 16:9 artwork below that flowing title. */
+@media (min-width: 1280px) {
+  #main #skin-resilience .dermis-composition {
+    aspect-ratio: auto;
+    padding-bottom: 56.25cqw;
+  }
+  #main #skin-resilience .dermis-intro {
+    position: relative;
+    inset: auto;
+    width: auto;
+    margin: 0 4%;
+    padding: 2.25cqw 0;
+    background: #fff;
+  }
+  #main #skin-resilience #skin-resilience-title {
+    top: auto;
+    line-height: 1.12 !important;
+  }
+  #main #skin-resilience :is(.dermis-artwork, .dermis-connectors) {
+    top: auto;
+    bottom: 0;
+    height: 56.25cqw;
+  }
+  #main #skin-resilience .dermis-matrix { top: calc(100% - 33.83775cqw); }
+  #main #skin-resilience .dermis-inflammation { top: calc(100% - 32.22675cqw); }
+  #main #skin-resilience .dermis-pigment { top: calc(100% - 18.45675cqw); }
+}
+
+/* The matrix connector traverses this light label column. Keep its line behind
+   the naturally wider heading, while leaving the tissue endpoint visible. */
+@media (min-width: 1280px) {
+  #main #skin-resilience .dermis-matrix h3 {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 0 .2cqw #fff;
+  }
+}
+
+/* Reserve flowing, light intro space for natural-width translations. Anchors use
+   the original 16:9 artwork height; extra skin footer room prevents copy clipping. */
+@media (min-width: 1280px) {
+  #main :is(#skin-biology, #scalp-microenvironment, #hair-biology) :is(.skin-composition, .scalp-composition, .hair-composition) {
+    aspect-ratio: auto;
+    padding-bottom: 56.25cqw;
+  }
+  #main #skin-biology .skin-composition { padding-bottom: 61.25cqw; }
+  #main :is(#skin-biology, #scalp-microenvironment, #hair-biology) :is(.skin-intro, .scalp-intro, .hair-intro) {
+    position: relative;
+    inset: auto;
+    width: auto;
+    margin: 0 4%;
+    padding: 2.25cqw 0;
+    background: #fff;
+  }
+  #main :is(#skin-biology, #scalp-microenvironment, #hair-biology) :is(#skin-title, #scalp-title, #hair-title) {
+    top: auto;
+    line-height: 1.12 !important;
+  }
+  #main :is(#skin-biology, #scalp-microenvironment, #hair-biology) :is(.skin-summary, .scalp-summary, .hair-summary) {
+    margin-top: 1cqw !important;
+  }
+  #main :is(#skin-biology, #scalp-microenvironment, #hair-biology) :is(.skin-artwork, .scalp-artwork, .hair-artwork, .scalp-connectors, .hair-connectors) {
+    top: auto;
+    bottom: 0;
+    height: 56.25cqw;
+  }
+  #main #skin-biology .skin-artwork { bottom: 5cqw; }
+  #main #skin-biology .skin-process { top: calc(100% - 24.0434375cqw); }
+  #main #scalp-microenvironment .scalp-barrier { top: calc(100% - 39.8925cqw); }
+  #main #scalp-microenvironment .scalp-circulation { top: calc(100% - 22.656375cqw); }
+  #main #scalp-microenvironment .scalp-immune { top: calc(100% - 25.243875cqw); }
+  #main #hair-biology .hair-cycling { top: calc(100% - 34.081875cqw); }
+  #main #hair-biology .hair-matrix { top: calc(100% - 16.5056875cqw); }
+  #main #hair-biology .hair-fiber { top: calc(100% - 34.765875cqw); }
+  #main #hair-biology .hair-cycle { top: calc(100% - 53.7598125cqw); height: 14.625cqw; }
+  #main #hair-biology .hair-cycling .hair-process-copy {
+    background: rgb(255 255 255 / .96);
+    box-shadow: 0 0 0 .35cqw rgb(255 255 255 / .96);
   }
 }

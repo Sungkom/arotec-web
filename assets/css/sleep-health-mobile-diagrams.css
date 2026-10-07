@@ -76,3 +76,134 @@ body.sleep-health-page #shm-mobile-diagram-dialog h2.shm-diagram-dialog-title { 
     .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:84.5703125%"][style*="top:28.125%"] > p { white-space: normal !important; text-wrap: wrap !important; overflow-wrap: break-word; width: 100% !important; }
   }
 }
+
+/* Keep every locale's glyph proportions. The diagram still scales as a whole;
+   labels wrap inside their authored boxes instead of compressing the letters. */
+@layer sleep-health-mobile {
+  body.sleep-health-page .shm-mobile-diagram-canvas .shm-map-label > :is(h2,h3,p) {
+    transform:none!important;
+    width:100%!important;
+    white-space:normal!important;
+    text-wrap:wrap!important;
+    overflow-wrap:break-word;
+  }
+  body.sleep-health-page .shm-mobile-diagram-canvas .shm-map-number > p {
+    width:max-content!important; white-space:nowrap!important; text-wrap:nowrap!important;
+  }
+  /* Expand toward the free side while preserving the leader-line anchor. */
+  body.sleep-health-page .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:13.916015625%"] {
+    left:5.685546875%!important; width:22%!important;
+  }
+  body.sleep-health-page .shm-mobile-diagram-canvas:has(source[srcset*="neurobiology-800.webp"]) .shm-map-body[style*="left:31.591796875%"] {
+    left:22.806640625%!important; width:16.5%!important;
+  }
+  body.sleep-health-page .shm-mobile-diagram-canvas .shm-map-heading[style*="left:46.2890625%"][style*="top:65.625%"] {
+    left:44.4150390625%!important; width:12%!important;
+  }
+  body.sleep-health-page .shm-mobile-diagram-canvas .shm-map-heading[style*="left:35.64453125%"][style*="top:82.63888888888889%"] {
+    left:25.5%!important; width:50%!important; --label-align:center!important;
+    box-sizing:border-box; padding:.18cqw .4cqw; background:rgb(255 255 255 / .94);
+  }
+  @media (min-width:1200px) {
+    body.sleep-health-page #sleep-health :is(.sh-eyebrow,.sh-subtitle),
+    body.sleep-health-page #neurobiology :is(.sh-restorative,.sh-arousal) :is(h3,li),
+    body.sleep-health-page #neurobiology .sh-network :is(dt,dd),
+    body.sleep-health-page #biological-restoration .sh-intro > p,
+    body.sleep-health-page #biological-restoration :is(h3,.sh-repair-list p),
+    body.sleep-health-page #disrupted-sleep :is(.sh-intro > p,h3,.sh-disruption-list p),
+    body.sleep-health-page #biological-burden :is(.sh-intro p,.sh-load-intro h3,.sh-load-intro p,.sh-load-copy h3,.sh-load-copy p,.sh-risk-heading,.sh-risks h3,.sh-risks p),
+    body.sleep-health-page #restorative-conditions :is(.sh-intro .sh-subtitle,.sh-intro > p:not(.sh-subtitle),.sh-condition-list h3,.sh-condition-list p,.sh-condition-list strong),
+    body.sleep-health-page #multisystem-health :is(#health-title,.sh-intro p) {
+      transform:none!important;
+    }
+    body.sleep-health-page #biological-burden .sh-load-caption {
+      transform:rotate(-11deg)!important;
+    }
+    body.sleep-health-page #biological-burden .sh-systems :is(h3,p),
+    body.sleep-health-page #restorative-conditions :is(.sh-regulation,.sh-conditions-outcomes > p) {
+      transform:translateX(-50%)!important;
+    }
+    /* Keep translated copy within the original anchored text groups. */
+    body.sleep-health-page #neurobiology :is(.sh-neuro-label,.sh-network) :is(h3,li,dt,dd),
+    body.sleep-health-page #biological-restoration .sh-repair-list :is(h3,p),
+    body.sleep-health-page #disrupted-sleep .sh-disruption-list :is(h3,p),
+    body.sleep-health-page #biological-burden :is(.sh-load-intro,.sh-load-copy,.sh-systems,.sh-risks) :is(h3,p),
+    body.sleep-health-page #biological-burden .sh-risk-heading,
+    body.sleep-health-page #restorative-conditions .sh-condition-list :is(h3,p,strong),
+    body.sleep-health-page #multisystem-health :is(#health-title,.sh-intro p) {
+      width:auto!important; max-width:100%!important;
+      white-space:normal!important; text-wrap:wrap!important; overflow-wrap:break-word;
+    }
+    body.sleep-health-page #neurobiology .sh-restorative { width:29cqw!important; }
+    body.sleep-health-page #neurobiology .sh-arousal { width:15cqw!important; }
+    body.sleep-health-page #neurobiology .sh-arousal ul { width:100%!important; top:4cqw!important; }
+    body.sleep-health-page #neurobiology .sh-node-scn { width:17cqw!important; }
+    body.sleep-health-page #neurobiology .sh-node-limbic { width:24cqw!important; }
+    body.sleep-health-page #neurobiology .sh-node-hypothalamus { width:25cqw!important; }
+    body.sleep-health-page #neurobiology .sh-node-autonomic { width:27cqw!important; }
+    body.sleep-health-page #neurobiology .sh-node-hpa { width:34cqw!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-neural { width:32%!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-glymphatic { width:24%!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-autonomic { width:34%!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-metabolic { width:33%!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-immune { width:40%!important; }
+    body.sleep-health-page #biological-restoration .sh-repair-heading {
+      display:flex!important; align-items:baseline; gap:1cqw; height:auto!important; margin-bottom:1cqw!important;
+    }
+    body.sleep-health-page #biological-restoration .sh-repair-heading :is(.sh-number,h3) { position:static!important; }
+    body.sleep-health-page #biological-restoration .sh-number { flex:none; }
+    body.sleep-health-page #disrupted-sleep .sh-disruption-list > li { display:grid!important; gap:.55cqw; }
+    body.sleep-health-page #disrupted-sleep .sh-disruption-list :is(.sh-number,h3,p) { position:static!important; }
+    body.sleep-health-page #disrupted-sleep .sh-disruption-list .sh-disruption-break { display:none!important; }
+    body.sleep-health-page #biological-burden .sh-load-intro { width:13%!important; }
+    body.sleep-health-page #biological-burden .sh-load-copy { top:29.2%!important; }
+    body.sleep-health-page #biological-burden :is(.sh-load-intro,.sh-load-copy) { display:grid!important; gap:.5cqw; }
+    body.sleep-health-page #biological-burden :is(.sh-load-intro,.sh-load-copy) > :is(h3,p) { position:static!important; }
+    body.sleep-health-page #biological-burden .sh-load-copy .sh-equation {
+      position:absolute!important; top:32.2cqw!important; left:-11.45cqw!important; width:47cqw!important; max-width:none!important;
+      box-sizing:border-box; padding:.15cqw .3cqw!important; background:rgb(255 255 255 / .94);
+    }
+    body.sleep-health-page #biological-burden .sh-systems :is(h3,p) { width:100%!important; }
+    body.sleep-health-page #biological-burden .sh-systems p { width:6.3cqw!important; max-width:none!important; }
+    body.sleep-health-page #biological-burden .sh-risk-heading { width:22%!important; }
+    body.sleep-health-page #biological-burden .sh-risks > li { display:grid!important; grid-template-columns:6.2cqw minmax(0,1fr); column-gap:.9cqw; row-gap:.35cqw; }
+    body.sleep-health-page #biological-burden .sh-risks > li { isolation:isolate; }
+    body.sleep-health-page #biological-burden .sh-risks > li::before {
+      content:""; position:absolute; inset:-.25cqw -.3cqw -.25cqw 6.9cqw;
+      background:rgb(255 255 255 / .94); z-index:-1;
+    }
+    body.sleep-health-page #biological-burden .sh-risks img { grid-column:1; grid-row:1 / 3; }
+    body.sleep-health-page #biological-burden .sh-risks :is(h3,p) { position:static!important; grid-column:2; }
+    body.sleep-health-page #biological-burden .sh-risk-aging { top:80%!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-list > li { width:29%!important; padding-left:4.7cqw!important; box-sizing:border-box; display:grid!important; gap:.3cqw; }
+    body.sleep-health-page #restorative-conditions .sh-condition-list :is(h3,p,strong) { position:static!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-arousal { width:28%!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-context { width:29%!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-timing { top:23%!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-arousal { top:21%!important; }
+    body.sleep-health-page #restorative-conditions .sh-condition-context { top:22%!important; }
+    /* Uncompressed copy outgrows the bare wall in longer locales. Keep its
+       wall anchor and give only the live copy a light reading surface. */
+    body.sleep-health-page #multisystem-health .sh-intro {
+      width:30%!important; display:grid!important; gap:1.5cqw;
+      box-sizing:border-box; padding:.7cqw!important; background:rgb(255 255 255 / .94);
+    }
+    /* This source-image clip contains only the short decorative divider. */
+    body.sleep-health-page #multisystem-health .sh-health-divider { display:none!important; }
+    body.sleep-health-page #multisystem-health .sh-intro p { position:static!important; }
+    body.sleep-health-page :is(#biological-burden,#restorative-conditions,#multisystem-health) :is(.sh-burden-break,.sh-conditions-break,.sh-health-break) { display:none; }
+    body.sleep-health-page #biological-burden .sh-intro { width:65%!important; }
+    body.sleep-health-page #biological-burden .sh-intro p { width:100%!important; white-space:normal!important; text-wrap:wrap!important; }
+    body.sleep-health-page #restorative-conditions .sh-intro { width:90%!important; display:grid!important; gap:1.1cqw; }
+    body.sleep-health-page #restorative-conditions .sh-intro :is(h2,p) { position:static!important; width:auto!important; max-width:100%!important; white-space:normal!important; text-wrap:wrap!important; }
+    body.sleep-health-page #sleep-health .sh-hero-copy { top:39%!important; }
+    body.sleep-health-page #sleep-architecture :is(.sh-chart-times,.sh-rem-labels) > span {
+      box-sizing:border-box; padding:.12em .25em; background:rgb(6 24 49 / .9);
+    }
+    body.sleep-health-page #sleep-health .sh-subtitle,
+    body.sleep-health-page #disrupted-sleep .sh-intro > p,
+    body.sleep-health-page #restorative-conditions .sh-conditions-outcomes > p {
+      box-sizing:border-box; padding:.15cqw .3cqw!important; background:rgb(255 255 255 / .94);
+    }
+  }
+}

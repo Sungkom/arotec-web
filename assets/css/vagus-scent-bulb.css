@@ -41,7 +41,9 @@ body.vagus-bulb-page[data-header-variant="home"] #site-shell > .site-header {
   position: absolute; top: 20.3%; left: calc(var(--vagus-brand-left) + var(--vagus-logo-inset)); margin: 0;
   color: inherit; font-family: "Vagus Display", "Arial Narrow", sans-serif;
   font-size: 3.8cqw; font-weight: 800; line-height: .94; letter-spacing: -.035em;
-  transform: scaleX(.8); transform-origin: left top; white-space: nowrap;
+  transform: none; transform-origin: left top; white-space: normal; overflow-wrap: anywhere;
+  text-shadow: 0 2px 4px rgb(7 60 66 / .9), 0 0 .12em rgb(7 60 66 / .7);
+  max-width: calc(100% - var(--vagus-brand-left) - var(--vagus-logo-inset) - 4%);
 }
 .vagus-countdown { position: absolute; inset: 0; text-align: center; }
 .vagus-countdown__heading, .vagus-countdown__caption,
@@ -86,7 +88,17 @@ html[lang="ja"] .vagus-countdown__message { font-size: .88cqw; }
     --vagus-brand-top: max(3.2%, calc(30.46875cqw - 65cqh + 24px));
   }
   .vagus-brand { top: var(--vagus-brand-top); }
-  .vagus-launch #vagus-title { top: calc(var(--vagus-brand-top) + 17.1%); }
+  /* Natural-width lettering sits below the lamp, clear of its bright rim. */
+  .vagus-launch #vagus-title { top: 51%; left: calc(var(--vagus-brand-left) + var(--vagus-logo-inset) + 26vw); max-width: 6em; }
+  /* Shift the photograph and its matched live tiles together in tall windows. */
+  @container vagus-viewport (max-aspect-ratio: 6 / 5) {
+    .vagus-launch {
+      left: 67%; transform: translate(-67%, -65%);
+      --vagus-brand-left: max(10.2%, calc(75.5cqw - 67vw + 8px));
+    }
+    .vagus-launch #vagus-title { left: calc(var(--vagus-brand-left) + var(--vagus-logo-inset) + 10vw); }
+    .vagus-brand__byline { text-shadow: 0 1px 3px #073c42; }
+  }
 }
 @media (max-width: 1023px) {
   .vagus-screen { min-height: 0; }

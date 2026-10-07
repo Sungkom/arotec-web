@@ -88,7 +88,8 @@ html body.sws-page main#main .sws-copy {
     line-height: 1.02 !important;
     letter-spacing: .014em !important;
     text-transform: uppercase !important;
-    transform: scaleX(.91);
+    transform: none;
+    white-space: normal; overflow-wrap: anywhere;
     transform-origin: left center;
   }
 }

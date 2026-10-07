@@ -92,7 +92,8 @@ html body.bespoke-page main#main .bespoke-hero .bespoke-eyebrow {
     line-height: 1.035 !important;
     letter-spacing: -.025em !important;
     text-transform: uppercase !important;
-    transform: scaleX(1.1);
+    transform: none;
+    white-space: normal; overflow-wrap: anywhere;
     transform-origin: left center;
   }
 }
@@ -125,7 +126,7 @@ html body.bespoke-page main#main .bespoke-announcement .bespoke-early {
   line-height: 1.15 !important;
   letter-spacing: 0 !important;
   text-transform: uppercase !important;
-  transform: scaleX(1.1);
+  transform: none;
   transform-origin: left center;
 }
 
