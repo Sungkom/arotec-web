@@ -22,9 +22,9 @@
     { id: "customized", path: "pages/customized.html", nav: true },
     { id: "applied", path: "pages/applied-solutions.html", nav: true, section: "applied" },
     { id: "products", path: "pages/products.html", nav: true, section: "products" },
-    { id: "platform", path: "pages/platform.html", nav: true, section: "platform" },
+    { id: "platform", nav: true, navOnly: true },
     { id: "about", path: "pages/who-we-are.html", nav: true, section: "about" },
-    { id: "insights", path: "pages/insights.html", nav: true, section: "insights" },
+    { id: "insights", nav: true, navOnly: true },
     { id: "partners", path: "pages/partners.html", nav: true, section: "partners" },
     { id: "join", path: "pages/join-us.html", nav: true, section: "join" },
     { id: "contact", path: "pages/members.html", nav: false }
@@ -44,17 +44,11 @@
   const insightMenuItems = [
     { id: "exercise-beauty", label: "Exercise x Beauty", href: "pages/exercise-beauty.html" },
     { id: "exercise-health", label: "Exercise x Health", href: "pages/exercise-health.html" },
-    { id: "sleep-beauty", label: "Sleep x Beauty" },
-    { id: "sleep-health", label: "Sleep x Health" }
+    { id: "sleep-beauty", label: "Sleep x Beauty", href: "pages/sleep-beauty.html" },
+    { id: "sleep-health", label: "Sleep x Health", href: "pages/sleep-health.html" }
   ];
   const platformMenuItems = [
-    { id: "travion", label: "Travion™" },
-    { id: "meraxyl", label: "Meraxyl™" },
-    { id: "melacor", label: "Melacor™" },
-    { id: "cortiva", label: "Cortiva™" },
-    { id: "morphagen", label: "Morphagen™" },
-    { id: "chromagen", label: "Chromagen™" },
-    { id: "olfactiva", label: "Olfactiva™" }
+    { id: "piper-longum", label: "Piper Longum", href: "pages/piper-longum.html" }
   ];
 
   const languageMeta = {
@@ -1524,7 +1518,7 @@
     if (route?.section && id !== "insights") {
       return pageId === "home" ? `#${route.section}` : `${root}index.html#${route.section}`;
     }
-    return route ? `${root}${route.path}` : `${root}index.html`;
+    return route?.path ? `${root}${route.path}` : `${root}index.html`;
   }
 
   function activeClass(id) {
@@ -1553,11 +1547,13 @@
         const dropdown = route.id === "applied"
           ? { items: appliedMenuItems, page: "applied-solutions", label: "Applied solution areas" }
           : route.id === "insights"
-            ? { items: insightMenuItems, page: "insights", label: "Insight topics" }
+            ? { items: insightMenuItems, page: "sleep-beauty", label: "Insight topics" }
             : route.id === "platform"
               ? { items: platformMenuItems, page: "platform", label: "Platform modules" }
               : null;
-        const link = `<a data-arotec-nav-key="${route.id}" class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
+        const link = route.navOnly
+          ? `<button data-arotec-nav-key="${route.id}" class="nav-link nav-dropdown-trigger${activeClass(route.id)}" type="button" aria-haspopup="true">${text.nav[route.id]}<span class="nav-dropdown-chevron" aria-hidden="true"></span></button>`
+          : `<a data-arotec-nav-key="${route.id}" class="nav-link${dropdown ? " nav-dropdown-trigger" : ""}${activeClass(route.id)}" href="${routeHref(route.id)}"${activeAria(route.id)}${dropdown ? ' aria-haspopup="true"' : ""}>${text.nav[route.id]}${dropdown ? '<span class="nav-dropdown-chevron" aria-hidden="true"></span>' : ""}</a>`;
         if (!dropdown) return link;
         if (mobile) {
           return `<div class="mobile-nav-group">${link}<div class="mobile-nav-submenu" aria-label="${dropdown.label}">${submenuLinks(dropdown.items, dropdown.page, "mobile-nav-sublink")}</div></div>`;
@@ -2263,7 +2259,7 @@
   }
 
   function searchItems(text) {
-    return routes.map((route) => {
+    const items = routes.filter((route) => !route.navOnly).map((route) => {
       const page = route.id === "home" ? text.home.hero : (text.pages[route.id] || copy.en.pages[route.id] || text.contact);
       return {
         id: route.id,
@@ -2272,6 +2268,9 @@
         href: routeHref(route.id)
       };
     });
+    const sleepLink = document.querySelector('a[data-arotec-nav-key="sleep-beauty"]');
+    items.push({ id: "sleep-beauty", title: sleepLink?.textContent.trim() || "Sleep x Beauty", excerpt: document.querySelector('button[data-arotec-nav-key="insights"]')?.textContent.trim() || text.nav.insights, href: sleepLink?.getAttribute("href") || `${root}pages/sleep-beauty.html` });
+    return items;
   }
 
   function renderSearchResults(text, query = "") {

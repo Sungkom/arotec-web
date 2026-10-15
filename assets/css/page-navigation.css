@@ -1,0 +1,230 @@
+/* Static, wrapping page hierarchy. Typography inherits the site's language layer. */
+/* Shared body-copy rules are important. Give only these new utility controls
+   their smaller size; the earlier language-font layer continues to own family. */
+@layer arotec-page-controls {
+  .arotec-breadcrumbs, .arotec-breadcrumbs :is(ol,li,a,span) {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+.arotec-breadcrumbs {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  flex-shrink: 0;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  margin-block-end: 16px;
+  z-index: 2;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: start;
+  text-transform: none;
+}
+.arotec-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.arotec-breadcrumbs li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.arotec-breadcrumbs a,
+.arotec-breadcrumbs [aria-current="page"],
+.arotec-breadcrumbs [data-breadcrumb-group] {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 0;
+  padding-block: 10px;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.arotec-breadcrumbs a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: currentColor; }
+.arotec-breadcrumbs a:hover { text-decoration-color: currentColor; }
+.arotec-breadcrumbs [aria-current="page"] { font-weight: 600; }
+.arotec-breadcrumb-separator { flex-shrink: 0; color: inherit; user-select: none; }
+.arotec-breadcrumbs[data-text-surface="dark"],
+.arotec-breadcrumbs [data-arotec-text-tone="white"] { color: #fff !important; }
+.arotec-breadcrumbs[data-text-surface="light"],
+.arotec-breadcrumbs [data-arotec-text-tone="navy"] { color: #113568 !important; }
+.arotec-breadcrumbs[data-breadcrumb-inset] { padding: 0; margin-block-end: 12px; }
+/* Campaign artwork remains authored. The text participates in its existing
+   hero flow, with a viewport-width reading area inside the desktop crop. */
+.arotec-breadcrumbs[data-breadcrumb-campaign] { position: relative; z-index: 2; width: auto; max-width: none; margin: 0; padding: 0; }
+.arotec-breadcrumbs[data-breadcrumb-campaign="personal"] { margin-inline: max(24px, calc((100% - 1172px) / 2)); padding-block: 8px; }
+@media (min-width: 1024px) {
+  [data-breadcrumb-campaign-host="products"] .nuro-intro,
+  [data-breadcrumb-campaign-host="vagus"] .vagus-brand { translate: 0 var(--breadcrumb-clearance, 0px); }
+}
+@media (max-width: 1023px) {
+  [data-breadcrumb-campaign-host]:not([data-breadcrumb-campaign-host="personal"]) { height: auto !important; aspect-ratio: auto !important; }
+  .arotec-breadcrumbs[data-breadcrumb-campaign]:not([data-breadcrumb-campaign="personal"]) { margin: 0 7%; padding: 14px 0 0; }
+  [data-breadcrumb-campaign-host] :is(.nuro-brand,.vagus-brand) { position: relative; inset: auto; margin: 18px 7% 0; }
+  [data-breadcrumb-campaign-host="products"] .nuro-intro { position: relative; inset: auto; margin: 22px 7% 24px; }
+  [data-breadcrumb-campaign-host="vagus"] #vagus-title { position: relative; inset: auto; margin: 22px 7% 24px; max-width: 86%; }
+  [data-breadcrumb-campaign-host="products"]::after { content: ''; display: block; height: 100cqw; }
+  [data-breadcrumb-campaign-host="vagus"]::after { content: ''; display: block; height: 70cqw; }
+}
+/* Keep each live timer aligned with its portrait photograph at tablet widths.
+   The original tablet typography stays in place; only the paired image/timer
+   geometry and the Vagus flow wrapper need the portrait arrangement. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  [data-breadcrumb-campaign-host="products"] .nuro-launch__background { top: auto; bottom: 0; height: 100cqw; object-position: 66% center; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown { top: auto; bottom: 37cqw; left: 60%; width: 37%; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown__number { font-size: 15cqw; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown__unit { margin-top: 1cqw; font-size: 4cqw; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown__message { margin-top: 1.3cqw; font-size: 3cqw; white-space: normal; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown__message span { display: block; }
+  [data-breadcrumb-campaign-host="products"] .nuro-countdown__fallback { font-size: 2.8cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-launch__background { top: auto; bottom: 0; height: 70cqw; object-position: 55.569892% center; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-launch__content { display: contents; position: static; container-type: normal; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown { top: auto; bottom: 0; height: 70cqw; }
+  [data-breadcrumb-campaign-host="vagus"] :is(.vagus-countdown__heading,.vagus-countdown__caption,.vagus-countdown__unit,.vagus-countdown__message,.vagus-countdown__fallback) { left: 74.5%; width: 25%; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__heading { font-size: 2.96cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__caption { font-size: 1.46cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__digits { left: 75.5733%; width: 23.8933%; gap: 1.165cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__digits span { font-size: 6.12cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__unit { font-size: 1.8cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__rule { left: 85.95%; width: 3.14%; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__message { font-size: 1.5cqw; }
+  [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__fallback { font-size: 2cqw; }
+  html[lang="ja"] [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__heading { font-size: 2.7cqw; }
+  html[lang="ja"] [data-breadcrumb-campaign-host="vagus"] .vagus-countdown__message { font-size: 1.3cqw; }
+}
+/* This first science poster has absolutely placed headings. Let just its
+   introductory copy grow in flow for the breadcrumb; retain the authored image,
+   heading type, body copy and all later scientific diagrams. */
+@media (min-width: 1200px) {
+  #sleep-health .sh-scene:has([data-arotec-breadcrumbs]) { padding-top: 3cqw; }
+  #sleep-health .sh-intro:has([data-arotec-breadcrumbs]) { position: relative; inset: auto; margin-left: 4.1%; }
+  #sleep-health .sh-intro:has([data-arotec-breadcrumbs]) :is(h1,.sh-subtitle) { position: static; }
+  #sleep-health .sh-intro:has([data-arotec-breadcrumbs]) h1 { padding-block: .4cqw; }
+  #sleep-health .sh-intro:has([data-arotec-breadcrumbs]) { margin-bottom: 1cqw; }
+}
+.arotec-page-top {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+  width: auto !important;
+  height: auto !important;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  margin: 0;
+  border: 1px solid #a9bbd0;
+  border-radius: 5px;
+  background: #fff;
+  color: #113568;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  cursor: pointer;
+}
+.arotec-page-top:hover { background-color: #edf3f8; border-color: #113568; }
+.arotec-breadcrumbs a:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; border-radius: 2px; }
+.arotec-page-top:focus-visible { outline: 3px solid #113568; outline-offset: 3px; border-radius: 2px; }
+.arotec-page-top svg { flex-shrink: 0; display: block; transform: none !important; }
+.arotec-page-navigation-end {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px var(--arotec-page-gutter, var(--breadcrumb-inset, 24px));
+  background: #fff;
+  color: #113568;
+  border-top: 1px solid #d8e0e9;
+}
+.arotec-breadcrumbs[hidden],
+.arotec-page-navigation-end[hidden],
+.arotec-page-top[hidden] { display: none !important; }
+@media (max-width: 767px) {
+  .arotec-breadcrumbs { padding: 0; }
+  .arotec-breadcrumbs ol { column-gap: 8px; }
+  .arotec-breadcrumbs li { gap: 8px; }
+  .arotec-breadcrumbs a { min-height: 44px; }
+  .arotec-page-navigation-end { padding: 16px var(--arotec-page-gutter, var(--breadcrumb-inset, 24px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arotec-breadcrumbs *, .arotec-page-top { scroll-behavior: auto; transition: none; }
+}
+@media print {
+  .arotec-breadcrumbs, .arotec-page-navigation-end, .arotec-page-top { display: none !important; }
+}
+
+/* Explicit breadcrumb surface hints own both paint properties in the site's
+   existing text layer; the language font layers remain unchanged. */
+@layer arotec-text-colors {
+  .arotec-breadcrumbs[data-text-surface="dark"],
+  .arotec-breadcrumbs[data-text-surface="dark"] :is(ol,li,a,span) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+  .arotec-breadcrumbs[data-text-surface="light"],
+  .arotec-breadcrumbs[data-text-surface="light"] :is(ol,li,a,span) {
+    color: #113568 !important;
+    -webkit-text-fill-color: #113568 !important;
+  }
+}
+.arotec-breadcrumbs[data-text-surface="dark"] :is(a,span) {
+  text-shadow: 0 0 1px #001329, 0 0 1px #001329, 0 1px 2px #001329, 0 0 3px #001329;
+}
+/* One leading flow row, independent of authored hero-copy positioning. */
+main[data-breadcrumb-flow-root] { display: flow-root; }
+main[data-breadcrumb-policy-content] { padding-top: 24px !important; }
+.arotec-breadcrumbs { align-self: start; justify-self: start; order: -1; grid-column: 1 / -1; }
+.arotec-breadcrumbs[data-breadcrumb-layout="campaign"] ol { max-width: var(--breadcrumb-safe-width); }
+@media (max-width: 1023px) { .arotec-breadcrumbs[data-breadcrumb-layout="campaign"] ol { max-width: 100%; } }
+@media (min-width: 1024px) {
+  [data-breadcrumb-campaign-host] :is(.nuro-brand,.nuro-intro,.vagus-brand,#vagus-title) { translate: 0 var(--breadcrumb-clearance, 0px); }
+}
+@media (min-width: 1200px) {
+  #sleep-health[data-breadcrumb-sleep-surface] .sh-scene { padding-top: 3cqw; }
+  #sleep-health[data-breadcrumb-sleep-surface] .sh-art { height: 100%; object-fit: cover; }
+  #sleep-health[data-breadcrumb-sleep-surface] .sh-intro { position: relative; inset: auto; margin-left: 4.1%; margin-bottom: 1cqw; }
+  #sleep-health[data-breadcrumb-sleep-surface] .sh-intro :is(h1,.sh-subtitle) { position: static; }
+  #sleep-health[data-breadcrumb-sleep-surface] .sh-intro h1 { padding-block: .4cqw; }
+}
+
+/* Layout measurements must use this frame's geometry. Legacy global `all`
+   transitions otherwise animate the margins and return stale computed values.
+   Children retain their authored transitions. */
+[data-arotec-breadcrumbs], [data-breadcrumb-surface], [data-breadcrumb-reserve],
+#site-shell [data-arotec-breadcrumbs], #site-shell [data-breadcrumb-surface],
+#site-shell [data-breadcrumb-reserve] { transition: none !important; }
+@media (min-width: 901px) {
+  html body.np26-page main#main#main [data-breadcrumb-surface] .np26-stage { min-height: var(--breadcrumb-scene-min-height, 0px); }
+  html body.np26-page main#main#main [data-breadcrumb-surface] .np26-hero-copy { top: max(50%, var(--breadcrumb-copy-center, 0px)); }
+}

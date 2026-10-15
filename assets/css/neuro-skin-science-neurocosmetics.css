@@ -1,120 +1,86 @@
-/* One continuous source illustration, with editable web copy and shared site gutters. */
-@font-face { font-family: 'NSS Neuro Display'; src: url('../fonts/DMSans-Black.ttf') format('truetype'); font-style: normal; font-weight: 900; font-display: swap; }
-html body.nss-page #neurocosmetics { padding-block: 40px; background: #fff; }
+/* Section 07: supplied 7s.png artwork, native website type and shared gutters. */
+html body.nss-page #main #neurocosmetics { --nc-art: url('../images/neuro-skin-science-20260915/neurocosmetics-reference/neurocosmetics-clean.png'); padding: 48px 0; background: #fff; overflow: clip; }
 html body.nss-page #neurocosmetics::before { display: none !important; }
-#neurocosmetics .nss-nc-canvas { position: relative; container-type: inline-size; aspect-ratio: 2623 / 1475; isolation: isolate; overflow: hidden; }
-html body.nss-page #neurocosmetics :is(h2,h3,p,span,a) { font-family: 'DM Sans',sans-serif !important; color: #03092c; text-transform: none !important; }
-html body.nss-page #neurocosmetics :is(h2,h3):not(#dsm-type-lock) { margin: 0 !important; }
-#neurocosmetics :is(p,ol,ul) { margin: 0; padding: 0; }
-#neurocosmetics .nss-nc-heading { position: absolute; z-index: 2; top: 5.64%; left: 8.3%; right: 5%; }
-html body.nss-page #neurocosmetics h2 { font-family: 'NSS Neuro Display','DM Sans',sans-serif !important; font-size: 6.2cqw !important; line-height: 1 !important; font-weight: 900 !important; letter-spacing: -.24cqw !important; transform: none; white-space: normal; overflow-wrap: anywhere; transform-origin: left center; color: #030720 !important; }
-html body.nss-page #neurocosmetics .nss-nc-subtitle { font-size: 2.78cqw !important; line-height: 1.08 !important; font-weight: 400 !important; letter-spacing: -.125cqw !important; }
-html body.nss-page #neurocosmetics .nss-nc-intro { margin-top: .65cqw; font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.32cqw !important; line-height: 1.22 !important; font-weight: 400 !important; letter-spacing: -.02cqw; color: #283b8c; }
-html body.nss-page #neurocosmetics .nss-nc-mechanisms-title { position: absolute; z-index: 2; left: 8.3%; top: 30.55%; right: 24%; display: flex; align-items: center; gap: 1.3cqw; font-size: 2.05cqw !important; line-height: 1.2 !important; font-weight: 750 !important; letter-spacing: -.08cqw !important; white-space: nowrap; color: #030720 !important; }
-#neurocosmetics .nss-nc-mechanisms-title::after { content: ''; flex: 1; height: 1px; background: #617fc4; margin-top: .75cqw; }
-#neurocosmetics .nss-nc-mechanisms { position: absolute; z-index: 2; inset: 36.88% 12% auto 11.96%; list-style: none; }
-#neurocosmetics .nss-nc-mechanisms li { position: absolute; width: 30.5%; display: flex; align-items: start; gap: 1.3cqw; }
-#neurocosmetics .nss-nc-mechanisms li:nth-child(2) { left: 35.6%; }
-#neurocosmetics .nss-nc-mechanisms li:nth-child(3) { left: 67.65%; }
-html body.nss-page #neurocosmetics .nss-nc-number { display: grid; place-items: center; flex: 0 0 2.6cqw; width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #080f69; color: #fff; font-size: 1.85cqw !important; line-height: 1 !important; font-weight: 750 !important; }
-html body.nss-page #neurocosmetics .nss-nc-mechanisms h3:not(#dsm-type-lock) { font-size: 1.48cqw !important; line-height: 1.15 !important; font-weight: 750 !important; letter-spacing: -.055cqw !important; white-space: nowrap; margin: .15cqw 0 .4cqw !important; color: #030720 !important; }
-html body.nss-page #neurocosmetics .nss-nc-mechanisms p { font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.28cqw !important; line-height: 1.08 !important; font-weight: 400 !important; letter-spacing: -.01cqw; color: #263581; white-space: nowrap; }
-#neurocosmetics .nss-nc-visual { position: absolute; z-index: 0; inset: 0; overflow: hidden; }
-#neurocosmetics .nss-nc-background { position: absolute; left: -12.6953%; top: 0; width: 125%; max-width: none; height: auto; }
-html body.nss-page #neurocosmetics .nss-nc-label { position: absolute; font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.3cqw !important; line-height: 1.06 !important; font-weight: 400 !important; color: #152b7e; }
-#neurocosmetics .nss-nc-label--cell { left: 36.38%; top: 69.8%; }
-#neurocosmetics .nss-nc-label--nucleus { left: 71.2%; top: 52.1%; }
-#neurocosmetics .nss-nc-label--er { left: 71.2%; top: 79.35%; }
-#neurocosmetics .nss-nc-outcomes { list-style: none; position: absolute; z-index: 2; inset: 0; pointer-events: none; }
-#neurocosmetics .nss-nc-outcomes li { position: absolute; left: 92.28%; right: 0; }
-#neurocosmetics .nss-nc-outcomes li:nth-child(1) { top: 49.8%; }
-#neurocosmetics .nss-nc-outcomes li:nth-child(2) { top: 63.9%; }
-#neurocosmetics .nss-nc-outcomes li:nth-child(3) { top: 78%; }
-#neurocosmetics .nss-nc-outcomes img { display: none; }
-html body.nss-page #neurocosmetics .nss-nc-outcomes span { display: block; font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.25cqw !important; line-height: 1.07 !important; font-weight: 400 !important; letter-spacing: -.025cqw; color: #152b7e; white-space: nowrap; }
-#neurocosmetics .nss-nc-callout { position: absolute; z-index: 3; left: 23.34%; top: 85.33%; width: 51.76%; height: 10.07%; display: flex; align-items: center; gap: 1.1cqw; padding: .6cqw 1.65cqw; border: .1cqw solid #c0d0eb; border-radius: 3cqw; background: #f8fbff; }
-#neurocosmetics .nss-nc-callout img { width: 4.55cqw; height: 4.2cqw; flex: 0 0 4.55cqw; object-fit: contain; mix-blend-mode: multiply; }
-html body.nss-page #neurocosmetics .nss-nc-callout p { padding-left: .95cqw; border-left: .1cqw solid #273e85; font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.43cqw !important; line-height: 1.18 !important; font-weight: 400 !important; letter-spacing: -.026cqw; color: #253584; white-space: nowrap; }
-#neurocosmetics .nss-nc-explore { position: absolute; z-index: 3; right: 2%; bottom: 4.7%; display: flex; gap: .9cqw; align-items: center; text-decoration: none; }
-html body.nss-page #neurocosmetics .nss-nc-explore span { font-family: 'Roboto Condensed','DM Sans',sans-serif !important; font-size: 1.38cqw !important; line-height: 1.1 !important; font-weight: 550; }
-#neurocosmetics .nss-nc-explore .ph { font-size: 2.4cqw; color: #18346f; }
-#neurocosmetics .nss-nc-explore::after { content: ''; width: 6cqw; border-top: 1px solid #314681; }
+html body.nss-page #main #neurocosmetics > .nss-shell { width: auto; max-width: none; margin: 0; padding: 0 24px; }
+#neurocosmetics .nss-nc-canvas { position: relative; container-type: inline-size; isolation: isolate; }
+html body.nss-page #main #neurocosmetics :is(h2,h3,p,span,a) { font-family: 'DM Sans','Noto Sans Thai','Noto Sans JP','Noto Sans SC','Noto Sans TC',sans-serif !important; text-transform: none !important; white-space: normal; }
+html body.nss-page #main #neurocosmetics :is(h2,h3,p,ol,ul,figure) { margin: 0 !important; }
+#neurocosmetics :is(ol,ul) { padding: 0; list-style: none; }
+html body.nss-page #main #neurocosmetics h2 { font-size: clamp(38px,6.6vw,72px) !important; font-weight: 700 !important; line-height: 1.05 !important; letter-spacing: -.04em !important; overflow-wrap: anywhere; }
+html body.nss-page #main #neurocosmetics .nss-nc-subtitle { margin-top: 8px !important; font-size: clamp(24px,3.4vw,38px) !important; line-height: 1.16 !important; letter-spacing: -.035em !important; }
+html body.nss-page #main #neurocosmetics .nss-nc-intro { margin-top: 22px !important; font-size: 20px !important; line-height: 1.4 !important; }
+html body.nss-page #main #neurocosmetics .nss-nc-mechanisms-title { margin-top: 36px !important; font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -.035em !important; }
+#neurocosmetics .nss-nc-mechanisms-title::after { display: none; }
+html body.nss-page #main #neurocosmetics .nss-nc-mechanisms { display: grid; gap: 24px; margin-top: 24px !important; }
+#neurocosmetics .nss-nc-mechanisms li { display: flex; align-items: start; gap: 18px; min-width: 0; }
+html body.nss-page #main #neurocosmetics .nss-nc-number { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: #123868; color: #fff !important; font-size: 28px !important; line-height: 1 !important; font-weight: 700; }
+html body.nss-page #main #neurocosmetics .nss-nc-mechanisms h3 { font-size: 25px !important; line-height: 1.2 !important; letter-spacing: -.035em !important; font-weight: 700 !important; }
+html body.nss-page #main #neurocosmetics .nss-nc-mechanisms p { margin-top: 7px !important; font-size: 20px !important; line-height: 1.35 !important; }
+#neurocosmetics .nss-nc-desktop-break { display: none; }
+html body.nss-page #main #neurocosmetics .nss-nc-visual { position: relative; aspect-ratio: 1424 / 331; overflow: hidden; margin-block: 32px 24px !important; }
+#neurocosmetics .nss-nc-background { position: absolute; top: calc(-550 / 331 * 100%); left: calc(-368 / 1424 * 100%); width: calc(2048 / 1424 * 100%); max-width: none; height: auto; }
+#neurocosmetics .nss-nc-label { display: none; }
+#neurocosmetics .nss-nc-outcomes { display: grid; gap: 18px; }
+#neurocosmetics .nss-nc-outcomes li { display: flex; align-items: center; gap: 20px; }
+#neurocosmetics .nss-nc-outcomes img { width: 74px; height: 74px; object-fit: contain; }
+html body.nss-page #main #neurocosmetics .nss-nc-outcomes span { display: block; font-size: 20px !important; line-height: 1.2 !important; }
+#neurocosmetics .nss-nc-callout { margin-top: 32px; padding: 22px; border: 1px solid #c0d0eb; border-radius: 24px; background: #f8fbff; }
+#neurocosmetics .nss-nc-callout img { width: 66px; height: 62px; object-fit: contain; margin-bottom: 14px; mix-blend-mode: multiply; }
+html body.nss-page #main #neurocosmetics .nss-nc-callout p { font-size: 20px !important; line-height: 1.35 !important; }
+#neurocosmetics .nss-nc-explore { display: flex; align-items: center; gap: 18px; width: fit-content; min-height: 44px; margin: 24px 0 0 auto; text-decoration: none; }
+html body.nss-page #main #neurocosmetics .nss-nc-explore span { font-size: 22px !important; line-height: 1.2 !important; }
+#neurocosmetics .nss-nc-explore .ph { font-size: 32px; }
+#neurocosmetics .nss-nc-explore::after { content: ''; width: 64px; border-top: 1px solid #314681; }
 #neurocosmetics .nss-nc-explore:hover { opacity: .72; }
 #neurocosmetics .nss-nc-explore:focus-visible { outline: 2px solid #3075c2; outline-offset: 5px; }
-
-/* Reflow the source's annotations in reading order, instead of shrinking the poster. */
-@media (max-width: 1100px) {
-  html body.nss-page #neurocosmetics { padding-block: 48px; }
-  #neurocosmetics .nss-nc-canvas { aspect-ratio: auto; overflow: visible; }
-  #neurocosmetics .nss-nc-heading { position: relative; inset: auto; }
-  html body.nss-page #neurocosmetics h2 { font-size: clamp(38px,6.6vw,72px) !important; letter-spacing: -1.8px !important; line-height: 1.06 !important; transform: none; }
-  html body.nss-page #neurocosmetics .nss-nc-subtitle { margin-top: 8px; font-size: clamp(24px,3.4vw,38px) !important; line-height: 1.12 !important; letter-spacing: -.8px !important; }
-  html body.nss-page #neurocosmetics .nss-nc-intro { margin-top: 22px; font-size: 22px !important; line-height: 1.4 !important; letter-spacing: -.1px; }
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms-title:not(#dsm-type-lock) { position: relative; inset: auto; margin-top: 36px !important; font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -.8px !important; white-space: normal; }
-  #neurocosmetics .nss-nc-mechanisms-title::after { display: none; }
-  #neurocosmetics .nss-nc-mechanisms { position: relative; inset: auto; display: grid; gap: 24px; margin-top: 24px; }
-  #neurocosmetics .nss-nc-mechanisms li { position: relative; inset: auto !important; width: auto; gap: 18px; }
-  html body.nss-page #neurocosmetics .nss-nc-number { width: 44px; height: 44px; flex-basis: 44px; font-size: 28px !important; }
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms h3:not(#dsm-type-lock) { font-size: 25px !important; line-height: 1.2 !important; letter-spacing: -.6px !important; white-space: normal; margin: 0 0 7px !important; }
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms p { font-size: 22px !important; line-height: 1.35 !important; letter-spacing: 0; white-space: normal; }
-  #neurocosmetics .nss-nc-desktop-break { display: none; }
-  #neurocosmetics .nss-nc-visual { position: relative; inset: auto; aspect-ratio: 2048 / 690; margin: 28px -16px 20px; }
-  #neurocosmetics .nss-nc-background { top: -17.1cqw; }
-  #neurocosmetics .nss-nc-label { display: none; }
-  #neurocosmetics .nss-nc-outcomes { position: relative; inset: auto; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
-  #neurocosmetics .nss-nc-outcomes li { position: relative; inset: auto !important; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-  #neurocosmetics .nss-nc-outcomes img { display: block; width: 88px; height: 88px; object-fit: contain; }
-  html body.nss-page #neurocosmetics .nss-nc-outcomes span { font-size: 22px !important; line-height: 1.15 !important; letter-spacing: -.2px; }
-  #neurocosmetics .nss-nc-callout { position: relative; inset: auto; width: auto; height: auto; padding: 22px; margin-top: 32px; border-width: 1px; border-radius: 24px; gap: 18px; }
-  #neurocosmetics .nss-nc-callout img { width: 66px; height: 62px; flex-basis: 66px; }
-  html body.nss-page #neurocosmetics .nss-nc-callout p { padding-left: 18px; border-left-width: 1px; font-size: 22px !important; line-height: 1.35 !important; letter-spacing: 0; white-space: normal; }
-  #neurocosmetics .nss-nc-explore { position: relative; inset: auto; justify-content: flex-end; gap: 18px; width: fit-content; margin: 24px 0 0 auto; min-height: 44px; }
-  html body.nss-page #neurocosmetics .nss-nc-explore span { font-size: 22px !important; }
-  #neurocosmetics .nss-nc-explore .ph { font-size: 32px; }
-  #neurocosmetics .nss-nc-explore::after { width: 64px; }
+@media (min-width: 700px) {
+  #neurocosmetics .nss-nc-mechanisms { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #neurocosmetics .nss-nc-mechanisms li { flex-direction: column; }
+  #neurocosmetics .nss-nc-outcomes { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #neurocosmetics .nss-nc-outcomes li { flex-direction: column; text-align: center; }
+  #neurocosmetics .nss-nc-outcomes img { width: 90px; height: 90px; }
+  #neurocosmetics .nss-nc-callout { display: flex; align-items: center; gap: 22px; }
+  #neurocosmetics .nss-nc-callout img { flex: 0 0 66px; margin: 0; }
 }
-@media (max-width: 600px) {
-  html body.nss-page #neurocosmetics .nss-nc-intro,
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms p,
-  html body.nss-page #neurocosmetics .nss-nc-callout p { font-size: 20px !important; }
-  #neurocosmetics .nss-nc-outcomes { grid-template-columns: 1fr; gap: 16px; }
-  #neurocosmetics .nss-nc-outcomes li { flex-direction: row; gap: 20px; text-align: left; }
-  #neurocosmetics .nss-nc-outcomes img { width: 74px; height: 74px; }
-  #neurocosmetics .nss-nc-callout { display: block; padding: 22px; }
-  #neurocosmetics .nss-nc-callout img { margin-bottom: 14px; }
-  html body.nss-page #neurocosmetics .nss-nc-callout p { border: 0; padding: 0; }
+@media (min-width: 801px) { html body.nss-page #main #neurocosmetics > .nss-shell { padding-inline: 40px; } }
+@media (min-width: 1200px) { html body.nss-page #main #neurocosmetics > .nss-shell { padding-inline: 150px; } }
+@media (min-width: 1400px) {
+  html body.nss-page #main #neurocosmetics { padding-block: 0; }
+  #neurocosmetics .nss-nc-canvas { --nc-unit: calc(100cqw / 1424); aspect-ratio: 1424 / 1146.88; }
+  .nss-nc-heading { position: absolute; z-index: 2; top: calc(188 * var(--nc-unit)); left: 0; width: calc(870 * var(--nc-unit)); }
+  html body.nss-page #main #neurocosmetics h2 { min-height: calc(87 * var(--nc-unit)); font-size: calc(85 * var(--nc-unit)) !important; line-height: 1.02 !important; letter-spacing: -.045em !important; }
+  html[lang="th"] body.nss-page #main #neurocosmetics h2 { font-size: calc(60 * var(--nc-unit)) !important; }
+  html[lang="ja"] body.nss-page #main #neurocosmetics h2 { font-size: calc(65 * var(--nc-unit)) !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-subtitle { margin-top: calc(2 * var(--nc-unit)) !important; font-size: calc(38 * var(--nc-unit)) !important; line-height: 1.16 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-intro { margin-top: calc(13 * var(--nc-unit)) !important; width: calc(870 * var(--nc-unit)); font-size: calc(17 * var(--nc-unit)) !important; line-height: 1.2 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-mechanisms-title { position: absolute; z-index: 2; left: 0; top: calc(405 * var(--nc-unit)); margin: 0 !important; width: calc(447 * var(--nc-unit)); font-size: calc(29 * var(--nc-unit)) !important; line-height: 1.15 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-mechanisms { display: contents; margin: 0 !important; }
+  #neurocosmetics .nss-nc-mechanisms li { position: absolute; z-index: 2; display: block; top: calc(460 * var(--nc-unit)); width: calc(263 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-mechanisms li:nth-child(1) { left: calc(119 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-mechanisms li:nth-child(2) { left: calc(544 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-mechanisms li:nth-child(3) { left: calc(927 * var(--nc-unit)); width: calc(282 * var(--nc-unit)); }
+  html body.nss-page #main #neurocosmetics .nss-nc-number { display: none; }
+  html body.nss-page #main #neurocosmetics .nss-nc-mechanisms h3 { font-size: calc(23 * var(--nc-unit)) !important; line-height: 1.15 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-mechanisms p { margin-top: calc(6 * var(--nc-unit)) !important; font-size: calc(17.5 * var(--nc-unit)) !important; line-height: 1.18 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-visual { position: absolute; z-index: 0; inset: 0; aspect-ratio: auto; overflow: visible; margin: 0 !important; }
+  #neurocosmetics .nss-nc-background { top: 0; left: calc(-368 * var(--nc-unit)); width: calc(2048 * var(--nc-unit)); height: calc(1146.88 * var(--nc-unit)); }
+  html body.nss-page #main #neurocosmetics .nss-nc-label { position: absolute; display: block; font-size: calc(17.5 * var(--nc-unit)) !important; line-height: 1.18 !important; }
+  #neurocosmetics .nss-nc-label--cell { left: calc(442 * var(--nc-unit)); top: calc(749 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-label--nucleus { left: calc(991 * var(--nc-unit)); top: calc(592 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-label--er { left: calc(991 * var(--nc-unit)); top: calc(832 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-outcomes { display: contents; }
+  #neurocosmetics .nss-nc-outcomes li { display: block; position: absolute; z-index: 2; left: calc(1325 * var(--nc-unit)); width: calc(99 * var(--nc-unit)); text-align: left; }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(1) { top: calc(572 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(2) { top: calc(697 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-outcomes li:nth-child(3) { top: calc(820 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-outcomes img { display: none; }
+  html body.nss-page #main #neurocosmetics .nss-nc-outcomes span { font-size: calc(16.5 * var(--nc-unit)) !important; line-height: 1.18 !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-callout { position: absolute; z-index: 2; left: calc(371 * var(--nc-unit)); top: calc(905 * var(--nc-unit)); width: calc(645 * var(--nc-unit)); height: calc(59 * var(--nc-unit)); display: flex; align-items: center; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  #neurocosmetics .nss-nc-callout::before, #neurocosmetics .nss-nc-callout::after, #neurocosmetics .nss-nc-callout img { display: none !important; }
+  html body.nss-page #main #neurocosmetics .nss-nc-callout p { font-size: calc(18 * var(--nc-unit)) !important; line-height: 1.25 !important; }
+  #neurocosmetics .nss-nc-explore { position: absolute; z-index: 2; left: calc(1183 * var(--nc-unit)); top: calc(939 * var(--nc-unit)); min-height: calc(44 * var(--nc-unit)); margin: 0; gap: calc(16 * var(--nc-unit)); }
+  html body.nss-page #main #neurocosmetics .nss-nc-explore span { font-size: calc(20 * var(--nc-unit)) !important; }
+  #neurocosmetics .nss-nc-explore .ph { font-size: calc(31 * var(--nc-unit)); }
+  #neurocosmetics .nss-nc-explore::after { width: calc(95 * var(--nc-unit)); }
 }
-@media (max-width: 360px) {
-  html body.nss-page #neurocosmetics h2 { font-size: 33px !important; letter-spacing: -1.5px !important; }
-}
-
-/* Keep the reference illustration at its original scale. Translated mechanism
-   copy wraps in its own columns; the diagram moves down as one intact scene,
-   including its nucleus/cell labels, outcome captions and callout. */
-@media (min-width: 1101px) {
-  #neurocosmetics .nss-nc-canvas { aspect-ratio: auto; min-height: 61.2333206252cqw; }
-  #neurocosmetics .nss-nc-heading { top: 3.1715592833cqw; }
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms-title { top: 17.179279451cqw; }
-  #neurocosmetics .nss-nc-mechanisms { top: 20.7380480366cqw; }
-  html body.nss-page #neurocosmetics .nss-nc-mechanisms p { white-space: normal; overflow-wrap: break-word; }
-  #neurocosmetics .nss-nc-visual { inset: 5cqw 0 auto; height: 56.2333206252cqw; }
-  #neurocosmetics .nss-nc-outcomes li:nth-child(1) { top: 33.0041936714cqw; }
-  #neurocosmetics .nss-nc-outcomes li:nth-child(2) { top: 40.9330918795cqw; }
-  #neurocosmetics .nss-nc-outcomes li:nth-child(3) { top: 48.8619900877cqw; }
-  html body.nss-page #neurocosmetics .nss-nc-outcomes span { white-space: normal; overflow-wrap: break-word; }
-  #neurocosmetics .nss-nc-callout { top: 52.98529049cqw; height: 5.6626953869cqw; }
-  #neurocosmetics .nss-nc-explore { bottom: 2.6429660694cqw; }
-}
-
-/* Blend only the decorative top edge into the original white heading area;
-   all scientific illustration features below this short fade remain opaque. */
-@media (min-width: 1101px) {
-  #neurocosmetics .nss-nc-visual { mask-image: linear-gradient(to bottom, transparent, #000 3cqw); }
-}
-
-/* Size the canvas by its own width: cqw on a container's own min-height refers
-   to an ancestor/viewport and adds unintended space at the shared gutters.
-   The source height1475 plus its 5% vertical reservation equals1606.15. */
-@media (min-width: 1101px) {
-  #neurocosmetics .nss-nc-canvas { aspect-ratio: 2623 / 1606.15; min-height: 0; }
-}
+@media (max-width: 360px) { html body.nss-page #main #neurocosmetics h2 { font-size: 33px !important; } }

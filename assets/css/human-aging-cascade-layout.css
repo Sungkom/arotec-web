@@ -1,0 +1,185 @@
+/* Full cascade composition from the supplied 2.png / 2s.png references.
+   Native copy and controls retain the shared site font and content gutters. */
+@media (min-width: 1200px) {
+  html body.hla-page #cascade.hla-cascade-reference .hla-banner {
+    min-height: calc(100vw * 430 / 2048);
+    background: #18364f url('../images/human-longevity-aging-20260916/cascade-arrows-reference-clean.png') center top / 100% auto no-repeat;
+  }
+  #cascade.hla-cascade-reference .hla-banner::before,
+  #cascade.hla-cascade-reference .hla-banner > img { display: none; }
+  #cascade.hla-cascade-reference .hla-banner-copy {
+    --arotec-body-size: clamp(16px,1.02vw,20px);
+    --arotec-body-line-height: 1.36;
+    width: min(580px,33vw);
+    padding: 30px 0 clamp(32px,2.5vw,48px);
+    margin-left: var(--hla-gutter);
+    align-self: flex-end;
+  }
+  html body.hla-page #cascade.hla-cascade-reference #framework-title {
+    --site-type-h2: clamp(34px,2.5vw,48px);
+    --site-line-h2: 1.06;
+    --site-letter-h2: -.025em;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  html body.hla-page #cascade.hla-cascade-reference {
+    --hla-row-gap: clamp(6px,.52vw,10px);
+    background: #fcfcfd;
+  }
+  #cascade.hla-cascade-reference .hla-framework-inner {
+    padding-block: clamp(24px,1.7vw,34px) clamp(54px,5vw,96px);
+  }
+  #cascade.hla-cascade-reference .hla-journey {
+    grid-template-columns: minmax(0,14fr) minmax(0,24fr) minmax(0,27fr) minmax(0,11fr) minmax(0,6fr) minmax(0,14fr);
+    gap: var(--hla-row-gap);
+    align-items: stretch;
+  }
+  #cascade.hla-cascade-reference .hla-emii { grid-column: 1; }
+  #cascade.hla-cascade-reference .hla-burden { grid-column: 2; }
+  #cascade.hla-cascade-reference .hla-metastatic { grid-column: 3; }
+  #cascade.hla-cascade-reference .hla-human { grid-column: 4; }
+  #cascade.hla-cascade-reference .hla-adi { grid-column: 6; }
+
+  html body.hla-page #cascade.hla-cascade-reference .hla-card {
+    --site-type-h3: clamp(18px,1.2vw,23px);
+    --site-line-h3: 1.13;
+    --site-letter-h3: -.025em;
+    --site-type-h4: clamp(14px,.88vw,17px);
+    --site-line-h4: 1.18;
+    --site-letter-h4: -.02em;
+    --arotec-body-size: clamp(14px,.84vw,16px);
+    --arotec-body-line-height: 1.28;
+    min-height: clamp(420px,24.5vw,500px);
+    border: 0 !important;
+    border-radius: 14px;
+    box-shadow: none !important;
+    background: linear-gradient(140deg,#f4f9fd,#eef6fc);
+    overflow: visible;
+  }
+  html body.hla-page #cascade.hla-cascade-reference .hla-adi {
+    background: linear-gradient(140deg,#fffefd,#faf8f4);
+  }
+  html body.hla-page #cascade.hla-cascade-reference .hla-card :is(h3,h4) {
+    margin-bottom: 7px !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  html body.hla-page #cascade.hla-cascade-reference .hla-card .hla-acronym {
+    --site-type-h3: clamp(30px,2.05vw,40px);
+    --site-line-h3: 1.05;
+    margin-bottom: 4px !important;
+  }
+  #cascade.hla-cascade-reference .hla-card-copy { padding: 10px clamp(8px,.63vw,12px) 14px; }
+  #cascade.hla-cascade-reference .hla-card p { margin: 0; }
+  #cascade.hla-cascade-reference .hla-exposure-photo { padding: 6px 6px 0; }
+  #cascade.hla-cascade-reference .hla-exposure-photo figcaption { padding: 6px 2px 7px; }
+  #cascade.hla-cascade-reference .hla-exposure-photo strong {
+    font-size: clamp(11px,.73vw,14px);
+    line-height: 1.16;
+    text-transform: uppercase;
+  }
+  #cascade.hla-cascade-reference .hla-exposure-photo span {
+    margin-top: 3px;
+    font-size: clamp(10px,.63vw,12px);
+    line-height: 1.22;
+  }
+
+  #cascade.hla-cascade-reference .hla-burden {
+    --arotec-body-size: clamp(14px,.84vw,16px);
+    --arotec-body-line-height: 1.32;
+    align-self: start;
+    margin-top: clamp(56px,4.3vw,82px);
+  }
+  #cascade.hla-cascade-reference .hla-burden-steps li {
+    --arotec-body-size: clamp(12px,.84vw,16px);
+    --arotec-body-line-height: 1.28;
+  }
+  #cascade.hla-cascade-reference .hla-burden > p { margin: 14px 0 0; }
+
+  #cascade.hla-cascade-reference .hla-metastatic {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(12px,.84vw,16px) clamp(6px,.52vw,10px) 12px;
+  }
+  html body.hla-page #cascade.hla-cascade-reference .hla-metastatic > h3 {
+    --site-type-h3: clamp(20px,1.36vw,26px);
+    --site-line-h3: 1.1;
+    margin-bottom: clamp(14px,1.05vw,20px) !important;
+  }
+  #cascade.hla-cascade-reference .hla-levels {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: clamp(6px,.52vw,10px);
+    margin: 0;
+  }
+  #cascade.hla-cascade-reference .hla-levels img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin-bottom: 8px;
+    border-radius: 9px;
+  }
+  #cascade.hla-cascade-reference .hla-levels p {
+    --arotec-body-size: clamp(12px,.8vw,15px);
+    --arotec-body-line-height: 1.3;
+  }
+  #cascade.hla-cascade-reference .hla-metastatic .hla-propagation {
+    --arotec-body-size: clamp(13px,.84vw,16px);
+    --arotec-body-line-height: 1.28;
+    margin-top: auto;
+    padding-top: 14px;
+  }
+
+  #cascade.hla-cascade-reference :is(.hla-human,.hla-adi) {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+  #cascade.hla-cascade-reference .hla-brain-stages {
+    width: auto;
+    max-width: none;
+    margin: 6px 6px 0;
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+  #cascade.hla-cascade-reference .hla-brain-stages > img { height: auto; }
+  #cascade.hla-cascade-reference .hla-age { font-size: clamp(11px,.73vw,14px); }
+  #cascade.hla-cascade-reference .hla-adi-photo {
+    width: calc(100% - 12px);
+    height: auto;
+    margin: 6px 6px 0;
+  }
+  #cascade.hla-cascade-reference :is(.hla-human,.hla-adi) .hla-card-copy {
+    padding: 10px clamp(8px,.63vw,12px) 14px;
+  }
+  #cascade.hla-cascade-reference .hla-card-copy p:has(+ .hla-explore) { margin-bottom: 14px; }
+  html body.hla-page #cascade.hla-cascade-reference .hla-explore {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+    padding: 7px 8px;
+    gap: 6px;
+    border: 0 !important;
+    border-radius: 999px;
+    font-size: clamp(13px,.84vw,16px);
+    line-height: 1.2;
+  }
+  #cascade.hla-cascade-reference .hla-explore .ph { font-size: 20px; }
+
+  #cascade.hla-cascade-reference .hla-metastatic > .hla-flow-arrow,
+  #cascade.hla-cascade-reference .hla-human > .hla-flow-arrow {
+    display: block;
+    top: var(--hla-flow-top,170px);
+    height: clamp(30px,2.24vw,43px);
+  }
+  #cascade.hla-cascade-reference .hla-metastatic > .hla-flow-arrow {
+    width: clamp(20px,1.46vw,28px);
+    right: calc(-1 * var(--hla-row-gap) - 8px);
+  }
+  #cascade.hla-cascade-reference .hla-human > .hla-flow-arrow {
+    width: calc(100% * 6 / 11 + 2 * var(--hla-row-gap));
+    right: calc(-100% * 6 / 11 - 2 * var(--hla-row-gap));
+  }
+}

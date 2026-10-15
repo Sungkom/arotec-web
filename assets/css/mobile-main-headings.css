@@ -989,7 +989,7 @@
       overflow-wrap: anywhere !important;
       max-width: 100% !important;
     }
-    body[data-main-heading-page="pages--bio-responsive-scents"] #chromagen-benefits > h2.cg-at.cg-text.cg-brand.cg-center:nth-child(2) {
+    body[data-main-heading-page="pages--bio-responsive-scents"] #chromagen-benefits > h2.cg-at.cg-text.cg-brand.cg-center {
       --main-heading-desktop-size: 129.945px;
       --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
       font-size: var(--main-heading-mobile-size) !important;
@@ -999,7 +999,7 @@
       overflow-wrap: anywhere !important;
       max-width: 100% !important;
     }
-    body[data-main-heading-page="pages--bio-responsive-scents"] #chromagen-benefits > h2.cg-at.cg-text.cg-brand.cg-center:nth-child(2) > sup:nth-child(1) {
+    body[data-main-heading-page="pages--bio-responsive-scents"] #chromagen-benefits > h2.cg-at.cg-text.cg-brand.cg-center > sup:nth-child(1) {
       --main-heading-desktop-size: 58.4751px;
       --main-heading-mobile-size: calc(var(--main-heading-desktop-size) * 0.6);
       font-size: var(--main-heading-mobile-size) !important;

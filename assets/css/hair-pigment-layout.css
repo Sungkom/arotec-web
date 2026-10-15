@@ -1,0 +1,228 @@
+/* Original 5000 × 2160 pigmentation artwork, with native localized text.
+   The 2048 × 884.736 reference frame aligns x=306 and x=1778 to the
+   website's existing content gutters. Small screens keep the original flow. */
+#pigmentation-graying { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.hair-reference-page #pigmentation-graying {
+    padding-block: 0;
+    overflow: clip;
+    background: #f8f9fb;
+  }
+  #pigmentation-graying > .hf-shell {
+    --pigment-unit: calc(100cqw / 1472);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1472 / 884.736;
+    isolation: isolate;
+  }
+  #pigmentation-graying > .hf-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -20.788043%;
+    width: 139.130435%;
+    background: url("../images/hair-follicle-20260916/pigment-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #pigmentation-graying .hf-intro {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(360 * var(--pigment-unit));
+    max-width: none;
+    --site-type-h2: calc(42 * var(--pigment-unit));
+    --site-line-h2: 1.08;
+    --site-letter-h2: -.025em;
+    --arotec-body-size: calc(20 * var(--pigment-unit));
+    --arotec-body-line-height: 1.28;
+  }
+  #pigmentation-graying .hf-kicker {
+    position: absolute;
+    top: calc(153 * var(--pigment-unit));
+    width: 100%;
+    --arotec-body-size: calc(17 * var(--pigment-unit));
+    --arotec-body-line-height: 1.35;
+    white-space: nowrap;
+    letter-spacing: .01em;
+    padding-bottom: calc(11 * var(--pigment-unit));
+    border-bottom-width: 1px;
+    margin: 0 !important;
+  }
+  html body.hair-reference-page #main #pigmentation-graying h2 {
+    position: absolute;
+    top: calc(208 * var(--pigment-unit));
+    width: calc(370 * var(--pigment-unit));
+    text-wrap: wrap !important;
+    margin: 0 !important;
+  }
+  #pigmentation-graying .hf-intro > p:nth-of-type(2) {
+    position: absolute;
+    top: calc(358 * var(--pigment-unit));
+    width: 100%;
+  }
+  html body.hair-reference-page #main #pigmentation-graying .hf-intro > p:nth-of-type(3) {
+    position: absolute;
+    top: calc(553 * var(--pigment-unit));
+    width: 100%;
+    margin: 0 !important;
+    --arotec-body-size: calc(19 * var(--pigment-unit));
+    --arotec-body-line-height: 1.2;
+  }
+  html body.hair-reference-page #main #pigmentation-graying .hf-research-note {
+    position: absolute;
+    top: calc(716 * var(--pigment-unit));
+    width: 100%;
+    padding-top: calc(15 * var(--pigment-unit));
+    border-top-width: 1px;
+    margin: 0 !important;
+    --arotec-body-line-height: 1.24;
+  }
+
+  #pigmentation-graying .hf-diagram-content,
+  #pigmentation-graying .hf-pigment-unit,
+  #pigmentation-graying .hf-pigment-follicle,
+  #pigmentation-graying .hf-pigment-follicle figcaption,
+  #pigmentation-graying .hf-pigment-process,
+  #pigmentation-graying .hf-pigment-stages,
+  #pigmentation-graying .hf-pigment-stages > li,
+  #pigmentation-graying .hf-progression,
+  #pigmentation-graying .hf-stressors,
+  #pigmentation-graying .hf-graying-grid,
+  #pigmentation-graying .hf-graying-grid > li { display: contents; }
+  #pigmentation-graying .hf-pigment-stages > li,
+  #pigmentation-graying .hf-graying-grid > li { position: static; }
+  #pigmentation-graying .hf-diagram-content img,
+  #pigmentation-graying .hf-between,
+  #pigmentation-graying .hf-stressors i,
+  #pigmentation-graying .hf-scroll-hint { display: none !important; }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-diagram-title {
+    position: absolute;
+    left: calc(397 * var(--pigment-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(25 * var(--pigment-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  #pigmentation-graying .hf-diagram-content > .hf-diagram-title { top: calc(55 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-progression > .hf-diagram-title { top: calc(432 * var(--pigment-unit)); }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-pigment-follicle figcaption > span {
+    position: absolute;
+    left: calc(379 * var(--pigment-unit));
+    width: calc(110 * var(--pigment-unit));
+    text-align: left;
+    font-size: calc(14.5 * var(--pigment-unit)) !important;
+    line-height: 1.16 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.02em;
+  }
+  #pigmentation-graying .hf-pigment-follicle figcaption > span:nth-child(1) { top: calc(174 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-pigment-follicle figcaption > span:nth-child(2) { top: calc(320 * var(--pigment-unit)); }
+  html body.hair-reference-page #main #pigmentation-graying .hf-pigment-follicle small {
+    display: block;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-pigment-stages h4 {
+    position: absolute;
+    top: calc(129 * var(--pigment-unit));
+    width: calc(135 * var(--pigment-unit));
+    min-height: 0;
+    margin: 0 !important;
+    text-align: center;
+    --site-type-h4: calc(18.5 * var(--pigment-unit));
+    --site-line-h4: 1.15;
+    --site-letter-h4: -.025em;
+  }
+  #pigmentation-graying .hf-pigment-stages > li:nth-child(1) h4 { left: calc(699.5 * var(--pigment-unit)); }
+  html body.hair-reference-page #main #pigmentation-graying .hf-pigment-stages > li:nth-child(2) h4 { left: calc(854.5 * var(--pigment-unit)); top: calc(141 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-pigment-stages > li:nth-child(3) h4 { left: calc(1006.5 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-pigment-stages > li:nth-child(4) h4 { left: calc(1164.5 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-pigment-stages > li:nth-child(5) h4 { left: calc(1321.5 * var(--pigment-unit)); }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-signal-strip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: calc(41 * var(--pigment-unit));
+    border-radius: calc(21 * var(--pigment-unit));
+    background: #cce8fc;
+    --arotec-body-size: calc(19 * var(--pigment-unit));
+    --arotec-body-line-height: 1.2;
+  }
+  #pigmentation-graying .hf-pigment-process > .hf-signal-strip {
+    left: calc(765 * var(--pigment-unit));
+    top: calc(338 * var(--pigment-unit));
+    width: calc(602 * var(--pigment-unit));
+  }
+  #pigmentation-graying .hf-signal-strip > li {
+    position: relative;
+    padding: 0 calc(11 * var(--pigment-unit));
+    border: 0;
+    white-space: nowrap;
+    text-align: center;
+  }
+  #pigmentation-graying .hf-signal-strip > li + li::before {
+    content: "·";
+    position: absolute;
+    left: calc(-3 * var(--pigment-unit));
+  }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-stressors > li {
+    position: absolute;
+    top: calc(479 * var(--pigment-unit));
+    height: calc(28 * var(--pigment-unit));
+    display: flex;
+    align-items: center;
+    gap: 0;
+    text-align: left;
+    font-weight: 700 !important;
+    --arotec-body-size: calc(18.5 * var(--pigment-unit));
+    --arotec-body-line-height: 1.2;
+    letter-spacing: -.025em;
+  }
+  #pigmentation-graying .hf-stressors > li:nth-child(1) { left: calc(515 * var(--pigment-unit)); width: calc(163 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-stressors > li:nth-child(2) { left: calc(776 * var(--pigment-unit)); width: calc(154 * var(--pigment-unit)); }
+  html body.hair-reference-page #main #pigmentation-graying .hf-stressors > li:nth-child(3) { left: calc(1020 * var(--pigment-unit)); top: calc(471 * var(--pigment-unit)); width: calc(205 * var(--pigment-unit)); height: calc(46 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-stressors > li:nth-child(4) { left: calc(1307 * var(--pigment-unit)); width: calc(165 * var(--pigment-unit)); }
+
+  html body.hair-reference-page #main #pigmentation-graying .hf-graying-grid h4 {
+    position: absolute;
+    top: calc(747 * var(--pigment-unit));
+    width: calc(249 * var(--pigment-unit));
+    margin: 0 !important;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: center;
+    --site-type-h4: calc(17.5 * var(--pigment-unit));
+    --site-line-h4: 1.15;
+    --site-letter-h4: -.02em;
+  }
+  #pigmentation-graying .hf-graying-grid > li:nth-child(1) h4 { left: calc(393 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-graying-grid > li:nth-child(2) h4 { left: calc(660 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-graying-grid > li:nth-child(3) h4 { left: calc(930 * var(--pigment-unit)); }
+  #pigmentation-graying .hf-graying-grid > li:nth-child(4) h4 { left: calc(1199 * var(--pigment-unit)); }
+
+  #pigmentation-graying .hf-signal-strip.hf-resilience {
+    left: calc(557 * var(--pigment-unit));
+    top: calc(790 * var(--pigment-unit));
+    width: calc(737 * var(--pigment-unit));
+  }
+  html body.hair-reference-page #main #pigmentation-graying .hf-resilience > li {
+    --arotec-body-size: calc(18.5 * var(--pigment-unit));
+    font-weight: 700 !important;
+    letter-spacing: -.025em;
+  }
+}

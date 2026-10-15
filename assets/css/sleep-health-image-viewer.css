@@ -1,0 +1,133 @@
+/* Complete, uniformly scaled Sleep Health compositions. Font geometry belongs
+   to the original section styles inside each script-free preview document. */
+.shi-view { display:none; }
+@layer sleep-health-mobile {
+  @media (width < 1200px) {
+    /* These three originals are normally display:none behind abbreviated maps.
+       Keep every original heading/paragraph in the accessibility tree. */
+    body.sleep-health-page #main .shi-section > .shi-source,
+    body.sleep-health-page #main .shi-section > .shi-view { display:block!important; }
+  }
+}
+@media (width < 1200px) {
+  body.sleep-health-page #main .shi-section > .shm-mobile-diagram { display:none!important; }
+  body.sleep-health-page #main .shi-section:where(:not([data-shi-dense]),[data-shi-ready="true"],[data-shi-failed="true"]) > .shi-source {
+    position:absolute!important; inset:0 auto auto 0!important;
+    width:1px!important; min-width:0!important; max-width:1px!important;
+    height:1px!important; min-height:0!important; max-height:1px!important;
+    margin:0!important; padding:0!important; border:0!important;
+    overflow:hidden!important; clip:rect(0,0,0,0)!important;
+    clip-path:inset(50%)!important;
+  }
+  body.sleep-health-page #main .shi-section { padding-bottom:0!important; }
+  .shi-view { display:block; width:100%; min-width:0; box-sizing:border-box; padding-top:var(--shi-breadcrumb-space,0px); }
+  .shi-overview { position:relative; width:100%; overflow:hidden; aspect-ratio:16 / 9; }
+  .shi-overview[data-ready] { aspect-ratio:auto; }
+  .shi-overview iframe { position:absolute; inset:0 auto auto 0; display:block; width:1200px; max-width:none; border:0; transform-origin:0 0; pointer-events:none; }
+  .shi-overview iframe[hidden] { display:none; }
+  .shi-status { position:absolute; inset:12px; z-index:2; align-content:center; margin:0; padding:12px; color:#173654; background:#f5f8fc; font:400 16px/1.5 var(--site-font,sans-serif); }
+  .shi-status[hidden] { display:none; }
+  .shi-status[data-error] { inset:auto 12px 12px; }
+  .shi-focus-ring { display:none; position:absolute; z-index:3; pointer-events:none; outline:3px solid #2876b1; outline-offset:3px; border-radius:2px; }
+  .shi-view[data-heading-focus] .shi-focus-ring { display:block; }
+}
+/* Four dense reference compositions keep their complete 1920px canvas
+   on medium desktops. Established rules for the other sections stay unchanged. */
+@layer sleep-health-mobile {
+  @media (1200px <= width < 1920px) {
+    body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health).shi-section > .shi-source,
+    body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health).shi-section > .shi-view { display:block!important; }
+  }
+}
+@media (1200px <= width < 1920px) {
+  body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health).shi-section > .shm-mobile-diagram { display:none!important; }
+  body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health).shi-section:is([data-shi-ready="true"],[data-shi-failed="true"]) > .shi-source {
+    position:absolute!important; inset:0 auto auto 0!important;
+    width:1px!important; min-width:0!important; max-width:1px!important;
+    height:1px!important; min-height:0!important; max-height:1px!important;
+    margin:0!important; padding:0!important; border:0!important;
+    overflow:hidden!important; clip:rect(0,0,0,0)!important;
+    clip-path:inset(50%)!important;
+  }
+  body.sleep-health-page #main :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health).shi-section { padding-bottom:0!important; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-view { display:block; width:100%; min-width:0; box-sizing:border-box; padding-top:var(--shi-breadcrumb-space,0px); }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-overview { position:relative; width:100%; overflow:hidden; aspect-ratio:16 / 9; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-overview[data-ready] { aspect-ratio:auto; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-overview iframe { position:absolute; inset:0 auto auto 0; display:block; width:1920px; max-width:none; border:0; transform-origin:0 0; pointer-events:none; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-overview iframe[hidden] { display:none; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-status { position:absolute; inset:12px; z-index:2; align-content:center; margin:0; padding:12px; color:#173654; background:#f5f8fc; font:400 16px/1.5 var(--site-font,sans-serif); }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-status[hidden] { display:none; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-status[data-error] { inset:auto 12px 12px; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-focus-ring { display:none; position:absolute; z-index:3; pointer-events:none; outline:3px solid #2876b1; outline-offset:3px; border-radius:2px; }
+  :is(#neurobiology,#biological-burden,#restorative-conditions,#multisystem-health) .shi-view[data-heading-focus] .shi-focus-ring { display:block; }
+}
+
+/* Complete reading text replaces an unavailable diagram only. */
+@layer sleep-health-mobile {
+  body.sleep-health-page .shi-reading {
+    display:block!important; position:static!important; width:100%!important;
+    height:auto!important; max-width:100%!important; padding:24px var(--arotec-page-gutter,24px) 32px!important;
+    margin:0!important; clip:auto!important; clip-path:none!important;
+    overflow:visible!important; box-sizing:border-box; background:#fff;
+  }
+  body.sleep-health-page .shi-reading * {
+    color:#113568!important; -webkit-text-fill-color:#113568!important;
+    font-family:var(--site-font,sans-serif)!important;
+    font-stretch:normal!important; transform:none!important; text-transform:none!important;
+    letter-spacing:normal!important; white-space:normal!important;
+    max-width:100%!important; overflow-wrap:break-word;
+  }
+  body.sleep-health-page .shi-reading :is(section,div,header,figure,dl,ol,ul) {
+    position:static!important; width:auto!important; height:auto!important;
+    margin:0 0 20px!important; padding:0!important; border:0!important;
+  }
+  body.sleep-health-page .shi-reading :is(p,li,dt,dd,span,strong,small,figcaption) {
+    font-size:18px!important; line-height:28px!important; font-weight:400!important;
+    margin:0 0 12px!important;
+  }
+  body.sleep-health-page .shi-reading :is(h3,h4) {
+    font-size:24px!important; line-height:32px!important; font-weight:600!important;
+    margin:24px 0 12px!important;
+  }
+  body.sleep-health-page .shi-reading :is(h1,h2) {
+    font-size:48px!important; line-height:58px!important; font-weight:700!important;
+    letter-spacing:-.96px!important; margin:0 0 20px!important;
+  }
+  body.sleep-health-page .shi-reading :is(strong,dt) { font-weight:700!important; }
+  body.sleep-health-page .shi-reading :is(ol,ul) { list-style:none!important; }
+  body.sleep-health-page .shi-reading [data-shi-text-role="supporting"] { font-size:24px!important; line-height:32px!important; font-weight:600!important; }
+  body.sleep-health-page .shi-reading :is(h1,h2,h3,h4) :is(span,strong,em) { font-size:inherit!important; line-height:inherit!important; letter-spacing:inherit!important; font-weight:inherit!important; }
+  @media(width < 768px) {
+    body.sleep-health-page .shi-reading :is(h1,h2) { font-size:32px!important; line-height:38px!important; letter-spacing:-.64px!important; }
+  }
+  @media(width < 360px) {
+    body.sleep-health-page .shi-reading { padding:16px!important; }
+  }
+}
+
+@layer sleep-health-mobile {
+  body.sleep-health-page .shi-reading { display:none!important; }
+  body.sleep-health-page .shi-reading > .shi-reading-copy { max-width:76ch!important; margin-inline:auto!important; }
+  body.sleep-health-page .shi-reading-status[hidden] { display:none!important; }
+  body.sleep-health-page .shi-reading[hidden] { display:none!important; }
+  @media(width < 1200px) { body.sleep-health-page [data-shi-failed="true"] > .shi-reading:not([hidden]) { display:block!important; } }
+  @media(1200px <= width < 1920px) { body.sleep-health-page [data-shi-dense][data-shi-failed="true"] > .shi-reading:not([hidden]) { display:block!important; } }
+}
+/* Keep the original dense section in flow until a usable replacement exists.
+   The pending frame stays laid out so its script-free document can be measured. */
+@media(width < 1920px) {
+  body.sleep-health-page #main .shi-section[data-shi-dense]:not([data-shi-ready="true"]) > .shi-view {
+    position:absolute!important; inset:0 0 auto!important; width:100%!important;
+    height:0!important; overflow:hidden!important; visibility:hidden!important;
+    pointer-events:none!important;
+  }
+}
+
+
+@media(prefers-reduced-motion:reduce) { .shi-view,.shi-reading { scroll-behavior:auto!important; } }
+
+.shi-reading [data-shi-heading-focus] { outline:3px solid #2876b1; outline-offset:4px; }
+
+@media(width < 1920px) {
+  .shi-section[data-shi-dense]:not([data-shi-ready="true"]):not([data-shi-failed="true"]) > .shi-source :is(h1,h2,h3):focus { outline:3px solid #2876b1; outline-offset:4px; }
+}

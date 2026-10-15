@@ -301,3 +301,214 @@ html body.hla-page #main .hla-adi-card-copy h3 { margin:0 0 16px !important; col
 @media (prefers-reduced-motion:reduce) {
   .hla-page #main :is(.hla-adi-interpretation-card,.hla-adi-time-card) { transition:none; }
 }
+/* ADI reference model only. Existing copy, photo assets and catalog targets are retained. */
+#adi-model { grid-template-columns:minmax(0,.78fr) minmax(0,2.22fr); gap:30px; align-items:center; }
+html body.hla-page #main #adi-model .hla-adi-intro h2,
+html body.hla-page #main #adi-model .hla-adi-factor h3,
+html body.hla-page #main #adi-model .hla-research-notice strong { text-transform:uppercase !important; }
+#adi-model .hla-adi-model { position:relative; isolation:isolate; }
+#adi-model .hla-adi-factors { position:relative; gap:22px; align-items:stretch; }
+#adi-model .hla-adi-factor { position:relative; grid-template-columns:minmax(0,1.06fr) minmax(0,1fr); gap:16px; padding:18px; border-width:1px; box-shadow:none; }
+#adi-model .hla-adi-factor > img { align-self:start; height:auto; object-fit:contain; }
+#adi-model .hla-adi-factor-copy { align-self:start; }
+#adi-model .hla-adi-factor h3 { --site-type-h3:clamp(18px,1.13vw,23px); --site-line-h3:1.18; }
+#adi-model .hla-adi-factor p { --arotec-body-size:clamp(17px,1vw,20px); --arotec-body-line-height:1.35; }
+#adi-model .hla-adi-acronym { font-size:clamp(42px,3.5vw,64px); }
+#adi-model .hla-adi-factor .hla-adi-factor-topics { --arotec-body-size:clamp(15px,.95vw,18px); margin-top:auto; }
+#adi-model .hla-adi-equation { position:relative; padding:72px 0 54px; }
+#adi-model .hla-adi-equation math { font-size:clamp(48px,4.3vw,76px); }
+#adi-model .hla-adi-equation p { margin:32px 0 0; --arotec-body-size:clamp(17px,1.15vw,21px); }
+#adi-model .hla-adi-factor--resilience { width:88%; margin-inline:auto; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); }
+#adi-model .hla-adi-factor--resilience .hla-adi-factor-copy { align-self:center; }
+#adi-model .hla-research-notice { border-width:1px; margin-top:22px; }
+#adi-model .hla-adi-relationships { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; z-index:-1; }
+#adi-model .hla-adi-relationships path { fill:none; stroke:#113568; stroke-width:3px; stroke-linecap:butt; stroke-linejoin:miter; vector-effect:non-scaling-stroke; filter:none; }
+#adi-model .hla-adi-relationships circle { fill:#efb33e; stroke:none; filter:none; }
+@media (max-width:1199px) {
+  #adi-model { grid-template-columns:minmax(0,1fr); gap:28px; }
+  #adi-model .hla-adi-intro { max-width:850px; }
+}
+@media (max-width:800px) {
+  #adi-model .hla-adi-factors { grid-template-columns:minmax(0,1fr); gap:20px; }
+  #adi-model .hla-adi-factor { grid-template-columns:minmax(0,1.06fr) minmax(0,1fr); }
+  #adi-model .hla-adi-equation { padding:48px 0 48px; }
+  #adi-model .hla-adi-equation math { font-size:44px; }
+  #adi-model .hla-adi-factor--resilience { width:100%; }
+}
+@media (max-width:520px) {
+  #adi-model .hla-adi-factor { grid-template-columns:minmax(0,1fr); padding:20px; }
+  #adi-model .hla-adi-factor > img { max-height:320px; width:100%; }
+  #adi-model .hla-adi-factor--resilience { grid-template-columns:minmax(0,1fr); }
+  #adi-model .hla-adi-equation math { font-size:36px; }
+  #adi-model .hla-adi-equation p { margin-top:30px; }
+}
+@media (max-width:360px) { #adi-model .hla-adi-equation math { font-size:30px; } }
+/* Reference continuum and card proportions; scoped to the interpretation panel. */
+#adi-interpretation { align-items:center; }
+#adi-interpretation .hla-adi-intro h2 { text-transform:uppercase !important; }
+#adi-interpretation .hla-adi-continuum {
+  --adi-card-gap:18px;
+  --adi-dot-size:clamp(12px,.9vw,20px);
+  position:relative; display:grid; grid-template-columns:1fr 1fr;
+  min-height:82px; gap:0; padding:0 0 46px; margin:0;
+  border:0; font-size:clamp(16px,1.12vw,24px); line-height:1.25;
+  text-transform:uppercase !important;
+}
+#adi-interpretation .hla-adi-continuum > span { align-self:start; }
+#adi-interpretation .hla-adi-continuum > span:last-of-type { text-align:right; }
+#adi-interpretation .hla-adi-continuum::after {
+  content:""; position:absolute; z-index:0;
+  left:calc((100% - 2 * var(--adi-card-gap)) / 6);
+  right:calc((100% - 2 * var(--adi-card-gap)) / 6);
+  bottom:29px; height:3px; background:#dfa636;
+}
+#adi-interpretation .hla-adi-stop {
+  position:absolute; z-index:1; bottom:0; height:30px; width:3px;
+  background:#113568; transform:translateX(-50%);
+}
+#adi-interpretation .hla-adi-stop:nth-of-type(1) { left:calc((100% - 2 * var(--adi-card-gap)) / 6); }
+#adi-interpretation .hla-adi-stop:nth-of-type(2) { left:50%; }
+#adi-interpretation .hla-adi-stop:nth-of-type(3) { left:calc(100% - (100% - 2 * var(--adi-card-gap)) / 6); }
+#adi-interpretation .hla-adi-stop::before {
+  content:""; position:absolute; left:50%; top:0;
+  width:var(--adi-dot-size); height:var(--adi-dot-size);
+  border-radius:50%; background:#dfa636; transform:translate(-50%,-50%);
+}
+#adi-interpretation .hla-adi-interpretation-card { box-shadow:none; border-width:1px; }
+#adi-interpretation .hla-adi-card-copy { padding:18px 18px 26px; }
+#adi-interpretation .hla-adi-card-copy::before { width:30%; min-width:52px; height:4px; }
+#adi-interpretation .hla-adi-card-copy h3 { text-transform:uppercase !important; }
+#adi-interpretation .hla-research-notice { margin-top:30px; padding:20px; border-width:1px; }
+#adi-interpretation .hla-research-notice strong { flex-basis:175px; text-transform:uppercase !important; }
+@media (min-width:1440px) {
+  #adi-interpretation { grid-template-columns:minmax(0,.75fr) minmax(0,2.25fr); }
+}
+@media (max-width:800px) {
+  #adi-interpretation .hla-adi-continuum { min-height:68px; padding-bottom:38px; font-size:16px; }
+  #adi-interpretation .hla-adi-continuum::after { left:10%; right:10%; }
+  #adi-interpretation .hla-adi-stop:nth-of-type(1) { left:10%; }
+  #adi-interpretation .hla-adi-stop:nth-of-type(3) { left:90%; }
+  #adi-interpretation .hla-adi-stop { height:30px; }
+  #adi-interpretation .hla-adi-interpretation-card > img { max-height:none; object-position:center; }
+  #adi-interpretation .hla-adi-card-copy { padding:20px; }
+  #adi-interpretation .hla-research-notice { margin-top:24px; padding:18px; }
+}
+#adi-interpretation .hla-adi-intro h2 { --site-type-h2:clamp(36px,3vw,62px); --site-line-h2:1.12; }
+#adi-interpretation .hla-adi-intro > p { --arotec-body-size:clamp(20px,1.5vw,31px); --arotec-body-line-height:1.35; }
+#adi-interpretation .hla-adi-card-copy h3 { --site-type-h3:clamp(20px,1.55vw,32px); --site-line-h3:1.2; }
+#adi-interpretation .hla-adi-card-copy li { --arotec-body-size:clamp(18px,1.2vw,25px); --arotec-body-line-height:1.4; }
+#adi-interpretation .hla-adi-card-copy li::marker { color:#dfa636; }
+@media (max-width:800px) {
+  #adi-interpretation .hla-adi-intro h2 { --site-type-h2:32px; }
+  #adi-interpretation .hla-adi-card-copy h3 { --site-type-h3:25px; }
+  #adi-interpretation .hla-adi-card-copy li { --arotec-body-size:19px; }
+}
+#adi-interpretation #adi-interpretation-title,
+#adi-interpretation #adi-lower-title,
+#adi-interpretation #adi-intermediate-title,
+#adi-interpretation #adi-higher-title { text-transform:uppercase !important; }
+#adi-interpretation #adi-lower-title + ul li::marker,
+#adi-interpretation #adi-intermediate-title + ul li::marker,
+#adi-interpretation #adi-higher-title + ul li::marker { color:#dfa636 !important; }
+/* Human Aging cascade: source-based arrangement, existing editable copy and gutters. */
+html body.hla-page #cascade.hla-cascade-reference { background:#fbfcff; }
+#cascade.hla-cascade-reference .hla-banner { position:relative; display:flex; isolation:isolate; min-height:clamp(320px,21vw,620px); overflow:hidden; background:#18364f; }
+#cascade.hla-cascade-reference .hla-banner > img { position:absolute; inset:0 0 0 auto; z-index:-2; width:70%; height:100%; min-height:0; object-fit:cover; object-position:36% center; }
+#cascade.hla-cascade-reference .hla-banner::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#18364f 0%,#18364ff5 27%,#18364fc7 43%,#18364f44 58%,#18364f00 72%); }
+#cascade.hla-cascade-reference .hla-banner-copy { width:57%; padding:48px 36px 48px var(--hla-gutter); align-self:center; }
+#cascade.hla-cascade-reference #framework-title { text-transform:uppercase; }
+#cascade.hla-cascade-reference .hla-framework-inner { padding-block:48px 64px; }
+#cascade.hla-cascade-reference .hla-journey { grid-template-columns:minmax(190px,.95fr) minmax(300px,1.5fr) minmax(440px,2fr) minmax(180px,.9fr) minmax(200px,1fr); gap:18px; align-items:stretch; }
+#cascade.hla-cascade-reference .hla-card { border:1px solid #d6e1ef !important; border-radius:14px; box-shadow:none; }
+#cascade.hla-cascade-reference .hla-card-copy { padding:20px 14px; }
+#cascade.hla-cascade-reference .hla-card :is(h3,h4) { text-transform:uppercase; }
+#cascade.hla-cascade-reference .hla-emii { background:#eff6fc; }
+#cascade.hla-cascade-reference .hla-exposure-photo { padding:9px 9px 0; }
+#cascade.hla-cascade-reference .hla-exposure-photo strong { font-size:16px; }
+#cascade.hla-cascade-reference .hla-exposure-photo span { font-size:14px; }
+#cascade.hla-cascade-reference .hla-burden { position:relative; align-self:center; min-width:0; }
+#cascade.hla-cascade-reference .hla-cascade-burden-shape { position:absolute; left:-13px; top:0; width:calc(100% + 26px); height:260px; overflow:visible; pointer-events:none; }
+#cascade.hla-cascade-reference .hla-burden-steps { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:center; min-height:260px; max-width:none; padding:40px 20px 40px 0; margin:0; }
+#cascade.hla-cascade-reference .hla-burden-steps li { position:relative; padding:12px 10px; font-size:clamp(19px,1.15vw,24px); line-height:1.3; color:#113568; }
+#cascade.hla-cascade-reference .hla-burden-steps .ph { position:absolute; top:50%; right:-10px; margin:0; color:#113568; transform:translateY(-50%); font-size:23px; }
+#cascade.hla-cascade-reference .hla-burden > p { max-width:none; margin:22px 0 0; }
+#cascade.hla-cascade-reference .hla-metastatic { padding:25px 14px 22px; background:#edf5fc; }
+html body.hla-page #cascade.hla-cascade-reference .hla-metastatic > h3 { margin-bottom:12px !important; }
+#cascade.hla-cascade-reference .hla-cascade-branch { display:block; flex:none; margin:0; overflow:visible; }
+#cascade.hla-cascade-reference .hla-cascade-branch :is(line,path) { stroke:#113568 !important; stroke-width:3px !important; fill:none !important; vector-effect:non-scaling-stroke; filter:none !important; }
+#cascade.hla-cascade-reference .hla-levels { gap:16px; margin:0; }
+#cascade.hla-cascade-reference .hla-levels img { max-height:none; }
+#cascade.hla-cascade-reference .hla-metastatic .hla-propagation { margin-top:auto; padding-top:24px; }
+#cascade.hla-cascade-reference .hla-human { background:#eef5fc; }
+#cascade.hla-cascade-reference .hla-human,#cascade.hla-cascade-reference .hla-adi { display:flex; flex-direction:column; }
+#cascade.hla-cascade-reference .hla-brain-stages { width:auto; max-width:none; margin:9px 9px 0; }
+#cascade.hla-cascade-reference .hla-brain-stages > img { height:auto; }
+#cascade.hla-cascade-reference .hla-adi-photo { height:auto; }
+#cascade.hla-cascade-reference .hla-flow-arrow { display:block; right:-24px; top:42%; color:#113568; }
+html body.hla-page #cascade.hla-cascade-reference .hla-explore { border:1px solid var(--hla-accent,#2865ef) !important; border-radius:999px; background:linear-gradient(180deg,#3566e9,#183f9a); color:#fff; box-shadow:none; min-height:48px; padding:10px 16px; }
+html body.hla-page #cascade.hla-cascade-reference .hla-adi .hla-explore { background:linear-gradient(180deg,#c39a45,#956922); }
+html body.hla-page #cascade.hla-cascade-reference .hla-explore:hover { background:#113568; color:#fff; }
+html body.hla-page #cascade.hla-cascade-reference .hla-adi .hla-explore:hover { background:#79531a; }
+@media (max-width:1799px) {
+  #cascade.hla-cascade-reference .hla-journey { grid-template-columns:minmax(190px,.8fr) minmax(330px,1.35fr) minmax(430px,2fr); gap:28px; }
+  #cascade.hla-cascade-reference .hla-emii { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-burden { grid-column:2; }
+  #cascade.hla-cascade-reference .hla-metastatic { grid-column:3; }
+  #cascade.hla-cascade-reference .hla-human { grid-column:1/3; }
+  #cascade.hla-cascade-reference .hla-adi { grid-column:3; }
+  #cascade.hla-cascade-reference .hla-human,#cascade.hla-cascade-reference .hla-adi { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:stretch; }
+  #cascade.hla-cascade-reference .hla-human .hla-card-copy,#cascade.hla-cascade-reference .hla-adi .hla-card-copy { padding:24px 18px; }
+  #cascade.hla-cascade-reference .hla-brain-stages { margin:9px; align-self:start; }
+  #cascade.hla-cascade-reference .hla-adi-photo { margin:9px; align-self:start; }
+  #cascade.hla-cascade-reference .hla-metastatic > .hla-flow-arrow { display:none; }
+  #cascade.hla-cascade-reference .hla-burden-steps li { overflow-wrap:normal; padding-inline:3px; }
+}
+@media (max-width:1305px) {
+  #cascade.hla-cascade-reference .hla-journey { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #cascade.hla-cascade-reference .hla-emii { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-burden { grid-column:2; }
+  #cascade.hla-cascade-reference .hla-metastatic { grid-column:1/-1; }
+  #cascade.hla-cascade-reference .hla-human { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-adi { grid-column:2; }
+}
+@media (min-width:1200px) and (max-width:1305px) {
+  #cascade.hla-cascade-reference .hla-human,#cascade.hla-cascade-reference .hla-adi { display:flex; flex-direction:column; }
+  #cascade.hla-cascade-reference .hla-brain-stages { width:218px; max-width:calc(100% - 18px); margin-inline:auto; }
+}
+@media (max-width:1199px) {
+  #cascade.hla-cascade-reference .hla-banner { min-height:340px; }
+  #cascade.hla-cascade-reference .hla-banner-copy { width:66%; }
+  #cascade.hla-cascade-reference .hla-journey { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #cascade.hla-cascade-reference .hla-emii { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-burden { grid-column:2; }
+  #cascade.hla-cascade-reference .hla-metastatic { grid-column:1/-1; }
+  #cascade.hla-cascade-reference .hla-human { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-adi { grid-column:2; }
+  #cascade.hla-cascade-reference .hla-human,#cascade.hla-cascade-reference .hla-adi { display:flex; flex-direction:column; }
+  #cascade.hla-cascade-reference .hla-flow-arrow { display:none; }
+  #cascade.hla-cascade-reference .hla-brain-stages { width:218px; max-width:calc(100% - 18px); margin-inline:auto; }
+  #cascade.hla-cascade-reference .hla-burden-steps { grid-template-columns:1fr; min-height:400px; padding:34px 20px; }
+  #cascade.hla-cascade-reference .hla-burden-steps li { padding:10px 0; }
+  #cascade.hla-cascade-reference .hla-burden-steps li br { display:none; }
+  #cascade.hla-cascade-reference .hla-burden-steps .ph { top:auto; bottom:-10px; right:auto; left:50%; transform:translateX(-50%) rotate(90deg); }
+  #cascade.hla-cascade-reference .hla-cascade-burden-shape { width:400px; height:100%; max-height:240px; left:50%; top:200px; transform:translate(-50%,-50%) rotate(90deg); }
+}
+@media (max-width:800px) {
+  #cascade.hla-cascade-reference .hla-banner { display:block; min-height:0; padding:0; }
+  #cascade.hla-cascade-reference .hla-banner > img { position:relative; width:100%; height:auto; aspect-ratio:2.5; object-fit:cover; z-index:0; }
+  #cascade.hla-cascade-reference .hla-banner::before { display:none; }
+  #cascade.hla-cascade-reference .hla-banner-copy { position:relative; width:100%; padding:36px var(--hla-gutter); background:linear-gradient(135deg,#18364f,#24475d); }
+  #cascade.hla-cascade-reference .hla-framework-inner { padding-block:32px 48px; }
+  #cascade.hla-cascade-reference .hla-journey { grid-template-columns:minmax(0,1fr); gap:28px; }
+  #cascade.hla-cascade-reference .hla-journey > * { grid-column:1; }
+  #cascade.hla-cascade-reference .hla-levels { grid-template-columns:minmax(0,1fr); gap:28px; }
+  #cascade.hla-cascade-reference .hla-cascade-branch { display:none; }
+  #cascade.hla-cascade-reference .hla-burden { padding:0 20px; }
+  #cascade.hla-cascade-reference .hla-burden-steps { min-height:400px; padding-inline:34px; }
+  #cascade.hla-cascade-reference .hla-burden-steps li { font-size:23px; }
+  #cascade.hla-cascade-reference .hla-cascade-burden-shape { height:calc(100% - 80px); max-height:300px; }
+  #cascade.hla-cascade-reference .hla-burden > p { margin-top:12px; }
+  #cascade.hla-cascade-reference .hla-exposure-photo strong { font-size:20px; }
+  #cascade.hla-cascade-reference .hla-exposure-photo span { font-size:16px; }
+  #cascade.hla-cascade-reference .hla-card-copy { padding:24px 20px; }
+}

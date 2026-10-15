@@ -1,0 +1,170 @@
+/* Exact 5000 x 2160 source artwork with live localized copy.
+   Normalized source: 2048 x 884.736; foreground x=366..1680 (1314 units).
+   All rules are limited to the first dementia chapter. */
+html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-heading h2 { --pathways-heading-size: clamp(25px, 2.5vw, 34px); --pathways-heading-leading: 1.2; }
+html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card-body h4 { --pathways-heading-size: 19px; }
+html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights h4 { --pathways-heading-size: 17px; }
+html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-boundary h3 { --pathways-heading-size: 18px; }
+/* Match the site gutters without moving the neighboring disclosure chapters. */
+@media (min-width: 700px) and (max-width: 800px) {
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] { margin-inline: -24px !important; width: calc(100% + 48px) !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] { margin-inline: -8px !important; width: calc(100% + 16px) !important; }
+}
+@media (max-width: 800px) {
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-heading h2 { --pathways-heading-size: 24px !important; }
+}
+@layer arotec-display-headings.spec {
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] :is(h2, h3, h4) {
+    font-family: var(--site-font, 'DM Sans', sans-serif) !important;
+    font-size: var(--pathways-heading-size, 20px) !important;
+    font-weight: 700 !important;
+    line-height: var(--pathways-heading-leading, 1.25) !important;
+    letter-spacing: -.025em !important;
+    text-transform: none !important;
+    color: #0a2153 !important;
+    transform: none !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+@layer arotec-mobile-main-headings {
+  @media (max-width: 800px) {
+    html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-heading h2 { font-size: 24px !important; line-height: 1.2 !important; }
+  }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] {
+    --pathways-unit: calc(100cqw / 1314);
+    position: relative !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+    width: 100% !important;
+    aspect-ratio: 1314 / 884.736 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"]::before {
+    content: "";
+    display: block !important;
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -150px;
+    width: calc(100% + 300px);
+    /* The viewport-width window prevents background overflow without clipping
+       or changing any ancestor shared by the other two dementia chapters. */
+    background: url("../images/synesthesia-inspired-perception/dementia-pathways-clean.png") calc(50% + var(--pathways-unit)) center / auto 100% no-repeat;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] :is(.sip-dementia-photo, .sip-dementia-number, .ph),
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] svg[data-arotec-text-frame-owned],
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] svg[data-arotec-arrow-owned] { display: none !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-eyebrow {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] :is(.sip-dementia-heading, .sip-dementia-grid, .sip-dementia-card, .sip-dementia-card-header, .sip-dementia-card-body, .sip-dementia-cues, .sip-dementia-insight-block, .sip-dementia-insights, .sip-dementia-boundary) {
+    display: contents !important;
+    position: static !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-heading h2 {
+    position: absolute !important;
+    left: calc(62 * var(--pathways-unit)) !important;
+    top: calc(58 * var(--pathways-unit)) !important;
+    width: calc(1190 * var(--pathways-unit)) !important;
+    --pathways-heading-size: calc(29.5 * var(--pathways-unit)) !important;
+    --pathways-heading-leading: 1.2 !important;
+    text-align: center !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-heading > p {
+    position: absolute !important;
+    left: calc(57 * var(--pathways-unit)) !important;
+    top: calc(109 * var(--pathways-unit)) !important;
+    width: calc(1200 * var(--pathways-unit)) !important;
+    margin: 0 !important;
+    font-size: calc(13 * var(--pathways-unit)) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card-header h3 { position: absolute !important; top: calc(165 * var(--pathways-unit)) !important; --pathways-heading-size: calc(22 * var(--pathways-unit)) !important; text-align: left !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-header h3 { left: calc(71 * var(--pathways-unit)) !important; width: calc(345 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-header h3 { left: calc(512 * var(--pathways-unit)) !important; width: calc(345 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-header h3 { left: calc(950 * var(--pathways-unit)) !important; width: calc(352 * var(--pathways-unit)) !important; --pathways-heading-size: calc(17.8 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card-body :is(h4, p) { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; text-align: left !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-body :is(h4, p) { left: calc(108 * var(--pathways-unit)) !important; width: calc(307 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-body h4 { top: calc(448 * var(--pathways-unit)) !important; --pathways-heading-size: calc(18.3 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-body p { font-size: calc(13.5 * var(--pathways-unit)) !important; line-height: 1.27 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-body p:nth-of-type(1) { top: calc(482 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--blue .sip-dementia-card-body p:nth-of-type(2) { top: calc(554 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-cues li { position: absolute !important; display: block !important; top: calc(476 * var(--pathways-unit)) !important; width: calc(119 * var(--pathways-unit)) !important; margin: 0 !important; padding: 0 !important; font-size: calc(12.5 * var(--pathways-unit)) !important; line-height: 1.25 !important; text-align: center !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-cues li:nth-child(1) { left: calc(460 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-cues li:nth-child(2) { left: calc(595 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-cues li:nth-child(3) { left: calc(728 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-body :is(h4, p) { left: calc(471 * var(--pathways-unit)) !important; width: calc(384 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-body h4 { top: calc(502 * var(--pathways-unit)) !important; --pathways-heading-size: calc(17.6 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-body p:nth-of-type(1) { top: calc(535 * var(--pathways-unit)) !important; font-size: calc(12.3 * var(--pathways-unit)) !important; line-height: 1.3 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-body p:nth-of-type(2) { top: calc(558 * var(--pathways-unit)) !important; font-size: calc(13 * var(--pathways-unit)) !important; line-height: 1.3 !important; }
+  html:lang(th) body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--teal .sip-dementia-card-body p:nth-of-type(2) { top: calc(573 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body :is(h4, p) { left: calc(983 * var(--pathways-unit)) !important; width: calc(319 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body h4 { top: calc(450 * var(--pathways-unit)) !important; --pathways-heading-size: calc(16.5 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body p { font-size: calc(13.3 * var(--pathways-unit)) !important; line-height: 1.3 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body p:nth-of-type(1) { top: calc(486 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body p:nth-of-type(2) { top: calc(535 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-card--amber .sip-dementia-card-body p.sip-dementia-note { top: calc(598 * var(--pathways-unit)) !important; font-size: calc(10.3 * var(--pathways-unit)) !important; line-height: 1.25 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] p.sip-dementia-status {
+    position: absolute !important;
+    top: calc(628 * var(--pathways-unit)) !important;
+    height: calc(40 * var(--pathways-unit)) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    line-height: 1.2 !important;
+    letter-spacing: -.025em !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-status--blue { left: calc(63 * var(--pathways-unit)) !important; width: calc(349 * var(--pathways-unit)) !important; font-size: calc(10 * var(--pathways-unit)) !important; color: #396aa6 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-status--teal { left: calc(540 * var(--pathways-unit)) !important; width: calc(311 * var(--pathways-unit)) !important; font-size: calc(10.4 * var(--pathways-unit)) !important; color: #378394 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-status--amber { left: calc(1043 * var(--pathways-unit)) !important; width: calc(245 * var(--pathways-unit)) !important; font-size: calc(11 * var(--pathways-unit)) !important; color: #b76c28 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insight-block > h3 { position: absolute !important; display: block !important; left: calc(84 * var(--pathways-unit)) !important; top: calc(712 * var(--pathways-unit)) !important; width: calc(235 * var(--pathways-unit)) !important; --pathways-heading-size: calc(16 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights article { position: absolute !important; display: block !important; top: calc(701 * var(--pathways-unit)) !important; margin: 0 !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights article:nth-child(1) { left: calc(395 * var(--pathways-unit)) !important; width: calc(201 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights article:nth-child(2) { left: calc(676 * var(--pathways-unit)) !important; width: calc(186 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights article:nth-child(3) { left: calc(926 * var(--pathways-unit)) !important; width: calc(244 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights h4 { --pathways-heading-size: calc(11.7 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights article:nth-child(3) h4 { --pathways-heading-size: calc(11.3 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-insights p { margin-top: calc(4 * var(--pathways-unit)) !important; padding: 0 !important; font-size: calc(11 * var(--pathways-unit)) !important; line-height: 1.2 !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-boundary h3 { position: absolute !important; left: calc(58 * var(--pathways-unit)) !important; top: calc(792 * var(--pathways-unit)) !important; width: calc(128 * var(--pathways-unit)) !important; --pathways-heading-size: calc(12.1 * var(--pathways-unit)) !important; }
+  html body.sip-page main#main#main #dementia-multisensory .sip-dementia-chapter[aria-labelledby="dementia-pathways-title"] .sip-dementia-boundary p { position: absolute !important; left: calc(207 * var(--pathways-unit)) !important; top: calc(797 * var(--pathways-unit)) !important; width: calc(832 * var(--pathways-unit)) !important; margin: 0 !important; padding: 0 !important; font-size: calc(10.5 * var(--pathways-unit)) !important; line-height: 1.3 !important; }
+}

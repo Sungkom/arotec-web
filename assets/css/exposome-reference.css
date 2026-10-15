@@ -355,7 +355,7 @@ html body.exposome-reference-page #personal-modifiers-title { margin: 0 !importa
 }
 /* EBII is always visible below the four independent detail disclosures. */
 .exposome-reference-page .exo-ebii { padding: 28px 0 80px; background: #f4faff; scroll-margin-top: 126px; }
-.exo-ebii-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 40px; align-items: start; }
+.exo-ebii-layout { display: grid; grid-template-columns: minmax(0, 40fr) minmax(0, 56fr); gap: 40px; align-items: start; }
 .exo-ebii-copy { min-width: 0; }
 .exo-ebii-heading { margin-bottom: 30px; }
 html body.exposome-reference-page #ebii-title { margin: 0 0 12px !important; color: var(--exo-ink); }
@@ -369,35 +369,139 @@ html body.exposome-reference-page #ebii-status-title { margin: 0 0 6px !importan
 .exo-ebii-explore { display: inline-flex; justify-content: center; align-items: center; gap: 14px; min-width: 200px; min-height: 58px; margin-top: 22px; padding: 12px 30px; border: 0; border-radius: 999px; background: #b95410; color: #fff; font: 500 22px/30px var(--site-font); cursor: pointer; transition: background-color 160ms; }
 .exo-ebii-explore:hover { background: #98420a; }
 .exo-ebii-explore .ph { font-size: 27px; }
-.exo-ebii-framework { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; min-width: 0; padding: 20px; border-radius: 24px; background: #e2f1fc; }
-.exo-ebii-factor { --site-type-h3: 24px; --site-line-h3: 30px; --site-letter-h3: -.48px; min-width: 0; overflow: hidden; border: 2px solid #fff; border-radius: 18px; background: #f7fbff; }
-.exo-ebii-factor > header { display: flex; align-items: center; gap: 12px; min-height: 82px; padding: 16px; }
-html body.exposome-reference-page .exo-ebii-factor h3:not(#dsm-type-lock) { margin: 0 !important; color: var(--exo-ink); overflow-wrap: anywhere; }
-.exo-ebii-letter { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: #2051d2; color: #fff; font-size: 30px; line-height: 40px; font-weight: 700; }
+/* October 11 EBII reference: four photographic quadrants and central result.
+   Measurements below are normalized to the supplied 1472 x 1330 artwork.
+   All labels remain live localized DOM, with the existing site font families. */
+.exo-ebii-framework {
+  container-type: inline-size; position: relative; display: block; min-width: 0;
+  padding: 0; aspect-ratio: 1472 / 1330; border-radius: 2.4cqw;
+  background: transparent; isolation: isolate;
+}
+.exo-ebii-framework::before { content: ''; position: absolute; inset: .5% .5% .9%; border-radius: 2.4cqw; background: #e2f1fc; z-index: -3; }
+.exo-ebii-factor {
+  position: absolute; isolation: isolate; overflow: hidden; min-width: 0;
+  min-height: 0; margin: 0; border: 1px solid #fff; border-radius: 1.6cqw;
+  background: #eaf5fc; box-shadow: 0 3px 8px #376d942b;
+  --site-type-h3: 2.85cqw; --site-line-h3: 3.3cqw; --site-letter-h3: -.045cqw;
+}
+.exo-ebii-factor--load { left: 2.65%; top: 3.75%; width: 43.2%; height: 35.5%; }
+.exo-ebii-factor--susceptibility { left: 50.7%; top: 3.75%; width: 46.4%; height: 35.5%; }
+.exo-ebii-factor--resilience { left: 2.65%; top: 56.7%; width: 43.2%; height: 38.2%; }
+.exo-ebii-factor--time { left: 50.7%; top: 56.7%; width: 46.4%; height: 38.2%; }
+.exo-ebii-factor > header {
+  position: relative; z-index: 2; display: flex; flex-direction: row; align-items: center;
+  gap: 1.45cqw; min-height: 0; padding: 1.2cqw 2.15cqw .7cqw; background: transparent;
+}
+html body.exposome-reference-page .exo-ebii-factor h3:not(#dsm-type-lock) {
+  margin: 0 !important; color: var(--exo-ink); text-transform: uppercase;
+  overflow-wrap: normal; word-break: normal; text-transform: uppercase !important;
+}
+.exo-ebii-letter {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 6.5cqw; width: 6.5cqw; height: 6.5cqw; border-radius: 50%;
+  background: #2051d2; color: #fff; font-size: 4.8cqw; line-height: 1; font-weight: 700;
+}
 .exo-ebii-factor--susceptibility .exo-ebii-letter { background: #337f99; }
 .exo-ebii-factor--resilience .exo-ebii-letter { background: #27756a; }
 .exo-ebii-factor--time .exo-ebii-letter { background: #315988; }
-.exo-ebii-factor-body { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 12px; padding: 0 16px 20px; }
-.exo-ebii-factor-body ul { margin: 0; padding: 0; list-style: none; }
-.exo-ebii-factor-body li { margin: 0; color: #28457b; font-size: 18px; line-height: 27px; }
-.exo-ebii-factor-body > img { display: block; align-self: center; width: 100%; height: 100%; min-height: 150px; max-height: 240px; border-radius: 10px; object-fit: cover; }
-.exo-ebii-factor--resilience .exo-ebii-factor-body > img,
-.exo-ebii-factor--susceptibility .exo-ebii-factor-body > img,
-.exo-ebii-factor--time .exo-ebii-factor-body > img { object-fit: contain; }
-.exo-ebii-convergence { position: relative; grid-column: 1 / -1; grid-row: 2; display: flex; align-items: center; justify-content: center; padding: 8px 0; }
-.exo-ebii-result { position: relative; width: 250px; max-width: 100%; flex: 0 1 250px; }
+.exo-ebii-factor-body { display: block; padding: 0 2.25cqw; }
+.exo-ebii-factor-body ul { position: relative; z-index: 2; width: 61%; margin: 0; padding: 0; list-style: none; }
+.exo-ebii-factor-body li { margin: 0; color: var(--exo-ink); font-size: 1.92cqw; line-height: 2.6cqw; }
+.exo-ebii-factor-body > img { position: absolute; z-index: -2; display: block; min-height: 0; max-height: none; max-width: none; border-radius: 0; object-fit: fill; object-position: initial; }
+/* Translated labels use the existing clean photographs. No source artwork is
+   overwritten, raster text is not shown beneath translated copy. */
+.exo-ebii-factor-body > img { width: auto; height: 100%; left: auto; right: 0; top: 0; }
+.exo-ebii-factor::before {
+  content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg,#eaf5fc 0%,#eaf5fcf5 33%,#eaf5fcbb 45%,#eaf5fc00 73%), linear-gradient(180deg,#eaf5fcc9 0%,#eaf5fc00 32%);
+}
+.exo-ebii-factor--time > header { padding-left: 13.8cqw; }
+.exo-ebii-factor--resilience > header, .exo-ebii-factor--time > header { padding-top: 1.5cqw; }
+.exo-ebii-convergence { position: absolute; inset: 0; display: block; padding: 0; pointer-events: none; z-index: 3; }
+.exo-ebii-result { position: absolute; left: 31%; top: 32.8%; width: 31.1%; max-width: none; }
 .exo-ebii-result > img { display: block; width: 100%; height: auto; border-radius: 50%; }
-.exo-ebii-result-copy { --site-type-h3: 50px; --site-line-h3: 58px; --site-letter-h3: -1px; --arotec-body-size: 17px; --arotec-body-line-height: 22px; position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-html body.exposome-reference-page .exo-ebii-result h3:not(#dsm-type-lock) { margin: 0 0 2px !important; color: var(--exo-ink); }
-.exo-ebii-result p { margin: 0; color: var(--exo-ink); font-weight: 500; }
-.exo-ebii-arrow { position: absolute; color: #193784; font-size: 38px; }
-.exo-ebii-arrow--e { left: 18%; top: 12px; }
-.exo-ebii-arrow--s { right: 18%; top: 12px; }
-.exo-ebii-arrow--r { left: 18%; bottom: 12px; }
-.exo-ebii-arrow--t { right: 18%; bottom: 12px; }
-.exo-ebii-mobile-arrow { display: none; }
+.exo-ebii-result-copy {
+  --site-type-h3: 8.1cqw; --site-line-h3: 8.8cqw; --site-letter-h3: -.17cqw;
+  --arotec-body-size: 2.2cqw; --arotec-body-line-height: 2.55cqw;
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+html body.exposome-reference-page .exo-ebii-result h3:not(#dsm-type-lock) { margin: 0 !important; color: var(--exo-ink); }
+.exo-ebii-result p { --arotec-body-size: 2.2cqw; --arotec-body-line-height: 2.55cqw; margin: 0; color: var(--exo-ink); font-weight: 500; }
+/* Important declarations belong to the established typography layer so the
+   global paragraph defaults do not expand the two-line orb caption. */
+@layer arotec-ebii-reference {
+  html body.exposome-reference-page .exo-ebii-result-copy > p {
+    font-size: 2.2cqw !important; line-height: 2.55cqw !important;
+    letter-spacing: -.035cqw !important; max-width: 90%;
+  }
+  html body.exposome-reference-page .exo-ebii-factor h3:not(#dsm-type-lock) { text-transform: uppercase !important; }
+  html body.exposome-reference-page .exo-ebii-factor-body li { font-size: 1.92cqw !important; line-height: 2.6cqw !important; }
+}
+/* V2 desktop artwork remains one registered source surface. English live copy
+   remains in the accessibility tree; raster lettering supplies the exact art. */
+.exo-ebii-layout > .exo-ebii-framework { max-width: 1000px; }
+.exo-ebii-source-patch,.exo-ebii-frame-surface,.exo-ebii-label-backing,.exo-ebii-title-sample { display: none; }
+@media (min-width: 600px) {
+  .exo-ebii-framework {
+    background: url('../images/exposome-20260914/ebii-framework.webp') center / 100% 100% no-repeat;
+  }
+  .exo-ebii-framework::before,
+  .exo-ebii-factor::before { display:none; }
+  .exo-ebii-factor { z-index:1;border:0; background:none; box-shadow:none; overflow:visible; }
+  html:lang(en) .exo-ebii-factor > header,
+  html:lang(en) .exo-ebii-factor-body > ul,
+  html:lang(en) .exo-ebii-result-copy { opacity:0; }
+  .exo-ebii-factor-body > img,
+  .exo-ebii-result > img { visibility:hidden; }
+  .exo-ebii-source-patch {
+    position:absolute; inset:0; display:block; pointer-events:none; z-index:2;
+    background-image:url('../images/exposome-20260914/ebii-framework.webp');
+    background-repeat:no-repeat; background-size:100% 100%;
+  }
+  .exo-ebii-frame-surface { display:block;position:absolute;inset:0;pointer-events:none;z-index:1; }
+  .exo-ebii-frame { position:absolute;border-radius:1.6cqw; }
+  .exo-ebii-frame::before { content:'';position:absolute;z-index:0;inset:-1px;border-radius:inherit;padding:4px;background-image:url('../images/exposome-20260914/ebii-framework.webp');background-size:var(--source-size);background-position:var(--source-position);background-repeat:no-repeat;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;clip-path:var(--frame-clip); }
+  .exo-ebii-frame::after { content:'';position:absolute;z-index:1;inset:0;border:1px solid #fff;border-radius:inherit;clip-path:var(--frame-clip); }
+  .exo-ebii-frame:nth-child(1) { --frame-clip:polygon(-2px -2px,calc(100% + 2px) -2px,calc(100% + 2px) 82%,86% 82%,65% calc(100% + 2px),-2px calc(100% + 2px)); }
+  .exo-ebii-frame:nth-child(2) { --frame-clip:polygon(-2px -2px,calc(100% + 2px) -2px,calc(100% + 2px) calc(100% + 2px),25% calc(100% + 2px),20% 82%,-2px 82%); }
+  .exo-ebii-frame:nth-child(3) { --frame-clip:polygon(-2px -2px,62% -2px,86% 25%,calc(100% + 2px) 25%,calc(100% + 2px) calc(100% + 2px),-2px calc(100% + 2px)); }
+  .exo-ebii-frame:nth-child(4) { --frame-clip:polygon(-2px 25%,25% 25%,25% -2px,calc(100% + 2px) -2px,calc(100% + 2px) calc(100% + 2px),-2px calc(100% + 2px)); }
+  .exo-ebii-factor--load { left:2.7514%;top:3.985%;width:42.935%;height:35.038%; }
+  .exo-ebii-factor--susceptibility { left:50.849%;top:3.7594%;width:46.23%;height:35.263%; }
+  .exo-ebii-factor--resilience { left:2.7514%;top:57.218%;width:42.935%;height:37.482%; }
+  .exo-ebii-factor--time { left:50.849%;top:56.767%;width:46.23%;height:37.93%; }
+  .exo-ebii-result { left:31.114%;top:32.932%;width:30.91%; }
+  html:not(:lang(en)) .exo-ebii-factor > header { padding:1.8cqw 2.1cqw .7cqw;gap:2cqw; }
+  html:not(:lang(en)) .exo-ebii-letter { opacity:0; }
+  html:not(:lang(en)) .exo-ebii-factor--time > header { padding-left:13.65cqw; }
+  html:not(:lang(en)) .exo-ebii-factor-body ul { width:58%; }
+  html:not(:lang(en)) .exo-ebii-factor--resilience .exo-ebii-factor-body ul { width:56%; }
+  html:not(:lang(en)) .exo-ebii-factor-body { padding-top:.8cqw; }
+  html:not(:lang(en)) .exo-ebii-factor > header h3 { position:relative;z-index:2; }
+  html:not(:lang(en)) .exo-ebii-factor::before { display:block;content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--localized-photo-wash);mask-image:linear-gradient(90deg,#000 0%,#000 37%,#000a 46%,transparent 64%),radial-gradient(circle 3.6cqw at var(--badge-center),transparent 97%,#000 100%),radial-gradient(circle 16.3cqw at var(--orb-center),transparent 97%,#000 100%);mask-composite:intersect; }
+  .exo-ebii-factor--load { --badge-center:5.33cqw 4.28cqw;--orb-center:43.78cqw 41.58cqw; }
+  .exo-ebii-factor--susceptibility { --badge-center:5.47cqw 4.42cqw;--orb-center:-4.31cqw 41.78cqw; }
+  .exo-ebii-factor--resilience { --badge-center:5.33cqw 4.82cqw;--orb-center:43.78cqw -6.52cqw; }
+  .exo-ebii-factor--time { --badge-center:16.95cqw 5.03cqw;--orb-center:-4.31cqw -6.11cqw; }
+  html:not(:lang(en)) .exo-ebii-factor--resilience::before { mask-image:linear-gradient(90deg,#000 0%,#000 46%,#000a 57%,transparent 74%),radial-gradient(circle 3.6cqw at var(--badge-center),transparent 97%,#000 100%),radial-gradient(circle 16.3cqw at var(--orb-center),transparent 97%,#000 100%); }
+  html:not(:lang(en)) .exo-ebii-factor--time::before { mask-image:linear-gradient(90deg,#000 0%,#000 37%,transparent 49%),radial-gradient(circle 3.6cqw at var(--badge-center),transparent 97%,#000 100%),radial-gradient(circle 16.3cqw at var(--orb-center),transparent 97%,#000 100%),radial-gradient(ellipse 8cqw 7.5cqw at 15.52cqw 28.06cqw,transparent 68%,#000 100%),linear-gradient(180deg,#000 0,#000 21.8cqw,transparent 22.6cqw);mask-composite:intersect,intersect,intersect,add; }
+  html:not(:lang(en)) .exo-ebii-source-patch { z-index:0; }
+  html:not(:lang(en)) .exo-ebii-factor > header::before { content:'';position:absolute;z-index:-1;left:8.4cqw;width:27cqw;top:0;height:7.3cqw;background:linear-gradient(90deg,#e6f0f6,#e4edf1);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 88%,transparent),linear-gradient(0deg,transparent,#000 22%,#000 100%);mask-composite:intersect; }
+  html:not(:lang(en)) .exo-ebii-factor--susceptibility > header::before { width:25cqw;background:linear-gradient(90deg,#d8eaf5,#caddec); }
+  html:not(:lang(en)) .exo-ebii-factor--resilience > header::before { width:18cqw;background:linear-gradient(90deg,#cae7f1,#b7dce9); }
+  html:not(:lang(en)) .exo-ebii-factor--time > header::before { display:none; }
+  html:not(:lang(en)) .exo-ebii-title-sample { display:block;position:absolute;z-index:0;left:70.652174%;top:59.398496%;width:10.9375%;height:6.390977%;background:url('../images/exposome-20260914/ebii-framework.webp') 91.380625% 63.453815% / 914.285714% 1564.705882% no-repeat;mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(0deg,transparent,#000 25%,#000 78%,transparent);mask-composite:intersect; }
+  html:not(:lang(en)) .exo-ebii-result::before { content:'';position:absolute;inset:0;background:url('../images/exposome-20260914/ebii-orb-text-free.webp') center/100% 100%;mask-image:linear-gradient(90deg,transparent 18%,#000 23%,#000 78%,transparent 83%),linear-gradient(0deg,transparent 19%,#000 25%,#000 41%,transparent 46%);mask-composite:intersect; }
+  html:not(:lang(en)) .exo-ebii-result-copy { justify-content:flex-start;padding-top:18cqw; }
+  html:not(:lang(en)) .exo-ebii-result-copy h3 { position:absolute;opacity:0; }
+  html:not(:lang(en)) .exo-ebii-result-copy p { max-width:87%; }
+}
+
+.exo-ebii-arrow, .exo-ebii-mobile-arrow { display: none; }
+.exo-ebii-framework .exo-reference-connectors { z-index: 4; }
+.exo-ebii-framework .exo-reference-connectors path { stroke: var(--exo-ebii-arrow-paint, #113568) !important; stroke-width: 3px !important; filter: none !important; }
 .exposome-reference-page .exo-ebii-explore:focus-visible { outline: 3px solid #091963; outline-offset: 5px; }
-@media (max-width: 1399px) {
+@media (max-width: 1099px) {
   .exo-ebii-layout { grid-template-columns: 1fr; gap: 36px; }
   .exo-ebii-layout > .exo-ebii-framework { width: min(1000px, 100%); margin-inline: auto; }
 }
@@ -408,21 +512,30 @@ html body.exposome-reference-page .exo-ebii-result h3:not(#dsm-type-lock) { marg
   .exo-ebii-narrative p + p { margin-top: 22px; }
   .exo-ebii-status { --site-type-h3: 22px; --site-line-h3: 28px; --arotec-body-size: 18px; --arotec-body-line-height: 26px; padding: 20px; margin-top: 24px; }
   .exo-ebii-explore { min-height: 54px; font-size: 20px; line-height: 28px; }
-  .exo-ebii-framework { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 16px; border-radius: 18px; }
-  .exo-ebii-factor { --site-type-h3: 24px; --site-line-h3: 30px; }
-  .exo-ebii-convergence { grid-row: auto; min-width: 0; flex-direction: column; gap: 8px; }
-  .exo-ebii-result { flex: 0 0 auto; }
-  .exo-ebii-arrow { display: none; }
-  .exo-ebii-mobile-arrow { display: block; font-size: 32px; color: #193784; }
-  .exo-ebii-factor-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+/* Phone view gives translated text its normal reading size instead of shrinking
+   the reference to an unreadable thumbnail. The image composition stays 2 x 2
+   from 600px upwards; phones use the same photographs in four readable cards. */
+@media (max-width: 599px) {
+  .exo-ebii-framework { display: grid; grid-template-columns: 1fr; gap: 24px; padding: 16px 36px 16px 16px; aspect-ratio: auto; border-radius: 18px; background: #e2f1fc; }
+  .exo-ebii-factor { position: relative; inset: auto; width: auto; height: auto; min-height: 250px; border-radius: 12px; --site-type-h3: 24px; --site-line-h3: 30px; --site-letter-h3: -.48px; }
+  .exo-ebii-factor > header, .exo-ebii-factor--time > header { gap: 10px; min-height: 0; padding: 14px 14px 8px; }
+  .exo-ebii-letter { flex-basis: 40px; width: 40px; height: 40px; font-size: 28px; }
+  .exo-ebii-factor-body { padding: 0 14px 16px; }
+  .exo-ebii-factor-body ul { width: 65%; }
   .exo-ebii-factor-body li { font-size: 17px; line-height: 26px; }
-  .exo-ebii-factor-body > img { min-height: 0; max-height: 200px; }
+  .exo-ebii-factor-body > img { content: normal; clip-path: none; width: auto; height: 100%; left: auto; top: 0; right: 0; object-fit: contain; }
+  .exo-ebii-factor::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg,#eaf5fc 8%,#eaf5fcf5 45%,#eaf5fc00 100%); }
+  .exo-ebii-convergence { position: relative; inset: auto; min-height: 240px; margin-top: 16px; }
+  .exo-ebii-result { position: relative; inset: auto; width: 240px; max-width: 100%; margin-inline: auto; }
+  .exo-ebii-result-copy { --site-type-h3: 50px; --site-line-h3: 58px; --site-letter-h3: -1px; --arotec-body-size: 17px; --arotec-body-line-height: 22px; }
+  .exo-ebii-result p { --arotec-body-size: 17px; --arotec-body-line-height: 22px; }
+  @layer arotec-ebii-reference {
+    html body.exposome-reference-page .exo-ebii-result-copy > p { font-size: 17px !important; line-height: 22px !important; letter-spacing: normal !important; }
+    html body.exposome-reference-page .exo-ebii-factor-body li { font-size: 17px !important; line-height: 26px !important; }
+  }
 }
-@media (max-width: 380px) {
-  .exo-ebii-factor > header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px; }
-  .exo-ebii-factor-body { grid-template-columns: minmax(0, 1fr); padding: 0 14px 18px; }
-  .exo-ebii-factor-body > img { height: auto; min-height: 0; max-height: none; object-fit: contain; }
-}
+
 @media (prefers-reduced-motion: reduce) { .exo-ebii-explore { transition: none; } }
 /* EBII detail panels: editable labels and formula, with standalone photo assets. */
 .exposome-reference-page .exo-ebii-details-section { padding: 0 0 80px; background: #f3f9fd; }
@@ -522,3 +635,29 @@ html body.exposome-reference-page .exo-impact-level h4:not(#dsm-type-lock) { min
   .exposome-reference-page main { --arotec-display-size: 44px; --arotec-display-line-height: 52px; --arotec-display-letter-spacing: -.88px; }
 }
 @media (prefers-reduced-motion: reduce) { .exposome-reference-page .exo-explore, .exo-accordion-toggle > .ph { transition: none; } }
+
+/* Reference connectors occupy only the existing diagram gaps. */
+.exo-personal-health, .exo-health-flow, .exo-ebii-framework, .exo-impact-level-grid { position: relative; }
+.exo-reference-connectors { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 2; }
+.exo-reference-connectors path { fill: none !important; stroke: #113568 !important; stroke-width: 3px !important; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.exo-health-flow.exo-measured-arrows .exo-flow-arrow,
+.exo-impact-level-grid.exo-measured-arrows .exo-impact-level > .ph-arrow-right,
+.exo-ebii-framework.exo-measured-arrows .exo-ebii-arrow,
+.exo-ebii-framework.exo-measured-arrows .exo-ebii-mobile-arrow { visibility: hidden !important; }
+/* The reference uses dimensional, centered E/S/R/T icons and a circular VS badge. */
+.exo-model-letter { position: relative; width: clamp(88px, 10vw, 180px); height: clamp(88px, 10vw, 180px); font-size: clamp(56px, 6vw, 100px); background: radial-gradient(circle at 32% 24%, rgba(255,255,255,.6), transparent 39%), radial-gradient(circle at 60% 65%, transparent 45%, rgba(255,255,255,.8) 68%, transparent 73%), var(--exo-model-accent); box-shadow: inset 0 0 0 3px rgba(255,255,255,.65), 0 0 0 5px rgba(255,255,255,.5), 0 0 0 8px color-mix(in srgb, var(--exo-model-accent) 22%, transparent); }
+.exo-model-letter::after { content: ""; position: absolute; inset: -14px; border: 1px solid color-mix(in srgb, var(--exo-model-accent) 25%, transparent); border-radius: 50%; pointer-events: none; }
+.exo-model-legend dt { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%; color: white !important; background: var(--exo-model-accent); }
+.exo-impact-versus { display: inline-flex; align-items: center; justify-content: center; justify-self: center; width: 48px; height: 48px; border-radius: 50%; background: #113568; color: white !important; white-space: nowrap; }
+/* Keep translated comparison labels inside the same 48px reference badge. */
+html:lang(th) .exo-impact-versus { font-size: 11px; line-height: 1.2; }
+html:lang(ja) .exo-impact-versus,
+html:lang(zh) .exo-impact-versus { font-size: 18px; line-height: 1.2; }
+@media (max-width: 800px) {
+  .exo-model-letter { width: 120px; height: 120px; font-size: 72px; }
+}
+
+.exo-ebii-framework .exo-reference-connectors path[data-exo-part="head"] { fill:var(--exo-ebii-arrow-paint, #113568) !important; stroke:none !important; }
+
+/* EBII: replay only the reviewed divider crossing strips at the existing 1px width. */
+.exo-ebii-framework .exo-reference-connectors path[data-exo-frame-replay] { stroke:#fff !important; stroke-width:1px !important; stroke-linecap:butt; fill:none !important; filter:none !important; }

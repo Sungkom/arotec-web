@@ -39,23 +39,39 @@
   window.addEventListener('hashchange', updateSelection);
   updateSelection();
 
-  let header;
+  const stage = main.querySelector('.ap-stage');
+  let header, spacingFrame;
+  const setSpacing = (name, value) => {
+    if (main.style.getPropertyValue(name) !== value) main.style.setProperty(name, value);
+  };
   const syncSpacing = () => {
     if (header) {
       const height = header.getBoundingClientRect().height + 'px';
-      main.style.setProperty('--ap-header-height', height);
-      main.style.setProperty('padding-top', height, 'important');
+      setSpacing('--ap-header-height', height);
+      if (main.style.getPropertyValue('padding-top') !== height) main.style.setProperty('padding-top', height, 'important');
     }
+    // Include the breadcrumb inserted asynchronously by page-navigation.js.
+    if (stage) setSpacing('--ap-stage-top', (stage.getBoundingClientRect().top + window.scrollY).toFixed(3) + 'px');
   };
-  const resize = new ResizeObserver(syncSpacing);
+  const scheduleSpacing = () => {
+    cancelAnimationFrame(spacingFrame);
+    spacingFrame = requestAnimationFrame(syncSpacing);
+  };
+  const resize = new ResizeObserver(scheduleSpacing);
+  resize.observe(main);
   const connectHeader = () => {
     const next = shell.querySelector('.site-header');
     if (!next || next === header) return;
-    resize.disconnect();
+    if (header) resize.unobserve(header);
     header = next;
     resize.observe(header);
     syncSpacing();
   };
   new MutationObserver(connectHeader).observe(shell, { childList: true, subtree: true });
+  new MutationObserver(scheduleSpacing).observe(main, { childList: true });
+  window.addEventListener('resize', scheduleSpacing);
+  window.addEventListener('load', scheduleSpacing, { once: true });
+  document.fonts?.ready.then(scheduleSpacing);
   connectHeader();
+  scheduleSpacing();
 })();

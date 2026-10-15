@@ -1,0 +1,323 @@
+/* Native arrow geometry only. Text/Phosphor glyphs and existing inline SVGs
+   are owned by arrow-symbols; raster <img> arrows by arrow-assets.
+   Authored position, direction transforms and responsive visibility remain. */
+:root { --arotec-native-arrow-color: var(--arotec-arrow-color, #113568); }
+
+/* Disclosure host keeps its original slot and state-controlled rotation. */
+html body #site-shell .nav-dropdown-chevron,
+html body .nav-dropdown-chevron {
+  position: relative; border: 0 !important; background: transparent !important;
+  isolation: isolate;
+}
+html body .nav-dropdown-chevron::before {
+  content: ""; position: absolute; top: 50%; left: 50%;
+  width: 11px; height: 11px; box-sizing: border-box;
+  border-right: 3px solid var(--arotec-arrow-color, #113568); border-bottom: 3px solid var(--arotec-arrow-color, #113568);
+  transform: translate(-50%, -50%); background: transparent;
+  filter: none;
+}
+html body .nav-dropdown-chevron::after {
+  content: none;
+}
+html body #site-shell .mobile-panel .nav-dropdown-chevron { margin-inline-start: 6px; }
+
+/* Paired shaft and open head. Scoped rules do not alter host typography. */
+html body #research-solutions .fw-journey-arrow {
+  height: 3px; background: var(--arotec-arrow-color, #113568) !important; animation: none !important;
+}
+html body #research-solutions .fw-journey-arrow::after {
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+@media (max-width: 1000px) {
+  html body #research-solutions .fw-journey-arrow { width: 3px; height: 22px; }
+}
+html body #research-solutions .fw-icon--trend > :is(i:nth-child(2), i:nth-child(3), i:nth-child(4)) {
+  height: 3px; background: var(--arotec-arrow-color, #113568);
+}
+html body #research-solutions .fw-icon--trend > i:nth-child(5) {
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span {
+  height: 3px; background: var(--arotec-arrow-color, #113568);
+}
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span::after {
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.brs-page main#main#main .brs-r22 .brs-r22-arrow {
+  color: var(--arotec-arrow-color, #113568); background: transparent; border-radius: 3px;
+}
+html body.brs-page main#main#main .brs-r22 .brs-r22-arrow::before {
+  top: calc(50% - 1.5px); height: 3px; background: var(--arotec-arrow-color, #113568);
+}
+html body.brs-page main#main#main .brs-r22 .brs-r22-arrow::after {
+  top: calc(50% - 6px); right: 2px; width: 12px; height: 12px;
+  box-sizing: border-box; border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.asr-page main#main#main :is(#research-focus, #ingredient-applications) .asr-css-arrow {
+  color: var(--arotec-arrow-color, #113568);
+}
+html body.asr-page main#main#main :is(#research-focus, #ingredient-applications) .asr-css-arrow::before {
+  top: calc(50% - 1.5px); border-top: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.asr-page main#main#main :is(#research-focus, #ingredient-applications) .asr-css-arrow::after {
+  top: calc(50% - 6px); right: 2px; width: 12px; height: 12px;
+  box-sizing: border-box; border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow {
+  width: 3px; background: var(--arotec-arrow-color, #113568);
+}
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow::after {
+  left: 50%; bottom: 1px; width: 12px; height: 12px; box-sizing: border-box;
+  border-right: 3px solid var(--arotec-arrow-color, #113568); border-bottom: 3px solid var(--arotec-arrow-color, #113568);
+  transform: translateX(-50%) rotate(45deg);
+}
+html body.shb-page .shb-flow-arrow span {
+  height: 3px; background: var(--arotec-arrow-color, #113568); box-shadow: none;
+}
+html body.shb-page .shb-flow-arrow span::after {
+  top: -4.5px; right: -1px; width: 12px; height: 12px; box-sizing: border-box;
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+  filter: none;
+}
+html body.shb-page .shb-flow-arrow span::before { background: var(--arotec-arrow-color, #113568); animation: none; }
+html body.neuro-page .section-transition i { width: 3px; background: var(--arotec-arrow-color, #113568); }
+html body.neuro-page .section-transition i::after {
+  border-right: 3px solid var(--arotec-arrow-color, #113568); border-bottom: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.neuro-page .arrow-legend-card li i {
+  --legend-arrow-color: var(--arotec-arrow-color, #113568); height: 3px; background: var(--arotec-arrow-color, #113568);
+}
+html body.neuro-page .arrow-legend-card :is(.legend-feedback, .legend-paracrine) i {
+  height: 0; background: transparent; border-top: 3px dashed var(--arotec-arrow-color, #113568);
+}
+html body.neuro-page .arrow-legend-card li i::after,
+html body.neuro-page .arrow-legend-card .legend-bidirectional i::before {
+  box-sizing: border-box; width: 12px; height: 12px; border: 0;
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.neuro-page .arrow-legend-card li i::after { right: 2px; transform: translateY(-50%) rotate(45deg); }
+html body.neuro-page .arrow-legend-card .legend-bidirectional i::before { left: 2px; transform: translateY(-50%) rotate(225deg); }
+html body.neuro-page .arrow-legend-card :is(.legend-feedback, .legend-paracrine) i::after { top: -1.5px; }
+html body.stress-page :is(.arrow, .legend-arrow, .navy-arrow) {
+  color: var(--arotec-arrow-color, #113568); border-top: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.stress-page :is(.arrow, .legend-arrow, .navy-arrow)::after,
+html body.stress-page .legend-arrow.reciprocal::before {
+  box-sizing: border-box; top: -7.5px; width: 12px; height: 12px; border: 0;
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568);
+}
+html body.stress-page :is(.arrow, .legend-arrow, .navy-arrow)::after { right: 2px; transform: rotate(45deg); }
+html body.stress-page .legend-arrow.reciprocal::before { left: 2px; transform: rotate(225deg); }
+html body .wellbeing-feedback::before { border-top: 3px solid var(--arotec-arrow-color, #113568); border-left: 3px solid var(--arotec-arrow-color, #113568); }
+html body .wellbeing-feedback::after {
+  width: 14px; height: 14px; box-sizing: border-box; border: 0;
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568); transform: rotate(45deg);
+}
+html body .wellbeing-card-panel::before {
+  width: 10px; height: 10px; box-sizing: border-box; border: 0;
+  border-top: 3px solid var(--arotec-arrow-color, #113568); border-right: 3px solid var(--arotec-arrow-color, #113568); transform: translateY(-50%) rotate(45deg);
+}
+
+html body.nst-page main#main#main .nst-route::before,
+html body.nst-page main#main#main .nst-route::after,
+html body.nst-page main#main#main .nst-connection-arrow,
+html body.nst-page main#main#main .nst-path-arrow,
+html body.nst-page main#main#main .nst-regulatory-result::before,
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage:not(:last-child)::after,
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-input-arrow,
+html body.neuro-page .sadi-increase-arrow {
+  clip-path: none !important; background: var(--arotec-native-right-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M3%2012H28M20%204L28%2012L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+
+html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after,
+html body.olf-page main#main#main .olf-region::before,
+html body.olf-page main#main#main .olf-flow-down,
+html body.nst-page main#main#main .nst-down-arrow,
+html body .wellbeing-card:not(:last-child) .wellbeing-node::after {
+  clip-path: none !important; background: var(--arotec-native-down-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M12%203V28M4%2020L12%2028L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+
+/* Preserve centers of the two exceptionally narrow authored arrow slots. */
+html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after { width: 12px; left: calc(50% - 6px); }
+html body.olf-page main#main#main .olf-region::before { width: 12px; left: calc(50% - 6px); }
+
+html body #neurocutaneous-feedback .nss-fb-flow > li:not(:last-child)::after {
+  background-image: var(--arotec-native-right-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M3%2012H28M20%204L28%2012L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) !important;
+}
+html body #neurocutaneous-feedback .nss-fb-lane--return .nss-fb-flow > li::after {
+  background-image: var(--arotec-native-left-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M29%2012H4M12%204L4%2012L12%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) !important;
+}
+@media (max-width: 1100px) {
+  html body #neurocutaneous-feedback .nss-fb-lane .nss-fb-flow > li::after {
+    background-image: var(--arotec-native-right-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M3%2012H28M20%204L28%2012L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) !important;
+  }
+}
+
+html body #home-hero .hero-reference-process li:not(:last-child)::after,
+html body .commerce-process article:not(:last-child)::after,
+html body .dsw-process li:not(:last-child)::after,
+html body.neuro-page .compact-legend span::before,
+html body.sip-page main#main#main .sip-plasticity-stages li:not(:last-child)::after {
+  content: "" !important; width: 1em; height: 1em; color: var(--arotec-arrow-color, #113568) !important;
+  background: var(--arotec-native-right-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M3%2012H28M20%204L28%2012L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+
+html body .os-primary-route li + li::before,
+html body .os-response::before,
+html body.neuro-page .cascade-list li:not(:last-child)::after,
+html body.sip-page main#main#main .sip-dementia-process > li + li::before {
+  content: "" !important; width: 1em; height: 1em; color: var(--arotec-arrow-color, #113568) !important;
+  background: var(--arotec-native-down-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M12%203V28M4%2020L12%2028L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+
+/* Inline glyph slots need a box, while authored block/absolute boxes stay. */
+html body #home-hero .hero-reference-process li:not(:last-child)::after,
+html body.neuro-page .compact-legend span::before { display: inline-block; vertical-align: middle; }
+html body.neuro-page .cascade-list li:not(:last-child)::after { margin-inline: auto; }
+html body .os-primary-route li + li::before,
+html body.sip-page main#main#main .sip-dementia-process > li + li::before { left: calc(50% - .5em) !important; }
+@media (max-width: 980px) {
+  html body.stress-page .path-column .flow-card:not(:last-child)::after,
+  html body.stress-page .recovery-path .endpoint::after {
+    content: ""; width: 1em; height: 1em; color: var(--arotec-arrow-color, #113568);
+    background: var(--arotec-native-down-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M12%203V28M4%2020L12%2028L20%2020%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat;
+  }
+}
+/* Existing important rules live in this named layer. Stay in that layer so
+   width, color and head alignment override them without touching other shapes. */
+@layer melacor-detail {
+  html body.ml-page main#main#main .ml-pathway .ml-activation li + li::before,
+  html body.ml-page main#main#main .ml-pathway .ml-cascade li + li::before {
+    border-left-width: 3px !important; border-left-color: var(--arotec-arrow-color, #113568) !important;
+  }
+  html body.ml-page main#main#main .ml-pathway .ml-activation li + li::after,
+  html body.ml-page main#main#main .ml-pathway .ml-cascade li + li::after {
+    box-sizing: border-box !important; width: 12px !important; height: 12px !important;
+    border: 0 !important; border-right: 3px solid var(--arotec-arrow-color, #113568) !important; border-bottom: 3px solid var(--arotec-arrow-color, #113568) !important;
+    transform: translateX(-4.5px) rotate(45deg) !important; bottom: calc(100% + 1px) !important;
+  }
+  html body.ml-page main#main#main .ml-pathway .ml-activation li + li::after { left: 46% !important; }
+  html body.ml-page main#main#main .ml-pathway .ml-cascade li + li::after { left: 49% !important; }
+}
+/* Retain the broad, light comparison body under its unchanged live label.
+   JS supplies an inset 3px navy outline using the existing pseudo box size. */
+html body.bri-page main#main#main #why-bio-responsive .bri-comparison-arrow::before {
+  clip-path: none !important;
+  background: var(--arotec-native-comparison-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M2%2020H50V2L98%2050L50%2098V80H2Z%22%20fill%3D%22%23edf6fd%22%2F%3E%3Cpath%20d%3D%22M2%2020H50V2L98%2050L50%2098V80H2Z%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+html body:is(.dswb-page, .dswb-solutions-page) .dswb-icon--recovery::before {
+  -webkit-mask: none !important; mask: none !important;
+  background: var(--arotec-native-cycle-image, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M20%208a9%209%200%200%200-16-2M4%202v4h4M4%2016a9%209%200%200%200%2016%202M20%2022v-4h-4%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E")) center / 100% 100% no-repeat !important;
+}
+/* Native selects keep their OS keyboard/menu behavior. Only the collapsed
+   indicator is authored; its color follows the actual control surface. */
+html body select[data-arotec-native-measuring] { transition: none !important; }
+html body #site-shell #languageSelect[data-arotec-native-select],
+html body select[data-arotec-native-select] {
+  appearance: none !important; -webkit-appearance: none !important;
+  width: var(--arotec-native-select-width) !important; height: var(--arotec-native-select-height) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M5%207L10%2012L15%207%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E") !important;
+  background-size: 20px 20px !important; background-position: right 6px center !important;
+  background-repeat: no-repeat !important; padding-inline-end: 30px !important;
+}
+/* Only JS-confirmed native markers are replaced: explicit icon summaries keep
+   their existing control. The measured marker inset preserves label position. */
+html body summary[data-arotec-native-summary] {
+  position: relative; list-style: none !important;
+  padding-inline-start: var(--arotec-native-summary-inset, 18px) !important;
+}
+html body summary[data-arotec-native-summary]::marker { content: ""; }
+html body summary[data-arotec-native-summary]::-webkit-details-marker { display: none; }
+html body summary[data-arotec-native-summary]::before {
+  content: ""; position: absolute; left: 0; top: calc(50% - 7px);
+  width: 14px; height: 14px; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%2014%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M4%203L9%207L4%2011%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E") center / 14px 14px no-repeat;
+  filter: none;
+}
+html body details[open] > summary[data-arotec-native-summary]::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%2014%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M3%204L7%209L11%204%22%20fill%3D%22none%22%20stroke%3D%22%23113568%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20vector-effect%3D%22non-scaling-stroke%22%2F%3E%3C%2Fsvg%3E");
+}
+@media (forced-colors: active) {
+  html body #site-shell #languageSelect[data-arotec-native-select],
+  html body select[data-arotec-native-select] {
+    appearance: auto !important; -webkit-appearance: auto !important; background-image: none !important;
+  }
+}
+
+/* Isolated raster sprite readiness. The source remains visible until both this
+   sheet and a decoded, measured vector exist. No host layout is overridden. */
+:root { --arotec-native-sprites-ready: 1; }
+html body main#main#main#main [data-arotec-sprite-ready] {
+  background-image: var(--arotec-sprite-image) !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  mix-blend-mode: normal !important;
+}
+html body main#main#main#main [data-arotec-sprite-ready] > img {
+  opacity: 0 !important;
+}
+html body main#main#main#main :is([data-arotec-sprite-ready="morphagen-convergence"],[data-arotec-sprite-ready="morphagen-10"]) > img {
+  opacity: 1 !important;
+  mask-image: var(--arotec-sprite-mask) !important;
+  mask-mode: luminance !important;
+  mask-size: 100% 100% !important;
+  mask-position: 0 0 !important;
+  mask-repeat: no-repeat !important;
+}
+/* The original Melacor composition uses important declarations inside this
+   layer, which outrank unlayered important rules. Keep the override there. */
+@layer melacor-detail {
+  html body.ml-page main#main#main#main .ml-pathway :is(.ml-up,.ml-down)[data-arotec-sprite-ready] {
+    background-image: var(--arotec-sprite-image) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    mix-blend-mode: normal !important;
+  }
+}
+/* This icon's layout slot is shorter than its available inter-label gap.
+   Retain the hidden ::before glyph as its intrinsic width contributor, and
+   paint ::after inside the measured gap without changing the grid. */
+html body main#main#main#main .nss-fb-neuroimmune > .ph-arrow-down[data-arotec-sprite-ready] {
+  background-image: none !important;
+}
+html body main#main#main#main .nss-fb-neuroimmune > .ph-arrow-down[data-arotec-sprite-ready] > svg[data-arotec-arrow-owned] {
+  opacity: 0 !important;
+}
+html body main#main#main#main .nss-fb-neuroimmune > .ph-arrow-down[data-arotec-sprite-ready]::after {
+  content: "" !important;
+  visibility: visible !important;
+  position: absolute !important; left: 50% !important; top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important; height: var(--arotec-sprite-paint-height) !important;
+  margin: 0 !important; padding: 0 !important; border: 0 !important;
+  background: var(--arotec-sprite-image) center / 100% 100% no-repeat !important;
+  pointer-events: none !important;
+}
+/* Tiny filled-head crops retain their original node-border fragments. The
+   source keeps its authored blend; the owned sibling SVG paints normal navy. */
+html body main#main#main#main :is([data-arotec-sprite-ready="scents-msh-mc1r"],[data-arotec-sprite-ready="scents-mc1r-camp"],[data-arotec-sprite-ready="scents-melanin-pigment"])[data-arotec-sprite-fragment] {
+  background-image: none !important;
+  mix-blend-mode: multiply !important;
+}
+html body main#main#main#main :is([data-arotec-sprite-ready="scents-msh-mc1r"],[data-arotec-sprite-ready="scents-mc1r-camp"],[data-arotec-sprite-ready="scents-melanin-pigment"])[data-arotec-sprite-fragment] > img {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  mask-image: var(--arotec-sprite-mask) !important;
+  mask-mode: luminance !important;
+  mask-size: 100% 100% !important;
+  mask-position: 0 0 !important;
+  mask-repeat: no-repeat !important;
+}
+
+/* Color follows the actual summary surface in open and closed states. */
+html body summary[data-arotec-native-summary]::before,
+html body details[open] > summary[data-arotec-native-summary]::before { background-image: var(--arotec-native-summary-image) !important; }
+html body #site-shell #languageSelect[data-arotec-native-select],
+html body select[data-arotec-native-select] { background-image: var(--arotec-native-select-image) !important; }
+
+/* Owned SIP white strokes must retain their paint over the photograph. */
+html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-reference-arrow[data-arotec-sprite-ready] {
+  mix-blend-mode: normal !important;
+}

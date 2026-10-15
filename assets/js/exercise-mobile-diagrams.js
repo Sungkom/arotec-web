@@ -108,7 +108,7 @@
       if (dialog.open) return;
 
       returnFocus = button;
-      title.textContent = figure.dataset.diagramTitle || "Exercise diagram";
+      title.textContent = figure.dataset.diagramTitle || "Exercise Diagram";
       canvas = sourceCanvas.cloneNode(true);
       canvas.classList.add("esh-diagram-dialog-canvas");
       canvas.removeAttribute("id");

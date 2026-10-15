@@ -111,3 +111,9 @@ body.scc-page #main .scc-art picture { display: contents; }
     object-position: center;
   }
 }
+
+/* The Cultures breadcrumb sits on its authored pale intro background. */
+body.scc-page [data-arotec-breadcrumbs] .arotec-breadcrumb-separator svg,
+body.scc-page [data-arotec-breadcrumbs] .arotec-breadcrumb-separator svg path {
+  stroke: #113568 !important;
+}

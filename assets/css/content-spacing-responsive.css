@@ -1,0 +1,160 @@
+/* Shared reading gutters for ordinary responsive copy. Keep scientific poster
+   coordinates, full-bleed scene owners, pictures and typography untouched. */
+:root { --arotec-page-gutter: 24px; }
+@media (max-width: 359px) { :root { --arotec-page-gutter: 16px; } }
+@media (min-width: 1200px) {
+  :root { --arotec-page-gutter: var(--arotec-content-left, 150px); }
+}
+@layer arotec-content-layout {
+  /* The language directory has no shared shell reset; exclude the browser's
+     default inline body margin from the same policy reading-edge contract. */
+  html body.pilot-policy-page { margin-inline: 0 !important; }
+  /* Plain policy copy and the independent Neuro Skin Care section headings
+     follow the reading edge at every size; no poster canvas is selected. */
+  html body main.pilot-policy-main {
+    box-sizing: border-box !important;
+    width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+    margin-inline: var(--arotec-page-gutter, 24px) !important;
+    padding-inline: 0 !important;
+  }
+  html body.neuro-page main > section > .neuro-shell:is(.neuro-hero-inner, .section-heading) {
+    box-sizing: border-box !important;
+    width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+    margin-inline: var(--arotec-page-gutter, 24px) !important;
+    padding-inline: 0 !important;
+    min-width: 0 !important;
+  }
+  @media (max-width: 1199px) {
+    /* Independent copy: the photograph is a sibling or a section backdrop. */
+    html body.insights-sleep-page main .insights-hero-copy {
+      padding-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+
+    /* These are editorial/form shells. Their section remains full bleed. */
+    html body.ci-page main > section > .ci-container:not(.ci-hero-grid),
+    html body.neuro-page main > section > .neuro-shell,
+    html body main > .page-hero > .section-shell.page-hero-grid,
+    html body:has(#memberForm, #adminLoginForm) main > section > .section-shell,
+    html body:is(.wa-page, .dswb-solutions-page, .dsw-solutions-page) main .sp-container:not(.sp-container .sp-container) {
+      box-sizing: border-box !important;
+      width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+      padding-inline: 0 !important;
+      min-width: 0 !important;
+    }
+
+    /* The Contact hero grid defines cqi typography. Keep that basis unchanged
+       and rebase only its copy, rather than resizing the grid. */
+    html body.ci-page main .ci-hero-copy {
+      margin-left: calc(var(--arotec-page-gutter, 24px) - 4vw) !important;
+    }
+
+    /* Commerce cards keep their authored interior padding. */
+    html body.commerce-page main > .commerce-shell,
+    html body.commerce-page main > .commerce-hero > .commerce-shell {
+      box-sizing: border-box !important;
+      width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+      min-width: 0 !important;
+    }
+
+    /* Localized policy pages and the language directory contain plain copy. */
+    html body main.pilot-policy-main {
+      box-sizing: border-box !important;
+      width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+      padding-inline: 0 !important;
+    }
+
+    /* Preserve the campaign's scenic section and its original vertical rhythm. */
+    html body.ju-page main > .ju-section {
+      padding-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+    html body.ju-page main > .ju-section > .ju-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+    }
+
+    /* The introductory copy is in flow; later poster coordinate systems are
+       deliberately not selected. */
+    html body.exercise-editorial-page main .exb-intro {
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+      padding-inline: 0 !important;
+    }
+    html body.exercise-systemic-page main .esh-reference-copy {
+      margin-inline: calc(var(--arotec-page-gutter, 24px) - 28px) !important;
+      padding-inline: 0 !important;
+    }
+
+    /* The leadership shell is also a painted full-width layout host. Preserve
+       its width and vertical image reservation; change its copy inset only. */
+    html body.lrf-page main > .lrf-background-section > .sfc-shell.wwa-grid {
+      padding-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    html body.nst-page main#main#main .nst-introduction-copy {
+      padding-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+    /* The stage's 24px padding and image's negative margins intentionally make
+       the photo full bleed. Only its independent copy uses the narrow gutter. */
+    html body.np26-page main#main#main .np26-hero-copy {
+      margin-inline: calc(var(--arotec-page-gutter, 24px) - 24px) !important;
+      width: calc(100% - 2 * (var(--arotec-page-gutter, 24px) - 24px)) !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    html body.exercise-systemic-page main .esh-reference-copy {
+      margin-inline: calc(var(--arotec-page-gutter, 24px) - 24px) !important;
+    }
+  }
+
+  @media (max-width: 700px) {
+    html body.ci-page main .ci-hero-copy {
+      margin-left: calc(var(--arotec-page-gutter, 24px) - 20px) !important;
+      width: calc(100% - 2 * (var(--arotec-page-gutter, 24px) - 20px)) !important;
+    }
+    /* These inner editorial containers do not own the scientific sheets'
+       query-size basis or their full-bleed hero pictures. */
+    html body.bri-page main#main#main .bri-container,
+    html body.bri-page main#main#main .bri-container--wide,
+    html body.asr-page main#main#main .asr-container {
+      width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+    /* Scents' copy itself is a query container. Rebase its textual children,
+       preserving that parent's size and the authored molecular artwork. */
+    html body.brs-page main#main#main #introduction .brs-v5-hero-copy > :is(h1,h2,p,ul,ol,.brs-v5-molecule-note) {
+      margin-inline: calc(var(--arotec-page-gutter, 24px) - 20px) !important;
+      width: calc(100% - 2 * (var(--arotec-page-gutter, 24px) - 20px)) !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    html body.wwa-page #who-we-are.wwa-hero--flight > .wwa-flight-content {
+      width: 100% !important;
+      max-width: none !important;
+      margin-inline: 0 !important;
+      padding-inline: var(--arotec-page-gutter, 24px) !important;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    html body.wwa-page #who-we-are.wwa-hero--flight > .wwa-flight-content {
+      margin-inline: var(--arotec-page-gutter, 24px) !important;
+      max-width: calc(100% - 2 * var(--arotec-page-gutter, 24px)) !important;
+    }
+  }
+
+  @media (min-width: 901px) {
+    /* A copy-only correction. Preserve the hero stage's cqw typography basis,
+       its photograph crop, and all later scientific diagram coordinates. */
+    html body.np26-page main#main#main .np26-hero-copy {
+      left: var(--arotec-page-gutter, 24px) !important;
+    }
+  }
+}

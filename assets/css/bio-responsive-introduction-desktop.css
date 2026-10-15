@@ -243,3 +243,11 @@
     max-width: 100% !important;
   }
 }
+
+/* The foreground gains the shared content inset from 1200px. Its 43.2vw
+   column can then cross the sensory line at 52.7vw; keep the note 16px clear. */
+@media (min-width: 992px) {
+  html body.brs-page main#main#main #introduction.brs-v5-introduction .brs-v8-reference-hero .brs-v5-molecule-note {
+    margin-inline-end: max(0px, calc(var(--arotec-content-left, 0px) + 16px - 9.5vw)) !important;
+  }
+}

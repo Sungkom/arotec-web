@@ -6,17 +6,23 @@
   font-display: swap;
 }
 
+/* Preserve the campaign typeface inside the site's shared language layer. */
+@layer arotec-language-fonts {
+  .nuro-copy, .nuro-copy * {
+    font-family: "Nuro Sans", Arial, sans-serif !important;
+  }
+}
+
 .uniquely-yours-page {
   margin: 0;
-  background: #001026;
+  background: #c5dbe2;
   font-family: "Nuro Sans", Arial, sans-serif;
 }
 
-/* The header and campaign share the first screen; the footer follows it. */
+/* Header + artwork fit the first desktop screen. The site footer follows. */
 .nuro-screen {
   height: 100vh;
   height: 100dvh;
-  min-height: 580px;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
 }
@@ -26,6 +32,8 @@ body.uniquely-yours-page[data-header-variant="home"] #site-shell > .site-header 
   transform: none;
 }
 .uniquely-yours-page #main {
+  /* Measure the full hero area, independent of breadcrumb clearance padding. */
+  container-type: size;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -34,149 +42,129 @@ body.uniquely-yours-page[data-header-variant="home"] #site-shell > .site-header 
 .nuro-launch {
   position: relative;
   isolation: isolate;
-  container-type: size;
   width: 100%;
   height: 100%;
+  padding: 0;
   overflow: hidden;
-  color: #f2f4ff;
-  background: #001026;
-}
-.nuro-launch__background {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  color: #080e30;
+  background: #c5dbe2;
 }
 
-/* Match the supplied 2560 x 1200 composition while keeping it within view. */
-.nuro-countdown {
+/* A single cover-sized scene keeps HTML aligned with the supplied artwork. */
+.nuro-scene {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: min(100cqw, 213.333333cqh);
+  width: max(100cqw, 213.333333cqh);
   aspect-ratio: 32 / 15;
   transform: translate(-50%, -50%);
   container-type: inline-size;
-  text-align: center;
-  font-family: "Nuro Sans", Arial, sans-serif;
 }
-.nuro-brand__logo {
-  position: absolute;
-  top: 13.67%;
-  left: 50%;
-  width: 10.6%;
-  height: auto;
+.nuro-launch__background {
   display: block;
-  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
-.nuro-countdown__heading {
+.nuro-copy {
   position: absolute;
-  inset: 33.5% 5% auto;
+  inset: 0;
+  font-family: "Nuro Sans", Arial, sans-serif;
+  color: #080e30;
+}
+.nuro-copy > * {
+  position: absolute;
+  left: 21.05%;
   margin: 0;
+  padding: 0;
   max-width: none;
   font-family: inherit;
-  font-size: 3.75cqw;
-  font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: .01em;
   color: inherit;
-  text-shadow: 0 0 20px #307cff55;
 }
-.nuro-countdown__message {
-  position: absolute;
-  inset: 42.5% 5% auto;
-  margin: 0;
-  font-size: 1.09375cqw;
-  font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: .16em;
-  color: #b8bdd3;
-}
-.nuro-countdown__timer {
-  position: absolute;
-  top: 48.33%;
-  left: 50%;
-  width: 14.45%;
-  aspect-ratio: 370 / 350;
-  transform: translateX(-50%);
-}
-.nuro-countdown__frame {
-  position: absolute;
-  left: -11%;
-  top: -12.8%;
-  width: 122.2%;
-  max-width: none;
-  height: 137%;
-  display: block;
-  pointer-events: none;
-}
-.nuro-countdown__number {
-  position: absolute;
-  inset: 23% 0 auto;
-  font-size: 7.03125cqw;
-  font-weight: 650;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -.04em;
-  line-height: 1;
-  color: #e7e8f3;
-}
-.nuro-countdown__unit {
-  position: absolute;
-  inset: 76% 0 auto;
-  font-size: 1.09375cqw;
+.nuro-copy__eyebrow {
+  top: 28.15%;
+  font-size: .732422cqw;
   font-weight: 600;
-  line-height: 1.2;
-  color: #c0c3d4;
+  line-height: 1.25;
+  letter-spacing: .28em;
+  color: #182857;
 }
-.nuro-countdown__fallback {
-  position: absolute;
-  inset: 55% 8% auto;
-  font-size: 1.25cqw;
-  line-height: 1.6;
+.nuro-copy__title {
+  top: 31.8%;
+  font-size: 4.296875cqw;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: .005em;
 }
-.nuro-countdown:has(noscript p) .nuro-countdown__timer { display: none; }
+.nuro-copy__description {
+  top: 51.8%;
+  font-size: 1.171875cqw;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #244c91;
+}
+.nuro-copy__message {
+  top: 68.55%;
+  font-size: 1.855469cqw;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+.nuro-copy__message strong { font-weight: 700; }
+
+/* Keep the complete artwork visible on exceptionally wide desktop displays. */
+@container (min-aspect-ratio: 8 / 3) {
+  .nuro-scene { width: 240cqh; }
+}
 
 @media (max-width: 767px) {
-  .nuro-screen { min-height: 620px; }
-  .nuro-countdown {
+  .nuro-screen { min-height: 760px; }
+  .nuro-scene {
+    inset: 0;
     width: 100%;
-    aspect-ratio: auto;
     height: 100%;
+    aspect-ratio: auto;
+    transform: none;
     container-type: size;
+  }
+  .nuro-launch__background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 66% center;
+  }
+  .nuro-copy {
+    inset: 0;
+    padding: 30px 24px;
+    background: rgb(228 241 246 / 82%);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 24px 16px 40px;
-    box-sizing: border-box;
   }
-  .nuro-brand__logo,
-  .nuro-countdown__heading,
-  .nuro-countdown__message,
-  .nuro-countdown__timer,
-  .nuro-countdown__fallback {
-    position: relative;
-    inset: auto;
-    transform: none;
-    flex: none;
+  .nuro-copy > * {
+    position: static;
+    max-width: 100%;
   }
-  .nuro-brand__logo { width: clamp(130px, 27cqh, 180px); }
-  .nuro-countdown__heading {
-    margin-top: 12px;
-    font-size: clamp(30px, 8.6cqw, 44px);
-    line-height: 1.15;
+  .nuro-copy__eyebrow {
+    font-size: clamp(10px, 2.6cqw, 14px);
+    letter-spacing: .24em;
   }
-  .nuro-countdown__message {
-    margin-top: 10px;
-    font-size: clamp(12px, 3.5cqw, 17px);
-    letter-spacing: .13em;
+  .nuro-copy__title {
+    margin-top: 22px;
+    font-size: clamp(44px, 12cqw, 76px);
   }
-  .nuro-countdown__timer { width: clamp(175px, 35cqh, 240px); margin-top: 28px; }
-  .nuro-countdown__number { font-size: clamp(85px, 17cqh, 117px); }
-  .nuro-countdown__unit { font-size: clamp(14px, 2.8cqh, 18px); }
-  .nuro-countdown__fallback { margin-top: 24px; font-size: 15px; }
+  .nuro-copy__description {
+    margin-top: 22px;
+    font-size: clamp(14px, 3.7cqw, 21px);
+    line-height: 1.55;
+  }
+  .nuro-copy__message {
+    margin-top: 52px;
+    font-size: clamp(20px, 5.3cqw, 30px);
+    line-height: 1.35;
+  }
 }

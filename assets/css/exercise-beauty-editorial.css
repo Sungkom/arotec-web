@@ -45,7 +45,8 @@ html body.exercise-editorial-page main#main .exb-inputs .exb-intro > p:not(.exb-
 .exb-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .exb-pathway > li { position:relative; text-align:center; min-width:0; }
 .exb-pathway > li > img { display:block; width:100%; aspect-ratio:1; object-fit:contain; height:auto; margin:0 auto .6vw; }
-.exb-pathway > li:not(:last-child)::after { content:"\e06c" / ""; font-family:Phosphor !important; position:absolute; right:-1.3vw; top:5.5vw; font-size:1.3vw; color:#126e98; }
+/* Real icon hosts use the shared 3px arrow renderer, including after resizing. */
+.exb-pathway > li > .exb-pathway-arrow { position:absolute; right:-1.3vw; top:5.5vw; font-size:1.3vw; line-height:1; color:#113568; }
 .exb-number { display:block; font-size:clamp(22px,2vw,40px); line-height:1.1; font-weight:800; margin:.4vw 0; }
 html body.exercise-editorial-page main#main .exb-pathway h3 { padding-bottom:.55vw; border-bottom:1px solid #8899ae; min-height:3.6em; display:flex; justify-content:center; align-items:center; }
 html body.exercise-editorial-page main#main .exb-pathway p { font-size:clamp(13px,1.04vw,21px) !important; line-height:1.4 !important; margin-top:.55vw; }
@@ -56,9 +57,9 @@ html body.exercise-editorial-page main#main .exb-flow-label { display:flex; alig
 .exb-skin .exb-pathway,.exb-quality .exb-pathway { margin-top:.6vw !important; }
 .exb-skin .exb-pathway img { width:80%; }
 .exb-skin .exb-next { margin-top:1.2vw; }
-.exb-skin .exb-pathway > li:not(:last-child)::after { top:7vw; }
+.exb-skin .exb-pathway > li > .exb-pathway-arrow { top:7vw; }
 .exb-quality .exb-right { top:13%; left:33%; right:7%; }
-.exb-quality .exb-pathway > li:not(:last-child)::after { top:6.3vw; }
+.exb-quality .exb-pathway > li > .exb-pathway-arrow { top:6.3vw; }
 .exb-aging .exb-right { top:5%; left:37%; right:5%; }
 .exb-aging-path { list-style:none; padding:0; margin-top:.3vw !important; }
 .exb-aging-path li { display:flex; align-items:center; gap:1.1vw; width:72%; min-height:6.1vw; }
@@ -165,7 +166,7 @@ html body.exercise-editorial-page main#main .exb-recovery-grid p,html body.exerc
   .exb-pathway { order:3; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin:16px 32px !important; }
   .exb-four { grid-template-columns:repeat(4,minmax(0,1fr)); }
   .exb-pathway > li > img,.exb-skin .exb-pathway img { width:100%; max-width:220px; margin-bottom:14px; }
-  .exb-pathway > li:not(:last-child)::after { display:none; }
+  .exb-pathway > li > .exb-pathway-arrow { display:none; }
   .exb-number { font-size:28px; margin:10px 0; }
   html body.exercise-editorial-page main#main h3,html body.exercise-editorial-page main#main .exb-hair .exb-pathway h3 { font-size:18px !important; }
   html body.exercise-editorial-page main#main .exb-pathway h3 { padding-bottom:12px; min-height:0; }

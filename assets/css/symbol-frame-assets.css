@@ -1,0 +1,29 @@
+:root { --arotec-symbol-frame-assets-ready: 1; }
+svg[data-arotec-symbol-frame-owned="embedded"] {
+  position: absolute !important;
+  box-sizing: border-box !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  transition: none !important;
+  display: block;
+  pointer-events: none !important;
+  overflow: visible;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  user-select: none !important;
+}
+svg[data-arotec-symbol-frame-owned="embedded"] path[data-symbol-frame-paint] {
+  fill: none !important;
+  stroke: #113568 !important;
+  stroke-width: var(--sf-paint-width) !important;
+  stroke-linecap: butt !important;
+  stroke-linejoin: round !important;
+  vector-effect: non-scaling-stroke !important;
+}

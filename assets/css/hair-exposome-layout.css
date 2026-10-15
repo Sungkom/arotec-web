@@ -1,0 +1,167 @@
+/* Supplied 5000 × 2160 artwork, with live localized text and site typography.
+   The reference's x=302 text edge is aligned to the shared .hf-shell gutter.
+   Coordinates below use the equivalent 2048 × 884.736 reference frame. */
+#personal-exposome {
+  font-family: var(--site-font);
+}
+
+/* A persistent surface hint keeps the site's adaptive text painter correct
+   after resizing. Compact layouts place these white labels on navy chips. */
+#personal-exposome .hf-signals li {
+  color: #fff;
+  background: var(--hf-ink);
+}
+
+@media (min-width: 1400px) {
+  html body.hair-reference-page #personal-exposome {
+    padding-block: 0;
+    overflow: clip;
+    background: #edf8fe;
+  }
+
+  #personal-exposome > .hf-shell {
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1444 / 884.736;
+    isolation: isolate;
+  }
+
+  #personal-exposome > .hf-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -20.914127%;
+    width: 141.828255%;
+    background: url("../images/hair-follicle-20260916/exposome-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #personal-exposome .hf-intro {
+    position: absolute;
+    top: 11.36cqw;
+    left: 0;
+    width: 28.81cqw;
+    max-width: none;
+    --site-type-h2: 3.12cqw;
+    --site-line-h2: 1.2;
+    --site-letter-h2: -.025em;
+    --arotec-body-size: 1.46cqw;
+    --arotec-body-line-height: 1.42;
+  }
+
+  #personal-exposome .hf-kicker {
+    --arotec-body-size: 1.02cqw;
+    --arotec-body-line-height: 1.35;
+    font-weight: 700;
+    padding-bottom: .9cqw;
+    border-bottom-width: 1px;
+    margin-bottom: 1.7cqw !important;
+    white-space: nowrap;
+  }
+
+  html body.hair-reference-page #personal-exposome h2 {
+    margin-bottom: 3.5cqw !important;
+  }
+
+  #personal-exposome .hf-exposure-layout,
+  #personal-exposome .hf-exposure-list,
+  #personal-exposome .hf-exposure-target,
+  #personal-exposome .hf-signals {
+    display: contents;
+  }
+
+  #personal-exposome .hf-exposure-list img,
+  #personal-exposome .hf-exposure-target > img,
+  #personal-exposome .hf-exposure-target > h3 {
+    display: none;
+  }
+
+  #personal-exposome .hf-exposure-list > li {
+    position: absolute;
+    left: 43.84cqw;
+    width: 11.2cqw;
+    display: block;
+    --site-type-h3: 1.08cqw;
+    --site-line-h3: 1.15;
+    --arotec-body-size: 1.07cqw;
+    --arotec-body-line-height: 1.23;
+  }
+  #personal-exposome .hf-exposure-list > li:nth-child(1) { top: 4.85cqw; }
+  #personal-exposome .hf-exposure-list > li:nth-child(2) { top: 14.75cqw; }
+  #personal-exposome .hf-exposure-list > li:nth-child(3) { top: 24.58cqw; }
+  #personal-exposome .hf-exposure-list > li:nth-child(4) { top: 34.35cqw; }
+  #personal-exposome .hf-exposure-list > li:nth-child(5) { top: 43.84cqw; }
+  html body.hair-reference-page #main #personal-exposome .hf-exposure-list h3 {
+    margin-bottom: .45cqw !important;
+    text-transform: uppercase !important;
+  }
+
+  #personal-exposome .hf-signals li {
+    position: absolute;
+    left: 64.05cqw;
+    width: 6.25cqw;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+    --arotec-body-size: 1.02cqw;
+    --arotec-body-line-height: 1.25;
+  }
+  #personal-exposome .hf-signals li:nth-child(1) { top: 16.0cqw; }
+  #personal-exposome .hf-signals li:nth-child(2) { top: 20.0cqw; }
+  #personal-exposome .hf-signals li:nth-child(3) { top: 24.0cqw; }
+  #personal-exposome .hf-signals li:nth-child(4) { top: 28.0cqw; }
+
+  html body.hair-reference-page #personal-exposome .hf-summary-flow {
+    position: absolute;
+    inset: 51.46cqw 0 0;
+    display: block;
+    border: 0;
+    padding: 0 !important;
+  }
+  #personal-exposome .hf-summary-flow li {
+    position: absolute;
+    top: 1.18cqw;
+    display: flex;
+    height: 6.37cqw;
+    gap: 1.15cqw;
+    --arotec-body-size: 1.33cqw;
+    --arotec-body-line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  #personal-exposome .hf-summary-flow li:nth-child(1) { left: 1.73cqw; }
+  #personal-exposome .hf-summary-flow li:nth-child(2) { left: 38.02cqw; }
+  #personal-exposome .hf-summary-flow li:nth-child(3) { left: 77.22cqw; }
+  html body.hair-reference-page #main #personal-exposome .hf-summary-flow li > span {
+    font-weight: 700 !important;
+  }
+  #personal-exposome .hf-summary-flow li > .ph:first-child {
+    width: 6.37cqw;
+    height: 6.37cqw;
+    background-image: url("../images/hair-follicle-20260916/exposome-reference-annotated.png");
+    background-size: 141.828255cqw 61.269806cqw;
+    background-position: -22.64543cqw -52.63158cqw;
+  }
+  #personal-exposome .hf-summary-flow li:nth-child(2) > .ph:first-child { background-position-x: -58.93352cqw; }
+  #personal-exposome .hf-summary-flow li:nth-child(3) > .ph:first-child { background-position-x: -98.13019cqw; }
+  #personal-exposome .hf-summary-flow li > .ph:first-child::before { content: none; }
+  #personal-exposome .hf-summary-flow .hf-flow-arrow {
+    /* The shared symbol enhancer writes position:relative inline. */
+    position: absolute !important;
+    left: 23cqw;
+    width: 11.5cqw;
+    height: 1.8cqw;
+    margin: 0;
+    background: url("../images/hair-follicle-20260916/exposome-reference-annotated.png") -45.5cqw -54.85cqw / 141.828255cqw 61.269806cqw no-repeat;
+  }
+  #personal-exposome .hf-summary-flow li:nth-child(2) .hf-flow-arrow {
+    left: 27cqw;
+    width: 10.45cqw;
+    background-position-x: -85.9cqw;
+  }
+  #personal-exposome .hf-summary-flow .hf-flow-arrow::before { content: none; }
+  #personal-exposome .hf-summary-flow .hf-flow-arrow > svg { display: none !important; }
+}

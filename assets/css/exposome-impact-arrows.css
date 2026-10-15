@@ -1,0 +1,79 @@
+/* CSS connectors follow the filled blue arrows and rounded three-way branch
+   in the supplied 2d2 reference. Text uses the shared website type system. */
+.exo-personal-impact { margin-inline: -24px; }
+.exo-impact-reference-arrow {
+  position: absolute;
+  left: var(--exo-impact-arrow-x, calc(100% + 1px));
+  top: var(--exo-impact-arrow-y, 42%);
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1px #83c8fa);
+}
+.exo-impact-reference-arrow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #76c9f8 5%, #43a9f2 48%, #3b7feb 100%);
+  clip-path: polygon(0 35%, 8% 38%, 13% 42%, 51% 42%, 51% 17%, 47% 2%, 100% 50%, 47% 98%, 51% 83%, 51% 60%, 13% 60%, 8% 64%, 0 65%);
+}
+.exo-personal-impact .exo-modifier-targets {
+  --exo-branch-blue: #4194f8;
+  position: relative;
+  display: block;
+  /* Two column pitches in a five-column grid with 28px gaps. */
+  width: calc(40% + 11.2px);
+  aspect-ratio: 1042 / 92;
+  margin-inline: auto;
+  padding: 0;
+  pointer-events: none;
+}
+.exo-personal-impact .exo-modifier-targets::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.25px;
+  right: -1.25px;
+  height: 66.3%;
+  border: 2.5px solid var(--exo-branch-blue);
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
+.exo-personal-impact .exo-modifier-targets::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 50%;
+  width: 2.5px;
+  transform: translateX(-50%);
+  background: var(--exo-branch-blue);
+}
+.exo-modifier-targets > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: clamp(14px, 2.8%, 22px);
+  aspect-ratio: 7 / 6;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #73c6fa, var(--exo-branch-blue) 75%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.exo-modifier-targets > span:nth-child(2) { left: 50%; }
+.exo-modifier-targets > span:nth-child(3) { left: 100%; }
+@media (forced-colors: active) {
+  .exo-impact-reference-arrow::before,
+  .exo-modifier-targets > span,
+  .exo-personal-impact .exo-modifier-targets::after {
+    background: CanvasText;
+    forced-color-adjust: none;
+  }
+  .exo-personal-impact .exo-modifier-targets::before { border-color: CanvasText; }
+}
+@media (max-width: 1399px) {
+  .exo-impact-reference-arrow { transform: rotate(90deg); }
+  .exo-personal-impact .exo-modifier-targets { display: none; }
+}
+@media (max-width: 800px) {
+  .exo-personal-impact { margin-inline: -16px; }
+}

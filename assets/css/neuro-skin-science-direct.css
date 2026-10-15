@@ -3,7 +3,7 @@
 html body.nss-page #direct-skin-impact { position: relative; isolation: isolate; padding-block: 40px; background: #f7fbff url('../images/neuro-skin-science-20260915/direct-reference/background-top.webp') center / 100% 100% no-repeat; }
 #direct-skin-impact .nss-direct-backdrop { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: fill; opacity: .85; mask-image: linear-gradient(to bottom,transparent 10%,#000 60%); pointer-events: none; }
 #direct-skin-impact .nss-direct-canvas { position: relative; z-index: 1; container-type: inline-size; aspect-ratio: 2623 / 1475; }
-html body.nss-page #direct-skin-impact :is(h2,h3,p,span,a) { color: #070e31; font-family: 'Roboto Condensed', 'DM Sans', sans-serif !important; text-transform: none !important; }
+html body.nss-page #direct-skin-impact :is(h2,h3,p,span,a) { color: #070e31; font-family: var(--site-font) !important; text-transform: none !important; }
 #direct-skin-impact :is(p,ol) { margin: 0; padding: 0; }
 html body.nss-page #direct-skin-impact :is(h2,h3):not(#dsm-type-lock) { margin: 0 !important; }
 #direct-skin-impact .nss-direct-heading { position: absolute; left: calc(80 / 2048 * 100%); right: calc(65 / 2048 * 100%); top: calc(62 / 1152 * 100%); }
@@ -84,4 +84,145 @@ html body.nss-page #direct-skin-impact .nss-direct-explore { display: inline-fle
   html body.nss-page #direct-skin-impact .nss-direct-card > p,
   html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p { position: relative; inset: auto; margin: .75cqw .65cqw 0; overflow-wrap: break-word; }
   #direct-skin-impact .nss-direct-action { position: relative; inset: auto; margin-top: 1.2cqw; }
+}
+
+/* The supplied 5000 × 2800 scene has a 1523-unit foreground frame
+   (x=263..1786 on a 2048 × 1146.88 canvas). Keep its illustrations,
+   connectors and badges intact, with selectable website typography. */
+#direct-skin-impact .nss-direct-annotations { display: none; }
+@media (min-width: 1400px) {
+  html body.nss-page #direct-skin-impact {
+    padding: 0 150px !important;
+    overflow: clip;
+    background: #f7fbff;
+  }
+  #direct-skin-impact .nss-direct-backdrop { display: none; }
+  #direct-skin-impact .nss-direct-canvas {
+    --direct-unit: calc(100cqw / 1523);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1523 / 1146.88;
+    margin: 0;
+    padding: 0;
+    isolation: isolate;
+  }
+  #direct-skin-impact .nss-direct-canvas::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: calc(-263 / 1523 * 100%);
+    width: calc(2048 / 1523 * 100%);
+    background: url('../images/neuro-skin-science-20260915/direct-reference/reference-clean.png') center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  #direct-skin-impact .nss-direct-heading {
+    position: absolute;
+    inset: calc(174 * var(--direct-unit)) calc(35 * var(--direct-unit)) auto;
+    margin: 0;
+  }
+  html body.nss-page #direct-skin-impact h2 {
+    font-size: calc(65 * var(--direct-unit)) !important;
+    line-height: 1.12 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.04em !important;
+    white-space: nowrap;
+  }
+  html body.nss-page #direct-skin-impact .nss-direct-heading > p {
+    margin-top: calc(19 * var(--direct-unit));
+    font-size: calc(23 * var(--direct-unit)) !important;
+    line-height: 1.35 !important;
+    letter-spacing: -.025em;
+    white-space: normal;
+  }
+  #direct-skin-impact .nss-direct-cards { display: contents; }
+  #direct-skin-impact .nss-direct-card {
+    position: absolute;
+    inset: calc(767 * var(--direct-unit)) auto auto calc((var(--direct-x) - 263) * var(--direct-unit));
+    width: calc(var(--direct-width) * var(--direct-unit));
+    height: calc(160 * var(--direct-unit));
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  #direct-skin-impact .nss-direct-card:nth-child(1) { --direct-x: 282; --direct-width: 260; }
+  #direct-skin-impact .nss-direct-card:nth-child(2) { --direct-x: 598; --direct-width: 252; }
+  #direct-skin-impact .nss-direct-card:nth-child(3) { --direct-x: 902; --direct-width: 240; }
+  #direct-skin-impact .nss-direct-card:nth-child(4) { --direct-x: 1196; --direct-width: 251; }
+  #direct-skin-impact .nss-direct-card:nth-child(5) { --direct-x: 1503; --direct-width: 259; }
+  html body.nss-page #main #direct-skin-impact .nss-direct-card:hover { box-shadow: none !important; }
+  #direct-skin-impact :is(.nss-direct-picture,.nss-direct-number,.nss-direct-chevron) { display: none; }
+  html body.nss-page #direct-skin-impact .nss-direct-card h3 {
+    position: relative;
+    inset: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(46 * var(--direct-unit));
+    margin: 0 !important;
+    padding: 0 0 calc(7 * var(--direct-unit));
+    border-bottom: calc(1.5 * var(--direct-unit)) solid #a6afc4;
+    font-size: calc(22 * var(--direct-unit)) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.035em !important;
+    white-space: normal;
+    text-wrap: balance;
+  }
+  html body.nss-page #direct-skin-impact .nss-direct-card > p,
+  html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p {
+    position: relative;
+    inset: auto;
+    margin: calc(14 * var(--direct-unit)) 0 0;
+    font-size: calc(18 * var(--direct-unit)) !important;
+    line-height: 1.35 !important;
+    letter-spacing: -.025em;
+  }
+  html body.nss-page #direct-skin-impact .nss-direct-card:nth-child(4) > p {
+    margin-top: calc(8 * var(--direct-unit));
+    line-height: 1.15 !important;
+  }
+  #direct-skin-impact .nss-direct-desktop-break { display: none; }
+  #direct-skin-impact .nss-direct-annotations { display: contents; }
+  #direct-skin-impact .nss-direct-annotations > * {
+    position: absolute;
+    font-size: calc(12 * var(--direct-unit));
+    line-height: 1.35;
+    font-weight: 600;
+  }
+  #direct-skin-impact .nss-direct-stressors {
+    top: calc(373 * var(--direct-unit));
+    left: calc(27 * var(--direct-unit));
+    display: flex;
+    flex-direction: column;
+    gap: calc(2 * var(--direct-unit));
+  }
+  #direct-skin-impact #nss-direct-cytokines { top: calc(376 * var(--direct-unit)); left: calc(672 * var(--direct-unit)); }
+  #direct-skin-impact #nss-direct-chemokines { top: calc(441 * var(--direct-unit)); left: calc(811 * var(--direct-unit)); }
+  #direct-skin-impact #nss-direct-prostaglandins { top: calc(514 * var(--direct-unit)); left: calc(790 * var(--direct-unit)); }
+  #direct-skin-impact .nss-direct-action {
+    position: absolute;
+    inset: calc(950 * var(--direct-unit)) 0 auto;
+    margin: 0;
+  }
+  html body.nss-page #direct-skin-impact .nss-direct-explore {
+    min-height: max(44px, calc(40 * var(--direct-unit)));
+    gap: calc(23 * var(--direct-unit));
+    font-size: calc(26 * var(--direct-unit)) !important;
+    letter-spacing: -.025em;
+  }
+  #direct-skin-impact .nss-direct-explore::before { width: calc(111 * var(--direct-unit)); border-width: calc(2 * var(--direct-unit)); }
+  #direct-skin-impact .nss-direct-explore > span { padding-left: calc(24 * var(--direct-unit)); border-width: calc(3 * var(--direct-unit)); }
+  #direct-skin-impact .nss-direct-explore img { display: none; }
+  #direct-skin-impact .nss-direct-explore::after {
+    content: '';
+    width: calc(142 * var(--direct-unit));
+    height: calc(22 * var(--direct-unit));
+    background: currentColor;
+    clip-path: polygon(0 45%, 92% 45%, 85% 8%, 87% 0, 100% 50%, 87% 100%, 85% 92%, 92% 55%, 0 55%);
+  }
+  html[lang='th'] #direct-skin-impact .nss-direct-card h3 { font-size: calc(21 * var(--direct-unit)) !important; }
 }

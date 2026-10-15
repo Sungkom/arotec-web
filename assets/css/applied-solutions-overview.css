@@ -216,37 +216,49 @@ html body.aso-page .aso-dialog-close {
     margin: 0 0 18px !important;
   }
 }
-/* Let translated labels determine the scene height. Guide-line endpoints keep
-   their coordinates within the bottom-pinned illustration as labels wrap. */
+/* Fill the desktop below the live header. Keep copy in normal flow so longer
+   translations and browser zoom can still expand the scene when necessary. */
 @media (width > 900px) {
   html body.aso-page main#main#main .aso-stage {
+    box-sizing: border-box;
     aspect-ratio: auto;
-    padding-top: 8.765625vw;
+    min-height: calc(100vh - var(--detail-header-space, 112px));
+    min-height: max(calc(100svh - var(--detail-header-space, 112px)), var(--aso-content-height, 0px));
+    padding-top: clamp(12px, 2svh, 32px);
   }
   html body.aso-page main#main#main .aso-background {
-    top: auto;
-    bottom: 0;
-    height: 46.875vw !important;
+    top: var(--aso-art-offset, 15%);
+    bottom: auto;
+    height: 100% !important;
+    object-position: center bottom;
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%);
     mask-image: linear-gradient(to bottom, transparent, #000 22%);
   }
   html body.aso-page main#main#main .aso-heading {
+    --arotec-display-size: clamp(36px, 6.5svh, 72px);
+    --arotec-display-line-height: 1.111111;
+    --arotec-supporting-size: clamp(16px, 2.222222svh, 24px);
+    --arotec-supporting-line-height: 1.333333;
     position: relative;
     top: auto;
+  }
+  html body.aso-page main#main#main #aso-title {
+    max-width: calc(var(--arotec-display-size) * 9.027778);
   }
   html body.aso-page main#main#main .aso-areas {
     position: relative;
     inset: auto;
     height: auto;
-    margin-top: clamp(24px, 2vw, 40px);
+    margin-top: clamp(16px, 1.5vw, 32px);
   }
   html body.aso-page main#main#main .aso-areas > ul {
     position: relative;
     inset: auto;
     display: grid;
     grid-template-columns: 17.1vw 14.5vw 16.3vw minmax(0, 1fr);
+    align-items: start;
     margin-left: 22.25vw;
-    padding-bottom: 16.8vw;
+    padding-bottom: 0;
   }
   html body.aso-page main#main#main .aso-node {
     box-sizing: border-box;
@@ -261,14 +273,9 @@ html body.aso-page .aso-dialog-close {
   }
   html body.aso-page main#main#main .aso-node--sensory {
     padding-top: 4.546875vw;
-    padding-bottom: 1.25vw;
-  }
-  html body.aso-page main#main#main .aso-node--flavors {
-    padding-bottom: 5vw;
   }
   html body.aso-page main#main#main .aso-node--ingredients {
     padding-top: 3.328125vw;
-    padding-bottom: 3.1vw;
   }
   html body.aso-page main#main#main .aso-node--supplements {
     padding-top: 6vw;
@@ -279,10 +286,20 @@ html body.aso-page .aso-dialog-close {
     align-self: flex-start;
   }
   html body.aso-page main#main#main .aso-leader {
-    flex: 1 0 auto;
-    align-self: flex-start;
-    height: auto;
-    min-height: calc(6vw + 24px);
+    position: absolute;
+    top: 100%;
+    left: 1.9vw;
+    height: var(--aso-leader-length, 6vw);
+    margin: .45vw 0 0;
+    transform: rotate(var(--aso-leader-angle, 0deg));
+    transform-origin: top center;
+  }
+}
+
+/* A portrait desktop must retain the outer illustration targets. */
+@media (width > 900px) and (max-aspect-ratio: 1 / 1) {
+  html body.aso-page main#main#main .aso-background {
+    object-fit: contain;
   }
 }
 

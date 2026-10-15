@@ -1,0 +1,278 @@
+/* Exact 5000 x 2160 downstream scene with live localized copy.
+   Normalized source: 2048 x 884.736; foreground x=423..1624 (1201 units).
+   The supplied clean art already includes its English DOWNSTREAM label. */
+@media (max-width: 800px) {
+  html body.sip-page main#main#main .sip-outcomes-disclosure-section:has(> #neurochemical-downstream-outcomes) { padding-inline: 24px !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main .sip-outcomes-disclosure-section:has(> #neurochemical-downstream-outcomes) { padding-inline: 40px !important; }
+}
+
+/* The former fixed composition begins at 1200px. Keep this intermediate
+   range in the existing readable flow until the new full scene fits. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes > #sip-outcomes-content {
+    padding: 30px 0 34px !important;
+    aspect-ratio: auto !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-downstream-poster {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    container-type: normal !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-reference-background, .sip-reference-arrow, .sip-reference-break) { display: none !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-outcomes-heading h2, .sip-outcomes-heading p, .sip-modulator-heading, ul.sip-modulators, .sip-outcomes-flow > p, .sip-outcomes-flow > .sip-outcomes-eyebrow, .sip-outcome-pattern > header, .sip-adaptive-columns > section:first-child, .sip-adaptive-columns > section:nth-child(2), section.sip-vulnerabilities, p.sip-outcomes-caution) {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: auto !important;
+    white-space: normal !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-modulator-section, .sip-outcome-pattern) { display: block !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-heading h2 { --sip-h-size: 32px !important; --sip-h-leading: 1.2 !important; text-wrap: balance !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-heading p { margin: 18px auto 0 !important; --sip-p-size: 17px !important; --sip-p-leading: 1.65 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-section { margin-top: 32px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-heading { padding-bottom: 20px !important; border-bottom: 1px solid #b6cfdf !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-heading .sip-outcomes-eyebrow { margin-bottom: 8px !important; font-size: 12px !important; line-height: 1.5 !important; letter-spacing: .12em !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-heading h3 { display: block !important; --sip-h-size: 22px !important; --sip-h-leading: 1.3 !important; white-space: normal !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-modulator-heading h3, .sip-modulators > li, .sip-adaptive-columns > section:first-child, .sip-adaptive-columns > section:nth-child(2), section.sip-vulnerabilities)::before,
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-modulator-heading h3, section.sip-vulnerabilities)::after { display: none !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes ul.sip-modulators { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 24px 18px !important; margin-top: 20px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li { padding: 0 6px !important; border: 0 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-icon { display: flex !important; align-items: center !important; height: 88px !important; margin-bottom: 10px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-art { width: 140px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators h4 { --sip-h-size: 17px !important; --sip-h-leading: 1.3 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators p { margin-top: 6px !important; --sip-p-size: 15px !important; --sip-p-leading: 1.5 !important; white-space: normal !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow { display: flex !important; flex-direction: column !important; gap: 14px !important; margin: 28px 0 24px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > .ph { display: block !important; font-size: 40px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > svg { display: block !important; width: min(360px, 80%) !important; height: auto !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > p { padding: 14px 24px !important; border: 1px solid #789dbb !important; --sip-p-size: 20px !important; --sip-p-leading: 1.35 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > .sip-outcomes-eyebrow { font-size: 12px !important; line-height: 1.5 !important; letter-spacing: .12em !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-patterns { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 32px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-photo { display: block !important; margin-bottom: 18px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header { margin-bottom: 22px !important; padding-bottom: 18px !important; border-bottom: 2px solid var(--sip-outcome-accent) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header h3 { --sip-h-size: 23px !important; --sip-h-leading: 1.25 !important; white-space: normal !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header p { margin-top: 10px !important; --sip-p-size: 16px !important; --sip-p-leading: 1.55 !important; white-space: normal !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-adaptive-columns { display: grid !important; grid-template-columns: 1fr !important; gap: 24px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern h4 { --sip-h-size: 18px !important; --sip-h-leading: 1.4 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes ul.sip-outcome-bullets { gap: 12px !important; margin-top: 14px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-bullets > li { padding-left: 18px !important; --sip-p-size: 16px !important; --sip-p-leading: 1.6 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-bullets > li::before { top: .65em !important; width: 7px !important; height: 7px !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes p.sip-outcomes-caution { margin-top: 32px !important; padding: 22px 0 0 !important; border-top: 1px solid #9db9cf !important; --sip-p-size: 15px !important; --sip-p-leading: 1.6 !important; }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main .sip-outcomes-disclosure-section:has(> #neurochemical-downstream-outcomes) { padding-inline: 150px !important; overflow: clip !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes { overflow: visible !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes > #sip-outcomes-content {
+    padding: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-downstream-poster {
+    --downstream-unit: calc(100cqw / 1201);
+    display: block !important;
+    position: relative !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+    width: 100% !important;
+    aspect-ratio: 1201 / 884.736 !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-downstream-poster::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -35.220649%;
+    width: 170.524563%;
+    background: url("../images/synesthesia-inspired-perception/downstream-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-reference-background, .sip-reference-arrow, .sip-modulator-icon, .sip-outcome-photo, .sip-outcomes-flow > .ph, .sip-outcomes-flow > svg),
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-downstream-poster svg[data-arotec-arrow-owned],
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-downstream-poster svg[data-arotec-text-frame-owned] { display: none !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-reference-break { display: initial !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-outcomes-heading, .sip-modulator-section, .sip-modulator-heading, ul.sip-modulators, .sip-outcomes-flow, .sip-outcome-patterns, .sip-outcome-pattern, .sip-adaptive-columns) {
+    display: contents !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-modulator-heading h3, .sip-modulators > li, .sip-adaptive-columns > section:first-child, .sip-adaptive-columns > section:nth-child(2), section.sip-vulnerabilities)::before,
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes :is(.sip-modulator-heading h3, section.sip-vulnerabilities)::after { display: none !important; }
+
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-heading h2 {
+    position: absolute !important;
+    left: calc(81 * var(--downstream-unit)) !important;
+    top: calc(83 * var(--downstream-unit)) !important;
+    width: calc(1040 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    --sip-h-size: calc(30 * var(--downstream-unit)) !important;
+    --sip-h-leading: 1.2 !important;
+    --sip-h-tracking: -.035em !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-heading p {
+    position: absolute !important;
+    left: calc(51 * var(--downstream-unit)) !important;
+    top: calc(125 * var(--downstream-unit)) !important;
+    width: calc(1100 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    --sip-p-size: calc(12.5 * var(--downstream-unit)) !important;
+    --sip-p-leading: 1.28 !important;
+    letter-spacing: -.025em !important;
+    text-align: center !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-heading .sip-outcomes-eyebrow {
+    position: absolute !important;
+    left: calc(481 * var(--downstream-unit)) !important;
+    top: calc(158 * var(--downstream-unit)) !important;
+    width: calc(240 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    font-size: calc(13.5 * var(--downstream-unit)) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulator-heading h3 {
+    position: absolute !important;
+    left: calc(301 * var(--downstream-unit)) !important;
+    top: calc(177 * var(--downstream-unit)) !important;
+    width: calc(600 * var(--downstream-unit)) !important;
+    display: block !important;
+    margin: 0 !important;
+    background: #fafafa !important;
+    --sip-h-size: calc(15.5 * var(--downstream-unit)) !important;
+    --sip-h-leading: 1.2 !important;
+    --sip-h-tracking: -.02em !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li {
+    position: absolute !important;
+    top: calc(252 * var(--downstream-unit)) !important;
+    width: calc(196 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(1) { left: 0 !important; width: calc(178 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(2) { left: calc(187 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(3) { left: calc(398 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(4) { left: calc(606 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(5) { left: calc(809 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators > li:nth-child(6) { left: calc(1009 * var(--downstream-unit)) !important; width: calc(192 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators h4 { --sip-h-size: calc(13 * var(--downstream-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.025em !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-modulators p {
+    margin: calc(3 * var(--downstream-unit)) 0 0 !important;
+    --sip-p-size: calc(12 * var(--downstream-unit)) !important;
+    --sip-p-leading: 1.2 !important;
+    letter-spacing: -.025em !important;
+    white-space: normal !important;
+    text-wrap: wrap !important;
+  }
+
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > p {
+    position: absolute !important;
+    left: calc(464 * var(--downstream-unit)) !important;
+    top: calc(357 * var(--downstream-unit)) !important;
+    width: calc(273 * var(--downstream-unit)) !important;
+    height: calc(47 * var(--downstream-unit)) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 calc(8 * var(--downstream-unit)) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    --sip-p-size: calc(15.5 * var(--downstream-unit)) !important;
+    --sip-p-leading: 1.15 !important;
+    letter-spacing: -.035em !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcomes-flow > .sip-outcomes-eyebrow {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header {
+    position: absolute !important;
+    top: calc(542 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern--adaptive > header { left: 0 !important; width: calc(567 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern--vulnerable > header { left: calc(673 * var(--downstream-unit)) !important; width: calc(528 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header h3 { --sip-h-size: calc(24 * var(--downstream-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.035em !important; white-space: normal !important; text-wrap: wrap !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern > header p { margin: calc(5 * var(--downstream-unit)) 0 0 !important; --sip-p-size: calc(13 * var(--downstream-unit)) !important; --sip-p-leading: 1.2 !important; letter-spacing: -.025em !important; white-space: normal !important; }
+
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-adaptive-columns > section,
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes section.sip-vulnerabilities {
+    position: absolute !important;
+    top: calc(612 * var(--downstream-unit)) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-adaptive-columns > section:first-child { left: calc(15 * var(--downstream-unit)) !important; width: calc(332 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-adaptive-columns > section:nth-child(2) { left: calc(388 * var(--downstream-unit)) !important; width: calc(328 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes section.sip-vulnerabilities { left: calc(812 * var(--downstream-unit)) !important; width: calc(386 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-pattern h4 { --sip-h-size: calc(14 * var(--downstream-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.025em !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes ul.sip-outcome-bullets { display: grid !important; gap: calc(4 * var(--downstream-unit)) !important; margin: calc(9 * var(--downstream-unit)) 0 0 !important; padding: 0 !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-bullets > li {
+    position: relative !important;
+    margin: 0 !important;
+    padding-left: calc(22 * var(--downstream-unit)) !important;
+    --sip-p-size: calc(12.5 * var(--downstream-unit)) !important;
+    --sip-p-leading: 1.3 !important;
+    letter-spacing: -.025em !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes .sip-outcome-bullets > li::before { top: .4em !important; width: calc(8 * var(--downstream-unit)) !important; height: calc(8 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes section.sip-vulnerabilities ul.sip-outcome-bullets { margin-top: calc(14 * var(--downstream-unit)) !important; gap: calc(8 * var(--downstream-unit)) !important; }
+  html body.sip-page main#main#main #neurochemical-downstream-outcomes p.sip-outcomes-caution {
+    position: absolute !important;
+    left: calc(61 * var(--downstream-unit)) !important;
+    top: calc(760 * var(--downstream-unit)) !important;
+    width: calc(1080 * var(--downstream-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    --sip-p-size: calc(11.5 * var(--downstream-unit)) !important;
+    --sip-p-leading: 1.35 !important;
+    letter-spacing: -.015em !important;
+    text-align: center !important;
+    text-wrap: wrap !important;
+  }
+}

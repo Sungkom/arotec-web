@@ -491,3 +491,44 @@ html body.brs-page main#main#main #introduction.brs-v5-introduction {
   width:89.4%;
  }
 }
+
+/* Equal grid tracks put the connector midpoint at the track end plus half
+   the column gap. Icons retain their 56px/46px heights and existing layout. */
+html body.brs-page main#main#main #exposure-routes .brs-v5-framework .brs-v5-flow-arrow {
+  left: calc(100% + 1.5cqw);
+  right: auto;
+  top: 28px;
+  width: 28px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  color: var(--arotec-text-navy, #113568);
+}
+html body.brs-page main#main#main #exposure-routes .brs-v5-framework .brs-v5-flow-arrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 1.5px);
+  height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+}
+html body.brs-page main#main#main #exposure-routes .brs-v5-framework .brs-v5-flow-arrow::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+@media (max-width: 700px) {
+  html body.brs-page main#main#main #exposure-routes .brs-v5-framework .brs-v5-flow-arrow {
+    left: calc(100% + 14px);
+    top: 23px;
+  }
+}

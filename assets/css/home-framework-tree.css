@@ -354,16 +354,22 @@
   #research-solutions .fw-masthead::after { background: CanvasText; }
 }
 
-/* Keep translated outcome captions within the curved edge while preserving
-   their text, typography and icon sizes. */
+/* Keep every translated outcome caption inside its curved ring without
+   changing the original text, typography, icons, or ring coordinates. Natural
+   balanced wrapping replaces the old forced breaks; desktop captions use the
+   wider upper part of the circle with a smaller icon-to-caption gap. */
 #research-solutions .fw-outcome-label {
-  width: 84%;
-  max-width: 100%;
   min-width: 0;
+  max-width: 85%;
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
+html[lang="en"] #research-solutions .fw-outcome-label { max-width: 90%; }
 #research-solutions .fw-outcome-label br { display: none; }
 @media (min-width: 1001px) {
-  #research-solutions .fw-outcome { padding-bottom: 1.4cqw; }
+  #research-solutions .fw-outcome {
+    gap: .1cqw;
+    padding: .5cqw .5cqw 1.1cqw;
+    min-block-size: 0;
+  }
 }

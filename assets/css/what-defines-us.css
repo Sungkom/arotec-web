@@ -3,14 +3,18 @@ html body.wwd-page main#main #what-defines-us {
   --wwd-font: "WWA Roboto Condensed", "Arial Narrow", sans-serif;
   --wwd-unit: min(1.15px, calc(100vw / 1672), calc((100svh - var(--wwd-header-offset, 112px)) / 941));
   --wwd-gutter: clamp(28px, 3.05vw, 64px);
+  --wwd-gutter-left: max(var(--wwd-gutter), var(--arotec-content-left, 0px));
+  --wwd-gutter-right: max(var(--wwd-gutter), var(--arotec-content-right, 0px));
   --sfc-ink: #fff;
   --sfc-ink-soft: #eef2f7;
   --sfc-blue: #6ebfff;
   --sfc-line: rgba(156, 197, 232, .38);
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  height: calc(100svh - var(--wwd-header-offset, 112px));
-  min-height: 0;
+  /* Keep the breadcrumb reservation and readable copy in normal flow.
+     Short windows and longer translations may grow beyond one viewport. */
+  grid-template-rows: minmax(min-content, 1fr) auto;
+  height: auto;
+  min-height: calc(100svh - var(--wwd-header-offset, 112px));
   padding: 0;
   border: 0;
   background: #020b17 url("../images/who-we-are-details/what-defines-us-earth-20260930.png") center / cover no-repeat;
@@ -22,8 +26,9 @@ html body.wwd-page main#main #what-defines-us {
 #what-defines-us .wwd-defines-main {
   display: flex;
   align-items: flex-end;
-  min-height: 0;
+  min-height: min-content;
   padding: calc(24 * var(--wwd-unit)) var(--wwd-gutter) calc(28 * var(--wwd-unit));
+  padding-inline: var(--wwd-gutter-left) var(--wwd-gutter-right);
 }
 #what-defines-us .wwd-defines-content {
   width: min(49vw, calc(765 * var(--wwd-unit)));
@@ -122,6 +127,7 @@ html body.wwd-page main#main #what-defines-us .wwd-pillar-copy {
   gap: 0;
   margin: 0;
   padding: calc(30 * var(--wwd-unit)) var(--wwd-gutter);
+  padding-inline: var(--wwd-gutter-left) var(--wwd-gutter-right);
   border-top: 1px solid rgba(158, 193, 222, .12);
   background: rgba(2, 11, 24, .76);
 }

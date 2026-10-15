@@ -1,0 +1,43 @@
+/* Standalone raster-arrow replacements. Original image boxes and names stay intact. */
+:root { --arotec-arrow-assets-ready: 1; }
+img[data-arotec-arrow-asset-active="true"]:not([data-arotec-arrow-keep-source]) { filter: opacity(0) !important; }
+svg[data-arotec-arrow-owned="assets"][data-arotec-arrow-generated="assets"] {
+  position: absolute !important;
+  display: block;
+  box-sizing: border-box !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  contain: layout style;
+}
+svg[data-arotec-arrow-owned="assets"] path[data-arotec-arrow-line],
+svg[data-arotec-arrow-owned="assets"] path[data-arotec-arrow-halo] {
+  fill: none !important;
+  stroke: var(--arotec-arrow-color, #113568) !important;
+  stroke-width: var(--arotec-arrow-assets-stroke, 3px) !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  vector-effect: non-scaling-stroke;
+}
+svg[data-arotec-arrow-owned="assets"] path[data-arotec-arrow-halo] {
+  stroke: #fff !important;
+  stroke-width: var(--arotec-arrow-assets-halo, 5px) !important;
+}
+/* Position corrections must paint in the same frame as the original image;
+   inherited transition:all otherwise animates fractional coordinates. */
+svg[data-arotec-arrow-owned="assets"][data-arotec-arrow-shape="embedded-artwork"] {
+  transition: none !important;
+}
+/* Preserve Trevion's authored mobile child index when an overlay is present. */
+@media (max-width: 599px) {
+  html body.tv-page main#main#main .tv-receptor-flow > .tv-arrow-right:nth-last-child(2 of :not([data-arotec-arrow-generated])) {
+    display: none;
+  }
+}

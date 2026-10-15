@@ -1,5 +1,5 @@
 /* Every authored page imports this sheet before its component styles.
-   Important layer order is reversed: this family-only layer must come first.
+   Important layer order is reversed: this language layer must come first.
    It deliberately leaves size, weight, style, spacing, paint and artwork alone. */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap");
 
@@ -41,6 +41,17 @@
 }
 
 @layer arotec-language-fonts {
+  /* Native families are resolved by availability, not user-agent detection:
+     Apple supplies PingFang/Hiragino; Windows supplies JhengHei/YaHei/Yu Gothic.
+     Android and other platforms use the existing language-specific Noto web
+     fonts (or an installed Source Han family). Keep script variants separate
+     so a missing native family cannot select another region's Han glyphs. */
+  :root {
+    --arotec-font-cjk-tc: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Noto Sans CJK TC", "Roboto", sans-serif;
+    --arotec-font-cjk-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", "Noto Sans CJK JP", "Roboto", sans-serif;
+    --arotec-font-cjk-sc: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans SC", "Noto Sans CJK SC", "Roboto", sans-serif;
+  }
+
   /* :lang() follows the nearest language annotation, including native-language
      choices and untranslated foreign passages, and updates on language change. */
   :where(:root, :lang(en)) {
@@ -50,31 +61,31 @@
     --arotec-language-font: "Noto Sans Thai", "DM Sans", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
   }
   :where(:lang(ja)) {
-    --arotec-language-font: "Noto Sans JP", "DM Sans", "Noto Sans Thai", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+    --arotec-language-font: var(--arotec-font-cjk-jp) !important;
   }
   :where(:lang(zh), :lang(zh-Hant), :lang(zh-TW), :lang(zh-HK), :lang(zh-MO)) {
-    --arotec-language-font: "Noto Sans TC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", sans-serif !important;
+    --arotec-language-font: var(--arotec-font-cjk-tc) !important;
   }
   /* More specific Chinese variants must follow the generic zh match above. */
   :where(:lang(zh-CN), :lang(zh-Hans), :lang(zh-SG)) {
-    --arotec-language-font: "Noto Sans SC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans TC", sans-serif !important;
+    --arotec-language-font: var(--arotec-font-cjk-sc) !important;
   }
 
   /* Runtime language choices name their own language without a lang attribute. */
-  :where(.language-chip[data-lang-chip="en"], .language-chip[data-lang-chip="en"] *, #languageSelect option[value="en"]) {
+  :where(.language-chip[data-lang-chip="en"], .language-chip[data-lang-chip="en"] *, :is(#languageSelect, #memberLanguageSelect) option[value="en"]) {
     --arotec-language-font: "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
   }
-  :where(.language-chip[data-lang-chip="th"], .language-chip[data-lang-chip="th"] *, #languageSelect option[value="th"]) {
+  :where(.language-chip[data-lang-chip="th"], .language-chip[data-lang-chip="th"] *, :is(#languageSelect, #memberLanguageSelect) option[value="th"]) {
     --arotec-language-font: "Noto Sans Thai", "DM Sans", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
   }
-  :where(.language-chip[data-lang-chip="ja"], .language-chip[data-lang-chip="ja"] *, #languageSelect option[value="ja"]) {
-    --arotec-language-font: "Noto Sans JP", "DM Sans", "Noto Sans Thai", "Noto Sans SC", "Noto Sans TC", sans-serif !important;
+  :where(.language-chip[data-lang-chip="ja"], .language-chip[data-lang-chip="ja"] *, :is(#languageSelect, #memberLanguageSelect) option[value="ja"]) {
+    --arotec-language-font: var(--arotec-font-cjk-jp) !important;
   }
-  :where(.language-chip[data-lang-chip="zh"], .language-chip[data-lang-chip="zh"] *, #languageSelect option[value="zh"]) {
-    --arotec-language-font: "Noto Sans TC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans SC", sans-serif !important;
+  :where(.language-chip:is([data-lang-chip="zh"], [data-lang-chip="zh-Hant"], [data-lang-chip="zh-TW"], [data-lang-chip="zh-HK"], [data-lang-chip="zh-MO"]), .language-chip:is([data-lang-chip="zh"], [data-lang-chip="zh-Hant"], [data-lang-chip="zh-TW"], [data-lang-chip="zh-HK"], [data-lang-chip="zh-MO"]) *, :is(#languageSelect, #memberLanguageSelect) option:is([value="zh"], [value="zh-Hant"], [value="zh-TW"], [value="zh-HK"], [value="zh-MO"])) {
+    --arotec-language-font: var(--arotec-font-cjk-tc) !important;
   }
-  :where(.language-chip[data-lang-chip="zh-CN"], .language-chip[data-lang-chip="zh-CN"] *, #languageSelect option[value="zh-CN"]) {
-    --arotec-language-font: "Noto Sans SC", "DM Sans", "Noto Sans Thai", "Noto Sans JP", "Noto Sans TC", sans-serif !important;
+  :where(.language-chip:is([data-lang-chip="zh-CN"], [data-lang-chip="zh-Hans"], [data-lang-chip="zh-SG"]), .language-chip:is([data-lang-chip="zh-CN"], [data-lang-chip="zh-Hans"], [data-lang-chip="zh-SG"]) *, :is(#languageSelect, #memberLanguageSelect) option:is([value="zh-CN"], [value="zh-Hans"], [value="zh-SG"])) {
+    --arotec-language-font: var(--arotec-font-cjk-sc) !important;
   }
 
   /* Set the aliases locally as legacy diagrams redefine these on sections. */
@@ -105,5 +116,55 @@
   :where(input[type="file"])::file-selector-button,
   #brain-skin-axis .css-arrow::before {
     font-family: var(--arotec-language-font) !important;
+  }
+
+  /* A nested important layer wins over campaign families authored directly in
+     this layer. Scope it to CJK prose so English campaign fonts and icon glyphs
+     retain their existing styling. No type size or line-box values change. */
+  @layer cjk-native {
+    :where(:lang(ja), :lang(zh)):not(:is(
+      .ph, .ph-duotone, .ph-thin, .ph-light, .ph-bold, .ph-fill,
+      [class^="ph-"], [class*=" ph-"],
+      .fa, .fas, .far, .fal, .fat, .fad, .fab,
+      [class^="fa-"], [class*=" fa-"],
+      .bi, [class^="bi-"], [class*=" bi-"],
+      .material-icons, .material-icons-outlined, .material-icons-round,
+      .material-icons-sharp, .material-icons-two-tone,
+      .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp,
+      [data-icon-font]
+    )) {
+      font-family: var(--arotec-language-font) !important;
+    }
+
+    /* CJK punctuation follows native line-breaking rules. Emergency breaks
+       protect narrow prose containing long Latin terms without changing an
+       authored white-space/nowrap mode or mathematical notation. */
+    :where(p, h1, h2, h3, h4, li, summary, label, button):is(:lang(ja), :lang(zh)):not(:where(
+      pre, pre *, code, code *, kbd, kbd *, samp, samp *, math, math *,
+      [role="math"], [role="math"] *,
+      [class*="formula" i], [class*="formula" i] *, [id*="formula" i], [id*="formula" i] *,
+      [class*="equation" i], [class*="equation" i] *, [id*="equation" i], [id*="equation" i] *,
+      [data-preserve-wrap], [data-preserve-wrap] *,
+      nobr, nobr *, .nowrap, .nowrap *, .no-wrap, .no-wrap *, .text-nowrap, .text-nowrap *,
+      [data-icon-font], .ph, [class^="ph-"], [class*=" ph-"],
+      .fa, .fas, .far, .fal, .fat, .fad, .fab, [class^="fa-"], [class*=" fa-"],
+      .bi, [class^="bi-"], [class*=" bi-"], [class^="material-icons"], [class^="material-symbols"]
+    )) {
+      line-break: strict !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* Use the style longhand: text-wrap: balance would also reset an explicit
+       nowrap mode. Existing hard breaks and heading dimensions stay intact. */
+    :where(h1, h2, h3, h4):is(:lang(ja), :lang(zh)):not(:where(
+      [class*="formula" i], [class*="formula" i] *, [id*="formula" i], [id*="formula" i] *,
+      [class*="equation" i], [class*="equation" i] *, [id*="equation" i], [id*="equation" i] *,
+      [data-preserve-wrap], [data-preserve-wrap] *,
+      nobr, nobr *, .nowrap, .nowrap *, .no-wrap, .no-wrap *, .text-nowrap, .text-nowrap *,
+      [data-icon-font]
+    )) {
+      text-wrap-style: balance !important;
+    }
   }
 }

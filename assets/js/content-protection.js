@@ -6,6 +6,9 @@
 
   var KEY = '__arotecCopyDeterrence';
   var CLASS_NAME = 'arotec-copy-protected';
+  // Temporarily OFF by owner request. Restore only after an explicit request.
+  // No timer, saved preference, language, or route may enable it automatically.
+  var ENABLED_BY_DEFAULT = false;
   if (window[KEY]) return;
 
   function element(node) {
@@ -116,7 +119,7 @@
   }
 
   function disable() {
-    if (!active) return;
+    // Also clear a class captured in a static localized snapshot.
     active = false;
     document.documentElement.classList.remove(CLASS_NAME);
     Object.keys(handlers).forEach(function (name) {
@@ -124,6 +127,7 @@
     });
   }
 
-  window[KEY] = { version: '1.0.0', enable: enable, disable: disable };
-  enable();
+  window[KEY] = { version: '1.1.0', enable: enable, disable: disable };
+  if (ENABLED_BY_DEFAULT) enable();
+  else disable();
 })();

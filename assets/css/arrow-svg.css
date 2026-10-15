@@ -1,0 +1,13 @@
+/* Geometry is applied only to audited arrow paths by arrow-svg.js.
+   The stroke is fixed in CSS pixels; the arrow's layout and hit area stay authored. */
+svg [data-arotec-arrow-generated] { pointer-events: none; }
+/* Arrowheads at viewBox edges must retain their full 3 px stroke. */
+svg.nst-step-link,
+svg.nst-flow-arrow,
+svg.nst-trend-svg,
+.arotec-page-top > svg,
+svg.icon-svg:has(> [data-arotec-arrow-svg]),
+svg.connector-svg:has(> .legend-arrowhead-stress),
+svg.connector-svg:has(> .legend-arrowhead-response),
+svg.connector-svg:has(> .native-legend-amplifier-head),
+svg.connector-svg:has(> .native-legend-reciprocal-head) { overflow: visible; }

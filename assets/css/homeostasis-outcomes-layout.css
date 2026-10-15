@@ -1,0 +1,235 @@
+/* Revised 5000 x 2800 outcomes artwork with live, localized labels.
+   The normalized 2048 x 1146.88 scene uses x=309..1739 as the foreground
+   frame. Its edges follow the shared website gutters; compact flow remains. */
+#outcomes { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.homeostasis-reference-page #outcomes {
+    padding-block: 0;
+    overflow: clip;
+    background: #fff;
+  }
+  #outcomes > .hr-shell {
+    --outcomes-unit: calc(100cqw / 1430);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1430 / 1146.88;
+    isolation: isolate;
+  }
+  #outcomes > .hr-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -21.608392%;
+    width: 143.216783%;
+    background: url("../images/homeostasis-20260916/outcomes-reference-clean.png?v=20261014") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #outcomes .hr-outcomes-heading,
+  #outcomes .hr-outcomes-grid,
+  #outcomes .hr-outcome-panel,
+  #outcomes .hr-outcome-panel > header,
+  #outcomes .hr-outcome-panel > ul,
+  #outcomes .hr-outcome-panel li,
+  #outcomes .hr-outcome-body,
+  #outcomes .hr-outcome-body figcaption { display: contents; }
+  #outcomes .hr-outcomes-heading,
+  #outcomes .hr-outcome-panel > header,
+  #outcomes .hr-outcome-body,
+  #outcomes .hr-outcome-body figcaption {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  #outcomes .hr-outcomes-grid img { display: none !important; }
+
+  html body.homeostasis-reference-page #main #outcomes .hr-outcomes-heading .hr-kicker {
+    position: absolute;
+    top: calc(139.072 * var(--outcomes-unit));
+    left: calc(440 * var(--outcomes-unit));
+    width: calc(550 * var(--outcomes-unit));
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+    --arotec-body-size: calc(17.5 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.3;
+    letter-spacing: .19em;
+    text-align: center;
+    font-weight: 500 !important;
+  }
+  html body.homeostasis-reference-page #main #outcomes .hr-outcomes-heading h2 {
+    position: absolute;
+    top: calc(163.072 * var(--outcomes-unit));
+    left: calc(165 * var(--outcomes-unit));
+    width: calc(1100 * var(--outcomes-unit));
+    margin: 0 !important;
+    --site-type-h2: calc(50 * var(--outcomes-unit));
+    --site-line-h2: 1.15;
+    --site-letter-h2: -.025em;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  #outcomes .hr-outcomes-heading > p:last-child {
+    position: absolute;
+    top: calc(234.072 * var(--outcomes-unit));
+    left: calc(54 * var(--outcomes-unit));
+    width: calc(1322 * var(--outcomes-unit));
+    --arotec-body-size: calc(19.5 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.02em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  html body.homeostasis-reference-page #main #outcomes .hr-outcome-panel > header h3 {
+    position: absolute;
+    top: calc(273.072 * var(--outcomes-unit));
+    width: calc(420 * var(--outcomes-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(26 * var(--outcomes-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  #outcomes .hr-outcome-panel > header p {
+    position: absolute;
+    top: calc(307.072 * var(--outcomes-unit));
+    width: calc(420 * var(--outcomes-unit));
+    --arotec-body-size: calc(18.5 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.2;
+    letter-spacing: -.025em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  #outcomes .hr-maintained > header :is(h3,p) { left: 0; }
+  #outcomes .hr-disrupted > header :is(h3,p) { left: calc(1010 * var(--outcomes-unit)); }
+  html body.homeostasis-reference-page #main #outcomes .hr-maintained :is(h3,h4),
+  #outcomes .hr-maintained > header p,
+  #outcomes .hr-maintained .hr-outcome-summary {
+    color: #185c6c !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+  html body.homeostasis-reference-page #main #outcomes .hr-disrupted :is(h3,h4),
+  #outcomes .hr-disrupted > header p,
+  #outcomes .hr-disrupted .hr-outcome-summary {
+    color: var(--hr-red) !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+
+  #outcomes .hr-outcome-panel li > div {
+    position: absolute;
+    --site-type-h4: calc(20.5 * var(--outcomes-unit));
+    --site-line-h4: 1.13;
+    --site-letter-h4: -.025em;
+    --arotec-body-size: calc(17 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.12;
+  }
+  html body.homeostasis-reference-page #main #outcomes .hr-outcome-panel li h4 {
+    margin: 0 0 calc(3 * var(--outcomes-unit)) !important;
+    overflow-wrap: normal;
+    hyphens: none;
+    text-wrap: balance !important;
+  }
+  #outcomes .hr-outcome-panel li p {
+    color: #405d77 !important;
+    -webkit-text-fill-color: currentColor !important;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+  }
+  #outcomes .hr-maintained li > div {
+    left: 0;
+    text-align: right;
+  }
+  #outcomes .hr-maintained li p {
+    width: calc(200 * var(--outcomes-unit));
+    margin-left: auto;
+  }
+  #outcomes .hr-maintained li:nth-child(1) > div { top: calc(346.072 * var(--outcomes-unit)); width: calc(247 * var(--outcomes-unit)); }
+  #outcomes .hr-maintained li:nth-child(2) > div { top: calc(439.072 * var(--outcomes-unit)); width: calc(240 * var(--outcomes-unit)); }
+  #outcomes .hr-maintained li:nth-child(3) > div { top: calc(546.072 * var(--outcomes-unit)); width: calc(242 * var(--outcomes-unit)); }
+  #outcomes .hr-maintained li:nth-child(4) > div { top: calc(660.072 * var(--outcomes-unit)); width: calc(243 * var(--outcomes-unit)); }
+  #outcomes .hr-maintained li:nth-child(5) > div { top: calc(761.072 * var(--outcomes-unit)); width: calc(264 * var(--outcomes-unit)); }
+  #outcomes .hr-maintained li:nth-child(6) > div { top: calc(864.072 * var(--outcomes-unit)); width: calc(304 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li > div {
+    left: calc(1190 * var(--outcomes-unit));
+    width: calc(240 * var(--outcomes-unit));
+    text-align: left;
+  }
+  #outcomes .hr-disrupted li:nth-child(1) > div { top: calc(344.072 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li:nth-child(2) > div { top: calc(438.072 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li:nth-child(3) > div { top: calc(551.072 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li:nth-child(4) > div { top: calc(662.072 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li:nth-child(5) > div { top: calc(753.072 * var(--outcomes-unit)); }
+  #outcomes .hr-disrupted li:nth-child(6) > div {
+    left: calc(1127 * var(--outcomes-unit));
+    top: calc(861.072 * var(--outcomes-unit));
+    width: calc(303 * var(--outcomes-unit));
+  }
+
+  html body.homeostasis-reference-page #main #outcomes .hr-outcome-summary {
+    position: absolute;
+    top: calc(963.072 * var(--outcomes-unit));
+    width: calc(475 * var(--outcomes-unit));
+    margin: 0 !important;
+    padding: calc(9 * var(--outcomes-unit)) 0 0;
+    border-top: calc(1.3 * var(--outcomes-unit)) solid #bfd4d9;
+    --arotec-body-size: calc(14.5 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.2;
+    font-weight: 700 !important;
+    letter-spacing: .13em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  #outcomes .hr-maintained .hr-outcome-summary { left: 0; }
+  html body.homeostasis-reference-page #main #outcomes .hr-disrupted .hr-outcome-summary {
+    left: calc(955 * var(--outcomes-unit));
+    border-color: #dfbac5;
+    --arotec-body-size: calc(13.5 * var(--outcomes-unit));
+    letter-spacing: -.025em;
+  }
+  html body.homeostasis-reference-page #main #outcomes .hr-outcome-body h3 {
+    position: absolute;
+    left: calc(477 * var(--outcomes-unit));
+    top: calc(961.072 * var(--outcomes-unit));
+    width: calc(476 * var(--outcomes-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(17.8 * var(--outcomes-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  #outcomes .hr-outcome-body figcaption p {
+    position: absolute;
+    left: calc(477 * var(--outcomes-unit));
+    top: calc(984.072 * var(--outcomes-unit));
+    width: calc(476 * var(--outcomes-unit));
+    --arotec-body-size: calc(12 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.2;
+    letter-spacing: -.025em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  /* Longer Thai panel subtitles stay clear of the brain callouts below. */
+  html[lang="th"] body.homeostasis-reference-page #main #outcomes .hr-outcome-panel > header h3 {
+    top: calc(267.072 * var(--outcomes-unit));
+  }
+  html[lang="th"] #outcomes .hr-outcome-panel > header p {
+    top: calc(301.072 * var(--outcomes-unit));
+    --arotec-body-size: calc(15 * var(--outcomes-unit));
+    --arotec-body-line-height: 1.15;
+  }
+  html[lang="th"] #outcomes .hr-maintained > header p {
+    left: calc(20 * var(--outcomes-unit));
+    width: calc(340 * var(--outcomes-unit));
+  }
+  html[lang="th"] #outcomes .hr-disrupted > header p {
+    left: calc(1065 * var(--outcomes-unit));
+    width: calc(365 * var(--outcomes-unit));
+  }
+}

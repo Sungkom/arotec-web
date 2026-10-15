@@ -1,0 +1,241 @@
+/* Exact 5000 x 2160 clean scene with live localized copy.
+   Its cards match the 2560 x 1441 annotated source at a smaller scale.
+   Normalized clean source: 2048 x 884.736; foreground x=410..1638 (1228). */
+@media (max-width: 800px) {
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas { padding-inline: 24px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading h2 { --sip-h-size: 24px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-card > header, .sip-bdnf-card) h3 { --sip-h-size: 20px !important; --sip-h-leading: 1.2 !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas { padding-inline: 40px !important; }
+}
+@layer arotec-mobile-main-headings {
+  @media (max-width: 800px) {
+    html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading h2 { font-size: 24px !important; line-height: 1.2 !important; }
+    html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-card > header, .sip-bdnf-card) h3 { font-size: 20px !important; line-height: 1.2 !important; }
+  }
+}
+
+/* Undo the former fixed canvas between 1200 and 1399px. Existing crop assets
+   and native card content remain in normal reading order in this range. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas { display: block !important; aspect-ratio: auto !important; height: auto !important; padding: 44px 150px 32px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-heading h2, .sip-aging-heading > p, .sip-aging-tagline, .sip-aging-card, .sip-aging-card > header, .sip-processing-mechanism, .sip-plasticity-stages, .sip-bdnf-card, .sip-bdnf-card > div, .sip-research-questions, .sip-research-note, .sip-evidence-strip, .sip-aging-caution, .sip-explore) {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: auto !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-decoration, .sip-aging-arrows) { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading h2 { --sip-h-size: 34px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading > p { margin-top: 18px !important; --sip-p-size: 17px !important; --sip-p-leading: 1.6 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-tagline { margin-bottom: 22px !important; font-size: 10px !important; line-height: 1.5 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-flow { display: grid !important; gap: 24px !important; margin-top: 32px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-column { display: grid !important; gap: 20px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card { padding: 24px 18px !important; border-width: 1px !important; border-radius: 10px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header h3 { --sip-h-size: 26px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header p { margin-top: 10px !important; --sip-p-size: 15px !important; --sip-p-leading: 1.45 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header p br { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-crop { position: relative !important; inset: auto !important; width: 100% !important; height: auto !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-processing-art, .sip-synapse-art, .sip-cognitive-aging-art) { margin: 16px auto 0 !important; max-width: 620px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism { grid-template-columns: 70px minmax(0, 1fr) !important; gap: 15px !important; margin-top: 18px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism h4 { --sip-h-size: 17px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism p { margin-top: 6px !important; --sip-p-size: 14px !important; --sip-p-leading: 1.45 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism p br { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 16px !important; margin-top: 16px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li { --sip-p-size: 16px !important; --sip-p-leading: 1.4 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:not(:last-child)::after { right: -14px !important; top: 30% !important; font-size: 20px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card { display: grid !important; grid-template-columns: 130px minmax(0, 1fr) !important; gap: 24px !important; padding: 24px !important; border-width: 1px !important; border-radius: 10px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card h3 { --sip-h-size: 24px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card p { margin-top: 8px !important; --sip-p-size: 15px !important; --sip-p-leading: 1.45 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card strong { margin-top: 10px !important; padding: 5px 8px !important; font-size: 12px !important; line-height: 1.2 !important; border-radius: 6px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions { gap: 18px !important; margin-top: 12px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li { grid-template-columns: 42px minmax(0, 1fr) !important; gap: 14px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li > span { width: 42px !important; font-size: 30px !important; border-width: 1px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions p { --sip-p-size: 14px !important; --sip-p-leading: 1.4 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-note { margin-top: 22px !important; --sip-p-size: 12px !important; --sip-p-leading: 1.5 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 24px !important; margin-top: 24px !important; padding: 22px 18px !important; border-radius: 14px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article { grid-template-columns: 1fr !important; gap: 18px !important; padding: 0 !important; border: 0 !important; align-content: start !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip .sip-ui-icon { width: 64px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip h4 { --sip-h-size: 18px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip p { margin-top: 6px !important; --sip-p-size: 13px !important; --sip-p-leading: 1.45 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-explore { width: 100% !important; margin-top: 28px !important; padding: 18px 0 18px 20px !important; gap: 20px !important; font-size: 15px !important; line-height: 1.4 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-explore small { margin-bottom: 6px !important; font-size: 11px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-explore > svg { width: 32px !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-caution { margin-top: 24px !important; --sip-p-size: 12px !important; --sip-p-leading: 1.6 !important; }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main #synesthesia-neuroplasticity { padding-inline: 150px !important; overflow: clip !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas {
+    --aging-unit: calc(100cqw / 1228);
+    display: block !important;
+    position: relative !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+    width: 100% !important;
+    aspect-ratio: 1228 / 884.736 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -33.387622%;
+    width: 166.775244%;
+    background: url("../images/synesthesia-inspired-perception/aging-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-decoration, .sip-aging-arrows, .sip-crop, .sip-research-questions li > span, .sip-evidence-strip .sip-ui-icon),
+  html body.sip-page main#main#main #synesthesia-neuroplasticity svg[data-arotec-text-frame-owned],
+  html body.sip-page main#main#main #synesthesia-neuroplasticity svg[data-arotec-arrow-owned] { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity :is(.sip-aging-heading, .sip-aging-flow, .sip-plasticity-column, .sip-aging-card, .sip-bdnf-card, .sip-research-questions, .sip-evidence-strip) {
+    display: contents !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-tagline {
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(83 * var(--aging-unit)) !important;
+    width: calc(120 * var(--aging-unit)) !important;
+    margin: 0 !important;
+    font-size: calc(8.5 * var(--aging-unit)) !important;
+    line-height: 1.4 !important;
+    letter-spacing: .1em !important;
+    text-align: left !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading h2 {
+    position: absolute !important;
+    left: calc(89 * var(--aging-unit)) !important;
+    top: calc(78 * var(--aging-unit)) !important;
+    width: calc(1050 * var(--aging-unit)) !important;
+    --sip-h-size: calc(37 * var(--aging-unit)) !important;
+    --sip-h-leading: 1.2 !important;
+    --sip-h-tracking: -.04em !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading > p {
+    position: absolute !important;
+    left: calc(114 * var(--aging-unit)) !important;
+    top: calc(134 * var(--aging-unit)) !important;
+    width: calc(1000 * var(--aging-unit)) !important;
+    margin: 0 !important;
+    --sip-p-size: calc(15.5 * var(--aging-unit)) !important;
+    --sip-p-leading: 1.25 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header {
+    position: absolute !important;
+    top: calc(188 * var(--aging-unit)) !important;
+    right: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing > header { left: calc(24 * var(--aging-unit)) !important; width: calc(321 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity > header { left: calc(422 * var(--aging-unit)) !important; width: calc(384 * var(--aging-unit)) !important; text-align: center !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-cognitive-aging > header { left: calc(886 * var(--aging-unit)) !important; width: calc(324 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header h3 { --sip-h-size: calc(20 * var(--aging-unit)) !important; --sip-h-leading: 1.15 !important; --sip-h-tracking: -.04em !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-cognitive-aging > header h3 { --sip-h-size: calc(17.4 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header p { margin-top: calc(8 * var(--aging-unit)) !important; --sip-p-size: calc(13.5 * var(--aging-unit)) !important; --sip-p-leading: 1.3 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-cognitive-aging > header p { --sip-p-size: calc(11.2 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-card > header p br { display: initial !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism {
+    position: absolute !important;
+    display: block !important;
+    left: calc(92 * var(--aging-unit)) !important;
+    top: calc(534 * var(--aging-unit)) !important;
+    width: calc(257 * var(--aging-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism + .sip-processing-mechanism { top: calc(613 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism h4 { --sip-h-size: calc(14 * var(--aging-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.03em !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism p { margin-top: calc(4 * var(--aging-unit)) !important; --sip-p-size: calc(12.7 * var(--aging-unit)) !important; --sip-p-leading: 1.3 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-processing-mechanism p br { display: initial !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages { display: contents !important; position: static !important; margin: 0 !important; padding: 0 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li { position: absolute !important; top: calc(465 * var(--aging-unit)) !important; margin: 0 !important; padding: 0 !important; --sip-p-size: calc(12.5 * var(--aging-unit)) !important; --sip-p-leading: 1.24 !important; font-weight: 500 !important; text-align: center !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:nth-child(1) { left: calc(420 * var(--aging-unit)) !important; width: calc(91 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:nth-child(2) { left: calc(551 * var(--aging-unit)) !important; width: calc(128 * var(--aging-unit)) !important; }
+  /* The annotated reference breaks the dotted path behind this caption. */
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:nth-child(2) { isolation: isolate; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:nth-child(2)::before { content: ""; position: absolute; z-index: -1; left: calc(59 * var(--aging-unit)); top: 0; width: calc(8 * var(--aging-unit)); height: 100%; background: linear-gradient(to right, transparent, #fff 25%, #fff 75%, transparent); pointer-events: none; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li:nth-child(3) { left: calc(712 * var(--aging-unit)) !important; width: calc(104 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li::after { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card > div { position: absolute !important; left: calc(533 * var(--aging-unit)) !important; top: calc(562 * var(--aging-unit)) !important; right: auto !important; width: calc(275 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card h3 { --sip-h-size: calc(15.6 * var(--aging-unit)) !important; --sip-h-leading: 1.15 !important; --sip-h-tracking: -.035em !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card p { margin-top: calc(6 * var(--aging-unit)) !important; --sip-p-size: calc(11.5 * var(--aging-unit)) !important; --sip-p-leading: 1.25 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-bdnf-card strong {
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(94 * var(--aging-unit)) !important;
+    width: calc(203 * var(--aging-unit)) !important;
+    height: calc(24 * var(--aging-unit)) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-size: calc(10.5 * var(--aging-unit)) !important;
+    line-height: 1.2 !important;
+    color: #a54416 !important;
+    -webkit-text-fill-color: currentColor !important;
+    white-space: normal !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li { position: absolute !important; display: block !important; left: calc(936 * var(--aging-unit)) !important; width: calc(270 * var(--aging-unit)) !important; margin: 0 !important; padding: 0 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li:nth-child(1) { top: calc(499 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li:nth-child(2) { top: calc(553 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions li:nth-child(3) { top: calc(608 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-questions p { --sip-p-size: calc(12.5 * var(--aging-unit)) !important; --sip-p-leading: 1.25 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-research-note { position: absolute !important; left: calc(882 * var(--aging-unit)) !important; top: calc(667 * var(--aging-unit)) !important; right: auto !important; bottom: auto !important; width: calc(337 * var(--aging-unit)) !important; margin: 0 !important; --sip-p-size: calc(10.5 * var(--aging-unit)) !important; --sip-p-leading: 1.3 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article {
+    position: absolute !important;
+    z-index: 2 !important;
+    isolation: isolate !important;
+    display: block !important;
+    top: calc(724 * var(--aging-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(1) { left: calc(107 * var(--aging-unit)) !important; width: calc(215 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(2) { left: calc(431 * var(--aging-unit)) !important; width: calc(207 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(3) { left: calc(741 * var(--aging-unit)) !important; width: calc(277 * var(--aging-unit)) !important; }
+  /* The clean strip contains extra dividers immediately after its icons.
+     Mask only those thin lines underneath the live reference captions. */
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article::before { content: ""; position: absolute; z-index: -1; left: calc(8 * var(--aging-unit)); top: calc(3 * var(--aging-unit)); width: calc(5 * var(--aging-unit)); height: calc(49 * var(--aging-unit)); background: #f1f9fd; pointer-events: none; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(2)::before { background: #f7fcfd; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(3)::before { left: calc(6 * var(--aging-unit)); }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip h4 { --sip-h-size: calc(12.3 * var(--aging-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.035em !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip p { margin-top: calc(4 * var(--aging-unit)) !important; --sip-p-size: calc(10.4 * var(--aging-unit)) !important; --sip-p-leading: 1.25 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-evidence-strip > article:nth-child(2) h4 { --sip-heading-color: #a92d13 !important; color: #a92d13 !important; -webkit-text-fill-color: currentColor !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-canvas > .sip-explore { position: absolute !important; left: calc(1049 * var(--aging-unit)) !important; top: calc(727 * var(--aging-unit)) !important; width: calc(179 * var(--aging-unit)) !important; height: calc(54 * var(--aging-unit)) !important; margin: 0 !important; padding: 0 0 0 calc(23 * var(--aging-unit)) !important; gap: calc(9 * var(--aging-unit)) !important; font-size: calc(9.6 * var(--aging-unit)) !important; line-height: 1.3 !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-explore small { font-size: calc(8.5 * var(--aging-unit)) !important; margin-bottom: calc(3 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-explore > svg { width: calc(18 * var(--aging-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-caution { position: absolute !important; left: calc(64 * var(--aging-unit)) !important; top: calc(803 * var(--aging-unit)) !important; width: calc(1100 * var(--aging-unit)) !important; margin: 0 !important; --sip-p-size: calc(10.5 * var(--aging-unit)) !important; --sip-p-leading: 1.35 !important; text-align: center !important; }
+  /* Longer Thai labels need their own fit within the fixed illustration. */
+  html:lang(th) body.sip-page main#main#main #synesthesia-neuroplasticity .sip-aging-heading h2 { --sip-h-size: calc(28 * var(--aging-unit)) !important; }
+  html:lang(th) body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li { --sip-p-size: calc(11.3 * var(--aging-unit)) !important; --sip-p-leading: 1.22 !important; }
+  html:lang(th) body.sip-page main#main#main #synesthesia-neuroplasticity .sip-plasticity-stages li br { display: none !important; }
+}

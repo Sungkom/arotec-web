@@ -1,0 +1,222 @@
+/* The supplied 5000 × 2160 growth scene with native, localized copy.
+   Reference coordinates use 2048 × 884.736. Its x=305 and x=1794 edges
+   follow the existing 150px desktop content gutters. */
+#hair-growth { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.hair-reference-page #hair-growth {
+    padding-block: 0;
+    overflow: clip;
+    background: #edf8fe;
+  }
+  #hair-growth > .hf-shell {
+    --growth-unit: calc(100cqw / 1489);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1489 / 884.736;
+    isolation: isolate;
+  }
+  #hair-growth > .hf-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -20.483546%;
+    width: 137.541975%;
+    background: url("../images/hair-follicle-20260916/growth-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #hair-growth .hf-intro {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(360 * var(--growth-unit));
+    max-width: none;
+    --site-type-h2: calc(44 * var(--growth-unit));
+    --site-line-h2: 1.15;
+    --site-letter-h2: -.025em;
+    --arotec-body-size: calc(20.5 * var(--growth-unit));
+    --arotec-body-line-height: 1.26;
+  }
+  #hair-growth .hf-kicker {
+    position: absolute;
+    top: calc(153 * var(--growth-unit));
+    width: 100%;
+    --arotec-body-size: calc(17 * var(--growth-unit));
+    --arotec-body-line-height: 1.35;
+    white-space: nowrap;
+    letter-spacing: .01em;
+    padding-bottom: calc(11 * var(--growth-unit));
+    border-bottom-width: 1px;
+    margin: 0 !important;
+  }
+  html body.hair-reference-page #main #hair-growth h2 {
+    position: absolute;
+    top: calc(210 * var(--growth-unit));
+    width: calc(404 * var(--growth-unit));
+    margin: 0 !important;
+  }
+  #hair-growth .hf-intro > p:nth-of-type(2) {
+    position: absolute;
+    top: calc(353 * var(--growth-unit));
+    width: 100%;
+  }
+  html body.hair-reference-page #main #hair-growth .hf-research-note {
+    position: absolute;
+    top: calc(627 * var(--growth-unit));
+    width: 100%;
+    padding-top: calc(17 * var(--growth-unit));
+    border-top-width: 1px;
+    margin: 0 !important;
+  }
+
+  #hair-growth .hf-diagram-content,
+  #hair-growth .hf-cycle-grid,
+  #hair-growth .hf-cycle-grid > li,
+  #hair-growth .hf-progression,
+  #hair-growth .hf-loss-grid,
+  #hair-growth .hf-loss-grid > li,
+  #hair-growth .hf-labels,
+  #hair-growth .hf-density { display: contents; }
+  #hair-growth .hf-cycle-grid > li,
+  #hair-growth .hf-loss-grid > li { position: static; }
+  #hair-growth .hf-diagram-content img,
+  #hair-growth .hf-between,
+  #hair-growth .hf-feedback > i { display: none !important; }
+
+  html body.hair-reference-page #main #hair-growth .hf-diagram-title {
+    position: absolute;
+    left: calc(419 * var(--growth-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(24 * var(--growth-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  #hair-growth .hf-diagram-content > .hf-diagram-title { top: calc(57 * var(--growth-unit)); }
+  #hair-growth .hf-progression > .hf-diagram-title { top: calc(526 * var(--growth-unit)); }
+  html body.hair-reference-page #main #hair-growth .hf-cycle-grid h4 {
+    position: absolute;
+    top: calc(100 * var(--growth-unit));
+    width: calc(250 * var(--growth-unit));
+    margin: 0 !important;
+    text-align: center;
+    --site-type-h4: calc(20 * var(--growth-unit));
+    --site-line-h4: 1.2;
+    --site-letter-h4: -.025em;
+  }
+  #hair-growth .hf-cycle-grid > li:nth-child(1) h4 { left: calc(440 * var(--growth-unit)); }
+  #hair-growth .hf-cycle-grid > li:nth-child(2) h4 { left: calc(680 * var(--growth-unit)); }
+  #hair-growth .hf-cycle-grid > li:nth-child(3) h4 { left: calc(940 * var(--growth-unit)); }
+  #hair-growth .hf-cycle-grid > li:nth-child(4) h4 { left: calc(1200 * var(--growth-unit)); }
+  html body.hair-reference-page #main #hair-growth .hf-cycle-grid h4 span {
+    display: inline;
+    margin: 0;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  #hair-growth .hf-cycle-grid h4 span::before { content: "· "; }
+
+  html body.hair-reference-page #main #hair-growth .hf-feedback {
+    position: absolute;
+    top: calc(426 * var(--growth-unit));
+    left: calc(645 * var(--growth-unit));
+    width: calc(505 * var(--growth-unit));
+    display: block;
+    margin: 0 !important;
+    text-align: center;
+    font-weight: 700 !important;
+    --arotec-body-size: calc(19 * var(--growth-unit));
+    --arotec-body-line-height: 1.2;
+  }
+  html body.hair-reference-page #main #hair-growth .hf-signal-strip {
+    position: absolute;
+    top: calc(449 * var(--growth-unit));
+    left: calc(645 * var(--growth-unit));
+    width: calc(505 * var(--growth-unit));
+    height: calc(42 * var(--growth-unit));
+    display: grid;
+    grid-template-columns: 1.14fr .86fr 1fr;
+    align-items: center;
+    gap: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: calc(21 * var(--growth-unit));
+    background: #d9effe;
+    --arotec-body-size: calc(18 * var(--growth-unit));
+    --arotec-body-line-height: 1.2;
+  }
+  #hair-growth .hf-signal-strip > li { padding: 0; text-align: center; }
+
+  html body.hair-reference-page #main #hair-growth .hf-loss-grid h4 {
+    position: absolute;
+    top: calc(565 * var(--growth-unit));
+    margin: 0 !important;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: center;
+    --site-type-h4: calc(17 * var(--growth-unit));
+    --site-line-h4: 1.2;
+    --site-letter-h4: -.02em;
+  }
+  #hair-growth .hf-loss-grid > li:nth-child(1) > h4 { left: calc(410 * var(--growth-unit)); width: calc(308 * var(--growth-unit)); }
+  #hair-growth .hf-loss-grid > li:nth-child(2) > h4 { left: calc(764 * var(--growth-unit)); width: calc(255 * var(--growth-unit)); }
+  #hair-growth .hf-loss-grid > li:nth-child(3) > h4 { left: calc(1062 * var(--growth-unit)); width: calc(397 * var(--growth-unit)); }
+
+  html body.hair-reference-page #main #hair-growth .hf-loss-grid .hf-labels > li {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: calc(54 * var(--growth-unit));
+    text-align: left;
+    --arotec-body-size: calc(16 * var(--growth-unit));
+    --arotec-body-line-height: 1.18;
+    letter-spacing: -.02em;
+  }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li {
+    left: calc(604 * var(--growth-unit));
+    width: calc(124 * var(--growth-unit));
+  }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li:nth-child(1) { top: calc(596 * var(--growth-unit)); --growth-icon-y: 596; }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li:nth-child(2) { top: calc(649 * var(--growth-unit)); --growth-icon-y: 649; }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li:nth-child(3) { top: calc(702 * var(--growth-unit)); --growth-icon-y: 702; }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li:nth-child(4) { top: calc(755 * var(--growth-unit)); --growth-icon-y: 755; }
+  #hair-growth .hf-loss-grid > li:nth-child(1) .hf-labels > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-60 * var(--growth-unit));
+    width: calc(54 * var(--growth-unit));
+    height: calc(54 * var(--growth-unit));
+    background: url("../images/hair-follicle-20260916/growth-reference-annotated.png") calc(-849 * var(--growth-unit)) calc(-1 * var(--growth-icon-y) * var(--growth-unit)) / calc(2048 * var(--growth-unit)) calc(884.736 * var(--growth-unit)) no-repeat;
+  }
+  #hair-growth .hf-loss-grid > li:nth-child(2) .hf-labels > li {
+    left: calc(935 * var(--growth-unit));
+    width: calc(114 * var(--growth-unit));
+  }
+  #hair-growth .hf-loss-grid > li:nth-child(2) .hf-labels > li:nth-child(1) { top: calc(614 * var(--growth-unit)); --growth-icon-y: 614; }
+  #hair-growth .hf-loss-grid > li:nth-child(2) .hf-labels > li:nth-child(2) { top: calc(670 * var(--growth-unit)); --growth-icon-y: 670; }
+  #hair-growth .hf-loss-grid > li:nth-child(2) .hf-labels > li:nth-child(3) { top: calc(726 * var(--growth-unit)); --growth-icon-y: 726; }
+  #hair-growth .hf-loss-grid > li:nth-child(2) .hf-labels > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-57 * var(--growth-unit));
+    width: calc(53 * var(--growth-unit));
+    height: calc(54 * var(--growth-unit));
+    background: url("../images/hair-follicle-20260916/growth-reference-annotated.png") calc(-1183 * var(--growth-unit)) calc(-1 * var(--growth-icon-y) * var(--growth-unit)) / calc(2048 * var(--growth-unit)) calc(884.736 * var(--growth-unit)) no-repeat;
+  }
+  html body.hair-reference-page #main #hair-growth .hf-density .hf-labels > li {
+    left: calc(1337 * var(--growth-unit));
+    width: calc(152 * var(--growth-unit));
+    height: auto;
+    display: block;
+    --arotec-body-size: calc(15 * var(--growth-unit));
+    --arotec-body-line-height: 1.2;
+  }
+  #hair-growth .hf-density .hf-labels > li:nth-child(1) { top: calc(728 * var(--growth-unit)); }
+  #hair-growth .hf-density .hf-labels > li:nth-child(2) { top: calc(752 * var(--growth-unit)); }
+  #hair-growth .hf-density .hf-labels > li:nth-child(3) { top: calc(776 * var(--growth-unit)); }
+}

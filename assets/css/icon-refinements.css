@@ -1,0 +1,164 @@
+/* Two optical weight steps: +0.5px +0.5px for CSS strokes.
+   Only glyph geometry is targeted. Container borders, typography, focus rings,
+   image/font icons and scientific inhibition/plot lines retain their sources. */
+html body .nav-dropdown-chevron {
+  border-right-width: 2.5px !important;
+  border-bottom-width: 2.5px !important;
+}
+/* The controlled disclosure's arrow follows its state, including Escape while focused. */
+html body button[data-arotec-nav-key="insights"][aria-expanded="false"] .nav-dropdown-chevron {
+  transform: rotate(45deg) !important;
+}
+html body button[data-arotec-nav-key="insights"][aria-expanded="true"] .nav-dropdown-chevron {
+  transform: translateY(3px) rotate(225deg) !important;
+}
+html body .icon-svg,
+html body :is(.commerce-icon-button,.commerce-cart-button,.soft-icon-button) svg {
+  stroke-width: 2.8 !important;
+}
+html body .arotec-page-top svg { stroke-width: 2.7 !important; }
+html body .axis-icon svg { stroke-width: 2.45; }
+html body .sfc-line-icon,
+html body :is(.sf-icon-ring,.sf-indicator-row,.sf-benefit-grid,.sf-emotion-grid,.sf-partnership__features) svg { stroke-width: 2.65; }
+html body .sf-offer-card__icon svg { stroke-width: 2.55; }
+html body .sf-menu-toggle__bars i { height: 2px; }
+
+/* Keep the existing icon scale and navy/teal palette. */
+html body #research-solutions .fw-icon { --fw-stroke: calc(.043em + 1px); }
+html body #research-solutions .fw-icon--trend > :is(i:nth-child(2),i:nth-child(3),i:nth-child(4)) {
+  height: calc(.065em + 1px);
+}
+html body #research-solutions .fw-icon--trend > i:nth-child(5) {
+  border-top-width: calc(.065em + 1px);
+  border-right-width: calc(.065em + 1px);
+}
+/* Two larger interlocking gears retain open hubs at the 30px mobile size. */
+html body #research-solutions .fw-icon--gears > i:nth-child(1) { width: 57%; height: 57%; left: 2%; top: 5%; }
+html body #research-solutions .fw-icon--gears > i:nth-child(2) { width: 51%; height: 51%; left: 47%; top: 47%; }
+html body #research-solutions .fw-icon--gears > i:nth-child(3) { display: none; }
+
+html body #research-solutions .fw-journey-arrow { height: 3px; }
+html body #research-solutions .fw-journey-arrow::after { border-top-width: 3px; border-right-width: 3px; }
+html body #research-solutions:not(.fw-motion-paused) .fw-motion-symbol { width: 11px; border-inline-width: 4px; }
+html body #research-solutions.fw-motion-paused .fw-motion-symbol { border-top-width: 5.5px; border-bottom-width: 5.5px; border-left-width: 9px; }
+@media (max-width: 1000px) {
+  html body #research-solutions .fw-journey-arrow { width: 3px; height: 22px; }
+}
+
+/* Research glyph tokens govern both outlines and their matching hollow masks. */
+html body.asr-page main#main#main :is(#research-focus,#bioactive-compounds) .asr-css-icon { --asr-icon-stroke: 2.5px; }
+html body.asr-page main#main#main #biological-responses .asr-domain-icon { --asr-di-stroke: 2.8px; }
+html body.asr-page main#main#main #ingredient-applications .asr-application-icon { --asr-icon-stroke: 2.8px; }
+html body.asr-page main#main#main #research-focus :is(.asr-ci-shield,.asr-ci-glass)::after { inset: 3px; }
+html body.asr-page main#main#main :is(#research-focus,#ingredient-applications) .asr-ci-ring {
+  min-width: calc(2 * var(--asr-icon-stroke) + 2px);
+  min-height: calc(2 * var(--asr-icon-stroke) + 2px);
+}
+html body.asr-page main#main#main #biological-responses .asr-di-ring { border-width: 2px; min-width: 6px; min-height: 6px; }
+html body.asr-page main#main#main #research-focus .asr-css-arrow::before { border-top-width: 2px; }
+html body.asr-page main#main#main #research-focus .asr-css-arrow::after { border-top-width: 2px; border-right-width: 2px; }
+html body.asr-page main#main#main #ingredient-applications .asr-css-arrow::before { border-top-width: 2.5px; }
+html body.asr-page main#main#main #ingredient-applications .asr-css-arrow::after { border-top-width: 2.5px; border-right-width: 2.5px; }
+@media (max-width: 700px) {
+  html body.asr-page main#main#main #ingredient-applications .asr-application-icon { --asr-icon-stroke: 2.6px; }
+}
+@media (max-width: 480px) {
+  html body.asr-page main#main#main #biological-responses .asr-domain-icon { --asr-di-stroke: 2.5px; }
+}
+
+/* Paired shaft/head increases retain direction, transforms and color. */
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span { height: 2.5px; }
+html body.brs-page main#main#main #approach.brs-asr .brs-asr-flow > span::after { border-top-width: 2.5px; border-right-width: 2.5px; }
+html body.brs-page main#main#main .brs-r22 .brs-r22-arrow::before { height: 2px; }
+html body.brs-page main#main#main .brs-r22 .brs-r22-arrow::after { border-top-width: 2px; border-right-width: 2px; }
+html body.bri-page main#main#main #why-bio-responsive .bri-check-mark::before,
+html body.olf-page main#main#main .olf-checks li::after { border-left-width: 3px; border-bottom-width: 3px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow { width: 2px; }
+html body.nst-page main#main#main #neurophysiological-modulation .nmr-down-arrow::after { border-right-width: 2px; border-bottom-width: 2px; }
+html body.shb-page .shb-flow-arrow span { height: 3px; }
+html body.shb-page .shb-flow-arrow span::after { border-top-width: 3px; border-right-width: 3px; }
+html body.neuro-page .arrow-legend-card li i { height: 3px; }
+html body.neuro-page .arrow-legend-card :is(.legend-feedback,.legend-paracrine) i { height: 0; border-top-width: 3px; }
+html body.neuro-page .section-transition i { width: 4px; }
+html body.neuro-page .section-transition i::after { border-right-width: 4px; border-bottom-width: 4px; }
+html body.ml-page main#main#main .ml-activation li + li::before { border-left-width: calc(.2cqw + 1px) !important; }
+html body.ml-page main#main#main .ml-cascade li + li::before { border-left-width: calc(.16cqw + 1px) !important; }
+html body.stress-page .arrow { border-top-width: 4px; }
+html body.stress-page :is(.legend-arrow,.navy-arrow) { border-top-width: 5px; }
+html body.stress-page .activation-arrows path { stroke-width: 5; }
+html body.stress-page .native-stress-arrow { stroke-width: 2.8; }
+html body.stress-page .native-response-arrows path { stroke-width: 4; }
+html body.stress-page :is(.native-transition-arrow,.native-header-decision-arrow,.native-outcome-side-arrow) { stroke-width: 5; }
+html body.stress-page .native-top-arrow { stroke-width: 6; }
+html body.stress-page .native-amplifier-arrow { stroke-width: 4.3; }
+html body.stress-page .stress-stage-03[data-amplifier-active="true"] .native-amplifier-arrow { stroke-width: 5.4; }
+
+/* Filled arrow shafts: +.5px at each edge. The original head and box stay intact. */
+html body.olf-page main#main#main .olf-neural-steps > li:not(:last-child)::after {
+  clip-path: polygon(calc(42% - .5px) 0,calc(58% + .5px) 0,calc(58% + .5px) 60%,100% 60%,50% 100%,0 60%,calc(42% - .5px) 60%);
+}
+html body.olf-page main#main#main .olf-region::before {
+  clip-path: polygon(calc(40% - .5px) 0,calc(60% + .5px) 0,calc(60% + .5px) 64%,100% 64%,50% 100%,0 64%,calc(40% - .5px) 64%);
+}
+html body.nst-page main#main#main .nst-route::before,
+html body.nst-page main#main#main .nst-route::after {
+  clip-path: polygon(0 calc(42% - .5px),63% calc(42% - .5px),63% 0,100% 50%,63% 100%,63% calc(58% + .5px),0 calc(58% + .5px));
+}
+html body.nst-page main#main#main .nst-regulatory-result::before {
+  clip-path: polygon(0 calc(42% - .5px),67% calc(42% - .5px),67% 0,100% 50%,67% 100%,67% calc(58% + .5px),0 calc(58% + .5px));
+}
+html body.nst-page main#main#main #olfactory-brain-pathways .nor-stage:not(:last-child)::after {
+  clip-path: polygon(0 calc(42% - .5px),65% calc(42% - .5px),65% 0,100% 50%,65% 100%,65% calc(58% + .5px),0 calc(58% + .5px));
+}
+html body.bri-page main#main#main #why-bio-responsive .bri-comparison-arrow::before {
+  clip-path: polygon(0 calc(20% - .5px),50% calc(20% - .5px),50% 0,100% 50%,50% 100%,50% calc(80% + .5px),0 calc(80% + .5px));
+}
+@media (max-width: 700px) {
+  html body.bri-page main#main#main #why-bio-responsive .bri-comparison-arrow::before {
+    clip-path: polygon(calc(12% - .5px) 0,calc(88% + .5px) 0,calc(88% + .5px) 48%,100% 48%,50% 100%,0 48%,calc(12% - .5px) 48%);
+  }
+}
+
+/* Generated mask refinements. Existing source paths/viewBoxes retained; 1.5 -> 2.5 SVG units. */
+html .dswb-page .dswb-icon--drop { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202S4%2011%204%2016a8%208%200%200%200%2016%200c0-5-8-14-8-14zM7%2016a5%205%200%200%200%205%205%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--balance { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203v17M7%2021h10M3%207l9-3%209%203M5%207l-3.5%208h7zM19%207l-3.5%208h7zM1.5%2015c0%203%207%203%207%200M15.5%2015c0%203%207%203%207%200%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--muscle { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%2020%203-3c0-5%202-9%207-10l5-5%204%204-5%205c-1%205-5%207-10%207l-3%203zM7%2015c2-1%205-4%206-6M10%2017c3-1%206-4%207-7M18%203l3%203%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--recovery { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20%208a9%209%200%200%200-16-2M4%202v4h4M4%2016a9%209%200%200%200%2016%202M20%2022v-4h-4%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--wellbeing { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224%22%20r%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M3%209c5%202%2013%202%2018%200M12%209v7M12%2016l-4%206M12%2016l4%206%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--skin { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M14%203c-5-2-9%202-9%206l-3%204%203%201v3c0%202%202%203%205%203l1%202M9%208h1M7%2015h3M15%207h6M18%204v6M17%2015h5M19.5%2012.5v5%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-page .dswb-icon--flask { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%202h6M10%202v7L3%2020a1.3%201.3%200%200%200%201%202h16a1.3%201.3%200%200%200%201-2L14%209V2M7%2014h10%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2217%22%20r%3D%22.7%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--drop { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202S4%2011%204%2016a8%208%200%200%200%2016%200c0-5-8-14-8-14zM7%2016a5%205%200%200%200%205%205%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--balance { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203v17M7%2021h10M3%207l9-3%209%203M5%207l-3.5%208h7zM19%207l-3.5%208h7zM1.5%2015c0%203%207%203%207%200M15.5%2015c0%203%207%203%207%200%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--muscle { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%2020%203-3c0-5%202-9%207-10l5-5%204%204-5%205c-1%205-5%207-10%207l-3%203zM7%2015c2-1%205-4%206-6M10%2017c3-1%206-4%207-7M18%203l3%203%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--recovery { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20%208a9%209%200%200%200-16-2M4%202v4h4M4%2016a9%209%200%200%200%2016%202M20%2022v-4h-4%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--wellbeing { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224%22%20r%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M3%209c5%202%2013%202%2018%200M12%209v7M12%2016l-4%206M12%2016l4%206%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--skin { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M14%203c-5-2-9%202-9%206l-3%204%203%201v3c0%202%202%203%205%203l1%202M9%208h1M7%2015h3M15%207h6M18%204v6M17%2015h5M19.5%2012.5v5%22%2F%3E%3C%2Fsvg%3E") }
+html .dswb-solutions-page #main .dswb-icon--flask { --dswb-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%202h6M10%202v7L3%2020a1.3%201.3%200%200%200%201%202h16a1.3%201.3%200%200%200%201-2L14%209V2M7%2014h10%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2217%22%20r%3D%22.7%22%2F%3E%3C%2Fsvg%3E") }
+html .gcp-page .gcp-icon--globe { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2212%22%20rx%3D%224%22%20ry%3D%229%22%2F%3E%3Cpath%20d%3D%22M3%2012h18M5%206.5h14M5%2017.5h14%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--people { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%227%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M6.5%2021v-3a5.5%205.5%200%200%201%2011%200v3zM4.5%2021H2v-4a4%204%200%200%201%204-4M19.5%2021H22v-4a4%204%200%200%200-4-4M5.5%204.5a3%203%200%201%200%200%206M18.5%204.5a3%203%200%201%201%200%206%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--handshake { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m2%208%203-4%204%202%203-1%204%201%203-2%203%204-3%207-3%204-3%202-6-4-3-2zM9%206l-3%205%202%201%204-4%207%207M12%2015l4%204M9%2017l4%204M2%208l4%203M18%2011l4-3%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--box { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%202%209%205v10l-9%205-9-5V7zM3%207l9%205%209-5M12%2012v10M7.5%204.5l9%205V14%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--shield { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202c3%202.5%206%203.5%209%204v6c0%205-4%208-9%2010-5-2-9-5-9-10V6c3-.5%206-1.5%209-4zM7.5%2012l3%203%206-6%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--scales { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203v18M7%2021h10M3%207l9-3%209%203M5%207%201.5%2015h7zM19%207l-3.5%208h7zM1.5%2015c0%203%207%203%207%200M15.5%2015c0%203%207%203%207%200%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--document { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%2022H4V2h11l5%205v5M15%202v6h5M7%207h4M7%2011h7M7%2015h3%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2218%22%20r%3D%225%22%2F%3E%3Cpath%20d%3D%22m14.5%2018%201.5%201.5%203-3%22%2F%3E%3C%2Fsvg%3E"); }
+html .gcp-page .gcp-icon--leaf { --gcp-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20.5%202.5c1%207.5-.5%2013-5%2016-4%202.5-9%20.5-10.5-3.5S6%207%2010%206c4-1%207-1.5%2010.5-3.5zM3%2022%2017%208M8%2017v-5M12%2013h5%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--person { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%227%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M4%2022v-3a8%208%200%200%201%2016%200v3z%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--flask { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%202h6M10%202v7L3%2020a1.3%201.3%200%200%200%201%202h16a1.3%201.3%200%200%200%201-2L14%209V2M7%2014h10%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2217%22%20r%3D%22.7%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--brain { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%205c0-2-2-3-3.5-2S6%205%206%206C3%206%202%208%203%2010c-2%202-1%205%201%206-1%203%202%205%204%204%202%202%204%201%204-1V5zM12%205c0-2%202-3%203.5-2S18%205%2018%206c3%200%204%202%203%204%202%202%201%205-1%206%201%203-2%205-4%204-2%202-4%201-4-1M6%206c0%202%201%203%203%203M18%206c0%202-1%203-3%203M4%2016c3%200%204-2%203-4M20%2016c-3%200-4-2-3-4M8%2020v-3M16%2020v-3%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--network { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%222.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%224%22%20cy%3D%226%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%223%22%20cy%3D%2217%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2221.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2221%22%20cy%3D%2217%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%226%22%20r%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M12%204v5M5.2%207l4.4%203.2M4.3%2016.2l5-2.8M12%2015v5M14.7%2013.4l5%202.8M14.4%2010.2%2018.8%207%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--globe { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2212%22%20rx%3D%224%22%20ry%3D%229%22%2F%3E%3Cpath%20d%3D%22M3%2012h18M5%206.5h14M5%2017.5h14%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--handshake { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m2%208%203-4%204%202%203-1%204%201%203-2%203%204-3%207-3%204-3%202-6-4-3-2zM9%206l-3%205%202%201%204-4%207%207M12%2015l4%204M9%2017l4%204M2%208l4%203M18%2011l4-3%22%2F%3E%3C%2Fsvg%3E"); }
+html .lrf-page .lrf-icon--people { --lrf-icon-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%227%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M2%2022v-3a7%207%200%200%201%2014%200v3zM16%203a4%204%200%200%201%200%208M18%2014a6%206%200%200%201%204%205v3h-3%22%2F%3E%3C%2Fsvg%3E"); }
+
+/* Semantic refinement: open double helix, retaining decorative markup and its text label. */
+html body #research-solutions .fw-icon--dna > i { display: none; }
+html body #research-solutions .fw-icon--dna::before,
+html body #research-solutions .fw-icon--dna::after {
+  content: ""; position: absolute; inset: 0; display: block;
+  width: 100%; height: 100%; background: currentColor;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+html body #research-solutions .fw-icon--dna::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M8%203C8%209%2024%2010%2024%2016S8%2023%208%2029M24%203C24%209%208%2010%208%2016S24%2023%2024%2029%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M8%203C8%209%2024%2010%2024%2016S8%2023%208%2029M24%203C24%209%208%2010%208%2016S24%2023%2024%2029%22%2F%3E%3C%2Fsvg%3E"); }
+html body #research-solutions .fw-icon--dna::after { background: var(--fw-teal); -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%204h14M12%209h8M9%2015h14M11%2021h10M10%2027h12%22%2F%3E%3C%2Fsvg%3E"); mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%204h14M12%209h8M9%2015h14M11%2021h10M10%2027h12%22%2F%3E%3C%2Fsvg%3E"); }

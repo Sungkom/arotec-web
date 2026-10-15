@@ -1,0 +1,303 @@
+/* Supplied 5000 x 2800 inhalation artwork with live site-font labels.
+   The normalized 2048 x 1146.88 scene uses x=288..1740 as its foreground
+   frame. All diagram labels are live text over the clean source. */
+#input-pathway { font-family: var(--site-font); }
+#input-pathway .os-cortical-labels,
+#input-pathway .os-nuclei-labels { display: none; }
+
+@media (min-width: 1400px) {
+  html body.olfactory-reference-page #input-pathway {
+    padding-block: 0;
+    overflow: clip;
+    background: #fff;
+  }
+  #input-pathway > .os-shell {
+    --inhalation-unit: calc(100cqw / 1452);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1452 / 1146.88;
+    isolation: isolate;
+  }
+  #input-pathway > .os-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -19.834711%;
+    width: 141.046832%;
+    background: url("../images/olfactory-20260916/inhalation-reference-clean.png?v=20261014") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #input-pathway .os-intro {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(390 * var(--inhalation-unit));
+    max-width: none;
+    --site-type-h2: calc(41 * var(--inhalation-unit));
+    --site-line-h2: 1.36;
+    --site-letter-h2: -.03em;
+    --arotec-body-size: calc(27 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.42;
+  }
+  /* These original nodes retain accessible copy and localization slots.
+     Repeated cortical labels are positioned by the derived visual layer. */
+  html body.olfactory-reference-page #main #input-pathway .os-kicker,
+  html body.olfactory-reference-page #main #input-pathway .os-cortical-routes {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+  html body.olfactory-reference-page #main #input-pathway h2 {
+    position: absolute;
+    top: calc(315.072 * var(--inhalation-unit));
+    left: 0;
+    width: 100%;
+    max-width: none !important;
+    margin: 0 !important;
+    text-wrap: wrap !important;
+  }
+  #input-pathway .os-intro > p:not(.os-kicker) {
+    position: absolute;
+    top: calc(460.072 * var(--inhalation-unit));
+    left: 0;
+    width: 100%;
+    text-wrap: wrap;
+  }
+
+  #input-pathway .os-inhalation-content,
+  #input-pathway .os-sensory-map,
+  #input-pathway .os-route-map,
+  #input-pathway .os-primary-route,
+  #input-pathway .os-pathways,
+  #input-pathway .os-pathway,
+  #input-pathway .os-autonomic-pair,
+  #input-pathway .os-autonomic-pair > div,
+  #input-pathway .os-system-outcomes,
+  #input-pathway .os-system-outcomes > article,
+  #input-pathway .os-cortical-labels,
+  #input-pathway .os-nuclei-labels { display: contents; }
+  #input-pathway :is(.os-sensory-map, .os-route-map, .os-pathways, .os-pathway, .os-system-outcomes) {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  #input-pathway .os-head-art,
+  #input-pathway .os-inhalation-content img,
+  #input-pathway .os-inhalation-content .ph,
+  #input-pathway .os-inhalation-content [data-arotec-arrow-owned],
+  #input-pathway .os-primary-route li::before { display: none !important; }
+
+  #input-pathway .os-primary-route li,
+  #input-pathway .os-cortical-labels > span,
+  #input-pathway .os-nuclei-labels > span {
+    position: absolute;
+    display: block;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: calc(16.5 * var(--inhalation-unit)) !important;
+    line-height: 1.15 !important;
+    font-weight: 600 !important;
+    letter-spacing: -.025em;
+    text-align: left;
+    text-wrap: wrap;
+  }
+  #input-pathway .os-primary-route li:nth-child(1) {
+    left: calc(418 * var(--inhalation-unit));
+    top: calc(251.072 * var(--inhalation-unit));
+    width: calc(90 * var(--inhalation-unit));
+    font-size: calc(18 * var(--inhalation-unit)) !important;
+  }
+  #input-pathway .os-primary-route li:nth-child(2) {
+    left: calc(515 * var(--inhalation-unit));
+    top: calc(307.072 * var(--inhalation-unit));
+    width: calc(91 * var(--inhalation-unit));
+  }
+  #input-pathway .os-primary-route li:nth-child(3) {
+    left: calc(541 * var(--inhalation-unit));
+    top: calc(240.072 * var(--inhalation-unit));
+    width: calc(125 * var(--inhalation-unit));
+    text-align: right;
+  }
+  #input-pathway .os-primary-route li:nth-child(4) {
+    left: calc(914 * var(--inhalation-unit));
+    top: calc(192.072 * var(--inhalation-unit));
+    width: calc(129 * var(--inhalation-unit));
+  }
+  #input-pathway .os-label-thalamus { left: calc(1105 * var(--inhalation-unit)); top: calc(211.072 * var(--inhalation-unit)); width: calc(190 * var(--inhalation-unit)); }
+  #input-pathway .os-label-orbitofrontal { left: calc(1297 * var(--inhalation-unit)); top: calc(248.072 * var(--inhalation-unit)); width: calc(155 * var(--inhalation-unit)); }
+  #input-pathway .os-label-entorhinal { left: calc(1150 * var(--inhalation-unit)); top: calc(308.072 * var(--inhalation-unit)); width: calc(160 * var(--inhalation-unit)); }
+  #input-pathway .os-label-hippocampus { left: calc(1174 * var(--inhalation-unit)); top: calc(353.072 * var(--inhalation-unit)); width: calc(160 * var(--inhalation-unit)); }
+  #input-pathway .os-label-hypothalamus { left: calc(959 * var(--inhalation-unit)); top: calc(461.072 * var(--inhalation-unit)); width: calc(160 * var(--inhalation-unit)); }
+  #input-pathway .os-label-brainstem { left: calc(1194 * var(--inhalation-unit)); top: calc(422.072 * var(--inhalation-unit)); width: calc(194 * var(--inhalation-unit)); }
+  #input-pathway .os-label-amygdala { left: calc(828 * var(--inhalation-unit)); top: calc(340 * var(--inhalation-unit)); width: calc(90 * var(--inhalation-unit)); font-size: calc(14.5 * var(--inhalation-unit)) !important; }
+  #input-pathway .os-nuclei-labels > span {
+    left: calc(1350 * var(--inhalation-unit));
+    width: calc(102 * var(--inhalation-unit));
+    font-size: calc(13.5 * var(--inhalation-unit)) !important;
+  }
+  #input-pathway .os-nuclei-labels > span:nth-child(1) { top: calc(531.072 * var(--inhalation-unit)); }
+  #input-pathway .os-nuclei-labels > span:nth-child(2) { top: calc(571.072 * var(--inhalation-unit)); }
+  #input-pathway .os-nuclei-labels > span:nth-child(3) { top: calc(608.072 * var(--inhalation-unit)); }
+
+  html body.olfactory-reference-page #main #input-pathway .os-pathway h3,
+  html body.olfactory-reference-page #main #input-pathway .os-autonomic-pair h4,
+  html body.olfactory-reference-page #main #input-pathway .os-pathway p {
+    position: absolute;
+    margin: 0 !important;
+    padding: 0;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  #input-pathway .os-pathway h3 {
+    --site-type-h3: calc(18.5 * var(--inhalation-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  #input-pathway .os-endocrine-path h3 {
+    left: calc(547 * var(--inhalation-unit));
+    top: calc(665.072 * var(--inhalation-unit));
+    width: calc(270 * var(--inhalation-unit));
+  }
+  #input-pathway .os-endocrine-path .os-pathway-label {
+    left: calc(552 * var(--inhalation-unit));
+    top: calc(694.072 * var(--inhalation-unit));
+    width: calc(260 * var(--inhalation-unit));
+    --arotec-body-size: calc(14.5 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    font-weight: 600 !important;
+  }
+  #input-pathway .os-endocrine-path > p:last-child {
+    left: calc(529 * var(--inhalation-unit));
+    top: calc(714.072 * var(--inhalation-unit));
+    width: calc(306 * var(--inhalation-unit));
+    --arotec-body-size: calc(13 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+  #input-pathway .os-autonomic-path > h3 {
+    left: calc(817 * var(--inhalation-unit));
+    top: calc(501.072 * var(--inhalation-unit));
+    width: calc(230 * var(--inhalation-unit));
+    background: #fff;
+  }
+  #input-pathway .os-autonomic-pair > div::before {
+    content: "";
+    position: absolute;
+    top: calc(641.072 * var(--inhalation-unit));
+    height: calc(63 * var(--inhalation-unit));
+    background: #fff;
+    pointer-events: none;
+  }
+  #input-pathway .os-autonomic-pair > div:first-child::before { left: calc(791 * var(--inhalation-unit)); width: calc(155 * var(--inhalation-unit)); }
+  #input-pathway .os-autonomic-pair > div:last-child::before { left: calc(950 * var(--inhalation-unit)); width: calc(179 * var(--inhalation-unit)); }
+  #input-pathway .os-autonomic-pair h4 {
+    top: calc(644.072 * var(--inhalation-unit));
+    --site-type-h4: calc(12.5 * var(--inhalation-unit));
+    --site-line-h4: 1.15;
+    --site-letter-h4: -.035em;
+  }
+  #input-pathway .os-autonomic-pair > div:first-child :is(h4,p) { left: calc(791 * var(--inhalation-unit)); width: calc(155 * var(--inhalation-unit)); }
+  #input-pathway .os-autonomic-pair > div:last-child :is(h4,p) { left: calc(950 * var(--inhalation-unit)); width: calc(179 * var(--inhalation-unit)); }
+  #input-pathway .os-autonomic-pair p {
+    top: calc(668.072 * var(--inhalation-unit));
+    --arotec-body-size: calc(11.4 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.035em;
+  }
+  #input-pathway .os-autonomic-pair p + p {
+    top: calc(686.072 * var(--inhalation-unit));
+    --arotec-body-size: calc(10.8 * var(--inhalation-unit));
+  }
+  #input-pathway .os-autonomic-path .os-balance {
+    left: calc(876 * var(--inhalation-unit));
+    top: calc(725.072 * var(--inhalation-unit));
+    width: calc(158 * var(--inhalation-unit));
+    height: calc(27 * var(--inhalation-unit));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    --arotec-body-size: calc(14.5 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.1;
+    letter-spacing: -.025em;
+  }
+  #input-pathway .os-modulatory-path h3 {
+    left: calc(1110 * var(--inhalation-unit));
+    top: calc(665.072 * var(--inhalation-unit));
+    width: calc(306 * var(--inhalation-unit));
+  }
+  #input-pathway .os-modulatory-path .os-pathway-label {
+    left: calc(1108 * var(--inhalation-unit));
+    top: calc(694.072 * var(--inhalation-unit));
+    width: calc(310 * var(--inhalation-unit));
+    --arotec-body-size: calc(13.5 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+  #input-pathway .os-modulatory-path > p:last-of-type {
+    left: calc(1110 * var(--inhalation-unit));
+    top: calc(714.072 * var(--inhalation-unit));
+    width: calc(306 * var(--inhalation-unit));
+    --arotec-body-size: calc(13 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+  html body.olfactory-reference-page #main #input-pathway .os-integration {
+    position: absolute;
+    left: calc(962 * var(--inhalation-unit));
+    top: calc(756.072 * var(--inhalation-unit));
+    width: calc(270 * var(--inhalation-unit));
+    display: block;
+    margin: 0 !important;
+    padding: 0;
+    text-align: left;
+    --arotec-body-size: calc(16.5 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+
+  html body.olfactory-reference-page #main #input-pathway .os-system-outcomes h3,
+  #input-pathway .os-system-outcomes p {
+    position: absolute;
+    margin: 0 !important;
+    padding: 0;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  html body.olfactory-reference-page #main #input-pathway .os-system-outcomes h3 {
+    top: calc(931.072 * var(--inhalation-unit));
+    --site-type-h3: calc(17.5 * var(--inhalation-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  #input-pathway .os-system-outcomes p {
+    top: calc(956.072 * var(--inhalation-unit));
+    --arotec-body-size: calc(14 * var(--inhalation-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+  #input-pathway .os-system-outcomes > article:nth-child(1) :is(h3,p) { left: calc(409 * var(--inhalation-unit)); width: calc(260 * var(--inhalation-unit)); }
+  #input-pathway .os-system-outcomes > article:nth-child(2) :is(h3,p) { left: calc(676 * var(--inhalation-unit)); width: calc(260 * var(--inhalation-unit)); }
+  #input-pathway .os-system-outcomes > article:nth-child(3) :is(h3,p) { left: calc(929 * var(--inhalation-unit)); width: calc(260 * var(--inhalation-unit)); }
+  #input-pathway .os-system-outcomes > article:nth-child(4) :is(h3,p) { left: calc(1268 * var(--inhalation-unit)); width: calc(184 * var(--inhalation-unit)); }
+  html body.olfactory-reference-page #main #input-pathway .os-system-outcomes > article:nth-child(4) h3 { --site-type-h3: calc(16 * var(--inhalation-unit)); }
+  html[lang="th"] #input-pathway .os-autonomic-path .os-balance {
+    --arotec-body-size: calc(12.4 * var(--inhalation-unit));
+    --arotec-body-line-height: 1;
+  }
+}

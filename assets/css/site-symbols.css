@@ -1,0 +1,43 @@
+/* Reviewed operators only. Their original glyphs continue to own layout and semantics. */
+:root { --arotec-site-symbols-ready: 1; }
+arotec-operator-run,
+arotec-operator-text,
+arotec-operator-source { display: inline; }
+arotec-operator-text { position: relative; }
+[data-arotec-operator-active="true"] > arotec-operator-source { opacity: 0 !important; }
+[data-arotec-operator-kind="math"][data-arotec-operator-active="true"] { opacity: 0 !important; }
+[data-arotec-operator-kind="icon"][data-arotec-operator-active="true"]::before { visibility: hidden !important; }
+/* Keep the actual font's outer ring. Only its central operator is cleared. */
+[data-arotec-operator-kind="ring"][data-arotec-operator-active="true"]::before {
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0 .29em, #000 .30em) !important;
+  mask-image: radial-gradient(circle at 50% 50%, transparent 0 .29em, #000 .30em) !important;
+}
+svg[data-arotec-operator-layer] {
+  position: absolute !important;
+  display: block !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  box-sizing: content-box !important;
+  flex: none !important;
+}
+svg[data-arotec-operator-layer] > path {
+  fill: none !important;
+  stroke: #113568 !important;
+  stroke-width: var(--arotec-operator-stroke, 3px) !important;
+  stroke-linecap: butt !important;
+  stroke-linejoin: round !important;
+  vector-effect: non-scaling-stroke !important;
+}
+svg[data-arotec-operator-layer] > path[data-arotec-operator-keyline] {
+  stroke: #fff !important;
+  stroke-width: var(--arotec-operator-keyline-stroke, 5px) !important;
+}
+svg[data-arotec-operator-layer][data-arotec-operator-shape="cross"] > path { stroke-linecap: round !important; }
+svg[data-arotec-operator-layer][data-arotec-operator-shape="equals"] > path { stroke-linecap: butt !important; }

@@ -1,0 +1,143 @@
+/* Original 5000 × 2160 neural scene. All labels remain live/localizable.
+   Coordinates use its 2048 × 884.736 reference frame, with x=301 aligned
+   to the website's existing text gutter and x=1775 at the right gutter. */
+#neural-regulation { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.hair-reference-page #neural-regulation {
+    padding-block: 0;
+    overflow: clip;
+    background: #edf8fe;
+  }
+  #neural-regulation > .hf-shell {
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1474 / 884.736;
+    isolation: isolate;
+  }
+  #neural-regulation > .hf-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -20.420624%;
+    width: 138.941655%;
+    background: url("../images/hair-follicle-20260916/neural-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #neural-regulation .hf-intro {
+    position: absolute;
+    top: 9.36cqw;
+    left: 0;
+    width: 25.17cqw;
+    max-width: none;
+    --site-type-h2: 2.9cqw;
+    --site-line-h2: 1.15;
+    --site-letter-h2: -.025em;
+    --arotec-body-size: 1.32cqw;
+    --arotec-body-line-height: 1.25;
+  }
+  #neural-regulation .hf-kicker {
+    --arotec-body-size: .95cqw;
+    --arotec-body-line-height: 1.35;
+    white-space: nowrap;
+    letter-spacing: .01em;
+    padding-bottom: .8cqw;
+    border-bottom-width: 1px;
+    margin-bottom: 1.25cqw !important;
+  }
+  html body.hair-reference-page #neural-regulation h2 { margin-bottom: 1.8cqw !important; }
+  html body.hair-reference-page #neural-regulation .hf-intro > p + p { margin-top: 1cqw !important; }
+  #neural-regulation .hf-intro > p:nth-of-type(3) { width: 26.5cqw; }
+  #neural-regulation .hf-research-note {
+    padding-top: .8cqw;
+    border-top-width: 1px;
+  }
+
+  #neural-regulation .hf-neural-content,
+  #neural-regulation .hf-neural-flow,
+  #neural-regulation .hf-neural-flow > li,
+  #neural-regulation .hf-labels,
+  #neural-regulation .hf-outcomes { display: contents; }
+  #neural-regulation .hf-neural-flow > li { position: static; }
+  #neural-regulation .hf-neural-flow img,
+  #neural-regulation .hf-between,
+  #neural-regulation .hf-feedback > i,
+  #neural-regulation .hf-outcomes i { display: none !important; }
+
+  html body.hair-reference-page #neural-regulation .hf-neural-flow h3 {
+    position: absolute;
+    top: 10.04cqw;
+    margin: 0 !important;
+    text-align: center;
+    --site-type-h3: 1.19cqw;
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.02em;
+  }
+  #neural-regulation .hf-neural-flow > li:nth-child(1) > h3 { left: 26.05cqw; width: 20.76cqw; }
+  #neural-regulation .hf-neural-flow > li:nth-child(2) > h3 { left: 46.74cqw; width: 22.25cqw; }
+  html body.hair-reference-page #neural-regulation .hf-neural-flow > li:nth-child(3) > h3 {
+    top: 7.95cqw;
+    left: 70.83cqw;
+    width: 26.7cqw;
+    --site-type-h3: 1.32cqw;
+  }
+  #neural-regulation .hf-neural-flow > li > p {
+    position: absolute;
+    top: 11.94cqw;
+    min-height: 0;
+    text-align: center;
+    --arotec-body-size: 1.05cqw;
+    --arotec-body-line-height: 1.25;
+  }
+  #neural-regulation .hf-neural-flow > li:nth-child(1) > p { left: 26.05cqw; width: 20.76cqw; }
+  #neural-regulation .hf-neural-flow > li:nth-child(2) > p { left: 46.74cqw; width: 22.25cqw; }
+
+  html body.hair-reference-page #main #neural-regulation .hf-labels > li {
+    position: absolute;
+    text-align: left;
+    font-weight: 700 !important;
+    --arotec-body-size: 1.04cqw;
+    --arotec-body-line-height: 1.17;
+  }
+  #neural-regulation .hf-neural-flow > li:nth-child(1) .hf-labels > li:nth-child(1) { left: 26.66cqw; top: 24.62cqw; width: 4.1cqw; }
+  #neural-regulation .hf-neural-flow > li:nth-child(1) .hf-labels > li:nth-child(2) { left: 26.12cqw; top: 29.51cqw; width: 8.65cqw; }
+  #neural-regulation .hf-neural-flow > li:nth-child(2) .hf-labels > li:nth-child(1) { left: 50.61cqw; top: 21.84cqw; width: 9cqw; }
+  #neural-regulation .hf-neural-flow > li:nth-child(2) .hf-labels > li:nth-child(2) { left: 60.18cqw; top: 32.7cqw; width: 10cqw; }
+  #neural-regulation .hf-anatomy > li:nth-child(1) { left: 69.34cqw; top: 19.4cqw; width: 8cqw; }
+  html body.hair-reference-page #main #neural-regulation .hf-anatomy > li:nth-child(2) { left: 91.2cqw; top: 19.95cqw; width: 8.8cqw; --arotec-body-size: 1cqw; }
+  #neural-regulation .hf-anatomy > li:nth-child(3) { left: 92.8cqw; top: 25.71cqw; width: 7.2cqw; }
+  #neural-regulation .hf-anatomy > li:nth-child(4) { left: 91cqw; top: 32.77cqw; width: 9cqw; }
+  #neural-regulation .hf-anatomy > li:nth-child(5) { left: 90.57cqw; top: 36.09cqw; width: 9.43cqw; }
+  html body.hair-reference-page #main #neural-regulation .hf-anatomy > li:nth-child(6) { left: 63.5cqw; top: 38.87cqw; width: 10.5cqw; text-align: right; }
+  #neural-regulation .hf-anatomy > li:nth-child(7) { left: 91.72cqw; top: 41.52cqw; width: 8.28cqw; }
+
+  html body.hair-reference-page #neural-regulation .hf-feedback {
+    position: absolute;
+    top: 40.84cqw;
+    left: 43.08cqw;
+    width: 17.7cqw;
+    display: block;
+    text-align: center;
+    margin: 0 !important;
+    --arotec-body-size: 1.12cqw;
+    --arotec-body-line-height: 1.25;
+  }
+  html body.hair-reference-page #main #neural-regulation .hf-outcomes > li {
+    position: absolute;
+    top: 54.88cqw;
+    width: 14cqw;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    --arotec-body-size: 1.1cqw;
+    --arotec-body-line-height: 1.2;
+  }
+  #neural-regulation .hf-outcomes > li:nth-child(1) { left: 51.42cqw; }
+  #neural-regulation .hf-outcomes > li:nth-child(2) { left: 62.01cqw; }
+  #neural-regulation .hf-outcomes > li:nth-child(3) { left: 72.73cqw; }
+  #neural-regulation .hf-outcomes > li:nth-child(4) { left: 85.01cqw; }
+}

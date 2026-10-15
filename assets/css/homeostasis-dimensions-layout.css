@@ -1,0 +1,219 @@
+/* Original 5000 × 2160 dimensions illustration with live localized labels.
+   Its normalized 2048 × 884.736 scene uses x=274..1772 as the foreground
+   frame, aligned to the existing website gutters. */
+#homeostasis { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.homeostasis-reference-page #homeostasis {
+    padding-block: 0;
+    overflow: clip;
+    background: #fff;
+  }
+  #homeostasis > .hr-shell {
+    --dimensions-unit: calc(100cqw / 1498);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1498 / 884.736;
+    isolation: isolate;
+  }
+  #homeostasis > .hr-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: calc(884.736 * var(--dimensions-unit));
+    left: -18.291055%;
+    width: 136.715621%;
+    background: url("../images/homeostasis-20260916/dimensions-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #homeostasis .hr-intro {
+    /* Keep the copy in flow so each block clears the actual text above it. */
+    position: relative;
+    padding-block: calc(151 * var(--dimensions-unit)) calc(120 * var(--dimensions-unit));
+    width: calc(400 * var(--dimensions-unit));
+    max-width: none;
+    --site-type-h2: calc(54 * var(--dimensions-unit));
+    --site-line-h2: 1.26;
+    --site-letter-h2: -.025em;
+    --arotec-body-size: calc(25 * var(--dimensions-unit));
+    --arotec-body-line-height: 1.4;
+  }
+  html body.homeostasis-reference-page #main #homeostasis h2 {
+    position: relative;
+    display: flow-root;
+    width: 100%;
+    margin: 0 !important;
+    text-wrap: wrap !important;
+  }
+  /* Reserve space only on the middle English line, so “of Homeostasis”
+     stays together without inserting line-break elements into translated copy. */
+  html:lang(en) #homeostasis h2::before {
+    content: "";
+    float: right;
+    width: calc(58 * var(--dimensions-unit));
+    height: calc(136.08 * var(--dimensions-unit));
+    shape-outside: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  }
+  #homeostasis h2::after {
+    content: "";
+    display: block;
+    clear: both;
+    margin-top: calc(21 * var(--dimensions-unit));
+    width: calc(113 * var(--dimensions-unit));
+    height: calc(4 * var(--dimensions-unit));
+    background: #91bdd5;
+  }
+  #homeostasis .hr-intro > p {
+    margin-top: calc(38 * var(--dimensions-unit));
+    width: 100%;
+  }
+  html body.homeostasis-reference-page #main #homeostasis .hr-word-flow {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(7 * var(--dimensions-unit));
+    margin: calc(43 * var(--dimensions-unit)) 0 0 !important;
+    padding: 0 !important;
+    border: 0;
+    --arotec-body-size: calc(14.5 * var(--dimensions-unit));
+    --arotec-body-line-height: 1.35;
+  }
+  html body.homeostasis-reference-page #main #homeostasis .hr-word-flow > li {
+    display: flex;
+    align-items: center;
+    gap: calc(7 * var(--dimensions-unit));
+    white-space: nowrap;
+    font-weight: 700 !important;
+    letter-spacing: -.025em;
+  }
+  #homeostasis .hr-word-flow .ph {
+    flex: none;
+    width: calc(20 * var(--dimensions-unit));
+    height: calc(20 * var(--dimensions-unit));
+    font-size: calc(20 * var(--dimensions-unit));
+    line-height: 1;
+    color: #4388b1;
+  }
+  #homeostasis .hr-word-flow svg[data-arotec-arrow-owned="symbols"] path {
+    stroke: #4388b1 !important;
+    stroke-width: calc(1.6 * var(--dimensions-unit)) !important;
+  }
+
+  #homeostasis .hr-dimension-network,
+  #homeostasis .hr-domain-group,
+  #homeostasis .hr-domain-group > header,
+  #homeostasis .hr-domain-grid,
+  #homeostasis .hr-domain,
+  #homeostasis .hr-convergence { display: contents; }
+  /* Flattened cards no longer paint their former white surface. Keep their
+     computed background transparent so the shared text painter respects
+     the dark-surface hint on headings over the original navy title bars. */
+  #homeostasis .hr-domain-group { background: transparent; border: 0; padding: 0; }
+  #homeostasis .hr-dimension-network img,
+  #homeostasis .hr-convergence-links { display: none !important; }
+
+  html body.homeostasis-reference-page #main #homeostasis .hr-domain-group h3 {
+    position: absolute;
+    top: calc(84 * var(--dimensions-unit));
+    height: calc(50 * var(--dimensions-unit));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 !important;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: center;
+    color: #fff !important;
+    --site-type-h3: calc(24 * var(--dimensions-unit));
+    --site-line-h3: 1.1;
+    --site-letter-h3: -.02em;
+  }
+  #homeostasis .hr-exposure h3 { left: calc(435 * var(--dimensions-unit)); width: calc(379 * var(--dimensions-unit)); }
+  html body.homeostasis-reference-page #main #homeostasis .hr-adaptation h3 {
+    left: calc(1050 * var(--dimensions-unit));
+    width: calc(443 * var(--dimensions-unit));
+    --site-type-h3: calc(22 * var(--dimensions-unit));
+  }
+  html body.homeostasis-reference-page #main #homeostasis .hr-tissue h3 {
+    left: calc(435 * var(--dimensions-unit));
+    top: calc(565 * var(--dimensions-unit));
+    width: calc(1058 * var(--dimensions-unit));
+    height: calc(42 * var(--dimensions-unit));
+    --site-type-h3: calc(27 * var(--dimensions-unit));
+  }
+  #homeostasis .hr-domain-group header > p {
+    position: absolute;
+    top: calc(136 * var(--dimensions-unit));
+    height: calc(37 * var(--dimensions-unit));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    --arotec-body-size: calc(14.5 * var(--dimensions-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.015em;
+  }
+  #homeostasis .hr-exposure header > p { left: calc(435 * var(--dimensions-unit)); width: calc(379 * var(--dimensions-unit)); }
+  #homeostasis .hr-adaptation header > p { left: calc(1050 * var(--dimensions-unit)); width: calc(443 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue header > p {
+    left: calc(435 * var(--dimensions-unit));
+    top: calc(609 * var(--dimensions-unit));
+    width: calc(1058 * var(--dimensions-unit));
+    height: calc(32 * var(--dimensions-unit));
+    --arotec-body-size: calc(17 * var(--dimensions-unit));
+  }
+
+  html body.homeostasis-reference-page #main #homeostasis .hr-domain figcaption {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    font-size: calc(16 * var(--dimensions-unit)) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.025em;
+  }
+  #homeostasis .hr-exposure .hr-domain figcaption { width: calc(183 * var(--dimensions-unit)); height: calc(27 * var(--dimensions-unit)); }
+  #homeostasis .hr-exposure .hr-domain:nth-child(1) figcaption { left: calc(439 * var(--dimensions-unit)); top: calc(305 * var(--dimensions-unit)); }
+  #homeostasis .hr-exposure .hr-domain:nth-child(2) figcaption { left: calc(631 * var(--dimensions-unit)); top: calc(305 * var(--dimensions-unit)); }
+  #homeostasis .hr-exposure .hr-domain:nth-child(3) figcaption { left: calc(439 * var(--dimensions-unit)); top: calc(462 * var(--dimensions-unit)); }
+  #homeostasis .hr-exposure .hr-domain:nth-child(4) figcaption { left: calc(631 * var(--dimensions-unit)); top: calc(462 * var(--dimensions-unit)); }
+  html body.homeostasis-reference-page #main #homeostasis .hr-adaptation .hr-domain figcaption {
+    top: calc(442 * var(--dimensions-unit));
+    height: calc(45 * var(--dimensions-unit));
+    align-items: flex-start;
+    padding-top: calc(2 * var(--dimensions-unit));
+  }
+  #homeostasis .hr-adaptation .hr-domain:nth-child(1) figcaption { left: calc(1056 * var(--dimensions-unit)); width: calc(135 * var(--dimensions-unit)); }
+  #homeostasis .hr-adaptation .hr-domain:nth-child(2) figcaption { left: calc(1199 * var(--dimensions-unit)); width: calc(138 * var(--dimensions-unit)); }
+  #homeostasis .hr-adaptation .hr-domain:nth-child(3) figcaption { left: calc(1344 * var(--dimensions-unit)); width: calc(144 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue .hr-domain figcaption { top: calc(772 * var(--dimensions-unit)); height: calc(29 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue .hr-domain:nth-child(1) figcaption { left: calc(439 * var(--dimensions-unit)); width: calc(244 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue .hr-domain:nth-child(2) figcaption { left: calc(689 * var(--dimensions-unit)); width: calc(258 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue .hr-domain:nth-child(3) figcaption { left: calc(954 * var(--dimensions-unit)); width: calc(267 * var(--dimensions-unit)); }
+  #homeostasis .hr-tissue .hr-domain:nth-child(4) figcaption { left: calc(1229 * var(--dimensions-unit)); width: calc(259 * var(--dimensions-unit)); }
+
+  html body.homeostasis-reference-page #main #homeostasis .hr-convergence figcaption {
+    position: absolute;
+    left: calc(807 * var(--dimensions-unit));
+    top: calc(447 * var(--dimensions-unit));
+    width: calc(250 * var(--dimensions-unit));
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: calc(27 * var(--dimensions-unit)) !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    letter-spacing: -.035em;
+  }
+}

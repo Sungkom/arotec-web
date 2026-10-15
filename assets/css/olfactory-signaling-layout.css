@@ -1,0 +1,313 @@
+/* Revised 5000 x 2800 signaling scene with live site typography.
+   Normalized source: 2048 x 1146.88; foreground x=298..1747 (1449 units).
+   The main heading starts at the shared gutter; the reference artwork and
+   all other labels retain their source positions. Compact flow is unchanged. */
+#systems { font-family: var(--site-font); }
+
+@media (min-width: 1400px) {
+  html body.olfactory-reference-page #systems {
+    padding-block: 0;
+    overflow: clip;
+    background: #fff;
+  }
+  #systems > .os-shell {
+    --signaling-unit: calc(100cqw / 1449);
+    position: relative;
+    display: block;
+    container-type: inline-size;
+    aspect-ratio: 1449 / 1146.88;
+    isolation: isolate;
+  }
+  #systems > .os-shell::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -20.565908%;
+    width: 141.338854%;
+    background: url("../images/olfactory-20260916/signaling-reference-clean.png?v=20261014") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  #systems .os-signaling-heading,
+  #systems .os-hub,
+  #systems .os-hub > div,
+  #systems .os-relays,
+  #systems .os-relays > figure,
+  #systems .os-signaling-systems,
+  #systems .os-system-panel,
+  #systems .os-transmitter-grid,
+  #systems .os-transmitter-grid > figure,
+  #systems .os-endocrine-grid,
+  #systems .os-axis,
+  #systems .os-response-grid,
+  #systems .os-response { display: contents; }
+  html body.olfactory-reference-page #main #systems :is(.os-signaling-heading, .os-hub, .os-relays, .os-signaling-systems, .os-system-panel, .os-transmitter-grid, .os-endocrine-grid, .os-axis, .os-response-grid, .os-response) {
+    position: static;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  #systems img,
+  #systems .ph,
+  #systems [data-arotec-arrow-owned],
+  #systems [data-arotec-text-frame-owned],
+  #systems .os-response::before { display: none !important; }
+  /* Keep relationship descriptions available while using the supplied arrows. */
+  html body.olfactory-reference-page #main #systems :is(.os-system-link, .os-response-link) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  html body.olfactory-reference-page #main #systems .os-signaling-heading h2 {
+    position: absolute;
+    left: 0;
+    top: calc(152.072 * var(--signaling-unit));
+    width: calc(695 * var(--signaling-unit));
+    margin: 0 !important;
+    --site-type-h2: calc(43 * var(--signaling-unit));
+    --site-line-h2: 1.26;
+    --site-letter-h2: -.03em;
+    text-wrap: wrap !important;
+  }
+  #systems .os-signaling-heading > p {
+    position: absolute;
+    left: calc(797 * var(--signaling-unit));
+    top: calc(160.072 * var(--signaling-unit));
+    width: calc(620 * var(--signaling-unit));
+    padding: 0;
+    border: 0;
+    --arotec-body-size: calc(19 * var(--signaling-unit));
+    --arotec-body-line-height: 1.34;
+    letter-spacing: -.025em;
+    text-wrap: wrap;
+  }
+  html body.olfactory-reference-page #main #systems .os-hub h3 {
+    position: absolute;
+    left: calc(775 * var(--signaling-unit));
+    top: calc(284.072 * var(--signaling-unit));
+    width: calc(295 * var(--signaling-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(30 * var(--signaling-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  html body.olfactory-reference-page #main #systems .os-hub-subtitle {
+    position: absolute;
+    left: calc(807 * var(--signaling-unit));
+    top: calc(321.072 * var(--signaling-unit));
+    width: calc(240 * var(--signaling-unit));
+    margin: 0 !important;
+    --arotec-body-size: calc(19.5 * var(--signaling-unit));
+    --arotec-body-line-height: 1.2;
+    letter-spacing: -.025em;
+  }
+  #systems .os-hub ul {
+    position: absolute;
+    left: calc(778 * var(--signaling-unit));
+    top: calc(351.072 * var(--signaling-unit));
+    width: calc(280 * var(--signaling-unit));
+    display: grid;
+    gap: calc(7 * var(--signaling-unit));
+    --arotec-body-size: calc(13.5 * var(--signaling-unit));
+    --arotec-body-line-height: 1.1;
+  }
+  #systems .os-hub li {
+    position: relative;
+    padding-left: calc(19 * var(--signaling-unit));
+    letter-spacing: -.02em;
+  }
+  #systems .os-hub li::before {
+    left: 0;
+    top: calc(5 * var(--signaling-unit));
+    width: calc(8 * var(--signaling-unit));
+    height: calc(8 * var(--signaling-unit));
+    background: #074de8;
+  }
+
+  #systems .os-relays figcaption {
+    position: absolute;
+    top: calc(501.072 * var(--signaling-unit));
+    font-size: calc(18.5 * var(--signaling-unit)) !important;
+    line-height: 1.1 !important;
+    font-weight: 600 !important;
+    letter-spacing: -.025em;
+    text-align: left;
+  }
+  #systems .os-relays > figure:nth-child(1) figcaption { left: calc(185 * var(--signaling-unit)); width: calc(220 * var(--signaling-unit)); }
+  #systems .os-relays > figure:nth-child(2) figcaption { left: calc(537 * var(--signaling-unit)); width: calc(200 * var(--signaling-unit)); }
+  #systems .os-relays > figure:nth-child(3) figcaption { left: calc(864 * var(--signaling-unit)); width: calc(210 * var(--signaling-unit)); }
+  #systems .os-relays > figure:nth-child(4) figcaption { left: calc(1210 * var(--signaling-unit)); width: calc(230 * var(--signaling-unit)); }
+
+  html body.olfactory-reference-page #main #systems .os-system-panel > h3 {
+    position: absolute;
+    top: calc(579.072 * var(--signaling-unit));
+    margin: 0 !important;
+    --site-type-h3: calc(24 * var(--signaling-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  #systems .os-neurotransmitters > h3 { left: 0; width: calc(697 * var(--signaling-unit)); }
+  /* Cover only the title baked into the clean scene, retaining native font and translation. */
+  #systems .os-neurotransmitters > h3 { isolation: isolate; }
+  #systems .os-neurotransmitters > h3::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: calc(235 * var(--signaling-unit));
+    top: calc(3 * var(--signaling-unit));
+    width: calc(253 * var(--signaling-unit));
+    height: calc(35 * var(--signaling-unit));
+    background: #f2f9f0;
+    pointer-events: none;
+  }
+  #systems .os-neuroendocrine > h3 { left: calc(743 * var(--signaling-unit)); width: calc(706 * var(--signaling-unit)); }
+  #systems .os-transmitter-grid figcaption {
+    position: absolute;
+    top: calc(710.072 * var(--signaling-unit));
+    width: calc(140 * var(--signaling-unit));
+    font-size: calc(16.5 * var(--signaling-unit)) !important;
+    line-height: 1.1 !important;
+    font-weight: 600 !important;
+    letter-spacing: -.025em;
+    text-align: center;
+  }
+  #systems .os-transmitter-grid > figure:nth-child(1) figcaption { left: calc(4 * var(--signaling-unit)); }
+  #systems .os-transmitter-grid > figure:nth-child(2) figcaption { left: calc(142 * var(--signaling-unit)); }
+  #systems .os-transmitter-grid > figure:nth-child(3) figcaption { left: calc(280 * var(--signaling-unit)); }
+  #systems .os-transmitter-grid > figure:nth-child(4) figcaption { left: calc(422 * var(--signaling-unit)); }
+  #systems .os-transmitter-grid > figure:nth-child(5) figcaption { left: calc(555 * var(--signaling-unit)); }
+  html body.olfactory-reference-page #main #systems .os-system-caption {
+    position: absolute;
+    top: calc(770.072 * var(--signaling-unit));
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+    --arotec-body-size: calc(14 * var(--signaling-unit));
+    --arotec-body-line-height: 1.2;
+    letter-spacing: -.03em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  #systems .os-neurotransmitters > .os-system-caption { left: calc(31 * var(--signaling-unit)); width: calc(634 * var(--signaling-unit)); }
+  html body.olfactory-reference-page #main #systems .os-neuroendocrine > .os-system-caption {
+    left: calc(770 * var(--signaling-unit));
+    width: calc(650 * var(--signaling-unit));
+    --arotec-body-size: calc(13.5 * var(--signaling-unit));
+  }
+
+  #systems .os-axis { --axis-center: 0; --axis-chip-width: 80; --axis-caption-width: 88; }
+  #systems .os-axis:nth-child(1) { --axis-center: 801; --axis-chip-width: 74; --axis-caption-width: 66; }
+  #systems .os-axis:nth-child(2) { --axis-center: 889; --axis-chip-width: 77; --axis-caption-width: 66; }
+  #systems .os-axis:nth-child(3) { --axis-center: 980; --axis-chip-width: 80; --axis-caption-width: 80; }
+  #systems .os-axis:nth-child(4) { --axis-center: 1079; --axis-chip-width: 95; --axis-caption-width: 98; }
+  #systems .os-axis:nth-child(5) { --axis-center: 1184; --axis-chip-width: 87; --axis-caption-width: 105; }
+  #systems .os-axis:nth-child(6) { --axis-center: 1286; --axis-chip-width: 92; --axis-caption-width: 100; }
+  #systems .os-axis:nth-child(7) { --axis-center: 1388; --axis-chip-width: 89; --axis-caption-width: 103; }
+  html body.olfactory-reference-page #main #systems .os-axis .os-hormone {
+    position: absolute;
+    left: calc((var(--axis-center) - var(--axis-chip-width) / 2) * var(--signaling-unit));
+    top: calc(613.072 * var(--signaling-unit));
+    width: calc(var(--axis-chip-width) * var(--signaling-unit));
+    height: calc(27 * var(--signaling-unit));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 calc(2 * var(--signaling-unit));
+    border: 0;
+    border-radius: calc(3 * var(--signaling-unit));
+    background: transparent !important; /* Chips are supplied by the revised artwork. */
+    --arotec-body-size: calc(12.5 * var(--signaling-unit));
+    --arotec-body-line-height: 1.05;
+    font-weight: 600 !important;
+    letter-spacing: -.025em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  html body.olfactory-reference-page #main #systems .os-axis:not(.os-direct-axis) > .os-hormone:nth-of-type(2) {
+    top: calc(659.072 * var(--signaling-unit));
+    height: calc(21 * var(--signaling-unit));
+  }
+  html body.olfactory-reference-page #main #systems :is(.os-axis:nth-child(4), .os-axis:nth-child(7)) > .os-hormone:first-child {
+    height: calc(33 * var(--signaling-unit));
+    --arotec-body-size: calc(11.5 * var(--signaling-unit));
+  }
+  #systems .os-axis > p:last-of-type {
+    position: absolute;
+    left: calc((var(--axis-center) - var(--axis-caption-width) / 2) * var(--signaling-unit));
+    top: calc(729.072 * var(--signaling-unit));
+    width: calc(var(--axis-caption-width) * var(--signaling-unit));
+    margin: 0;
+    padding: 0;
+    --arotec-body-size: calc(12 * var(--signaling-unit));
+    --arotec-body-line-height: 1.1;
+    letter-spacing: -.035em;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  html body.olfactory-reference-page #main #systems .os-response h3,
+  html body.olfactory-reference-page #main #systems .os-response p {
+    position: absolute;
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    text-wrap: wrap !important;
+  }
+  html body.olfactory-reference-page #main #systems .os-response h3 {
+    top: calc(826.072 * var(--signaling-unit));
+    --site-type-h3: calc(21 * var(--signaling-unit));
+    --site-line-h3: 1.15;
+    --site-letter-h3: -.025em;
+  }
+  #systems .os-response-autonomic h3 { left: calc(32 * var(--signaling-unit)); width: calc(415 * var(--signaling-unit)); }
+  #systems .os-response-behavioral h3 { left: calc(489 * var(--signaling-unit)); width: calc(472 * var(--signaling-unit)); }
+  #systems .os-response-skin h3 { left: calc(998 * var(--signaling-unit)); width: calc(419 * var(--signaling-unit)); }
+  #systems .os-response-subtitle {
+    top: calc(854.072 * var(--signaling-unit));
+    --arotec-body-size: calc(13.5 * var(--signaling-unit));
+    --arotec-body-line-height: 1.15;
+    letter-spacing: -.035em;
+  }
+  #systems .os-response-autonomic .os-response-subtitle { left: calc(42 * var(--signaling-unit)); width: calc(395 * var(--signaling-unit)); }
+  #systems .os-response-skin .os-response-subtitle { left: calc(1008 * var(--signaling-unit)); width: calc(399 * var(--signaling-unit)); }
+  #systems .os-response > p:last-of-type {
+    --arotec-body-size: calc(13.5 * var(--signaling-unit));
+    --arotec-body-line-height: 1.3;
+    letter-spacing: -.03em;
+  }
+  #systems .os-response-autonomic > p:last-of-type {
+    left: calc(49 * var(--signaling-unit));
+    top: calc(965.072 * var(--signaling-unit));
+    width: calc(381 * var(--signaling-unit));
+  }
+  #systems .os-response-behavioral > p:last-of-type {
+    left: calc(504 * var(--signaling-unit));
+    top: calc(944.072 * var(--signaling-unit));
+    width: calc(442 * var(--signaling-unit));
+    --arotec-body-size: calc(13 * var(--signaling-unit));
+    --arotec-body-line-height: 1.6;
+  }
+  #systems .os-response-skin > p:last-of-type {
+    left: calc(1015 * var(--signaling-unit));
+    top: calc(951.072 * var(--signaling-unit));
+    width: calc(385 * var(--signaling-unit));
+    --arotec-body-size: calc(13 * var(--signaling-unit));
+    --arotec-body-line-height: 1.35;
+  }
+}

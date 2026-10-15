@@ -137,7 +137,9 @@
     let partial = { r: 0, g: 0, b: 0, a: 0 }, collectKnownSurface = true;
     for (let p = el; p; p = p.parentElement) {
       const s = css(p), bg = parseColor(s.backgroundColor);
-      const imagePaint = s.backgroundImage && s.backgroundImage !== 'none' && s.backgroundClip !== 'text' && s.webkitBackgroundClip !== 'text';
+      // Decorative frame paint must not change the original text-surface decision.
+      const backgroundImage = host.ArotecTextFrames?.sourceBackgroundImage?.(p) ?? s.backgroundImage;
+      const imagePaint = backgroundImage && backgroundImage !== 'none' && s.backgroundClip !== 'text' && s.webkitBackgroundClip !== 'text';
       const pseudoPaint = pseudoBackdrop(p), positionedPaint = positionedImage(p, el);
       // Background images and covering pseudos paint ABOVE their own color.
       // Only fully known descendant solid layers can bound an unknown image.
@@ -148,7 +150,7 @@
       if (imagePaint) {
         reasons.push('image-or-gradient');
         if (!gradientTone) {
-          gradientTone = opaqueGradientTone(s.backgroundImage);
+          gradientTone = opaqueGradientTone(backgroundImage);
           if (gradientTone) gradientOwner = p;
         }
       }
@@ -279,7 +281,12 @@
     const reasons = b.reasons.slice();
     const closerSolid = known && b.opaqueOwner && known.element !== b.opaqueOwner && known.element.contains(b.opaqueOwner);
     const closerGradient = known && b.gradientOwner && known.element !== b.gradientOwner && known.element.contains(b.gradientOwner);
-    if (b.surfaceBound) {
+    // The transparent leading trail is painted over a sibling hero. Its
+    // explicit surface hint is more accurate than its light DOM ancestor.
+    if (known?.element.matches('[data-arotec-breadcrumbs][data-text-surface]')) {
+      decision = { tone: known.tone, color: known.tone === 'white' ? WHITE : NAVY, ratio: null, minAA: false };
+      reasons.push(known.reason);
+    } else if (b.surfaceBound) {
       decision = { ...b.surfaceBound };
       if (reasons.some(r => ['opacity', 'filter', 'blend'].includes(r))) { decision.ratio = null; decision.minAA = false; reasons.push('surface-bound-before-component-compositing'); }
     } else if (known && !closerSolid && !closerGradient) {
@@ -435,3 +442,95 @@
   }
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', start, { once: true }); else start();
 })(typeof window !== 'undefined' ? window : null);
+
+
+;(() => {
+  // One shared entry point also covers the static localized route families.
+  if (typeof document === 'undefined' || document.querySelector('script[data-arotec-page-navigation-script]')) return;
+  const source = document.currentScript;
+  if (!source || !source.src) return;
+  const script = document.createElement('script');
+  script.src = new URL('./page-navigation.js?v=20261014-sip-hero-nav-1', source.src).href;
+  script.setAttribute('data-arotec-page-navigation-script', '');
+  document.head.append(script);
+})();
+
+;(() => {
+  if (typeof document === 'undefined' || document.querySelector('script[data-arotec-insights-disclosure-script]')) return;
+  const source = document.currentScript;
+  if (!source?.src) return;
+  const script = document.createElement('script');
+  script.src = new URL('./insights-disclosure.js?v=20261007-insights-1', source.src).href;
+  script.setAttribute('data-arotec-insights-disclosure-script', '');
+  document.head.append(script);
+})();
+
+;(() => {
+  // Shared refinements also reach the standalone and localized page families.
+  if (typeof document === 'undefined') return;
+  const source = document.currentScript;
+  if (!source?.src) return;
+  for (const name of ['icon-refinements.css', 'content-spacing-responsive.css', 'headings-titlecase.css']) {
+    if (document.querySelector(`link[data-arotec-refinement="${name}"]`)) continue;
+    const sheet = document.createElement('link');
+    sheet.rel = 'stylesheet';
+    sheet.href = new URL(`../css/${name}?v=20261007-refinement-1`, source.src).href;
+    sheet.setAttribute('data-arotec-refinement', name);
+    document.head.append(sheet);
+  }
+})();
+
+;(() => {
+  // Shared, scoped arrow drawing also covers static locale and standalone pages.
+  if (typeof document === 'undefined') return;
+  const source = document.currentScript;
+  if (!source?.src) return;
+  const version = '20261012-arrow-residual-6';
+  const apis = { 'arrow-native': 'AROTEC_NATIVE_ARROWS', 'arrow-symbols': 'ArotecArrowSymbols', 'arrow-svg': 'ArotecSvgArrows', 'arrow-assets': 'ArotecArrowAssets' };
+  for (const name of ['arrow-native', 'arrow-symbols', 'arrow-svg', 'arrow-assets']) {
+    if (!document.querySelector(`link[data-arotec-arrow-sheet="${name}"]`)) {
+      const sheet = document.createElement('link');
+      sheet.rel = 'stylesheet';
+      sheet.href = new URL(`../css/${name}.css?v=${version}`, source.src).href;
+      sheet.setAttribute('data-arotec-arrow-sheet', name);
+      sheet.addEventListener('load', () => window[apis[name]]?.refresh?.(), { once: true });
+      document.head.append(sheet);
+    }
+    if (!document.querySelector(`script[data-arotec-arrow-script="${name}"]`)) {
+      const script = document.createElement('script');
+      script.src = new URL(`./${name}.js?v=${name === 'arrow-native' ? '20261012-customized-nav-1' : version}`, source.src).href;
+      script.async = false;
+      script.setAttribute('data-arotec-arrow-script', name);
+      script.addEventListener('load', () => window[apis[name]]?.refresh?.(), { once: true });
+      document.head.append(script);
+    }
+  }
+})();
+
+
+;(() => {
+  // Scoped operators and existing text frames preserve the original layout.
+  if (typeof document === 'undefined') return;
+  const source = document.currentScript;
+  if (!source?.src) return;
+  const version = '20261011-arrows3-frames1-ebii-1';
+  const apis = { 'site-symbols': 'ArotecSiteSymbols', 'text-frames': 'ArotecTextFrames', 'symbol-frame-assets': 'ArotecSymbolFrameAssets' };
+  for (const name of Object.keys(apis)) {
+    if (!document.querySelector(`link[data-arotec-symbol-frame-sheet="${name}"]`)) {
+      const sheet = document.createElement('link');
+      sheet.rel = 'stylesheet';
+      sheet.href = new URL(`../css/${name}.css?v=${version}`, source.src).href;
+      sheet.setAttribute('data-arotec-symbol-frame-sheet', name);
+      sheet.addEventListener('load', () => window[apis[name]]?.refresh?.(), { once: true });
+      document.head.append(sheet);
+    }
+    if (!document.querySelector(`script[data-arotec-symbol-frame-script="${name}"]`)) {
+      const script = document.createElement('script');
+      script.src = new URL(`./${name}.js?v=${version}`, source.src).href;
+      script.async = false;
+      script.setAttribute('data-arotec-symbol-frame-script', name);
+      script.addEventListener('load', () => window[apis[name]]?.refresh?.(), { once: true });
+      document.head.append(script);
+    }
+  }
+})();

@@ -1,0 +1,9 @@
+/* Frames are first-layer SVG backgrounds. Original border widths, layout, shadows,
+   focus outlines and pointer/keyboard behavior remain authored. */
+@media (forced-colors: active) {
+  [data-arotec-text-frame-active] {
+    background-image: none !important;
+    border-color: CanvasText !important;
+    forced-color-adjust: auto !important;
+  }
+}

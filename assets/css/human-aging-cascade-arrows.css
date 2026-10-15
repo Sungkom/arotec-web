@@ -1,0 +1,105 @@
+/* Arrow artwork from the supplied 5000 x 2800 clean reference.
+   Coordinates below use its 2048 x 1146.88 display frame. The existing
+   responsive content, semantic nodes, site font and gutters remain in place. */
+@media (min-width: 1200px) {
+  #cascade.hla-cascade-reference :is(.hla-cascade-burden-shape,.hla-flow-arrow) {
+    background-image: url('../images/human-longevity-aging-20260916/cascade-arrows-reference-clean.png');
+    background-repeat: no-repeat;
+    background-size: calc(2048 / var(--hla-arrow-source-w) * 100%) calc(1146.88 / var(--hla-arrow-source-h) * 100%);
+    background-position: calc(var(--hla-arrow-source-x) / (2048 - var(--hla-arrow-source-w)) * 100%) calc(var(--hla-arrow-source-y) / (1146.88 - var(--hla-arrow-source-h)) * 100%);
+    pointer-events: none;
+  }
+
+  /* Keep the blue inner arrows baked into the clean source; the three
+     editable captions occupy the clear spaces between those arrows. */
+  #cascade.hla-cascade-reference .hla-cascade-burden-shape {
+    --hla-arrow-source-x: 498;
+    --hla-arrow-source-y: 548;
+    --hla-arrow-source-w: 386;
+    --hla-arrow-source-h: 208;
+    height: auto;
+    aspect-ratio: 386 / 208;
+    clip-path: polygon(0 16.5%,8% 18.5%,16% 21%,24% 22.5%,32% 22%,40% 21%,48% 19.5%,56% 18%,64% 17%,72% 16%,81.9% 14%,81.9% 0,100% 50%,81.9% 100%,81.9% 88%,72% 85.5%,64% 83.5%,56% 82%,48% 81%,40% 80.5%,32% 80.5%,24% 81.5%,16% 83.5%,8% 85.5%,0 87.5%);
+  }
+  #cascade.hla-cascade-reference .hla-cascade-burden-shape > path { visibility: hidden; }
+  #cascade.hla-cascade-reference .hla-burden-steps {
+    width: calc(100% + 26px);
+    min-height: 0;
+    aspect-ratio: 386 / 208;
+    grid-template-columns: 18% 8% 27% 7% 40%;
+    padding: 0;
+    margin-inline: -13px;
+  }
+  #cascade.hla-cascade-reference .hla-burden-steps li {
+    --arotec-body-size: 16px;
+    padding: 10px 0;
+  }
+  #cascade.hla-cascade-reference .hla-burden-steps li:nth-child(1) { grid-column: 1; transform: translateX(-3px); }
+  #cascade.hla-cascade-reference .hla-burden-steps li:nth-child(2) { grid-column: 3; transform: translateX(-5px); }
+  #cascade.hla-cascade-reference .hla-burden-steps li:nth-child(3) { grid-column: 5; }
+  #cascade.hla-cascade-reference .hla-burden-steps li:nth-child(3) strong {
+    display: inline-block;
+    width: calc(100% - 14px);
+    max-width: 7em;
+    vertical-align: middle;
+  }
+  #cascade.hla-cascade-reference .hla-burden-steps .ph { visibility: hidden; }
+
+  /* The native connector follows the source's rounded fork without carrying
+     the surrounding raster background into the card. */
+  #cascade.hla-cascade-reference .hla-cascade-branch {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 444 / 61;
+  }
+
+  #cascade.hla-cascade-reference .hla-flow-arrow {
+    --hla-arrow-source-x: 1278;
+    --hla-arrow-source-y: 646;
+    --hla-arrow-source-w: 28;
+    --hla-arrow-source-h: 43;
+    width: 28px;
+    height: 43px;
+    right: -24px;
+    font-size: 0;
+    line-height: 0;
+    clip-path: polygon(0 30%,29% 30%,29% 0,100% 50%,29% 100%,29% 70%,0 70%);
+  }
+  #cascade.hla-cascade-reference .hla-flow-arrow::before { content: none !important; display: none !important; }
+  #cascade.hla-cascade-reference .hla-flow-arrow > svg { display: none !important; }
+  #cascade.hla-cascade-reference .hla-human > .hla-flow-arrow {
+    --hla-arrow-source-x: 1467;
+    --hla-arrow-source-y: 646;
+    --hla-arrow-source-w: 96;
+    --hla-arrow-source-h: 43;
+    width: 40px;
+    height: 18px;
+    right: -34px;
+    clip-path: polygon(0 30%,74% 30%,74% 0,100% 50%,74% 100%,74% 70%,0 70%);
+  }
+}
+
+#cascade.hla-cascade-reference .hla-cascade-branch .hla-cascade-branch-head {
+  fill: #113568 !important;
+  stroke: none !important;
+}
+
+@media (min-width: 1800px) {
+  /* Reserve the reference's longer gold bridge between Human Aging and ADI. */
+  #cascade.hla-cascade-reference .hla-journey {
+    grid-template-columns: minmax(190px,.95fr) minmax(300px,1.5fr) minmax(440px,2fr) minmax(180px,.9fr) 60px minmax(200px,1fr);
+  }
+  #cascade.hla-cascade-reference .hla-adi { grid-column: 6; }
+  #cascade.hla-cascade-reference .hla-burden {
+    align-self: start;
+    margin-top: clamp(76px,4.3vw,110px);
+  }
+  #cascade.hla-cascade-reference .hla-flow-arrow {
+    top: var(--hla-flow-top,190px);
+  }
+  #cascade.hla-cascade-reference .hla-human > .hla-flow-arrow {
+    width: 96px;
+    height: 43px;
+    right: -97px;
+  }
+}

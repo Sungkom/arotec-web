@@ -294,10 +294,10 @@
       "sourceHash": "sha256:df4bd124f2f2e300912f0ce23ed137256e2517a3b3ca186bdf578f2fbe1db42d",
       "targets": [
         {
-          "selector": "#site-shell > header > div:nth-of-type(2) > div > nav > div:nth-of-type(4) > a"
+          "selector": "#site-shell > header > div:nth-of-type(2) > div > nav > div:nth-of-type(4) > button"
         },
         {
-          "selector": "#mobilePanel > nav > div:nth-of-type(4) > a"
+          "selector": "#mobilePanel > nav > div:nth-of-type(4) > button"
         }
       ]
     },
@@ -1073,7 +1073,7 @@
       "u_7891969d04b9e1fa651372e5": "<0>Get In touch</0> <1>Tell us whether you are interested in products, partnership, research, platform or a personalized wellness program.</1>",
       "u_aa08c2c1600f9e3378cf9d2d": "No results yet. Try science, sleep, products, or platform.",
       "vagus.byline": "BY BACKGROUND",
-      "vagus.heading": "COUNTDOWN",
+      "vagus.heading": "Countdown",
       "vagus.caption": "NEW PRODUCT LAUNCH",
       "vagus.day": "DAY",
       "vagus.days": "DAYS",

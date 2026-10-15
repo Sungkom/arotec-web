@@ -1,0 +1,254 @@
+/* The clean 3.2 artwork and live labels share the reference's 2048 x 1152 frame.
+   Keep website fonts and align source x=53 / x=2020 to the shared text gutters. */
+#disease-outcomes .sn-outcomes-scene { display:none; }
+@media (min-width:1400px) {
+  #disease-outcomes#disease-outcomes#disease-outcomes {
+    --outcomes-unit:calc(100cqw / 1967);
+    container-type:inline-size;
+    position:relative;
+    display:block;
+    isolation:isolate;
+    overflow:visible;
+    aspect-ratio:1967 / 1152;
+    margin-top:60px;
+    padding:0;
+    border:0;
+    background:none;
+    clip-path:inset(0 calc(-1 * var(--sn-gutter)));
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-content {
+    position:absolute;
+    inset:0 auto auto calc(-53 * var(--outcomes-unit));
+    width:calc(2048 * var(--outcomes-unit));
+    height:calc(1152 * var(--outcomes-unit));
+    aspect-ratio:auto;
+    isolation:auto;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-source-field {
+    display:block;
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-scene {
+    display:block;
+    position:absolute;
+    inset:0 auto auto -23.220339%;
+    width:146.440678%;
+    max-width:none;
+    height:100%;
+    object-fit:fill;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro {
+    position:absolute;
+    inset:0 auto auto 0;
+    width:calc(570 * var(--outcomes-unit));
+    height:100%;
+    margin:0;
+    padding:0;
+    display:block;
+    z-index:1;
+    --arotec-body-size:clamp(14px,calc(28 * var(--outcomes-unit)),27px);
+    --arotec-body-line-height:1.35;
+  }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro h2 {
+    --site-type-h2:clamp(22px,calc(50 * var(--outcomes-unit)),46px);
+    --site-line-h2:1.15;
+    --site-letter-h2:-.025em;
+    position:absolute;
+    top:calc(188 * var(--outcomes-unit));
+    left:0;
+    width:100%;
+    margin:0!important;
+    text-transform:uppercase!important;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro > p {
+    position:absolute;
+    left:0;
+    width:calc(465 * var(--outcomes-unit));
+    padding:0;
+    margin:0!important;
+    border:0;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro > .sn-research-subtitle {
+    --arotec-body-size:clamp(17px,calc(36 * var(--outcomes-unit)),34px);
+    --arotec-body-line-height:1.3;
+    top:calc(344 * var(--outcomes-unit));
+    width:calc(560 * var(--outcomes-unit));
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro > p:not([class]) { top:calc(519 * var(--outcomes-unit)); }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-intro > .sn-research-note { top:calc(923 * var(--outcomes-unit)); }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-subtitle::after,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-note::before {
+    content:"";
+    position:absolute;
+    left:0;
+    width:calc(123 * var(--outcomes-unit));
+    height:3px;
+    background:#54bfdc;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-subtitle::after { top:calc(129 * var(--outcomes-unit)); }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-research-note::before { top:calc(-39 * var(--outcomes-unit)); }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-grid,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-list,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms ul { display:contents; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain {
+    padding:0;
+    border:0;
+    background:none;
+    box-shadow:none;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-anatomy,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-list img,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li > i,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanism-connection,
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-feedback-loop { display:none; }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes :is(.sn-outcome-domain,.sn-mechanisms) > h3 {
+    --site-type-h3:clamp(14px,calc(27 * var(--outcomes-unit)),30px);
+    --site-line-h3:1.1;
+    --site-letter-h3:-.02em;
+    position:absolute;
+    top:calc(60 * var(--outcomes-unit));
+    margin:0!important;
+    padding:0;
+    min-height:0!important;
+    text-align:center;
+    text-transform:uppercase!important;
+    text-wrap:wrap!important;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child > h3 { left:32.3%; width:23.8%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child > h3 { left:74.1%; width:20.6%; }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms > h3 {
+    --site-type-h3:clamp(13px,calc(25 * var(--outcomes-unit)),27px);
+    left:58.4%; top:calc(119 * var(--outcomes-unit)); width:10.5%;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain .sn-outcome-list > li {
+    position:absolute;
+    display:block;
+    margin:0;
+    padding:0;
+    min-height:0;
+    border:0;
+    width:calc(180 * var(--outcomes-unit));
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-list > li > div { display:flex; flex-direction:column; align-items:flex-start; width:100%; }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-list h4 {
+    --site-type-h4:clamp(11px,calc(21 * var(--outcomes-unit)),23px);
+    --site-line-h4:1.13;
+    --site-letter-h4:-.02em;
+    margin:0 0 calc(7 * var(--outcomes-unit))!important;
+    overflow-wrap:normal;
+    text-wrap:wrap!important;
+    font-weight:500!important;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-list p {
+    --arotec-body-size:clamp(11px,calc(21 * var(--outcomes-unit)),23px);
+    --arotec-body-line-height:1.13;
+    padding:0;
+    margin:0 0 calc(7 * var(--outcomes-unit))!important;
+    overflow-wrap:normal;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-association {
+    display:inline-block;
+    padding:calc(3 * var(--outcomes-unit)) calc(13 * var(--outcomes-unit));
+    border:1px solid #385995;
+    border-radius:999px;
+    background:transparent;
+    font-size:clamp(9px,calc(17 * var(--outcomes-unit)),18px);
+    line-height:1.1;
+    letter-spacing:0;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child .sn-outcome-list > li:nth-child(1) { left:40.23%; top:15.25%; width:10.2%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child .sn-outcome-list > li:nth-child(2) { left:38%; top:30%; width:8%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child .sn-outcome-list > li:nth-child(3) { left:37.7%; top:44.4%; width:6.2%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child .sn-outcome-list > li:nth-child(4) { left:37.7%; top:57.9%; width:8.8%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:first-child .sn-outcome-list > li:nth-child(5) { left:38.72%; top:70.4%; width:8%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list > li:nth-child(1) { left:90.82%; top:14.8%; width:7.81%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list > li:nth-child(2) { left:92.43%; top:28.9%; width:6.2%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list > li:nth-child(3) { left:92.8%; top:43.2%; width:5.83%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list > li:nth-child(4) { left:92.8%; top:57.9%; width:5.83%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list > li:nth-child(5) { left:90.96%; top:71.2%; width:7.67%; }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcome-domain:last-child .sn-outcome-list h4 {
+    --site-type-h4:clamp(10.5px,calc(19 * var(--outcomes-unit)),21px);
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li {
+    --arotec-body-size:clamp(11px,calc(22 * var(--outcomes-unit)),24px);
+    --arotec-body-line-height:1.13;
+    position:absolute;
+    display:block;
+    left:58.65%;
+    width:9%;
+    padding:0;
+    margin:0;
+    text-align:center;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li:nth-child(1) { top:23.65%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li:nth-child(2) { top:36.65%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li:nth-child(3) { top:50.1%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li:nth-child(4) { top:62.3%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-mechanisms li:nth-child(5) { top:74.2%; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-reciprocal {
+    position:absolute;
+    top:43.95%;
+    width:3.9%;
+    height:2.82%;
+    transform:none;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-reciprocal[data-side="left"] { left:56.1%; right:auto; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-outcomes-reciprocal[data-side="right"] { left:66.2%; right:auto; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback {
+    position:absolute;
+    left:35.5%;
+    top:84.7%;
+    width:55%;
+    height:auto;
+    padding:0;
+    margin:0;
+    background:none;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    text-align:center;
+  }
+  html body.stress-reference-page #main #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback h3 {
+    --site-type-h3:clamp(13px,calc(28 * var(--outcomes-unit)),30px);
+    --site-line-h3:1.15;
+    --site-letter-h3:-.02em;
+    min-height:0;
+    margin:0 0 calc(9 * var(--outcomes-unit))!important;
+    padding:0;
+    text-transform:uppercase!important;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback h3 > i { display:none; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback ol {
+    position:relative;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    gap:calc(5 * var(--outcomes-unit)) calc(12 * var(--outcomes-unit));
+    padding:0;
+    margin:0;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback li {
+    --arotec-body-size:clamp(10px,calc(20 * var(--outcomes-unit)),22px);
+    --arotec-body-line-height:1.15;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    gap:calc(12 * var(--outcomes-unit));
+    padding:0;
+    margin:0;
+  }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback li:last-child { flex-basis:100%; justify-content:center; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback li:nth-child(3) > i { display:none; }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback li:last-child::before { content:"\2192"; font-size:calc(27 * var(--outcomes-unit)); }
+  #disease-outcomes#disease-outcomes#disease-outcomes .sn-feedback li > i {
+    font-size:calc(27 * var(--outcomes-unit));
+    transform:none;
+  }
+}

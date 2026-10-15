@@ -40,15 +40,15 @@ html body.ap-products-page #main.ap-main .ap-menu-items a { display:block; paddi
 html body.ap-products-page #main.ap-main .ap-menu-items a:hover,
 html body.ap-products-page #main.ap-main .ap-menu-items a[aria-current] { color:var(--ap-accent); background:rgba(140,210,203,.08); }
 html body.ap-products-page #main.ap-main .ap-stage {
-  --ap-title-size:clamp(20px,1.53cqw,44px);
-  --ap-byline-size:clamp(9px,.65cqw,18px);
-  --ap-tagline-size:clamp(9px,.62cqw,17px);
+  --ap-title-size:min(1.53cqw,44px);
+  --ap-byline-size:min(.65cqw,18px);
+  --ap-tagline-size:min(.62cqw,17px);
   container-type:inline-size; position:relative; isolation:isolate;
-  aspect-ratio:2560 / 1004; min-height:480px; background:#060c11;
-  margin:0; padding:0; scroll-margin-top:100px;
+  /* Fill the desktop below the live header, breadcrumb and navigation. */
+  width:100%; height:calc(100vh - var(--ap-stage-top,238px));
+  height:calc(100svh - var(--ap-stage-top,238px)); background:#060c11;
+  margin:0 auto; padding:0; scroll-margin-top:100px;
 }
-/* Restore the original single-scene composition: the restrained artwork
-   lettering sits in the empty left region, clear of products and hotspots. */
 html body.ap-products-page #main.ap-main .ap-product-scene {
   container-type:inline-size; position:absolute; inset:0; z-index:0;
   isolation:isolate; background:#060c11;
@@ -56,11 +56,11 @@ html body.ap-products-page #main.ap-main .ap-product-scene {
 html body.ap-products-page #main.ap-main .ap-scene { position:absolute; inset:0; z-index:-1; }
 html body.ap-products-page #main.ap-main .ap-scene img { display:block; width:100%; max-width:none; height:100%; object-fit:cover; object-position:center; }
 html body.ap-products-page #main.ap-main .ap-intro {
-  position:absolute; z-index:3; left:21.5%; top:10%; width:22%;
+  position:absolute; z-index:3; left:16.6%; top:8.5%; width:22%;
   margin:0; padding:0; background:transparent; mix-blend-mode:screen;
 }
 /* Screen compositing removes the logo asset's uniform black field without a rectangular backing. */
-html body.ap-products-page #main.ap-main .ap-brand { position:relative; width:7cqw; min-width:95px; aspect-ratio:800 / 740; overflow:hidden; mix-blend-mode:screen; }
+html body.ap-products-page #main.ap-main .ap-brand { position:relative; width:7cqw; aspect-ratio:800 / 740; overflow:hidden; mix-blend-mode:screen; }
 html body.ap-products-page #main.ap-main .ap-brand > img { position:absolute; display:block; width:156.75%; max-width:none!important; height:auto!important; left:-28.75%; top:-29.054%; }
 html body.ap-products-page #main.ap-main .ap-byline { margin:1.2cqw 0 0; font-size:clamp(9px,.65cqw,18px); line-height:1.6; letter-spacing:.44em; text-transform:uppercase; color:var(--ap-muted); }
 html body.ap-products-page #main.ap-main .ap-rule { display:block; width:2.65cqw; height:1px; background:#9baea7; margin-block:1.1cqw; }
@@ -75,9 +75,9 @@ html body.ap-products-page #main.ap-main .ap-product-link {
   position:absolute; z-index:2; display:flex; flex-direction:column; align-items:flex-start;
   gap:.3cqw; min-width:96px; padding:8px; border-radius:4px; text-transform:uppercase; letter-spacing:.16em;
 }
-html body.ap-products-page #main.ap-main .ap-product-link--vaguspa { left:44%; top:33%; }
-html body.ap-products-page #main.ap-main .ap-product-link--vaguscent-bulb { left:65%; top:8%; }
-html body.ap-products-page #main.ap-main .ap-product-link--vaguskin { left:75.2%; top:50%; }
+html body.ap-products-page #main.ap-main .ap-product-link--vaguspa { left:41.5%; top:37%; }
+html body.ap-products-page #main.ap-main .ap-product-link--vaguscent-bulb { left:65.2%; top:12.5%; }
+html body.ap-products-page #main.ap-main .ap-product-link--vaguskin { left:78.8%; top:53%; }
 html body.ap-products-page #main.ap-main .ap-product-brand { font-size:clamp(10px,.64cqw,18px); }
 html body.ap-products-page #main.ap-main .ap-product-name { font-size:clamp(11px,.73cqw,20px); line-height:1.5; }
 html body.ap-products-page #main.ap-main .ap-explore {
@@ -87,13 +87,13 @@ html body.ap-products-page #main.ap-main .ap-explore {
 html body.ap-products-page #main.ap-main .ap-explore i { font-size:17px; transition:transform .2s; }
 html body.ap-products-page #main.ap-main .ap-product-link:hover .ap-explore i { transform:translateX(4px); }
 html body.ap-products-page #main.ap-main .ap-bespoke {
-  position:absolute; left:19.8%; bottom:12%; width:18.5%; min-height:11cqw;
+  position:absolute; left:16%; top:57.6%; width:20.4%; min-height:10.6cqw;
   display:grid; grid-template-columns:1fr auto; align-content:center; gap:.5cqw; padding:1cqw 2.3cqw;
   border:1px solid var(--ap-accent); border-radius:1cqw;
   background:rgba(11,27,33,.68); backdrop-filter:blur(12px);
 }
 html body.ap-products-page #main.ap-main .ap-fingerprint { grid-column:1 / -1; font-size:5cqw; color:#72c8c3; font-weight:400; }
-html body.ap-products-page #main.ap-main .ap-bespoke > span { font-size:clamp(14px,1.05cqw,29px); font-weight:300; line-height:1.4; letter-spacing:.22em; text-transform:uppercase; }
+html body.ap-products-page #main.ap-main .ap-bespoke > span { font-size:min(1.05cqw,29px); font-weight:300; line-height:1.4; letter-spacing:.22em; text-transform:uppercase; }
 html body.ap-products-page #main.ap-main .ap-bespoke-arrow { align-self:center; font-size:28px; }
 html body.ap-products-page #main.ap-main .ap-bespoke:hover { background:rgba(22,52,60,.8); }
 html body.ap-products-page #main.ap-main .ap-panel { display:none; margin:0; background:#0d1c24; border-top:1px solid var(--ap-line); scroll-margin-top:110px; }
@@ -104,9 +104,41 @@ html body.ap-products-page #main.ap-main .ap-panel h2 { margin:0 0 32px!importan
 html body.ap-products-page #main.ap-main .ap-enquire { display:inline-flex; gap:22px; align-items:center; border:1px solid var(--ap-accent); padding:13px 20px; }
 html body.ap-products-page #main.ap-main .ap-back { display:inline-flex; margin:18px 0 0 26px; gap:12px; font-size:14px; color:var(--ap-muted); }
 @keyframes ap-arrive { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@media(min-width:1101px) {
+  /* The panorama extends the original composition equally on both sides.
+     Keep live labels in that centered coordinate system while the photo covers. */
+  html body.ap-products-page #main.ap-main .ap-stage {
+    --ap-art-width:max(50vw,calc((100svh - var(--ap-stage-top,238px)) * 2.3148148148));
+    --ap-art-height:calc(var(--ap-art-width) * .432);
+    --ap-art-unit:calc(var(--ap-art-width) / 100);
+    --ap-title-size:min(calc(var(--ap-art-unit) * 1.53),44px);
+    --ap-byline-size:min(calc(var(--ap-art-unit) * .65),18px);
+    --ap-tagline-size:min(calc(var(--ap-art-unit) * .62),17px);
+    overflow:clip;
+  }
+  html body.ap-products-page #main.ap-main .ap-product-scene {
+    inset:auto; left:50%; top:50%; width:var(--ap-art-width); height:var(--ap-art-height);
+    transform:translate(-50%,-50%);
+  }
+  html body.ap-products-page #main.ap-main .ap-scene { left:-50%; right:auto; width:200%; }
+  html body.ap-products-page #main.ap-main .ap-intro {
+    left:calc(50% - var(--ap-art-width) * .334);
+    top:calc(50% - var(--ap-art-height) * .415); width:calc(var(--ap-art-width) * .22);
+  }
+  html body.ap-products-page #main.ap-main .ap-brand { width:calc(var(--ap-art-unit) * 7); }
+  html body.ap-products-page #main.ap-main .ap-byline { margin-top:calc(var(--ap-art-unit) * 1.2); }
+  html body.ap-products-page #main.ap-main .ap-rule { width:calc(var(--ap-art-unit) * 2.65); margin-block:calc(var(--ap-art-unit) * 1.1); }
+  html body.ap-products-page #main.ap-main .ap-tagline { margin-top:calc(var(--ap-art-unit) * .85); }
+  html body.ap-products-page #main.ap-main .ap-bespoke-arrow { font-size:1.4cqw; }
+  /* Keep label height proportional to the photo, including on short desktops. */
+  html body.ap-products-page #main.ap-main .ap-product-link { min-width:0; padding:.35cqw; gap:.15cqw; line-height:1.35; }
+  html body.ap-products-page #main.ap-main :is(.ap-product-brand,.ap-product-name) { font-size:.88cqw; line-height:1.35; }
+  html body.ap-products-page #main.ap-main .ap-explore { font-size:.85cqw; line-height:1.35; gap:.65cqw; padding-block:.25cqw .2cqw; margin-top:.3cqw; }
+  html body.ap-products-page #main.ap-main .ap-explore i { font-size:1cqw; }
+}
 @media(max-width:1100px) {
   html body.ap-products-page #main.ap-main .ap-nav-inner { justify-content:center; gap:40px; padding-inline:20px; }
-  html body.ap-products-page #main.ap-main .ap-stage { --ap-title-size:clamp(23px,3.8vw,40px); --ap-byline-size:10px; --ap-tagline-size:10px; display:flex; flex-direction:column; aspect-ratio:auto; min-height:0; }
+  html body.ap-products-page #main.ap-main .ap-stage { --ap-title-size:clamp(23px,3.8vw,40px); --ap-byline-size:10px; --ap-tagline-size:10px; width:100%; height:auto; display:flex; flex-direction:column; aspect-ratio:auto; min-height:0; }
   html body.ap-products-page #main.ap-main .ap-product-scene { position:relative; inset:auto; display:flex; flex-direction:column; aspect-ratio:auto; min-height:0; }
   html body.ap-products-page #main.ap-main .ap-intro { position:relative; inset:auto; width:100%; padding:36px 6% 30px; order:0; }
   html body.ap-products-page #main.ap-main .ap-brand { width:124px; }
@@ -115,7 +147,7 @@ html body.ap-products-page #main.ap-main .ap-back { display:inline-flex; margin:
   html body.ap-products-page #main.ap-main h1.ap-hero-title { font-size:clamp(23px,3.8vw,40px)!important; letter-spacing:.2em!important; }
   html body.ap-products-page #main.ap-main .ap-tagline { margin-top:16px; font-size:10px; }
   html body.ap-products-page #main.ap-main .ap-scene { position:relative; inset:auto; z-index:0; order:1; aspect-ratio:1.7; overflow:hidden; }
-  html body.ap-products-page #main.ap-main .ap-scene img { position:absolute; inset:0; object-position:77% center; }
+  html body.ap-products-page #main.ap-main .ap-scene img { position:absolute; inset:0; object-position:60% center; }
   html body.ap-products-page #main.ap-main .ap-product-links { order:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); padding:22px 4%; }
   html body.ap-products-page #main.ap-main .ap-product-link { position:relative; inset:auto; padding:8px 12px; min-width:0; gap:7px; }
   html body.ap-products-page #main.ap-main .ap-product-link + .ap-product-link { border-left:1px solid var(--ap-line); }
@@ -141,6 +173,14 @@ html body.ap-products-page #main.ap-main .ap-back { display:inline-flex; margin:
 @media(prefers-reduced-motion:reduce) {
   html body.ap-products-page #main.ap-main .ap-intro { animation:none; }
   html body.ap-products-page #main.ap-main :is(.ap-menu summary i,.ap-explore i) { transition:none; }
+}
+
+/* The new composition uses image coordinates instead of the shared page gutter. */
+@layer arotec-content-layout {
+  @media(min-width:1101px) {
+    html body.ap-products-page #main.ap-main .ap-stage .ap-intro { left:calc(50% - var(--ap-art-width) * .334)!important; }
+    html body.ap-products-page #main.ap-main .ap-stage .ap-bespoke { left:16%!important; }
+  }
 }
 
 /* Page-specific artwork exception, restored at the user's request.

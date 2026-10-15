@@ -1,8 +1,8 @@
 /* Source-based barrier sequence with a shared, neutral card treatment.
    The existing site shell supplies desktop/tablet/mobile foreground gutters. */
-html body.nss-page #skin-barrier-disruption { padding-block: 40px; background: #f9fcff url('../images/neuro-skin-science-20260915/barrier-reference/background.webp') center / 100% 100% no-repeat; }
+html body.nss-page #skin-barrier-disruption { padding-block: 40px; content-visibility: visible; background: #f9fcff url('../images/neuro-skin-science-20260915/barrier-reference/background.webp') center / 100% 100% no-repeat; }
 #skin-barrier-disruption .nss-sb-canvas { position: relative; container-type: inline-size; aspect-ratio: 2623 / 1475; }
-html body.nss-page #skin-barrier-disruption :is(h2,h3,p,span) { font-family: 'Roboto Condensed','DM Sans',sans-serif !important; color: #08133e; text-transform: none !important; }
+html body.nss-page #skin-barrier-disruption :is(h2,h3,p,span) { font-family: var(--site-font) !important; color: #08133e; text-transform: none !important; }
 html body.nss-page #skin-barrier-disruption :is(h2,h3):not(#dsm-type-lock) { margin: 0 !important; }
 #skin-barrier-disruption :is(p,ul,ol) { padding: 0; margin: 0; }
 #skin-barrier-disruption .nss-sb-heading { position: absolute; top: .45%; left: 0; right: 0; text-align: center; }
@@ -92,12 +92,12 @@ html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 
   #skin-barrier-disruption .nss-sb-canvas { aspect-ratio: auto; display: grid; grid-template-columns: 440fr 1503fr; gap: 1.05cqw; padding: .25cqw 0 1.7cqw; }
   #skin-barrier-disruption .nss-sb-heading { position: relative; inset: auto; grid-column: 1 / -1; margin-bottom: 1.8cqw; }
   html body.nss-page #skin-barrier-disruption h2 { white-space: normal; overflow-wrap: break-word; }
-  #skin-barrier-disruption .nss-sb-context { position: relative; inset: auto; width: auto; height: auto; min-height: 47.55859375cqw; margin-left: 2cqw; padding: 1.72cqw 1.05cqw 10cqw; }
+  #skin-barrier-disruption .nss-sb-context { position: relative; inset: auto; width: auto; height: auto; min-height: 47.55859375cqw; margin-left: 0; padding: 1.72cqw 1.05cqw 10cqw; }
   html body.nss-page #skin-barrier-disruption .nss-sb-context h3 { position: relative; inset: auto; }
   html body.nss-page #skin-barrier-disruption .nss-sb-context > p { position: relative; inset: auto; margin-top: 1.5cqw; }
   #skin-barrier-disruption .nss-sb-effects { position: relative; inset: auto; margin-top: 1.5cqw; }
   html body.nss-page #skin-barrier-disruption .nss-sb-effects span { white-space: normal; }
-  #skin-barrier-disruption .nss-sb-cascade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: 'one two three' 'six five four'; gap: 1cqw; margin-right: 2cqw; }
+  #skin-barrier-disruption .nss-sb-cascade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: 'one two three' 'six five four'; gap: 1cqw; margin-right: 0; }
   #skin-barrier-disruption .nss-sb-card { position: relative; inset: auto; width: auto; height: auto; min-height: calc(var(--h) / 20.48 * 1cqw); padding-bottom: 1.1cqw; }
   #skin-barrier-disruption .nss-sb-card:nth-child(1) { grid-area: one; }
   #skin-barrier-disruption .nss-sb-card:nth-child(2) { grid-area: two; }
@@ -109,14 +109,16 @@ html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 
   #skin-barrier-disruption .nss-sb-number,
   #skin-barrier-disruption .nss-sb-card--core .nss-sb-number { position: relative; inset: auto; display: block; margin: -.6cqw auto .25cqw; }
   html body.nss-page #skin-barrier-disruption .nss-sb-card h3,
-  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { position: relative; inset: auto; margin-inline: 1cqw !important; white-space: normal; overflow-wrap: break-word; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { position: relative; inset: auto; margin-inline: 1cqw !important; padding-inline: .4cqw; white-space: normal; overflow-wrap: break-word; }
   html body.nss-page #skin-barrier-disruption .nss-sb-card > p,
   html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p,
   html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { position: relative; inset: auto; margin: .55cqw 1cqw 0; overflow-wrap: break-word; }
   #skin-barrier-disruption .nss-sb-core-label { position: relative; inset: auto; width: auto; margin: .3cqw 1cqw; }
   #skin-barrier-disruption .nss-sb-arrow { left: calc(100% - 1cqw); }
   #skin-barrier-disruption .nss-sb-card:nth-child(n+4) .nss-sb-arrow { left: -2cqw; }
-  #skin-barrier-disruption .nss-sb-turn { left: calc(100% - 1cqw); }
+  /* Bridge the row gap from the lower edge of 03 into the image of 04.
+     Follow card height so translated captions cannot pull the arrow upward. */
+  #skin-barrier-disruption .nss-sb-turn { left: calc(100% - 1cqw); top: calc(100% - 4.8cqw); height: 10.25cqw; }
 }
 
 /* The source panel already contains its 04 badge: the live badge stays on that
@@ -124,4 +126,188 @@ html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p { font-size: 
 @media (min-width: 1101px) {
   #skin-barrier-disruption .nss-sb-card--core .nss-sb-number { position: absolute; left: 48.2%; top: 10.84921875cqw; transform: translateX(-50%); margin: 0; }
   #skin-barrier-disruption .nss-sb-core-label { margin-top: 1.7cqw; padding-block: 3px; }
+}
+
+/* Exact supplied 5000 × 2160 artwork. Its foreground frame is x=393..1658
+   on a 2048 × 884.736 canvas; live text uses the website font and gutters. */
+#skin-barrier-disruption .nss-sb-annotations { display: none; }
+/* Small scientific direction symbols need a lighter stroke than the site's
+   large navigation arrows so their arrowheads remain distinct. */
+@media (min-width: 1101px) {
+  #skin-barrier-disruption .nss-sb-card p .arotec-arrow-text svg > path {
+    stroke-width: 1px !important;
+  }
+}
+@media (min-width: 1400px) {
+  html body.nss-page #skin-barrier-disruption {
+    padding: 0 150px !important;
+    overflow: clip;
+    background: #f9fcff;
+  }
+  #skin-barrier-disruption .nss-sb-canvas {
+    --barrier-unit: calc(100cqw / 1265);
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1265 / 884.736;
+    margin: 0;
+    padding: 0;
+    isolation: isolate;
+  }
+  #skin-barrier-disruption .nss-sb-canvas::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: calc(-393 / 1265 * 100%);
+    width: calc(2048 / 1265 * 100%);
+    background: url('../images/neuro-skin-science-20260915/barrier-reference/reference-clean.png') center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  #skin-barrier-disruption .nss-sb-heading {
+    position: absolute;
+    inset: calc(76 * var(--barrier-unit)) 0 auto;
+    margin: 0;
+  }
+  html body.nss-page #skin-barrier-disruption h2 {
+    font-size: calc(40 * var(--barrier-unit)) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.04em !important;
+  }
+  html body.nss-page #skin-barrier-disruption .nss-sb-heading > p {
+    margin-top: calc(4 * var(--barrier-unit));
+    font-size: calc(22 * var(--barrier-unit)) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -.025em;
+  }
+  #skin-barrier-disruption .nss-sb-context {
+    position: absolute;
+    inset: calc(187 * var(--barrier-unit)) auto auto calc(13 * var(--barrier-unit));
+    width: calc(255 * var(--barrier-unit));
+    height: calc(472 * var(--barrier-unit));
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context h3 {
+    position: relative;
+    inset: auto;
+    font-size: calc(26 * var(--barrier-unit)) !important;
+    line-height: 1.12 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.035em !important;
+  }
+  html body.nss-page #skin-barrier-disruption .nss-sb-context > p {
+    position: relative;
+    inset: auto;
+    margin-top: calc(17 * var(--barrier-unit));
+    font-size: calc(18 * var(--barrier-unit)) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -.025em;
+  }
+  #skin-barrier-disruption .nss-sb-effects {
+    position: absolute;
+    inset: calc(318 * var(--barrier-unit)) 0 auto calc(67 * var(--barrier-unit));
+    margin: 0;
+    gap: calc(2 * var(--barrier-unit));
+  }
+  #skin-barrier-disruption .nss-sb-effects li { min-height: calc(48 * var(--barrier-unit)); }
+  html body.nss-page #skin-barrier-disruption .nss-sb-effects span {
+    font-size: calc(17 * var(--barrier-unit)) !important;
+    line-height: 1.2 !important;
+    font-weight: 650 !important;
+    letter-spacing: -.035em;
+  }
+  #skin-barrier-disruption :is(.nss-sb-picture,.nss-sb-number,.nss-sb-turn,.nss-sb-arrow,.nss-sb-context-texture),
+  #skin-barrier-disruption .nss-sb-card--core .nss-sb-number,
+  #skin-barrier-disruption .nss-sb-effects img { display: none; }
+  #skin-barrier-disruption .nss-sb-cascade { display: contents; }
+  #skin-barrier-disruption .nss-sb-card {
+    position: absolute;
+    inset: calc(var(--caption-y) * var(--barrier-unit)) auto auto calc((var(--caption-x) - 393) * var(--barrier-unit));
+    width: calc(var(--caption-w) * var(--barrier-unit));
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  #skin-barrier-disruption .nss-sb-card:nth-child(1) { --caption-x: 709; --caption-y: 358; --caption-w: 270; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(2) { --caption-x: 1032; --caption-y: 358; --caption-w: 267; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(3) { --caption-x: 1350; --caption-y: 358; --caption-w: 288; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(4) { --caption-x: 1309; --caption-y: 687; --caption-w: 298; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(5) { --caption-x: 996; --caption-y: 676; --caption-w: 229; }
+  #skin-barrier-disruption .nss-sb-card:nth-child(6) { --caption-x: 705; --caption-y: 676; --caption-w: 245; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card h3,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) h3,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 {
+    position: relative;
+    inset: auto;
+    min-height: calc(30 * var(--barrier-unit));
+    margin: 0 !important;
+    padding: 0 0 calc(5 * var(--barrier-unit));
+    border-bottom: calc(1.2 * var(--barrier-unit)) solid #d8deee;
+    font-size: calc(19 * var(--barrier-unit)) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.035em !important;
+    text-wrap: balance;
+  }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(3) h3 { font-size: calc(17.5 * var(--barrier-unit)) !important; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core h3 { font-size: calc(23 * var(--barrier-unit)) !important; }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(n+5) > p,
+  html body.nss-page #skin-barrier-disruption .nss-sb-card--core > p {
+    position: relative;
+    inset: auto;
+    margin: calc(7 * var(--barrier-unit)) 0 0;
+    font-size: calc(16 * var(--barrier-unit)) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -.025em;
+  }
+  html body.nss-page #skin-barrier-disruption .nss-sb-card:nth-child(6) > p { font-size: calc(15 * var(--barrier-unit)) !important; }
+  #skin-barrier-disruption .nss-sb-card .nss-sb-desktop-break { display: none; }
+  #skin-barrier-disruption .nss-sb-core-label {
+    position: absolute;
+    left: calc(56 * var(--barrier-unit));
+    top: calc(-20 * var(--barrier-unit));
+    width: calc(174 * var(--barrier-unit));
+    min-height: calc(18 * var(--barrier-unit));
+    margin: 0;
+    padding: 0;
+    font-size: calc(9.5 * var(--barrier-unit));
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  html body.nss-page #main #skin-barrier-disruption :is(.nss-sb-card,.nss-sb-context):hover { box-shadow: none !important; }
+  #skin-barrier-disruption .nss-sb-annotations { display: contents; }
+  #skin-barrier-disruption .nss-sb-annotations > * {
+    position: absolute;
+    top: calc(var(--label-y) * var(--barrier-unit));
+    left: calc((var(--label-x) - 393) * var(--barrier-unit));
+    width: calc(var(--label-w, 100) * var(--barrier-unit));
+    font-size: calc(var(--label-size, 12) * var(--barrier-unit));
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -.025em;
+    text-align: center;
+  }
+  #nss-sb-mast-cell { --label-x: 1127; --label-y: 190; --label-w: 72; }
+  #nss-sb-fibroblast { --label-x: 1215; --label-y: 287; --label-w: 86; }
+  #nss-sb-cytokines { --label-x: 1430; --label-y: 191; --label-w: 79; }
+  #nss-sb-ros { --label-x: 1588; --label-y: 203; --label-w: 34; }
+  #skin-barrier-disruption .nss-sb-intruders { --label-x: 1343; --label-y: 483; --label-w: 72; display: flex; flex-direction: column; text-align: left; }
+  #nss-sb-tewl { --label-x: 1534; --label-y: 483; --label-w: 81; }
+  #nss-sb-cycle-barrier { --label-x: 794; --label-y: 483; --label-w: 112; --label-size: 10.5; }
+  #nss-sb-cycle-inflammation { --label-x: 883; --label-y: 545; --label-w: 70; --label-size: 10.5; }
+  #nss-sb-cycle-stress { --label-x: 781; --label-y: 603; --label-w: 111; --label-size: 10.5; }
+  #nss-sb-cycle-activation { --label-x: 704; --label-y: 555; --label-w: 83; --label-size: 10.5; }
+  #nss-sb-cycle-center { --label-x: 796; --label-y: 538; --label-w: 76; --label-size: 13; }
 }

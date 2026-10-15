@@ -31,12 +31,12 @@
   touch();return data;
  }
  function editor(job=null){
-  editingJob=job;jobForm.reset();$("ca-editor-title").textContent=job?"Edit position":"New position";
+  editingJob=job;jobForm.reset();$("ca-editor-title").textContent=job?"Edit Position":"New Position";
   jobFields.forEach((name)=>{jobForm.elements[name].value=job?job[name]:(name==="status"?"draft":name==="employment_type"?"Full-time":"");});renderPreview();
  }
  function renderPreview(){
   const value=(name)=>jobForm.elements[name].value.trim(),status=value("status");
-  $("ca-preview-title").textContent=value("title")||"Job title";
+  $("ca-preview-title").textContent=value("title")||"Job Title";
   $("ca-preview-location").textContent=value("location")||"Work location";
   $("ca-preview-summary").textContent=value("summary")||"A short summary of the role will appear here.";
   $("ca-preview-tags").replaceChildren();[value("employment_type"),value("experience")].filter(Boolean).forEach((text)=>$("ca-preview-tags").append(node("span","",text)));

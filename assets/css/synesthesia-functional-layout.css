@@ -1,0 +1,238 @@
+/* Exact 5000 x 2160 supplied artwork and live localized website copy.
+   Normalized source: 2048 x 884.736; foreground x=412..1635 (1223 units). */
+/* Anchor the shared SVG arrow to its own flex item in compact layouts. */
+html body.sip-page main#main#main #functional-outcomes .sip-evidence-scale > .ph {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+html body.sip-page main#main#main #functional-outcomes .sip-evidence-caution {
+  border: 0 !important;
+  box-shadow: inset 0 0 0 1px #e5c995;
+}
+@media (max-width: 800px) {
+  html body.sip-page main#main#main .sip-functional-section:has(> #functional-outcomes) { padding-inline: 24px !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-functional-heading h2 { --outcome-title-size: 24px !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main .sip-functional-section:has(> #functional-outcomes) { padding-inline: 40px !important; }
+}
+/* This section previously used normal flow at every size. Keep its compact
+   cards until the full reference scene fits, including the intermediate range. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-pair { grid-template-columns: 1fr !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-health-group { border-left: 0 !important; padding-left: 0 !important; }
+}
+@layer arotec-mobile-main-headings {
+  @media (max-width: 800px) {
+    html body.sip-page main#main#main #functional-outcomes .sip-functional-heading h2 { font-size: 24px !important; line-height: 1.2 !important; }
+  }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main .sip-functional-section:has(> #functional-outcomes) { padding-inline: 150px !important; overflow: clip !important; }
+  html body.sip-page main#main#main #functional-outcomes { overflow: visible !important; }
+  html body.sip-page main#main#main #functional-outcomes > #functional-outcomes-content {
+    --functional-unit: calc(100cqw / 1223);
+    position: relative !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+    width: 100% !important;
+    aspect-ratio: 1223 / 884.736 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes > #functional-outcomes-content::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -33.687653%;
+    width: 167.457073%;
+    background: url("../images/synesthesia-inspired-perception/functional-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #functional-outcomes :is(.sip-outcome-group, .sip-outcome-grid, .sip-outcome-pair, .sip-evidence, .sip-evidence-scale) {
+    display: contents !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-photo { display: none !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-rule::before,
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-rule::after { display: none !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-functional-heading {
+    position: absolute !important;
+    left: calc(62 * var(--functional-unit)) !important;
+    top: calc(83 * var(--functional-unit)) !important;
+    width: calc(1100 * var(--functional-unit)) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-functional-heading h2 { --outcome-title-size: calc(28 * var(--functional-unit)) !important; white-space: normal !important; text-wrap: wrap !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-functional-heading p {
+    width: calc(820 * var(--functional-unit)) !important;
+    margin: calc(3 * var(--functional-unit)) auto 0 !important;
+    font-size: calc(12.5 * var(--functional-unit)) !important;
+    line-height: 1.25 !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-rule {
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 0 !important;
+    height: calc(24 * var(--functional-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    --outcome-title-size: calc(15.5 * var(--functional-unit)) !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes #sip-functional-outcomes-title {
+    left: calc(392 * var(--functional-unit)) !important;
+    top: calc(175 * var(--functional-unit)) !important;
+    width: calc(440 * var(--functional-unit)) !important;
+    /* The clean source retains a line segment behind this heading. */
+    background: linear-gradient(to right, transparent, #f8f8f8 3%, #f8f8f8 97%, transparent) !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes #sip-wellbeing-title { left: calc(149 * var(--functional-unit)) !important; top: calc(481 * var(--functional-unit)) !important; width: calc(356 * var(--functional-unit)) !important; --outcome-title-size: calc(14.5 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes #sip-health-title { left: calc(760 * var(--functional-unit)) !important; top: calc(481 * var(--functional-unit)) !important; width: calc(330 * var(--functional-unit)) !important; --outcome-title-size: calc(14.5 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes #sip-evidence-title { left: calc(509 * var(--functional-unit)) !important; top: calc(687 * var(--functional-unit)) !important; width: calc(206 * var(--functional-unit)) !important; --outcome-title-size: calc(15 * var(--functional-unit)) !important; }
+
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-card { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four .sip-outcome-card { top: calc(378 * var(--functional-unit)) !important; width: calc(270 * var(--functional-unit)) !important; text-align: center !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four .sip-outcome-card:nth-child(1) { left: 0 !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four .sip-outcome-card:nth-child(2) { left: calc(321 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four .sip-outcome-card:nth-child(3) { left: calc(641 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four .sip-outcome-card:nth-child(4) { left: calc(953 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four h4 { --outcome-title-size: calc(14 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--four p { max-width: calc(220 * var(--functional-unit)) !important; margin: calc(4 * var(--functional-unit)) auto 0 !important; font-size: calc(12.5 * var(--functional-unit)) !important; line-height: 1.25 !important; text-wrap: balance !important; }
+  html body.sip-page main#main#main #functional-outcomes p.sip-outcome-together {
+    position: absolute !important;
+    left: calc(222 * var(--functional-unit)) !important;
+    top: calc(438 * var(--functional-unit)) !important;
+    width: calc(780 * var(--functional-unit)) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: calc(12.5 * var(--functional-unit)) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--three .sip-outcome-card { top: calc(588 * var(--functional-unit)) !important; text-align: left !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-pair > .sip-outcome-group:first-child .sip-outcome-card:nth-child(1) { left: calc(8 * var(--functional-unit)) !important; width: calc(187 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-pair > .sip-outcome-group:first-child .sip-outcome-card:nth-child(2) { left: calc(231 * var(--functional-unit)) !important; width: calc(185 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-pair > .sip-outcome-group:first-child .sip-outcome-card:nth-child(3) { left: calc(449 * var(--functional-unit)) !important; width: calc(186 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-health-group .sip-outcome-card:nth-child(1) { left: calc(672 * var(--functional-unit)) !important; width: calc(165 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-health-group .sip-outcome-card:nth-child(2) { left: calc(865 * var(--functional-unit)) !important; width: calc(165 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-health-group .sip-outcome-card:nth-child(3) { left: calc(1059 * var(--functional-unit)) !important; width: calc(164 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--three h4 { --outcome-title-size: calc(11.6 * var(--functional-unit)) !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-outcome-grid--three p { margin-top: calc(5 * var(--functional-unit)) !important; font-size: calc(11.4 * var(--functional-unit)) !important; line-height: 1.24 !important; text-wrap: wrap !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence > p {
+    position: absolute !important;
+    left: calc(277 * var(--functional-unit)) !important;
+    top: calc(710 * var(--functional-unit)) !important;
+    width: calc(670 * var(--functional-unit)) !important;
+    margin: 0 !important;
+    font-size: calc(11 * var(--functional-unit)) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes :is(.sip-evidence-supported, .sip-evidence-preliminary) {
+    position: absolute !important;
+    top: calc(746 * var(--functional-unit)) !important;
+    display: block !important;
+    font-size: calc(11 * var(--functional-unit)) !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-supported { left: calc(41 * var(--functional-unit)) !important; width: calc(161 * var(--functional-unit)) !important; color: #256487 !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-preliminary { left: calc(836 * var(--functional-unit)) !important; width: calc(125 * var(--functional-unit)) !important; color: #a65d12 !important; }
+  html body.sip-page main#main#main #functional-outcomes :is(.sip-evidence-supported, .sip-evidence-preliminary)::before {
+    content: "";
+    position: absolute;
+    top: calc(6 * var(--functional-unit));
+    left: calc(-33 * var(--functional-unit));
+    width: calc(20 * var(--functional-unit));
+    height: calc(20 * var(--functional-unit));
+    border-radius: 50%;
+    background: currentColor;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-preliminary::before { background: #cb8c2e; }
+  /* Extend the existing Phosphor arrow with a gradient shaft. The original
+     icon (or its shared SVG enhancement) remains the small, unstretched head. */
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-scale > .ph {
+    position: absolute !important;
+    left: calc(205 * var(--functional-unit)) !important;
+    top: calc(750 * var(--functional-unit)) !important;
+    width: calc(581 * var(--functional-unit)) !important;
+    height: calc(25 * var(--functional-unit)) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: calc(20 * var(--functional-unit)) !important;
+    color: #cb8c2e !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: linear-gradient(to right, #256487, #6b9dac 52%, #cb8c2e) left center / calc(100% - 5 * var(--functional-unit)) calc(2.5 * var(--functional-unit)) no-repeat !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-scale > .ph::before { position: absolute; right: calc(-4 * var(--functional-unit)); top: 50%; transform: translateY(-50%); }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-scale > .ph > svg[data-arotec-arrow-owned] {
+    --arotec-arrow-color: #cb8c2e !important;
+    --arotec-symbol-stroke: calc(2.5 * var(--functional-unit)) !important;
+    left: auto !important;
+    right: calc(-4 * var(--functional-unit)) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-caution {
+    position: absolute !important;
+    left: calc(997 * var(--functional-unit)) !important;
+    top: calc(725 * var(--functional-unit)) !important;
+    width: calc(224 * var(--functional-unit)) !important;
+    height: calc(57 * var(--functional-unit)) !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: calc(28 * var(--functional-unit)) minmax(0, 1fr) !important;
+    gap: calc(10 * var(--functional-unit)) !important;
+    margin: 0 !important;
+    padding: calc(7 * var(--functional-unit)) calc(12 * var(--functional-unit)) !important;
+    /* Keep the reference's amber evidence boundary outside the shared
+       navy text-frame border painter. */
+    border: 0 !important;
+    box-shadow: inset 0 0 0 calc(1 * var(--functional-unit)) #e5c995 !important;
+    border-radius: calc(4 * var(--functional-unit)) !important;
+    background: #fff8eb !important;
+    text-align: left !important;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-caution::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-24 * var(--functional-unit));
+    height: 100%;
+    border-left: calc(1 * var(--functional-unit)) solid #8aa7bb;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-caution > .ph { font-size: calc(28 * var(--functional-unit)) !important; color: #a65d12 !important; -webkit-text-fill-color: currentColor !important; }
+  html body.sip-page main#main#main #functional-outcomes .sip-evidence-caution p { padding-left: calc(11 * var(--functional-unit)) !important; border-left: calc(1 * var(--functional-unit)) solid #e4c994 !important; font-size: calc(10.4 * var(--functional-unit)) !important; line-height: 1.22 !important; color: #8d5016 !important; -webkit-text-fill-color: currentColor !important; }
+}
+
+@layer arotec-display-headings.spec {
+  @media (min-width: 1400px) {
+    html body.sip-page main#main#main #functional-outcomes .sip-functional-heading h2 { line-height: 1.2 !important; }
+    html body.sip-page main#main#main #functional-outcomes :is(h3, h4) { line-height: 1.25 !important; }
+  }
+}

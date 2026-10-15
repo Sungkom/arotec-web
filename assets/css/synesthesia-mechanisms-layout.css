@@ -1,0 +1,253 @@
+/* Exact 5000 x 2160 supplied scene, with live localized website copy.
+   Normalized source: 2048 x 884.736; foreground x=445..1602 (1157 units). */
+@layer arotec-mobile-main-headings {
+  @media (max-width: 767px) {
+    body.sip-page #synesthesia-mechanisms #mechanisms-title {
+      font-size: 24px !important;
+      line-height: 1.2 !important;
+      letter-spacing: -.025em !important;
+    }
+  }
+}
+@media (max-width: 800px) {
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas { padding-inline: 24px !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas { padding-inline: 40px !important; }
+}
+
+/* The previous absolute layout starts at 1200px. Keep a readable card flow
+   in this intermediate range, before the reference composition fits. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas {
+    display: block !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    padding: 44px 150px 32px !important;
+    overflow: hidden !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-mechanisms-heading, .sip-rule, .sip-determinant, .sip-mechanism-note, .sip-adaptive-outcome, .sip-bidirectional, .sip-representative-regions, .sip-framework-note, .sip-explore) {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: auto !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading h2 { --sip-h-size: 32px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading p { margin-top: 18px !important; --sip-p-size: 17px !important; --sip-p-leading: 1.6 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading p br { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule { display: flex !important; margin: 32px 0 22px !important; gap: 16px !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule h3 { --sip-h-size: 16px !important; --sip-h-leading: 1.3 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinants, .sip-adaptive-outcomes) { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 24px !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 16px !important; align-content: start !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-round-art { width: 110px !important; aspect-ratio: 1 !important; object-fit: cover !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) h4 { --sip-h-size: 18px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) p { margin-top: 8px !important; --sip-p-size: 14px !important; --sip-p-leading: 1.45 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) p br { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-figure { display: block !important; margin: 0 -24px 24px !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-art { position: static !important; inset: auto !important; width: 100% !important; height: 430px !important; object-fit: cover !important; object-position: center !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-leaders { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note { padding: 18px 0 !important; border-top: 1px solid #c6d1db !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note h4 { --sip-h-size: 20px !important; --sip-h-leading: 1.2 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note p { margin-top: 10px !important; --sip-p-size: 15px !important; --sip-p-leading: 1.5 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-bidirectional { margin-top: 22px !important; --sip-p-size: 15px !important; --sip-p-leading: 1.5 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-representative-regions { --sip-p-size: 13px !important; --sip-p-leading: 1.75 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note { grid-template-columns: 38px minmax(0, 1fr) !important; gap: 16px !important; margin-top: 26px !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note p { padding-left: 16px !important; --sip-p-size: 12px !important; --sip-p-leading: 1.5 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note p br { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-explore { width: 100% !important; margin-top: 28px !important; padding: 18px 0 18px 20px !important; gap: 20px !important; font-size: 15px !important; line-height: 1.4 !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-explore small { margin-bottom: 6px !important; font-size: 11px !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-explore > svg { width: 32px !important; }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main #synesthesia-mechanisms { padding-inline: 150px !important; overflow: clip !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas {
+    --mechanisms-unit: calc(100cqw / 1157);
+    display: block !important;
+    position: relative !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+    width: 100% !important;
+    aspect-ratio: 1157 / 884.736 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -38.461538%;
+    width: 177.009507%;
+    background: url("../images/synesthesia-inspired-perception/mechanisms-reference-clean.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  /* The clean source has an unused divider under the regions/footer copy. */
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: calc(274 * var(--mechanisms-unit));
+    top: calc(729 * var(--mechanisms-unit));
+    width: calc(12 * var(--mechanisms-unit));
+    height: calc(62 * var(--mechanisms-unit));
+    background: #f8f7f7;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-mechanisms-figure, .sip-round-art, .sip-mechanisms-leaders),
+  html body.sip-page main#main#main #synesthesia-mechanisms svg[data-arotec-arrow-owned],
+  html body.sip-page main#main#main #synesthesia-mechanisms svg[data-arotec-text-frame-owned] { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinants, .sip-adaptive-outcomes) { display: contents !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading {
+    position: absolute !important;
+    left: calc(24 * var(--mechanisms-unit)) !important;
+    top: calc(83 * var(--mechanisms-unit)) !important;
+    width: calc(1110 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading h2 { --sip-h-size: calc(29 * var(--mechanisms-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.035em !important; white-space: normal !important; text-wrap: wrap !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading p { margin: calc(6 * var(--mechanisms-unit)) 0 0 !important; --sip-p-size: calc(12.5 * var(--mechanisms-unit)) !important; --sip-p-leading: 1.28 !important; letter-spacing: -.02em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-heading p br { display: initial !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule {
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(24 * var(--mechanisms-unit)) !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule::before,
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule::after { display: none !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-rule h3 { --sip-h-size: calc(15.5 * var(--mechanisms-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.02em !important; max-width: none !important; text-align: center !important; white-space: normal !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinants-rule { top: calc(170 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-core-rule { top: calc(296 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-rule { top: calc(568 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-regions-rule { top: calc(709 * var(--mechanisms-unit)) !important; }
+
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) {
+    position: absolute !important;
+    display: block !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant { top: calc(209 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant:nth-child(1) { left: calc(183 * var(--mechanisms-unit)) !important; width: calc(218 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant:nth-child(2) { left: calc(566 * var(--mechanisms-unit)) !important; width: calc(201 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant:nth-child(3) { left: calc(916 * var(--mechanisms-unit)) !important; width: calc(239 * var(--mechanisms-unit)) !important; }
+  /* Blend out only the two unused arrow fragments beneath the live labels. */
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant:nth-child(1), .sip-determinant:nth-child(3))::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: calc(8 * var(--mechanisms-unit));
+    top: calc(22 * var(--mechanisms-unit));
+    width: calc(82 * var(--mechanisms-unit));
+    height: calc(22 * var(--mechanisms-unit));
+    background: #f6f5f5;
+    filter: blur(calc(3 * var(--mechanisms-unit)));
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant:nth-child(3)::before { background: #faf9f9; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant h4 { --sip-h-size: calc(13 * var(--mechanisms-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.03em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-determinant p { margin-top: calc(5 * var(--mechanisms-unit)) !important; --sip-p-size: calc(12 * var(--mechanisms-unit)) !important; --sip-p-leading: 1.25 !important; letter-spacing: -.03em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms :is(.sip-determinant, .sip-adaptive-outcome) p br { display: initial !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note {
+    position: absolute !important;
+    top: calc(347 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note--structural { left: calc(193 * var(--mechanisms-unit)) !important; width: calc(208 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note--functional { left: calc(758 * var(--mechanisms-unit)) !important; width: calc(258 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note h4 { --sip-h-size: calc(12.3 * var(--mechanisms-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.035em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanism-note p { margin-top: calc(5 * var(--mechanisms-unit)) !important; --sip-p-size: calc(12 * var(--mechanisms-unit)) !important; --sip-p-leading: 1.3 !important; letter-spacing: -.025em !important; }
+
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome { top: calc(605 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome:nth-child(1) { left: calc(156 * var(--mechanisms-unit)) !important; width: calc(181 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome:nth-child(2) { left: calc(528 * var(--mechanisms-unit)) !important; width: calc(233 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome:nth-child(3) { left: calc(945 * var(--mechanisms-unit)) !important; width: calc(209 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome h4 { --sip-h-size: calc(11.9 * var(--mechanisms-unit)) !important; --sip-h-leading: 1.2 !important; --sip-h-tracking: -.035em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome:nth-child(2) h4 { --sip-h-size: calc(10.9 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-adaptive-outcome p { margin-top: calc(5 * var(--mechanisms-unit)) !important; --sip-p-size: calc(11.4 * var(--mechanisms-unit)) !important; --sip-p-leading: 1.28 !important; letter-spacing: -.025em !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-bidirectional {
+    position: absolute !important;
+    left: calc(502 * var(--mechanisms-unit)) !important;
+    top: calc(681 * var(--mechanisms-unit)) !important;
+    width: calc(153 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    --sip-p-size: calc(12 * var(--mechanisms-unit)) !important;
+    --sip-p-leading: 1.2 !important;
+    --sip-copy-color: #287f91 !important;
+    color: #287f91 !important;
+    -webkit-text-fill-color: currentColor !important;
+    letter-spacing: -.02em !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-representative-regions {
+    position: absolute !important;
+    left: calc(29 * var(--mechanisms-unit)) !important;
+    top: calc(731 * var(--mechanisms-unit)) !important;
+    width: calc(1100 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    --sip-p-size: calc(11.1 * var(--mechanisms-unit)) !important;
+    --sip-p-leading: 1.3 !important;
+    letter-spacing: -.025em !important;
+    text-align: center !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note {
+    position: absolute !important;
+    left: calc(36 * var(--mechanisms-unit)) !important;
+    top: calc(758 * var(--mechanisms-unit)) !important;
+    width: calc(687 * var(--mechanisms-unit)) !important;
+    height: auto !important;
+    grid-template-columns: calc(27 * var(--mechanisms-unit)) minmax(0, 1fr) !important;
+    gap: calc(13 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    align-items: center !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note p {
+    padding-left: calc(12 * var(--mechanisms-unit)) !important;
+    border-left: calc(1 * var(--mechanisms-unit)) solid #b9a58c !important;
+    --sip-p-size: calc(10.5 * var(--mechanisms-unit)) !important;
+    --sip-p-leading: 1.3 !important;
+    --sip-copy-color: #957142 !important;
+    color: #957142 !important;
+    -webkit-text-fill-color: currentColor !important;
+    letter-spacing: -.015em !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-framework-note p br { display: initial !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-ui-icon--caution { color: #aa772c !important; -webkit-text-fill-color: currentColor !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-mechanisms-canvas > .sip-explore {
+    position: absolute !important;
+    left: calc(878 * var(--mechanisms-unit)) !important;
+    top: calc(758 * var(--mechanisms-unit)) !important;
+    width: calc(277 * var(--mechanisms-unit)) !important;
+    height: calc(31 * var(--mechanisms-unit)) !important;
+    margin: 0 !important;
+    padding: 0 0 0 calc(24 * var(--mechanisms-unit)) !important;
+    gap: calc(9 * var(--mechanisms-unit)) !important;
+    border-left: 0 !important;
+    font-size: calc(9.4 * var(--mechanisms-unit)) !important;
+    line-height: 1.3 !important;
+    letter-spacing: -.02em !important;
+  }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-explore small { font-size: calc(7.8 * var(--mechanisms-unit)) !important; margin-bottom: calc(2 * var(--mechanisms-unit)) !important; }
+  html body.sip-page main#main#main #synesthesia-mechanisms .sip-explore > svg { width: calc(22 * var(--mechanisms-unit)) !important; }
+}

@@ -1,0 +1,193 @@
+/* Exact 5000 x 2800 sensory-pathway artwork, with live DM Sans labels.
+   Normalized source: 2048 x 1146.88. The x=289..1790 foreground frame
+   follows the shared website gutters; compact content flow is retained. */
+@media (max-width: 800px) {
+  html body.sip-page main#main#main #five-sensory-pathways.sip-pathways { padding-inline: 24px !important; }
+}
+@media (min-width: 801px) and (max-width: 1199px) {
+  html body.sip-page main#main#main #five-sensory-pathways.sip-pathways { padding-inline: 40px !important; }
+}
+
+@media (min-width: 1400px) {
+  html body.sip-page main#main#main #five-sensory-pathways.sip-pathways {
+    padding: 0 150px !important;
+    overflow: clip !important;
+    background: #e9edf0 !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-canvas {
+    --five-pathways-unit: calc(100cqw / 1501);
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1501 / 1146.88 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    container-type: inline-size !important;
+    isolation: isolate !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-canvas::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: -19.253831%;
+    width: 136.442372%;
+    background: url("../images/synesthesia-inspired-perception/five-pathways-reference-clean.png?v=20261014") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways figure.sip-five-visual,
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-number {
+    display: none !important;
+  }
+
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-copy {
+    position: absolute !important;
+    inset: 0 auto 0 0 !important;
+    width: calc(355 * var(--five-pathways-unit)) !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-copy h2 {
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(227.072 * var(--five-pathways-unit)) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    --sip-h-size: calc(52 * var(--five-pathways-unit)) !important;
+    --sip-h-leading: 1.15 !important;
+    --sip-h-weight: 700 !important;
+    --sip-h-tracking: -.035em !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-copy p {
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(449.072 * var(--five-pathways-unit)) !important;
+    width: calc(335 * var(--five-pathways-unit)) !important;
+    margin: 0 !important;
+    --sip-p-size: calc(23 * var(--five-pathways-unit)) !important;
+    --sip-p-leading: 1.47 !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-motto {
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(862.072 * var(--five-pathways-unit)) !important;
+    width: calc(250 * var(--five-pathways-unit)) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: calc(22 * var(--five-pathways-unit)) 0 0 !important;
+    border: 0 !important;
+    font-size: calc(10.8 * var(--five-pathways-unit)) !important;
+    line-height: 2.7 !important;
+    font-weight: 500 !important;
+    letter-spacing: .48em !important;
+    text-transform: uppercase !important;
+    color: #9ca8b4 !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-motto::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(54 * var(--five-pathways-unit));
+    height: calc(1.4 * var(--five-pathways-unit));
+    background: #b9c3cc;
+  }
+
+  html body.sip-page main#main#main #five-sensory-pathways ol.sip-five-senses {
+    display: contents !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li {
+    position: absolute !important;
+    left: calc(395 * var(--five-pathways-unit)) !important;
+    width: calc(177 * var(--five-pathways-unit)) !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:nth-child(1) { top: calc(230.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:nth-child(2) { top: calc(376.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:nth-child(3) { top: calc(530.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:nth-child(4) { top: calc(680.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:nth-child(5) { top: calc(821.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses h3 {
+    margin: 0 !important;
+    --sip-h-size: calc(24 * var(--five-pathways-unit)) !important;
+    --sip-h-leading: 1.2 !important;
+    --sip-h-weight: 700 !important;
+    --sip-h-tracking: -.025em !important;
+    text-wrap: wrap !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses p {
+    margin-top: calc(6 * var(--five-pathways-unit)) !important;
+    --sip-p-size: calc(13.5 * var(--five-pathways-unit)) !important;
+    --sip-p-leading: 1.24 !important;
+    text-wrap: balance !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:last-child h3 {
+    --sip-h-size: calc(20.5 * var(--five-pathways-unit)) !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-senses > li:last-child p { margin-top: calc(9 * var(--five-pathways-unit)) !important; }
+
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions,
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions ul {
+    display: contents !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-legend-title {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0 !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li {
+    position: absolute !important;
+    left: calc(1429 * var(--five-pathways-unit)) !important;
+    width: calc(67 * var(--five-pathways-unit)) !important;
+    --sip-p-size: calc(10.5 * var(--five-pathways-unit)) !important;
+    --sip-p-leading: 1.5 !important;
+    --sip-copy-color: #8e9aa8 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: 600 !important;
+    letter-spacing: .1em !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    color: #8e9aa8 !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-wrap: wrap !important;
+  }
+  /* English atlas labels use one word per line without changing translated
+     text nodes or adding line-break slots to the localization catalog. */
+  html:lang(en) body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li { word-spacing: calc(120 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li:nth-child(1) {
+    left: calc(1391 * var(--five-pathways-unit)) !important;
+    top: calc(214.072 * var(--five-pathways-unit)) !important;
+    width: calc(110 * var(--five-pathways-unit)) !important;
+  }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li:nth-child(2) { top: calc(334.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li:nth-child(3) { top: calc(472.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li:nth-child(4) { top: calc(586.072 * var(--five-pathways-unit)) !important; }
+  html body.sip-page main#main#main #five-sensory-pathways .sip-five-regions li:nth-child(5) {
+    left: calc(1391 * var(--five-pathways-unit)) !important;
+    top: calc(667.072 * var(--five-pathways-unit)) !important;
+    width: calc(110 * var(--five-pathways-unit)) !important;
+  }
+}

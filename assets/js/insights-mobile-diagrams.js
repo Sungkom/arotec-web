@@ -193,7 +193,7 @@
       if (dialog.open) return;
 
       returnFocus = button;
-      title.textContent = figure.dataset.diagramTitle || "Sleep and beauty diagram";
+      title.textContent = figure.dataset.diagramTitle || "Sleep and Beauty Diagram";
       canvas = sourceCanvas.cloneNode(true);
       canvas.classList.add("isb-diagram-dialog-canvas");
       canvas.removeAttribute("id");

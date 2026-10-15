@@ -108,7 +108,7 @@
       if (dialog.open) return;
 
       returnFocus = button;
-      title.textContent = figure.dataset.diagramTitle || "Sleep and systemic health diagram";
+      title.textContent = figure.dataset.diagramTitle || "Sleep and Systemic Health Diagram";
       canvas = sourceCanvas.cloneNode(true);
       canvas.classList.add("shm-diagram-dialog-canvas");
       canvas.removeAttribute("id");

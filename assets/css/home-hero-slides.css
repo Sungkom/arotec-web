@@ -432,3 +432,150 @@ body[data-page="home"] .hero-slide-controls {
 @media (min-width: 761px) and (max-width: 1199px) {
   #home-hero .hero-content--why .hero-reference-copy { top: 44%; }
 }
+
+/* Human Experience: align the live translated copy to the supplied collage.
+   Both layers share one proportional canvas, keeping type clear of the photos. */
+@media (min-width: 761px) {
+  #home-hero :is(.hero-slide--experience, .hero-content--experience) .hero-reference-frame {
+    inset: 0 auto auto 50%;
+    width: max(100%, calc(var(--hero-stage-height) * 32 / 15));
+    height: auto;
+    aspect-ratio: 32 / 15;
+    transform: translateX(-50%);
+  }
+  #home-hero .hero-slide--experience .hero-reference-art { height: auto; }
+  #home-hero .hero-content--experience .hero-reference-copy {
+    left: 27.35%;
+    top: 10.8%;
+    width: 43%;
+    transform: none;
+  }
+  @layer arotec-language-fonts {
+    html:lang(en) #home-hero .hero-content--experience :is(.hero-title, .hero-reference-eyebrow, .hero-reference-support, .hero-reference-cta, .hero-reference-cta span, .hero-reference-topics li) {
+      font-family: "Roboto Condensed", sans-serif !important;
+    }
+  }
+  #home-hero .hero-content--experience .hero-title {
+    --arotec-display-size: 3.25cqw;
+    --arotec-display-line-height: .94;
+    --arotec-display-letter-spacing: -.035em;
+    --arotec-display-weight: 800;
+  }
+  #home-hero .hero-content--experience .hero-reference-eyebrow {
+    font-size: .85cqw !important;
+    letter-spacing: .25em !important;
+    margin: 0 0 .55cqw !important;
+  }
+  #home-hero .hero-content--experience .hero-reference-support {
+    font-size: 1.45cqw !important;
+    line-height: 1.15 !important;
+    margin-top: .35cqw !important;
+  }
+  #home-hero .hero-content--experience .hero-reference-body {
+    font-size: 1.13cqw !important;
+    line-height: 1.28 !important;
+    margin-top: .28cqw !important;
+    max-width: 36cqw;
+  }
+  #home-hero .hero-content--experience .hero-reference-cta {
+    font-size: 1.05cqw !important;
+    min-height: 2cqw;
+    padding: .35cqw 1cqw;
+    margin-top: 1.05cqw;
+    gap: .9cqw;
+    border-radius: 2px;
+  }
+  #home-hero .hero-content--experience .hero-reference-cta .ph { font-size: 1.2cqw; }
+  #home-hero .hero-content--experience .hero-reference-topics {
+    width: 41cqw;
+    margin: 1.05cqw 0 0;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  #home-hero .hero-content--experience .hero-reference-topics li {
+    font-size: .98cqw !important;
+    line-height: 1.25 !important;
+    text-shadow: none;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+  #home-hero .hero-content--experience .hero-reference-topics li + li { padding-left: 1.2cqw; }
+  /* Translations keep their native typefaces and a clear band above the art. */
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-copy { top: 8%; }
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-title { --arotec-display-size: 2.9cqw; --arotec-display-line-height: 1.08; }
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-support { font-size: 1.22cqw !important; }
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-body { font-size: 1.05cqw !important; max-width: 40cqw; }
+}
+/* Keep the collage and translated copy inside tall tablet viewports. */
+@media (min-width: 761px) and (max-aspect-ratio: 4 / 3) {
+  #home-hero :is(.hero-slide--experience, .hero-content--experience) .hero-reference-frame {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    transform: none;
+  }
+  #home-hero .hero-slide--experience { background: #edf6ff; }
+  #home-hero .hero-slide--experience .hero-reference-art {
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    height: 45%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+  #home-hero .hero-content--experience .hero-reference-copy,
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-copy {
+    left: 12%;
+    top: 8%;
+    width: 76%;
+  }
+  #home-hero .hero-content--experience .hero-title,
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-title {
+    --arotec-display-size: clamp(32px, 4.8cqw, 50px);
+    --arotec-display-line-height: 1.08;
+  }
+  #home-hero .hero-content--experience .hero-reference-eyebrow {
+    font-size: clamp(12px, 1.5cqw, 16px) !important;
+    margin-bottom: 10px !important;
+  }
+  #home-hero .hero-content--experience .hero-reference-support,
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-support {
+    font-size: clamp(17px, 2.15cqw, 22px) !important;
+    line-height: 1.3 !important;
+    margin-top: 12px !important;
+  }
+  #home-hero .hero-content--experience .hero-reference-body,
+  html:not(:lang(en)) #home-hero .hero-content--experience .hero-reference-body {
+    font-size: clamp(16px, 2cqw, 20px) !important;
+    line-height: 1.4 !important;
+    max-width: 100%;
+    margin-top: 10px !important;
+  }
+  #home-hero .hero-content--experience .hero-reference-cta {
+    font-size: 15px !important;
+    min-height: 42px;
+    padding: 9px 15px;
+    margin-top: 18px;
+    gap: 18px;
+  }
+  #home-hero .hero-content--experience .hero-reference-cta .ph { font-size: 19px; }
+  #home-hero .hero-content--experience .hero-reference-topics {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    width: 100%;
+    margin-top: 22px;
+    gap: 12px 16px;
+  }
+  #home-hero .hero-content--experience .hero-reference-topics li {
+    font-size: clamp(12px, 1.55cqw, 16px) !important;
+    text-align: left;
+    white-space: normal;
+  }
+  #home-hero .hero-content--experience .hero-reference-topics li + li { padding-left: 0; border-left: 0; }
+  #home-hero .hero-content--experience .hero-reference-topics li:nth-child(even) { padding-left: 16px; border-left: 1px solid rgb(37 65 94 / .5); }
+}
+@media (max-width: 760px) {
+  #home-hero .hero-slide--experience .hero-reference-art { height: 41%; object-fit: contain; object-position: center bottom; }
+}

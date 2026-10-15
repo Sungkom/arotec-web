@@ -210,3 +210,8 @@ html body.brs-page main#main#main #olfactiva .ols-chapter-links a:hover { text-d
   html body.brs-page main#main#main #olfactiva .ols-brain-image { max-width:180px; }
   html body.brs-page main#main#main #olfactiva .ols-brain-legend { flex-direction:row; flex-wrap:wrap; justify-content:center; }
 }
+
+/* Reciprocal connector is on the pale Olfactiva text panel. */
+#olfactiva .ols-reciprocal > i.ph-arrows-left-right > svg[data-arotec-arrow-owned="symbols"] {
+  --arotec-arrow-color: #113568 !important;
+}

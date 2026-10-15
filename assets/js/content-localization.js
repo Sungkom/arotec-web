@@ -5,9 +5,13 @@
   const LANGUAGE_KEY = 'as-site-language';
   const LANGUAGES = { en: 'en', ja: 'ja', 'zh-CN': 'zh-CN', zh: 'zh-Hant', th: 'th' };
   const canonical = value => String(value == null ? '' : value).replace(/\s+/g, ' ').trim();
-  const localeOf = value => value === 'zh-Hant' ? 'zh' : (Object.hasOwn(LANGUAGES, value) ? value : null);
+  const localeOf = value => {
+    const key = String(value || '').trim().toLowerCase();
+    const aliases = { 'zh-hant': 'zh', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN' };
+    const next = Object.hasOwn(aliases, key) ? aliases[key] : key;
+    return Object.hasOwn(LANGUAGES, next) ? next : null;
+  };
   const readLocale = () => { try { return localeOf(localStorage.getItem(LANGUAGE_KEY)); } catch (_) { return null; } };
-  let locale = readLocale() || localeOf(document.body?.dataset.defaultLanguage) || 'th';
   const script = document.currentScript;
   const base = script?.src ? new URL('../../', script.src).pathname : '/';
   const decode = value => { try { return decodeURIComponent(value); } catch (_) { return value; } };
@@ -15,6 +19,17 @@
   if (page.startsWith(decode(base))) page = page.slice(decode(base).length);
   page = page.replace(/^\/+/, '');
   if (!page || page.endsWith('/')) page += 'index.html';
+  // Explicit research/Insights link language applies to this URL, never a saved preference.
+  const URL_LOCALE_PAGES = new Set(["Neuro-Skin-Science.html","exercise-beauty.html","exercise-beauty/index.html","exercise-health.html","exercise-health/index.html","exposome.html","homeostasis-regulation.html","human-longevity-aging.html","human-longevity-aging2.html","index.html","neuro-scented-therapy.html","neuro-skin-care.html","neuroplasticity.html","olfactory-science.html","pages/Neuro-Skin-Science.html","pages/brain-skin-neurocutaneous-loop.html","pages/exercise-beauty.html","pages/exercise-health.html","pages/exposome.html","pages/hair-follicle-biology.html","pages/homeostasis-regulation.html","pages/human-longevity-aging.html","pages/human-longevity-aging2.html","pages/neuro-scented-therapy.html","pages/neuro-skin-care.html","pages/neuroplasticity.html","pages/olfactory-science.html","pages/sleep-beauty.html","pages/sleep-health.html","pages/stress-atc.html","pages/stress-neurobiology.html","pages/synesthesia-inspired-perception.html","sleep-health.html","sleep-human-beauty/index.html","stress-atc.html","stress-neurobiology.html","synesthesia-inspired-perception.html"]);
+  const readURLLocale = () => URL_LOCALE_PAGES.has(page) ? localeOf(new URL(location.href).searchParams.get('lang')) : null;
+  function syncURLLocale(next) {
+    if (!URL_LOCALE_PAGES.has(page)) return;
+    const url = new URL(location.href);
+    if (!url.searchParams.has('lang')) return;
+    url.searchParams.set('lang', next === 'zh' ? 'zh-Hant' : next === 'zh-CN' ? 'zh-Hans' : next);
+    if (url.href !== location.href) history.replaceState(history.state, '', url.href);
+  }
+  let locale = readURLLocale() || readLocale() || localeOf(document.body?.dataset.defaultLanguage) || 'th';
   const entries = new Map(), renderers = new Map(), nodeStates = new WeakMap();
   const results = new Map();
   const managedLanguages = new WeakSet();
@@ -32,6 +47,11 @@
       el.matches('[data-arotec-i18n-value],[translate="no"],[data-preserve-content]') ||
       /material-symbols|material-icons|\bph(?:-|\s|$)/.test(String(el.className));
   }
+  function retainedTextNodeValue(node) {
+    if (node?.nodeType === 3) return node.nodeValue;
+    if (!['arotec-operator-run', 'arotec-operator-text', 'arotec-arrow-run', 'arotec-arrow-text'].includes(node?.localName)) return null;
+    return window.ArotecSiteSymbols?.originalText(node) ?? window.ArotecArrowSymbols?.originalText(node) ?? null;
+  }
   function snapshot(el, previous, ignoreMarkers = false) {
     const nodes = previous?.nodes || [], ids = previous?.ids || new Map();
     const clonedId = !previous && !ignoreMarkers && el.getAttribute('data-arotec-i18n-bound');
@@ -39,6 +59,20 @@
     function visit(node, parentIndex = null) {
       if (node.nodeType === 3) return node.nodeValue;
       if (node.nodeType !== 1) return '';
+      // Arrow rendering retains the original text and image placeholders. Its
+      // trusted text wrappers and decorative image overlays add no message slots.
+      const operatorText = window.ArotecSiteSymbols?.originalText(node);
+      if (operatorText != null) return operatorText;
+      const arrowText = window.ArotecArrowSymbols?.originalText(node);
+      if (arrowText != null) return arrowText;
+      if (node.namespaceURI === 'http://www.w3.org/2000/svg' &&
+          node.getAttribute('data-arotec-arrow-owned') === 'assets' &&
+          node.getAttribute('data-arotec-arrow-generated') === 'assets') return '';
+      // Exact owned frame decorations are not message placeholders. Meaningful
+      // SVG/image nodes and their authored styling remain untouched here.
+      if (node.namespaceURI === 'http://www.w3.org/2000/svg' &&
+          ((node.localName === 'svg' && node.getAttribute('data-arotec-symbol-frame-owned') === 'embedded') ||
+           (node.localName === 'path' && node.getAttribute('data-arotec-text-frame-owned') === 'svg-frame'))) return '';
       let index = ids.get(node);
       if (index === undefined) {
         if (previous) { valid = false; return ''; }
@@ -158,8 +192,8 @@
   function valueOf(el, target, state) {
     if (target.attribute) return canonical(target.attribute === 'textContent' ? el.textContent : el.getAttribute(target.attribute));
     if (target.textNodeIndex != null) {
-      const text = el.childNodes[target.textNodeIndex];
-      return text?.nodeType === 3 ? canonical(text.nodeValue) : null;
+      const text = retainedTextNodeValue(el.childNodes[target.textNodeIndex]);
+      return text != null ? canonical(text) : null;
     }
     const result = snapshot(el, state);
     return result.valid ? result.source : null;
@@ -191,7 +225,8 @@
     if (!params) return null;
     state = { id: entry.id, el, target, params, last: current, ...(!target.attribute && target.textNodeIndex == null ? snapshot(el) : { nodes: [], ids: new Map() }) };
     if (target.textNodeIndex != null) {
-      const raw = el.childNodes[target.textNodeIndex].nodeValue;
+      const raw = retainedTextNodeValue(el.childNodes[target.textNodeIndex]);
+      if (raw == null) return null;
       state.prefix = raw.match(/^\s*/)[0];
       state.suffix = raw.match(/\s*$/)[0];
     }
@@ -219,8 +254,10 @@
     else if (target.attribute) el.setAttribute(target.attribute, next);
     else if (target.textNodeIndex != null) {
       const node = el.childNodes[target.textNodeIndex];
-      if (node?.nodeType !== 3) return;
-      node.nodeValue = `${state.prefix}${next}${state.suffix}`;
+      if (retainedTextNodeValue(node) == null) return;
+      const value = `${state.prefix}${next}${state.suffix}`;
+      if (node.nodeType === 3) node.nodeValue = value;
+      else node.replaceWith(document.createTextNode(value));
     } else {
       const plan = parse(template, state);
       if (!plan) { report('invalid-placeholders', entry.id, locale); return; }
@@ -300,7 +337,7 @@
     if (!scheduled && managed) { scheduled = true; requestAnimationFrame(apply); }
   }
   function notifyNative() {
-    document.dispatchEvent(new CustomEvent('arotec:languagechange', { detail: { lang: locale, source: 'arotec-i18n' } }));
+    document.dispatchEvent(new CustomEvent('arotec:languagechange', { detail: { lang: locale, source: 'arotec-i18n', persist: false } }));
   }
   function renderCanonical() {
     for (const [id, renderer] of renderers) {
@@ -314,7 +351,7 @@
     if (!next) return false;
     const changed = locale !== next;
     locale = next;
-    if (options.persist !== false) { try { localStorage.setItem(LANGUAGE_KEY, locale); } catch (_) {} }
+    if (options.persist !== false) { syncURLLocale(locale); try { localStorage.setItem(LANGUAGE_KEY, locale); } catch (_) {} }
     if (managed && (changed || options.render)) renderCanonical();
     else schedule();
     return true;
@@ -397,7 +434,14 @@
     nativeEvents += 1;
     const value = typeof event.detail === 'string' ? event.detail : event.detail?.lang || event.detail?.language;
     const next = localeOf(value);
-    if (next) { locale = next; try { localStorage.setItem(LANGUAGE_KEY, next); } catch (_) {} schedule(); }
+    if (next) {
+      locale = next;
+      if (event.detail?.source !== 'arotec-i18n' && event.detail?.persist !== false) {
+        syncURLLocale(next);
+        try { localStorage.setItem(LANGUAGE_KEY, next); } catch (_) {}
+      }
+      schedule();
+    }
   });
   // Legacy controls do not all emit the shared event. Let native handlers finish,
   // then supply the event only when none was emitted during this interaction.
@@ -409,9 +453,9 @@
   }
   document.addEventListener('change', fromControl, true);
   document.addEventListener('click', fromControl, true);
-  window.addEventListener('storage', event => { if (event.key === LANGUAGE_KEY && localeOf(event.newValue)) setLocale(event.newValue, { persist: false, render: true }); });
-  window.addEventListener('pageshow', () => setLocale(readLocale() || locale, { persist: false, render: true }));
-  window.addEventListener('popstate', () => setLocale(readLocale() || locale, { persist: false, render: true }));
+  window.addEventListener('storage', event => { if (!readURLLocale() && event.key === LANGUAGE_KEY && localeOf(event.newValue)) setLocale(event.newValue, { persist: false, render: true }); });
+  window.addEventListener('pageshow', () => setLocale(readURLLocale() || readLocale() || locale, { persist: false, render: true }));
+  window.addEventListener('popstate', () => setLocale(readURLLocale() || readLocale() || locale, { persist: false, render: true }));
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', schedule, { once: true });
   observe();
   for (const payload of window.AROTEC_I18N_QUEUE || []) register(payload);

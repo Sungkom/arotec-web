@@ -9,9 +9,9 @@
     [new URL("../../uniquely-yours.html", document.currentScript.src).href, "Uniquely Yours"],
     ["applied-solutions.html", "Applied Solutions"],
     ["applied-products.html", "Applied Products"],
-    ["platform.html", "Platform"],
+    [null, "Platform"],
     ["who-we-are.html", "Who We Are"],
-    ["insights.html", "Insights"],
+    [null, "Insights"],
     ["partners.html", "Partners"],
     ["partners.html#b2b", "CO-CREATION"],
     ["join-us.html", "Join Us"],
@@ -41,19 +41,19 @@
     },
     Insights: {
       ariaLabel: "Insight topics",
-      href: "insights.html",
+      href: null,
       items: [
-        ["exercise-beauty", "Exercise x Beauty"],
+        ["exercise-beauty", "Exercise x Beauty", "exercise-beauty.html"],
         ["exercise-health", "Exercise x Health", "exercise-health.html"],
-        ["sleep-beauty", "Sleep x Beauty"],
+        ["sleep-beauty", "Sleep x Beauty", "sleep-beauty.html"],
         ["sleep-health", "Sleep x Health", "sleep-health.html"],
       ],
     },
     Platform: {
       ariaLabel: "Platform modules",
-      href: "platform.html",
+      href: null,
       items: [
-        ["piper-longum", "Piper Longum", "platform.html"],
+        ["piper-longum", "Piper Longum", "piper-longum.html"],
       ],
     },
     Partners: {
@@ -67,19 +67,22 @@
       ],
     },
   };
+  const platformTriggerStyle = "appearance:none;margin:0;padding:0;border:0;background:transparent;font-family:inherit;cursor:pointer;text-align:inherit";
   const dropdownLinks = (menu, className) => menu.items
     .map(([id, label, href]) => `<a class="${className}" href="${href || `${menu.href}#${id}`}">${label}</a>`)
     .join("");
 
   const desktopNav = header.querySelector(".desktop-nav, .commerce-nav");
   if (desktopNav) {
-    const existingLinks = Array.from(desktopNav.querySelectorAll(":scope > a"));
+    const existingLinks = Array.from(desktopNav.querySelectorAll(":scope > a, :scope > button"));
     const fallbackClass = existingLinks[0]?.className || "nav-link";
     const normalizedLinks = links.map(([href, label]) => {
       const existing = existingLinks.find((link) => link.textContent.trim() === label);
-      const link = existing || document.createElement("a");
+      const group = label === "Platform" || label === "Insights";
+      const link = existing?.matches(group ? "button" : "a") ? existing : document.createElement(group ? "button" : "a");
       link.className = existing?.className || fallbackClass;
-      link.href = href;
+      if (group) { link.type = "button"; link.style.cssText = platformTriggerStyle; if (label === "Insights") link.dataset.insightsDisclosure = ""; }
+      else link.href = href;
       link.textContent = label;
       return link;
     });
@@ -87,7 +90,7 @@
   }
   Object.entries(dropdownMenus).forEach(([label, menu]) => {
     const desktopLink = Array.from(desktopNav?.children || [])
-      .find((item) => item.matches("a") && item.textContent.trim() === label);
+      .find((item) => item.matches("a, button") && item.textContent.trim() === label);
     if (!desktopLink) return;
     const dropdown = document.createElement("div");
     dropdown.className = "nav-dropdown";
@@ -144,7 +147,7 @@
       ${links.map(([href, label]) => {
         const menu = dropdownMenus[label];
         return menu
-          ? `<div class="mobile-nav-group"><a class="nav-link nav-dropdown-trigger" href="${href}" aria-haspopup="true">${label}<span class="nav-dropdown-chevron" aria-hidden="true"></span></a><div class="mobile-nav-submenu" aria-label="${menu.ariaLabel}">${dropdownLinks(menu, "mobile-nav-sublink")}</div></div>`
+          ? `<div class="mobile-nav-group">${label === "Platform" || label === "Insights" ? `<button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true" style="${platformTriggerStyle}"${label === "Insights" ? ' data-insights-disclosure=""' : ""}>${label}<span class="nav-dropdown-chevron" aria-hidden="true"></span></button>` : `<a class="nav-link nav-dropdown-trigger" href="${href}" aria-haspopup="true">${label}<span class="nav-dropdown-chevron" aria-hidden="true"></span></a>`}<div class="mobile-nav-submenu" aria-label="${menu.ariaLabel}">${dropdownLinks(menu, "mobile-nav-sublink")}</div></div>`
           : `<a class="nav-link" href="${href}">${label}</a>`;
       }).join("")}
     </nav>

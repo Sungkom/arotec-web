@@ -940,3 +940,69 @@ html body.bri-page main#main#main #how-ingredients-work .bri-landscape--water > 
     min-height: 245px;
   }
 }
+/* Keep the journey and pathway connectors centered in the image gaps.
+   The art wrappers span their existing tracks; the images retain their caps. */
+@media (min-width: 701px) {
+  html body.bri-page main#main#main #why-bio-responsive .bri-journey-art {
+    width: 100%;
+  }
+  html body.bri-page main#main#main #why-bio-responsive .bri-journey-image {
+    max-width: 240px;
+    margin-inline: auto;
+  }
+  html body.bri-page main#main#main #why-bio-responsive .bri-journey-arrow {
+    left: var(--bri-arrow-x, calc(100% + 17px));
+    right: auto;
+    top: var(--bri-arrow-y, 50%);
+    width: 28px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 901px) {
+  html body.bri-page main#main#main :is(#human-response-framework, #how-ingredients-work) .bri-step-art {
+    width: 100%;
+  }
+  html body.bri-page main#main#main :is(#human-response-framework, #how-ingredients-work) .bri-step-image {
+    max-width: 160px;
+    margin-inline: auto;
+  }
+  html body.bri-page main#main#main :is(#human-response-framework, #how-ingredients-work) .bri-step-arrow {
+    left: var(--bri-arrow-x, calc(100% + 11px));
+    right: auto;
+    top: var(--bri-arrow-y, 50%);
+    width: clamp(16px, calc(100% - 146px), 28px);
+    height: 22px;
+    transform: translate(-50%, -50%);
+  }
+  html body.bri-page main#main#main #human-response-framework .bri-step-arrow {
+    left: var(--bri-arrow-x, calc(100% + 11.5px));
+  }
+}
+html body.bri-page main#main#main :is(.bri-journey-arrow, .bri-step-arrow)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 1.5px);
+  height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+}
+html body.bri-page main#main#main :is(.bri-journey-arrow, .bri-step-arrow)::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+/* Shared site navy; preserve the existing connector center coordinates. */
+html body.bri-page main#main#main :is(#why-bio-responsive, #human-response-framework, #how-ingredients-work) :is(.bri-journey-arrow, .bri-step-arrow) {
+  color: var(--arotec-text-navy, #113568);
+}
