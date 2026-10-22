@@ -3,6 +3,7 @@
   <head>
 <link rel="stylesheet" href="assets/css/text-colors.css?v=20261014-cjk-native-v3">
   <link rel="stylesheet" href="assets/css/content-protection.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/home-section-headings.css?v=20261022-framework-gutters-v3">
 <link rel="stylesheet" href="assets/css/mobile-main-headings.css?v=20260930-mobile-60-v1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,7 @@
   <link rel="stylesheet" href="style.css?v=20260810-product-card-icons-v24">
   <link rel="stylesheet" href="assets/css/site-navigation.min.css?v=20260910-closed-panel-shadow-v1">
     <link rel="stylesheet" href="assets/vendor/phosphor-icons/regular/style.css">
-    <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20260927-section-spacing-v9">
+    <link rel="stylesheet" href="assets/css/home-biology-experience.css?v=20261022-feedback-curve-v1">
     <link rel="stylesheet" href="assets/css/home-research-focus.css?v=20261003-gutter-flow-v3">
     <link rel="stylesheet" href="assets/css/home-framework-tree.css?v=20261005-circle-caption-wrap-v1">
     <link rel="stylesheet" href="assets/css/home-framework-icons.css?v=20260918-tree-v3">
@@ -44,6 +45,11 @@
     <!-- Biology: desktop uses the supplied panorama; compact screens retain the detailed portrait diagram. -->
     <template id="biology-experience-template">
       <section class="biology-experience biology-wide" id="biology-experience" aria-labelledby="wellbeing-title" lang="en" data-active-stage="0">
+        <header class="biology-heading">
+          <p class="biology-eyebrow">A&amp;S Human Experience Research</p>
+          <h2 id="wellbeing-title">The Biology of Human Experience</h2>
+          <p class="biology-subtitle">How the world around us becomes perception, feeling, behavior and wellbeing.</p>
+        </header>
         <div class="biology-viewport" role="region" aria-label="Biology of Human Experience diagram" tabindex="0">
           <div class="biology-canvas">
             <div class="biology-artwork">
@@ -63,12 +69,13 @@
                 <span class="biology-node" data-biology-node="8" style="--stage-color:#9c650b;left:65.883978%;top:84.792219%"></span>
               </div>
             </div>
-            <header class="biology-heading">
-              <p class="biology-eyebrow">A&amp;S Human Experience Research</p>
-              <h2 id="wellbeing-title">The Biology of Human Experience</h2>
-              <p class="biology-subtitle">How the world around us becomes perception, feeling, behavior and wellbeing.</p>
-            </header>
-            <div class="biology-phases"><span class="biology-phase biology-signals">Signals</span><span class="biology-phase biology-regulation">Regulation</span><span class="biology-phase biology-outcomes">Outcomes</span><span class="biology-feedback" aria-label="Feedback loop"><span aria-hidden="true"><span style="left:21.339779%;top:53.580902%;transform:rotate(88deg)">F</span><span style="left:21.356141%;top:54.774536%;transform:rotate(86deg)">E</span><span style="left:21.405228%;top:55.968170%;transform:rotate(84deg)">E</span><span style="left:21.487039%;top:57.161804%;transform:rotate(82deg)">D</span><span style="left:21.601575%;top:58.355438%;transform:rotate(80deg)">B</span><span style="left:21.748835%;top:59.549072%;transform:rotate(78deg)">A</span><span style="left:21.928819%;top:60.742706%;transform:rotate(76deg)">C</span><span style="left:22.141528%;top:61.936340%;transform:rotate(74deg)">K</span><span style="left:22.665119%;top:64.323607%;transform:rotate(70deg)">L</span><span style="left:22.976001%;top:65.517241%;transform:rotate(68deg)">O</span><span style="left:23.319608%;top:66.710875%;transform:rotate(66deg)">O</span><span style="left:23.695939%;top:67.904509%;transform:rotate(64deg)">P</span></span></span></div>
+            <div class="biology-phases"><span class="biology-phase biology-signals">Signals</span><span class="biology-phase biology-regulation">Regulation</span><span class="biology-phase biology-outcomes">Outcomes</span><span class="biology-feedback" aria-label="Feedback loop"><span aria-hidden="true"><span style="left:21.339779%;top:53.580902%;transform:rotate(88deg)">F</span><span style="left:21.356141%;top:54.774536%;transform:rotate(86deg)">E</span><span style="left:21.405228%;top:55.968170%;transform:rotate(84deg)">E</span><span style="left:21.487039%;top:57.161804%;transform:rotate(82deg)">D</span><span style="left:21.601575%;top:58.355438%;transform:rotate(80deg)">B</span><span style="left:21.748835%;top:59.549072%;transform:rotate(78deg)">A</span><span style="left:21.928819%;top:60.742706%;transform:rotate(76deg)">C</span><span style="left:22.141528%;top:61.936340%;transform:rotate(74deg)">K</span><span style="left:22.665119%;top:64.323607%;transform:rotate(70deg)">L</span><span style="left:22.976001%;top:65.517241%;transform:rotate(68deg)">O</span><span style="left:23.319608%;top:66.710875%;transform:rotate(66deg)">O</span><span style="left:23.695939%;top:67.904509%;transform:rotate(64deg)">P</span></span>
+              <svg class="biology-feedback-curve" viewBox="0 0 2560 1200" aria-hidden="true" focusable="false">
+                <defs><path id="biology-feedback-text-path" d="M 850 853 Q 920 937 1055 979"/></defs>
+                <path class="biology-feedback-clearance" d="M 864.65 869.38 Q 925.85 933.22 1028.65 970.18"/>
+                <text><textPath href="#biology-feedback-text-path" startOffset="50%" text-anchor="middle">FEEDBACK LOOP</textPath></text>
+              </svg>
+            </span></div>
             <ol class="biology-stages" aria-label="Nine stages of human experience">
               <li style="--stage-color:#256b32;left:18.922652%;top:24.933687%;width:10.980663%;height:7.957560%;--stage-order:0;--text-left:2.486188cqw;--title-top:0.138122cqw;--copy-top:2.486188cqw">
                 <button class="biology-stage" type="button" data-biology-stage="0" aria-pressed="true">
@@ -188,6 +195,10 @@
     <template id="research-solutions-template">
       <section class="fw-tree" id="research-solutions" aria-labelledby="research-solutions-title" lang="en" data-preserve-case>
         <div class="fw-tree-shell">
+          <header class="fw-masthead">
+            <h2 class="fw-text fw-title" id="research-solutions-title"><span class="fw-brand">A&amp;S</span> <span class="fw-title-line">Science-to-Solution Framework</span></h2>
+            <p class="fw-text fw-subtitle">From Science Platform to Solutions &amp; Products</p>
+          </header>
           <div class="fw-tree-canvas">
             <button class="fw-motion-toggle" type="button"><span class="fw-motion-symbol" aria-hidden="true"></span><span class="fw-motion-label">Pause effects</span></button>
             <div class="fw-artwork">
@@ -204,10 +215,6 @@
                 <g class="fw-energy-dust"><circle cx="1190" cy="296" r="3"/><circle cx="1360" cy="316" r="4"/><circle cx="1428" cy="434" r="3"/><circle cx="1098" cy="412" r="3"/><circle cx="1460" cy="564" r="4"/><circle cx="431" cy="397" r="3"/><circle cx="654" cy="536" r="4"/><circle cx="410" cy="599" r="3"/></g>
               </svg>
             </div>
-            <header class="fw-masthead">
-              <h2 class="fw-text fw-title" id="research-solutions-title"><span class="fw-brand">A&amp;S</span> <span class="fw-title-line">Science-to-Solution Framework</span></h2>
-              <p class="fw-text fw-subtitle">From Science Platform to Solutions &amp; Products</p>
-            </header>
             <section class="fw-stage fw-stage--science" aria-labelledby="fw-science-title">
               <header class="fw-stage-heading" style="--heading-x:17.48706%;--heading-y:20.84000%;--heading-width:31%">
                 <p class="fw-text fw-stage-number" aria-hidden="true">01</p>
