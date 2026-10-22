@@ -450,15 +450,8 @@ body[data-page="home"] .hero-slide-controls {
     width: 43%;
     transform: none;
   }
-  @layer arotec-language-fonts {
-    html:lang(en) #home-hero .hero-content--experience :is(.hero-title, .hero-reference-eyebrow, .hero-reference-support, .hero-reference-cta, .hero-reference-cta span, .hero-reference-topics li) {
-      font-family: "Roboto Condensed", sans-serif !important;
-    }
-  }
   #home-hero .hero-content--experience .hero-title {
     --arotec-display-size: 3.25cqw;
-    --arotec-display-line-height: .94;
-    --arotec-display-letter-spacing: -.035em;
     --arotec-display-weight: 800;
   }
   #home-hero .hero-content--experience .hero-reference-eyebrow {
