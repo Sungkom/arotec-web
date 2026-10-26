@@ -24,7 +24,6 @@
     const buttons = Array.from(section.querySelectorAll("button[data-biology-stage]"))
       .filter((button) => stages.has(Number(button.dataset.biologyStage)));
     const zoomButton = section.querySelector("button[data-biology-zoom]");
-    const zoomLabel = zoomButton?.querySelector("[data-biology-zoom-label]");
     const zoomIcon = zoomButton?.querySelector("i");
     const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const listeners = new AbortController();
@@ -36,7 +35,7 @@
     function setZoomed(value) {
       section.classList.toggle("biology-is-zoomed", value);
       if (zoomButton) zoomButton.setAttribute("aria-pressed", String(value));
-      if (zoomLabel) zoomLabel.textContent = value ? "Fit to screen" : "Enlarge diagram";
+      // Keep the translated toggle label; aria-pressed conveys the zoom state.
       if (zoomIcon) {
         zoomIcon.classList.toggle("ph-magnifying-glass-plus", !value);
         zoomIcon.classList.toggle("ph-magnifying-glass-minus", value);

@@ -111,7 +111,21 @@
       const running = inView && !document.hidden && !reducedMotion.matches && !frameworkMotionPaused;
       section.classList.toggle("fw-motion-running", running);
       section.classList.toggle("fw-motion-paused", frameworkMotionPaused);
-      toggle.querySelector(".fw-motion-label").textContent = frameworkMotionPaused ? "Resume effects" : "Pause effects";
+      const isTraditionalChinese = document.documentElement.lang === "zh-Hant";
+      const isJapanese = document.documentElement.lang === "ja";
+      const isSimplifiedChinese = ["zh-CN", "zh-Hans"].includes(document.documentElement.lang);
+      const isThai = document.documentElement.lang === "th";
+      const label = toggle.querySelector(".fw-motion-label");
+      const labelText = isTraditionalChinese
+        ? (frameworkMotionPaused ? "繼續動畫" : "暫停動畫")
+        : isJapanese
+          ? (frameworkMotionPaused ? "アニメーションを再開" : "アニメーションを一時停止")
+          : isSimplifiedChinese
+            ? (frameworkMotionPaused ? "继续动画" : "暂停动画")
+            : isThai
+              ? (frameworkMotionPaused ? "เล่นภาพเคลื่อนไหวต่อ" : "หยุดภาพเคลื่อนไหวชั่วคราว")
+              : (frameworkMotionPaused ? "Resume effects" : "Pause effects");
+      if (label.textContent !== labelText) label.textContent = labelText;
       if (!running || !finePointer.matches) clearPointer();
     };
     const toggleMotion = () => {
@@ -141,6 +155,7 @@
     canvas.addEventListener("pointermove", movePointer, { passive: true });
     canvas.addEventListener("pointerleave", clearPointer);
     document.addEventListener("visibilitychange", syncMotion);
+    document.addEventListener("arotec:i18n-ready", syncMotion);
     reducedMotion.addEventListener("change", syncMotion);
     finePointer.addEventListener("change", syncMotion);
     observer?.observe(section);
@@ -153,6 +168,7 @@
       canvas.removeEventListener("pointermove", movePointer);
       canvas.removeEventListener("pointerleave", clearPointer);
       document.removeEventListener("visibilitychange", syncMotion);
+      document.removeEventListener("arotec:i18n-ready", syncMotion);
       reducedMotion.removeEventListener("change", syncMotion);
       finePointer.removeEventListener("change", syncMotion);
     };

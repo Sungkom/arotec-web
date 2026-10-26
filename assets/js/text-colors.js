@@ -450,7 +450,7 @@
   const source = document.currentScript;
   if (!source || !source.src) return;
   const script = document.createElement('script');
-  script.src = new URL('./page-navigation.js?v=20261014-sip-hero-nav-1', source.src).href;
+  script.src = new URL('./page-navigation.js?v=20261026-th-copy-1', source.src).href;
   script.setAttribute('data-arotec-page-navigation-script', '');
   document.head.append(script);
 })();

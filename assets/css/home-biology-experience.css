@@ -118,103 +118,97 @@ html body #biology-experience.biology-experience .biology-attribution p {
   #biology-experience *,#biology-experience *::before { animation:none !important;transition:none !important; }
 }
 
-/* Enlarge the panorama and its live labels together to 150% of the fitted size.
-   Center the plane so only the empty outer edges of the image are cropped. */
+/* Horizontal sequence supplied on 26 October. Only the blank upper artwork
+   margin is clipped; every label, node and line shares the same image plane.
+   Existing title and diagram font metrics remain unchanged. */
 @layer arotec-content-layout {
-  @media (min-width:1024px) {
+  html body #biology-experience.biology-wide .biology-canvas {
+    width:100% !important;min-width:1448px;max-width:none !important;
+    margin:0 !important;left:0;transform:none;
+  }
+  @media (min-width:1200px) {
     html body #biology-experience.biology-wide .biology-canvas {
-      width:min(150%, calc((100svh - 112px) * 3.2)) !important;
-      max-width:none !important;
-      margin-left:0 !important;
-      margin-right:0 !important;
-      left:50%;
-      transform:translateX(-50%);
+      width:min(132%, calc((100svh - 112px) * 3.2)) !important;
+      left:50%;transform:translateX(-50%);
     }
   }
+  html body #biology-experience.biology-is-zoomed .biology-canvas {
+    width:max(100%, 1800px) !important;left:0;transform:none;
+  }
 }
-@media (min-width:1024px) {
-  #biology-experience.biology-wide {
-    padding:clamp(16px, 1.5vw, 24px) 0 !important;
-    background:#fff;
+#biology-experience.biology-wide {
+  padding:clamp(16px,1.5vw,24px) 0 !important;
+  /* Carry the artwork's warm background behind the heading and lower padding. */
+  background:#fbfaf6;
+}
+#biology-experience.biology-wide .biology-viewport { overflow-x:auto;overflow-y:hidden;padding-bottom:48px;background:transparent; }
+#biology-experience.biology-wide .biology-canvas { aspect-ratio:5000 / 1432; }
+#biology-experience.biology-wide .biology-artwork {
+  overflow:hidden;
+  /* Blend only the empty image edges; the wave and focus nodes stay opaque. */
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 20px,#000 calc(100% - 20px),transparent);
+  mask-image:linear-gradient(to bottom,transparent,#000 20px,#000 calc(100% - 20px),transparent);
+}
+#biology-experience.biology-wide .biology-artwork > picture {
+  position:absolute;left:0;top:-31.424581%;width:100%;height:131.424581%;
+}
+#biology-experience.biology-wide .biology-art { width:100%;height:100%;object-fit:fill; }
+#biology-experience.biology-wide .biology-stages > li {
+  left:var(--label-left) !important;top:var(--label-top) !important;
+  width:var(--label-width) !important;height:auto !important;transform:none;
+}
+#biology-experience.biology-wide .biology-stage {
+  display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;
+  column-gap:clamp(5px,.4cqw,10px);width:100%;height:auto;
+}
+#biology-experience.biology-wide .biology-stage-content { display:grid;min-width:0;row-gap:clamp(2px,.18cqw,4px);padding-top:clamp(1px,.15cqw,3px); }
+#biology-experience.biology-wide .biology-stage-number,
+#biology-experience.biology-wide .biology-stage-title,
+#biology-experience.biology-wide .biology-stage-copy { position:static;left:auto;top:auto;width:auto;white-space:normal;overflow-wrap:break-word; }
+#biology-experience.biology-wide .biology-stage-number { font-size:clamp(18px,1.4cqw,26px);line-height:1.2; }
+#biology-experience.biology-wide .biology-stage-title { font-size:clamp(12px,.94cqw,18px);line-height:1.35;font-weight:600; }
+#biology-experience.biology-wide .biology-stage-copy { font-size:clamp(10.5px,.78cqw,15px);line-height:1.4; }
+#biology-experience.biology-wide .biology-node:nth-child(1) { --point-x:20.308%;--point-y:26.795194%; }
+#biology-experience.biology-wide .biology-node:nth-child(2) { --point-x:26.959%;--point-y:36.800547%; }
+#biology-experience.biology-wide .biology-node:nth-child(3) { --point-x:34.544%;--point-y:30.531595%; }
+#biology-experience.biology-wide .biology-node:nth-child(4) { --point-x:41.798%;--point-y:36.800547%; }
+#biology-experience.biology-wide .biology-node:nth-child(5) { --point-x:49.207%;--point-y:30.479025%; }
+#biology-experience.biology-wide .biology-node:nth-child(6) { --point-x:56.329%;--point-y:36.744035%; }
+#biology-experience.biology-wide .biology-node:nth-child(7) { --point-x:63.831%;--point-y:30.518453%; }
+#biology-experience.biology-wide .biology-node:nth-child(8) { --point-x:71.193%;--point-y:36.758492%; }
+#biology-experience.biology-wide .biology-node:nth-child(9) { --point-x:79.04%;--point-y:33.434764%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(1) { --label-left:17.9%;--label-top:2.482961%;--label-width:12.8%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(2) { --label-left:24.4%;--label-top:45.327374%;--label-width:13%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(3) { --label-left:31.3%;--label-top:7.082821%;--label-width:15%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(4) { --label-left:38.3%;--label-top:45.327374%;--label-width:15%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(5) { --label-left:46.3%;--label-top:2.482961%;--label-width:14.3%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(6) { --label-left:53.4%;--label-top:45.327374%;--label-width:13%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(7) { --label-left:61.2%;--label-top:8.791341%;--label-width:10.8%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(8) { --label-left:67.9%;--label-top:45.327374%;--label-width:13%; }
+#biology-experience.biology-wide .biology-stages > li:nth-child(9) { --label-left:72%;--label-top:3.402933%;--label-width:15%; }
+#biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(7) { --stage-color:#ba333d !important; }
+#biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(8) { --stage-color:#bf4726 !important; }
+#biology-experience.biology-wide .biology-node { left:var(--point-x) !important;top:var(--point-y) !important;width:1.55cqw; }
+#biology-experience.biology-wide .biology-phase { font-size:clamp(9px,.63cqw,12px);line-height:1.3;letter-spacing:.24em;transform:none; }
+#biology-experience.biology-wide .biology-signals { left:29%;top:25.745112%; }
+#biology-experience.biology-wide .biology-regulation { left:46%;top:40.727514%; }
+#biology-experience.biology-wide .biology-outcomes { left:73.1%;top:25.745112%; }
+#biology-experience.biology-wide .biology-feedback > span,
+#biology-experience.biology-wide .biology-feedback-curve { display:none; }
+#biology-experience.biology-wide .biology-feedback::after {
+  content:attr(aria-label);position:absolute;left:50%;top:73.715084%;transform:translateX(-50%);
+  font:500 .703125cqw/1.3 var(--site-font);letter-spacing:.222222em;text-transform:uppercase;color:#113568;
+}
+#biology-experience.biology-wide .biology-attribution { left:18.5%;top:80.943436%;width:63%;height:auto;padding-top:12px; }
+html body #biology-experience.biology-wide .biology-attribution h3,
+html body #biology-experience.biology-wide .biology-attribution p { position:static;width:auto;max-width:100%;white-space:normal; }
+html body #biology-experience.biology-wide .biology-attribution h3 { font-size:clamp(14px,1.1cqw,21px) !important;line-height:1.3 !important; }
+html body #biology-experience.biology-wide .biology-attribution p { margin-top:8px !important;font-size:clamp(10.5px,.78cqw,15px) !important;line-height:1.5 !important; }
+@media (min-width:1200px) { #biology-experience.biology-wide .biology-viewport { overflow-x:hidden; } #biology-experience.biology-wide .biology-toolbar { display:none; } }
+@media (max-width:1199px) { #biology-experience.biology-wide .biology-toolbar { display:flex; } }
+@layer arotec-content-layout {
+  @media (max-width:1199px) {
+    html body #biology-experience.biology-wide .biology-canvas { margin-left:-231.68px !important; }
+    html body #biology-experience.biology-is-zoomed .biology-canvas { margin-left:-288px !important; }
   }
-  #biology-experience.biology-wide .biology-canvas { aspect-ratio:2560 / 1200; }
-  #biology-experience.biology-wide .biology-art { object-fit:contain; }
-  #biology-experience.biology-wide .biology-viewport {
-    overflow:hidden;
-    /* Extend both sides without repeating the artwork in the section padding. */
-    background:#fff url('../images/biology-human-experience-desktop-20260927.jpg') center / cover no-repeat;
-  }
-  #biology-experience.biology-wide .biology-toolbar { display:none; }
-  html body #biology-experience.biology-wide .biology-heading .biology-eyebrow {
-    top:4.5%;font-size:clamp(18px,1.4cqw,28px) !important;line-height:1.3 !important;
-  }
-  #biology-experience.biology-wide #wellbeing-title {
-    top:10%;font-size:clamp(26px,2.35cqw,46px) !important;line-height:1.2 !important;
-  }
-  html body #biology-experience.biology-wide .biology-heading .biology-subtitle {
-    top:17%;font-size:clamp(12px,.94cqw,18px) !important;line-height:1.4 !important;
-  }
-  #biology-experience.biology-wide .biology-stages > li {
-    left:var(--point-x) !important;top:var(--point-y) !important;
-    width:max-content !important;height:auto !important;
-    --label-x:2.8cqw;--label-y:calc(-.6 * clamp(18px,1.4cqw,26px));
-    transform:translate(var(--label-x),var(--label-y));
-  }
-  #biology-experience.biology-wide .biology-stage {
-    display:grid;grid-template-columns:auto max-content;align-items:start;
-    column-gap:clamp(5px,.4cqw,10px);width:auto;height:auto;
-  }
-  #biology-experience.biology-wide .biology-stage-content {
-    display:grid;row-gap:clamp(2px,.18cqw,4px);padding-top:clamp(1px,.15cqw,3px);
-  }
-  #biology-experience.biology-wide .biology-stage-number,
-  #biology-experience.biology-wide .biology-stage-title,
-  #biology-experience.biology-wide .biology-stage-copy {
-    position:static;left:auto;top:auto;
-  }
-  #biology-experience.biology-wide .biology-stage-number { font-size:clamp(18px,1.4cqw,26px);line-height:1.2; }
-  #biology-experience.biology-wide .biology-stage-title { font-size:clamp(12px,.94cqw,18px);line-height:1.35;font-weight:600; }
-  #biology-experience.biology-wide .biology-stage-copy { font-size:clamp(10.5px,.78cqw,15px);line-height:1.4; }
-  /* Labels and focus rings share the exact coordinates of their colored point. */
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(1) { --point-x:38.82%;--point-y:36.77%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(2) { --point-x:44.19%;--point-y:40.63%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(3) { --point-x:51.81%;--point-y:45.31%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(4) { --point-x:57.47%;--point-y:50.83%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(5) { --point-x:60.55%;--point-y:58.75%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(6) { --point-x:58.54%;--point-y:67.29%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(7) { --point-x:53.47%;--point-y:72.19%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(8) { --point-x:47.61%;--point-y:70.21%; }
-  #biology-experience.biology-wide :is(.biology-stages > li,.biology-node):nth-child(9) { --point-x:60.55%;--point-y:81.25%; }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(1) { --label-x:calc(-100% - 2.6cqw);--label-y:-50%; }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(2) { --label-x:-35%;--label-y:calc(-100% - 2.6cqw); }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(3) { --label-x:2.6cqw;--label-y:calc(-100% - 2.3cqw); }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(4) { --label-x:2.8cqw;--label-y:calc(-50% - 1.2cqw); }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(5) { --label-x:3.3cqw;--label-y:-50%; }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(6) { --label-x:2.8cqw;--label-y:calc(-50% + 1cqw); }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(7) { --label-x:-50%;--label-y:2.6cqw; }
-  #biology-experience.biology-wide .biology-stages > li:nth-child(8) { --label-x:calc(-100% - 2.4cqw);--label-y:calc(-100% + .8cqw); }
-  #biology-experience.biology-wide .biology-node { left:var(--point-x) !important;top:var(--point-y) !important;width:1.55cqw; }
-  #biology-experience.biology-wide .biology-phase { font-size:clamp(9px,.63cqw,12px);line-height:1.3;letter-spacing:.24em; }
-  #biology-experience.biology-wide .biology-signals { left:43%;top:45%; }
-  #biology-experience.biology-wide .biology-regulation { left:53%;top:62%; }
-  #biology-experience.biology-wide .biology-outcomes { left:43%;top:79%;transform:rotate(10deg); }
-  #biology-experience.biology-wide .biology-feedback > span { display:none; }
-  /* Follow the existing dotted return curve in the panorama's coordinates. */
-  #biology-experience.biology-wide .biology-feedback-curve {
-    display:block;position:absolute;inset:0;width:100%;height:100%;overflow:visible;
-  }
-  #biology-experience.biology-wide .biology-feedback-clearance {
-    fill:none;stroke:#fff;stroke-width:28;stroke-linecap:round;
-  }
-  #biology-experience.biology-wide .biology-feedback-curve text {
-    fill:#113568;font-family:var(--site-font);font-size:18px !important;
-    font-weight:500;letter-spacing:4px !important;dominant-baseline:central;
-  }
-  #biology-experience.biology-wide .biology-attribution { left:21%;top:74%;width:17%;height:auto;padding-top:12px; }
-  html body #biology-experience.biology-wide .biology-attribution h3,
-  html body #biology-experience.biology-wide .biology-attribution p {
-    position:static;width:auto;max-width:100%;white-space:normal;
-  }
-  html body #biology-experience.biology-wide .biology-attribution h3 { font-size:clamp(14px,1.1cqw,21px) !important;line-height:1.3 !important; }
-  html body #biology-experience.biology-wide .biology-attribution p { margin-top:8px !important;font-size:clamp(10.5px,.78cqw,15px) !important;line-height:1.5 !important; }
 }
