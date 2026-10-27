@@ -46,6 +46,10 @@ html body #biology-experience.biology-experience .biology-heading .biology-subti
   position:absolute;left:var(--text-left);top:calc(var(--copy-top) - .138122cqw);display:block;width:max-content;
   color:#50647f;font-size:.759669cqw;font-weight:400;line-height:1.243094cqw;letter-spacing:0;white-space:nowrap;
 }
+/* Keep the Behavior label underlined before hover or stage selection. */
+#biology-experience .biology-stage[data-biology-stage="7"] .biology-stage-title {
+  text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1px;
+}
 #biology-experience .biology-stage:hover .biology-stage-title,
 #biology-experience.biology-has-interacted .biology-stage[aria-pressed="true"] .biology-stage-title {
   text-shadow:0 0 12px color-mix(in srgb,var(--stage-color) 28%,transparent);
@@ -72,6 +76,8 @@ html body #biology-experience.biology-experience .biology-heading .biology-subti
   position:absolute;display:block;color:#526785;font-size:.828729cqw;line-height:1.104972cqw;font-weight:600;
   letter-spacing:.32em;text-transform:uppercase;transform-origin:left top;
 }
+/* Preserve the authored phase colors independently of the shared text palette. */
+#biology-experience .biology-phase[data-text-color-preserve] { -webkit-text-fill-color:currentColor; }
 #biology-experience .biology-signals { left:40.055249%;top:41.644562%;color:#247d86;transform:rotate(15deg); }
 #biology-experience .biology-regulation { left:54.350829%;top:64.279399%;color:#503490;transform:rotate(-42deg); }
 #biology-experience .biology-outcomes { left:48.895028%;top:79.133510%;color:#a66a20;transform:rotate(34deg); }
